@@ -61,10 +61,10 @@ Each phase leaves the repo in a useful state; check items off as they land.
 - [x] Add `AGENTS.md` / `CLAUDE.md` so agents landing in this repo know the reading order and the rules of engagement.
 
 ### Phase 1 — Build foundation
-- [ ] Create the `examples/transfers` Gradle project: Kotlin DSL, version catalog, Java 21 toolchain, Spring Boot 3.x.
-- [ ] Add test dependencies per testing playbook §3.1 (Testcontainers + Postgres, AssertJ, Awaitility, WireMock — no H2).
-- [ ] Split `test` vs `integrationTest` tasks (`*IT` naming) per testing playbook §7.
-- [ ] GitHub Actions workflow: compile → unit/slice → integration, mirroring the PR gate order.
+- [x] Create the `examples/transfers` Gradle project: Kotlin DSL, version catalog, Java 21 toolchain, Spring Boot 3.x. (Gradle root lives at `examples/` so later example modules join as siblings.)
+- [x] Add test dependencies per testing playbook §3.1 (Testcontainers + Postgres, AssertJ, Awaitility, WireMock — no H2).
+- [x] Split `test` vs `integrationTest` tasks (`*IT` naming) per testing playbook §7.
+- [x] GitHub Actions workflow: compile → unit/slice → integration, mirroring the PR gate order.
 
 ### Phase 2 — Test support infrastructure (testing playbook §3.2–3.3)
 - [ ] `@IntegrationTest` meta-annotation and `TestcontainersConfiguration` with `@ServiceConnection`.

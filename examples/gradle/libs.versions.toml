@@ -1,0 +1,21 @@
+# Versions for everything Spring Boot's BOM does not manage. Libraries listed
+# without a version (Testcontainers, AssertJ, Awaitility) are managed by the
+# Boot dependency-management plugin — do not pin them here.
+[versions]
+spring-boot = "3.5.3"
+spring-dependency-management = "1.1.7"
+wiremock = "3.13.1"
+
+[libraries]
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+spring-boot-testcontainers = { module = "org.springframework.boot:spring-boot-testcontainers" }
+testcontainers-junit-jupiter = { module = "org.testcontainers:junit-jupiter" }
+testcontainers-postgresql = { module = "org.testcontainers:postgresql" }
+awaitility = { module = "org.awaitility:awaitility" }
+assertj-core = { module = "org.assertj:assertj-core" }
+wiremock-standalone = { module = "org.wiremock:wiremock-standalone", version.ref = "wiremock" }
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }
