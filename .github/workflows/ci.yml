@@ -9,6 +9,16 @@ on:
   pull_request:
 
 jobs:
+  # Docs link to canonical code (Phase 7): a moved or renamed file must
+  # update the docs in the same commit, or this fails.
+  docs-references:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check that files referenced from markdown exist
+        run: python3 scripts/check_doc_refs.py
+
   build:
     runs-on: ubuntu-latest
     defaults:

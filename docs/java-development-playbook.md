@@ -4,6 +4,19 @@
 
 **The one-line strategy:** Hexagonal architecture with a framework-free domain core, ports at every boundary you don't own, thin adapters, and use-case classes as the application's public API. Testability is not a property you add — it is the observable result of this structure.
 
+**Canonical code:** every template in this document exists as real, tested code in [`examples/transfers`](../examples/transfers). Where a snippet here and that code differ, the code wins.
+
+---
+
+## 0. Scope — read this first
+
+This playbook governs **logic-bearing code**: features with business rules worth protecting. Applied to code without that weight, its structure is ceremony (adversarial review §3). Calibrate before you build:
+
+- **Features with real domain logic** get the full structure: three rings, ports, separate JPA types, sealed results.
+- **Plain CRUD may skip the rings — deliberately and locally.** A feature that only validates shape and moves rows may use `@Entity`-as-model with Spring Data and a thin controller, provided (a) it contains no business branching, (b) the shortcut stays confined to that feature's package, and (c) it keeps one integration smoke test of schema + serialization. The moment a business rule appears, apply §8 Phase 2 and carve out a domain.
+- **Split JPA entities from domain models where the domain has behavior** (adversarial review §4). A mapping layer between two structurally identical types is waste; entity-as-model is acceptable for behavior-free aggregates.
+- **Escape valve:** if following a rule produces obviously disproportionate ceremony for the code at hand, stop and surface the conflict to a human instead of silently complying — or silently deviating (adversarial review §10).
+
 ---
 
 ## 1. Core Principles
@@ -30,28 +43,31 @@
 
 ### 2.2 Package structure (canonical)
 
+This is the actual layout of [`examples/transfers`](../examples/transfers/src/main/java/com/example/transfers):
+
 ```
 com.example.transfers
 ├── domain/
-│   ├── Account.java              // aggregate root
-│   ├── Money.java                // value object (record)
-│   ├── TransferPolicy.java       // pure business rules
-│   ├── TransferDecision.java     // sealed result type
+│   ├── Account.java                   // aggregate root — the only mutation in the domain
+│   ├── AccountId.java, AccountStatus.java
+│   ├── Money.java                     // value object (record, validating constructor)
+│   ├── TransferPolicy.java            // pure business rules
+│   ├── TransferDecision.java          // sealed result type (+ RejectionReason.java)
+│   ├── CurrencyPair.java, ExchangeRate.java, TransferCompleted.java
 │   └── port/
-│       ├── Accounts.java         // driven port (repository interface)
-│       ├── FxRates.java          // driven port (external API interface)
-│       └── LedgerEvents.java     // driven port (event publishing interface)
+│       ├── Accounts.java              // driven port (repository interface)
+│       ├── FxRates.java               // driven port (+ FxUnavailable, its declared failure mode)
+│       └── LedgerEvents.java          // driven port (event publishing interface)
 ├── application/
-│   └── TransferUseCase.java      // driving port implementation; orchestration only
+│   ├── TransferUseCase.java           // orchestration only; the application's API
+│   ├── TransferResult.java            // sealed outcome value
+│   └── AccountNotFound.java           // abort, not decision → exception (§3.2)
 └── adapter/
-    ├── web/
-    │   ├── TransferController.java
-    │   └── TransferRequest.java  // wire DTO, never leaks inward
-    ├── persistence/
-    │   ├── JpaAccounts.java      // implements domain.port.Accounts
-    │   └── AccountJpaEntity.java // JPA entity, never leaks inward
-    └── fx/
-        └── HttpFxRates.java      // implements domain.port.FxRates
+    ├── web/                           // TransferController, wire DTOs, error handler — all package-private
+    ├── persistence/                   // JpaAccounts, JPA entities, async LedgerEntryRecorder
+    ├── events/                        // SpringLedgerEvents: LedgerEvents over Spring's event bus
+    ├── fx/                            // HttpFxRates: FxRates over HTTP, WireMock-tested
+    └── config/                        // TransfersConfiguration: policy + Clock beans (§3.6)
 ```
 
 Rules:
@@ -72,42 +88,69 @@ Rules:
 
 ### 3.1 Value object — record with validating constructor
 
+Canonical file: [`domain/Money.java`](../examples/transfers/src/main/java/com/example/transfers/domain/Money.java)
+
 ```java
 public record Money(BigDecimal amount, Currency currency) {
+
     public Money {
-        Objects.requireNonNull(amount);
-        Objects.requireNonNull(currency);
-        if (amount.scale() > currency.getDefaultFractionDigits())
-            throw new IllegalArgumentException("scale exceeds currency precision");
+        Objects.requireNonNull(amount, "amount");
+        Objects.requireNonNull(currency, "currency");
+        int precision = currency.getDefaultFractionDigits();
+        if (precision < 0) {
+            throw new IllegalArgumentException("pseudo-currency not supported: " + currency);
+        }
+        if (amount.scale() > precision) {
+            throw new IllegalArgumentException(
+                    "scale %d exceeds %s precision of %d".formatted(amount.scale(), currency, precision));
+        }
+        // Canonical scale, so 2.5 USD and 2.50 USD are the same value.
+        amount = amount.setScale(precision);
     }
 
     public Money plus(Money other) {
         requireSameCurrency(other);
         return new Money(amount.add(other.amount), currency);
     }
-    // No setters. Operations return new instances.
+    // minus, isLessThan, isPositive, isNegative — same shape. No setters.
 }
 ```
 
+The canonical-scale line and the pseudo-currency guard exist because `BigDecimal.equals` is scale-sensitive and `getDefaultFractionDigits()` returns −1 for XAU-style codes — two real bugs the markdown-only version of this template had. Compiling examples keep templates honest.
+
 ### 3.2 Domain policy — pure, sealed result
+
+Canonical files: [`domain/TransferPolicy.java`](../examples/transfers/src/main/java/com/example/transfers/domain/TransferPolicy.java), [`domain/TransferDecision.java`](../examples/transfers/src/main/java/com/example/transfers/domain/TransferDecision.java)
 
 ```java
 public class TransferPolicy {
     public TransferDecision evaluate(Account from, Money amount) {
-        if (from.balance().isLessThan(amount))
+        if (from.balance().isLessThan(amount)) {
             return TransferDecision.rejected(RejectionReason.INSUFFICIENT_FUNDS);
-        if (from.status() == AccountStatus.SUSPENDED)
+        }
+        if (from.status() == AccountStatus.SUSPENDED) {
             return TransferDecision.rejected(RejectionReason.ACCOUNT_SUSPENDED);
+        }
         return TransferDecision.approved();
     }
 }
 
-public sealed interface TransferDecision permits Approved, Rejected { ... }
+// Nested records keep the whole sealed hierarchy in one file — no permits clause needed.
+public sealed interface TransferDecision {
+    record Approved() implements TransferDecision {}
+    record Rejected(RejectionReason reason) implements TransferDecision {}
+    static TransferDecision approved() { return new Approved(); }
+    static TransferDecision rejected(RejectionReason reason) { return new Rejected(reason); }
+}
 ```
 
-Return decisions as values; never throw exceptions for expected business outcomes. Sealed types + pattern matching make unhandled cases a compile error, not a missing test.
+Return **decisions** as values; never throw exceptions for expected business outcomes. Sealed types + pattern matching make unhandled cases a compile error, not a missing test.
+
+**Aborts are exceptions** (adversarial review §5). Invariant violations and missing referents throw — [`Account.debit`](../examples/transfers/src/main/java/com/example/transfers/domain/Account.java)'s insufficient-funds guard (reaching it means orchestration skipped the policy: a bug, not an outcome) and [`AccountNotFound`](../examples/transfers/src/main/java/com/example/transfers/application/AccountNotFound.java) are the canonical pair. The dividing line is `@Transactional`: an exception rolls the transaction back, a result value silently commits whatever already happened, so anything that must abort uses the exception path.
 
 ### 3.3 Port — domain-owned interface, domain vocabulary
+
+Canonical files: [`domain/port/FxRates.java`](../examples/transfers/src/main/java/com/example/transfers/domain/port/FxRates.java), [`domain/port/Accounts.java`](../examples/transfers/src/main/java/com/example/transfers/domain/port/Accounts.java), [`domain/port/LedgerEvents.java`](../examples/transfers/src/main/java/com/example/transfers/domain/port/LedgerEvents.java)
 
 ```java
 // domain/port/FxRates.java — note: domain types in the signature, no HTTP vocabulary
@@ -116,7 +159,11 @@ public interface FxRates {
 }
 ```
 
+A port may also declare its failure mode — [`FxUnavailable`](../examples/transfers/src/main/java/com/example/transfers/domain/port/FxUnavailable.java) is the exception the adapter throws when the boundary is down (an abort, per §3.2), keeping even the failure vocabulary domain-owned.
+
 ### 3.4 Use case — orchestration only
+
+Canonical files: [`application/TransferUseCase.java`](../examples/transfers/src/main/java/com/example/transfers/application/TransferUseCase.java), [`application/TransferResult.java`](../examples/transfers/src/main/java/com/example/transfers/application/TransferResult.java)
 
 ```java
 @Service
@@ -132,13 +179,15 @@ public class TransferUseCase {
     @Transactional
     public TransferResult transfer(AccountId from, AccountId to, Money amount) {
         var source = accounts.byId(from).orElseThrow(() -> new AccountNotFound(from));
-        var decision = policy.evaluate(source, amount);          // decide: domain
+        var decision = policy.evaluate(source, amount);              // decide: domain
         return switch (decision) {
-            case Rejected r -> TransferResult.rejected(r.reason());
-            case Approved a -> {
+            case TransferDecision.Rejected(var reason) -> TransferResult.rejected(reason);
+            case TransferDecision.Approved() -> {
                 var target = accounts.byId(to).orElseThrow(() -> new AccountNotFound(to));
-                source.debit(amount); target.credit(amount);      // mutate: aggregates
-                accounts.save(source); accounts.save(target);     // I/O: ports
+                source.debit(amount);
+                target.credit(amount);                               // mutate: aggregates
+                accounts.save(source);
+                accounts.save(target);                               // I/O: ports
                 events.publish(new TransferCompleted(from, to, amount, clock.instant()));
                 yield TransferResult.completed();
             }
@@ -147,30 +196,41 @@ public class TransferUseCase {
 }
 ```
 
-The use case contains **no** `if` statements about business rules. If one appears, that logic belongs in the domain.
+The use case contains **no** `if` statements about business rules. If one appears, that logic belongs in the domain. `TransferResult` is itself a small sealed type — the application's outcome value, distinct from the domain's decision.
 
 ### 3.5 Adapter — translate, delegate, nothing else
+
+Canonical files: [`adapter/web/TransferController.java`](../examples/transfers/src/main/java/com/example/transfers/adapter/web/TransferController.java) and siblings — all package-private, so no other adapter can reach in.
 
 ```java
 @RestController
 class TransferController {
     private final TransferUseCase useCase;
 
+    TransferController(TransferUseCase useCase) { this.useCase = useCase; }
+
     @PostMapping("/transfers")
-    ResponseEntity<TransferResponse> transfer(@Valid @RequestBody TransferRequest req) {
-        var result = useCase.transfer(req.fromId(), req.toId(), req.toMoney());
-        return switch (result.status()) {
-            case COMPLETED -> ResponseEntity.status(CREATED).body(TransferResponse.of(result));
-            case REJECTED  -> ResponseEntity.unprocessableEntity().body(TransferResponse.of(result));
+    ResponseEntity<TransferResponse> transfer(@Valid @RequestBody TransferRequest request) {
+        var result = useCase.transfer(request.fromId(), request.toId(), request.toMoney());
+        return switch (result) {
+            case TransferResult.Completed() ->
+                    ResponseEntity.status(HttpStatus.CREATED).body(TransferResponse.completed());
+            case TransferResult.Rejected(var reason) ->
+                    ResponseEntity.unprocessableEntity().body(TransferResponse.rejected(reason));
         };
     }
 }
 ```
 
+Shape validation failures and requests that can't become domain values map to 422 in [`TransferErrorHandler`](../examples/transfers/src/main/java/com/example/transfers/adapter/web/TransferErrorHandler.java); `AccountNotFound` maps to 404. The persistence edge follows the same translate-only rule — see [`JpaAccounts`](../examples/transfers/src/main/java/com/example/transfers/adapter/persistence/JpaAccounts.java) and [`AccountJpaEntity`](../examples/transfers/src/main/java/com/example/transfers/adapter/persistence/AccountJpaEntity.java), where persistence quirks (column scale vs. `Money`'s canonical scale) are normalized at the edge.
+
 ### 3.6 Wiring — constructor injection, always
 
-- Constructor injection only. `@Autowired` on fields is banned (untestable without reflection or a container).
+Canonical file: [`adapter/config/TransfersConfiguration.java`](../examples/transfers/src/main/java/com/example/transfers/adapter/config/TransfersConfiguration.java)
+
+- Constructor injection only. `@Autowired` on fields is banned (untestable without reflection or a container) — and enforced by ArchUnit (§7).
 - Provide `Clock` as a bean (`Clock.systemUTC()` in prod); tests inject `Clock.fixed(...)`.
+- Domain classes carry no annotations, so their beans (e.g. `TransferPolicy`) are declared in the config adapter.
 - ID generation behind a port (`IdGenerator`) if IDs matter to behavior.
 
 ---
@@ -223,10 +283,11 @@ This ordering is testing-playbook-shaped TDD: unit tests fall out of step 1, the
 
 Structure rules that live only in a document decay. Encode them:
 
-1. **ArchUnit tests** in the unit suite (they're fast — testing playbook §7.1 `test` task):
+1. **ArchUnit tests** in the unit suite (they're fast — testing playbook §7.1 `test` task). Canonical file: [`architecture/ArchitectureTest.java`](../examples/transfers/src/test/java/com/example/transfers/architecture/ArchitectureTest.java)
 
 ```java
-@AnalyzeClasses(packages = "com.example")
+@AnalyzeClasses(packages = "com.example.transfers",
+        importOptions = ImportOption.DoNotIncludeTests.class)
 class ArchitectureTest {
 
     @ArchTest
@@ -235,6 +296,17 @@ class ArchitectureTest {
             .should().dependOnClassesThat()
             .resideInAnyPackage("org.springframework..", "jakarta.persistence..",
                                 "com.fasterxml..");
+
+    // Core principle #2 — dependencies point inward. Enforced, not aspirational.
+    @ArchTest
+    static final ArchRule dependenciesPointInward =
+        layeredArchitecture().consideringOnlyDependenciesInLayers()
+            .layer("Domain").definedBy("..domain..")
+            .layer("Application").definedBy("..application..")
+            .layer("Adapters").definedBy("..adapter..")
+            .whereLayer("Adapters").mayNotBeAccessedByAnyLayer()
+            .whereLayer("Application").mayOnlyBeAccessedByLayers("Adapters")
+            .whereLayer("Domain").mayOnlyBeAccessedByLayers("Application", "Adapters");
 
     @ArchTest
     static final ArchRule adaptersDontTalkToEachOther =
@@ -246,8 +318,9 @@ class ArchitectureTest {
 }
 ```
 
-2. Add `com.tngtech.archunit:archunit-junit5` to test dependencies (extend testing playbook §3.1).
-3. These run in the same CI gate as unit tests — an architecture violation fails the build exactly like a failing test.
+2. A second class, [`architecture/MockUsageTest.java`](../examples/transfers/src/test/java/com/example/transfers/architecture/MockUsageTest.java), analyzes **test** classes and restricts `@MockitoBean`/`@Mock` fields to types in `domain.port` or `application` — the enforcement half of testing playbook §6.3.
+3. Add `com.tngtech.archunit:archunit-junit5` to test dependencies (extend testing playbook §3.1). Match ArchUnit's major line to the JUnit Platform your Spring Boot manages — see the comment in [`gradle/libs.versions.toml`](../examples/gradle/libs.versions.toml).
+4. These run in the same CI gate as unit tests — an architecture violation fails the build exactly like a failing test.
 
 ---
 
@@ -276,11 +349,13 @@ Each phase is independently valuable; stop anywhere and the code is still better
 
 When writing or modifying code in a project governed by this document:
 
-1. **Classify before coding** using §2.3: decide, sequence, or translate. Place the code in the matching ring. If a requested change spans rings, implement it as separate classes per ring.
-2. **Copy the templates** in §3; do not invent alternative structures for the same job.
-3. **Never put a business rule in a use case or adapter.** If you find yourself writing a business `if` outside the domain, stop and extract a policy first.
-4. **Never introduce a mock to make code testable.** Missing testability is a structure defect: propose the extraction (§6 required-fix column) instead. This mirrors testing playbook §9.7 from the production-code side.
-5. **When adding a dependency on time, randomness, IDs, or any external system**, introduce or reuse a port and inject it — even if the immediate task doesn't test it.
-6. **Self-review** against §5 and §6 before presenting code. Any §6 row that applies means rewrite, not caveat.
-7. **When editing legacy code that violates this document**, apply the smallest §8 Phase 2 motion that covers the code you're touching, and state which violations remain.
-8. **Keep the two playbooks consistent:** every class you create must have an obvious home in the testing playbook's portfolio (§2 there). If it doesn't, its design is wrong.
+1. **Check scope first** (§0): if the code at hand is plain CRUD with no business branching, the sanctioned shortcut applies — don't build rings for it.
+2. **Classify before coding** using §2.3: decide, sequence, or translate. Place the code in the matching ring. If a requested change spans rings, implement it as separate classes per ring.
+3. **Copy the canonical files** linked from §3 (they live in `examples/transfers`); do not invent alternative structures for the same job.
+4. **Never put a business rule in a use case or adapter.** If you find yourself writing a business `if` outside the domain, stop and extract a policy first.
+5. **Never introduce a mock to make code testable.** Missing testability is a structure defect: propose the extraction (§6 required-fix column) instead. This mirrors testing playbook §9.7 from the production-code side.
+6. **When adding a dependency on time, randomness, IDs, or any external system**, introduce or reuse a port and inject it — even if the immediate task doesn't test it.
+7. **Self-review** against §5 and §6 before presenting code. Any §6 row that applies means rewrite, not caveat.
+8. **When editing legacy code that violates this document**, apply the smallest §8 Phase 2 motion that covers the code you're touching, and state which violations remain.
+9. **Keep the two playbooks consistent:** every class you create must have an obvious home in the testing playbook's portfolio (§2 there). If it doesn't, its design is wrong.
+10. **Escape valve (§0):** if following a rule produces obviously disproportionate ceremony for the code at hand, stop and surface the conflict to a human — never silently comply, never silently deviate.

@@ -90,9 +90,9 @@ Each phase leaves the repo in a useful state; check items off as they land.
 - [x] Turned the "What Bad Looks Like" tables into compiling bad/good pairs in `examples/antipatterns/` — ten scenarios covering all twenty table rows (see [its README](examples/antipatterns/README.md) for the row → exhibit map). Bad *test* specimens live in the main source set so they compile on every build but never execute; the ArchUnit gate stays scoped to `transfers`. Highlight: `testing/mockedowned`, where the mock-based test passes against a service whose debit adds instead of subtracts.
 
 ### Phase 7 — Fold code back into the docs
-- [ ] Replace inline snippets in both playbooks with links to the real files (or CI-verified excerpts), so docs and code cannot drift.
-- [ ] Apply the adversarial review's summary-judgment amendments to the playbooks: scoping preamble (which code each playbook governs, and the sanctioned cheap path for plain CRUD), legacy-code carve-out, results-for-decisions/exceptions-for-aborts clarification, human-decision flake deletion, and the "surface disproportionate ceremony to a human" escape valve.
-- [ ] Add a CI check that every file/symbol the docs reference actually exists.
+- [x] Every template snippet in both playbooks synced to its canonical file and linked to it ("where a snippet and the code differ, the code wins"). Snippets that had real bugs (Money's scale equality, the factory-vs-factory test comparison) now carry the lesson.
+- [x] Applied the adversarial review's summary-judgment amendments: scoping preamble (dev §0, with the sanctioned plain-CRUD path), H2 waiver (testing §3.1), results-for-decisions/exceptions-for-aborts (dev §3.2), legacy characterization carve-out + companion rules (testing §6.3), PIT-as-trend and human-decision flake deletion (testing §7), escape valve (both §9s). The review carries a status note; its argument stands unchanged.
+- [x] CI `docs-references` job runs `scripts/check_doc_refs.py`: every repo path referenced from markdown must exist (currently 39 references; verified to fail on a broken one).
 
 ### Phase 8 — Agent enablement and validation
 - [ ] Finalize `AGENTS.md`: task classification → playbook section → template file mapping.
