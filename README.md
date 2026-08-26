@@ -95,8 +95,8 @@ Each phase leaves the repo in a useful state; check items off as they land.
 - [x] CI `docs-references` job runs `scripts/check_doc_refs.py`: every repo path referenced from markdown must exist (currently 39 references; verified to fail on a broken one).
 
 ### Phase 8 — Agent enablement and validation
-- [ ] Finalize `AGENTS.md`: task classification → playbook section → template file mapping.
-- [ ] Dry run: have an agent add a small feature (e.g., a transfer-limit rule) following only the playbooks and templates, and verify the result passes the §5 checklists and the ArchUnit gate without human correction. That is the acceptance test for the whole repo.
+- [x] Finalized `AGENTS.md`: task → playbook section → canonical file mapping for twelve common task shapes.
+- [x] Dry run **passed**: a fresh Sonnet agent added cross-currency transfer support following only the playbooks — rules landed in the right rings, all suites and the ArchUnit gate green unaided, PIT at 98%, and the feature merged without modification. The run, grading, and the agent's five escape-valve findings (candidate doc clarifications, pending human decision) are recorded in [docs/acceptance-dry-run.md](docs/acceptance-dry-run.md).
 
 ## Design decisions (revisable)
 
