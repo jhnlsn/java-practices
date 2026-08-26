@@ -68,13 +68,13 @@ Each phase leaves the repo in a useful state; check items off as they land.
 
 ### Phase 2 — Test support infrastructure (testing playbook §3.2–3.3)
 - [x] `@IntegrationTest` meta-annotation and `TestcontainersConfiguration` with `@ServiceConnection`, verified by a boot smoke test (`TransfersApplicationIT`) against a real Postgres container.
-- [ ] Test data builders (`AccountBuilder`, …) in `support/` — lands with Phase 3, since builders construct the domain types.
+- [x] Test data builders (`AccountBuilder`, plus `Monies` fixtures) in `support/` — landed with Phase 3, since builders construct the domain types.
 
 ### Phase 3 — Domain core (dev playbook §3.1–3.3)
-- [ ] `Money` — record with validating constructor (template §3.1).
-- [ ] `Account` aggregate, `TransferPolicy`, sealed `TransferDecision` (template §3.2).
-- [ ] Ports: `Accounts`, `FxRates`, `LedgerEvents` — domain-owned interfaces, domain vocabulary (template §3.3).
-- [ ] Domain unit tests, no Spring (testing playbook §4.1). This is also where the dev playbook's workflow (§4, steps 1–3) gets demonstrated: domain first, ports second, use case before any adapter exists.
+- [x] `Money` — record with validating constructor (template §3.1), plus canonical scale so equal amounts compare equal.
+- [x] `Account` aggregate, `TransferPolicy`, sealed `TransferDecision` (template §3.2). The aggregate guards its invariant with exceptions; the policy returns decisions as values — the results-for-decisions / exceptions-for-violations split from the adversarial review §5.
+- [x] Ports: `Accounts`, `FxRates`, `LedgerEvents` — domain-owned interfaces, domain vocabulary (template §3.3), plus `CurrencyPair`/`ExchangeRate`/`TransferCompleted` domain types.
+- [x] Domain unit tests, no Spring (testing playbook §4.1) — 18 tests, sub-second. Demonstrates the dev playbook workflow §4 steps 1–2: domain first, ports second; the use case (step 3) opens Phase 4.
 
 ### Phase 4 — Application and adapters (dev playbook §3.4–3.6)
 - [ ] `TransferUseCase` — orchestration only, injected `Clock`, no business `if`s.
