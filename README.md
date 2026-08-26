@@ -67,8 +67,8 @@ Each phase leaves the repo in a useful state; check items off as they land.
 - [x] GitHub Actions workflow: compile → unit/slice → integration, mirroring the PR gate order.
 
 ### Phase 2 — Test support infrastructure (testing playbook §3.2–3.3)
-- [ ] `@IntegrationTest` meta-annotation and `TestcontainersConfiguration` with `@ServiceConnection`.
-- [ ] Test data builders (`AccountBuilder`, …) in `support/`.
+- [x] `@IntegrationTest` meta-annotation and `TestcontainersConfiguration` with `@ServiceConnection`, verified by a boot smoke test (`TransfersApplicationIT`) against a real Postgres container.
+- [ ] Test data builders (`AccountBuilder`, …) in `support/` — lands with Phase 3, since builders construct the domain types.
 
 ### Phase 3 — Domain core (dev playbook §3.1–3.3)
 - [ ] `Money` — record with validating constructor (template §3.1).

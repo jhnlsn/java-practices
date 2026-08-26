@@ -2,9 +2,9 @@
 # without a version (Testcontainers, AssertJ, Awaitility) are managed by the
 # Boot dependency-management plugin — do not pin them here.
 [versions]
-spring-boot = "3.5.3"
+spring-boot = "3.5.16"
 spring-dependency-management = "1.1.7"
-wiremock = "3.13.1"
+wiremock = "3.13.2"
 
 [libraries]
 spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
