@@ -19,9 +19,9 @@ The playbooks were originally drafted as standalone markdown (in Claude Desktop)
 
 | Document | Role |
 |---|---|
-| [java-development-playbook.md](java-development-playbook.md) | How to *write* code: hexagonal architecture with a framework-free domain core, ports at every boundary you don't own, use cases as the application API, sealed result types, injected clocks. |
-| [java-testing-playbook.md](java-testing-playbook.md) | How to *test* it: test portfolio proportions, Testcontainers over H2, never mock owned classes, meta-annotations for context caching, builders, quality gates (mutation testing, flake policy). |
-| [playbook-adversarial-review.md](playbook-adversarial-review.md) | Prosecution and defense of every major decision above, ending in a summary-judgment table of amendments. This is the "when *not* to apply the rules" document. |
+| [docs/java-development-playbook.md](docs/java-development-playbook.md) | How to *write* code: hexagonal architecture with a framework-free domain core, ports at every boundary you don't own, use cases as the application API, sealed result types, injected clocks. |
+| [docs/java-testing-playbook.md](docs/java-testing-playbook.md) | How to *test* it: test portfolio proportions, Testcontainers over H2, never mock owned classes, meta-annotations for context caching, builders, quality gates (mutation testing, flake policy). |
+| [docs/playbook-adversarial-review.md](docs/playbook-adversarial-review.md) | Prosecution and defense of every major decision above, ending in a summary-judgment table of amendments. This is the "when *not* to apply the rules" document. |
 
 The two playbooks are companions: every rule in the development playbook exists to make a rule in the testing playbook cheap to follow. The adversarial review's verdict is that the rules are right *as defaults for logic-bearing services*, and its amendments (scoping preamble, legacy carve-outs, escape valve for disproportionate ceremony) still need to be folded back into the playbooks — that is tracked in the roadmap below.
 
@@ -56,9 +56,9 @@ Guiding principle for the migration: **the playbooks stay canonical for rules an
 Each phase leaves the repo in a useful state; check items off as they land.
 
 ### Phase 0 — Repository scaffolding
-- [ ] Add `.gitignore` (Gradle, IDE files, `.DS_Store`), license, and make the initial commit of the playbooks as-is (preserve the originals before restructuring).
-- [ ] Move the three documents into `docs/`.
-- [ ] Add `AGENTS.md` / `CLAUDE.md` so agents landing in this repo know the reading order and the rules of engagement.
+- [x] Add `.gitignore` (Gradle, IDE files, `.DS_Store`), license, and make the initial commit of the playbooks as-is (preserve the originals before restructuring).
+- [x] Move the three documents into `docs/`.
+- [x] Add `AGENTS.md` / `CLAUDE.md` so agents landing in this repo know the reading order and the rules of engagement.
 
 ### Phase 1 — Build foundation
 - [ ] Create the `examples/transfers` Gradle project: Kotlin DSL, version catalog, Java 21 toolchain, Spring Boot 3.x.
