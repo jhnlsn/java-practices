@@ -87,7 +87,7 @@ Each phase leaves the repo in a useful state; check items off as they land.
 - [x] PIT on `domain.*` only — non-blocking CI job uploading the report as a trend artifact. Current: 98% mutation score, 100% test strength, ~4s runtime. Surviving mutants drove real test fixes (factory-vs-factory comparison in `TransferPolicyTest`, zero-decimal currencies, cross-currency guards).
 
 ### Phase 6 — Anti-pattern gallery
-- [ ] Turn the "What Bad Looks Like" tables into compiling bad/good pairs in `examples/antipatterns/`, each annotated with the playbook row it violates and the required fix. Bad examples compile but are excluded from the ArchUnit gate (or serve as its negative fixtures).
+- [x] Turned the "What Bad Looks Like" tables into compiling bad/good pairs in `examples/antipatterns/` — ten scenarios covering all twenty table rows (see [its README](examples/antipatterns/README.md) for the row → exhibit map). Bad *test* specimens live in the main source set so they compile on every build but never execute; the ArchUnit gate stays scoped to `transfers`. Highlight: `testing/mockedowned`, where the mock-based test passes against a service whose debit adds instead of subtracts.
 
 ### Phase 7 — Fold code back into the docs
 - [ ] Replace inline snippets in both playbooks with links to the real files (or CI-verified excerpts), so docs and code cannot drift.
