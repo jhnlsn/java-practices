@@ -52,5 +52,26 @@ class MoneyTest {
         assertThatThrownBy(() -> usd(10).plus(eur(10)))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("currency mismatch");
+        assertThatThrownBy(() -> usd(10).minus(eur(10)))
+                .isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(() -> usd(10).isLessThan(eur(10)))
+                .isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
+    void supportsZeroDecimalCurrencies() {
+        var jpy = Currency.getInstance("JPY");
+
+        var total = new Money(new BigDecimal("100"), jpy).plus(new Money(new BigDecimal("50"), jpy));
+
+        assertThat(total).isEqualTo(new Money(new BigDecimal("150"), jpy));
+    }
+
+    @Test
+    void distinguishesPositiveZeroAndNegativeAmounts() {
+        assertThat(usd(5).isPositive()).isTrue();
+        assertThat(usd(0).isPositive()).isFalse();
+        assertThat(usd(0).isNegative()).isFalse();
+        assertThat(usd(-5).isNegative()).isTrue();
     }
 }

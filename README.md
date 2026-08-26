@@ -82,9 +82,9 @@ Each phase leaves the repo in a useful state; check items off as they land.
 - [x] Web slice test (§4.2, Mockito re-added explicitly for the §6.3 port-boundary case), full integration test through HTTP with real Postgres (§4.3), WireMock test for the FX boundary (§4.4), Awaitility async ledger assertion (§4.5). Suites: 24 unit/slice + 6 integration, all green.
 
 ### Phase 5 — Enforcement (dev playbook §7)
-- [ ] ArchUnit suite: framework-free domain, adapter isolation, no field injection.
-- [ ] Apply the adversarial review's amendment: replace the Mockito exclusion with an ArchUnit rule scoping what may be mocked (ports only).
-- [ ] PIT mutation testing on the domain package — as a reported trend, not a blocking PR gate (per adversarial review §7).
+- [x] ArchUnit suite: framework-free domain, adapter isolation, no field injection, plus a layered rule making "dependencies point inward" (core principle #2) enforceable. Runs in the fast unit suite. (ArchUnit pinned to 1.4.x — the line matching Boot 3.5's JUnit Platform.)
+- [x] Applied the adversarial review's amendment: Mockito exclusion removed; `MockUsageTest` scopes `@MockitoBean`/`@Mock` to domain ports and use cases.
+- [x] PIT on `domain.*` only — non-blocking CI job uploading the report as a trend artifact. Current: 98% mutation score, 100% test strength, ~4s runtime. Surviving mutants drove real test fixes (factory-vs-factory comparison in `TransferPolicyTest`, zero-decimal currencies, cross-currency guards).
 
 ### Phase 6 — Anti-pattern gallery
 - [ ] Turn the "What Bad Looks Like" tables into compiling bad/good pairs in `examples/antipatterns/`, each annotated with the playbook row it violates and the required fix. Bad examples compile but are excluded from the ArchUnit gate (or serve as its negative fixtures).

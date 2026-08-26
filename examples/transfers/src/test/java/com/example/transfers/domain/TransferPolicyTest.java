@@ -9,6 +9,11 @@ import org.junit.jupiter.api.Test;
 /**
  * Testing playbook §4.1 — domain unit test: no Spring, no mocks, plain
  * {@code new}. Assertions compare whole decision values, not interactions.
+ *
+ * <p>Expected values are constructed directly with {@code new}, not via the
+ * {@code TransferDecision} factories the production code also calls —
+ * comparing a factory's output to the same factory's output lets a broken
+ * factory pass its own test. (A surviving PIT mutant taught us that.)
  */
 class TransferPolicyTest {
 
@@ -20,7 +25,7 @@ class TransferPolicyTest {
 
         var result = policy.evaluate(account, usd(100));
 
-        assertThat(result).isEqualTo(TransferDecision.rejected(RejectionReason.INSUFFICIENT_FUNDS));
+        assertThat(result).isEqualTo(new TransferDecision.Rejected(RejectionReason.INSUFFICIENT_FUNDS));
     }
 
     @Test
@@ -29,7 +34,7 @@ class TransferPolicyTest {
 
         var result = policy.evaluate(account, usd(100));
 
-        assertThat(result).isEqualTo(TransferDecision.rejected(RejectionReason.ACCOUNT_SUSPENDED));
+        assertThat(result).isEqualTo(new TransferDecision.Rejected(RejectionReason.ACCOUNT_SUSPENDED));
     }
 
     @Test
@@ -39,6 +44,6 @@ class TransferPolicyTest {
 
         var result = policy.evaluate(account, usd(100));
 
-        assertThat(result).isEqualTo(TransferDecision.approved());
+        assertThat(result).isEqualTo(new TransferDecision.Approved());
     }
 }

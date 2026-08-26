@@ -5,6 +5,12 @@
 spring-boot = "3.5.16"
 spring-dependency-management = "1.1.7"
 wiremock = "3.13.2"
+# 1.4.x matches the JUnit Platform that Boot 3.5 manages (1.12.x);
+# ArchUnit 1.5+ compiles against Platform 1.14 (the Boot 4 line).
+archunit = "1.4.1"
+pitest-plugin = "1.19.0"
+pitest-core = "1.25.9"
+pitest-junit5 = "1.2.3"
 
 [libraries]
 spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
@@ -14,7 +20,7 @@ flyway-core = { module = "org.flywaydb:flyway-core" }
 flyway-postgresql = { module = "org.flywaydb:flyway-database-postgresql" }
 postgresql = { module = "org.postgresql:postgresql" }
 spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
-mockito-core = { module = "org.mockito:mockito-core" }
+archunit-junit5 = { module = "com.tngtech.archunit:archunit-junit5", version.ref = "archunit" }
 spring-boot-testcontainers = { module = "org.springframework.boot:spring-boot-testcontainers" }
 testcontainers-junit-jupiter = { module = "org.testcontainers:junit-jupiter" }
 testcontainers-postgresql = { module = "org.testcontainers:postgresql" }
@@ -25,3 +31,4 @@ wiremock-standalone = { module = "org.wiremock:wiremock-standalone", version.ref
 [plugins]
 spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
 spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }
+pitest = { id = "info.solidsoft.pitest", version.ref = "pitest-plugin" }
