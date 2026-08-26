@@ -1,3 +1,10 @@
 spring:
   application:
     name: transfers
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate # Flyway owns the schema; Hibernate only checks it
+
+fx:
+  base-url: https://fx.example.com # placeholder — every real deployment overrides this

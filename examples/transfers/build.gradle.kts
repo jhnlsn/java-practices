@@ -19,12 +19,20 @@ repositories {
 
 dependencies {
     implementation(libs.spring.boot.starter.web)
+    implementation(libs.spring.boot.starter.validation)
+    implementation(libs.spring.boot.starter.data.jpa)
+    implementation(libs.flyway.core)
+    runtimeOnly(libs.flyway.postgresql)
+    runtimeOnly(libs.postgresql)
 
     // Testing playbook §3.1 — canonical test dependencies.
     // The test database is the production engine via Testcontainers; H2 is banned.
     testImplementation(libs.spring.boot.starter.test) {
         exclude(group = "org.mockito") // discourage reflexive mocking; re-add only if §6.3 applies
     }
+    // §6.3 applies: mocking the use case (a port boundary) in @WebMvcTest slices.
+    // Mockito returns explicitly and only for that; mocks of owned non-port classes stay banned.
+    testImplementation(libs.mockito.core)
     testImplementation(libs.spring.boot.testcontainers)
     testImplementation(libs.testcontainers.junit.jupiter)
     testImplementation(libs.testcontainers.postgresql)

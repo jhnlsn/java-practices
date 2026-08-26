@@ -77,9 +77,9 @@ Each phase leaves the repo in a useful state; check items off as they land.
 - [x] Domain unit tests, no Spring (testing playbook §4.1) — 18 tests, sub-second. Demonstrates the dev playbook workflow §4 steps 1–2: domain first, ports second; the use case (step 3) opens Phase 4.
 
 ### Phase 4 — Application and adapters (dev playbook §3.4–3.6)
-- [ ] `TransferUseCase` — orchestration only, injected `Clock`, no business `if`s.
-- [ ] Adapters: `TransferController` + wire DTOs, `JpaAccounts` + separate JPA entity, `HttpFxRates`.
-- [ ] Web slice test (§4.2), full integration test through HTTP with real Postgres (§4.3), WireMock test for the FX boundary (§4.4), Awaitility async example (§4.5).
+- [x] `TransferUseCase` — orchestration only, injected `Clock`, no business `if`s; sealed `TransferResult`, `AccountNotFound` as the abort path.
+- [x] Adapters: `TransferController` + adapter-private wire DTOs and error handler (422/404), `JpaAccounts` + separate JPA entities with edge mapping, Flyway-owned schema, `HttpFxRates` over `RestClient`, `SpringLedgerEvents` + async `LedgerEntryRecorder` for the `LedgerEvents` port.
+- [x] Web slice test (§4.2, Mockito re-added explicitly for the §6.3 port-boundary case), full integration test through HTTP with real Postgres (§4.3), WireMock test for the FX boundary (§4.4), Awaitility async ledger assertion (§4.5). Suites: 24 unit/slice + 6 integration, all green.
 
 ### Phase 5 — Enforcement (dev playbook §7)
 - [ ] ArchUnit suite: framework-free domain, adapter isolation, no field injection.
