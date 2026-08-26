@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Gradle
+.gradle/
+build/
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+out/
+
+# Java
+*.class
+hs_err_pid*
