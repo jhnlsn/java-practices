@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.example.transfers.application.AccountNotFound;
+import com.example.transfers.domain.port.FxUnavailable;
 
 @RestControllerAdvice
 class TransferErrorHandler {
@@ -30,5 +31,10 @@ class TransferErrorHandler {
     @ExceptionHandler(AccountNotFound.class)
     ProblemDetail accountNotFound(AccountNotFound e) {
         return ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, e.getMessage());
+    }
+
+    @ExceptionHandler(FxUnavailable.class)
+    ProblemDetail fxUnavailable(FxUnavailable e) {
+        return ProblemDetail.forStatusAndDetail(HttpStatus.SERVICE_UNAVAILABLE, e.getMessage());
     }
 }

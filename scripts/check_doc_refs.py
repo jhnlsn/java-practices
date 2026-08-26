@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parent.parent
 EXTENSIONS = "java|kts|kt|sql|yaml|yml|toml|md|xml|py"
 PATTERN = re.compile(rf"(?:docs|examples|scripts|\.github)/[A-Za-z0-9_./-]+\.(?:{EXTENSIONS})\b")
 
-SKIP_DIRS = {".git", "build", ".gradle"}
+SKIP_DIRS = {".git", "build", ".gradle", ".claude"}
 
 
 def markdown_files():

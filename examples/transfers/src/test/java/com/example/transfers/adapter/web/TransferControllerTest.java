@@ -1,5 +1,7 @@
 package com.example.transfers.adapter.web;
 
+import static com.example.transfers.support.Monies.EUR;
+import static com.example.transfers.support.Monies.USD;
 import static com.example.transfers.support.Monies.usd;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
@@ -18,7 +20,9 @@ import com.example.transfers.application.AccountNotFound;
 import com.example.transfers.application.TransferResult;
 import com.example.transfers.application.TransferUseCase;
 import com.example.transfers.domain.AccountId;
+import com.example.transfers.domain.CurrencyPair;
 import com.example.transfers.domain.RejectionReason;
+import com.example.transfers.domain.port.FxUnavailable;
 
 /**
  * Testing playbook §4.2 — web slice test: HTTP concerns only (status codes,
@@ -101,5 +105,32 @@ class TransferControllerTest {
                         {"from":"A","to":"B","amount":10,"currency":"USD"}
                         """))
            .andExpect(status().isNotFound());
+    }
+
+    @Test
+    void returns422WithReasonWhenRequestCurrencyDoesNotMatchSourceAccount() throws Exception {
+        when(transferUseCase.transfer(any(), any(), any()))
+                .thenReturn(TransferResult.rejected(RejectionReason.CURRENCY_MISMATCH));
+
+        mvc.perform(post("/transfers")
+                .contentType(APPLICATION_JSON)
+                .content("""
+                        {"from":"A","to":"B","amount":40.00,"currency":"EUR"}
+                        """))
+           .andExpect(status().isUnprocessableEntity())
+           .andExpect(jsonPath("$.reason").value("CURRENCY_MISMATCH"));
+    }
+
+    @Test
+    void returns503WhenRateProviderIsUnavailable() throws Exception {
+        when(transferUseCase.transfer(any(), any(), any()))
+                .thenThrow(new FxUnavailable(new CurrencyPair(USD, EUR), "provider down"));
+
+        mvc.perform(post("/transfers")
+                .contentType(APPLICATION_JSON)
+                .content("""
+                        {"from":"A","to":"B","amount":40.00,"currency":"USD"}
+                        """))
+           .andExpect(status().isServiceUnavailable());
     }
 }

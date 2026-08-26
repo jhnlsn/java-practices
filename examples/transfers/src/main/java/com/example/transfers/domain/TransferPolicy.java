@@ -8,6 +8,13 @@ package com.example.transfers.domain;
 public class TransferPolicy {
 
     public TransferDecision evaluate(Account from, Money amount) {
+        // Checked first: a request stated in a currency other than the source
+        // account's is never comparable to the balance below — Money.isLessThan
+        // throws on a currency mismatch, so this guard must run before it, not
+        // just take precedence over it.
+        if (!amount.currency().equals(from.balance().currency())) {
+            return TransferDecision.rejected(RejectionReason.CURRENCY_MISMATCH);
+        }
         if (from.balance().isLessThan(amount)) {
             return TransferDecision.rejected(RejectionReason.INSUFFICIENT_FUNDS);
         }

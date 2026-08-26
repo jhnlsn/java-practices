@@ -1,6 +1,7 @@
 package com.example.transfers.domain;
 
 import static com.example.transfers.support.AccountBuilder.anAccount;
+import static com.example.transfers.support.Monies.eur;
 import static com.example.transfers.support.Monies.usd;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -45,5 +46,26 @@ class TransferPolicyTest {
         var result = policy.evaluate(account, usd(100));
 
         assertThat(result).isEqualTo(new TransferDecision.Approved());
+    }
+
+    @Test
+    void rejectsTransferWhenRequestCurrencyDoesNotMatchSourceAccount() {
+        var account = anAccount().withBalance(usd(500)).build();
+
+        var result = policy.evaluate(account, eur(100));
+
+        assertThat(result).isEqualTo(new TransferDecision.Rejected(RejectionReason.CURRENCY_MISMATCH));
+    }
+
+    @Test
+    void currencyMismatchIsDetectedBeforeComparingAmounts() {
+        // If the mismatch guard ran after the balance comparison, this would
+        // throw (Money.isLessThan rejects cross-currency comparisons) instead
+        // of producing a clean rejection.
+        var account = anAccount().withBalance(usd(10)).build();
+
+        var result = policy.evaluate(account, eur(100_000));
+
+        assertThat(result).isEqualTo(new TransferDecision.Rejected(RejectionReason.CURRENCY_MISMATCH));
     }
 }
