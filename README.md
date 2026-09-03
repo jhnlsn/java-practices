@@ -6,7 +6,7 @@ The practices target Spring Boot 3.x on Java 21+. They come as two directive pla
 
 ## Start here
 
-**Engineers.** Read the two playbooks in order, then read the reference implementation to see the rules applied to one complete feature. The adversarial review is the third read: it argues where each rule genuinely loses, so you can decide what to adopt for a given codebase instead of applying everything by reflex.
+**Engineers.** Read the two playbooks in order, then read the reference implementation to see the rules applied to one complete feature. The development playbook opens with a scope section that says which code the rules govern and which code gets a sanctioned shortcut; both playbooks end with an escape valve for the cases where a rule would produce disproportionate ceremony.
 
 **AI agents.** [AGENTS.md](AGENTS.md) is the entry point. It gives the reading order, a task → playbook section → canonical file table, and the rules of engagement. Both playbooks end with a §9 "Instructions for an AI Assistant" section that is the operational contract.
 
@@ -16,7 +16,6 @@ The practices target Spring Boot 3.x on Java 21+. They come as two directive pla
 |---|---|
 | [Development playbook](docs/java-development-playbook.md) | How to *write* code: hexagonal architecture with a framework-free domain core, ports at every boundary you don't own, use cases as the application API, sealed result types, injected clocks. Starts with a scope section that says which code it governs and gives plain CRUD a sanctioned shortcut. |
 | [Testing playbook](docs/java-testing-playbook.md) | How to *test* it: test portfolio proportions, Testcontainers over H2, never mock owned classes, meta-annotations for context caching, builders, quality gates with mutation testing as a trend and a human-owned flake policy. |
-| [Adversarial review](docs/playbook-adversarial-review.md) | Prosecution and defense of every major decision above, ending in a summary-judgment table. Read it before concluding a rule doesn't fit your situation. Its amendments are already folded into the playbooks. |
 
 The two playbooks are companions. Every structural rule in the development playbook exists to make a testing rule cheap to follow, and every testing rule assumes the structure. Apply them together.
 
@@ -77,9 +76,9 @@ The CI workflow in [`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs t
 - CI checks that every repo path referenced from markdown exists (`scripts/check_doc_refs.py`). When you move or rename a file the docs point at, update the docs in the same commit.
 - Notes on how the repo was built go under `docs/process/`, not into the README or the playbooks.
 
-## Project notes
+## Process notes
 
-How this repository came to be, the roadmap that built it, its design decisions, and the record of an agent delivering a feature from the docs alone are kept separately in [docs/process/](docs/process/README.md). None of it is needed to apply the playbooks.
+The notes from formulating this guide are kept separately in [docs/process/](docs/process/README.md): the adversarial review that argued each decision and produced the playbooks' amendments, the roadmap that built the repo, its design decisions, and the record of an agent delivering a feature from the docs alone. None of it is needed to apply the playbooks.
 
 ## License
 

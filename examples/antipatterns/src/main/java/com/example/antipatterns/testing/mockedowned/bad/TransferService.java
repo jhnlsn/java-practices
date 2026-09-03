@@ -1,8 +1,8 @@
 package com.example.antipatterns.testing.mockedowned.bad;
 
 /**
- * Contains the classic bug the adversarial review §1 describes: the debit
- * line ADDS instead of subtracting. Watch which test below notices.
+ * Contains the classic bug a mock-based test cannot see: the debit line
+ * ADDS instead of subtracting. Watch which test below notices.
  */
 public class TransferService {
 

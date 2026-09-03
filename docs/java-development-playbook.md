@@ -10,12 +10,12 @@
 
 ## 0. Scope — read this first
 
-This playbook governs **logic-bearing code**: features with business rules worth protecting. Applied to code without that weight, its structure is ceremony (adversarial review §3). Calibrate before you build:
+This playbook governs **logic-bearing code**: features with business rules worth protecting. Applied to code without that weight, its structure is ceremony. Calibrate before you build:
 
 - **Features with real domain logic** get the full structure: three rings, ports, separate JPA types, sealed results.
 - **Plain CRUD may skip the rings — deliberately and locally.** A feature that only validates shape and moves rows may use `@Entity`-as-model with Spring Data and a thin controller, provided (a) it contains no business branching, (b) the shortcut stays confined to that feature's package, and (c) it keeps one integration smoke test of schema + serialization. The moment a business rule appears, apply §8 Phase 2 and carve out a domain.
-- **Split JPA entities from domain models where the domain has behavior** (adversarial review §4). A mapping layer between two structurally identical types is waste; entity-as-model is acceptable for behavior-free aggregates.
-- **Escape valve:** if following a rule produces obviously disproportionate ceremony for the code at hand, stop and surface the conflict to a human instead of silently complying — or silently deviating (adversarial review §10).
+- **Split JPA entities from domain models where the domain has behavior.** A mapping layer between two structurally identical types is waste; entity-as-model is acceptable for behavior-free aggregates.
+- **Escape valve:** if following a rule produces obviously disproportionate ceremony for the code at hand, stop and surface the conflict to a human instead of silently complying — or silently deviating.
 
 ---
 
@@ -146,7 +146,7 @@ public sealed interface TransferDecision {
 
 Return **decisions** as values; never throw exceptions for expected business outcomes. Sealed types + pattern matching make unhandled cases a compile error, not a missing test.
 
-**Aborts are exceptions** (adversarial review §5). Invariant violations and missing referents throw — [`Account.debit`](../examples/transfers/src/main/java/com/example/transfers/domain/Account.java)'s insufficient-funds guard (reaching it means orchestration skipped the policy: a bug, not an outcome) and [`AccountNotFound`](../examples/transfers/src/main/java/com/example/transfers/application/AccountNotFound.java) are the canonical pair. The dividing line is `@Transactional`: an exception rolls the transaction back, a result value silently commits whatever already happened, so anything that must abort uses the exception path.
+**Aborts are exceptions.** Invariant violations and missing referents throw — [`Account.debit`](../examples/transfers/src/main/java/com/example/transfers/domain/Account.java)'s insufficient-funds guard (reaching it means orchestration skipped the policy: a bug, not an outcome) and [`AccountNotFound`](../examples/transfers/src/main/java/com/example/transfers/application/AccountNotFound.java) are the canonical pair. The dividing line is `@Transactional`: an exception rolls the transaction back, a result value silently commits whatever already happened, so anything that must abort uses the exception path.
 
 ### 3.3 Port — domain-owned interface, domain vocabulary
 

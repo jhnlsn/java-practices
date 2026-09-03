@@ -5,6 +5,7 @@ the playbooks; it is kept for the record and for anyone who wants to know why
 the repo is shaped the way it is.
 
 - [Origin](#origin)
+- [Adversarial review](playbook-adversarial-review.md) — the prosecution and defense of every major decision, whose summary judgment produced the playbooks' amendments
 - [Design decisions](#design-decisions)
 - [Migration roadmap (completed)](#migration-roadmap-completed)
 - [Where the adversarial review's amendments landed](#where-the-adversarial-reviews-amendments-landed)
@@ -34,10 +35,10 @@ that links to them.
 - **Anti-patterns are real code.** A bad example that doesn't compile teaches
   nothing about *why* it's tempting; the gallery keeps them compiling and lets
   the enforcement rules condemn them.
-- **The adversarial review stays a first-class document.** Its amendments were
-  applied to the playbooks, but the argument itself is preserved: agents and
-  humans both need the "where this rule genuinely loses" context to avoid
-  cargo-cult compliance.
+- **The adversarial review is preserved as a process record.** Its amendments
+  were applied to the playbooks, which now state each rule with its scope and
+  rationale inline; the argument itself is kept here for anyone revisiting a
+  decision.
 - **Gradle root at `examples/`**, so later example modules join `transfers`
   and `antipatterns` as siblings.
 - **Bad test specimens live in the main source set** of the antipatterns
@@ -138,8 +139,9 @@ of what exists and why; there is no open roadmap.
 
 ## Where the adversarial review's amendments landed
 
-The review's §11 summary judgment proposed one amendment per decision. Each
-was applied as follows; the review itself was left unchanged as the rationale.
+The [review](playbook-adversarial-review.md)'s §11 summary judgment proposed
+one amendment per decision. Each was applied as follows; the review itself was
+left unchanged.
 
 | Review section | Amendment | Landed in |
 |---|---|---|
