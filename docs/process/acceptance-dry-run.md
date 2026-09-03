@@ -1,14 +1,14 @@
 # Acceptance Dry Run — 2026-08-25
 
-The repo's acceptance test (README Phase 8): can an agent deliver a
-correctly-structured feature using **only** the playbooks and templates,
-without human correction?
+The repo's acceptance test ([roadmap](README.md#phase-8--agent-enablement-and-validation)
+Phase 8): can an agent deliver a correctly-structured feature using **only**
+the playbooks and templates, without human correction?
 
 ## Setup
 
 - **Agent:** Claude Sonnet, fresh context, isolated git worktree cut from the
-  Phase 7 commit. It saw only the committed docs and code — no conversation
-  history, no structural hints.
+  commit that closed roadmap Phase 7. It saw only the committed docs and
+  code — no conversation history, no structural hints.
 - **Task:** six business-level requirements for cross-currency transfer
   support (amounts stated in source currency; conversion via the existing
   `FxRates` port; provider outage aborts with nothing persisted → 503;
@@ -58,5 +58,5 @@ escape-valve directive. Each is a candidate doc clarification, deliberately
    pricing this sanctioned collision.
 5. **Roadmap-tracking rules assume the worker commits.** AGENTS.md ties
    checkbox updates to commits; an agent instructed not to commit couldn't
-   comply. (Resolved for this run by the orchestrator; worth a line in
-   AGENTS.md if no-commit dry runs recur.)
+   comply. (Resolved for this run by the orchestrator. The roadmap has since
+   closed and the checkbox rule was removed from AGENTS.md.)

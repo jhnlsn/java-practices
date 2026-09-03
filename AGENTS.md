@@ -1,6 +1,6 @@
 # Agent Guide
 
-This repository defines engineering practices for testable Java (Spring Boot 3.x, Java 21+): two directive playbooks plus a runnable reference implementation in `examples/transfers` and an anti-pattern gallery in `examples/antipatterns`. The migration roadmap in [README.md](README.md) is complete and doubles as the map of what exists and why; the repo's acceptance test — an agent delivering a feature from the docs alone — has passed once ([docs/acceptance-dry-run.md](docs/acceptance-dry-run.md)).
+This repository defines engineering practices for testable Java (Spring Boot 3.x, Java 21+): two directive playbooks, a runnable reference implementation in `examples/transfers`, and an anti-pattern gallery in `examples/antipatterns`. [README.md](README.md) maps what exists and how to run it. Notes on how the repo was built live under `docs/process/` and are not needed to apply the playbooks.
 
 ## Reading order
 
@@ -39,7 +39,7 @@ Paths are under `examples/transfers/src/{main,test}/java/com/example/transfers/`
 ## Rules of engagement for this repo itself
 
 - The playbooks are the product. Never change a rule, threshold, or verdict in `docs/` without explicit human direction; wording/formatting fixes are fine.
-- Docs are canonical for rules and rationale; code (once it exists) is canonical for examples. A change to an example touches both, in the same commit.
-- Work follows the README roadmap. When you complete a roadmap item, check it off in README.md in the same commit as the work.
+- Docs are canonical for rules and rationale; code is canonical for examples. A change to an example touches both, in the same commit.
 - The adversarial review's §11 amendments are folded into the playbooks; the review remains the rationale behind them. Apply the playbooks as written.
+- Keep process out of the guide. The README and the playbooks describe the practices and the code; how something was built, what a run found, and roadmap history belong under `docs/process/`.
 - CI checks that every repo path referenced from markdown exists (`scripts/check_doc_refs.py`) — when you move or rename a file the docs point at, update the docs in the same commit.

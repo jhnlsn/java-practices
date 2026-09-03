@@ -1,6 +1,6 @@
 # Java Development Playbook (Spring Boot 3.x, Java 21+)
 
-> **Companion to `java-testing-playbook.md`.** That document defines how to test; this one defines how to write code so those tests are the natural, cheap way to work. Every rule here exists to make a rule there enforceable. Same format: directives and decision rules, executable by an engineer or an AI assistant without interpretation.
+> **Companion to the [testing playbook](java-testing-playbook.md).** That document defines how to test; this one defines how to write code so those tests are the natural, cheap way to work. Every rule here exists to make a rule there enforceable. Same format: directives and decision rules, executable by an engineer or an AI assistant without interpretation.
 
 **The one-line strategy:** Hexagonal architecture with a framework-free domain core, ports at every boundary you don't own, thin adapters, and use-case classes as the application's public API. Testability is not a property you add — it is the observable result of this structure.
 
@@ -116,7 +116,7 @@ public record Money(BigDecimal amount, Currency currency) {
 }
 ```
 
-The canonical-scale line and the pseudo-currency guard exist because `BigDecimal.equals` is scale-sensitive and `getDefaultFractionDigits()` returns −1 for XAU-style codes — two real bugs the markdown-only version of this template had. Compiling examples keep templates honest.
+The canonical-scale line and the pseudo-currency guard are the two parts of this template that get left out: `BigDecimal.equals` is scale-sensitive, so `2.5` and `2.50` are unequal without it, and `getDefaultFractionDigits()` returns −1 for XAU-style codes. Both are pinned by [`MoneyTest`](../examples/transfers/src/test/java/com/example/transfers/domain/MoneyTest.java).
 
 ### 3.2 Domain policy — pure, sealed result
 

@@ -131,7 +131,7 @@ class TransferPolicyTest {
 }
 ```
 
-Construct expected values directly with `new`, never via the same factories the production code calls — factory-to-factory comparison lets a broken factory pass its own test. (A surviving PIT mutant in this repo found exactly that; the fix is recorded in the canonical file's javadoc.)
+Construct expected values directly with `new`, never via the same factories the production code calls — factory-to-factory comparison lets a broken factory pass its own test. Line coverage cannot see this gap; mutation testing (§7) can, which is why it runs on the domain.
 
 ### 4.2 Web slice test
 
