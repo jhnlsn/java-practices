@@ -1,6 +1,6 @@
 # Java Testing Playbook (Spring Boot 3.x, Java 21+)
 
-> **How to use this document:** This is an executable playbook. When applying it to a project, follow the phases in order. Every rule is written as a directive so an AI assistant or engineer can act on it without interpretation. Code templates are canonical — copy them, don't reinvent them.
+> **How to use this document:** This is an executable playbook. Every rule is written as a directive so an AI assistant or engineer can act on it without interpretation. Code templates are canonical — copy them, don't reinvent them. To roll it onto an existing project, follow the plan in §8.
 >
 > **Canonical code:** every template here exists as real, running code in [`examples/transfers`](../examples/transfers); where a snippet and the code differ, the code wins. **Scope:** this playbook inherits the development playbook's §0 scope — including its plain-CRUD shortcut and its escape valve: disproportionate ceremony is surfaced to a human, never silently obeyed or silently ignored.
 
@@ -31,7 +31,7 @@
 
 ---
 
-## 3. Project Setup (Phase 1 — do this first)
+## 3. Project Setup (do this first)
 
 ### 3.1 Dependencies (Gradle, version catalog style)
 
@@ -52,8 +52,8 @@ dependencies {
 ```
 
 Rules:
-- The test database MUST be the same engine and major version as production. **H2 is banned** by default. *Narrow waiver (adversarial review §2):* a module with zero native SQL and no locking semantics may run slices on an embedded database under CI-budget pressure — but it keeps at least one Testcontainers smoke test of schema + migrations, and the waiver is recorded in the module's build file.
-- Mockito ships with `spring-boot-starter-test` and stays on the classpath. **What may be mocked is governed by an ArchUnit rule**, not a dependency exclusion (adversarial review §6): [`MockUsageTest`](../examples/transfers/src/test/java/com/example/transfers/architecture/MockUsageTest.java) fails the build on any `@MockitoBean`/`@Mock` field whose type is not a domain port or use case (§6.3).
+- The test database MUST be the same engine and major version as production. **H2 is banned** by default. *Narrow waiver:* a module with zero native SQL and no locking semantics may run slices on an embedded database under CI-budget pressure — but it keeps at least one Testcontainers smoke test of schema + migrations, and the waiver is recorded in the module's build file.
+- Mockito ships with `spring-boot-starter-test` and stays on the classpath. **What may be mocked is governed by an ArchUnit rule**, not a dependency exclusion: [`MockUsageTest`](../examples/transfers/src/test/java/com/example/transfers/architecture/MockUsageTest.java) fails the build on any `@MockitoBean`/`@Mock` field whose type is not a domain port or use case (§6.3).
 
 ### 3.2 Meta-annotations (create these before writing any test)
 
@@ -109,7 +109,7 @@ Currency-defaulting fixtures (`Monies.usd(50)`) live in test scope on purpose: p
 
 ---
 
-## 4. Canonical Templates (Phase 2 — golden paths to copy)
+## 4. Canonical Templates (golden paths to copy)
 
 ### 4.1 Domain unit test (no Spring)
 
@@ -131,7 +131,7 @@ class TransferPolicyTest {
 }
 ```
 
-Construct expected values directly with `new`, never via the same factories the production code calls — factory-to-factory comparison lets a broken factory pass its own test. (A surviving PIT mutant in this repo found exactly that; the fix is recorded in the canonical file's javadoc.)
+Construct expected values directly with `new`, never via the same factories the production code calls — factory-to-factory comparison lets a broken factory pass its own test. Line coverage cannot see this gap; mutation testing (§7) can, which is why it runs on the domain.
 
 ### 4.2 Web slice test
 
@@ -285,23 +285,23 @@ Check every PR's tests against this list. All must be true:
 
 Test doubles for **owned** code are allowed only at deliberately designed *ports*: types in `domain.port`, and use cases (the driving ports) when slicing the web layer — e.g., `@MockitoBean TransferUseCase` in a `@WebMvcTest`, because the slice's job is HTTP concerns only and the use case has its own integration tests. The rule of thumb: mock the port, never the adapter, never a peer. This is machine-enforced: [`MockUsageTest`](../examples/transfers/src/test/java/com/example/transfers/architecture/MockUsageTest.java) fails the build on a double of any other type.
 
-Two companion rules (adversarial review §9):
+Two companion rules:
 
 - **No `@MockitoBean` inside `@IntegrationTest` classes.** It silently forks a new application context, defeating the cache §3.2 exists to protect — and it violates this section anyway.
 - **Every integration test cleans its data** (transaction rollback or delete-before, as in `TransferFlowIT`'s `@BeforeEach`): with a shared cached context, leftover rows become some other test's flaky failure.
 
-**Legacy carve-out (adversarial review §1):** on legacy code that cannot be restructured yet, a mock-based *characterization* test is better than no test. Mark it as such, link the structural debt, and when §8 Phase 4 touches that code, replace the test — never extend it.
+**Legacy carve-out:** on legacy code that cannot be restructured yet, a mock-based *characterization* test is better than no test. Mark it as such, link the structural debt, and when §8 Phase 4 touches that code, replace the test — never extend it.
 
 ---
 
-## 7. Quality Gates & CI (Phase 3)
+## 7. Quality Gates & CI
 
 1. **Split suites:**
    - `test` task: unit + slice tests. Target: **< 30s** locally.
    - `integrationTest` task (classes matching `*IT`): Testcontainers suite. Target: **< 10 min** in CI.
-2. **Mutation testing (PIT)** on domain/critical packages only, **as a reported trend — not a blocking PR gate** (adversarial review §7): a non-blocking CI job runs `pitest` and uploads the report; 75% remains the attention threshold on those packages, but a breach triggers review of the trend, not a failed build. Do NOT run PIT repo-wide. Canonical config: the `pitest` block in [`transfers/build.gradle.kts`](../examples/transfers/build.gradle.kts); CI job: [`.github/workflows/ci.yml`](../.github/workflows/ci.yml).
+2. **Mutation testing (PIT)** on domain/critical packages only, **as a reported trend — not a blocking PR gate**: a non-blocking CI job runs `pitest` and uploads the report; 75% remains the attention threshold on those packages, but a breach triggers review of the trend, not a failed build. Do NOT run PIT repo-wide. Canonical config: the `pitest` block in [`transfers/build.gradle.kts`](../examples/transfers/build.gradle.kts); CI job: [`.github/workflows/ci.yml`](../.github/workflows/ci.yml).
 3. **Line coverage** as a floor, not a target: fail below 60% overall, but never write tests solely to raise this number.
-4. **Flake policy:** a test that fails then passes on retry is logged. Two flakes in 7 days → auto-quarantine (excluded tag + ticket **with an owner**). **Deletion is a human decision, never automatic** (adversarial review §8): the decision records whether the flake was a test defect or an accepted risk — and a flake in concurrency-adjacent code is triaged first as a potential production bug, because flakiness is frequently a real race wearing a test costume.
+4. **Flake policy:** a test that fails then passes on retry is logged. Two flakes in 7 days → auto-quarantine (excluded tag + ticket **with an owner**). **Deletion is a human decision, never automatic**: the decision records whether the flake was a test defect or an accepted risk — and a flake in concurrency-adjacent code is triaged first as a potential production bug, because flakiness is frequently a real race wearing a test costume.
 5. **Container reuse** locally (`withReuse(true)`); fresh containers in CI.
 6. **PR gate order:** compile → unit/slice (including ArchUnit) → integration → merge; mutation runs alongside as the non-blocking trend.
 
@@ -337,7 +337,7 @@ Execute in this order; each phase leaves the repo better even if you stop there.
 When asked to add or improve tests in a project governed by this document:
 
 1. **Classify the behavior** under test using §2's decision rule before writing anything.
-2. **Reuse** the meta-annotations and builders in `support/`; extend them rather than bypassing them. If they don't exist yet, create them first (Phase 1) and say so.
+2. **Reuse** the meta-annotations and builders in `support/`; extend them rather than bypassing them. If they don't exist yet, create them first (§8 Phase 1) and say so.
 3. **Copy the matching template** from §4 and adapt it.
 4. **Self-review** against §5 and §6 before presenting the test. If any §6.1 row applies, rewrite — don't ship with a caveat.
 5. When you encounter an existing bad test in a file you're editing, propose the §6.1 "required fix" alongside your change.

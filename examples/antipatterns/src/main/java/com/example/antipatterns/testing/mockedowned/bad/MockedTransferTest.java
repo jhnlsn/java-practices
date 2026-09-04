@@ -16,8 +16,7 @@ import org.junit.jupiter.api.Test;
  * line adds instead of subtracts. It verifies that {@code save} was called,
  * but never asks <em>with what balances</em>. It restates the
  * implementation's call graph, so it can only fail when the implementation
- * changes shape — i.e., exactly when a refactor is correct. (Adversarial
- * review §1 walks through this example.)
+ * changes shape — i.e., exactly when a refactor is correct.
  *
  * Required fix: {@code testing.mockedowned.good}, and for the full flow, the
  * real thing: transfers/src/test/.../TransferFlowIT.java.

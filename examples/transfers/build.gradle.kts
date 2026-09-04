@@ -29,7 +29,7 @@ dependencies {
     // Testing playbook §3.1 — canonical test dependencies.
     // The test database is the production engine via Testcontainers; H2 is banned.
     // Mockito ships with starter-test; WHAT may be mocked is governed by the
-    // ArchUnit rule in architecture/MockUsageTest (adversarial review §6 —
+    // ArchUnit rule in architecture/MockUsageTest (testing playbook §3.1 —
     // governance by rule, not by dependency exclusion).
     testImplementation(libs.spring.boot.starter.test)
     testImplementation(libs.spring.boot.testcontainers)
@@ -41,9 +41,9 @@ dependencies {
     testImplementation(libs.archunit.junit5) // dev playbook §7 — architecture rules run in the fast suite
 }
 
-// Testing playbook §7.2 amended by adversarial review §7: mutation testing on
-// the domain only, reported as a trend — not a blocking PR gate. Domain tests
-// are pure unit tests, which is exactly where PIT is fast and mutants matter.
+// Testing playbook §7.2: mutation testing on the domain only, reported as a
+// trend — not a blocking PR gate. Domain tests are pure unit tests, which is
+// exactly where PIT is fast and mutants matter.
 pitest {
     pitestVersion = libs.versions.pitest.core.get()
     junit5PluginVersion = libs.versions.pitest.junit5.get()

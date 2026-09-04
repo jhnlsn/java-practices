@@ -65,7 +65,7 @@ class TransferFlowIT {
     @BeforeEach
     void cleanSlate() {
         // Shared cached context ⇒ every test cleans its data
-        // (adversarial review §9's companion rule).
+        // (testing playbook §6.3's companion rule).
         jdbc.update("delete from ledger_entries");
         jdbc.update("delete from accounts");
         fxApi.resetAll();

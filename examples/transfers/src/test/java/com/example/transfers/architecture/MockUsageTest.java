@@ -12,7 +12,7 @@ import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;
 
 /**
- * Adversarial review §6 — governance by rule, not by dependency graph:
+ * Testing playbook §3.1 — governance by rule, not by dependency graph:
  * Mockito stays on the classpath, and this rule scopes what it may touch.
  * Testing playbook §6.3: mock the port, never the adapter, never a peer —
  * doubles are allowed only for domain ports and for use cases (the driving
