@@ -10,6 +10,7 @@ the repo is shaped the way it is.
 - [Migration roadmap (completed)](#migration-roadmap-completed)
 - [Where the adversarial review's amendments landed](#where-the-adversarial-reviews-amendments-landed)
 - [Acceptance dry run](acceptance-dry-run.md)
+- [Pending: CI workflow comments](#pending-ci-workflow-comments)
 
 ## Origin
 
@@ -155,3 +156,35 @@ left unchanged.
 | §8 Flake auto-delete | Deletion is a human decision with triage | Testing playbook §7 |
 | §9 Meta-annotations/caching | No `@MockitoBean` in integration tests; mandatory data cleanup | Testing playbook §6.3 |
 | §10 Directive style | Escape valve: surface disproportionate ceremony to a human | Both playbooks §0/§9 |
+
+## Pending: CI workflow comments
+
+Three comments in [`.github/workflows/ci.yml`](../../.github/workflows/ci.yml)
+still cite roadmap phases and the adversarial review. The remote session that
+did the process-notes cleanup could not push them: its GitHub App token lacks
+the `workflows` permission, so GitHub rejects any push touching that path.
+Apply this from a local checkout with your own credentials, then delete this
+section.
+
+```diff
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -1,6 +1,6 @@
+ # Mirrors the testing playbook §7 PR gate order:
+ #   compile → unit/slice → integration
+-# (mutation testing joins in Phase 5 as a reported trend, not a blocking step)
++# Mutation testing runs alongside as a reported trend, not a blocking step.
+ name: CI
+@@ -9,8 +9,8 @@ on:
+ jobs:
+-  # Docs link to canonical code (Phase 7): a moved or renamed file must
+-  # update the docs in the same commit, or this fails.
++  # Docs link to canonical code: a moved or renamed file must update the
++  # docs in the same commit, or this fails.
+   docs-references:
+@@ -43,7 +43,7 @@ jobs:
+-  # Adversarial review §7 — mutation score is a trend to watch, not a merge
++  # Testing playbook §7 — mutation score is a trend to watch, not a merge
+   # gate. This job never blocks a PR; read the uploaded report for the score.
+   mutation-report:
+```
