@@ -1,0 +1,442 @@
+TAP version 13
+# Subtest: 2.1.329: original generated helpers
+    # Subtest: POSIX interpolation preserves hostile text as one literal argument
+    ok 1 - POSIX interpolation preserves hostile text as one literal argument
+      ---
+      duration_ms: 7.495458
+      type: 'test'
+      ...
+    # Subtest: arrays expand into separate quoted words
+    ok 2 - arrays expand into separate quoted words
+      ---
+      duration_ms: 1.670417
+      type: 'test'
+      ...
+    # Subtest: missing interpolation is refused before any host call
+    ok 3 - missing interpolation is refused before any host call
+      ---
+      duration_ms: 1.297625
+      type: 'test'
+      ...
+    # Subtest: arrays in single-word and redirect positions are refused
+    ok 4 - arrays in single-word and redirect positions are refused
+      ---
+      duration_ms: 0.992334
+      type: 'test'
+      ...
+    # Subtest: raw text requires host provenance approval
+    ok 5 - raw text requires host provenance approval
+      ---
+      duration_ms: 1.037084
+      type: 'test'
+      ...
+    # Subtest: approved raw text is spliced literally
+    ok 6 - approved raw text is spliced literally
+      ---
+      duration_ms: 1.051625
+      type: 'test'
+      ...
+    # Subtest: nonzero throws ShellError and nothrow preserves exit code
+    ok 7 - nonzero throws ShellError and nothrow preserves exit code
+      ---
+      duration_ms: 1.082084
+      type: 'test'
+      ...
+    # Subtest: host outcome note exempts a nonzero command from throwing
+    ok 8 - host outcome note exempts a nonzero command from throwing
+      ---
+      duration_ms: 1.041375
+      type: 'test'
+      ...
+    # Subtest: background result is returned but cannot be read as finished output
+    ok 9 - background result is returned but cannot be read as finished output
+      ---
+      duration_ms: 1.038458
+      type: 'test'
+      ...
+    # Subtest: cwd and environment values are quoted and invalid keys are refused
+    ok 10 - cwd and environment values are quoted and invalid keys are refused
+      ---
+      duration_ms: 1.311
+      type: 'test'
+      ...
+    # Subtest: immediate readers request full output; later readers use inline output
+    ok 11 - immediate readers request full output; later readers use inline output
+      ---
+      duration_ms: 0.789583
+      type: 'test'
+      ...
+    # Subtest: JSON and line readers and preview preserve documented shapes
+    ok 12 - JSON and line readers and preview preserve documented shapes
+      ---
+      duration_ms: 1.635458
+      type: 'test'
+      ...
+    # Subtest: PowerShell escapes quotes and refuses typographic delimiters
+    ok 13 - PowerShell escapes quotes and refuses typographic delimiters
+      ---
+      duration_ms: 1.026125
+      type: 'test'
+      ...
+    # Subtest: batch edit preflights every evolving anchor before writing
+    ok 14 - batch edit preflights every evolving anchor before writing
+      ---
+      duration_ms: 1.254
+      type: 'test'
+      ...
+    # Subtest: batch soft failure reports zero replacements and keeps file intact
+    ok 15 - batch soft failure reports zero replacements and keeps file intact
+      ---
+      duration_ms: 0.731667
+      type: 'test'
+      ...
+    # Subtest: literal replacement tokens remain literal and all counts replacements
+    ok 16 - literal replacement tokens remain literal and all counts replacements
+      ---
+      duration_ms: 0.970084
+      type: 'test'
+      ...
+    # Subtest: same-text edits skip host writes and warn
+    ok 17 - same-text edits skip host writes and warn
+      ---
+      duration_ms: 1.203875
+      type: 'test'
+      ...
+    # Subtest: file readers are lazy, sliced, frozen and propagate missing-file errors
+    ok 18 - file readers are lazy, sliced, frozen and propagate missing-file errors
+      ---
+      duration_ms: 0.774458
+      type: 'test'
+      ...
+    # Subtest: write returns UTF-8 byte count and rejects object content
+    ok 19 - write returns UTF-8 byte count and rejects object content
+      ---
+      duration_ms: 0.925875
+      type: 'test'
+      ...
+    # Subtest: sleep delegates scheduling and surfaces cancellation
+    ok 20 - sleep delegates scheduling and surfaces cancellation
+      ---
+      duration_ms: 0.66475
+      type: 'test'
+      ...
+    # Subtest: running snapshots are frozen; abort and unavailable tools use registry
+    ok 21 - running snapshots are frozen; abort and unavailable tools use registry
+      ---
+      duration_ms: 0.725709
+      type: 'test'
+      ...
+    # Subtest: context handles are stable, live and expose results through host
+    ok 22 - context handles are stable, live and expose results through host
+      ---
+      duration_ms: 1.598458
+      type: 'test'
+      ...
+    1..22
+ok 1 - 2.1.329: original generated helpers
+  ---
+  duration_ms: 31.974291
+  type: 'test'
+  ...
+# Subtest: 2.1.330: original generated helpers
+    # Subtest: POSIX interpolation preserves hostile text as one literal argument
+    ok 1 - POSIX interpolation preserves hostile text as one literal argument
+      ---
+      duration_ms: 5.683375
+      type: 'test'
+      ...
+    # Subtest: arrays expand into separate quoted words
+    ok 2 - arrays expand into separate quoted words
+      ---
+      duration_ms: 1.247125
+      type: 'test'
+      ...
+    # Subtest: missing interpolation is refused before any host call
+    ok 3 - missing interpolation is refused before any host call
+      ---
+      duration_ms: 1.221125
+      type: 'test'
+      ...
+    # Subtest: arrays in single-word and redirect positions are refused
+    ok 4 - arrays in single-word and redirect positions are refused
+      ---
+      duration_ms: 0.912541
+      type: 'test'
+      ...
+    # Subtest: raw text requires host provenance approval
+    ok 5 - raw text requires host provenance approval
+      ---
+      duration_ms: 1.298375
+      type: 'test'
+      ...
+    # Subtest: approved raw text is spliced literally
+    ok 6 - approved raw text is spliced literally
+      ---
+      duration_ms: 0.860834
+      type: 'test'
+      ...
+    # Subtest: nonzero throws ShellError and nothrow preserves exit code
+    ok 7 - nonzero throws ShellError and nothrow preserves exit code
+      ---
+      duration_ms: 1.020708
+      type: 'test'
+      ...
+    # Subtest: host outcome note exempts a nonzero command from throwing
+    ok 8 - host outcome note exempts a nonzero command from throwing
+      ---
+      duration_ms: 0.750042
+      type: 'test'
+      ...
+    # Subtest: background result is returned but cannot be read as finished output
+    ok 9 - background result is returned but cannot be read as finished output
+      ---
+      duration_ms: 0.948792
+      type: 'test'
+      ...
+    # Subtest: cwd and environment values are quoted and invalid keys are refused
+    ok 10 - cwd and environment values are quoted and invalid keys are refused
+      ---
+      duration_ms: 0.918666
+      type: 'test'
+      ...
+    # Subtest: immediate readers request full output; later readers use inline output
+    ok 11 - immediate readers request full output; later readers use inline output
+      ---
+      duration_ms: 0.737666
+      type: 'test'
+      ...
+    # Subtest: JSON and line readers and preview preserve documented shapes
+    ok 12 - JSON and line readers and preview preserve documented shapes
+      ---
+      duration_ms: 0.847833
+      type: 'test'
+      ...
+    # Subtest: PowerShell escapes quotes and refuses typographic delimiters
+    ok 13 - PowerShell escapes quotes and refuses typographic delimiters
+      ---
+      duration_ms: 0.873125
+      type: 'test'
+      ...
+    # Subtest: batch edit preflights every evolving anchor before writing
+    ok 14 - batch edit preflights every evolving anchor before writing
+      ---
+      duration_ms: 0.964375
+      type: 'test'
+      ...
+    # Subtest: batch soft failure reports zero replacements and keeps file intact
+    ok 15 - batch soft failure reports zero replacements and keeps file intact
+      ---
+      duration_ms: 1.234375
+      type: 'test'
+      ...
+    # Subtest: literal replacement tokens remain literal and all counts replacements
+    ok 16 - literal replacement tokens remain literal and all counts replacements
+      ---
+      duration_ms: 1.726584
+      type: 'test'
+      ...
+    # Subtest: same-text edits skip host writes and warn
+    ok 17 - same-text edits skip host writes and warn
+      ---
+      duration_ms: 1.0825
+      type: 'test'
+      ...
+    # Subtest: file readers are lazy, sliced, frozen and propagate missing-file errors
+    ok 18 - file readers are lazy, sliced, frozen and propagate missing-file errors
+      ---
+      duration_ms: 0.95575
+      type: 'test'
+      ...
+    # Subtest: write returns UTF-8 byte count and rejects object content
+    ok 19 - write returns UTF-8 byte count and rejects object content
+      ---
+      duration_ms: 1.30375
+      type: 'test'
+      ...
+    # Subtest: sleep delegates scheduling and surfaces cancellation
+    ok 20 - sleep delegates scheduling and surfaces cancellation
+      ---
+      duration_ms: 0.863083
+      type: 'test'
+      ...
+    # Subtest: running snapshots are frozen; abort and unavailable tools use registry
+    ok 21 - running snapshots are frozen; abort and unavailable tools use registry
+      ---
+      duration_ms: 2.111125
+      type: 'test'
+      ...
+    # Subtest: context handles are stable, live and expose results through host
+    ok 22 - context handles are stable, live and expose results through host
+      ---
+      duration_ms: 0.828625
+      type: 'test'
+      ...
+    1..22
+ok 2 - 2.1.330: original generated helpers
+  ---
+  duration_ms: 29.644542
+  type: 'test'
+  ...
+# (node:17012) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 330: recovered replacement parser
+    # Subtest: parses top-level await, destructuring, classes and regex literals
+    ok 1 - parses top-level await, destructuring, classes and regex literals
+      ---
+      duration_ms: 1.5695
+      type: 'test'
+      ...
+    # Subtest: new __replEnter reservation is enforced
+    ok 2 - new __replEnter reservation is enforced
+      ---
+      duration_ms: 0.425
+      type: 'test'
+      ...
+    # Subtest: replacement instrumentation executes loops and async functions
+    ok 3 - replacement instrumentation executes loops and async functions
+      ---
+      duration_ms: 1.0215
+      type: 'test'
+      ...
+    # Subtest: replacement parser reports syntax failures and nesting guard still applies
+    ok 4 - replacement parser reports syntax failures and nesting guard still applies
+      ---
+      duration_ms: 1.580375
+      type: 'test'
+      ...
+    1..4
+ok 3 - 330: recovered replacement parser
+  ---
+  duration_ms: 5.011958
+  type: 'test'
+  ...
+# (node:17013) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: recovered parser and instrumentation
+    # Subtest: real Acorn parser accepts an async execution wrapper
+    ok 1 - real Acorn parser accepts an async execution wrapper
+      ---
+      duration_ms: 3.126
+      type: 'test'
+      ...
+    # Subtest: loop and function steps are injected and enforce a host counter
+    ok 2 - loop and function steps are injected and enforce a host counter
+      ---
+      duration_ms: 1.513125
+      type: 'test'
+      ...
+    # Subtest: reserved names and with blocks are rejected before execution
+    ok 3 - reserved names and with blocks are rejected before execution
+      ---
+      duration_ms: 0.765625
+      type: 'test'
+      ...
+    # Subtest: only one-key raw object literals receive provenance marks
+    ok 4 - only one-key raw object literals receive provenance marks
+      ---
+      duration_ms: 0.432792
+      type: 'test'
+      ...
+    # Subtest: protected globals cannot be declared or assigned; local shadowing works
+    ok 5 - protected globals cannot be declared or assigned; local shadowing works
+      ---
+      duration_ms: 0.900333
+      type: 'test'
+      ...
+    # Subtest: deep syntax is refused and the recovered step budget is numeric
+    ok 6 - deep syntax is refused and the recovered step budget is numeric
+      ---
+      duration_ms: 1.551083
+      type: 'test'
+      ...
+    1..6
+ok 4 - recovered parser and instrumentation
+  ---
+  duration_ms: 8.800833
+  type: 'test'
+  ...
+# Subtest: recovered step-budget installer
+    # Subtest: exact guard stops an endless loop at the configured budget
+    ok 1 - exact guard stops an endless loop at the configured budget
+      ---
+      duration_ms: 1.38425
+      type: 'test'
+      ...
+    # Subtest: exact guard reports a wall-clock stop
+    ok 2 - exact guard reports a wall-clock stop
+      ---
+      duration_ms: 0.903583
+      type: 'test'
+      ...
+    # Subtest: exact guard surfaces host memory-pressure signal
+    ok 3 - exact guard surfaces host memory-pressure signal
+      ---
+      duration_ms: 0.687084
+      type: 'test'
+      ...
+    1..3
+ok 5 - recovered step-budget installer
+  ---
+  duration_ms: 3.202042
+  type: 'test'
+  ...
+# Subtest: recovered raw-literal provenance installer
+ok 6 - recovered raw-literal provenance installer
+  ---
+  duration_ms: 0.538125
+  type: 'test'
+  ...
+# (node:17014) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 330: original async scheduler
+    # Subtest: scripts start FIFO and results are delivered once
+    ok 1 - scripts start FIFO and results are delivered once
+      ---
+      duration_ms: 2.087917
+      type: 'test'
+      ...
+    # Subtest: detaching lets the next script start while the first remains active
+    ok 2 - detaching lets the next script start while the first remains active
+      ---
+      duration_ms: 10.848833
+      type: 'test'
+      ...
+    # Subtest: eight unsettled scripts fill the cap; ninth is refused
+    ok 3 - eight unsettled scripts fill the cap; ninth is refused
+      ---
+      duration_ms: 1.169792
+      type: 'test'
+      ...
+    # Subtest: aborting a queued script marks it never run and preserves other work
+    ok 4 - aborting a queued script marks it never run and preserves other work
+      ---
+      duration_ms: 0.333167
+      type: 'test'
+      ...
+    # Subtest: runtime failures settle as errors and do not block later scripts
+    ok 5 - runtime failures settle as errors and do not block later scripts
+      ---
+      duration_ms: 0.136042
+      type: 'test'
+      ...
+    # Subtest: context release clears timers and removes its persistent context
+    ok 6 - context release clears timers and removes its persistent context
+      ---
+      duration_ms: 0.075875
+      type: 'test'
+      ...
+    1..6
+ok 7 - 330: original async scheduler
+  ---
+  duration_ms: 15.358708
+  type: 'test'
+  ...
+1..7
+# tests 70
+# suites 0
+# pass 70
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 177.728417

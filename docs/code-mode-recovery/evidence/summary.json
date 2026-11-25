@@ -1,0 +1,25 @@
+{
+  "versions": {
+    "2.1.329": {
+      "binary_sha256": "8c1729568b19cdadedd0a978bf692f9f279ef554c8a333c4e132b94fd8725550",
+      "archived_files": 3657,
+      "archived_bytes": 72808784,
+      "unresolved_literal_embedded_references": 0
+    },
+    "2.1.330": {
+      "binary_sha256": "f7c5093b9dd6560d08af28bc27b123fb55091deae3180ac39df199522da86815",
+      "archived_files": 3776,
+      "archived_bytes": 74196409,
+      "unresolved_literal_embedded_references": 0
+    }
+  },
+  "test_run": {
+    "reported_tests": 70,
+    "leaf_tests": 64,
+    "passed": 70,
+    "failed": 0,
+    "tap_sha256": "669ef9268214cb035171e216c577c987b2b306c1fe6be6f1b464f3ec9f18fdc7"
+  },
+  "standalone_end_to_end_parity_established": false,
+  "original_binary_modified": false
+}

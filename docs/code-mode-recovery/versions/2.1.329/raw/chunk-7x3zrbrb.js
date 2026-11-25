@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{V,Szn}from"/$bunfs/root/chunk-kgzzwvwc.js";import{S,u}from"/$bunfs/root/chunk-y98mhv74.js";import{s}from"/$bunfs/root/chunk-gvhwnc7g.js";import{ZIe,wf,mu,Ms,Ed}from"/$bunfs/root/chunk-yzxvzrvh.js";import{a}from"/$bunfs/root/chunk-487kez16.js";import{f}from"/$bunfs/root/chunk-3mgc6ahd.js";import{Zt,dbe}from"/$bunfs/root/chunk-aq3ms068.js";import{zr}from"/$bunfs/root/chunk-hg1yqkjk.js";import{O8n}from"/$bunfs/root/chunk-020bvmjb.js";import{ve}from"/$bunfs/root/chunk-5hv562wg.js";function p(){return s.CLAUDE_JOB_DIR}async function _Wr(i,e,n){a("tengu_bg_agent_action",{action:S("stop"),source:u(i),jobSessionId:ve(V())}),Szn(void 0);let o=p();if(Zt()&&o){let r=new Date().toISOString(),t=await Ms(o,e);if(t&&!Ed(t))await wf(o,{...t,state:"stopped",detail:"stopped from session",tempo:"idle",needs:void 0,block:void 0,inFlight:void 0,updatedAt:r,firstTerminalAt:t.firstTerminalAt??r},e).catch(mu);else await O8n(o,e);if(dbe())process.stdout.write(ZIe(n??"Session stopped."))}return f("job_stop_self"),zr(0,"prompt_input_exit",{suppressResumeHint:!0})}
+export{_Wr};

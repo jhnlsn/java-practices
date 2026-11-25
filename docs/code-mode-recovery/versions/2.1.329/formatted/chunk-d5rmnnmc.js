@@ -1,0 +1,6516 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import { Oe } from "/$bunfs/root/chunk-cqahc80t.js";
+import { S, u, fe } from "/$bunfs/root/chunk-y98mhv74.js";
+import { d, w } from "/$bunfs/root/chunk-avbzeyf3.js";
+import { K } from "/$bunfs/root/chunk-q3pjyhpy.js";
+import { jf, Bxo, bj } from "/$bunfs/root/chunk-ca90c7br.js";
+import { a } from "/$bunfs/root/chunk-487kez16.js";
+import { f, m, l } from "/$bunfs/root/chunk-3mgc6ahd.js";
+import { b } from "/$bunfs/root/chunk-aq3ms068.js";
+import { s } from "/$bunfs/root/chunk-gvhwnc7g.js";
+import { t } from "/$bunfs/root/chunk-c2c9kwmh.js";
+import { I, da, nt, wr, Wl } from "/$bunfs/root/chunk-m55722gg.js";
+import { Kn } from "/$bunfs/root/chunk-k936fbc4.js";
+import { x } from "/$bunfs/root/chunk-kg2zehkt.js";
+import { pr } from "/$bunfs/root/chunk-pt7yf14c.js";
+import { pe } from "/$bunfs/root/chunk-ahqq8jsg.js";
+import { Un, Vw, li } from "/$bunfs/root/chunk-rqs3939j.js";
+import { La } from "/$bunfs/root/chunk-r5p371sa.js";
+import { aPl, lPl, axe, s7e } from "/$bunfs/root/chunk-dnaxttmk.js";
+import { aa } from "/$bunfs/root/chunk-4t09bv92.js";
+import { ye, pl } from "/$bunfs/root/chunk-pxy9yt8m.js";
+import { Hu } from "/$bunfs/root/chunk-zryj96fm.js";
+import { po } from "/$bunfs/root/chunk-r3ggct44.js";
+import { ETt } from "/$bunfs/root/chunk-0fhp52r5.js";
+import { Cp, rYe } from "/$bunfs/root/chunk-mkb20618.js";
+import { Eps } from "/$bunfs/root/chunk-tsby2qjm.js";
+import {
+  vfr,
+  ob,
+  Vyt,
+  KEi,
+  wis,
+  Yel,
+  hao,
+} from "/$bunfs/root/chunk-43mqmw8f.js";
+import {
+  a3,
+  Gyi,
+  ucr,
+  KP,
+  M4e,
+  Ers,
+  CMe,
+  MLt,
+  Xyi,
+  GZt,
+} from "/$bunfs/root/chunk-3yar3476.js";
+import {
+  E9a,
+  u4e,
+  hOn,
+  fno,
+  pno,
+  kts,
+  mno,
+  Ets,
+  vts,
+  Ghi,
+  Lk,
+  Tts,
+  hno,
+  Cts,
+  Glr,
+  v9a,
+  Ats,
+  gno,
+  T9a,
+  int,
+  zlr,
+  Vlr,
+  yno,
+  A9a,
+  zhi,
+  C_t,
+  A_t,
+  R9a,
+  x9a,
+  Ez,
+  iue,
+  P9a,
+  VQt,
+  Pts,
+  KQt,
+  Klr,
+  Ots,
+  Sno,
+  bno,
+  O9a,
+  qlr,
+  Vhi,
+  Ylr,
+  qQt,
+  Khi,
+  qhi,
+  hMe,
+  wno,
+  Yhi,
+  Xhi,
+  Mse,
+  gOn,
+  I9a,
+  VDt,
+  gMe,
+  kno,
+  KDt,
+  Wve,
+  Xlr,
+  Jhi,
+} from "/$bunfs/root/chunk-m318qk27.js";
+import { H6a, SQr, j6a } from "/$bunfs/root/chunk-g4jweshk.js";
+import { mJn, _Ra } from "/$bunfs/root/chunk-5hvmahgm.js";
+import { uwn, fwn, tAa, nAa, rAa } from "/$bunfs/root/chunk-8apbbcha.js";
+import { Y7a } from "/$bunfs/root/chunk-22m075cp.js";
+import { STe } from "/$bunfs/root/chunk-x602bs7x.js";
+import { Ful } from "/$bunfs/root/chunk-bqhnb9dm.js";
+import { Ul } from "/$bunfs/root/chunk-d4wjdfpm.js";
+import { Sc } from "/$bunfs/root/chunk-gn659nf7.js";
+import { sr, gP } from "/$bunfs/root/chunk-yj4act9t.js";
+import { an } from "/$bunfs/root/chunk-nqp6a09z.js";
+import { B, M } from "/$bunfs/root/chunk-b8e2yqms.js";
+import {
+  lstat as Ct,
+  open as Ua,
+  realpath as Wa,
+  stat as Ui,
+  unlink as mr,
+} from "fs/promises";
+import {
+  basename as Wi,
+  dirname as Ve,
+  isAbsolute as za,
+  join as dt,
+  resolve as lo,
+} from "path";
+import { mkdtemp as Do, open as Po, rm as Fo } from "fs/promises";
+import { join as Ur } from "path";
+async function Wr(e, n = Cp()) {
+  let r = await Do(Ur(n, `${e}-`));
+  return {
+    path: Ur(r, "out.bundle"),
+    dispose: () => Fo(r, { recursive: !0, force: !0 }).catch(() => {}),
+  };
+}
+async function zr(e, n) {
+  let r;
+  try {
+    r = await Po(e, Hu());
+  } catch (i) {
+    return { kind: "unreadable", detail: String(i) };
+  }
+  try {
+    let i = await r.stat();
+    if (!i.isFile() || i.nlink !== 1)
+      return { kind: "unreadable", detail: "not a single regular file" };
+    if (i.size > n) return { kind: "too_large", sizeBytes: i.size };
+    let o = Buffer.alloc(i.size),
+      c = 0;
+    while (c < i.size) {
+      let { bytesRead: h } = await r.read(o, c, i.size - c, c);
+      if (h === 0) break;
+      c += h;
+    }
+    return c === i.size
+      ? { kind: "read", content: o }
+      : { kind: "unreadable", detail: "changed while being read" };
+  } catch (i) {
+    return { kind: "unreadable", detail: String(i) };
+  } finally {
+    await r.close();
+  }
+}
+import {
+  chmod as Lo,
+  mkdir as Mn,
+  open as Ud,
+  readdir as Mo,
+  readFile as Go,
+  rm as jo,
+  stat as Ho,
+  writeFile as Yr,
+} from "fs/promises";
+import { join as He } from "path";
+var Uo = new Map([
+    ["# v2 git bundle", "sha1"],
+    [
+      `# v3 git bundle
+@object-format=sha1`,
+      "sha1",
+    ],
+    [
+      `# v3 git bundle
+@object-format=sha256`,
+      "sha256",
+    ],
+  ]),
+  Wo = {
+    sha1: /^([0-9a-f]{40}) ([^\0-\x20\x7f]+)$/,
+    sha256: /^([0-9a-f]{64}) ([^\0-\x20\x7f]+)$/,
+  },
+  zo =
+    /unable to read [0-9a-f]{40}|missing (?:blob|tree|commit|tag) object|bad (?:tree )?object [0-9a-f]{40}|[Cc]ould not read [0-9a-f]{40}|Failed to traverse parents|bogus commit object|too-short tree (?:object|file)|malformed mode in tree entry|empty filename in tree entry|[Oo]bject [0-9a-f]{40,64} (?:is a \w+, )?not a (?:tree|commit|blob|tag)|mode, but is not a (?:tree|blob)|exceeded maximum allowed tree depth/,
+  Yo = /^(?:error|fatal):/m,
+  Ko = Buffer.from("PACK\x00\x00\x00\x02", "latin1"),
+  Xo = Ko.length;
+var qo = {
+    sha1: "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+    sha256: "6ef19b41225c5369f1c104d45d8d85efa9b057b53b14b4b9b939dd74decc5321",
+  },
+  rn = Buffer.from("\xFFtOc\x00\x00\x00\x02", "latin1"),
+  nn = rn.length + 1024;
+function Vo(e) {
+  let n = e.indexOf(`
+
+`),
+    r = e.toString("latin1", 0, Math.max(n, 0)).split(`
+`),
+    i = r.findIndex((h, g) => g > 0 && !h.startsWith("@")),
+    o = Uo.get(
+      r.slice(0, i).join(`
+`),
+    );
+  if (i < 0 || o === void 0) return null;
+  let c = r.slice(i).flatMap((h) => {
+    let [, g, p] = Wo[o].exec(h) ?? [];
+    return g === void 0 || p === void 0 ? [] : [{ id: g, name: p }];
+  });
+  return c.length === r.length - i &&
+    M(c.map((h) => h.name)).length === c.length
+    ? { objectFormat: o, refs: c, packOffset: n + 2 }
+    : null;
+}
+async function Jo(e, n) {
+  let r = await Go(e).catch(() => null);
+  if (r === null || r.length < nn || !r.subarray(0, rn.length).equals(rn))
+    return null;
+  let i = Buffer.from(n, "hex"),
+    o = (g) => (g < 0 ? 0 : r.readUInt32BE(rn.length + g * 4)),
+    [c, h] = [o(i[0] - 1), o(i[0])];
+  if (nn + h * i.length > r.length) return null;
+  return Array.from({ length: h - c }, (g, p) => c + p).some((g) =>
+    r.subarray(nn + g * i.length, nn + (g + 1) * i.length).equals(i),
+  );
+}
+function Zo(e) {
+  return {
+    GIT_DIR: e,
+    GIT_COMMON_DIR: e,
+    GIT_WORK_TREE: e,
+    GIT_OBJECT_DIRECTORY: He(e, "objects"),
+    GIT_ALTERNATE_OBJECT_DIRECTORIES: "",
+    GIT_NO_LAZY_FETCH: "1",
+    GIT_GRAFT_FILE: He(e, "info", "grafts"),
+    GIT_SHALLOW_FILE: He(e, "shallow"),
+    GIT_NO_REPLACE_OBJECTS: "1",
+    GIT_CONFIG_NOSYSTEM: "1",
+    GIT_CONFIG_GLOBAL: He(e, "no-global-config"),
+    GIT_CONFIG_COUNT: "0",
+    GIT_CONFIG_PARAMETERS: "",
+    GIT_ATTR_NOSYSTEM: "1",
+    XDG_CONFIG_HOME: e,
+    GIT_TEST_PACK_PATH_WALK: "0",
+    LC_ALL: "C",
+    LANGUAGE: "C",
+  };
+}
+async function Xr(e, { scratchRoot: n }, r) {
+  let i = Vo(e);
+  if (i === null)
+    return { ok: !1, kind: "header", detail: "not a whole bundle" };
+  let o = e.subarray(i.packOffset),
+    c = He(n, "check"),
+    h = await Qo(c, i.objectFormat);
+  if (h !== null) return { ok: !1, kind: "scratch", detail: h };
+  try {
+    let g = Zo(c),
+      p = await r(["-C", c, "index-pack", "--index-version=2", "--stdin"], {
+        env: g,
+        input: o,
+      });
+    if (p.code !== 0)
+      return {
+        ok: !1,
+        kind: p.exitCode === void 0 ? "unfinished" : "index",
+        detail: Kr(p),
+      };
+    let [, y] = /^pack\t([0-9a-f]+)$/m.exec(p.stdout) ?? [],
+      _ = He(c, "objects", "pack", `pack-${y}`),
+      k = await Ho(`${_}.pack`).catch(() => null);
+    if (k === null)
+      return { ok: !1, kind: "index", detail: "no indexed pack to read" };
+    if (k.size !== o.length)
+      return {
+        ok: !1,
+        kind: "trailing",
+        detail: `${o.length - k.size} bytes follow the pack`,
+      };
+    let E = qo[i.objectFormat],
+      A = await Jo(`${_}.idx`, E);
+    if (A === null)
+      return { ok: !1, kind: "index", detail: "no pack index to read" };
+    let O = await r(["-C", c, "rev-list", "--objects", "--count", "--stdin"], {
+      env: g,
+      input: `${[...M(i.refs.map((v) => v.id)), `^${E}`].join(`
+`)}
+`,
+    });
+    if (O.code !== 0 || Yo.test(u4e(O)))
+      return {
+        ok: !1,
+        kind:
+          O.exitCode === void 0
+            ? "unfinished"
+            : zo.test(u4e(O))
+              ? "objects"
+              : "walk",
+        detail: Kr(O),
+      };
+    let R = o.readUInt32BE(Xo) - (A ? 1 : 0),
+      N = O.stdout.trim();
+    if (!/^\d+$/.test(N))
+      return { ok: !1, kind: "walk", detail: "git printed no object count" };
+    return N === String(R)
+      ? { ok: !0 }
+      : {
+          ok: !1,
+          kind: "unlisted",
+          detail: `${R} objects packed, its refs lead to ${N}, the empty tree not counted`,
+        };
+  } catch (g) {
+    return { ok: !1, kind: "unfinished", detail: String(g) };
+  } finally {
+    await qr(c);
+  }
+}
+async function qr(e) {
+  let n = He(e, "objects", "pack"),
+    r = await Mo(n).catch(() => []);
+  (await Promise.all(r.map((i) => Lo(He(n, i), 420).catch(() => {}))),
+    await jo(e, { recursive: !0, force: !0 }).catch(() => {}));
+}
+async function Qo(e, n) {
+  try {
+    await Mn(e);
+  } catch (r) {
+    return String(r);
+  }
+  try {
+    if (
+      (await Mn(He(e, "objects", "pack"), { recursive: !0 }),
+      await Mn(He(e, "refs")),
+      await Yr(
+        He(e, "HEAD"),
+        `ref: refs/heads/rebuild
+`,
+      ),
+      n === "sha256")
+    )
+      await Yr(
+        He(e, "config"),
+        `[core]
+	repositoryformatversion = 1
+[extensions]
+	objectformat = sha256
+`,
+      );
+    return null;
+  } catch (r) {
+    return (await qr(e), String(r));
+  }
+}
+function Kr(e) {
+  return (
+    wr(e.stderr.trim()) ||
+    (e.exitCode === void 0 ? "git did not finish" : `exit ${e.code}`)
+  );
+}
+function Vr(e) {
+  if (e?.checkout === void 0) return "layout_not_read";
+  if (e.checkout === "main") return "main_checkout";
+  let n = KQt(e.commonDir),
+    r = ob(n, e.workTree);
+  if (n === e.commonDir)
+    return r ? "beneath_git_directory" : "outside_git_directory";
+  return r ? "beneath_repository" : "outside_repository";
+}
+function Jr(e) {
+  switch (e) {
+    case "main_checkout":
+      return f("teleport_git_bundle_from_main_checkout");
+    case "beneath_repository":
+      return f("teleport_git_bundle_from_beneath_repository");
+    case "outside_repository":
+      return f("teleport_git_bundle_from_outside_repository");
+    case "beneath_git_directory":
+      return f("teleport_git_bundle_from_beneath_git_directory");
+    case "outside_git_directory":
+      return f("teleport_git_bundle_from_outside_git_directory");
+    case "layout_not_read":
+      return f("teleport_git_bundle_from_layout_not_read");
+  }
+}
+var Zr = "Do not run git in this folder: git may act on what was put there.",
+  Qr =
+    "a fresh clone from the remote (with no remote: a new folder and git init), copy your files over by hand, but not the .git folder, then",
+  ei =
+    "Keep this folder: commits that you have not pushed, other branches and stashes exist only here.";
+import { createHash as En, randomBytes as gi } from "crypto";
+import {
+  lstat as at,
+  stat as Vs,
+  mkdir as mi,
+  mkdtemp as Ht,
+  open as Tt,
+  readdir as Oi,
+  readFile as Js,
+  readlink as Zs,
+  rm as vt,
+  unlink as _n,
+  writeFile as rr,
+} from "fs/promises";
+import { dirname as fr, isAbsolute as Qs, join as de } from "path";
+import { constants as es } from "fs";
+import { open as ts, realpath as ns } from "fs/promises";
+import { release as rs } from "os";
+var is = [".git", "git~1"];
+function Me(e, n) {
+  return !os(e) && !(x() === "wsl" && e.includes("\\")) && !ss(e, n);
+}
+function os(e) {
+  return (
+    e.includes("\x00") ||
+    !mJn(Gn(e)) ||
+    Gn(e)
+      .split("/")
+      .some((n) => is.includes(La(n))) ||
+    _Ra(Gn(e))
+  );
+}
+function ss(e, n) {
+  return (
+    n &&
+    e
+      .replaceAll("\\", "/")
+      .split("/")
+      .some((r) => r.includes(":") || /[. ]$/.test(r))
+  );
+}
+var as = /^[^~.]{1,6}~[0-9]+(?:\.[^.]{1,3})?$/;
+function et(e) {
+  let n = x();
+  return (
+    (n === "windows" || n === "wsl") &&
+    e
+      .replaceAll("\\", "/")
+      .split("/")
+      .some((r) => as.test(nt(r, ":").replace(/[. ]+$/, "")))
+  );
+}
+async function Nt(e) {
+  return (await ds(e)) !== "no";
+}
+async function ds(e) {
+  let n = x();
+  if (n === "windows") return "yes";
+  if (n !== "wsl") return "no";
+  let r =
+    e.split("/").includes("..") || jf(e) ? null : await ns(e).catch(() => null);
+  if (r === null) return "unsure";
+  let i = await ni(),
+    o = i === null ? null : await ni();
+  if (i === null || o === null || !i.equals(o)) return "unsure";
+  let h = i
+      .toString("utf8")
+      .split(
+        `
+`,
+      )
+      .filter((y) => y !== ""),
+    g = h.flatMap((y) => {
+      let _ = y.split(" "),
+        k = _.indexOf("-"),
+        [E, A, , , O] = _,
+        R = k >= 0 ? _[k + 1] : void 0;
+      if (E === void 0 || A === void 0 || O === void 0 || R === void 0)
+        return [];
+      let N = [_[5], _[k + 3]].filter(Boolean).join(",");
+      return [
+        {
+          id: E,
+          parent: A,
+          point: axe(O),
+          windowsSide: aPl({ fstype: R, source: _[k + 2], options: N }),
+          windowsDrive: lPl(R, N),
+        },
+      ];
+    });
+  if (g.length !== h.length) return "unsure";
+  if (g.some((y) => y.windowsSide && y.point !== r && s7e(y.point, r)))
+    return "unsure";
+  let p = ls(r, g);
+  return p === null || p === "unsure"
+    ? "unsure"
+    : p.windowsDrive
+      ? "yes"
+      : p.windowsSide
+        ? "unsure"
+        : "no";
+}
+function ls(e, n) {
+  if (B(n, (g) => g.point === "/") > 1) return "unsure";
+  let r = new Set(n.map((g) => g.id)),
+    i = (g) => {
+      let p = g.filter((E) => s7e(e, E.point)),
+        y = Math.min(...p.map((E) => E.point.length)),
+        [_, k] = p.filter((E) => E.point.length === y);
+      return _ === void 0 ? null : k === void 0 ? _ : "unsure";
+    },
+    o = (g, p) => {
+      if (p === 0) return null;
+      let y = i(n.filter((_) => _.parent === g.id && _ !== g));
+      return y === null ? g : y === "unsure" ? y : o(y, p - 1);
+    },
+    [c, h] = n.filter(
+      (g) => (!r.has(g.parent) || g.parent === g.id) && s7e(e, g.point),
+    );
+  return c === void 0 ? null : h !== void 0 ? "unsure" : o(c, n.length);
+}
+function Gn(e) {
+  return x() === "windows" ? e.replaceAll("\\", "/") : e;
+}
+var ti = 4194304;
+async function ni() {
+  let [, e, n] = /^(\d+)\.(\d+)/.exec(rs()) ?? [];
+  if (!(Number(e) > 5 || (Number(e) === 5 && Number(n) >= 8))) return null;
+  let r = await us("/proc/self/mountinfo", ti).catch(() => null);
+  return r === null || r.length >= ti ? null : r;
+}
+async function us(e, n) {
+  let r = await ts(e, es.O_RDONLY | sr);
+  try {
+    let i = [],
+      o = 0;
+    while (o < n) {
+      let c = Buffer.allocUnsafe(65536),
+        { bytesRead: h } = await r.read(c, 0, c.length, null);
+      if (h === 0) break;
+      (i.push(c.subarray(0, h)), (o += h));
+    }
+    return Buffer.concat(i);
+  } finally {
+    await r.close();
+  }
+}
+import { createHash as Dt } from "crypto";
+import { constants as ot } from "fs";
+import {
+  lstat as gt,
+  mkdir as cs,
+  open as zn,
+  readlink as on,
+  unlink as jn,
+} from "fs/promises";
+import { basename as fs, dirname as Rt, join as st } from "path";
+var hs = 8,
+  sn = 1048576,
+  gs = 536870912;
+async function Yn(e, n, r, i, o) {
+  let c = r.find((R) => !mJn(R));
+  if (c !== void 0)
+    return {
+      refused: `${c}: not a path git writes`,
+      tooLarge: !1,
+      momentary: !1,
+    };
+  let h = 0,
+    g = null,
+    p = Pt(r),
+    y = new Set(r),
+    _ = Ul(hs, async (R) => {
+      await o.beforeOpen?.(R);
+      let N = !1,
+        v = await tt(e, R);
+      if (v === "symlink") return { kind: "absent", path: R };
+      if (v === "unreadable")
+        return {
+          refused: `${R}: a directory above it could not be inspected`,
+          tooLarge: !1,
+          momentary: !0,
+        };
+      await o.beforeRead?.(R);
+      let T = await dn(e, R, o.ntfsRules),
+        H = (U) => ms(e, R, U);
+      switch (T.kind) {
+        case "absent":
+          return { kind: "absent", path: R };
+        case "refused":
+          return y.has(R)
+            ? {
+                refused: `${R}: ${T.why}`,
+                tooLarge: !1,
+                momentary: T.momentary,
+              }
+            : { kind: "absent", path: R };
+        case "hardlinked":
+          return { kind: "hardlinked", path: R };
+        case "moved":
+          return { kind: "changed", path: R };
+        case "not_read":
+          return (T.why === "name_not_plain" || T.why === "beyond_a_link") &&
+            !y.has(R)
+            ? { kind: "absent", path: R }
+            : { kind: "not_read", path: R, why: T.why };
+        case "symlink":
+          return { kind: "symlink", path: R, target: T.target };
+        case "file":
+          try {
+            if (((h += T.size), g === null || T.size > g.size))
+              g = { path: R, size: T.size };
+            if (h > i)
+              return {
+                refused: `${g.path} (largest, ${g.size} bytes): ${h} bytes of changed files exceed the ${i}-byte cap`,
+                tooLarge: !0,
+                momentary: !1,
+              };
+            let z = st(n, R);
+            await cs(Rt(z), { recursive: !0 });
+            let F;
+            try {
+              F = await zn(
+                z,
+                ot.O_WRONLY | ot.O_CREAT | ot.O_EXCL | sr,
+                T.executable ? 493 : 420,
+              );
+            } catch (D) {
+              if (w(D) === "EEXIST")
+                return {
+                  refused: `${R}: collides with another changed path that differs only in case or normalization`,
+                  tooLarge: !1,
+                  momentary: !1,
+                };
+              throw D;
+            }
+            try {
+              let D = await T.handle.stat({ bigint: !0 });
+              if (
+                o.notOlderThanNs !== void 0 &&
+                D.ctimeNs >= o.notOlderThanNs &&
+                D.ctimeNs < (BigInt(Date.now()) + 1n) * 1000000n
+              )
+                return (
+                  await F.close(),
+                  await jn(z).catch(() => {}),
+                  { kind: "changed", path: R, sincePassStart: !0 }
+                );
+              let se = Dt("sha256"),
+                Se =
+                  o.objectFormat === void 0
+                    ? null
+                    : Dt(o.objectFormat).update(`blob ${D.size}\x00`),
+                V = 0,
+                ce = !1,
+                Ee = Buffer.allocUnsafe(Math.min(T.size, sn)),
+                re = 0;
+              while (re < T.size) {
+                let { bytesRead: we } = await T.handle.read(
+                  Ee,
+                  0,
+                  Math.min(Ee.length, T.size - re),
+                  re,
+                );
+                if (we === 0) break;
+                if ((se.update(Ee.subarray(0, we)), Se !== null)) {
+                  let De = Ee.subarray(0, we);
+                  (Se.update(De), (V += ai(De, ce)), (ce = De.at(-1) === 13));
+                }
+                let $e = 0;
+                while ($e < we) {
+                  let { bytesWritten: De } = await F.write(Ee, $e, we - $e);
+                  $e += De;
+                }
+                re += we;
+              }
+              await o.afterRead?.(R);
+              let Y = await T.handle.stat({ bigint: !0 }),
+                ue =
+                  o.objectFormat !== void 0 && V > 0
+                    ? oi(o.objectFormat, re, V)
+                    : null;
+              if (
+                BigInt(re) !== D.size ||
+                Y.size !== D.size ||
+                Y.mtimeNs !== D.mtimeNs ||
+                Y.ctimeNs !== D.ctimeNs ||
+                !(await ps(T.handle, re, se.digest(), ue?.update))
+              )
+                return (
+                  await F.close(),
+                  await jn(z).catch(() => {}),
+                  { kind: "changed", path: R }
+                );
+              let xe = await H(T);
+              if (xe !== "same")
+                return (
+                  await F.close(),
+                  await jn(z).catch(() => {}),
+                  { kind: xe, path: R }
+                );
+              await F.utimes(T.atime, T.mtime);
+              let me = await F.stat({ bigint: !0 });
+              return {
+                kind: "file",
+                path: R,
+                bytes: re,
+                copy: {
+                  ino: Number(me.ino),
+                  dev: Number(me.dev),
+                  ctimeNs: me.ctimeNs,
+                  size: Number(me.size),
+                  identity: ii(me),
+                  ...(Se !== null && {
+                    blobId: Se.digest("hex"),
+                    ...(ue !== null && { lfBlobId: ue.digest() }),
+                  }),
+                },
+              };
+            } finally {
+              await F.close().catch(() => {});
+            }
+          } catch (U) {
+            let z = w(U);
+            return {
+              refused: `${R}: could not be staged (${z ?? d(U)})`,
+              tooLarge: !1,
+              momentary: z === void 0 || !Wn.has(z),
+            };
+          } finally {
+            await T.handle.close();
+          }
+      }
+    }),
+    k = await Promise.all([...r, ...p].map(_)),
+    E = k.find((R) => "refused" in R);
+  if (E !== void 0) return E.tooLarge ? { ...E, claimedBytes: h } : E;
+  let A = k.filter((R) => !("refused" in R)),
+    O = A.flatMap((R) => (R.kind === "not_read" ? [R.why] : []));
+  return {
+    entries: A.filter(
+      (R) =>
+        y.has(R.path) ||
+        R.kind === "hardlinked" ||
+        R.kind === "changed" ||
+        R.kind === "not_read",
+    ),
+    copies: A.flatMap((R) =>
+      R.kind === "file"
+        ? [R]
+        : Xn(R.path)
+          ? [{ kind: "absent", path: R.path }]
+          : [],
+    ),
+  };
+}
+async function ri(e, n) {
+  return (
+    await Promise.all(
+      n.map(async (i) => {
+        if (i.kind === "absent")
+          return gt(st(e, i.path)).then(
+            () => !1,
+            (o) => {
+              let c = w(o);
+              return c === "ENOENT" || c === "ENOTDIR";
+            },
+          );
+        if (i.kind !== "file") return !0;
+        try {
+          let o = await gt(st(e, i.path), { bigint: !0 });
+          return (
+            o.isFile() &&
+            o.nlink === 1n &&
+            Number(o.ino) === i.copy.ino &&
+            Number(o.dev) === i.copy.dev &&
+            ii(o) === i.copy.identity &&
+            o.ctimeNs === i.copy.ctimeNs &&
+            Number(o.size) === i.copy.size
+          );
+        } catch {
+          return !1;
+        }
+      }),
+    )
+  ).every(Boolean);
+}
+function ii(e) {
+  return e.dev === 0n || e.ino === 0n ? null : `${e.dev}:${e.ino}`;
+}
+async function ms(e, n, r) {
+  let i = await gt(st(e, n), { bigint: !0 }).catch(() => null);
+  if (i !== null && i.isFile() && i.nlink > 1n) return "hardlinked";
+  return i === null || !i.isFile() || i.ino !== r.ino || i.dev !== r.dev
+    ? "changed"
+    : "same";
+}
+async function ps(e, n, r, i) {
+  let o = Dt("sha256"),
+    c = Buffer.allocUnsafe(Math.min(n + 1, sn)),
+    h = 0;
+  for (;;) {
+    let { bytesRead: g } = await e.read(c, 0, c.length, h);
+    if (g === 0) break;
+    if ((o.update(c.subarray(0, g)), i?.(c.subarray(0, g)), (h += g), h > n))
+      return !1;
+  }
+  return h === n && o.digest().equals(r);
+}
+function oi(e, n, r) {
+  let i = Dt(e).update(`blob ${n - r}\x00`),
+    o = !1;
+  return {
+    update(c) {
+      if (c.length === 0) return;
+      if (o && c[0] !== 10) i.update(Buffer.from([13]));
+      o = c.at(-1) === 13;
+      let h = o ? c.subarray(0, c.length - 1) : c;
+      i.update(
+        h.toString("latin1").replaceAll(
+          `\r
+`,
+          `
+`,
+        ),
+        "latin1",
+      );
+    },
+    digest() {
+      if (o) i.update(Buffer.from([13]));
+      return i.digest("hex");
+    },
+  };
+}
+function Xn(e) {
+  let n = x(),
+    r = si(e).at(-1) ?? "";
+  return n === "macos" || n === "windows" || n === "wsl"
+    ? r.toLowerCase() === ".gitattributes"
+    : r === ".gitattributes";
+}
+function Pt(e) {
+  let n = new Set(e);
+  return (
+    e.length === 0
+      ? []
+      : [".gitattributes", ...H6a(e).map((r) => `${r}/.gitattributes`)]
+  ).filter((r) => !n.has(r));
+}
+var Wn = new Set(["ENAMETOOLONG", "ENOTDIR", "EISDIR", "EINVAL", "ELOOP"]);
+var ws = 92,
+  ys = 47;
+function bs(e, n = x()) {
+  return n === "windows" ? Buffer.from(e.map((r) => (r === ws ? ys : r))) : e;
+}
+async function _s(e, n) {
+  if (n !== "linux") return on(e, { encoding: "buffer" });
+  let r = await zn(Rt(e), gP | ot.O_DIRECTORY | sr);
+  try {
+    let i = `/proc/self/fd/${r.fd}`,
+      o = await on(i);
+    return o === Rt(e)
+      ? await on(st(i, fs(e)), { encoding: "buffer" })
+      : o === `${Rt(e)} (deleted)`
+        ? "moved"
+        : "elsewhere";
+  } finally {
+    await r.close();
+  }
+}
+async function dn(e, n, r) {
+  if (!Me(n, r))
+    return { kind: "refused", why: "not a path git writes", momentary: !1 };
+  let i = st(e, n),
+    o = "darwin",
+    c =
+      ot.O_RDONLY |
+      (o === "darwin" ? gs : ot.O_NOFOLLOW) |
+      (ot.O_NONBLOCK ?? 0) |
+      (ot.O_NOCTTY ?? 0),
+    h;
+  try {
+    if (o === "win32") {
+      let g = await gt(i);
+      if (g.isSymbolicLink())
+        throw Object.assign(Error("symbolic link"), { code: "ELOOP" });
+      if (!g.isFile())
+        return { kind: "refused", why: "not a regular file", momentary: !1 };
+    }
+    h = await zn(i, o === "win32" ? "r" : c);
+  } catch (g) {
+    let p = w(g);
+    if (p === "ENOENT" || p === "ENOTDIR") return { kind: "absent" };
+    if (p === "ELOOP" || p === "EMLINK" || p === "EFTYPE")
+      try {
+        let k = await _s(i, o);
+        if (k === "moved") return { kind: "moved" };
+        let E = await tt(e, n);
+        if (E === "symlink") return { kind: "absent" };
+        if (E === "unreadable")
+          return {
+            kind: "refused",
+            why: "a directory above it could not be inspected",
+            momentary: !0,
+          };
+        if (k !== "elsewhere") return { kind: "symlink", target: bs(k) };
+        return (
+          a("tengu_upload_stage_link_read_elsewhere", {}),
+          {
+            kind: "refused",
+            why: "resolved outside its directory",
+            momentary: !1,
+          }
+        );
+      } catch {
+        return {
+          kind: "refused",
+          why: "changed while being read",
+          momentary: !0,
+        };
+      }
+    let y = o === "win32" ? null : await gt(i).catch(() => null),
+      _ = y !== null && !y.isFile() && !y.isSymbolicLink();
+    return {
+      kind: "refused",
+      why: `could not be opened (${p ?? "unknown"})`,
+      momentary: !_ && (p === void 0 || !Wn.has(p)),
+    };
+  }
+  try {
+    let g = await h.stat({ bigint: !0 });
+    if (!g.isFile())
+      return (
+        await h.close(),
+        { kind: "refused", why: "not a regular file", momentary: !1 }
+      );
+    if (g.nlink > 1n) return (await h.close(), { kind: "hardlinked" });
+    if (o === "linux") {
+      let p = await on(`/proc/self/fd/${h.fd}`);
+      if (p !== i)
+        return (
+          await h.close(),
+          p === `${i} (deleted)` || Rt(p) === Rt(i)
+            ? { kind: "moved" }
+            : {
+                kind: "refused",
+                why: "resolved outside its directory",
+                momentary: !1,
+              }
+        );
+    }
+    return {
+      kind: "file",
+      handle: h,
+      size: Number(g.size),
+      ino: g.ino,
+      dev: g.dev,
+      executable: (g.mode & 0o111n) !== 0n,
+      atime: g.atime,
+      mtime: g.mtime,
+    };
+  } catch (g) {
+    await h.close().catch(() => {});
+    let p = w(g);
+    return {
+      kind: "refused",
+      why: d(g),
+      momentary: p === void 0 || !Wn.has(p),
+    };
+  }
+}
+function si(e) {
+  return (x() === "windows" ? e.replaceAll("\\", "/") : e).split("/");
+}
+async function tt(e, n) {
+  let r = e;
+  for (let i of si(n).slice(0, -1)) {
+    r = st(r, i);
+    try {
+      if ((await gt(r)).isSymbolicLink()) return "symlink";
+    } catch (o) {
+      let c = w(o);
+      if (c === "ENOENT" || c === "ENOTDIR") return "clear";
+      return "unreadable";
+    }
+  }
+  return "clear";
+}
+async function qn(e, n, r, i, o) {
+  if ((await tt(e, n)) !== "clear") return null;
+  let c = await dn(e, n, o);
+  if (c.kind !== "file") return null;
+  try {
+    if (c.size > i) return null;
+    let h = Buffer.alloc(c.size + 1),
+      g = 0;
+    while (g < h.length) {
+      let { bytesRead: y } = await c.handle.read(h, g, h.length - g, g);
+      if (y === 0) break;
+      g += y;
+    }
+    if (g !== c.size) return null;
+    let p = await gt(st(e, n), { bigint: !0 }).catch(() => null);
+    if (
+      p === null ||
+      !p.isFile() ||
+      p.nlink > 1n ||
+      p.ino !== c.ino ||
+      p.dev !== c.dev
+    )
+      return null;
+    return ks(h.subarray(0, c.size), r);
+  } catch {
+    return null;
+  } finally {
+    await c.handle.close().catch(() => {});
+  }
+}
+function ks(e, n) {
+  let r = n === 64 ? "sha256" : "sha1",
+    i = Ss(e);
+  return [e, ...(i === null ? [] : [i])].flatMap((o) => Es(o, r));
+}
+function Es(e, n) {
+  let r = Dt(n).update(`blob ${e.length}\x00`).update(e).digest("hex"),
+    i = ai(e, !1);
+  if (i === 0) return [r];
+  let o = oi(n, e.length, i);
+  for (let c = 0; c < e.length; c += sn) o.update(e.subarray(c, c + sn));
+  return [r, o.digest()];
+}
+var Hn = 36,
+  $t = Buffer.from("$Id:"),
+  Rs = Buffer.from("$Id$");
+function Ss(e) {
+  let n = e.indexOf($t);
+  if (n === -1) return null;
+  let r = Buffer.allocUnsafe(e.length),
+    i = e.copy(r, 0, 0, n),
+    o = n;
+  while (o < e.length) {
+    let c = -1;
+    if (
+      e[o] === Hn &&
+      e[o + 1] === $t[1] &&
+      e[o + 2] === $t[2] &&
+      e[o + 3] === $t[3]
+    ) {
+      let h = o + $t.length;
+      while (h < e.length && e[h] !== Hn && e[h] !== 10) h++;
+      c = e[h] === Hn ? h : -1;
+    }
+    if (c === -1) r[i++] = e[o++];
+    else ((i += Rs.copy(r, i)), (o = c + 1));
+  }
+  return i === e.length ? null : r.subarray(0, i);
+}
+function ai(e, n) {
+  let r = n && e[0] === 10 ? 1 : 0;
+  if (!e.includes(13)) return r;
+  for (let i = 1; i < e.length; i++) if (e[i] === 10 && e[i - 1] === 13) r++;
+  return r;
+}
+import { createHash as tr, randomBytes as Ll } from "crypto";
+import {
+  access as Gl,
+  copyFile as jl,
+  mkdir as Ps,
+  readdir as Hl,
+  rename as zl,
+  rm as Yl,
+  writeFile as Kl,
+} from "fs/promises";
+import { dirname as Fs, join as ql } from "path";
+import { deflate as Ls } from "zlib";
+import { promisify as Ms } from "util";
+import { createHash as xs } from "crypto";
+import { constants as Vn } from "fs";
+import { mkdtemp as Ts, open as vs, rm as Cs } from "fs/promises";
+import { join as di } from "path";
+var ln = { failed: "unreadable" },
+  Ft = { failed: "tampered" },
+  Bs = { failed: "missing" },
+  As = 67108864,
+  Is = 4000000,
+  Os = new Set(["100644", "100755", "120000", "40000", "160000"]);
+function Ce(e) {
+  return (
+    typeof e === "object" &&
+    e !== null &&
+    !Array.isArray(e) &&
+    !(e instanceof Map) &&
+    "failed" in e &&
+    typeof e.failed === "string"
+  );
+}
+var Lt = "40000",
+  fi = "160000",
+  Ns = "120000",
+  ui = (e) => e.padStart(6, "0"),
+  ci = (e) => (e === fi ? "gitlink" : e === Ns ? "link" : "file");
+function Jn(e, n) {
+  return async (r) => {
+    let i = null;
+    try {
+      i = await Ts(di(n, "claude-seed-reads-"));
+      let o = await vs(
+        di(i, "batch"),
+        Vn.O_RDWR | Vn.O_CREAT | Vn.O_EXCL | sr,
+        384,
+      );
+      try {
+        let c = await e(["cat-file", "--batch"], void 0, r, void 0, o.fd),
+          { size: h } = await o.stat();
+        if (c.code !== 0 || h > As) return null;
+        let g = Buffer.alloc(h);
+        for (let p = 0; p < h;) {
+          let { bytesRead: y } = await o.read(g, p, h - p, p);
+          if (y === 0) return null;
+          p += y;
+        }
+        return g;
+      } finally {
+        await o.close().catch(() => {});
+      }
+    } catch {
+      return null;
+    } finally {
+      if (i !== null) await Cs(i, { recursive: !0, force: !0 }).catch(() => {});
+    }
+  };
+}
+class Zn {
+  fetch;
+  listings = new Map();
+  bodies = new Map();
+  algorithm;
+  idLength;
+  constructor(e, n) {
+    this.fetch = e;
+    ((this.algorithm = n.length === 64 ? "sha256" : "sha1"),
+      (this.idLength = n.length));
+  }
+  hashes(e, n, r) {
+    return (
+      xs(this.algorithm)
+        .update(`${e} ${n.length}\x00`)
+        .update(n)
+        .digest("hex") === r
+    );
+  }
+  async trees(e) {
+    let n = M(e.filter((i) => !this.listings.has(i)));
+    if (n.length === 0) return !0;
+    let r = await this.read("tree", n);
+    if (Ce(r)) return r;
+    for (let [i, o] of r) {
+      let c = $s(o, this.idLength / 2);
+      if (c === null) return Ft;
+      if (c === "malformed") return { failed: "malformed", tree: i };
+      this.listings.set(i, c);
+    }
+    return !0;
+  }
+  listing(e) {
+    return this.listings.get(e);
+  }
+  async commit(e) {
+    let n = await this.commits([e]);
+    return Ce(n) ? n : n.get(e);
+  }
+  async commits(e) {
+    let n = M([...e]),
+      r = n.length === 0 ? new Map() : await this.read("commit", n);
+    if (Ce(r)) return r;
+    let i = new Map();
+    for (let [o, c] of r) {
+      let h = c
+          .subarray(
+            0,
+            Math.max(
+              0,
+              c.indexOf(`
+
+`),
+            ),
+          )
+          .toString("latin1").split(`
+`),
+        g = /^tree ([0-9a-f]{40,64})$/.exec(h[0] ?? "")?.[1],
+        p = [];
+      for (let y of h.slice(1)) {
+        let _ = /^parent ([0-9a-f]{40,64})$/.exec(y)?.[1];
+        if (_ === void 0) break;
+        p.push(_);
+      }
+      if (g === void 0 || [g, ...p].some((y) => y.length !== this.idLength))
+        return Ft;
+      i.set(o, { tree: g, parents: p });
+    }
+    return i;
+  }
+  async blobs(e) {
+    return e.length === 0 ? new Map() : this.read("blob", M([...e]));
+  }
+  async read(e, n) {
+    let r = await this.fetch(
+      n
+        .map(
+          (c) => `${c}
+`,
+        )
+        .join(""),
+    );
+    if (r === null) return ln;
+    if (Ce(r)) return r;
+    let i = new Map(),
+      o = 0;
+    for (let c of n) {
+      let h = r.indexOf(10, o);
+      if (h === -1) return ln;
+      let g = r.subarray(o, h).toString("latin1");
+      if (g === `${c} missing`) return Bs;
+      let p = /^([0-9a-f]{40,64}) (\w+) (\d+)$/.exec(g);
+      if (p === null || p[1] !== c) return ln;
+      if (p[2] !== e) return Ft;
+      let y = Number(p[3]),
+        _ = Buffer.from(r.subarray(h + 1, h + 1 + y));
+      if (_.length !== y) return ln;
+      if (!this.hashes(e, _, c)) return Ft;
+      if (e !== "blob") this.bodies.set(c, _);
+      (i.set(c, _), (o = h + 1 + y + 1));
+    }
+    return i;
+  }
+}
+function $s(e, n) {
+  let r = new Map(),
+    i = 0,
+    o = null,
+    c = !1;
+  while (i < e.length) {
+    let h = e.indexOf(32, i),
+      g = h === -1 ? -1 : e.indexOf(0, h + 1);
+    if (h === -1 || g === -1 || g + 1 + n > e.length) return null;
+    let p = e.subarray(h + 1, g),
+      y = e.subarray(i, h).toString("latin1");
+    if (!un(y)) return null;
+    let _ = cn(y),
+      k = { name: p, isTree: _ === Lt },
+      E = p.toString("latin1");
+    if (!Qn(p) || r.has(E)) return null;
+    if (!Os.has(_) || (o !== null && Ds(o, k) >= 0)) c = !0;
+    ((o = k),
+      r.set(E, { mode: _, id: e.subarray(g + 1, g + 1 + n).toString("hex") }),
+      (i = g + 1 + n));
+  }
+  return c ? "malformed" : r;
+}
+function Qn(e) {
+  return (
+    e.length > 0 &&
+    !e.includes(47) &&
+    !(e.length === 1 && e[0] === 46) &&
+    !(e.length === 2 && e[0] === 46 && e[1] === 46)
+  );
+}
+function Ds(e, n) {
+  let r = Math.min(e.name.length, n.name.length),
+    i = e.name.subarray(0, r).compare(n.name.subarray(0, r));
+  if (i !== 0) return i;
+  let o = (c) => (c.name.length > r ? c.name[r] : c.isTree ? 47 : 0);
+  return o(e) - o(n);
+}
+function un(e) {
+  return /^[0-7]+$/.test(e);
+}
+function cn(e) {
+  let n = un(e)
+    ? Array.from(e.slice(-11)).reduce((r, i) => ((r << 3) | Number(i)) >>> 0, 0)
+    : 0;
+  switch (n & 61440) {
+    case 32768:
+      return n & 64 ? "100755" : "100644";
+    case 40960:
+      return "120000";
+    case 16384:
+      return Lt;
+    case 57344:
+      return fi;
+    default:
+      return e.replace(/^0+/, "");
+  }
+}
+async function Mt(e, n, r) {
+  let i = "0".repeat(e.idLength),
+    o = [],
+    c = n === r ? [] : [{ prefix: Buffer.alloc(0), base: n, other: r }],
+    h = 0;
+  while (c.length > 0) {
+    let g = c
+        .flatMap(({ base: _, other: k }) => [_, k])
+        .filter((_) => _ !== null),
+      p = await e.trees(g);
+    if (p !== !0) {
+      if (p.failed !== "malformed") return p;
+      let _ = c.find(({ base: k, other: E }) => k === p.tree || E === p.tree);
+      return _ === void 0
+        ? p
+        : { ...p, dir: _.prefix.toString("utf8").replace(/\/$/, "") };
+    }
+    let y = [];
+    for (let { prefix: _, base: k, other: E } of c) {
+      let A = k === null ? new Map() : e.listing(k),
+        O = E === null ? new Map() : e.listing(E),
+        R = M([...A.keys(), ...O.keys()]).sort();
+      if (((h += R.length), h > Is)) return Ft;
+      for (let N of R) {
+        let v = A.get(N),
+          T = O.get(N);
+        if (v !== void 0 && T !== void 0 && v.id === T.id && v.mode === T.mode)
+          continue;
+        let H = Buffer.concat([_, Buffer.from(N, "latin1")]),
+          U = v?.mode === Lt,
+          z = T?.mode === Lt;
+        if (U || z)
+          y.push({
+            prefix: Buffer.concat([H, Buffer.from("/")]),
+            base: U ? v.id : null,
+            other: z ? T.id : null,
+          });
+        let F = v !== void 0 && !U ? v : void 0,
+          D = T !== void 0 && !z ? T : void 0;
+        if (F === void 0 && D === void 0) continue;
+        o.push({
+          path: H.toString("utf8"),
+          pathBytes: H,
+          status:
+            F === void 0
+              ? "A"
+              : D === void 0
+                ? "D"
+                : ci(F.mode) !== ci(D.mode)
+                  ? "T"
+                  : "M",
+          oldMode: F === void 0 ? "000000" : ui(F.mode),
+          newMode: D === void 0 ? "000000" : ui(D.mode),
+          oldId: F?.id ?? i,
+          newId: D?.id ?? i,
+        });
+      }
+    }
+    c = y;
+  }
+  return o;
+}
+async function St(e, n, r) {
+  let i = new Map(),
+    o = await e.trees([n]);
+  if (o !== !0) return o;
+  let c = r.map((h) => ({ name: h, segments: h.split("/"), at: 0, tree: n }));
+  while (c.length > 0) {
+    let h = await e.trees(c.map(({ tree: y }) => y));
+    if (h !== !0) return h;
+    let g = [],
+      p = [];
+    for (let y of c) {
+      let _ = e
+        .listing(y.tree)
+        ?.get(Buffer.from(y.segments[y.at], "utf8").toString("latin1"));
+      if (_ === void 0) continue;
+      let k = y.at === y.segments.length - 1;
+      if (_.mode === Lt)
+        if (k) p.push(_.id);
+        else g.push({ ...y, at: y.at + 1, tree: _.id });
+      else if (k) i.set(y.name, { id: _.id, mode: _.mode });
+    }
+    if (p.length > 0) {
+      let y = await e.trees(p);
+      if (y !== !0) return y;
+    }
+    c = g;
+  }
+  return i;
+}
+var fn = { latin1: "\xEF\xBB\xBF", utf8: "\uFEFF" },
+  er;
+function nr(e, n) {
+  let r = (er ??= (async () => {
+    let i = Buffer.from([65, 233, 128, 255, 195, 40, 66]),
+      o = await e(["hash-object", "-w", "--stdin"], n, i);
+    if (o.code !== 0) throw Error("probe blob not written");
+    let c = await e(
+      ["cat-file", "--batch"],
+      n,
+      `${o.stdout.trim()}
+`,
+      "latin1",
+    );
+    if (c.code !== 0) throw Error("probe blob not read");
+    let h = c.stdout.slice(
+      c.stdout.indexOf(`
+`) + 1,
+    );
+    return Buffer.from(h, "latin1").equals(i) ? "latin1" : "utf8";
+  })());
+  return r.catch(() => {
+    if (er === r) er = void 0;
+    return "utf8";
+  });
+}
+var du = Ms(Ls);
+var Gs = ["filter", "working-tree-encoding", "ident"];
+async function hn(e, n, r, i, o) {
+  if (n.length === 0) return [];
+  let c = new Set(n.filter((E) => r.get(E) === null)),
+    h = (E) => [E, ...(r.get(E) ?? [])],
+    g = (E) =>
+      h(E).flatMap((A) =>
+        o.normalizationBlind
+          ? M([A, A.normalize("NFC"), A.normalize("NFD")])
+          : [A],
+      ),
+    p = M(n.flatMap(g));
+  if (i?.prepareIndexAndStore !== void 0) {
+    let E = await i.prepareIndexAndStore(p, i);
+    if (E !== !0) return E;
+  } else if (i !== null) {
+    if (
+      (
+        await e(
+          ["-c", "core.splitIndex=false", "read-tree", i.commit ?? i.tree],
+          { GIT_INDEX_FILE: i.indexPath },
+        )
+      ).code !== 0
+    )
+      return null;
+    await Ps(i.objectsDir, { recursive: !0, mode: 448 });
+    let A = {
+        GIT_INDEX_FILE: i.indexPath,
+        GIT_OBJECT_DIRECTORY: i.objectsDir,
+        GIT_ALTERNATE_OBJECT_DIRECTORIES: "",
+      },
+      O = await nr(e, A),
+      R = await js(e, i, i.indexPath, p, O, i.refusesGitlinkedRules === !0);
+    if (R === null || R === "old_git" || R === "tampered") return R;
+    for (let { name: N, id: v, text: T, markStripped: H } of R.blobs) {
+      let U = await e(["hash-object", "-w", "--stdin"], A, Buffer.from(T, O)),
+        z = U.stdout.trim();
+      if (U.code !== 0 || (z !== v && !H)) return null;
+      if (z !== v) {
+        let F = await e(
+          ["hash-object", "-w", "--stdin"],
+          A,
+          Buffer.from(fn[O] + T, O),
+        );
+        if (F.code !== 0 || F.stdout.trim() !== v) return null;
+        if (
+          (
+            await e(
+              [
+                "-c",
+                "core.splitIndex=false",
+                "update-index",
+                "--cacheinfo",
+                `100644,${z},${N}`,
+              ],
+              A,
+            )
+          ).code !== 0
+        )
+          return null;
+      }
+    }
+  }
+  let y = await e(
+    [
+      ...(o.caseBlind ? ["-c", "core.ignorecase=true"] : []),
+      "-c",
+      "core.sparseCheckout=false",
+      "check-attr",
+      ...(i === null ? [] : ["--cached"]),
+      "-z",
+      "--stdin",
+      ...Gs,
+    ],
+    i === null
+      ? void 0
+      : {
+          GIT_INDEX_FILE: i.indexPath,
+          GIT_OBJECT_DIRECTORY: i.objectsDir,
+          GIT_ALTERNATE_OBJECT_DIRECTORIES: "",
+        },
+    p.map((E) => `${E}\x00`).join(""),
+  );
+  if (y.maxBufferExceeded) return "overflow";
+  if (y.code !== 0) return null;
+  let _ = y.stdout.split("\x00"),
+    k = new Set();
+  for (let E = 0; E + 2 < _.length; E += 3) {
+    let [A, O] = [_[E + 1], _[E + 2]];
+    if (!(
+      O === "unspecified" ||
+      O === "unset" ||
+      (A === "ident" && O === "false")
+    ))
+      k.add(_[E]);
+  }
+  return n.filter((E) => c.has(E) || g(E).some((A) => k.has(A)));
+}
+async function js(e, n, r, i, o, c) {
+  let h = M([
+      ...Pt(i),
+      ...i.filter((N) => N.split("/").at(-1) === ".gitattributes"),
+    ]),
+    g = await vts(e, r, new Set(h), Fs(r));
+  if (g === null) return null;
+  let p =
+    n.commit !== void 0 ? await Ys(e, n.commit, h, o) : await hi(e, n.tree, h);
+  if (p === null || p === "tampered") return p;
+  if (c && [...p.values()].some(({ mode: N }) => N === "160000")) return null;
+  let y = (N) => {
+    let v = p.get(N),
+      T = g.get(N);
+    return v === void 0
+      ? T === void 0
+      : T !== void 0 && kts(T) && T.id === v.id && cn(T.mode) === v.mode;
+  };
+  if (h.some((N) => !y(N))) return "tampered";
+  let _ = [...p],
+    k = await fno(_.map(([N]) => `:0:${N}`)).reduce(async (N, v) => {
+      let T = await N;
+      if (T === "tampered" || T === null) return T;
+      let H = await e(
+        ["-c", "core.precomposeUnicode=false", "rev-parse", ...v],
+        { GIT_INDEX_FILE: r },
+      );
+      return H.code === 0
+        ? [
+            ...T,
+            ...H.stdout
+              .split(
+                `
+`,
+              )
+              .filter((U) => U !== ""),
+          ]
+        : H.exitCode === 128
+          ? "tampered"
+          : null;
+    }, Promise.resolve([]));
+  if (k === null) return null;
+  if (
+    k === "tampered" ||
+    k.length !== _.length ||
+    _.some(([, N], v) => k[v] !== N.id)
+  )
+    return "tampered";
+  let E,
+    A = new Map(),
+    O = async (N) => {
+      let v = A.get(N);
+      if (v !== void 0) return v;
+      let T = await e(
+          ["cat-file", "--batch"],
+          void 0,
+          `${N}
+`,
+          o === "latin1" ? "latin1" : void 0,
+        ),
+        H = T.stdout.indexOf(`
+`),
+        U = H === -1 ? T.stdout : T.stdout.slice(0, H),
+        z = H === -1 ? "" : T.stdout.slice(H + 1),
+        F = N.length === 64 ? "sha256" : "sha1",
+        D =
+          T.code !== 0
+            ? null
+            : !new RegExp(`^${N} blob [0-9]+$`).test(U)
+              ? /^[0-9a-f]{40,64} [a-z]+ [0-9]+$/.test(U)
+                ? "tampered"
+                : null
+              : ([z, `${z}\r`].find((se) => {
+                  let Se = Buffer.from(se, o);
+                  return (
+                    tr(F)
+                      .update(`blob ${Se.length}\x00`)
+                      .update(Se)
+                      .digest("hex") === N
+                  );
+                }) ?? (o === "latin1" ? "tampered" : null));
+      return (A.set(N, D), D);
+    },
+    R = [];
+  for (let [N, { id: v, mode: T }] of p) {
+    let H = await O(v);
+    if (H === "tampered") return "tampered";
+    let U = H === null ? null : Hs(H, T, o);
+    if (U === null) return null;
+    if (U.isLink) {
+      if (((E ??= Ws(e)), !(await E))) return "old_git";
+    }
+    if (U.text === null) return null;
+    R.push({ name: N, id: v, text: U.text, markStripped: U.markStripped });
+  }
+  return { blobs: R };
+}
+function Hs(e, n, r) {
+  if (e.includes("\x00")) return null;
+  if (n !== "100644" && n !== "100755" && n !== "120000") return null;
+  let i = e.startsWith(fn[r]);
+  if (n === "120000")
+    return { isLink: !0, text: i ? null : e, markStripped: !1 };
+  if (!i) return { isLink: !1, text: e, markStripped: !1 };
+  let o = e.slice(fn[r].length);
+  return o.startsWith(fn[r]) ? null : { isLink: !1, text: o, markStripped: !0 };
+}
+function Us(e) {
+  if (!(e.startsWith('"') && e.endsWith('"'))) return Buffer.from(e, "utf8");
+  let n = { a: 7, b: 8, t: 9, n: 10, v: 11, f: 12, r: 13, "\\": 92, '"': 34 },
+    r = e.slice(1, -1),
+    i = [];
+  for (let o = 0; o < r.length; o += 1) {
+    let c = r[o] ?? "";
+    if (c !== "\\") {
+      i.push(...Buffer.from(c, "utf8"));
+      continue;
+    }
+    let h = r[o + 1] ?? "";
+    if (/^[0-3][0-7]{2}$/.test(r.slice(o + 1, o + 4)))
+      (i.push(parseInt(r.slice(o + 1, o + 4), 8)), (o += 3));
+    else (i.push(n[h] ?? h.charCodeAt(0)), (o += 1));
+  }
+  return Buffer.from(i);
+}
+async function Ws(e) {
+  let n = await e(["version"]),
+    r = n.code === 0 ? STe(n.stdout) : null;
+  return r !== null && (r.major > 2 || (r.major === 2 && r.minor >= 32));
+}
+async function zs(e, n, r) {
+  let i = r ?? (await nr(e, {})),
+    o = n.length === 64 ? "sha256" : "sha1",
+    c = (_, k, E) =>
+      tr(o).update(`${_} ${k.length}\x00`).update(k).digest("hex") === E,
+    h = await e(
+      ["cat-file", "--batch"],
+      void 0,
+      `${n}
+`,
+      i === "latin1" ? "latin1" : void 0,
+    );
+  if (h.code !== 0) return null;
+  let g = h.stdout.indexOf(`
+`),
+    p = g === -1 ? "" : h.stdout.slice(g + 1);
+  if (!h.stdout.startsWith(`${n} commit `))
+    return /^[0-9a-f]{40,64} [a-z]+ /.test(h.stdout) ? "tampered" : null;
+  if (![p, `${p}\r`].some((_) => c("commit", Buffer.from(_, i), n)))
+    return i === "latin1" ? "tampered" : null;
+  let y = /^tree ([0-9a-f]{40,64})\n/.exec(p)?.[1];
+  if (y === void 0) return "tampered";
+  return y;
+}
+async function Ys(e, n, r, i = "utf8") {
+  let o = await zs(e, n, i);
+  if (o === null || o === "tampered") return o;
+  return hi(e, o, r);
+}
+var Ks = 512,
+  Xs = 262144;
+async function qs(e, n) {
+  let r = n.length === 64 ? "sha256" : "sha1",
+    i = (y, _, k) =>
+      tr(r).update(`${y} ${_.length}\x00`).update(_).digest("hex") === k,
+    o = new Map(),
+    c = (y) => {
+      if (!y.every(({ nameBytes: k }) => Qn(k))) return null;
+      let _ = new Map(
+        y.map(({ nameBytes: k, mode: E, id: A }) => [
+          k.toString("latin1"),
+          { mode: E, id: A },
+        ]),
+      );
+      return _.size === y.length ? _ : null;
+    },
+    h = (await nr(e, {})) === "latin1",
+    g = async (y) => {
+      let _ = M(y.filter((N) => !o.has(N)));
+      if (_.length === 0) return !0;
+      if (!h) {
+        for (let N of _) {
+          let v = await p(N);
+          if (v === null || v === "tampered") return v;
+        }
+        return !0;
+      }
+      let k = await e(
+        ["cat-file", "--batch"],
+        void 0,
+        [..._, _[0]]
+          .map(
+            (N) => `${N}
+`,
+          )
+          .join(""),
+        "latin1",
+      );
+      if (k.code !== 0) return null;
+      let E = Buffer.from(k.stdout, "latin1"),
+        A = n.length / 2,
+        O = 0,
+        R = 0;
+      for (let [N, v] of _.entries()) {
+        if ((N > 0 && N % Ks === 0) || R >= Xs) (await Sc(), (R = 0));
+        let T = E.indexOf(10, O);
+        if (T === -1) return null;
+        let H = E.subarray(O, T).toString("latin1"),
+          U = /^([0-9a-f]{40,64}) tree (\d+)$/.exec(H);
+        if (U === null || U[1] !== v)
+          return /^[0-9a-f]{40,64} [a-z]+ \d+$/.test(H) ? "tampered" : null;
+        let z = Number(U[2]);
+        R += z;
+        let F = E.subarray(T + 1, T + 1 + z);
+        if (F.length !== z) return null;
+        if (!i("tree", F, v)) return "tampered";
+        O = T + 1 + z + 1;
+        let D = [],
+          se = 0;
+        while (se < F.length) {
+          let V = F.indexOf(32, se),
+            ce = F.indexOf(0, V + 1);
+          if (V === -1 || ce === -1 || ce + 1 + A > F.length) return "tampered";
+          let Ee = F.subarray(se, V).toString("latin1");
+          if (!un(Ee)) return "tampered";
+          (D.push({
+            mode: cn(Ee),
+            nameBytes: Buffer.from(F.subarray(V + 1, ce)),
+            id: F.subarray(ce + 1, ce + 1 + A).toString("hex"),
+          }),
+            (se = ce + 1 + A));
+        }
+        let Se = c(D);
+        if (Se === null) return "tampered";
+        o.set(v, Se);
+      }
+      return !0;
+    },
+    p = async (y) => {
+      let _ = o.get(y);
+      if (_ !== void 0) return _;
+      let k = await e(["-c", "core.quotePath=true", "ls-tree", y]);
+      if (k.code !== 0) return null;
+      let E = k.stdout
+          .split(
+            `
+`,
+          )
+          .filter((R) => R !== "")
+          .map((R) => {
+            let N = R.indexOf("\t"),
+              [v, , T] = R.slice(0, N).split(" "),
+              H = Us(R.slice(N + 1));
+            return {
+              mode: (v ?? "").replace(/^0+/, ""),
+              id: T ?? "",
+              nameBytes: H,
+            };
+          }),
+        A = Buffer.concat(
+          E.map(({ mode: R, id: N, nameBytes: v }) =>
+            Buffer.concat([
+              Buffer.from(`${R} `, "utf8"),
+              v,
+              Buffer.from([0]),
+              Buffer.from(N, "hex"),
+            ]),
+          ),
+        );
+      if (!i("tree", A, y)) return null;
+      let O = c(E);
+      if (O === null) return "tampered";
+      return (o.set(y, O), O);
+    };
+  return { listingsOf: g, listing: (y) => o.get(y), readsManyTreesInOneRun: h };
+}
+async function hi(e, n, r) {
+  let { listingsOf: i, listing: o } = await qs(e, n),
+    c = new Map(),
+    h = await i([n]);
+  if (h !== !0) return h;
+  let g = r.map((p) => ({ name: p, segments: p.split("/"), at: 0, tree: n }));
+  while (g.length > 0) {
+    let p = await i(g.map(({ tree: k }) => k));
+    if (p !== !0) return p;
+    let y = [],
+      _ = [];
+    for (let k of g) {
+      let E = o(k.tree);
+      if (E === void 0) return null;
+      let A = k.segments[k.at],
+        O = E.get(Buffer.from(A, "utf8").toString("latin1"));
+      if (O === void 0) continue;
+      let R = k.at === k.segments.length - 1;
+      if (R && O.mode !== "40000") c.set(k.name, { id: O.id, mode: O.mode });
+      else if (O.mode === "40000")
+        if (!R) y.push({ ...k, at: k.at + 1, tree: O.id });
+        else _.push(O.id);
+    }
+    if (_.length > 0) {
+      let k = await i(_);
+      if (k !== !0) return k;
+    }
+    g = y;
+  }
+  return c;
+}
+var ea =
+    /^:([0-7]{6}) ([0-7]{6}) ([0-9a-f]{40}(?:[0-9a-f]{24})?) ([0-9a-f]{40}(?:[0-9a-f]{24})?) ([A-Z])[0-9]*$/,
+  Ni = ["100644", "100755"],
+  ir = "160000",
+  Ut = "120000",
+  gn = {
+    sha1: "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    sha256: "473a0f4c3be8a93681a267e3b1e9a7dcda1185436fe141f7749120a303721813",
+  },
+  $i = /^0+$/,
+  ta = 65536,
+  xt = 8,
+  Rn = 129,
+  Gt = "the trees just built could not be read back as what their ids name",
+  pi = "a commit just made could not be read back as what its id names";
+function wi(e) {
+  return En("sha1").update(`blob ${e.length}\x00`).update(e).digest("hex");
+}
+var ur = 1048576,
+  na = 67108864,
+  yi = 536870912,
+  kn = {
+    GIT_AUTHOR_NAME: "git stash",
+    GIT_AUTHOR_EMAIL: "git@stash",
+    GIT_COMMITTER_NAME: "git stash",
+    GIT_COMMITTER_EMAIL: "git@stash",
+  },
+  bi =
+    (e) =>
+    (n, ...r) =>
+      e(["-c", "core.longpaths=true", ...n], ...r);
+async function Di(e, n, r = {}) {
+  let i = r.probes ?? hMe(),
+    o = pn(e, n, r.signal, void 0, i),
+    c = (Q, Te, Je, ae, bt) =>
+      o(
+        Te?.GIT_INDEX_FILE === void 0
+          ? [...Q]
+          : ["-c", "core.splitIndex=false", ...Q],
+        Te,
+        Je,
+        ae,
+        bt,
+      ),
+    h = (Q) => (r.neverRead ?? r.alsoLeaveOut)?.(Q) ?? !1,
+    g = M([VDt(e), n.workTree]).filter((Q) =>
+      MLt.some(([, Te]) => Xyi(`${Q}/${Te}`)),
+    ),
+    p = (Q) => g.some((Te) => Xyi(`${Te}/${Q}`)),
+    y = (Q) => KP(Q) || p(Q) || (r.alsoLeaveOut?.(Q) ?? !1),
+    _ = await la(c, n.adminDir ?? iue());
+  if (_.kind !== "inspected") return _;
+  let { gitDir: k, workTree: E } = n,
+    {
+      base: A,
+      baseTree: O,
+      iTree: R,
+      reader: N,
+      namesWindowsCannotHold: v,
+    } = _.inspection;
+  if (v > 0)
+    (t(
+      `[wipStash] tracked names that Windows cannot hold, listed as deleted and passed over: ${v}`,
+    ),
+      r.onNamesWindowsCannotHold?.(v));
+  let T =
+      (n.bound === !0 && x() === "wsl") ||
+      (await Nt(E)) ||
+      (await Nt(n.adminDir ?? iue())),
+    H = ua(_.inspection, T);
+  if (H.length > 0)
+    return { kind: "refused", refused: H, decidedOn: "listing" };
+  let U = r.leaveOutUncommittedCredentialFiles
+      ? await ca(E, _.inspection, y, T, h)
+      : [],
+    z = new Set(U.map(({ path: Q }) => Q)),
+    F = new Set(_.inspection.staged.map(({ path: Q }) => Q)),
+    D = new Set(
+      _.inspection.staged.flatMap(({ path: Q, status: Te }) =>
+        Te === "D" ? [Q] : [],
+      ),
+    ),
+    se = Date.now(),
+    Se = Ul(xt, (Q) =>
+      r.signal?.aborted === !0 || z.has(Q.path) || F.has(Q.path)
+        ? Promise.resolve("changed")
+        : Li(E, Q, T, na, r.signal),
+    ),
+    V = await Promise.all(_.inspection.working.map(Se)),
+    ce = _.inspection.working.filter((Q, Te) => V[Te] !== "unchanged"),
+    Ee = B(V, (Q) => Q === "open_refused");
+  if (Ee > 0) r.onOpenRefusedAtTheLook?.(Ee);
+  let re = _.inspection.working.length - ce.length;
+  if (re > 0)
+    t(
+      `[wipStash] ${re} of ${_.inspection.working.length} stat-dirty tracked files were unchanged (${Date.now() - se}ms)`,
+    );
+  if (ce.length === 0 && R === O) return { kind: "none", leftOut: U };
+  if ((await Fa(k), n.adminDir === void 0)) await Pa(iue());
+  let Y = de(
+      n.adminDir ?? k,
+      `ccr-seed-${process.pid}-${gi(6).toString("hex")}.index`,
+    ),
+    ue = null,
+    xe = null,
+    me = null,
+    we = [],
+    $e = new Set(),
+    De = [],
+    q = new Map(),
+    rt = [],
+    yt = new Map(),
+    Pe = null;
+  try {
+    let Q = await c([
+      "read-tree",
+      "--no-recurse-submodules",
+      `--index-output=${Y}`,
+      "-m",
+      R,
+    ]);
+    if (Q.code !== 0) return j("read-tree", Q.stderr, Q);
+    if (n.adminDir === void 0) {
+      ue = await Ht(de(iue(), `claude-seed-index-${process.pid}-`));
+      let P = de(ue, "index"),
+        W = await Ci(Y, P);
+      if (W !== null)
+        return (
+          await _n(Y).catch(() => {}),
+          j(W.kind === "disk" ? "scratch-index" : "rewritten", W.detail)
+        );
+      let ne = await Da(Y);
+      if (ne !== null)
+        t(
+          `[wipStash] the scratch index read-tree wrote could not be removed after it was carried off (${ne}); left for the sweep`,
+        );
+      Y = P;
+    }
+    let Te = await ia(c, Y, n.adminDir ?? iue(), N, R, T);
+    if (Te.kind === "failed") return Te;
+    if (Te.kind === "differ")
+      return j(
+        "read-tree",
+        "the index changed while it was read, or its trees do not list what it holds (an object is not what its id names) \u2014 retry",
+      );
+    let Je = await c(["write-tree", "--ignore-cache-tree"]);
+    if (Je.code !== 0) return j("write-tree", Je.stderr || Je.stdout, Je);
+    if (Je.stdout.trim() !== R)
+      return j(
+        "read-tree",
+        "the index changed while the uncommitted changes were being read \u2014 retry",
+      );
+    let ae = R;
+    if (z.size > 0) {
+      let P = await mn(c, N, Y, O, [...z]);
+      if (P !== null) return { kind: "failed", ...P };
+      let W = await c(["write-tree", "--ignore-cache-tree"], {
+        GIT_INDEX_FILE: Y,
+      });
+      if (W.code !== 0) return j("write-tree", W.stderr || W.stdout, W);
+      ae = W.stdout.trim();
+    }
+    let bt = r.leaveOutUncommittedCredentialFiles
+        ? ce
+            .filter(({ status: P, path: W }) => P === "D" && !z.has(W) && y(W))
+            .map(({ path: P }) => P)
+        : [],
+      Ze = (P) => !z.has(P) && (!r.leaveOutUncommittedCredentialFiles || !y(P)),
+      Bt = M(
+        ce.flatMap(({ path: P, status: W, newMode: ne, newId: ge }) =>
+          W === "D" || ne === ir || !$i.test(ge) ? [P] : [],
+        ),
+      ),
+      _t = new Set(await Bi(E, Bt)),
+      At = new Set(Bt.filter((P) => !_t.has(P))),
+      Xt = M(ce.map(({ path: P }) => P)).filter((P) => !At.has(P) && Ze(P)),
+      qt = [...F].filter(Ze),
+      Ge = _.inspection.staged.filter(({ status: P }) => P !== "D"),
+      je = Ia(),
+      We =
+        Ge.length === 0 && !r.leaveOutUncommittedCredentialFiles
+          ? { elsewhere: [], withheldTracked: new Map() }
+          : await oa(
+              c,
+              Y,
+              new Map(Ge.map(({ newId: P, path: W }) => [P, W])),
+              r.leaveOutUncommittedCredentialFiles
+                ? (P) => je(P) || p(P)
+                : () => !1,
+              n.adminDir ?? iue(),
+              T,
+              r.signal,
+            );
+    if (We === null)
+      return j(
+        "ls-files",
+        r.signal?.aborted
+          ? "cancelled, or out of time, before the index was listed and its names judged"
+          : "could not list the index",
+      );
+    let { elsewhere: L, withheldTracked: ke } = We,
+      ze = M([...ce.map(({ path: P }) => P), ...F, ...L]),
+      Fe = new Set(),
+      Vt = new Set(),
+      Qe;
+    if (ze.length > 0) {
+      ((me = await Ht(de(n.adminDir ?? iue(), "claude-seed-attrs-"))),
+        (Qe = await Ra(c, E)));
+      let P = await xa(me, {
+        caseBlind: Qe.caseBlind,
+        objectFormat: A.length === 64 ? "sha256" : "sha1",
+        objectsDir: de(n.commonDir, "objects"),
+      });
+      if (P !== null) return j("check-attr", P);
+      let W = pn(
+          e,
+          { gitDir: me, commonDir: me, workTree: E, configPins: n.configPins },
+          r.signal,
+          VQt(n),
+          i,
+        ),
+        ne = await hn(
+          W,
+          ze,
+          new Map(ze.map((Z) => [Z, CMe(Z)])),
+          {
+            commit: A,
+            indexPath: de(me, "head.index"),
+            objectsDir: de(me, "verified"),
+          },
+          Qe,
+        );
+      if (ne === "overflow")
+        return j(
+          "check-attr",
+          "too many changed files to read the attributes of",
+        );
+      if (ne === "old_git")
+        return j(
+          "check-attr",
+          "a committed .gitattributes is a symbolic link, which the installed git (older than 2.32, or of a version this build cannot read) follows on disk: update git, then retry",
+        );
+      if (ne === "tampered")
+        return j(
+          "verify",
+          "HEAD's commit, a tree on the way to a committed .gitattributes, or that file's blob is not the object its id names",
+        );
+      if (ne === null) return j("check-attr", hr);
+      Fe = new Set(ne);
+      let ge = M([...ze.filter((Z) => Fe.has(Z)), ...z]);
+      if (ge.length > 0 || ke.size > 0) {
+        let Z = await St(N, O, ge);
+        if (Ce(Z))
+          return Ue(
+            Z,
+            "cat-file",
+            "HEAD's trees to the changed files could not be read back as what their ids name",
+          );
+        Vt = new Set(Fe);
+        let he = new Set([...Fe, ...z]),
+          Le = Ul(xt, async (Re) => {
+            let it = await qn(E, Re, O.length, ur, T),
+              Et = ke.get(Re);
+            return it !== null && (he.has(Re) || !it.includes(Et ?? ""))
+              ? it
+              : [];
+          }),
+          Jt = (
+            await Promise.all(
+              M([...he, ...ke.keys()])
+                .filter((Re) => !h(Re))
+                .map(Le),
+            )
+          ).flat(),
+          ut = (Re) => Re !== gn.sha1 && Re !== gn.sha256,
+          ct = new Set([
+            ...[...Z.values()].map(({ id: Re }) => Re).filter(ut),
+            ...Ge.filter(({ path: Re }) => he.has(Re))
+              .map(({ newId: Re }) => Re)
+              .filter(ut),
+            ...Jt.filter(ut),
+          ]);
+        (($e = ct),
+          Ge.filter(({ path: Re, newId: it }) => ct.has(it) && Ze(Re)).forEach(
+            ({ path: Re }) => Fe.add(Re),
+          ));
+      }
+      let ee = qt.filter((Z) => Fe.has(Z));
+      if (ee.length > 0) {
+        let Z = await mn(c, N, Y, O, ee);
+        if (Z !== null) return { kind: "failed", ...Z };
+        let he = await c(["write-tree", "--ignore-cache-tree"], {
+          GIT_INDEX_FILE: Y,
+        });
+        if (he.code !== 0) return j("write-tree", he.stderr || he.stdout, he);
+        ((ae = he.stdout.trim()),
+          U.push(...ee.map((Le) => ({ path: Le, why: "filtered" }))));
+      }
+    }
+    let kt = new Set(
+        U.flatMap(({ path: P, why: W }) => (W === "filtered" ? [P] : [])),
+      ),
+      Ye = new Set(Xt),
+      G = Ge.flatMap(({ path: P, newMode: W }) =>
+        W !== ir && Ze(P) && !Ye.has(P) ? [P] : [],
+      ),
+      J = [...Xt, ...(await Bi(E, G))];
+    if (J.length > 0 || G.length > 0) {
+      let P = await Ht(de(n.adminDir ?? iue(), "claude-seed-stage-"));
+      xe = P;
+      let W = O.length === 64 ? "sha256" : "sha1",
+        ne = await Yn(E, P, J, r.maxStagedBytes ?? yi, {
+          ...r.stageHooks,
+          objectFormat: W,
+          ntfsRules: T,
+        });
+      if ("refused" in ne) return j("stage", ne.refused);
+      let ge = await jt(
+        c,
+        { GIT_INDEX_FILE: Y },
+        ne.entries.flatMap((C) => (C.kind === "absent" ? [C.path] : [])),
+      );
+      if (ge === null) return j("ls-files", "could not list the index entries");
+      let ee = await Ha(
+        ne,
+        new Set(J),
+        new Set(
+          ce.flatMap(({ path: C, status: be }) =>
+            be === "D" || ge.unseen.has(C) ? [] : [C],
+          ),
+        ),
+        P,
+        (C) =>
+          Yn(E, P, C, r.maxStagedBytes ?? yi, {
+            ...r.stageHooks,
+            objectFormat: W,
+            ntfsRules: T,
+          }),
+      );
+      if ("refused" in ee) return j("stage", ee.refused);
+      let Z = ee.entries.find(
+        (C) => C.kind === "changed" && (!J.includes(C.path) || Xn(C.path)),
+      );
+      if (Z !== void 0)
+        return j("stage", `${Z.path} changed while it was being read`);
+      let he = bi(pn(e, { ...n, workTree: xe }, r.signal, VQt(n), i)),
+        Le = (C, be, ht, en, It) =>
+          he(
+            be?.GIT_INDEX_FILE === void 0
+              ? [...C]
+              : ["-c", "core.splitIndex=false", ...C],
+            be,
+            ht,
+            en,
+            It,
+          ),
+        Jt = new Set(J),
+        ut = M([
+          ...ee.entries.flatMap((C) =>
+            C.kind !== "absent" && Jt.has(C.path) ? [C.path] : [],
+          ),
+          ...Ge.flatMap(({ path: C, newMode: be }) =>
+            be !== ir && Ze(C) ? [C] : [],
+          ),
+        ]),
+        ct = await dr(n.commonDir);
+      if (ct.kind !== "none")
+        return j(
+          "check-attr",
+          ct.kind === "touches"
+            ? ".git/info/attributes sets or unsets filter attributes (or defines a macro, quotes a pattern, or holds a line of 2,048 bytes or more)"
+            : ".git/info/attributes could not be read as a plain file",
+        );
+      let Re = bi(
+          pn(
+            e,
+            {
+              gitDir: me,
+              commonDir: me,
+              workTree: xe,
+              configPins: n.configPins,
+            },
+            r.signal,
+            VQt(n),
+            i,
+          ),
+        ),
+        it = new Map(ut.map((C) => [C, CMe(C)])),
+        [Et, Zt] = await Promise.all([
+          hn(Le, ut, it, null, Qe),
+          hn(Re, ut, it, null, Qe),
+        ]);
+      if (Et === "overflow" || Zt === "overflow")
+        return j(
+          "check-attr",
+          "too many changed files to read the attributes of",
+        );
+      if (Et === null || !Array.isArray(Et))
+        return j("check-attr", "could not read the attributes in force");
+      if (Zt === null || !Array.isArray(Zt))
+        return j(
+          "check-attr",
+          "could not read the staged .gitattributes on their own",
+        );
+      let Or = Et,
+        Nr = Zt,
+        Qt = new Set([...Or, ...Nr].filter((C) => !Vt.has(C))),
+        vo = (C) => C !== gn.sha1 && C !== gn.sha256,
+        Co = Ul(xt, (C) => qn(E, C, O.length, ur, T)),
+        Bo = (await Promise.all([...Qt].filter((C) => !h(C)).map(Co))).flatMap(
+          (C) => C ?? [],
+        ),
+        $r = new Set(
+          [
+            ...Ge.filter(({ path: C }) => Qt.has(C)).map(({ newId: C }) => C),
+            ...Bo,
+          ].filter(vo),
+        ),
+        Dr = Ge.filter(
+          ({ path: C, newId: be }) =>
+            $r.has(be) && Ze(C) && !Qt.has(C) && !Fe.has(C),
+        ).map(({ path: C }) => C);
+      $e = new Set([...$e, ...$r]);
+      let Pr = M([
+          ...Or,
+          ...Nr,
+          ...ee.entries.flatMap((C) => (Fe.has(C.path) ? [C.path] : [])),
+          ...Dr,
+        ]),
+        Ao = await dr(n.commonDir);
+      if (!Ri(ct, Ao))
+        return j(
+          "check-attr",
+          ".git/info/attributes changed while the attributes were read",
+        );
+      let Fr = M([...qt.filter((C) => Qt.has(C)), ...Dr]);
+      if (Fr.length > 0) {
+        let C = await mn(c, N, Y, O, Fr);
+        if (C !== null) return { kind: "failed", ...C };
+        let be = await c(["write-tree", "--ignore-cache-tree"], {
+          GIT_INDEX_FILE: Y,
+        });
+        if (be.code !== 0) return j("write-tree", be.stderr || be.stdout, be);
+        ae = be.stdout.trim();
+      }
+      let Lr = ee.entries.flatMap((C) =>
+          (C.kind === "hardlinked" || C.kind === "changed") &&
+          Jt.has(C.path) &&
+          !kt.has(C.path)
+            ? [
+                {
+                  path: C.path,
+                  why: C.kind === "hardlinked" ? "hardlinked" : "unstable",
+                },
+              ]
+            : [],
+        ),
+        Io = new Set([...kt, ...Lr.map(({ path: C }) => C)]),
+        Mr = [
+          ...Lr,
+          ...Pr.filter((C) => !Io.has(C)).map((C) => ({
+            path: C,
+            why: "filtered",
+          })),
+        ],
+        Nn = new Set([...Mr.map(({ path: C }) => C), ...Pr]);
+      U.push(...Mr);
+      let $n = ee.entries.flatMap((C) =>
+          C.kind === "file" || C.kind === "symlink" ? [C.path] : [],
+        ),
+        Dn = await jt(c, void 0, $n);
+      if (Dn === null) return j("ls-files", "could not list the index entries");
+      let Gr = $n.filter((C) => !Nn.has(C)),
+        jr = await jt(c, { GIT_INDEX_FILE: Y }, Gr);
+      if (jr === null) return j("ls-files", "could not list the index entries");
+      if (Gr.some((C) => Dn.unseen.has(C) !== jr.unseen.has(C)))
+        return j(
+          "rewritten",
+          "an entry this upload read was marked assume-unchanged or skip-worktree in one copy of the index and not the other since the build began",
+        );
+      yt = new Map(
+        Ge.map(({ path: C, newId: be, newMode: ht }) => [
+          C,
+          { id: be, mode: ht },
+        ]),
+      );
+      let Oo = new Set(
+        ce.flatMap(({ path: C, newId: be }) => (/^0+$/.test(be) ? [C] : [])),
+      );
+      rt = $n.filter(
+        (C) => Dn.unseen.has(C) && yt.has(C) && !Oo.has(C) && !Nn.has(C),
+      );
+      let Pn = new Set([...Nn, ...rt]),
+        Fn = await Ta(
+          c,
+          Y,
+          ee.entries.filter((C) => !Pn.has(C.path)),
+        );
+      if (Fn.kind === "failed") return Fn;
+      let Hr = ee.entries.flatMap((C) =>
+        C.kind === "absent" && Ye.has(C.path) && !ge.skipWorktree.has(C.path)
+          ? [C.path]
+          : [],
+      );
+      we = Hr.filter((C) => !D.has(C));
+      let Ln = await Ai(c, { GIT_INDEX_FILE: Y }, O, Hr);
+      if (Ln.code !== 0) return j("update-index", Ln.stderr, Ln);
+      let ft = ee.entries.flatMap((C) =>
+        C.kind === "file" && !Pn.has(C.path) ? [C.path] : [],
+      );
+      if (
+        ((De = ee.entries.flatMap((C) =>
+          (C.kind === "file" || C.kind === "symlink") && !Pn.has(C.path)
+            ? [C.path]
+            : [],
+        )),
+        (q = new Map([...Fn.ids].map(([C, be]) => [C, { mode: Ut, id: be }]))),
+        ft.length > 0)
+      ) {
+        Pe = de(fr(Y), `replay-${gi(6).toString("hex")}.index`);
+        let C = await Ci(Y, Pe);
+        if (C !== null)
+          return j(C.kind === "disk" ? "scratch-index" : "rewritten", C.detail);
+        let be = await jt(Le, { GIT_INDEX_FILE: Pe }, ft);
+        if (be === null)
+          return j("update-index", "the laid paths could not be listed");
+        if (be.unseen.size > 0)
+          return j(
+            "rewritten",
+            "an entry this upload is about to lay was marked assume-unchanged or skip-worktree in the scratch index since it was written",
+          );
+        let ht = (ve, Ae = Y) =>
+            Le(
+              [
+                "-c",
+                "core.bigFileThreshold=512m",
+                "-c",
+                "core.checkStat=default",
+                "-c",
+                "core.trustctime=true",
+                "update-index",
+                ...ve,
+                "-z",
+                "--add",
+                "--stdin",
+              ],
+              { GIT_INDEX_FILE: Ae },
+              ft.map((Ot) => `${Ot}\x00`).join(""),
+            ),
+          en = await ht(["--ignore-skip-worktree-entries"]),
+          It = en.exitCode === Rn ? await ht([]) : en;
+        if (It.code !== 0) return j("update-index", It.stderr, It);
+        let tn = await va(Le, Pe, ht, ft);
+        if (tn === null)
+          return j(
+            "update-index",
+            "the lay could not be replayed to learn the laid entries",
+          );
+        let No = new Map(
+            ee.entries.flatMap((ve) =>
+              ve.kind === "file" ? [[ve.path, ve.copy]] : [],
+            ),
+          ),
+          $o = new Map([
+            ...ce.map(({ path: ve, oldMode: Ae }) => [ve, Ae]),
+            ..._.inspection.staged.map(({ path: ve, newMode: Ae }) => [ve, Ae]),
+          ]);
+        if (
+          ft.find((ve) => {
+            let Ae = tn.get(ve)?.mode;
+            return !(
+              Ae !== void 0 &&
+              (Ni.includes(Ae) || (Ae === Ut && $o.get(ve) === Ut))
+            );
+          }) !== void 0
+        )
+          return j(
+            "rewritten",
+            "an entry this upload laid as a file is recorded as something else in the scratch index",
+          );
+        if (
+          ft.find((ve) => {
+            let Ae = tn.get(ve)?.id,
+              Ot = No.get(ve);
+            return Ot === void 0 || (Ae !== Ot.blobId && Ae !== Ot.lfBlobId);
+          }) !== void 0
+        )
+          return j(
+            "rewritten",
+            "an entry this upload laid does not hold the bytes staged for it",
+          );
+        for (let ve of [Y, Pe]) {
+          let Ae = await jt(Le, { GIT_INDEX_FILE: ve }, ft);
+          if (Ae === null)
+            return j("update-index", "the laid paths could not be listed");
+          if (Ae.unseen.size > 0 || Ae.absent.size > 0)
+            return j(
+              "rewritten",
+              "an entry this upload laid is marked assume-unchanged or skip-worktree in the scratch index, or is no longer there by its name",
+            );
+        }
+        if (!(await ri(xe, ee.copies)))
+          return j("stage", "the staged copies changed while git read them");
+        if (!Ri(ct, await dr(n.commonDir)))
+          return j(
+            "check-attr",
+            ".git/info/attributes changed while the changes were hashed",
+          );
+        tn.forEach((ve, Ae) => q.set(Ae, ve));
+      }
+    }
+    let te = await Ai(c, { GIT_INDEX_FILE: Y }, O, bt);
+    if (te.code !== 0) return j("update-index", te.stderr, te);
+    let le = await c(["write-tree", "--ignore-cache-tree"], {
+      GIT_INDEX_FILE: Y,
+    });
+    if (le.code !== 0) return j("write-tree", le.stderr || le.stdout, le);
+    let X = le.stdout.trim();
+    if (r.leaveOutUncommittedCredentialFiles) {
+      let P = await ki(N, O, X, y, T);
+      if (Ce(P)) return Ue(P, "cat-file", Gt);
+      let W = P.filter(({ why: Z }) => Z !== "forged" && Z !== "alias");
+      if (W.length > 0) {
+        let Z = await mn(
+          c,
+          N,
+          Y,
+          O,
+          W.map(({ path: Le }) => Le),
+        );
+        if (Z !== null) return { kind: "failed", ...Z };
+        let he = await c(["write-tree", "--ignore-cache-tree"], {
+          GIT_INDEX_FILE: Y,
+        });
+        if (he.code !== 0) return j("write-tree", he.stderr || he.stdout, he);
+        ((X = he.stdout.trim()), U.push(...W));
+      }
+      let ne = await Promise.all(M([X, ae]).map((Z) => ki(N, O, Z, y, T))),
+        ge = ne.find(Ce);
+      if (ge !== void 0) return Ue(ge, "cat-file", Gt);
+      let ee = [
+        ...new Map(
+          ne.flatMap((Z) => (Ce(Z) ? [] : Z)).map((Z) => [Z.path, Z]),
+        ).values(),
+      ];
+      if (ee.length > 0)
+        return { kind: "refused", refused: ee, decidedOn: "tree" };
+    }
+    let Be = await Mt(N, O, ae);
+    if (Ce(Be)) return Ue(Be, "cat-file", Gt);
+    let ie = Be.filter(({ status: P, newId: W }) => P !== "D" && $e.has(W));
+    if (ie.length > 0) return Ei(ie);
+    let Ke = X === ae ? Be : await Mt(N, O, X);
+    if (Ce(Ke)) return Ue(Ke, "cat-file", Gt);
+    if (X !== ae) {
+      let P = new Set(De),
+        W = Ke.filter(
+          ({ path: ne, status: ge, newId: ee }) =>
+            ge !== "D" && !P.has(ne) && $e.has(ee),
+        );
+      if (W.length > 0) return Ei(W);
+    }
+    if (rt.length > 0) {
+      let P = [Be, Ke].map(
+        (ne) =>
+          new Map(
+            ne.map(({ path: ge, status: ee, newId: Z, newMode: he }) => [
+              ge,
+              ee === "D" ? null : { mode: he, id: Z },
+            ]),
+          ),
+      );
+      if (
+        rt.find((ne) =>
+          P.some((ge) => {
+            let ee = ge.get(ne),
+              Z = yt.get(ne);
+            return (
+              ee === void 0 ||
+              ee === null ||
+              Z === void 0 ||
+              ee.id !== Z.id ||
+              ee.mode !== Z.mode
+            );
+          }),
+        ) !== void 0
+      )
+        return j(
+          "rewritten",
+          "a staged entry this upload left as the index had it was replaced in the scratch index before the trees were written",
+        );
+    }
+    if (De.length > 0) {
+      let P = new Map(
+          Ke.map(({ path: ee, status: Z, newId: he, newMode: Le }) => [
+            ee,
+            Z === "D" ? null : { mode: Le, id: he },
+          ]),
+        ),
+        W = De.filter((ee) => !P.has(ee)),
+        ne = W.length > 0 ? await St(N, O, W) : new Map();
+      if (Ce(ne)) return Ue(ne, "cat-file", Gt);
+      if (
+        De.find((ee) => {
+          let Z = P.has(ee) ? P.get(ee) : ne.get(ee),
+            he = q.get(ee);
+          return (
+            Z === null ||
+            Z === void 0 ||
+            he === void 0 ||
+            Z.id !== he.id ||
+            Z.mode !== he.mode
+          );
+        }) !== void 0
+      )
+        return j(
+          "rewritten",
+          "an entry this upload laid was replaced in the scratch index before the work tree was written",
+        );
+    }
+    if (X === O && ae === O) return { kind: "none", leftOut: U };
+    let lt = await ja(c, A),
+      Ie = await c(["commit-tree", ae, "-p", A, "-m", `index on ${lt}`], kn);
+    if (Ie.code !== 0) return j("commit-tree", Ie.stderr, Ie);
+    let Xe = await c(
+      ["commit-tree", X, "-p", A, "-p", Ie.stdout.trim(), "-m", `WIP on ${lt}`],
+      kn,
+    );
+    if (Xe.code !== 0) return j("commit-tree", Xe.stderr, Xe);
+    let oe = [
+      { id: Ie.stdout.trim(), tree: ae, parents: [A] },
+      { id: Xe.stdout.trim(), tree: X, parents: [A, Ie.stdout.trim()] },
+    ];
+    for (let { id: P, tree: W, parents: ne } of oe) {
+      let ge = await N.commit(P);
+      if (Ce(ge)) return Ue(ge, "commit-tree", pi);
+      if (
+        ge.tree !== W ||
+        ge.parents.length !== ne.length ||
+        ge.parents.some((ee, Z) => ee !== ne[Z])
+      )
+        return j("verify", pi);
+    }
+    return {
+      kind: "created",
+      commit: Xe.stdout.trim(),
+      leftOut: U,
+      deletedUnstaged: [...we],
+    };
+  } catch (Q) {
+    return j("scratch-index", d(Q));
+  } finally {
+    await Promise.all([
+      ...[Y, `${Y}.lock`, ...(Pe === null ? [] : [Pe, `${Pe}.lock`])].map((Q) =>
+        _n(Q).catch(() => {}),
+      ),
+      ...[
+        ...(ue === null ? [] : [ue]),
+        ...(xe === null ? [] : [xe]),
+        ...(me === null ? [] : [me]),
+      ].map((Q) => vt(Q, { recursive: !0, force: !0 }).catch(() => {})),
+    ]);
+  }
+}
+async function Pi(e, n, r, i) {
+  let o = await Lk(e, [...Wve, ...A_t(i), ...Jhi, "stash", "create"], {
+    hardened: !1,
+    signal: r,
+    env: { ...KDt, ...C_t(i) },
+  });
+  if (o.code === 0) {
+    let h = o.stdout.trim();
+    return h === ""
+      ? { kind: "none", leftOut: [] }
+      : { kind: "created", commit: h, leftOut: [], deletedUnstaged: [] };
+  }
+  let c = u4e(o).trim() === "";
+  if (o.exitCode === 1 && c)
+    return (
+      t(
+        `[gitBundle] git stash create exited ${o.code} with no output \u2014 treating as no uncommitted changes`,
+      ),
+      { kind: "none", leftOut: [] }
+    );
+  return !n
+    ? { kind: "none", leftOut: [] }
+    : c
+      ? {
+          ...j(
+            "stash create",
+            o.exitCode === void 0
+              ? "it was stopped, ran out of time or could not start, and left no message"
+              : `it ended with exit status ${o.exitCode} and left no message`,
+          ),
+          silent: c,
+        }
+      : j("stash create", o.stderr, o);
+}
+async function mn(e, n, r, i, o) {
+  let c = await St(n, i, o);
+  if (Ce(c))
+    return Ue(
+      c,
+      "cat-file",
+      "the trees holding the entries to restore could not be read back as what their ids name",
+    );
+  let h = `0 ${"0".repeat(i.length)}`,
+    g = await e(
+      ["update-index", "-z", "--index-info"],
+      { GIT_INDEX_FILE: r },
+      o
+        .map((_) => {
+          let k = c.get(_);
+          return `${k === void 0 ? h : `${k.mode.padStart(6, "0")} ${k.id}`}	${_}\x00`;
+        })
+        .join(""),
+    );
+  if (g.code !== 0) return j("update-index", g.stderr, g);
+  let p = ma(u4e(g), o);
+  if (p.length > 0)
+    return {
+      step: "refused-name",
+      detail: `git refuses a name it was asked to restore: ${p.slice(0, 3).join(", ")}`,
+    };
+  let y = await vts(e, r, new Set(o), fr(r));
+  if (y === null)
+    return { step: "ls-files", detail: "could not list the index entries" };
+  return o.some((_) => {
+    let k = y.get(_);
+    return (
+      (k !== void 0 && !kts(k)) ||
+      k?.id !== c.get(_)?.id ||
+      k?.mode !== c.get(_)?.mode.padStart(6, "0")
+    );
+  })
+    ? {
+        step: "verify",
+        detail:
+          "the entries just restored are not the ones the verified trees hold",
+      }
+    : null;
+}
+async function ra(e) {
+  let n = En("sha256");
+  return (
+    await pno(e, (r) => {
+      n.update(r);
+    }),
+    n.digest("hex")
+  );
+}
+function or({ detail: e, run: n }) {
+  return j("read-tree", e, n);
+}
+async function ia(e, n, r, i, o, c) {
+  let h = await Ht(de(r, "claude-seed-listings-"));
+  try {
+    let g = 0,
+      p = async (N, v, T) => {
+        let H =
+          T.length === 0
+            ? []
+            : ["--", ".", ...T.map((U) => `:(exclude,literal)${U}`)];
+        for (let U of [["--sparse"], []]) {
+          let z = await Tt(de(h, `${N}.${g++}`), mno, 384);
+          try {
+            let F = await e(
+              ["ls-files", ...U, "-s", "-z", ...H],
+              { GIT_GLOB_PATHSPECS: "0", GIT_ICASE_PATHSPECS: "0", ...v },
+              void 0,
+              void 0,
+              z.fd,
+            );
+            if (F.code === 0) return await ra(z);
+            if (F.exitCode !== Rn || U.length === 0)
+              return { detail: F.stderr || "could not list the index", run: F };
+          } finally {
+            await z.close();
+          }
+        }
+        return { detail: "could not list the index" };
+      },
+      y = async (N) => {
+        let [v, T] = await Promise.all([
+          p("trees", { GIT_INDEX_FILE: n }, []),
+          p("index", void 0, N),
+        ]);
+        if (typeof v !== "string") return v;
+        if (typeof T !== "string") return T;
+        return v === T ? "agree" : "differ";
+      },
+      _ = await y([]);
+    if (_ !== "differ") return _ === "agree" ? { kind: "agree" } : or(_);
+    let k = await e(
+      [
+        "diff-files",
+        "-z",
+        "--name-only",
+        "--diff-filter=AD",
+        "--ignore-submodules=dirty",
+      ],
+      hOn,
+    );
+    if (k.code !== 0) return or({ detail: k.stderr, run: k });
+    let E = k.stdout.split("\x00").filter((N) => N !== ""),
+      A = await St(i, o, E);
+    if (Ce(A))
+      return Ue(
+        A,
+        "cat-file",
+        "the index's trees could not be read back as what their ids name",
+      );
+    let O = E.filter((N) => !A.has(N));
+    if (O.length === 0 || O.some((N) => !Me(N, c))) return { kind: "differ" };
+    let R = await y(O);
+    return R === "agree"
+      ? { kind: "agree" }
+      : R === "differ"
+        ? { kind: "differ" }
+        : or(R);
+  } finally {
+    await vt(h, { recursive: !0, force: !0 }).catch(() => {});
+  }
+}
+async function oa(e, n, r, i, o, c, h) {
+  let g = await Ht(de(o, "claude-seed-ids-"));
+  try {
+    let p = 0;
+    for (let y of [["--sparse"], []]) {
+      let _ = await Tt(de(g, `index.${p++}`), mno, 384);
+      try {
+        let k = await e(
+          ["ls-files", ...y, "-s", "-z"],
+          { GIT_INDEX_FILE: n },
+          void 0,
+          void 0,
+          _.fd,
+        );
+        if (k.code === 0) {
+          let E = [],
+            A = new Map(),
+            O = "";
+          if (
+            (await pno(_, (R) => {
+              if (h?.aborted) return;
+              let N = (O + R.toString("latin1")).split("\x00");
+              O = N.pop() ?? "";
+              for (let v of N) {
+                let T = v.indexOf("\t"),
+                  [, H = "", U = ""] = v.slice(0, T).split(" "),
+                  z = Buffer.from(v.slice(T + 1), "latin1").toString("utf8");
+                if (!Me(z, c) || et(z)) continue;
+                if (U === "0" && i(z)) A.set(z, H);
+                let F = r.get(H);
+                if (F !== void 0 && z !== F) E.push(z);
+              }
+            }),
+            h?.aborted)
+          )
+            return null;
+          return O === "" ? { elsewhere: E, withheldTracked: A } : null;
+        }
+        if (k.exitCode !== Rn) return null;
+      } finally {
+        await _.close();
+      }
+    }
+    return null;
+  } finally {
+    await vt(g, { recursive: !0, force: !0 }).catch(() => {});
+  }
+}
+var hr = "HEAD's commit or its .gitattributes could not be read to be verified",
+  sa =
+    "internal error: no git directory was chosen for this linked worktree, so git was not run";
+function pn(e, n, r, i, o = hMe(), { hardenedMaxBuffer: c } = {}) {
+  if (
+    n.checkout === "linked" &&
+    n.adminDir === void 0 &&
+    n.runsInOwnDirectories !== !0
+  )
+    return () => Promise.resolve({ stdout: "", stderr: sa, code: 126 });
+  let h = i ?? VQt(n),
+    g = o.screenMemo ?? Pts();
+  return (p, y, _, k, E) =>
+    Lk(e, p, {
+      hardened: !0,
+      layout: n,
+      signal: r,
+      probes: o,
+      env: y,
+      input: _,
+      ...(k !== void 0 && { encoding: k }),
+      ...(E !== void 0 && { stdoutFd: E }),
+      ...(h !== void 0 && { reachRoots: h, screenMemo: g }),
+      ...(c !== void 0 && { hardenedMaxBuffer: c }),
+    });
+}
+async function la(e, n) {
+  let r = await e(["rev-parse", "-q", "--verify", "HEAD"]);
+  if (r.code !== 0)
+    return r.exitCode === 1
+      ? { kind: "none", leftOut: [] }
+      : j("rev-parse", r.stderr, r);
+  let i = await e([
+    "rev-parse",
+    "-q",
+    "--verify",
+    `${r.stdout.trim()}^{commit}`,
+  ]);
+  if (i.code !== 0) {
+    let T = await e(["cat-file", "-t", r.stdout.trim()]);
+    return T.code === 0 && ["tree", "blob"].includes(T.stdout.trim())
+      ? j("verify", "HEAD names a tree or blob, not a commit")
+      : j("rev-parse", i.stderr || "HEAD is not a commit");
+  }
+  let o = i.stdout.trim(),
+    c = new Zn(Jn(e, n), o),
+    [h, g] = await Promise.all([
+      c.commit(o),
+      e(["write-tree", "--ignore-cache-tree"]),
+    ]);
+  if (Ce(h))
+    return Ue(
+      h,
+      "rev-parse",
+      "HEAD could not be read back as the commit its id names",
+    );
+  if (g.code !== 0) return j("write-tree", g.stderr || g.stdout, g);
+  let p = h.tree,
+    y = g.stdout.trim(),
+    _ = await Mt(c, p, y);
+  if (Ce(_))
+    return Ue(
+      _,
+      "cat-file",
+      "HEAD's or the index's trees could not be read back as what their ids name",
+    );
+  let k = _,
+    E = await e([
+      "--no-optional-locks",
+      "diff-files",
+      "-z",
+      "--no-renames",
+      "--ignore-submodules=dirty",
+    ]),
+    A = E.code === 0 ? pa(E.stdout) : null;
+  if (A === null) return j("diff-files", E.stderr, E);
+  if ([...A, ...k].some(({ path: T }) => T.includes("\uFFFD")))
+    return j("path-encoding", "a changed path is not valid UTF-8");
+  let O = await St(
+    c,
+    p,
+    A.map(({ path: T }) => T),
+  );
+  if (Ce(O))
+    return Ue(
+      O,
+      "cat-file",
+      "HEAD's trees to the changed files could not be read back as what their ids name",
+    );
+  let R = "0".repeat(p.length),
+    N = new Set(A.map(({ path: T }) => T)),
+    v = [
+      ...k.filter(({ path: T }) => !N.has(T)),
+      ...A.flatMap((T) => {
+        let H = O.get(T.path);
+        if (T.status === "D")
+          return H === void 0 || _i(T, O)
+            ? []
+            : [
+                {
+                  path: T.path,
+                  status: "D",
+                  oldMode: H.mode.padStart(6, "0"),
+                  newMode: "000000",
+                  oldId: H.id,
+                  newId: R,
+                },
+              ];
+        return [
+          {
+            path: T.path,
+            status: H === void 0 ? "A" : "M",
+            oldMode: H === void 0 ? "000000" : H.mode.padStart(6, "0"),
+            newMode: T.newMode,
+            oldId: H?.id ?? R,
+            newId: R,
+          },
+        ];
+      }),
+    ];
+  return {
+    kind: "inspected",
+    inspection: {
+      base: o,
+      baseTree: p,
+      iTree: y,
+      staged: k,
+      working: v,
+      reader: c,
+      namesWindowsCannotHold: B(A, (T) => _i(T, O)),
+    },
+  };
+}
+function _i(e, n) {
+  return (
+    x() === "windows" &&
+    e.status === "D" &&
+    n.has(e.path) &&
+    Ful(e.path) &&
+    !e.path.includes("\\") &&
+    Me(e.path, !0) &&
+    !et(e.path)
+  );
+}
+function ua({ staged: e, working: n }, r) {
+  return M([...e, ...n].map(({ path: o }) => o))
+    .sort()
+    .flatMap((o) =>
+      !Me(o, r)
+        ? [{ path: o, why: "forged" }]
+        : et(o)
+          ? [{ path: o, why: "alias" }]
+          : [],
+    );
+}
+async function ca(e, { staged: n, working: r }, i, o, c = () => !1) {
+  let h = M([...n, ...r].map(({ path: D }) => D)),
+    g = h.filter((D) => !Me(D, o)),
+    p = h.filter((D) => Me(D, o) && et(D)),
+    y = new Set([...g, ...p]),
+    _ = ({ path: D }) => !y.has(D) && i(D),
+    k = n.filter(_),
+    E = new Set(k.map(({ path: D }) => D)),
+    A = Ul(xt, async (D) =>
+      !E.has(D.path) && !c(D.path) && (await Li(e, D, o)) === "unchanged"
+        ? []
+        : [D],
+    ),
+    O = (await Promise.all(r.filter(_).map(A))).flat(),
+    R = M(
+      [...k, ...O].filter(({ status: D }) => D === "A").map(({ path: D }) => D),
+    ),
+    N = new Set(R),
+    v = M(
+      [...k, ...O]
+        .filter(({ path: D, status: se }) => se !== "D" && !N.has(D))
+        .map(({ path: D }) => D),
+    ),
+    T = new Set([...R, ...v]),
+    H = M([...k, ...O].map(({ path: D }) => D).filter((D) => !T.has(D))),
+    U = Ul(xt, async (D) => ((await gr(e, D)) ? [D] : [])),
+    z = (await Promise.all(H.map(U))).flat();
+  return [
+    ...g.map((D) => ({ path: D, why: "forged" })),
+    ...p.map((D) => ({ path: D, why: "alias" })),
+    ...R.map((D) => ({ path: D, why: "added" })),
+    ...v.map((D) => ({ path: D, why: "changed" })),
+    ...z.map((D) => ({ path: D, why: "resurrected" })),
+  ].sort((D, se) => (D.path < se.path ? -1 : D.path > se.path ? 1 : 0));
+}
+async function ki(e, n, r, i, o) {
+  let c = await Mt(e, n, r);
+  if (Ce(c)) return c;
+  let h = c.filter(
+      ({ path: p, status: y }) => y !== "D" && (!Me(p, o) || et(p) || i(p)),
+    ),
+    g = new Map(h.map(({ path: p, status: y }) => [p, y]));
+  return M(h.map(({ path: p }) => p))
+    .sort()
+    .map((p) => ({
+      path: p,
+      why: !Me(p, o)
+        ? "forged"
+        : et(p)
+          ? "alias"
+          : g.get(p) === "A"
+            ? "added"
+            : "changed",
+    }));
+}
+var fa =
+    /invalid object \d+ [0-9a-f]+ for|could not fetch [0-9a-f]+ from promisor remote|lazy fetching disabled|missing blob/,
+  ha = /needs merge|you need to resolve your current index first|unmerged/i;
+function ga(e) {
+  let n = wr(u4e(e).trim());
+  return fa.test(n)
+    ? "object_missing"
+    : ha.test(n)
+      ? "unmerged"
+      : n.includes("index.lock")
+        ? "index_locked"
+        : void 0;
+}
+function j(e, n, r) {
+  let i = r && ga(r);
+  return {
+    kind: "failed",
+    step: e,
+    detail: wr(n.trim()),
+    ...(i !== void 0 && { said: i }),
+  };
+}
+function Ei(e) {
+  return {
+    kind: "refused",
+    refused: e.map(({ path: n }) => ({ path: n, why: "same-bytes" })),
+    decidedOn: "tree",
+  };
+}
+function ma(e, n) {
+  let r = new Set(
+    e.split(`
+`),
+  );
+  return n.filter((i) => r.has(`Ignoring path ${i}`));
+}
+function Ue(e, n, r) {
+  return e.failed === "tampered"
+    ? j("verify", r)
+    : e.failed === "malformed"
+      ? j("malformed-tree", e.dir ?? "")
+      : j(n, r);
+}
+function Fi(e) {
+  return e === void 0 || e === ""
+    ? "the top of the checkout"
+    : `directory '${da(e.replace(/[\p{Cc}\p{Cf}']/gu, "?"), 120)}'`;
+}
+function pa(e) {
+  let n = e.split("\x00");
+  if (n.pop() !== "" || n.length % 2 !== 0) return null;
+  let r = Array.from({ length: n.length / 2 }, (i, o) => {
+    let c = ea.exec(n[2 * o]);
+    return c
+      ? {
+          path: n[2 * o + 1],
+          oldMode: c[1],
+          newMode: c[2],
+          oldId: c[3],
+          newId: c[4],
+          status: c[5],
+        }
+      : null;
+  });
+  return r.every((i) => i !== null) ? r : null;
+}
+function Ri(e, n) {
+  return (
+    e.kind !== "unreadable" &&
+    n.kind === "none" &&
+    (e.bytes === null
+      ? n.bytes === null
+      : n.bytes !== null && e.bytes.equals(n.bytes)) &&
+    wa(e.stamp, n.stamp)
+  );
+}
+function wa(e, n) {
+  return e === null || n === null
+    ? e === n
+    : e.ino === n.ino &&
+        e.size === n.size &&
+        e.mtimeMs === n.mtimeMs &&
+        e.ctimeMs === n.ctimeMs;
+}
+function yn(e) {
+  return {
+    size: Number(e.size),
+    mtimeMs: Number(e.mtimeNs) / 1e6,
+    ctimeMs: Number(e.ctimeNs) / 1e6,
+    ino: e.ino,
+  };
+}
+async function ar(e, n = at) {
+  try {
+    return await n(e, { bigint: !0 });
+  } catch (r) {
+    if (w(r) === "ENOENT" || w(r) === "ENOTDIR") return null;
+    throw r;
+  }
+}
+var ya = /(?:^|\s|")[-!]?(?:filter|working-tree-encoding|ident)(?:=|\s|$)/,
+  ba = /^[ \t\r]*(?:\[attr\]|")/,
+  _a = 2048;
+function ka(e) {
+  return e
+    .split(
+      `
+`,
+    )
+    .some((n) => Buffer.byteLength(n) >= _a);
+}
+function Ea(e) {
+  return e
+    .replace(/^\uFEFF/, "")
+    .split(
+      `
+`,
+    )
+    .map((n) => nt(n, "\x00"))
+    .filter((n) => !/^[ \t\r]*#/.test(n));
+}
+async function Ra(e, n) {
+  let r = x(),
+    [i, o] = await Promise.all([
+      at(de(n, ".git"), { bigint: !0 }).catch(() => null),
+      at(de(n, ".GIT"), { bigint: !0 }).catch(() => null),
+    ]),
+    c = i !== null && o !== null && i.ino === o.ino && i.dev === o.dev,
+    h = await e(["config", "--bool", "core.ignorecase"]);
+  return {
+    caseBlind:
+      r === "macos" ||
+      r === "windows" ||
+      c ||
+      (h.code === 0 && h.stdout.trim() === "true"),
+    normalizationBlind: r === "macos",
+  };
+}
+async function dr(
+  e,
+  { shouldStampAbove: n = !1, shouldStopAtLink: r = !1 } = {},
+) {
+  let i = de(e, "info"),
+    o = de(i, "attributes"),
+    c = await Sa(i, n, r).catch(() => {
+      return;
+    });
+  if (c === void 0) return { kind: "unreadable", bytes: null, stamp: null };
+  if (r && c.link) return { kind: "none", bytes: null, stamp: null, dir: c };
+  try {
+    if (x() === "windows" && !(await at(o)).isFile())
+      return { kind: "unreadable", bytes: null, stamp: null };
+    let h = await Tt(o, Hu());
+    try {
+      let g = await h.stat({ bigint: !0 });
+      if (!g.isFile() || g.size > ta)
+        return { kind: "unreadable", bytes: null, stamp: null };
+      let p = yn(g),
+        y = Number(g.size);
+      if (y === 0)
+        return { kind: "none", bytes: Buffer.alloc(0), stamp: p, dir: c };
+      let _ = Buffer.alloc(y),
+        { bytesRead: k } = await h.read(_, 0, y, 0);
+      if (k !== y) return { kind: "unreadable", bytes: null, stamp: null };
+      let E = _.toString("utf8"),
+        A = Ea(E),
+        O = ka(E)
+          ? "overlong_line"
+          : A.some((R) => ba.test(R))
+            ? "macro_or_quoted"
+            : A.some((R) => ya.test(R))
+              ? "rule"
+              : void 0;
+      return O === void 0
+        ? { kind: "none", bytes: _, stamp: p, dir: c }
+        : { kind: "touches", by: O, bytes: _, stamp: p, dir: c };
+    } finally {
+      await h.close();
+    }
+  } catch (h) {
+    return w(h) === "ENOENT" || w(h) === "ENOTDIR"
+      ? { kind: "none", bytes: null, stamp: null, dir: c }
+      : { kind: "unreadable", bytes: null, stamp: null };
+  }
+}
+async function Sa(e, n, r) {
+  let i = await ar(e),
+    o = n && i === null ? await ar(fr(e)) : null,
+    c = !i?.isSymbolicLink() ? i : r ? null : await ar(e, Vs),
+    h = x() === "windows" && i?.isDirectory() === !0 ? await bj(e) : null,
+    g =
+      h !== null &&
+      h.kind !== "directory" &&
+      !(h.kind === "error" && h.code === "EISDIR");
+  return {
+    node: i && yn(i),
+    link: (i?.isSymbolicLink() ?? !1) || g,
+    target: c && yn(c),
+    ...(o && { above: yn(o) }),
+  };
+}
+async function xa(e, n) {
+  if (
+    !Qs(n.objectsDir) ||
+    /[\r\n]/.test(n.objectsDir) ||
+    /^["#]/.test(n.objectsDir)
+  )
+    return "the objects directory cannot be named in an alternates file";
+  let r = { flag: Ets, mode: 384 };
+  return (
+    await mi(de(e, "objects", "info"), { recursive: !0, mode: 448 }),
+    await Promise.all([
+      mi(de(e, "refs"), { mode: 448 }),
+      rr(
+        de(e, "HEAD"),
+        `ref: refs/heads/attributes-view
+`,
+        r,
+      ),
+      rr(
+        de(e, "config"),
+        [
+          "[core]",
+          `	repositoryformatversion = ${n.objectFormat === "sha256" ? 1 : 0}`,
+          `	ignorecase = ${n.caseBlind}`,
+          ...(n.objectFormat === "sha256"
+            ? ["[extensions]", "\tobjectformat = sha256"]
+            : []),
+          "",
+        ].join(`
+`),
+        r,
+      ),
+      rr(
+        de(e, "objects", "info", "alternates"),
+        `${n.objectsDir}
+`,
+        r,
+      ),
+    ]),
+    null
+  );
+}
+async function Ta(e, n, r) {
+  let i = r.filter((g) => g.kind === "symlink"),
+    o = [],
+    c = new Map();
+  for (let g of i) {
+    let p = g.target.toString("utf8");
+    if (!Buffer.from(p, "utf8").equals(g.target))
+      return j("path-encoding", `${g.path}: link target is not valid UTF-8`);
+    let y = await e(["hash-object", "-w", "--stdin"], void 0, p);
+    if (y.code !== 0) return j("hash-object", y.stderr, y);
+    (o.push(`${Ut} ${y.stdout.trim()}	${g.path}`),
+      c.set(g.path, y.stdout.trim().toLowerCase()));
+  }
+  if (o.length === 0) return { kind: "laid", ids: c };
+  let h = await e(
+    ["update-index", "-z", "--index-info"],
+    { GIT_INDEX_FILE: n },
+    o.map((g) => `${g}\x00`).join(""),
+  );
+  return h.code === 0
+    ? { kind: "laid", ids: c }
+    : j("update-index", h.stderr, h);
+}
+async function va(e, n, r, i) {
+  let o = await r(["--ignore-skip-worktree-entries"], n);
+  if ((o.exitCode === Rn ? await r([], n) : o).code !== 0) return null;
+  let h = new Set(i),
+    g = new Map(),
+    p = await Tt(`${n}.listing`, mno, 384);
+  try {
+    if (
+      (
+        await e(
+          ["ls-files", "-s", "-z"],
+          { GIT_INDEX_FILE: n },
+          void 0,
+          void 0,
+          p.fd,
+        )
+      ).code !== 0
+    )
+      return null;
+    let _ = "";
+    await pno(p, (k) => {
+      let E = (_ + k.toString("latin1")).split("\x00");
+      _ = E.pop() ?? "";
+      for (let A of E) {
+        let O = A.indexOf("\t"),
+          [R, N, v] = O === -1 ? [] : A.slice(0, O).split(" "),
+          T = Buffer.from(A.slice(O + 1), "latin1").toString("utf8");
+        if (R !== void 0 && N !== void 0 && v === "0" && h.has(T))
+          g.set(T, { mode: R, id: N.toLowerCase() });
+      }
+    });
+  } finally {
+    (await p.close().catch(() => {}),
+      await vt(`${n}.listing`, { force: !0 }).catch(() => {}));
+  }
+  return i.every((y) => g.has(y)) ? g : null;
+}
+async function gr(e, n) {
+  if (n.includes("\uFFFD") || (await tt(e, n)) !== "clear") return !0;
+  try {
+    return !(await at(de(e, n))).isDirectory();
+  } catch (r) {
+    let i = w(r);
+    return i !== "ENOENT" && i !== "ENOTDIR";
+  }
+}
+async function Li(
+  e,
+  { path: n, status: r, oldMode: i, newMode: o, oldId: c, newId: h },
+  g,
+  p = ur,
+  y,
+) {
+  if (
+    r !== "M" ||
+    i !== o ||
+    !$i.test(h) ||
+    c.length !== 40 ||
+    n.includes("\uFFFD")
+  )
+    return "changed";
+  if ((await tt(e, n)) !== "clear") return "changed";
+  try {
+    let _ = await dn(e, n, g);
+    if (_.kind === "symlink")
+      return o === Ut &&
+        (wi(_.target) === c ||
+          (x() === "windows" &&
+            wi(await Zs(de(e, n), { encoding: "buffer" })) === c))
+        ? "unchanged"
+        : "changed";
+    if (_.kind !== "file")
+      return _.kind === "refused" ? "open_refused" : "changed";
+    let { handle: k, size: E } = _;
+    try {
+      if (!Ni.includes(o) || E > p) return "changed";
+      let A = await k.stat({ bigint: !0 }),
+        O = En("sha1").update(`blob ${E}\x00`),
+        R = Buffer.allocUnsafe(Math.min(E, 1048576)),
+        N = 0;
+      while (N < E) {
+        if (y?.aborted) return "changed";
+        let { bytesRead: T } = await k.read(R, 0, Math.min(R.length, E - N), N);
+        if (T === 0) return "changed";
+        (O.update(R.subarray(0, T)), (N += T));
+      }
+      if (O.digest("hex") !== c) return "changed";
+      let v = await k.stat({ bigint: !0 });
+      return A.size === BigInt(E) &&
+        v.size === A.size &&
+        v.mtimeNs === A.mtimeNs &&
+        v.ctimeNs === A.ctimeNs &&
+        v.nlink === 1n
+        ? "unchanged"
+        : "changed";
+    } finally {
+      await k.close();
+    }
+  } catch {
+    return "changed";
+  }
+}
+var Ca = /^ccr-seed-([0-9]+)-[0-9a-f]{12}\.index(?:\.lock)?$/,
+  wn =
+    /env|netrc|npmrc|yarnrc|pypirc|pgpass|\.cnf|terraform|tfvars|tfstate|boto|s3cfg|credential|gitconfig|mcp|claude|config|bash|profile|zsh|zlog|fish|history|consolehost|\.(?:pem|key|p12|pfx|keystore|jks|kdbx|ovpn|vars|ssh|aws|azure|gnupg|kube|docker|git)|_(?:rsa|dsa|ecdsa|ed25519)|secret|settings|gradle\.properties|device-keys|service.?account|deploy_key|htpasswd|htdigest|vault[-_](?:token|pass)|dockercfg|msmtprc|fetchmailrc|sentryclirc|clasprc|transifexrc|databrickscfg|remote-sync|wakatime/i,
+  Mi = `[${Ers.replace(/[\\\]^-]/g, "\\$&")}]|_${Gyi}_`,
+  Ba = M(MLt.map(([e]) => e)),
+  Si = new RegExp(
+    `(?:^|/)(?:(?:${Mi})[^/]*)?(?:\\.(?:ssh|aws|azure|gnupg|kube|docker|config|cargo|gem|m2|gradle|claude)|documents|appdata|library|(?:${Ba.join("|")})(?![a-z0-9-]))|\\.git`,
+    "i",
+  ),
+  xi = Ers.replace(/[\\\]^-]/g, "\\$&"),
+  lr = new RegExp(`(?:[${xi}][^/${xi}]*){4}|${ucr}`, "i"),
+  Aa = new RegExp(`(?:^|/)[^/]{${a3 + 1}}`);
+function Ia() {
+  let e = new Map(),
+    n = new Map(),
+    r = new Map();
+  return (i) => {
+    if (!mJn(i) || i.includes("\\") || (i.includes(":") && x() === "windows"))
+      return KP(i);
+    let o = Na.test(i)
+        ? i
+        : i
+            .replaceAll("\u0131", "i")
+            .replaceAll("\u017F", "s")
+            .replaceAll("\u212A", "k")
+            .replace(Oa, ""),
+      c = o.lastIndexOf("/"),
+      h = c === -1 ? "" : o.slice(0, c),
+      g = i.lastIndexOf("/"),
+      p = g === -1 ? "" : i.slice(0, g),
+      y = e.get(p);
+    if (y === void 0) {
+      let A = c !== -1 && cr(p, h),
+        O = A ? h.split("/") : [],
+        R = A
+          ? p.split("/").map((N, v) => {
+              let T = O[v];
+              if (T !== void 0 && !cr(N, T)) return "passed";
+              let H =
+                n.get(N) ??
+                ((T !== void 0 && !Ti(N, T)) || !KP(`${N}/.bak`)
+                  ? "passed"
+                  : KP(`${N}/x`)
+                    ? "withheld"
+                    : "asked");
+              return (n.set(N, H), H);
+            })
+          : [];
+      ((y = R.includes("withheld")
+        ? "withheld"
+        : R.includes("asked") || (c !== -1 && (Si.test(h) || bn(Si, p)))
+          ? "asked"
+          : "passed"),
+        e.set(p, y));
+    }
+    if (y !== "passed") return y === "withheld" || KP(i);
+    let _ = o.slice(c + 1),
+      k = i.slice(g + 1);
+    if (c !== -1 && (vi.test(_) || vi.test(k)) && (wn.test(h) || bn(wn, p)))
+      return KP(i);
+    if (!wn.test(_) && !Ti(k, _) && !bn(wn, k)) return !1;
+    let E = r.get(k);
+    if (E === void 0) ((E = KP(k)), r.set(k, E));
+    return E;
+  };
+}
+function bn(e, n) {
+  return (
+    n.includes(":") &&
+    n
+      .split("/")
+      .filter((r) => r.includes(":"))
+      .some((r) => {
+        let i = M4e(r);
+        return GZt(r).some((o) => i.some((c) => e.test(o(c))));
+      })
+  );
+}
+function cr(e, n) {
+  return (
+    (e.length > a3 && Aa.test(e)) ||
+    lr.test(e) ||
+    (n !== e && lr.test(n)) ||
+    bn(lr, e)
+  );
+}
+function Ti(e, n) {
+  return (
+    cr(e, n) &&
+    (e.length > a3 ||
+      M4e(e).length > 1 ||
+      GZt(e).some((r) => M4e(r(e)).length > 1))
+  );
+}
+var Oa = /[^\x20-\x7e]/gu,
+  Na = /^[\x20-\x7e]*$/,
+  vi = new RegExp(`^(?:${Mi})`, "i");
+async function Ci(e, n) {
+  let r;
+  try {
+    r = await Tt(e, Hu());
+  } catch (i) {
+    let o = w(i);
+    return o === "ELOOP" || o === "ENOENT" || o === "ENOTDIR"
+      ? {
+          kind: "tamper",
+          detail: `something other than the scratch index this build wrote stands at its name (${o})`,
+        }
+      : {
+          kind: "disk",
+          detail: `the scratch index could not be opened (${o ?? "an error"})`,
+        };
+  }
+  try {
+    let i = await r.stat();
+    if (!i.isFile() || i.nlink !== 1)
+      return {
+        kind: "tamper",
+        detail:
+          "something other than the scratch index this build wrote stands at its name",
+      };
+    let o = await Tt(n, Ets, 384);
+    try {
+      let c = Buffer.allocUnsafe(1048576);
+      for (let h = 0; h < i.size;) {
+        let { bytesRead: g } = await r.read(
+          c,
+          0,
+          Math.min(c.length, i.size - h),
+          h,
+        );
+        if (g === 0)
+          return {
+            kind: "tamper",
+            detail: "the scratch index changed while it was carried off",
+          };
+        (await o.write(c, 0, g), (h += g));
+      }
+      await o.utimes(i.atime, i.mtime);
+    } finally {
+      await o.close().catch(() => {});
+    }
+    return null;
+  } catch (i) {
+    return {
+      kind: "disk",
+      detail: `the scratch index could not be carried off (${w(i) ?? d(i)})`,
+    };
+  } finally {
+    await r.close().catch(() => {});
+  }
+}
+var Gi = 600000,
+  $a = /^claude-seed-index-([0-9]+)-/;
+async function Da(e) {
+  for (let n = 0; ; n++)
+    try {
+      return (await _n(e), null);
+    } catch (r) {
+      let i = w(r);
+      if (i === "ENOENT") return null;
+      if (n >= 3 || (i !== "EBUSY" && i !== "EPERM" && i !== "EACCES"))
+        return i ?? d(r);
+      await K(50);
+    }
+}
+async function Pa(e) {
+  try {
+    await Promise.all(
+      (await Oi(e)).map(async (n) => {
+        let r = $a.exec(n)?.[1];
+        if (r === void 0) return;
+        let i = de(e, n),
+          o = await at(i);
+        if (o.isDirectory() && Date.now() - o.mtimeMs > Gi && !ji(Number(r)))
+          await vt(i, { recursive: !0, force: !0 });
+      }),
+    );
+  } catch {}
+}
+async function Fa(e) {
+  try {
+    await Promise.all(
+      (await Oi(e)).map(async (n) => {
+        let r = Ca.exec(n)?.[1];
+        if (r === void 0) return;
+        let i = de(e, n);
+        if (Date.now() - (await at(i)).mtimeMs > Gi && !ji(Number(r)))
+          await vt(i, { force: !0 });
+      }),
+    );
+  } catch {}
+}
+function ji(e) {
+  try {
+    return (process.kill(e, 0), !0);
+  } catch (n) {
+    return w(n) === "EPERM";
+  }
+}
+async function Bi(e, n) {
+  return (await Ma(e, n)).notDirectories;
+}
+async function Ma(e, n) {
+  let r = Ul(xt, async (o) =>
+      (await tt(e, o)) === "clear" ? Ga(de(e, o)) : "other",
+    ),
+    i = await Promise.all(n.map(r));
+  return {
+    notDirectories: n.filter((o, c) => i[c] !== "directory"),
+    special: n.filter((o, c) => i[c] === "special"),
+  };
+}
+async function Ga(e) {
+  try {
+    let n = await at(e);
+    return n.isDirectory()
+      ? "directory"
+      : n.isFile() || n.isSymbolicLink()
+        ? "other"
+        : "special";
+  } catch {
+    return "other";
+  }
+}
+async function ja(e, n) {
+  let [r, i] = await Promise.all([
+      e(["symbolic-ref", "-q", "HEAD"]),
+      e(["rev-list", "--max-count=1", "--format=%h %s", n, "--"]),
+    ]),
+    o =
+      r.code === 0
+        ? r.stdout.trim().replace(/^refs\/heads\//, "")
+        : "(no branch)",
+    c =
+      i.code === 0
+        ? (i.stdout
+            .trim()
+            .split(
+              `
+`,
+            )
+            .at(-1) ?? "")
+        : "";
+  return `${o}: ${c}`;
+}
+async function Ha(e, n, r, i, o) {
+  let c = e.entries
+    .filter(
+      (v) => (v.kind === "changed" || v.kind === "absent") && n.has(v.path),
+    )
+    .map(({ path: v }) => v);
+  if (c.length === 0) return e;
+  let h = new Set(
+      e.entries.flatMap((v) =>
+        v.kind === "absent" && n.has(v.path) ? [v.path] : [],
+      ),
+    ),
+    g = Pt(c),
+    p = [...c, ...g.filter((v) => n.has(v))],
+    y = new Set(
+      e.entries.flatMap((v) => (v.kind === "changed" ? [v.path] : [])),
+    ),
+    _ = await Promise.all(g.map((v) => Ii(de(i, v))));
+  await Promise.all(g.map((v) => _n(de(i, v)).catch(() => {})));
+  let k = await o(p);
+  if ("refused" in k) return k;
+  let E = await Promise.all(g.map((v) => Ii(de(i, v)))),
+    A = new Set(k.copies.flatMap((v) => (v.kind === "file" ? [v.path] : []))),
+    O = g.find((v, T) =>
+      y.has(v) ? !A.has(v) : _[T] === null || _[T] !== E[T],
+    );
+  if (O !== void 0)
+    return {
+      refused: `${O}: changed while it was being read`,
+      tooLarge: !1,
+      momentary: !0,
+    };
+  let R = new Set([...c, ...g]),
+    N = new Set(c);
+  return {
+    entries: [
+      ...e.entries.filter((v) => !R.has(v.path)),
+      ...k.entries
+        .filter((v) => R.has(v.path))
+        .map((v) =>
+          v.kind === "absent" &&
+          N.has(v.path) &&
+          (!h.has(v.path) || r.has(v.path))
+            ? { kind: "changed", path: v.path }
+            : v,
+        ),
+    ],
+    copies: [...e.copies.filter((v) => !R.has(v.path)), ...k.copies],
+  };
+}
+async function Ai(e, n, r, i) {
+  return i.length === 0
+    ? { code: 0, stderr: "" }
+    : e(
+        ["update-index", "-z", "--index-info"],
+        n,
+        i.map((o) => `0 ${"0".repeat(r.length)}	${o}\x00`).join(""),
+      );
+}
+async function jt(e, n, r) {
+  let i = await Promise.all(
+    fno(r).map((g) =>
+      e(
+        [
+          "-c",
+          "core.precomposeUnicode=false",
+          "ls-files",
+          "-z",
+          "-v",
+          "--",
+          ...g,
+        ],
+        { ...hOn, ...n },
+      ),
+    ),
+  );
+  if (i.some((g) => g.code !== 0)) return null;
+  let o = i
+      .flatMap((g) => g.stdout.split("\x00"))
+      .flatMap((g) => (g.length > 2 ? [{ tag: g[0], path: g.slice(2) }] : [])),
+    c = new Set(
+      o.flatMap(({ tag: g, path: p }) => (g === "S" || g === "s" ? [p] : [])),
+    ),
+    h = new Set(o.map(({ path: g }) => g));
+  return {
+    skipWorktree: c,
+    unseen: new Set([
+      ...c,
+      ...o.flatMap(({ tag: g, path: p }) => (g !== g.toUpperCase() ? [p] : [])),
+    ]),
+    absent: new Set(r.filter((g) => !h.has(g))),
+  };
+}
+async function Ii(e) {
+  try {
+    return En("sha1")
+      .update(await Js(e))
+      .digest("hex");
+  } catch (n) {
+    let r = w(n);
+    return r === "ENOENT" || r === "ENOTDIR" ? "absent" : null;
+  }
+}
+var Ya = 104857600,
+  Ka = 3600,
+  Xa = 10,
+  uo = 120,
+  Kt = 300,
+  qa = 180000,
+  co =
+    "This partial clone does not hold every file of its working tree locally (a sparse checkout, or blobs never downloaded), so it cannot be uploaded without fetching from its remote, which the upload does not do \u2014 a full clone, made without --filter, would upload. If no file is missing from the working tree, the index names an object that this repository has lost: `git fsck --name-objects` prints it as \u201Cmissing blob <id> (:<path>)\u201D, and `git rm --cached <path>` then `git add <path>` stores it again",
+  yr = 32,
+  Va = ["rev-parse", "cat-file", "diff-files"];
+function Er() {
+  return b("tengu_ccr_bundle_max_bytes", null) ?? Ya;
+}
+var Bn = { ...KDt, ...kno },
+  fo = 64,
+  Ja = 65536,
+  Za = (fo + 1) * 65;
+async function Qa(e) {
+  try {
+    if (!(await Ct(e)).isFile()) return null;
+    let n = await Ua(e, Hu());
+    try {
+      let r = await n.stat();
+      if (!r.isFile() || r.size > Za) return null;
+      let i = Buffer.allocUnsafe(r.size),
+        { bytesRead: o } = await n.read(i, 0, r.size, 0);
+      if (o !== r.size) return null;
+      let c = i
+        .toString("utf8")
+        .split(/\r?\n/)
+        .filter((h) => h !== "");
+      return c.length > fo || c.some((h) => !/^[0-9a-f]{40,64}$/.test(h))
+        ? null
+        : c;
+    } finally {
+      await n.close();
+    }
+  } catch {
+    return null;
+  }
+}
+var ed = (e) =>
+    nt(
+      e,
+      `
+
+`,
+    )
+      .split(
+        `
+`,
+      )
+      .some((n) => n.startsWith("parent ")),
+  td = {
+    complete:
+      "HEAD's history is complete \u2014 bundling it as usual, without the widest tier",
+    cut: "HEAD's history crosses the boundary \u2014 bundling a snapshot of the working tree, without history",
+    unborn:
+      "HEAD is unborn and no local branch or tag is cut \u2014 trying the widest tier (branches and tags), the only one that can carry it",
+    unborn_cut:
+      "HEAD is unborn and a local branch or tag is cut \u2014 nothing can be bundled",
+  };
+async function nd(e, n, r = null, i = hMe()) {
+  let o = ["rev-parse", "--is-shallow-repository", "--git-path", "shallow"],
+    c = r
+      ? await Lk(e, o, { hardened: !0, layout: r.layout, signal: n, probes: i })
+      : await hno([...Un, ...Wve, ...o], { cwd: e, abortSignal: n, ...Tts() }),
+    [h, g] = c.stdout.split(/\r?\n/);
+  if (c.code !== 0 || h !== "true") return "not_shallow";
+  let p = (A) =>
+      r
+        ? Lk(e, A, {
+            hardened: !0,
+            layout: r.layout,
+            signal: n,
+            probes: i,
+            env: Bn,
+          })
+        : hno([...Un, ...Wve, ...A], {
+            cwd: e,
+            ...Tts(Bn),
+            abortSignal: n,
+            maxBuffer: Ja,
+          }),
+    _ =
+      (await p(["rev-parse", "--verify", "--quiet", "HEAD^{commit}"]))
+        .exitCode === 1,
+    k = _ ? "unborn_cut" : "cut",
+    E = await Qa(lo(e, g ?? dt(".git", "shallow")));
+  if (E === null) return k;
+  for (let A of E) {
+    if (_) {
+      let R = await p([
+        "for-each-ref",
+        "--count=1",
+        "--format=%(refname)",
+        `--contains=${A}`,
+        "refs/heads/",
+        "refs/tags/",
+      ]);
+      if (R.exitCode === 0 && R.stdout.trim() === "") continue;
+    } else {
+      let R = await p(["merge-base", "--is-ancestor", A, "HEAD"]);
+      if (R.exitCode === 1) continue;
+      if (R.exitCode !== 0) return k;
+    }
+    let O = await p(["cat-file", "commit", A]);
+    if (O.exitCode !== 0 || ed(O.stdout)) return k;
+  }
+  return _ ? "unborn" : "complete";
+}
+var zi = 5000,
+  Tr = 100,
+  vr = 5000000;
+async function ho(e, n, r, i, o, c) {
+  let h = await Lk(e, ["count-objects", "-v"], {
+      hardened: n,
+      layout: r,
+      signal: i,
+      probes: c,
+      ...(r?.borrowedObjects !== void 0 && {
+        env: { GIT_OBJECT_DIRECTORY: r.borrowedObjects },
+      }),
+    }),
+    { sizeBytes: g, inPackCount: p } = go(h);
+  if (
+    g === null ||
+    o === null ||
+    g <= o ||
+    g > Tr * o ||
+    (p !== null && p > vr)
+  )
+    return { sizeBytes: g, inPackCount: p };
+  let y = await Lk(e, ["config", "-z", "--list"], {
+    hardened: n,
+    layout: r,
+    signal: i,
+    probes: c,
+  });
+  if (y.code !== 0 || Ir(y.stdout)) return { sizeBytes: g, inPackCount: p };
+  let _ =
+      i === void 0
+        ? AbortSignal.timeout(zi)
+        : AbortSignal.any([i, AbortSignal.timeout(zi)]),
+    k = await Lk(
+      e,
+      ["rev-list", "--disk-usage", "--objects", "--missing=allow-any", "--all"],
+      {
+        hardened: n,
+        layout: r,
+        signal: _,
+        probes: c,
+        ...(!n && { env: { GIT_NO_LAZY_FETCH: "1" } }),
+      },
+    ),
+    E =
+      k.code === 0 && /^\d+\s*$/.test(k.stdout)
+        ? Number(k.stdout.trim())
+        : null;
+  if (E !== null && E < g)
+    t(
+      `[gitBundle] packs hold ${g} bytes but only ${E} are reachable: sizing the tiers by the reachable figure`,
+    );
+  return { sizeBytes: E !== null && E < g ? E : g, inPackCount: p };
+}
+function go({ code: e, stdout: n }) {
+  if (e !== 0) return { sizeBytes: null, inPackCount: null };
+  let r = n.match(/^size-pack:\s*(\d+)/m),
+    i = n.match(/^in-pack:\s*(\d+)/m);
+  return {
+    sizeBytes: r ? Number(r[1]) * 1024 : null,
+    inPackCount: i ? Number(i[1]) : null,
+  };
+}
+async function U3s(e) {
+  let n = e?.gitRoot ?? pr(pe());
+  if (!n) return { tooLarge: !1, sizeBytes: null, inPackCount: null };
+  let { sizeBytes: r, inPackCount: i } =
+    e === void 0
+      ? await ho(n, !1, void 0, void 0, null, hMe())
+      : go(
+          await ETt(e.spawn([...Un, "count-objects", "-v"]), {
+            abortSignal: e.signal,
+            preserveOutputOnError: !1,
+            stdin: "ignore",
+          }),
+        );
+  if (r === null) return { tooLarge: !1, sizeBytes: null, inPackCount: i };
+  let o = Er();
+  return {
+    tooLarge: r > 3 * o && (r > Tr * o || (i !== null && i > vr)),
+    sizeBytes: r,
+    inPackCount: i,
+  };
+}
+async function mo(e, n, r) {
+  let { hardened: i, layout: o, signal: c, probes: h } = r,
+    g = [r.seedRefs.stash, r.seedRefs.root],
+    p = r.hasStash ? [r.seedRefs.stash] : [],
+    y = [
+      "--glob=refs/heads/*",
+      "--glob=refs/tags/*",
+      ...(r.headResolves ? ["HEAD"] : []),
+    ],
+    _ = async (re, Y) => {
+      let ue = o === void 0 ? void 0 : await vd(e, o, g, c, h);
+      if (ue === null) return { ok: !1, ...mt() };
+      let xe = await Lk(
+        e,
+        [...(i ? [] : Wve), "bundle", "create", n, ...Y, ...p, "--"],
+        {
+          hardened: i,
+          layout: o,
+          signal: c,
+          probes: h,
+          ...(!i && { env: Bn }),
+        },
+      );
+      if (o && !(await int(o, g))) return { ok: !1, ...mt() };
+      if (xe.code !== 0) {
+        if (!i && !c?.aborted) {
+          let we = await Lk(e, ["config", "-z", "--list"], {
+            hardened: i,
+            layout: o,
+            signal: c,
+            probes: h,
+          });
+          if (we.code === 0 && Ir(we.stdout))
+            return (
+              t(
+                `[gitBundle] partial clone: git bundle create ${Y.join(" ")} failed (${xe.code}), bundling a snapshot of the working tree instead: ${pt(xe.stderr, i)}`,
+              ),
+              {
+                ...(await mo(e, n, {
+                  ...r,
+                  forceScope: "squashed",
+                  partialClone: !0,
+                })),
+                promisorFallback: !0,
+              }
+            );
+        }
+        return xn(
+          `git bundle create ${i ? pt(Y.join(" "), !0) : Y.join(" ")}`,
+          xe,
+          i,
+        );
+      }
+      let { size: me } = await Ui(n);
+      if (me <= r.maxBytes) {
+        let we = r.hasStash
+          ? await Yi(
+              e,
+              n,
+              r.relabelledPath,
+              new Map([[r.seedRefs.stash, uwn]]),
+              { hardened: i, layout: o, signal: c, probes: h },
+            )
+          : null;
+        if (we !== null && !we.ok) return Ki(we.error);
+        let $e = we === null ? n : r.relabelledPath,
+          De = i
+            ? await to(e, $e, [...Y, ...(r.hasStash ? [uwn] : [])], {
+                layout: o,
+                signal: c,
+                probes: h,
+                expected:
+                  r.stashCommit === void 0 ? {} : { [uwn]: r.stashCommit },
+                shown: ue,
+              })
+            : r.bindJudgedStash === !0 && r.hasStash && r.stashCommit !== void 0
+              ? await eo(e, $e, uwn, r.stashCommit, c)
+              : Sr;
+        if (o && !(await int(o, g))) return { ok: !1, ...mt() };
+        return (
+          no(De, i) ?? {
+            ok: !0,
+            path: $e,
+            size: we === null ? me : we.sizeBytes,
+            scope: re,
+          }
+        );
+      }
+      return (
+        t(
+          `[gitBundle] ${re} bundle is ${(me / 1024 / 1024).toFixed(1)}MB (> ${(r.maxBytes / 1024 / 1024).toFixed(0)}MB cap), trying the next tier`,
+        ),
+        null
+      );
+    },
+    { sizeBytes: k, inPackCount: E } = await ho(
+      e,
+      i,
+      o,
+      c,
+      r.forceScope === void 0 ? r.maxBytes : null,
+      h,
+    ),
+    A = r.forceScope === "squashed",
+    O = k !== null && k > r.maxBytes,
+    R = A || r.skipAllRefs || O,
+    N = k !== null && k > 3 * r.maxBytes,
+    v = A || N,
+    T = N && ((k !== null && k > Tr * r.maxBytes) || (E !== null && E > vr));
+  if (A)
+    t(
+      "[gitBundle] forceScope=squashed \u2014 skipping the all-branches and HEAD tiers",
+    );
+  else if (O)
+    t(
+      r.currentBranchOnly
+        ? `[gitBundle] size-pack ${(k / 1024 / 1024).toFixed(0)}MB vs ${(r.maxBytes / 1024 / 1024).toFixed(0)}MB cap; ${v ? "skipping the branch tier" : "trying the branch tier"}${T ? ", skipping squashed" : ""}`
+        : `[gitBundle] size-pack ${(k / 1024 / 1024).toFixed(0)}MB > ${(r.maxBytes / 1024 / 1024).toFixed(0)}MB cap; skipping all-branches${v ? " and HEAD" : ""}${T ? " and squashed" : ""}`,
+    );
+  if (r.currentBranchOnly) {
+    let re = await Lk(
+      e,
+      ["rev-parse", "--verify", "--quiet", "--symbolic-full-name", "HEAD"],
+      { hardened: i, layout: o, signal: c, probes: h },
+    );
+    if (re.exitCode === 1)
+      return {
+        ok: !1,
+        error: "The current branch has no commits yet",
+        failReason: "empty_repo",
+      };
+    if (re.code !== 0) return xn("git rev-parse HEAD", re, i);
+    if (!v) {
+      let Y = re.stdout.trim(),
+        ue =
+          Y === "HEAD" || Y.startsWith("-")
+            ? await _("head", ["HEAD"])
+            : await _("current_branch", [Y, "HEAD"]);
+      if (ue !== null) return ue;
+    }
+  } else {
+    if (!R) {
+      let re = await _("all", y);
+      if (re !== null) return re;
+    }
+    if (!v) {
+      let re = await _("head", ["HEAD"]);
+      if (re !== null) return re;
+    }
+  }
+  if (T)
+    return {
+      ok: !1,
+      error: `This repository is too large to upload: its git history is ${Tn(k)}, and an upload can be at most ${Tn(r.maxBytes)}`,
+      failReason: "too_large",
+      sizeBytes: k ?? void 0,
+    };
+  let H = i && !r.hasStash ? await Td(e, o, g, c, h) : void 0;
+  if (H === null) return { ok: !1, ...mt() };
+  if (i && !r.hasStash && H === void 0)
+    return {
+      ok: !1,
+      error: "git rev-parse HEAD^{tree} failed: HEAD names no commit",
+      failReason: "git_error",
+    };
+  let U = { ...Bn, GIT_NO_LAZY_FETCH: "1" },
+    z = { ...(i ? {} : U), ...kn },
+    F = r.hasStash
+      ? `${r.stashCommit ?? r.seedRefs.stash}^{tree}`
+      : (H ?? "HEAD^{tree}"),
+    D = [];
+  if (r.baseRef) {
+    let [re, Y] = await Promise.all(
+      [F, `${r.baseRef}^{tree}`].map((xe) =>
+        Lk(e, [...(i ? [] : Xlr), "rev-parse", xe], {
+          hardened: i,
+          layout: o,
+          signal: c,
+          probes: h,
+          ...(!i && { env: U }),
+        }),
+      ),
+    );
+    if (re?.code === 0 && re.stdout.trim() === Y?.stdout.trim())
+      return {
+        ok: !1,
+        error:
+          r.leftOutCount > 0
+            ? `It doesn't look like you have any new commits or changes to review: the only uncommitted changes here are to ${r.leftOutCount} ${I(r.leftOutCount, "file")} that ${I(r.leftOutCount, "stays", "stay")} on this machine (named like credentials or keys, ${r.withheldByRules ? "covered by a Read rule or a sandbox read-deny setting of yours, linked from your Claude Code configuration, " : ""}hard-linked to another file, kept by a git filter such as LFS, or still being written while read) and ${I(r.leftOutCount, "is", "are")} not uploaded. Stage or commit any other work first.`
+            : "It doesn't look like you have any new commits or changes to review. Stage or commit them first?",
+        failReason: "no_changes",
+      };
+    let ue = await Lk(
+      e,
+      [
+        ...(i ? [] : Xlr),
+        "commit-tree",
+        `${r.baseRef}^{tree}`,
+        "-m",
+        "seed-base",
+      ],
+      { hardened: i, layout: o, signal: c, probes: h, env: z },
+    );
+    if (ue.code === 0) D = ["-p", ue.stdout.trim()];
+    else
+      t(
+        `[gitBundle] baseRef commit-tree failed (${ue.code}), squashing without parent: ${pt(ue.stderr, i)}`,
+      );
+  }
+  let se = await Lk(
+    e,
+    [...(i ? [] : Xlr), "commit-tree", F, ...D, "-m", "seed"],
+    { hardened: i, layout: o, signal: c, probes: h, env: z },
+  );
+  if (se.code !== 0) return xn("git commit-tree", se, i);
+  let Se = se.stdout.trim();
+  if (o && !(await int(o, g))) return { ok: !1, ...mt() };
+  let V = await vn(e, [r.seedRefs.root, Se], {
+    hardened: i,
+    layout: o,
+    probes: h,
+    ...(i && { signal: c }),
+  });
+  if (i && c?.aborted)
+    return { ok: !1, error: "Bundle upload aborted", failReason: "git_error" };
+  if (V.code !== 0)
+    return {
+      ok: !1,
+      ...So(V.stderr, o?.adminDir),
+      heldSeedRef: { exitCode: V.code },
+    };
+  let ce = await Lk(
+    e,
+    [...(i ? [] : Wve), "bundle", "create", n, r.seedRefs.root, "--"],
+    { hardened: i, layout: o, signal: c, probes: h, ...(!i && { env: U }) },
+  );
+  if (o && !(await int(o, g))) return { ok: !1, ...mt() };
+  if (ce.code !== 0)
+    return {
+      ok: !1,
+      ...(r.partialClone
+        ? { error: co, failReason: "git_error" }
+        : xn("git bundle create for the squashed root", ce, i)),
+    };
+  let { size: Ee } = await Ui(n);
+  if (Ee <= r.maxBytes) {
+    let re = await Yi(
+      e,
+      n,
+      r.relabelledPath,
+      new Map([[r.seedRefs.root, fwn]]),
+      { hardened: i, layout: o, signal: c, probes: h },
+    );
+    if (!re.ok) return Ki(re.error);
+    let Y = i
+      ? await to(e, r.relabelledPath, [fwn], {
+          layout: o,
+          signal: c,
+          probes: h,
+          expected: { [fwn]: Se },
+          shown: new Map(),
+        })
+      : r.bindJudgedStash === !0
+        ? await eo(e, r.relabelledPath, fwn, Se, c)
+        : Sr;
+    if (o && !(await int(o, g))) return { ok: !1, ...mt() };
+    return (
+      no(Y, i) ?? {
+        ok: !0,
+        path: r.relabelledPath,
+        size: re.sizeBytes,
+        scope: "squashed",
+      }
+    );
+  }
+  return {
+    ok: !1,
+    error: `This repository is too large to upload: even without its history it is ${Tn(Ee)}, and an upload can be at most ${Tn(r.maxBytes)}`,
+    failReason: "too_large",
+    sizeBytes: Ee,
+  };
+}
+async function Yi(e, n, r, i, o) {
+  let c = await rAa(n, r, i, o.signal);
+  if (!c.ok) return c;
+  let h = await Lk(e, ["bundle", "list-heads", r], o);
+  return h.code === 0
+    ? c
+    : {
+        ok: !1,
+        error: `git bundle list-heads exited ${h.code}: ${pt(h.stderr, o.hardened)}`,
+      };
+}
+function Ki(e) {
+  return {
+    ok: !1,
+    error: `Could not prepare the upload of this working tree (${e}). Retry; if it keeps failing, check that the temporary directory has room for a second copy of the bundle and that nothing else is writing to this checkout.`,
+    failReason: "git_error",
+  };
+}
+function Cr(e) {
+  return e.detail === "git_file" && e.gitDir === "";
+}
+function wo(e) {
+  return (
+    e.misplaced === "linked_worktree" || bo[e.misplaced] !== void 0 || Cr(e)
+  );
+}
+async function rd(e, n, r, i) {
+  let o = (E, A = n) => ({
+    handedBack: !1,
+    refusedAs: A,
+    notThePreviousWay: E,
+  });
+  if (r !== null) return o(r);
+  let c = (E) => {
+    let A = E === null ? null : Ots(E),
+      O =
+        i ??
+        (E === null || A === null
+          ? null
+          : `${Br(A, E)} and this checkout\u2019s git directory (${_e(E)}) is inside it, so a Claude Code session started there can write that directory\u2019s configuration${n.misplaced === "git_file" ? " \u2014 start from an ordinary clone instead" : ""}`);
+    return O === null ? { handedBack: !0 } : { ...o(O), belowHomeCheckout: !0 };
+  };
+  if (Cr(n)) {
+    let E = await Ro(e);
+    return o(
+      E === "link"
+        ? "its .git entry is a symbolic link, which this checkout\u2019s own session can re-point and nothing pins in place, so where it leads when that capture runs cannot be bound to this tree \u2014 start from an ordinary clone instead"
+        : E === "second_name"
+          ? "its .git pointer file has a second name (a hard link), so what it names cannot be trusted between this read and git\u2019s \u2014 remove the other name, or start from an ordinary clone"
+          : "its .git entry is a pointer file this upload could not follow (not the one gitdir line git writes), so where it leads cannot be judged \u2014 start from an ordinary clone instead",
+    );
+  }
+  if (
+    n.gitDir !== "" &&
+    (n.misplaced === "linked_worktree" || n.detail === "git_file")
+  ) {
+    if ((await wno(e)).some((A) => ob(A, n.gitDir)))
+      return o(
+        n.misplaced === "linked_worktree"
+          ? `its .git file names a worktree entry under a temporary directory (${_e(n.gitDir)}), where sessions write \u2014 run git worktree repair if this tree was moved, or start from the repository\u2019s main checkout`
+          : `its .git file names a git directory under a temporary directory (${_e(n.gitDir)}), where sessions write \u2014 start from an ordinary clone of the repository`,
+      );
+  }
+  if (n.detail === "git_file" && n.gitDir !== "") {
+    let E = Klr(n.gitDir)[0];
+    if (E !== void 0)
+      return o(
+        `its git directory (${_e(n.gitDir)}) lies inside another checkout (${_e(E)}), whose Claude Code sessions can write its configuration \u2014 start from an ordinary clone instead`,
+      );
+  }
+  if (wo(n)) return o(bo[n.misplaced] ?? Xi[n.detail ?? "admin_dir"]);
+  let h =
+    n.gitDir === ""
+      ? null
+      : n.misplaced === "old_git"
+        ? An(n.gitDir)
+          ? { entry: n.gitDir, repository: Ve(Ve(n.gitDir)) }
+          : { entry: null, repository: n.gitDir }
+        : n.misplaced === "git_file"
+          ? { entry: null, repository: n.gitDir }
+          : null;
+  if (h === null) return c(null);
+  let { entry: g, repository: p } = h,
+    y = (g === null ? null : await yno(g)) ?? (await yno(p));
+  if (y !== null) return o(yo[y], { ...n, misplaced: y, commonDir: p });
+  if (g === null && (await _o(p)))
+    return o(
+      "its git directory holds a commondir file, which git writes only in a linked working tree\u2019s entry and which would send that capture to another repository\u2019s configuration \u2014 start from an ordinary clone",
+      { ...n, detail: "common_dir" },
+    );
+  if (g !== null && (await Yhi(g)) !== "absent")
+    return o(Xi.worktree_config, {
+      ...n,
+      misplaced: "linked_worktree",
+      detail: "worktree_config",
+    });
+  let _ = c(p);
+  if (!_.handedBack) return _;
+  let k = await O9a(p, e, g !== null);
+  if (k.kind === "clear") return { handedBack: !0 };
+  return {
+    ...o(
+      id(
+        k,
+        n.misplaced === "old_git" ? "update git (2.31 or newer), or " : "",
+        n.misplaced !== "old_git",
+      ),
+      k.kind === "work_tree"
+        ? { ...n, misplaced: "work_tree" }
+        : k.kind === "worktree_config"
+          ? { ...n, misplaced: "linked_worktree", detail: "worktree_config" }
+          : n,
+    ),
+    screened: k.kind,
+  };
+}
+var Xi = {
+    worktree_config:
+      "its administrative entry carries a per-worktree configuration file, one a Claude Code session of this repository could have written there \u2014 delete that file only if nothing in it matters (`git rev-parse --git-path config.worktree` names it; git sparse-checkout writes one, and a sparse tree needs it to stay sparse), or start from the repository\u2019s main checkout",
+    common_dir:
+      "the commondir file in its administrative directory, which does not read as git writes it, would decide which repository that way takes its configuration from",
+    keyed_elsewhere:
+      "its .git file leads git to another repository than the one under which Claude Code keeps this folder\u2019s trust and settings, and that way would run under the other\u2019s configuration \u2014 start from the repository\u2019s main checkout",
+    placement:
+      "its repository is placed or named as git does not place one this upload takes a repository from (not <name>.git or .git, inside the working tree, or under another git directory) \u2014 rename a bare repository\u2019s directory to <name>.git and run git worktree repair from it, or start from an ordinary clone",
+    back_link:
+      "its administrative entry does not point back at this tree (a moved tree, or a back link something rewrote) \u2014 run git worktree repair, or start from the repository\u2019s main checkout",
+    admin_dir:
+      "its .git file names a worktree entry that does not exist or is not one git made, so where it would lead that capture cannot be judged \u2014 run git worktree repair if this tree was moved, or start from the repository\u2019s main checkout",
+    foreign_mount:
+      "something is mounted over its administrative entry in the repository (.git/worktrees/<name>), so what stands there is not the repository\u2019s own \u2014 unmount it, or start from the repository\u2019s main checkout",
+    git_file:
+      "its .git entry is a pointer file this upload could not follow, so where it leads cannot be judged \u2014 start from an ordinary clone instead",
+  },
+  yo = {
+    reftable:
+      "this repository keeps (or appears to keep) its refs in reftable storage \u2014 a state a Claude Code session can bring about without the user, under which that capture would run git; start from an ordinary clone of the repository",
+    borrowed_objects:
+      "this repository borrows objects from another through an alternates file \u2014 a state a Claude Code session can bring about without the user, under which that capture would run git; start from an ordinary clone of the repository",
+  },
+  Rr =
+    "its git configuration points the work tree somewhere else (core.worktree), so that capture would read the directory it names rather than this one; remove core.worktree or start from an ordinary clone",
+  bo = {
+    ...yo,
+    included_config:
+      "a cloud session could change a file that git reads this checkout\u2019s configuration from, so that capture would run under whatever is put there",
+    many_includes:
+      "its git configuration pulls in more include files than are followed, so that capture would run every program those files name and enter any nested repository registered here; trim the include chain",
+    work_tree: Rr,
+  };
+function id(e, n, r) {
+  if (e.file === qlr)
+    switch (e.kind) {
+      case "includes":
+        return `its launch environment\u2019s git configuration (GIT_CONFIG_PARAMETERS / GIT_CONFIG_COUNT) includes a file inside this working tree, its repository or a directory your settings open to Claude Code sessions \u2014 configuration this upload could not have git list here, where a file a session may write could say what that capture runs; ${n}drop that include from the environment, or start from an ordinary clone`;
+      case "work_tree":
+        return Rr;
+      case "worktree_config":
+        return `its launch environment\u2019s git configuration switches per-worktree configuration on (extensions.worktreeConfig), under which that capture would also read a configuration file a session of the repository can plant in this tree\u2019s administrative entry; ${n}start from the repository\u2019s main checkout`;
+      case "second_name":
+        return `its launch environment\u2019s git configuration (GIT_CONFIG_PARAMETERS / GIT_CONFIG_COUNT) includes a file that has a second name \u2014 a hard link \u2014 so a session that can reach the other name could change what that capture runs under; ${n}give that file a single name again (copy it aside and move the copy back over it), drop that include from the environment, or start from an ordinary clone`;
+      case "unread":
+        return "the git configuration its launch environment carries (GIT_CONFIG_PARAMETERS / GIT_CONFIG_COUNT) does not parse as git would parse it, or includes a file that cannot be read or followed here, so what that capture would run under cannot be judged; check those variables, or start from an ordinary clone";
+      case "home_checkout":
+        return Vi(e, n, r);
+      case "settings_unreadable":
+        return qi(e.file, n);
+      case "config_in_checkout":
+        return `its launch environment\u2019s git configuration (GIT_CONFIG_PARAMETERS / GIT_CONFIG_COUNT) includes a file that lies inside \u2014 or links into \u2014 a git checkout (${_e(e.checkout)}), which a Claude Code session started there can write; ${n}drop that include from the environment, keep the file outside any checkout, or start from an ordinary clone`;
+    }
+  let i = _e(e.file);
+  switch (e.kind) {
+    case "includes":
+      return `its git configuration (${i}) pulls in include files, lies inside this working tree, its repository or a directory your settings open to Claude Code sessions, or includes a file there \u2014 configuration this upload could not have git list here, where a file a session may write could say what that capture runs; ${n}move what the includes hold into the configuration file itself, stop granting sessions the directory that holds it (permissions.additionalDirectories, sandbox.filesystem.allowWrite, an Edit rule or --add-dir), or start from an ordinary clone`;
+    case "second_name":
+      return `its git configuration file ${i} (or a file it includes) has a second name \u2014 a hard link \u2014 so a session that can reach the other name could change what that capture runs under; ${n}give the file a single name again (copy it aside and move the copy back over it), or start from an ordinary clone`;
+    case "work_tree":
+      return Rr;
+    case "worktree_config":
+      return `its git configuration (${i}) switches per-worktree configuration on (extensions.worktreeConfig), under which that capture would also read a configuration file a session of the repository can plant in this tree\u2019s administrative entry; ${n}start from the repository\u2019s main checkout`;
+    case "unread":
+      return `its git configuration file ${i} could not be read as a plain file git would parse, or is reached through a link that cannot be followed here, so what that capture would run under cannot be judged; ${n}check that file, or start from an ordinary clone`;
+    case "settings_unreadable":
+      return qi(e.file, n);
+    case "home_checkout":
+      return Vi(e, n, r);
+    case "config_in_checkout":
+      return `the user-level git configuration file ${i}, or a file it includes, lies inside \u2014 or links into \u2014 a git checkout (${_e(e.checkout)}), so a Claude Code session started there can write what that capture would run under, whether or not the file exists yet; ${n}${r ? "start from an ordinary clone, or " : ""}keep user-level git configuration outside any checkout`;
+  }
+}
+function qi(e, n) {
+  return `a Claude Code settings file inside this working tree (${_e(dt(e, "settings.json"))} or settings.local.json) stands but cannot be read, so which directories it opens to sessions \u2014 and so whether a session could write the configuration that capture would run under \u2014 cannot be told; ${n}fix or remove that settings file, then retry`;
+}
+function Vi({ file: e, checkout: n }, r, i) {
+  let o = i ? "start from an ordinary clone, or " : "";
+  switch (bno(n, Ve(e))) {
+    case "home":
+      return `your home directory is itself a git checkout, so a Claude Code session started there can write the user-level git configuration that capture would run under (${_e(e)}, whether or not that file exists yet); ${r}${o}keep the dotfiles repository\u2019s git directory outside your home (a bare repository used with --git-dir)`;
+    case "above_home":
+    case "elsewhere":
+      return `your home directory lies inside a git checkout (${_e(n)}), so a Claude Code session started there can write the user-level git configuration that capture would run under (${_e(e)}, whether or not that file exists yet); ${r}${o}move your home directory out of that checkout, or remove the stray git entry that makes it one`;
+  }
+}
+function od(e) {
+  let n = Sno(e);
+  return n === null
+    ? ""
+    : bno(n, e) === "home"
+      ? ` (yours is itself a git checkout: ${_e(n)})`
+      : ` (yours lies inside the git checkout at ${_e(n)})`;
+}
+function Br(e, n) {
+  return bno(e, n) === "home"
+    ? `your home directory (${_e(e)}) is itself a git checkout`
+    : `your home directory lies inside a git checkout (${_e(e)})`;
+}
+var _e = (e) => Wl(Kn(e), uo);
+function sd(e) {
+  return `this checkout sits inside another checkout (${_e(e)}), whose Claude Code sessions can write this one\u2019s git files \u2014 start from a checkout of this repository that stands inside no other`;
+}
+function ad(e) {
+  let n = Ots(e);
+  return n === null
+    ? null
+    : `${Br(n, e)} and this working tree\u2019s repository (${_e(e)}) is inside it, so a Claude Code session started there can write the repository\u2019s git files`;
+}
+function dd(e) {
+  return `this working tree\u2019s repository sits inside another checkout (${_e(e)}), whose Claude Code sessions can write its git files \u2014 start from a working tree of a repository that stands inside no other checkout`;
+}
+async function ld(e) {
+  let n = dt(e, ".git"),
+    r;
+  try {
+    r = await Ct(n);
+  } catch (o) {
+    let c = w(o);
+    return c === "ENOENT" || c === "ENOTDIR" ? null : "unreadable";
+  }
+  let i;
+  if (r.isDirectory()) i = [n];
+  else {
+    if (!r.isFile()) return "unreadable";
+    let o = vfr(
+      await gMe(n, { oneName: !0 }).catch(() => {
+        return;
+      }),
+    );
+    if (o === void 0 || Ylr(o, e)) return "unreadable";
+    let c = za(o) ? o : lo(e, o);
+    i = An(c) ? [c, Ve(Ve(c))] : [c];
+  }
+  for (let o of i) {
+    let c = await yno(o);
+    if (c !== null) return c;
+    if (!An(o) && (await _o(o))) return "common_dir";
+  }
+  return null;
+}
+async function _o(e) {
+  return Ct(dt(e, "commondir")).then(
+    () => !0,
+    (n) => {
+      let r = w(n);
+      return !(r === "ENOENT" || r === "ENOTDIR");
+    },
+  );
+}
+function An(e) {
+  return e !== "" && Wi(e) !== ".git" && Wi(Ve(e)) === "worktrees";
+}
+var In = `${Qr} retry there. ${ei}`,
+  wt = `${Zr} Use ${In}`,
+  Ji =
+    "`git reset` then rebuilds the index from HEAD (what was staged becomes unstaged; your files are untouched)",
+  Sn = `look at the file named index in this checkout\u2019s git directory (in an ordinary checkout: ls -l .git/index; a link shows an arrow, ->). If it is a link, do not run git in this folder, since git would write through it to whatever it points at: use ${In} If it is not a link,`,
+  Zi = {
+    index_link: ` Git never makes it a link: if you did not, something else did, and git would write through it. ${wt}`,
+    index_second_name: ` Git never gives it a second name, and through that name something else can change the file under git. Look at it (ls -l). Remove the other name if you can find it (\`find . -samefile\` with the file named above, run in this directory), or remove that file itself: ${Ji}. Then retry.`,
+    index_too_large: " This upload has no way round that limit.",
+    index_other: ` Look at it first (ls -l) and remove it if it is not an index git wrote; ${Ji}. Then retry.`,
+    shallow_link: ` Git never makes it a link: if you did not, something else did. ${wt}`,
+    shallow_second_name:
+      " Git never gives it a second name. Look at it (ls -l) and remove the other name if you can find it (`find . -samefile` with the file named above, run in this directory); or copy the file named above to a new name and move the copy over it. Then retry.",
+    shallow_other:
+      " Look at it (ls -l): git keeps the list of this clone\u2019s shallow commits there, as a small plain file \u2014 if this clone was not made with --depth, nothing should stand there and it can be removed. Then retry.",
+    shared_index: ` Look at the split-index files (sharedindex.*) first (ls -l; a link shows an arrow, ->). If one is a link, git did not make it so, and git reads the index through it: do not run git in this folder, and use ${In} If none is a link, do not delete any of these files by hand: the index may need one of them, and which one can change whenever git writes the index. Use a fresh clone in this case too, by the same steps.`,
+    shared_index_too_large: ` Do not delete that split-index file by hand: the index may need it. If this project has so many files that a fresh clone\u2019s index would be over that limit too, this upload has no way round it. If not, use ${In}`,
+    head: ` First ${Sn} check out a branch or a commit (\`git switch\`), and retry.`,
+    symbolic_head: ` First ${Sn} check out a branch by its own name (\`git switch\`; if it is the one that \`git status\` already shows, git answers \u201CAlready on\u201D, and your uncommitted work stays), and retry.`,
+    refs: " `git for-each-ref` shows what git makes of them: rename or repair that branch or tag, then retry.",
+    config: ` First ${Sn} check \`git status\` here, and retry.`,
+    other: ` Retry; if it keeps happening, first ${Sn} \`git status\` here shows whether git itself still reads this checkout.`,
+  };
+function ud({ kind: e, setting: n, where: r = "", relative: i }) {
+  let o = Kn(r),
+    c =
+      "Claude Code\u2019s environment (set by your shell or your Claude Code settings)",
+    h = `Move the attribute rules it points to into a .gitattributes file committed with the project first, then remove the setting from ${o} and retry.`,
+    g = `Remove ${n} from your shell or your Claude Code settings, then start Claude Code again.`,
+    [p, y] = {
+      attributes_file: i
+        ? [
+            `${n} in ${o} is not a full path, which the git this upload runs may read as a different file than yours does`,
+            "Set it to a full path (on Windows, one that starts with a drive letter) or a ~/ path, then retry.",
+          ]
+        : [
+            `${n} is set in ${o}`,
+            `Move the attribute rules it points to into a .gitattributes file committed with the project, or set core.attributesFile directly in your user or system git config file to an absolute or ~/ path; then remove the setting from ${o} and retry.`,
+          ],
+      attr_tree: [`${n} is set in ${o}`, h],
+      ignore_case: [
+        `${n} (which decides whether .gitattributes patterns match file names regardless of letter case) is set in ${o}`,
+        "Move the core.ignoreCase line into this repository\u2019s .git/config or directly into your ~/.gitconfig, then retry.",
+      ],
+      config_location: [
+        `${n} is a relative path in ${"Claude Code\u2019s environment (set by your shell or your Claude Code settings)"}, which git resolves from whatever directory it runs in`,
+        `Set ${n === "HOMEPATH" || n === "USERPROFILE" ? "HOME" : n} to a full path (on Windows, one that starts with a drive letter), then start Claude Code again.`,
+      ],
+      env_config: [
+        `${n} in ${"Claude Code\u2019s environment (set by your shell or your Claude Code settings)"} carries an include, core.attributesFile, attr.tree or core.ignoreCase, or does not parse`,
+        g,
+      ],
+      attr_source_env: [
+        `${n} is set in ${"Claude Code\u2019s environment (set by your shell or your Claude Code settings)"}`,
+        g,
+      ],
+    }[e];
+  return `Not uploading this working tree: ${p}, and the upload cannot follow that setting, so a file git would change before storing it (to encrypt it, for example) could be uploaded as it is on disk. ${y}`;
+}
+function Wt(e) {
+  return ` It is not uploaded the previous way either: ${e}.`;
+}
+function cd(e) {
+  switch (e) {
+    case "git_file":
+    case "linked_worktree":
+    case "work_tree":
+    case "included_config":
+    case "many_includes":
+    case "old_git":
+    case "borrowed_objects":
+    case "reftable":
+      return e;
+    default:
+      return null;
+  }
+}
+function Qi(e, n) {
+  let r = KEi;
+  try {
+    let i = Yel(e, n);
+    if (i === null) return { kind: "unreadable" };
+    let o = [...i, ...wis().flatMap((h) => Object.keys(pl(h)?.env ?? {}))].find(
+      (h) => r.includes(h.toUpperCase()),
+    );
+    if (o !== void 0) return { kind: "names", name: o };
+    let c = hao(r);
+    return c === void 0 ? null : { kind: "moved", name: c };
+  } catch (i) {
+    return (
+      t(`[gitBundle] could not read the repository's settings: ${d(i)}`),
+      { kind: "unreadable" }
+    );
+  }
+}
+function PGl() {
+  try {
+    let e = ["projectSettings", "localSettings"].flatMap((n) =>
+      Object.keys(ye(n)?.env ?? {}).filter((r) => {
+        let i = r.toUpperCase();
+        return fd.includes(i) && Eps.has(i);
+      }),
+    );
+    return e.filter(
+      (n, r) => e.findIndex((i) => i.toUpperCase() === n.toUpperCase()) === r,
+    );
+  } catch {
+    return [];
+  }
+}
+var fd = ["CCR_ENABLE_BUNDLE", "CCR_FORCE_BUNDLE"];
+function br(e) {
+  if (e.kind === "unreadable")
+    return `Not uploading this working tree this way: ${"a settings file a cloud session could reach (this repository\u2019s .claude/settings.json or .claude/settings.local.json, or a --settings file)"} could not be parsed, so what it sets cannot be checked. Fix or remove it (see /status), then restart Claude Code.`;
+  let o = Vyt.includes(e.name.toUpperCase());
+  if (e.kind === "names")
+    return o
+      ? `Not uploading this working tree this way: ${"a settings file a cloud session could reach (this repository\u2019s .claude/settings.json or .claude/settings.local.json, or a --settings file)"} names ${e.name}, which decides where your own settings are found. Remove it there; if you put it there yourself and need it, set it in your shell instead. Then restart Claude Code.`
+      : `Not uploading this working tree this way: ${"a settings file a cloud session could reach (this repository\u2019s .claude/settings.json or .claude/settings.local.json, or a --settings file)"} names ${e.name}, and the upload's own git runs would have to trust what it names. If you did not put it there yourself, remove it. If you did, move it to your user settings (~/.claude/settings.json), managed settings or your shell (or pass the settings inline). Then restart Claude Code.`;
+  return o
+    ? `Not uploading this working tree this way: ${e.name} was changed by a settings file after Claude Code started; it decides where your own settings are found, so the upload only trusts the value the process was started with. Set it in the shell rather than in a settings file, then restart Claude Code.`
+    : `Not uploading this working tree this way: ${e.name} was set by ${"a settings file a cloud session could reach (this repository\u2019s .claude/settings.json or .claude/settings.local.json, or a --settings file)"} that no longer names it, and the upload's own git runs would still have to trust it. Keep it out of those files and restart Claude Code.`;
+}
+function eAa() {
+  return x() === "windows";
+}
+function OGl(e) {
+  switch (e?.kind) {
+    case void 0:
+      return "An older upload method, which took more layouts, is retired on macOS and Linux. To start without an upload, push your work and connect GitHub at https://claude.ai/code; /ultrareview also takes a pull request number.";
+    case "forced_bundle":
+      return "An older upload method, which took more layouts, is retired on macOS and Linux. To start without an upload, unset CCR_FORCE_BUNDLE, push your work and connect GitHub at https://claude.ai/code.";
+    case "other_forge":
+      return `An older upload method, which took more layouts, is retired on macOS and Linux. Cloud sessions can't clone from ${e.forge} yet, so an upload is the only way to start one from this repository.`;
+  }
+}
+function hd(e, n) {
+  return {
+    success: !1,
+    error: n,
+    failReason: "unsupported_layout",
+    layoutKind: e,
+  };
+}
+var gd = {
+    folder_is_home:
+      "Not uploading this working tree: this checkout\u2019s git root is your home directory, or a folder above it (a repository rooted there makes every folder under it part of it, so the upload would carry your tracked home files). Start from a project folder that is its own repository, or work on these files from a separate clone.",
+    folder_is_root:
+      "Not uploading this working tree: this checkout\u2019s git root is the filesystem root. Start from a project folder that is its own repository.",
+    folder_holds_config:
+      "Not uploading this working tree: this checkout\u2019s git root holds (or sits inside) Claude Code\u2019s own configuration directory. Start from a project folder that is its own repository.",
+  },
+  Ar = 268435456;
+async function md(e, n, r) {
+  let i = pr(e ?? pe());
+  if (!i)
+    return {
+      gitRoot: "",
+      paths: [],
+      added: new Set(),
+      deleted: [],
+      gitlinks: [],
+      unwrittenModes: [],
+    };
+  let o = (y) =>
+      hno([...Un, ...Wve, ...A_t(r), ...y], {
+        cwd: i,
+        abortSignal: n,
+        env: {
+          ...li({ ...KDt, ...C_t(r) }, { base: Cts(), userLocale: !0 }),
+          ...Glr,
+        },
+        maxBuffer: Ar,
+      }),
+    [c, h] = await Promise.all([
+      o(["rev-parse", "--verify", "--quiet", "HEAD^{commit}"]),
+      _d(i, n, r),
+    ]);
+  if (h === null) return null;
+  if (h.unwrittenModes.length > 0)
+    return { gitRoot: i, paths: [], added: new Set(), deleted: [], ...h };
+  if (c.exitCode === 1)
+    return { gitRoot: i, paths: [], added: new Set(), deleted: [], ...h };
+  let [g, p] = await Promise.all([
+    o(["diff", "--name-status", "-z", "--no-renames", Vw, "HEAD", "--"]),
+    o([
+      "diff",
+      "--cached",
+      "--name-status",
+      "-z",
+      "--no-renames",
+      Vw,
+      "HEAD",
+      "--",
+    ]),
+  ]);
+  if (c.code !== 0 || g.code !== 0 || p.code !== 0) return null;
+  return { ...ko(On(g.stdout), On(p.stdout), i), ...h };
+}
+function ko(e, n, r) {
+  let i = (h, g) =>
+      h
+        .filter(({ status: p, path: y }) => g(p) && y !== "")
+        .map(({ path: p }) => p),
+    o = M([...i(e, (h) => h !== "D"), ...i(n, (h) => h !== "D")]),
+    c = new Set(o);
+  return {
+    gitRoot: r,
+    paths: o,
+    added: new Set(i(n, (h) => h === "A")),
+    deleted: M([...i(e, (h) => h === "D"), ...i(n, (h) => h === "D")]).filter(
+      (h) => !c.has(h),
+    ),
+  };
+}
+function On(e) {
+  let n = e.split("\x00");
+  return Array.from({ length: Math.floor(n.length / 2) }, (r, i) => ({
+    status: n[2 * i],
+    path: n[2 * i + 1],
+  }));
+}
+var pd = new Set([33188, 33261, 40960, 57344]),
+  wd = 61440,
+  yd = 57344;
+function bd(e) {
+  let n = /^([0-7]{1,11}) [0-9a-f]+ \d\t(.*)$/s.exec(e);
+  if (n === null)
+    return { kind: "unwritten_mode", path: e.slice(e.indexOf("\t") + 1) };
+  let r = Number.parseInt(n[1], 8),
+    i = n[2];
+  return (r & wd) === yd
+    ? { kind: "gitlink", path: i }
+    : { kind: pd.has(r) ? "ordinary" : "unwritten_mode", path: i };
+}
+async function _d(e, n, r) {
+  let i = await Lk(e, [...Wve, ...A_t(r), "ls-files", "-s", "-z"], {
+    hardened: !1,
+    signal: n,
+    env: { ...KDt, ...C_t(r) },
+    maxBuffer: Ar,
+  });
+  if (i.code !== 0) return null;
+  let o = i.stdout
+      .split("\x00")
+      .filter((h) => h !== "")
+      .map(bd),
+    c = (h) => M(o.filter((g) => g.kind === h).map(({ path: g }) => g));
+  return { gitlinks: c("gitlink"), unwrittenModes: c("unwritten_mode") };
+}
+async function Eo(e, n, r, i, o = []) {
+  let c = (y) => KP(y) || i?.(y) === !0,
+    h = await Nt(e),
+    g = async (y, _) => {
+      if (!Me(y, h)) return { path: y, why: "forged" };
+      if (et(y)) return { path: y, why: "alias" };
+      let k = await kd(e, y);
+      if (k === "linked") return { path: y, why: "hardlinked" };
+      if (c(y)) {
+        if (_ === "changed")
+          return { path: y, why: r.has(y) ? "added" : "changed" };
+        if (await gr(e, y)) return { path: y, why: "resurrected" };
+      }
+      return k === "unexamined" ? { path: y, why: "unexamined" } : null;
+    };
+  return (
+    await Promise.all([
+      ...o.map((y) => g(y, "deleted")),
+      ...n.map((y) => g(y, "changed")),
+    ])
+  )
+    .filter((y) => y !== null)
+    .sort((y, _) => y.path.localeCompare(_.path));
+}
+async function kd(e, n) {
+  if (n.includes("\uFFFD")) return "unexamined";
+  let r = await tt(e, n);
+  if (r !== "clear") return r === "symlink" ? "single" : "unexamined";
+  try {
+    let i = await Ct(dt(e, n));
+    return i.isFile() && i.nlink > 1 ? "linked" : "single";
+  } catch (i) {
+    let o = w(i);
+    return o === "ENOENT" || o === "ENOTDIR" ? "single" : "unexamined";
+  }
+}
+async function Ed(e, n, r, i) {
+  let o = (p) =>
+      Lk(e, [...Wve, ...p], {
+        hardened: !1,
+        signal: r,
+        env: KDt,
+        maxBuffer: Ar,
+      }),
+    [c, h] = await Promise.all([
+      o(["diff", "--name-status", "-z", "--no-renames", Vw, `${n}^1`, n, "--"]),
+      o([
+        "diff",
+        "--name-status",
+        "-z",
+        "--no-renames",
+        Vw,
+        `${n}^1`,
+        `${n}^2`,
+        "--",
+      ]),
+    ]);
+  if (c.code !== 0 || h.code !== 0) return null;
+  let g = ko(On(c.stdout), On(h.stdout), e);
+  return Eo(e, g.paths, g.added, i, g.deleted);
+}
+async function IGl(e, n, r) {
+  let i = pr(e ?? pe()),
+    o = i ? await R9a(i, n) : null;
+  if (o?.kind === "failed")
+    return {
+      kind: "refused",
+      sentence: `It is not uploaded the previous way either: a private copy of this checkout's index could not be made (${Wl(Kn(o.detail), Kt)}), and that way runs only over such a copy. Nothing was uploaded; once that is put right, retry, or start from an ordinary clone.`,
+      named: 0,
+      added: 0,
+      unexamined: 0,
+      gitlinks: 0,
+      indexCopied: !1,
+      indexCopyCause: o.cause,
+    };
+  let c;
+  try {
+    c = await Rd(e, n, r, o?.indexFile);
+  } catch (g) {
+    throw (await o?.dispose(), g);
+  }
+  if (c.kind === "refused") return (await o?.dispose(), c);
+  let h = null;
+  try {
+    h = o === null ? null : await x9a(i, o.indexFile, n);
+  } catch (g) {
+    throw (await o?.dispose(), g);
+  }
+  if (h?.kind === "failed")
+    return (
+      await o?.dispose(),
+      {
+        kind: "refused",
+        sentence: `It is not uploaded the previous way either: that way runs only over a private copy of this checkout's index, and ${Wl(Kn(h.detail), Kt)}. Nothing was uploaded; once that is put right, retry, or start from an ordinary clone.`,
+        named: 0,
+        added: 0,
+        unexamined: 0,
+        gitlinks: 0,
+        indexCopied: !1,
+        indexCopyCause: "index_tree",
+      }
+    );
+  return {
+    kind: "proceed",
+    pinnedIndex: o === null ? null : { path: o.indexFile, dispose: o.dispose },
+  };
+}
+async function Rd(e, n, r, i) {
+  let o = await md(e, n, i);
+  if (o === null)
+    return {
+      kind: "refused",
+      sentence:
+        "It is not uploaded the previous way either: its uncommitted changes could not be listed, so they cannot be checked for files that must stay on this machine \u2014 retry; if it keeps happening, git status in this checkout will show what git cannot list.",
+      named: 0,
+      added: 0,
+      unexamined: 0,
+      gitlinks: 0,
+      indexCopied: !0,
+    };
+  let { gitlinks: c } = o;
+  if (c.length > 0)
+    return {
+      kind: "refused",
+      sentence: `It is not uploaded the previous way either: this checkout's index registers ${c.length} nested ${I(c.length, "repository", "repositories")} (a submodule or gitlink: ${Ne(c, 3)}), which that way would enter, running git under the nested repository\u2019s own configuration \u2014 one a session of this checkout can write. If the entry is not meant, remove it from the index with \`git update-index --force-remove -- <path>\` (not \`git rm\`, which first runs git inside the nested repository); otherwise update git (2.31 or newer) if it is older, or start from an ordinary clone.`,
+      named: 0,
+      added: 0,
+      unexamined: 0,
+      gitlinks: c.length,
+      indexCopied: !0,
+    };
+  let { unwrittenModes: h } = o;
+  if (h.length > 0)
+    return {
+      kind: "refused",
+      sentence: `It is not uploaded the previous way either: this checkout's index lists ${h.length} ${I(h.length, "entry", "entries")} under a file mode git itself never writes (${Ne(h, 3)}), so something other than git wrote the index and what the previous way would carry cannot be checked. Remove each such entry with \`git update-index --force-remove -- <path>\` (the file itself stays on disk), then \`git add -- <path>\` if it should be tracked; or start from an ordinary clone.`,
+      named: 0,
+      added: 0,
+      unexamined: h.length,
+      gitlinks: 0,
+      indexCopied: !0,
+    };
+  let g = o.gitRoot === "" ? void 0 : await r?.(o.gitRoot),
+    p = await Eo(o.gitRoot, o.paths, o.added, g, o.deleted);
+  return p.length === 0
+    ? { kind: "proceed" }
+    : {
+        kind: "refused",
+        sentence: `It is not uploaded the previous way either (that way keeps nothing back): ${xr(p, r !== void 0).replace(/^Not uploading this working tree: /, "")}`,
+        named: p.length,
+        added: B(p, ({ why: y }) => y === "added"),
+        unexamined: B(p, ({ why: y }) => y === "unexamined"),
+        gitlinks: 0,
+        indexCopied: !0,
+      };
+}
+async function Ro(e) {
+  let n = await Ct(dt(e, ".git")).catch(() => null);
+  return n?.isSymbolicLink() === !0
+    ? "link"
+    : n?.isFile() === !0 && n.nlink !== 1
+      ? "second_name"
+      : "other";
+}
+async function Sd(e) {
+  let n = dt(e, ".git"),
+    r = await Ct(n).catch(() => null);
+  if (r?.isSymbolicLink()) return "symlink";
+  if (!r?.isFile()) return "other";
+  let i = await gMe(n).catch(() => {
+      return;
+    }),
+    o = vfr(i)?.replaceAll("\\", "/");
+  if (o === void 0) return "other";
+  return /\/worktrees\/[^/]+\/?$/.test(o)
+    ? "linked_worktree"
+    : /\/modules\//.test(o)
+      ? "submodule"
+      : "separate_git_dir";
+}
+function MGl(e) {
+  return `This checkout ${{ git_file: "is a submodule, a checkout with a separate git directory, or one whose .git pointer could not be followed", linked_worktree: "is a linked working tree whose pointer files could not be verified (try git worktree repair), which uses per-worktree configuration, or whose repository sits somewhere this upload does not trust", work_tree: "has core.worktree set", included_config: "reads git configuration from a file inside the working tree", many_includes: `is used with a git configuration that includes more files, or a longer chain of nested includes, than the new upload path follows (over ${gno} include files or 8 levels deep)`, old_git: "is used with a git older than 2.31", borrowed_objects: "borrows objects from another repository", reftable: "keeps its refs in the reftable format" }[e]}; the new upload path does not support that yet, so the working tree is being uploaded the previous way for this session.`;
+}
+function xd() {
+  let e = Ez(void 0),
+    n = Oe(aa(e, "CLAUDE_CODE_LEGACY_BUNDLE")),
+    r = s.CLAUDE_CODE_LEGACY_BUNDLE === !0,
+    i = r && !n;
+  if (i) {
+    let o = Vyt.some((c) => aa(process.env, c) !== aa(e, c));
+    t(
+      o
+        ? "[gitBundle] CLAUDE_CODE_LEGACY_BUNDLE is set, but a settings tier also moves where settings are read from (HOME, CLAUDE_CONFIG_DIR, ...): no settings tier counts as the owner's word then, so it is ignored and the default upload method runs"
+        : "[gitBundle] CLAUDE_CODE_LEGACY_BUNDLE is set by a settings file, not by the environment claude was started with or the owner's own settings: ignored, the default upload method runs",
+      { level: "warn" },
+    );
+  }
+  return { requested: n && r, ignored: i };
+}
+var Sr = { missing: [], foreign: [] };
+async function eo(e, n, r, i, o) {
+  let c = await Lk(e, [...Wve, "bundle", "list-heads", n], {
+    hardened: !1,
+    signal: o,
+    env: KDt,
+  });
+  if (c.code !== 0)
+    return {
+      missing: [r],
+      foreign: [],
+      unlisted: wr(c.stderr.trim()) || `exit ${c.code}`,
+    };
+  return c.stdout
+    .split(
+      `
+`,
+    )
+    .some((g) => g === `${i} ${r}`)
+    ? Sr
+    : { missing: [r], foreign: [] };
+}
+async function to(e, n, r, i) {
+  let o = r.filter((k) => !k.startsWith("-")),
+    c = await Lk(e, ["bundle", "list-heads", n], {
+      hardened: !0,
+      layout: i.layout,
+      signal: i.signal,
+      probes: i.probes,
+    });
+  if (c.code !== 0)
+    return {
+      missing: o,
+      foreign: [],
+      unlisted: wr(c.stderr.trim()) || `exit ${c.code}`,
+    };
+  let h = new Map(
+      c.stdout
+        .split(
+          `
+`,
+        )
+        .flatMap((k) => {
+          let [E, A] = k.split(" ");
+          return E === void 0 || A === void 0 ? [] : [[A, E]];
+        }),
+    ),
+    g = o.filter((k) => {
+      let E = h.get(k),
+        A = i.expected[k];
+      return E === void 0 || (A !== void 0 && E !== A);
+    }),
+    p =
+      i.shown === void 0
+        ? []
+        : [...h].flatMap(([k, E]) =>
+            Object.hasOwn(i.expected, k) || i.shown?.get(k) === E ? [] : [k],
+          );
+  if (i.shown === void 0 || g.length > 0 || p.length > 0)
+    return { missing: g, foreign: p };
+  let y = await Lk(e, ["cat-file", "--batch-check"], {
+      hardened: !0,
+      layout: i.layout,
+      signal: i.signal,
+      probes: i.probes,
+      input: [...h.values()]
+        .map(
+          (k) => `${k}
+`,
+        )
+        .join(""),
+    }),
+    _ =
+      y.code === 0
+        ? [...h].flatMap(([k, E]) =>
+            y.stdout.includes(`${E} missing`) ? [k] : [],
+          )
+        : [...h.keys()];
+  return { missing: g, foreign: p, notHeld: _ };
+}
+async function Td(e, n, r, i, o) {
+  if (n === void 0 || !(await int(n, r))) return null;
+  let c = await Lk(e, ["rev-parse", "-q", "--verify", "HEAD^{tree}"], {
+      hardened: !0,
+      layout: n,
+      signal: i,
+      probes: o,
+    }),
+    h = c.stdout.trim();
+  if (!(await int(n, r))) return null;
+  return c.code === 0 && /^[0-9a-f]{40}(?:[0-9a-f]{24})?$/.test(h) ? h : void 0;
+}
+async function vd(e, n, r, i, o) {
+  if (!(await int(n, r))) return null;
+  let [c, h] = await Promise.all([
+    Lk(
+      e,
+      [
+        "for-each-ref",
+        "--format=%(objectname) %(refname)",
+        "refs/heads/",
+        "refs/tags/",
+      ],
+      { hardened: !0, layout: n, signal: i, probes: o },
+    ),
+    Lk(e, ["rev-parse", "-q", "--verify", "HEAD"], {
+      hardened: !0,
+      layout: n,
+      signal: i,
+      probes: o,
+    }),
+  ]);
+  if (c.code !== 0 || (h.code !== 0 && h.exitCode !== 1) || !(await int(n, r)))
+    return null;
+  let g = h.code === 0 ? [["HEAD", h.stdout.trim()]] : [];
+  return new Map([
+    ...c.stdout
+      .split(
+        `
+`,
+      )
+      .flatMap((p) => {
+        let [y, _] = p.split(" ");
+        return y === void 0 || _ === void 0 ? [] : [[_, y]];
+      }),
+    ...g,
+  ]);
+}
+function no(e, n) {
+  if (e.unlisted !== void 0)
+    return {
+      ok: !1,
+      error: `git bundle list-heads failed: ${pt(e.unlisted, n)}`,
+      failReason: "git_error",
+    };
+  if (e.missing.length > 0) return Cd(e.missing);
+  if (e.foreign.length > 0) return ro(e.foreign);
+  return (e.notHeld?.length ?? 0) > 0 ? ro(e.notHeld ?? [], "not_held") : null;
+}
+function ro(e, n = "changed") {
+  return {
+    ok: !1,
+    error:
+      n === "changed"
+        ? `git bundle create packed ${Ne(e)}, which this checkout did not show when the upload read its refs: its refs changed, or were redirected elsewhere, while the bundle was made. Make sure nothing else is writing to this checkout, inspect its git directory (a commondir file there was not written by git), then retry.`
+        : `git bundle create packed ${Ne(e)} at commits this checkout's own object store does not hold: another object store stood in while the bundle was made. Make sure nothing else is writing to this checkout's git directory (objects/info in particular), then retry.`,
+    failReason: "git_dir_tampered",
+    refsChanged: !0,
+  };
+}
+function Cd(e) {
+  return {
+    ok: !1,
+    error: `git bundle create left out or altered ${Ne(e)}: another ref in this repository (a branch or tag spelled like it) makes the name ambiguous, or the temporary ref was rewritten while the bundle was made, so the upload would not carry your changes as captured. Make sure nothing else is writing to this checkout, rename or delete such a branch or tag (see \`git for-each-ref\`), then retry.`,
+    failReason: "git_error",
+  };
+}
+function Ne(e, n = Xa) {
+  let r = e
+      .slice(0, n)
+      .map((o) => Wl(Kn(o), uo))
+      .join(", "),
+    i = e.length - n;
+  return i > 0 ? `${r} and ${i} more` : r;
+}
+function Bd(e, n) {
+  switch (e) {
+    case "objects":
+      return {
+        outcome: "bundle_objects_missing",
+        error: `Not uploading this working tree: git could not read a complete history back out of the bundle it just made (${n}), so an object in this repository's .git/objects is most likely damaged. Run \`git fsck\` in this checkout, repair or re-clone the repository, then retry.`,
+        failReason: "git_dir_tampered",
+      };
+    case "unlisted":
+      return {
+        outcome: "bundle_objects_unlisted",
+        error: `Not uploading this working tree: the bundle git just made carries objects that none of the branches and tags it lists lead to (${n}). In \`git for-each-ref\`, look for a name that holds refs/ twice (such as refs/tags/refs/heads/x), rename or delete that branch or tag (on the remote too, or the next fetch brings it back), then retry.`,
+        failReason: "refused",
+      };
+    case "trailing":
+      return {
+        outcome: "bundle_trailing_bytes",
+        error: `Not uploading this working tree: the bundle git just made does not end with its pack (${n}). git does not write that on its own, so a pack file in this repository's .git/objects is most likely damaged or was not written by git. Clone the repository anew, then retry.`,
+        failReason: "git_dir_tampered",
+      };
+    case "header":
+    case "scratch":
+    case "index":
+    case "walk":
+    case "unfinished":
+      return {
+        outcome: "git_error",
+        error: `Could not check the bundle before upload, so nothing was uploaded (${n}). Retry; if it happens again, run \`git fsck\` in this checkout.`,
+        failReason: "git_error",
+      };
+  }
+}
+function xn(e, n, r) {
+  let i = r ? void 0 : Ghi(u4e(n)),
+    o = pt(n.stderr, r),
+    c = n.stderr === E9a;
+  return {
+    ok: !1,
+    error:
+      i !== void 0
+        ? To[i]
+        : `${e} failed (${n.code})${o && `: ${o}`}${c ? "; `git fsck` in this checkout may show why" : ""}`,
+    failReason: "git_error",
+    ...(i !== void 0 && { gitRefused: i }),
+  };
+}
+function pt(e, n) {
+  return n ? Wl(Kn(e), 200) : e.slice(0, 200);
+}
+var _r = {
+  git_file:
+    "whose .git file does not hold the single pointer git writes there.",
+  admin_dir:
+    "whose .git file does not name the administrative directory git uses for it (or that directory is not where git keeps one, under the repository\u2019s .git/worktrees).",
+  foreign_mount:
+    "whose administrative directory under the repository\u2019s .git/worktrees has something mounted over it (another device or, on Linux, another mount) \u2014 unmount it first.",
+  back_link:
+    "whose administrative directory does not point back at it \u2014 usually a working tree that was moved; git worktree repair (run here) rewrites the pointer.",
+  common_dir:
+    "whose administrative directory names a different repository than git resolves for it.",
+  keyed_elsewhere:
+    "whose .git file leads git to a different repository from the one under which Claude Code keeps this folder\u2019s trust and settings. The usual cause is a symbolic link on the path in that file, or on the path to this folder.",
+  placement:
+    "whose repository sits inside this working tree (or the tree inside it), inside another git directory or under a temporary directory, or is not named the way git names one (.git, or name.git for a bare repository) \u2014 places and shapes this upload does not take a repository from.",
+  worktree_config:
+    "that uses per-worktree configuration (extensions.worktreeConfig, or a config.worktree file), which this upload does not support yet.",
+};
+function Ad(e) {
+  let n = e.startsWith("included"),
+    r = n
+      ? "a file that your git configuration includes"
+      : e.startsWith("repository")
+        ? "this repository\u2019s own git configuration file"
+        : "your own or the system-wide git configuration file",
+    i = n
+      ? " `git config --show-origin --get-regexp include` lists each include line and its file."
+      : e.startsWith("repository")
+        ? ""
+        : " `git config --list --show-origin --name-only` shows the files in use.",
+    o =
+      "then retry; if the line is not yours to change, this checkout cannot be uploaded.",
+    [c, h] = e.endsWith("_inside")
+      ? [
+          "lies inside this checkout or its git directory (even if it does not exist yet), where a cloud session could change it",
+          n
+            ? "Remove that line or point it outside this checkout, then retry; if the line is not yours to change, this checkout cannot be uploaded."
+            : "Keep that file outside this checkout, or start from a checkout that does not hold it.",
+        ]
+      : e.endsWith("_not_text")
+        ? [
+            "has a name that is not valid text, so it cannot be checked",
+            `Give the file and every folder in its path a name that is valid text, ${n ? "update the include line to match, " : ""}${e.startsWith("repository") ? "" : "keep the file outside this checkout, "}then retry.`,
+          ]
+        : [
+            "can be reached from this checkout (through a link, a hard link or another spelling of its path) or is on a network path, so a cloud session could change it or it cannot be checked",
+            n
+              ? "Remove that line, or point it by its plain path at an ordinary local file outside this checkout, then retry; if the line is not yours to change, this checkout cannot be uploaded."
+              : "Put an ordinary local file (no link, no hard link) in its place, then retry.",
+          ];
+  return `Not uploading this working tree: ${r} ${c}.${i} ${h}`;
+}
+function io(e) {
+  switch (e.misplaced) {
+    case "git_file":
+      return `Not uploading this working tree: ${e.pointerFollowed ? "this checkout\u2019s .git is a pointer file (a submodule, a checkout with a separate git directory), which this upload does not support yet. Before running any git command here, look at the directory that it leads to (the .git file names it), unless you know it. Start" : e.dotGitEntry === "link" ? "this checkout\u2019s .git is a symbolic link, which this upload does not follow. Start" : e.dotGitEntry === "second_name" ? "this checkout\u2019s .git pointer file has a second name (a hard link), so what it names cannot be trusted. Remove the other name and retry, or start" : "this checkout\u2019s .git is something this upload could not follow (it could not be read, is not the one gitdir line git writes, or names another host). Start"} from an ordinary clone of the repository \u2014 its main checkout \u2014 instead.`;
+    case "linked_worktree":
+      return e.detail === "worktree_config"
+        ? `Not uploading this working tree: this checkout is a linked working tree ${_r.worktree_config} Start from the repository\u2019s main checkout instead (a new worktree made from this one would be refused too: a current git copies this file into it).`
+        : e.detail === "placement"
+          ? `Not uploading this working tree: this checkout is a linked working tree ${_r.placement} Start from the repository\u2019s main checkout, or from a working tree made with git worktree add in an ordinary location, instead; where neither serves, from an ordinary clone of the repository.`
+          : `Not uploading this working tree: this checkout is a linked working tree ${_r[e.detail ?? "admin_dir"]} Start from the repository\u2019s main checkout, or from a working tree made with git worktree add in an ordinary location, instead.`;
+    case "work_tree":
+      return e.unexamined
+        ? "Not uploading this working tree: this checkout\u2019s own folder could not be examined just now, so it could not be checked that git\u2019s working tree is this folder. Retry; if it goes on, check that you can still open this folder."
+        : "Not uploading this working tree: git resolves this checkout\u2019s working tree to another directory (core.worktree is set), which this upload does not support yet. Start from an ordinary clone of the repository instead, or unset core.worktree if nothing here relies on it.";
+    case "included_config":
+      return Ad(e.writable ?? "included_indirect");
+    case "many_includes":
+      return `Not uploading this working tree: the git configuration in force for this checkout (~/.gitconfig, .git/config and the files they include) pulls in more include files, or a longer chain of nested includes, than this upload follows (over ${gno} files or 8 levels deep), so the programs that configuration names cannot all be switched off while the upload is prepared. Trim the include chain (directives naming files that do not exist do not count), then retry.`;
+    case "old_git":
+      return "Not uploading this working tree: the installed git is older than 2.31, which cannot be kept from running programs this checkout\u2019s configuration names while the upload is prepared. Update git (2.31 or newer), then retry.";
+    case "borrowed_objects":
+      return `Not uploading this working tree: this checkout borrows objects from another repository (an objects/info/alternates or http-alternates file \u2014 a clone made with --shared or --reference, or a file something else put there), so an upload could carry that repository\u2019s history too, which this upload does not support. Start from an ordinary clone of the repository instead.${e.sharedDirectoryElsewhere ? " (This checkout is a linked working tree: that file is in its repository\u2019s git directory, which this checkout\u2019s .git file points into.)" : ""}`;
+    case "reftable":
+      return "Not uploading this working tree: this repository keeps its refs in the reftable format, whose tables the upload cannot yet vouch for one by one. Start from a clone made with the default (files) ref format instead.";
+    case "ref_storage":
+      return `Not uploading this working tree: ${v9a(e.keptBy ?? "setting")}. Nothing was uploaded.`;
+    case "temp_root":
+      return "Not uploading this working tree: this checkout stands \u2014 or a link on the way to it leads \u2014 under a directory cloud sessions on this machine use as scratch space, so nothing in it can be told apart from what such a session put there. Start from the checkout at its ordinary location instead.";
+    case "git_dir":
+      return "Not uploading this working tree: git does not use this checkout\u2019s own .git directory, which happens only when something in .git (usually HEAD) was emptied or overwritten by something other than git. Look at .git and put back what was changed before retrying, or start from an ordinary clone of the repository instead.";
+    case "common_dir":
+      return `Not uploading this working tree: the commondir file in this checkout\u2019s .git directory was written by something other than git, and it sends git to a directory where git itself would not keep this checkout\u2019s shared files. ${wt}`;
+  }
+}
+function oo(e) {
+  return {
+    misplaced: e.misplaced,
+    unexamined: e.unexamined,
+    keptBy: e.keptBy,
+    writable: e.writable,
+    detail: e.detail,
+    pointerFollowed: e.gitDir !== "",
+    sharedDirectoryElsewhere: e.commonDir !== e.gitDir,
+  };
+}
+function HGl(e) {
+  return `${e.length} tracked ${I(e.length, "file")} ${I(e.length, "was", "were")} missing when read and ${I(e.length, "is", "are")} uploaded as deleted (${Ne(e, 3)}) \u2014 if a build was rewriting ${I(e.length, "it", "them")} just then, start the session again once it settles.`;
+}
+function DGl(e, { readRules: n = !1, ofThisUploadOnly: r = !1 } = {}) {
+  return `${r ? "Left out of this upload" : "Left on this machine"}: ${e.length} uncommitted ${I(e.length, "file")} named like credentials or keys, ${n ? "covered by a Read rule or a sandbox read-deny setting of yours, linked from your Claude Code configuration, " : ""}hard-linked to another file, kept by a git filter such as LFS, or still being written by another program while ${I(e.length, "it was", "they were")} read (${Ne(e)})${r ? "" : `, ${I(e.length, "was", "were")} not uploaded`} \u2014 the cloud session starts with the version git already holds for ${I(e.length, "it", "them")} (committed or staged), or without ${I(e.length, "it", "them")}.`;
+}
+function xr(e, n = !1) {
+  let r = (k) => e.filter((E) => E.why === k).map(({ path: E }) => E),
+    i = r("forged");
+  if (i.length > 0)
+    return `Not uploading this working tree: git reports changed paths spelled in a way git itself never writes (${Ne(i)}), so this checkout's index or HEAD was edited by something other than git. Inspect it (git status, git log) before retrying.`;
+  let o = r("same-bytes");
+  if (o.length > 0)
+    return `Not uploading this working tree: while it was read, an index entry appeared (${Ne(o)}) holding, byte for byte, the content of a file that stays on this machine (named like credentials or keys${n ? ", covered by a Read rule or a sandbox read-deny setting of yours, linked from your Claude Code configuration" : ""}, or kept by a git filter) \u2014 at a name no step of this upload put it under, so something else wrote into the index copy this upload works in while it ran. Retry; if it recurs, check what else is running in this checkout.`;
+  let c = r("alias");
+  if (c.length > 0)
+    return `Not uploading this working tree: its uncommitted changes include paths shaped like Windows 8.3 short names (${Ne(c)}), which can open a different file than they name. Rename or remove them \u2014 committing them as they stand would put whatever they open into git \u2014 then retry.`;
+  let h = r("hardlinked");
+  if (h.length > 0)
+    return `Not uploading this working tree: ${h.length} changed ${I(h.length, "file has", "files have")} a second hard link (${Ne(h)}) \u2014 another name for what may be a file outside this tree, linked in without reading it \u2014 so ${I(h.length, "it is", "they are")} never read for an upload. Remove the extra link (or commit the file if it is yours), then retry.`;
+  let g = r("unexamined");
+  if (g.length > 0)
+    return `Not uploading this working tree: ${g.length} changed ${I(g.length, "file")} could not be examined where ${I(g.length, "it stands", "they stand")} (${Ne(g)}) \u2014 a directory above could not be inspected, the name is not valid UTF-8, or the entry could not be read \u2014 so whether another name leads outside this tree cannot be told. Check the path (ls -la along it), or commit the change if it is yours, then retry.`;
+  let p = r("added"),
+    y = r("changed"),
+    _ = r("resurrected");
+  return [
+    `Not uploading this working tree: its uncommitted changes include ${e.length} ${I(e.length, "file")} named like credentials or keys${n ? ", covered by a Read rule or a sandbox read-deny setting of yours, or linked from your Claude Code configuration" : ""} (${Ne(e.map(({ path: k }) => k))}).`,
+    ...(p.length > 0
+      ? [
+          `${Ne(p)} ${I(p.length, "was", "were")} added to git's index but never committed: unless you meant to start tracking ${I(p.length, "it", "them")}, take ${I(p.length, "it", "them")} back out with ` +
+            "`git rm --cached -- <file>` (the file itself stays on disk) \u2014 if you did not add " +
+            `${I(p.length, "it", "them")} yourself, something else did.`,
+        ]
+      : []),
+    ...(y.length > 0
+      ? [
+          `${Ne(y)} ${I(y.length, "differs", "differ")} from what is committed: commit the change if it belongs in git; if ` +
+            "`git status` shows no change there, running it once settled the difference \u2014 retry; if git should not be tracking " +
+            `${I(y.length, "that file", "those files")} at all, this checkout's history was rewritten \u2014 see ` +
+            "`git log -- <file>`.",
+        ]
+      : []),
+    ...(_.length > 0
+      ? [
+          `${Ne(_)} ${I(_.length, "is", "are")} committed but removed from the index while the file is, or may still be, on disk: commit the removal, or if you never committed ${I(_.length, "it", "them")}, see \`git log -- <file>\` for who did.`,
+        ]
+      : []),
+    "Then retry.",
+  ].join(" ");
+}
+function Tn(e) {
+  return e === null ? "?" : an(e);
+}
+async function LGl(e, n) {
+  let r = po("hipaa") ? "refused_hipaa" : po("ldr") ? "refused_ldr" : void 0;
+  if (r !== void 0)
+    return (
+      a("tengu_ccr_bundle_upload", { outcome: S(r) }),
+      m("teleport_git_bundle_upload", r),
+      {
+        success: !1,
+        error:
+          "Cloud sessions started from an uploaded copy of this working tree are disabled by your organization's policy. Start the session from a GitHub repository source instead.",
+        failReason: "refused",
+      }
+    );
+  let i = n?.cwd ?? pe(),
+    o = n?.currentBranchOnly === !0,
+    c = pr(i);
+  if (!c)
+    return (
+      a("tengu_ccr_bundle_upload", { outcome: S("not_a_repo") }),
+      m("teleport_git_bundle_upload", "not_a_repo"),
+      {
+        success: !1,
+        error: "Not in a git repository",
+        failReason: "not_a_repo",
+      }
+    );
+  let h = n?.hardenForDeviceSessions === !0,
+    g =
+      n?.hardenForDeviceSessions === void 0 && x() !== "windows"
+        ? xd()
+        : { requested: !1, ignored: !1 },
+    p = n?.hardenForDeviceSessions ?? !eAa(),
+    y = !h && (n?.previousCaptureServes ?? eAa());
+  if (g.requested)
+    t(
+      "[gitBundle] CLAUDE_CODE_LEGACY_BUNDLE is not honoured on macOS and Linux: the default upload method runs",
+      { level: "warn" },
+    );
+  let _ = p
+      ? {
+          hardened: !0,
+          ...SQr(),
+          ...(g.ignored && { legacy_switch_ignored: !0 }),
+          ...(g.requested && { legacy_switch_retired: !0 }),
+        }
+      : { legacy_bundle: !0 },
+    k = () => (
+      a("tengu_ccr_bundle_upload", {
+        outcome: S("admin_dir_failed"),
+        admin_dir_reason: S("path_misread"),
+        ..._,
+      }),
+      m("teleport_git_bundle_upload", "admin_dir_failed"),
+      {
+        success: !1,
+        error:
+          "Not uploading this working tree: a folder with a backslash (\\) in its name is in its path (as written or with links followed) or in the path of the folder Claude Code was started in. Claude Code would read the backslash as a folder separator and check a different folder. Rename that folder, then start Claude Code again.",
+        failReason: "refused",
+      }
+    );
+  if (jf(c) || Bxo()) return k();
+  let E = p ? await Wa(c).catch(() => null) : c;
+  if (E === null)
+    return (
+      a("tengu_ccr_bundle_upload", {
+        outcome: S("admin_dir_failed"),
+        admin_dir_reason: S("unresolved_root"),
+        ..._,
+      }),
+      m("teleport_git_bundle_upload", "admin_dir_failed"),
+      {
+        success: !1,
+        error:
+          "Not uploading this working tree: its own path could not be resolved just now (a link on the way to it changed or could not be read), so nothing was uploaded this way; retry from the directory itself.",
+        failReason: "refused",
+      }
+    );
+  if (jf(E)) return k();
+  await using A = Xhi();
+  let O = p ? await Nd(A, E) : null;
+  if (O !== null && gOn(O) === "none")
+    a("tengu_ccr_bundle_root_names_no_object", {
+      device_zero: O.startsWith("0:"),
+    });
+  let R = p ? Klr(E) : [],
+    N = j6a(c, n?.rootAnchors);
+  if (N !== null)
+    return (
+      a("tengu_ccr_bundle_upload", {
+        outcome: S("refused_home_root"),
+        root_kind: u(N),
+        ..._,
+      }),
+      m("teleport_git_bundle_upload", "refused_home_root"),
+      { success: !1, error: gd[N], failReason: "git_dir_tampered" }
+    );
+  let v = tAa(),
+    T = [v.stash, v.root],
+    H = n?.signal,
+    U = p ? AbortSignal.timeout(qa) : void 0,
+    z = Date.now(),
+    F = U === void 0 ? H : H === void 0 ? U : AbortSignal.any([H, U]),
+    D = new qQt("operation"),
+    se = (G) => {
+      let J = { phase: u(G), elapsed_ms: Date.now() - z };
+      if (H?.aborted === !0 || U?.aborted !== !0)
+        return (
+          a("tengu_ccr_bundle_upload", {
+            ..._,
+            outcome: S("aborted"),
+            current_branch_only: o,
+            ...J,
+          }),
+          { success: !1, error: "Bundle cancelled" }
+        );
+      return (
+        a("tengu_ccr_bundle_upload", {
+          ..._,
+          outcome: S("build_budget_expired"),
+          current_branch_only: o,
+          ...J,
+        }),
+        m("teleport_git_bundle_upload", "build_budget_expired"),
+        {
+          success: !1,
+          error:
+            "Preparing the upload took too long and was stopped (a file in this checkout that git reads, such as a .gitattributes, may be a pipe or otherwise blocking). Check the checkout, then retry.",
+          failReason: "git_error",
+        }
+      );
+    };
+  await using Se = Xhi();
+  let V = p
+    ? await Ats(c, F, {
+        linkedTrees: !0,
+        bound: h,
+        startsInProject: n?.startsInProject,
+        perWorktreeConfig: "serve",
+        probes: D,
+        holder: Se,
+      })
+    : void 0;
+  if (p && F?.aborted) return se("layout_read");
+  let ce = V?.kind === "read" ? I9a(V.layout, E, O) : "the_same";
+  if (ce !== "the_same")
+    return zt({ on: "root_at_layout_read", folderRead: ce });
+  let Ee =
+      V?.kind === "read" && V.layout.checkout === "linked"
+        ? KQt(V.layout.commonDir)
+        : V?.kind === "tampered" && An(V.gitDir)
+          ? KQt(Ve(Ve(V.gitDir)))
+          : null,
+    re = Ee === null ? [] : Klr(Ee),
+    Y = M([...R, ...re]),
+    ue = R[0] !== void 0 ? sd(R[0]) : re[0] !== void 0 ? dd(re[0]) : null,
+    xe = p && ue === null ? Ots(E) : null,
+    me =
+      xe !== null
+        ? `${Br(xe, E)} and this checkout is inside it, so a Claude Code session started there can write this checkout\u2019s git files`
+        : p && ue === null && Ee !== null
+          ? ad(Ee)
+          : null,
+    we = V?.kind === "read" ? V.layout.worktreeConfig : void 0,
+    De = h || ue !== null || me !== null || we !== void 0;
+  if (V?.kind === "tampered") {
+    t(`[gitBundle] Refusing to bundle: misplaced ${V.misplaced}`);
+    let G = cd(V.misplaced),
+      J = G === null ? "git_dir_tampered" : `unsupported_${G}`,
+      te = V.misplaced === "git_file" ? await Sd(c) : null,
+      le =
+        G === null || h || (!y && wo(V))
+          ? { handedBack: !1, refusedAs: V, notThePreviousWay: "" }
+          : y
+            ? await rd(E, V, ue, me)
+            : { handedBack: !0 },
+      X = le.handedBack,
+      Be = X && y ? Qi({ workTree: c }) : null;
+    if (Be !== null)
+      return (
+        a("tengu_ccr_bundle_upload", {
+          ..._,
+          outcome: S("admin_dir_failed"),
+          steering: u(Be.kind),
+          enclosed: Y.length > 0,
+        }),
+        m("teleport_git_bundle_upload", "admin_dir_failed"),
+        { success: !1, error: br(Be), failReason: "refused" }
+      );
+    let ie = le.handedBack ? V : le.refusedAs;
+    if (
+      (a("tengu_ccr_bundle_upload", {
+        ..._,
+        outcome: u(J),
+        tampered_on: u(ie.misplaced),
+        ...(ie.unexamined && { unexamined: !0 }),
+        ...(ie.keptBy !== void 0 && { refs_kept_by: u(ie.keptBy) }),
+        ...(ie.writable !== void 0 && { writable_config: u(ie.writable) }),
+        ...(ie.includedBy !== void 0 && { included_by: u(ie.includedBy) }),
+        ...(ie.detail !== void 0 && { worktree_check: u(ie.detail) }),
+        ...(!le.handedBack &&
+          le.screened !== void 0 && { unlisted_config: u(le.screened) }),
+        ...(!le.handedBack &&
+          le.belowHomeCheckout === !0 && { below_home_checkout: !0 }),
+        ...(G !== null && {
+          fallback_eligible: X,
+          ...(!h && { enclosed: Y.length > 0 }),
+        }),
+        ...(te !== null && { git_file_kind: u(te) }),
+      }),
+      le.handedBack && G !== null)
+    )
+      return { ...hd(G, io(oo(V))), ...(te !== null && { gitFileKind: te }) };
+    return (
+      m(
+        "teleport_git_bundle_upload",
+        ie.misplaced === "included_config" && ie.writable !== void 0
+          ? `${J}_${ie.writable}${ie.includedBy === void 0 ? "" : `_by_${ie.includedBy}`}`
+          : ie.misplaced === "linked_worktree" && ie.detail !== void 0
+            ? `${J}_${ie.detail}`
+            : J,
+      ),
+      {
+        success: !1,
+        error:
+          io({ ...oo(ie), ...(Cr(ie) && { dotGitEntry: await Ro(E) }) }) +
+          (le.handedBack || !y || G === null || ie.unexamined
+            ? ""
+            : Wt(le.notThePreviousWay)),
+        failReason: "git_dir_tampered",
+      }
+    );
+  }
+  if (V?.kind === "failed") {
+    if (
+      (t(
+        `[gitBundle] could not read the checkout's git layout: ${V.detail.slice(0, 200)}`,
+      ),
+      V.why === "changed_under_hold")
+    )
+      return zt({ on: "changed_under_hold", unopened: V.unopened });
+    if (V.why === "settings_unreadable")
+      return (
+        a("tengu_ccr_bundle_upload", {
+          ..._,
+          outcome: S("admin_dir_failed"),
+          steering: S("unreadable"),
+        }),
+        m("teleport_git_bundle_upload", "admin_dir_failed"),
+        {
+          success: !1,
+          error: br({ kind: "unreadable" }),
+          failReason: "refused",
+        }
+      );
+    let G = V.why === "git_not_found",
+      J = V.why === "changed_under_read",
+      te = G ? "git_not_on_path" : (V.cause ?? "wip_unreadable");
+    if (
+      (a("tengu_ccr_bundle_upload", {
+        ..._,
+        outcome: u(te),
+        ...(J && { changed_under_read: !0 }),
+        ...(G && Khi() && { git_script_wrapper_only: !0 }),
+      }),
+      m("teleport_git_bundle_upload", te),
+      V.cause !== void 0)
+    )
+      return { success: !1, error: To[V.cause], failReason: "git_error" };
+    return G
+      ? h
+        ? {
+            success: !1,
+            error: `Not uploading this working tree: git was not found on the PATH this process was started with once the directories a cloud session can write here were left out (those inside this checkout or a checkout enclosing it, such as a worktree\u2019s main checkout; those below your home directory when it is, or lies inside, a git checkout${od(E)}; a session temp directory; or one whose git links into them). Install git outside those, or put that directory on PATH, then retry.${qhi()} ${Vhi}`,
+            failReason: "refused",
+          }
+        : {
+            success: !1,
+            error: `git was not found on the PATH this process was started with, so nothing was uploaded. Install git, or put its directory on PATH, then retry.${qhi()}`,
+            failReason: "git_error",
+          }
+      : J
+        ? {
+            success: !1,
+            error:
+              "This linked worktree\u2019s git files, in its repository\u2019s .git directory, changed while they were being read (removed, moved or replaced meanwhile), so nothing was uploaded. Retry; if it keeps happening, check what else is changing that .git directory.",
+            failReason: "git_error",
+          }
+        : {
+            success: !1,
+            error:
+              "Could not read where git keeps this checkout, so nothing was uploaded. Run `git rev-parse --git-dir --show-toplevel` here (it changes nothing) to see what git says, then retry.",
+            failReason: "git_error",
+          };
+  }
+  let q = V?.layout;
+  if (q !== void 0 && !T9a(q) && zhi(Ez(void 0)) === null)
+    return (
+      a("tengu_ccr_bundle_upload", {
+        ..._,
+        outcome: S("ambiguous_filter_driver"),
+      }),
+      m("teleport_git_bundle_upload", "ambiguous_filter_driver"),
+      {
+        success: !1,
+        error:
+          'Not uploading this working tree: your git configuration defines a filter driver named "unset" or "unspecified" (a file your configuration includes counts too, even one included only for other repositories), and git reports files that use such a driver as having no filter, so they would be uploaded as they are on disk, without the filter. Nothing was uploaded. Rename the driver in your git configuration, and in any attributes file that uses it, then retry.',
+        failReason: "refused",
+      }
+    );
+  let rt = q?.checkout === "linked",
+    yt = q ? await zlr(q, T) : null;
+  if (yt !== null) return zt({ on: "mid_build", fault: yt });
+  let Pe = q !== void 0 && (await Id(c, q, F, D));
+  if (p && F?.aborted) return se("promisor_probe");
+  if (Pe)
+    t(
+      "[gitBundle] partial clone \u2014 bundling a snapshot of the working tree, without history",
+    );
+  let Q = De && q !== void 0 ? Qi(q) : null;
+  if (Q !== null)
+    return (
+      a("tengu_ccr_bundle_upload", {
+        ..._,
+        outcome: S("admin_dir_failed"),
+        steering: u(Q.kind),
+        steered_by: fe(
+          Q.kind === "unreadable"
+            ? void 0
+            : KEi.find((G) => G === Q.name.toUpperCase()),
+        ),
+      }),
+      m("teleport_git_bundle_upload", "admin_dir_failed"),
+      { success: !1, error: br(Q), failReason: "refused" }
+    );
+  let Te = p || n?.refuseCredentialNamedInStash === !0,
+    Je = Te ? iue() : Cp();
+  await using ae = q !== void 0 ? await A9a(c, q, F, D, "own") : void 0;
+  if (ae?.kind === "failed") {
+    if (F?.aborted) return se("admin_dir");
+    if (
+      (t(
+        `[gitBundle] could not set up the private git dir: ${ae.detail.slice(0, 200)}`,
+      ),
+      ae.cause === "attribute_source")
+    ) {
+      let { kind: le } = ae.source;
+      return (
+        a("tengu_ccr_bundle_upload", {
+          ..._,
+          outcome: S("attribute_source_unread"),
+          attribute_source: u(le),
+          linked_worktree: rt,
+        }),
+        m("teleport_git_bundle_upload", "attribute_source_unread"),
+        { success: !1, error: ud(ae.source), failReason: "refused" }
+      );
+    }
+    (a("tengu_ccr_bundle_upload", {
+      ..._,
+      outcome: S("admin_dir_failed"),
+      linked_worktree: rt,
+      admin_dir_reason: u(ae.reason),
+      admin_dir_cause: u(ae.cause),
+      ...(!h && { enclosed: Y.length > 0 }),
+    }),
+      m("teleport_git_bundle_upload", "admin_dir_failed"));
+    let G = Wl(Kn(ae.detail), Kt),
+      J = !y
+        ? ""
+        : ue !== null
+          ? Wt(ue)
+          : we === "extension"
+            ? Wt(
+                "its repository has per-worktree configuration switched on (extensions.worktreeConfig, which git sparse-checkout sets)",
+              )
+            : we === "inert"
+              ? Wt(
+                  "a per-worktree configuration file (config.worktree) stands in its administrative entry",
+                )
+              : rt
+                ? Wt(
+                    "a linked working tree is uploaded under that private directory only",
+                  )
+                : "";
+    return {
+      success: !1,
+      error:
+        ae.cause === "symbolic_head"
+          ? `Not uploading this working tree: ${G}. Nothing was uploaded.${Zi.symbolic_head}`
+          : ae.cause === "placement"
+            ? `Not uploading this working tree this way: the private git directory the upload must trust would stand where a cloud session can write \u2014 ${G}. Nothing was uploaded; retry once that is changed.`
+            : ae.cause === "home"
+              ? `Could not prepare a private git directory for the upload (${G}), so nothing was uploaded. It is kept under your configuration home: check that ${_e(ae.home)} is a writable directory of yours, and that ${_e(dt(ae.home, "seed-admin"))}, if it exists, is a directory only you can write. Look at it first: ls -ld, with no / after the name (tab completion adds one, and with it a link to a folder shows as a plain folder). A directory there holds scratch only and can be removed (rm -r, again with no /). A link or a file there is removed by its name (rm, with no -r and no / after the name). Then retry.${J}`
+              : `Could not prepare a private git directory for the upload (${G}), so nothing was uploaded. The upload builds from private copies of this checkout\u2019s HEAD, index and refs, and copies them only when they are ordinary files (no links, one name each).${Zi[ae.cause]}${J}`,
+      failReason: "refused",
+    };
+  }
+  let bt = (G) => {
+      let J = q === void 0 ? void 0 : P9a(q, D.screenMemo);
+      if (J === void 0) return null;
+      return (
+        a("tengu_ccr_bundle_upload", {
+          ..._,
+          outcome: S("config_level_not_read"),
+          config_level: u(J),
+          config_level_asked: u(G),
+        }),
+        m("teleport_git_bundle_upload", "config_level_not_read"),
+        {
+          success: !1,
+          error: `Not uploading this working tree: ${J} names a git configuration file that a Claude Code session could change, so the git that this upload runs does not read it, and a file git would change before storing it (to encrypt it, for example) could be uploaded as it is on disk. Move its settings into ${J === "GIT_CONFIG_GLOBAL" ? "~/.gitconfig" : "git\u2019s default system file"} and remove ${J} from your shell or your Claude Code settings; or keep the file outside this checkout, any checkout around it or around your home directory, Claude Code\u2019s temp folder, and any folder that settings open to sessions. Then start Claude Code again.`,
+          failReason: "refused",
+        }
+      );
+    },
+    Ze = bt("before_build");
+  if (Ze !== null) return Ze;
+  if (q !== void 0 && ae?.kind === "made")
+    q = { ...q, adminDir: ae.path, borrowedObjects: ae.borrowedObjects };
+  let Bt = q ? await zlr(q, T) : null;
+  if (Bt !== null) return zt({ on: "mid_build", fault: Bt });
+  if (!p) {
+    let G = await Lk(c, ["for-each-ref", "--format=%(refname)", "refs/seed/"], {
+      hardened: p,
+      probes: D,
+    });
+    if (G.code !== 0)
+      t(
+        `[gitBundle] could not list refs/seed/ (${G.code}), so private refs a killed build left are not swept this run (the two fixed names still are): ${pt(G.stderr, p)}`,
+      );
+    let J = M([
+      uwn,
+      fwn,
+      ...nAa(
+        G.code === 0
+          ? G.stdout
+              .split(
+                `
+`,
+              )
+              .filter((te) => te !== "")
+          : [],
+      ),
+    ]);
+    for (let te of J) {
+      let le = await vn(c, ["-d", te], {
+        hardened: p,
+        layout: void 0,
+        probes: D,
+      });
+      if (le.code !== 0)
+        t(
+          `[gitBundle] could not sweep a stale seed ref: ${le.stderr.slice(0, 200)}`,
+        );
+    }
+  }
+  let _t = await Lk(c, ["rev-parse", "--verify", "--quiet", "HEAD"], {
+      hardened: p,
+      layout: q,
+      probes: D,
+      ...(p && { signal: F }),
+    }),
+    At = _t.code === 0,
+    Xt = _t.exitCode === 1,
+    qt = _t.exitCode === void 0 && _t.stderr === "",
+    Ge = await Lk(
+      c,
+      ["for-each-ref", "--count=1", "refs/heads/", "refs/tags/"],
+      { hardened: p, layout: q, probes: D, ...(p && { signal: F }) },
+    );
+  if (p && F?.aborted) return se("ref_probe");
+  if (Ge.code === 0 && Ge.stdout.trim() === "" && !At)
+    return (
+      a("tengu_ccr_bundle_upload", {
+        ..._,
+        outcome: S("empty_repo"),
+        current_branch_only: o,
+      }),
+      m("teleport_git_bundle_upload", "empty_repo"),
+      {
+        success: !1,
+        error:
+          "Repository has no local branch, tag, or checkout to seed from yet",
+        advice: Od,
+        failReason: "empty_repo",
+      }
+    );
+  let je =
+    Xt && !o
+      ? await (async () => {
+          let G = {
+              hardened: p,
+              layout: q,
+              probes: D,
+              signal: F,
+              ...(!p && {
+                env: {
+                  ...KDt,
+                  GIT_NO_LAZY_FETCH: "1",
+                  ...C_t(n?.pinnedIndexFile),
+                },
+              }),
+            },
+            J = p ? [] : Wve,
+            te = await Lk(c, [...J, "hash-object", "-t", "tree", "--stdin"], {
+              ...G,
+              input: "",
+            }),
+            le = await Lk(
+              c,
+              [
+                ...J,
+                "for-each-ref",
+                `--count=${yr + 1}`,
+                "--sort=-creatordate",
+                "--format=%(if)%(*objecttype)%(then)%(*objecttype)%(else)%(objecttype)%(end) %(objectname)",
+                "refs/heads/",
+                "refs/tags/",
+              ],
+              G,
+            ),
+            X = async (oe) => {
+              let P = await Lk(c, [...J, ...oe], G);
+              return P.exitCode === 1
+                ? !0
+                : P.exitCode === 0 || P.code === 0
+                  ? !1
+                  : null;
+            },
+            Be = (oe) =>
+              X([
+                "diff-index",
+                "--cached",
+                "--quiet",
+                "--ita-invisible-in-index",
+                oe,
+                "--",
+              ]),
+            ie =
+              le.code === 0
+                ? le.stdout
+                    .split(
+                      `
+`,
+                    )
+                    .flatMap((oe) => {
+                      let [P, W] = oe.split(" ");
+                      return P === "commit" && W !== void 0 ? [W] : [];
+                    })
+                : null,
+            Ke = te.code === 0 ? await Be(te.stdout.trim()) : null,
+            lt = async (oe) => {
+              if (oe.length === 0) return !1;
+              let P = await Be(`${oe[0]}^{tree}`);
+              return P === null ? null : P ? lt(oe.slice(1)) : !0;
+            };
+          if (Ke === !1) return "empty";
+          if (Ke === null || ie === null) return "unread";
+          let Ie = await lt(ie.slice(0, yr));
+          if (!Ie)
+            return Ie === null
+              ? "unread"
+              : ie.length > yr
+                ? "over_cap"
+                : "off_branch";
+          let Xe = await X([
+            "--no-optional-locks",
+            "diff-files",
+            "--quiet",
+            Vw,
+          ]);
+          return Xe === null
+            ? "worktree_unread"
+            : Xe
+              ? "unstaged"
+              : "on_branch";
+        })()
+      : void 0;
+  if (F?.aborted) return se("ref_probe");
+  if (
+    je === "off_branch" ||
+    je === "over_cap" ||
+    je === "unstaged" ||
+    je === "unread" ||
+    je === "worktree_unread"
+  )
+    return (
+      a("tengu_ccr_bundle_upload", {
+        ..._,
+        outcome: S("empty_repo"),
+        current_branch_only: o,
+        unborn_staged: je !== "unstaged" && je !== "worktree_unread",
+        unborn_index: u(je),
+      }),
+      m("teleport_git_bundle_upload", "empty_repo"),
+      {
+        success: !1,
+        error: "The current branch has no commits yet",
+        advice: Yt,
+        failReason: "empty_repo",
+      }
+    );
+  let We = 0,
+    L = q
+      ? await Di(c, q, {
+          signal: F,
+          probes: D,
+          onNamesWindowsCannotHold: (G) => {
+            We = G;
+          },
+          onOpenRefusedAtTheLook: (G) => {
+            a("tengu_ccr_bundle_look_open_refused", { files: G });
+          },
+          leaveOutUncommittedCredentialFiles: !0,
+          alsoLeaveOut: await ao(n?.withholdFor, c, q.workTree),
+          neverRead: await ao(n?.neverReadFor, c, q.workTree),
+          maxStagedBytes: 2 * Er(),
+        })
+      : await Pi(c, At || qt, F, n?.pinnedIndexFile),
+    ke = We > 0 ? { ..._, names_windows_cannot_hold: We } : _;
+  if (F?.aborted) return se("wip_stash");
+  if (
+    L.kind === "created" &&
+    q === void 0 &&
+    n?.refuseCredentialNamedInStash === !0
+  ) {
+    let G = await Ed(c, L.commit, F, await n?.withholdFor?.(c));
+    if (F?.aborted) return se("wip_stash");
+    if (G === null || G.length > 0)
+      return (
+        a("tengu_ccr_bundle_upload", {
+          ...ke,
+          outcome: S("uncommitted_credentials"),
+          refused_paths: G?.length ?? 0,
+          refused_unexamined: B(G ?? [], ({ why: J }) => J === "unexamined"),
+          refused_on: S("stash_trees"),
+        }),
+        m("teleport_git_bundle_upload", "uncommitted_credentials"),
+        {
+          success: !1,
+          error:
+            G === null
+              ? "Not uploading this working tree: the uncommitted changes just captured could not be listed back, so they cannot be checked for files that must stay on this machine \u2014 retry."
+              : xr(G, n?.withholdFor !== void 0),
+          failReason: "uncommitted_credentials",
+        }
+      );
+  }
+  if (L.kind === "refused")
+    return (
+      t(
+        `[gitBundle] Refusing to stash: ${L.refused.length} forged path(s), or credential-named path(s) that reached a built tree`,
+      ),
+      a("tengu_ccr_bundle_upload", {
+        ...ke,
+        outcome: S("uncommitted_credentials"),
+        credential_paths: L.refused.length,
+        refused_on: u(L.decidedOn),
+      }),
+      m("teleport_git_bundle_upload", "uncommitted_credentials"),
+      {
+        success: !1,
+        error: xr(L.refused, n?.withholdFor !== void 0),
+        failReason: "uncommitted_credentials",
+      }
+    );
+  if (L.kind === "failed" && L.step === "path-encoding") {
+    (a("tengu_ccr_bundle_upload", { ...ke, outcome: S("wip_path_encoding") }),
+      m("teleport_git_bundle_upload", "wip_path_encoding"));
+    let G =
+      "A changed file in this checkout has a name \u2014 or a changed symbolic link a target \u2014 that is not valid UTF-8, which this upload cannot carry yet. Commit or rename it, then retry.";
+    return { success: !1, error: G, advice: G, failReason: "stash_failed" };
+  }
+  if (
+    L.kind === "failed" &&
+    (L.step === "verify" || L.step === "refused-name" || L.step === "rewritten")
+  )
+    return (
+      t(
+        `[gitBundle] the checkout's git directory holds what git never wrote (${L.step}): ${L.detail.slice(0, 200)}`,
+      ),
+      a("tengu_ccr_bundle_upload", {
+        ...ke,
+        outcome: S("wip_tampered"),
+        wip_step: u(L.step),
+      }),
+      m("teleport_git_bundle_upload", "wip_tampered"),
+      {
+        success: !1,
+        error:
+          L.step === "verify"
+            ? "Not uploading this working tree: its git directory holds an object that is not what its id names \u2014 something other than git wrote it there (`git fsck` usually names it). Nothing was uploaded; repair or re-clone the repository, then retry."
+            : L.step === "rewritten"
+              ? "Not uploading this working tree: the scratch copy of the index this upload works in was changed by another process while the upload ran. Nothing was uploaded; retry, and if it recurs check what else is running in this checkout."
+              : `Not uploading this working tree: its git index names a path git itself refuses to write (a ".git"-like or "git~1" name) \u2014 something other than git put it there. ${wt}`,
+        failReason: "git_dir_tampered",
+      }
+    );
+  if (L.kind === "failed" && L.step === "malformed-tree") {
+    (t(
+      `[gitBundle] a committed tree is stored in a form git no longer writes: ${L.detail.slice(0, 200)}`,
+    ),
+      a("tengu_ccr_bundle_upload", { ...ke, outcome: S("wip_legacy_tree") }),
+      m("teleport_git_bundle_upload", "wip_legacy_tree"));
+    let G = `the committed tree for ${Fi(L.detail)} is stored in a form git reads but does not itself write (some old tools wrote trees this way: entries out of order, or an unknown file mode). Commit a change to any file ${L.detail === "" ? "at the top of the checkout" : "in that directory"} so git rewrites the tree, then retry.`;
+    return {
+      success: !1,
+      error: `Not uploading this working tree: ${G}`,
+      advice: G,
+      failReason: "stash_failed",
+    };
+  }
+  if (L.kind === "failed" && Va.includes(L.step))
+    return (
+      t(
+        `[gitBundle] could not read the checkout's uncommitted state (git ${L.step}): ${L.detail.slice(0, 200)}`,
+      ),
+      a("tengu_ccr_bundle_upload", { ...ke, outcome: S("wip_unreadable") }),
+      m("teleport_git_bundle_upload", "wip_unreadable"),
+      {
+        success: !1,
+        error:
+          "Could not read the uncommitted changes of this checkout with git before uploading them (HEAD or the index is not in a state git reports on cleanly), so nothing was uploaded. Check `git status` here, then retry.",
+        failReason: "git_error",
+      }
+    );
+  if (
+    L.kind === "failed" &&
+    (L.step === "write-tree" || L.step === "read-tree") &&
+    Pe &&
+    L.said === "object_missing"
+  )
+    return (
+      a("tengu_ccr_bundle_upload", {
+        ...ke,
+        outcome: S("stash_failed"),
+        wip_step: u(L.step),
+        current_branch_only: o,
+        partial_clone: !0,
+      }),
+      m("teleport_git_bundle_upload", "stash_failed"),
+      { success: !1, error: co, failReason: "git_error" }
+    );
+  if (L.kind === "failed") {
+    (t(
+      `[gitBundle] could not capture uncommitted changes (git ${L.step}): ${L.detail.slice(0, 200)}`,
+    ),
+      a("tengu_ccr_bundle_upload", {
+        ...ke,
+        outcome: S("stash_failed"),
+        wip_step: u(L.step),
+        ...(L.silent && { wip_silent: !0 }),
+        ...(L.said !== void 0 && { git_said: u(L.said) }),
+        current_branch_only: o,
+      }),
+      m("teleport_git_bundle_upload", "stash_failed"));
+    let G = p ? Wl(Kn(L.detail), Kt) : L.detail,
+      J =
+        L.said === "unmerged"
+          ? "This checkout has an unfinished merge or rebase (git status lists the conflicted files): resolve or abort it here first, or start the session from a branch with --ref."
+          : L.said === "index_locked"
+            ? "Another git process is running in this checkout; retry in a moment."
+            : L.said === "object_missing"
+              ? "Retry; if it stops here again, run `git fsck` in this checkout."
+              : void 0,
+      te = !p
+        ? L.silent
+          ? "Retry; if it stops here again, run `git --version` here to see whether git starts."
+          : (J ?? Yt)
+        : L.step === "scratch-index"
+          ? "A scratch copy of the index could not be written (next to .git/index, under ~/.claude/seed-admin, or under the temporary directory); check the disk and permissions there, then retry."
+          : L.step === "stage"
+            ? "A changed file could not be copied for upload as it stands (too large in total, still being written, or not a plain file); commit or stash such files, then retry. If nothing here is really uncommitted (a copied or restored checkout), run git status once so git refreshes its index, then retry."
+            : L.step === "check-attr"
+              ? L.detail === hr
+                ? We > 0
+                  ? so(We)
+                  : "HEAD's .gitattributes rules could not be read reliably: retry first. If it stops here again, save each committed .gitattributes above a changed file as plain UTF-8 text with no byte-order mark (one saved as UTF-16 stops it, for example, and so does one that git lists as a submodule) and commit that; or commit all your changes; or check the repository's objects (git fsck)."
+                : "The attributes in force could not be vouched for: in .git/info/attributes, move any filter rules, attribute macros or quoted patterns into a .gitattributes file and shorten any line of 2,048 bytes or more (or remove .git/info/attributes), or commit your changes first, then retry."
+              : (J ?? (We > 0 ? so(We) : Yt));
+    return {
+      success: !1,
+      error: `Could not capture uncommitted changes (git ${L.step}: ${G}). ${te}`,
+      advice: te,
+      failReason: "stash_failed",
+    };
+  }
+  let ze = L.kind === "created",
+    Fe =
+      L.kind === "created" || L.kind === "none"
+        ? L.leftOut.map(({ path: G }) => G).sort()
+        : [],
+    Vt =
+      L.kind === "created" || L.kind === "none"
+        ? B(L.leftOut, ({ why: G }) => G === "unstable")
+        : 0,
+    Qe = L.kind === "created" ? [...L.deletedUnstaged].sort() : [];
+  if (Fe.length > 0)
+    t(
+      `[gitBundle] ${Fe.length} uncommitted path(s) kept out of the WIP commit (credential-named, hard-linked, filtered, or changed while read)`,
+    );
+  if (ze) {
+    t(`[gitBundle] Captured WIP as stash ${L.commit}`);
+    let G = q ? await zlr(q, T) : null;
+    if (G !== null) return zt({ on: "mid_build", fault: G });
+    let J = await vn(c, [v.stash, L.commit], {
+      hardened: p,
+      layout: q,
+      probes: D,
+      ...(p && { signal: F }),
+    });
+    if (J.code !== 0)
+      return F?.aborted
+        ? se("seed_refs")
+        : $d(J.stderr, q?.adminDir, ke, {
+            held_ref: S("stash"),
+            git_exit_code: J.code,
+          });
+  }
+  let kt = null,
+    Ye = Te ? "" : rYe("ccr-seed", ".bundle");
+  try {
+    if (Te) {
+      try {
+        kt = await Wr("claude-seed", Je);
+      } catch (oe) {
+        return (
+          t(`[gitBundle] no private bundle directory: ${d(oe)}`),
+          a("tengu_ccr_bundle_upload", {
+            ...ke,
+            outcome: S("git_error"),
+            current_branch_only: o,
+          }),
+          m("teleport_git_bundle_upload", "git_error"),
+          {
+            success: !1,
+            error: "Could not create a private directory for the bundle.",
+            failReason: "git_error",
+          }
+        );
+      }
+      Ye = kt.path;
+    }
+    let G = `${Ye}.relabelled`,
+      J = Er(),
+      te = await nd(c, F, q ? { layout: q } : null, D);
+    if (te !== "not_shallow") t(`[gitBundle] shallow repository: ${td[te]}`);
+    let le = Date.now(),
+      X =
+        te === "unborn_cut"
+          ? {
+              ok: !1,
+              error:
+                "The current branch has no commits yet, and the other branches of this shallow clone are cut short, so nothing here can be bundled; commit first, or deepen the clone (git fetch --unshallow)",
+              failReason: "empty_repo",
+            }
+          : await mo(c, Ye, {
+              maxBytes: J,
+              seedRefs: v,
+              relabelledPath: G,
+              hasStash: ze,
+              ...(L.kind === "created" && { stashCommit: L.commit }),
+              leftOutCount: Fe.length,
+              withheldByRules: n?.withholdFor !== void 0,
+              currentBranchOnly: o,
+              headResolves: At,
+              hardened: p,
+              layout: q,
+              signal: F,
+              probes: D,
+              baseRef: n?.baseRef,
+              forceScope: Pe || te === "cut" ? "squashed" : n?.forceScope,
+              partialClone: Pe,
+              skipAllRefs: te === "complete" || te === "cut",
+              bindJudgedStash: n?.refuseCredentialNamedInStash === !0,
+            });
+    if (!X.ok) {
+      if (p && F?.aborted) return se("bundle_create");
+      t(`[gitBundle] ${X.error}`);
+      let oe = H?.aborted === !0,
+        P = X.heldSeedRef
+          ? "seed_ref_held"
+          : X.refsChanged
+            ? "bundle_refs_changed"
+            : (X.gitRefused ?? X.failReason),
+        W = P === "git_dir_tampered" && q !== void 0 ? await zlr(q, T) : null,
+        ne = W ?? P;
+      if (
+        (a("tengu_ccr_bundle_upload", {
+          ...ke,
+          outcome: oe ? S("aborted") : u(ne),
+          max_bytes: J,
+          size_bytes: X.sizeBytes,
+          current_branch_only: o,
+          ...(X.failReason === "git_dir_tampered" && {
+            tampered_on: S("mid_build"),
+          }),
+          ...(X.heldSeedRef !== void 0 && {
+            held_ref: S("root"),
+            git_exit_code: X.heldSeedRef.exitCode,
+          }),
+          ...(X.promisorFallback && { promisor_fallback: !0 }),
+          ...(X.failReason === "git_error" &&
+            Khi() && { git_script_wrapper_only: !0 }),
+          shallow_repository: te !== "not_shallow",
+          shallow_head: te === "cut",
+          build_ms: Date.now() - le,
+        }),
+        !oe)
+      )
+        m("teleport_git_bundle_upload", ne);
+      return {
+        success: !1,
+        error: W === null ? X.error : xo[W],
+        ...(X.failReason === "empty_repo" &&
+          te !== "unborn_cut" && { advice: Yt }),
+        failReason: X.failReason,
+      };
+    }
+    if (n?.signal?.aborted)
+      return (
+        a("tengu_ccr_bundle_upload", {
+          ...ke,
+          outcome: S("aborted"),
+          max_bytes: J,
+          current_branch_only: o,
+          build_ms: Date.now() - le,
+        }),
+        { success: !1, error: "Bundle cancelled" }
+      );
+    (a("tengu_ccr_bundle_built", {
+      scope: u(X.scope),
+      size_bytes: X.size,
+      has_wip: ze,
+      current_branch_only: o,
+      build_ms: Date.now() - le,
+    }),
+      n?.onBundled?.({ sizeBytes: X.size, scope: X.scope }));
+    let Be, ie;
+    if (Te) {
+      let oe = await zr(X.path, J);
+      if (oe.kind !== "read") {
+        let P =
+          oe.kind === "too_large"
+            ? `bundle grew to ${oe.sizeBytes} bytes`
+            : oe.detail;
+        return (
+          t(`[gitBundle] bundle unreadable after create: ${P}`),
+          a("tengu_ccr_bundle_upload", {
+            ...ke,
+            outcome: S("git_error"),
+            max_bytes: J,
+            current_branch_only: o,
+          }),
+          m("teleport_git_bundle_upload", "git_error"),
+          {
+            success: !1,
+            error: `The bundle could not be read back for upload (${Wl(Kn(P), 200)}).`,
+            failReason: "git_error",
+          }
+        );
+      }
+      Be = oe.content;
+    }
+    let Ke = bt("before_upload");
+    if (Ke !== null) return Ke;
+    if (Be !== void 0) {
+      let oe = Date.now(),
+        P = await Xr(Be, { scratchRoot: Ve(X.path) }, (W, ne) =>
+          Lk(c, W, { hardened: p, layout: q, probes: D, signal: H, ...ne }),
+        );
+      if (((ie = Date.now() - oe), !P.ok)) {
+        if (H?.aborted) return se("bundle_check");
+        t(`[gitBundle] the bundle failed its check (${P.kind}): ${P.detail}`);
+        let W = Bd(P.kind, Wl(Kn(P.detail), 200));
+        return (
+          a("tengu_ccr_bundle_upload", {
+            ...ke,
+            outcome: u(W.outcome),
+            check_failure: u(P.kind),
+            check_ms: ie,
+            size_bytes: X.size,
+            scope: u(X.scope),
+            current_branch_only: o,
+            has_wip: ze,
+            ...(X.promisorFallback && { promisor_fallback: !0 }),
+            shallow_repository: te !== "not_shallow",
+            shallow_head: te === "cut",
+          }),
+          m("teleport_git_bundle_upload", W.outcome),
+          { success: !1, error: W.error, failReason: W.failReason }
+        );
+      }
+    }
+    if (!p && n?.refuseCredentialNamedInStash === !0) {
+      let oe = await ld(c);
+      if (oe !== null)
+        return (
+          a("tengu_ccr_bundle_upload", {
+            ...ke,
+            outcome: S("hand_back_store_planted"),
+            tampered_on: u(oe),
+          }),
+          m("teleport_git_bundle_upload", "hand_back_store_planted"),
+          {
+            success: !1,
+            error:
+              oe === "unreadable"
+                ? "Not uploading this working tree: its git directory could not be re-read after the capture ran, so what was packed cannot be vouched for. Inspect the checkout\u2019s .git, then retry."
+                : oe === "common_dir"
+                  ? "Not uploading this working tree: a commondir file appeared in its git directory while the upload was prepared \u2014 git writes one only in a linked working tree\u2019s entry \u2014 so what was packed cannot be vouched for. Inspect the git directory, then retry."
+                  : `Not uploading this working tree: ${oe === "borrowed_objects" ? "an objects/info/alternates file" : "a reftable directory"} appeared in its git directory while the upload was prepared, so what was packed may hold another repository\u2019s history. ${wt}`,
+            failReason: "git_dir_tampered",
+          }
+        );
+    }
+    let lt = Date.now(),
+      Ie = await Y7a(X.path, "_source_seed.bundle", e, {
+        signal: H,
+        ...(Be !== void 0 && { content: Be }),
+        expiresInSeconds: Ka,
+      }),
+      Xe = Date.now() - lt;
+    if (!Ie.success) {
+      let oe = n?.signal?.aborted === !0;
+      if (
+        (a("tengu_ccr_bundle_upload", {
+          ...ke,
+          outcome: oe ? S("aborted") : S("failed"),
+          upload_error_type: u(Ie.reason),
+          size_bytes: X.size,
+          scope: u(X.scope),
+          current_branch_only: o,
+          ...(X.promisorFallback && { promisor_fallback: !0 }),
+          shallow_repository: te !== "not_shallow",
+          shallow_head: te === "cut",
+          upload_ms: Xe,
+        }),
+        !oe)
+      )
+        m("teleport_git_bundle_upload", "upload_failed");
+      return { success: !1, error: Ie.error, failReason: "upload_failed" };
+    }
+    if (
+      (t(`[gitBundle] Uploaded ${Ie.size} bytes`),
+      a("tengu_ccr_bundle_upload", {
+        ...ke,
+        outcome: S("success"),
+        size_bytes: Ie.size,
+        scope: u(X.scope),
+        has_wip: ze,
+        current_branch_only: o,
+        ...(je !== void 0 && { unborn_index: u(je) }),
+        ...(p && {
+          credential_paths_left_out: Fe.length,
+          left_out_unstable: Vt,
+          deleted_unstaged: Qe.length,
+          partial_clone: Pe,
+          withhold_rules: n?.withholdFor !== void 0,
+          linked_worktree: q?.checkout === "linked",
+          ...(q?.workTreeRespelled && { work_tree_respelled: !0 }),
+          ...(q?.worktreeConfig === "inert" && {
+            worktree_check: S("inert_config"),
+          }),
+          private_admin_dir: q?.adminDir !== void 0,
+        }),
+        ...(X.promisorFallback && { promisor_fallback: !0 }),
+        shallow_repository: te !== "not_shallow",
+        shallow_head: te === "cut",
+        upload_ms: Xe,
+        ...(ie !== void 0 && { check_ms: ie }),
+        ...!1,
+      }),
+      X.scope === "head" && !o)
+    )
+      l("teleport_git_bundle_upload", "fallback_head");
+    else if (X.scope === "squashed")
+      l("teleport_git_bundle_upload", "fallback_squashed");
+    else f("teleport_git_bundle_upload");
+    return (
+      Jr(Vr(q)),
+      {
+        success: !0,
+        fileId: Ie.fileId,
+        bundleSizeBytes: Ie.size,
+        scope: X.scope,
+        hasWip: ze,
+        ...(p && { leftOut: Fe, ...(Qe.length > 0 && { deletedHere: Qe }) }),
+      }
+    );
+  } finally {
+    if (Ye !== "") {
+      try {
+        await mr(Ye);
+      } catch {
+        t(`[gitBundle] Could not delete ${Ye} (non-fatal)`);
+      }
+      (await mr(`${Ye}.lock`).catch(() => {}),
+        await mr(`${Ye}.relabelled`).catch(() => {}));
+    }
+    if ((await kt?.dispose(), !q || (await int(q, T))))
+      for (let G of T)
+        await vn(c, ["-d", G], { hardened: p, layout: q, probes: D });
+  }
+}
+async function Id(e, n, r, i) {
+  let o = await Lk(e, ["config", "-z", "--list"], {
+    hardened: !0,
+    layout: n,
+    signal: r,
+    probes: i,
+  });
+  if (o.code !== 0) return !0;
+  return Ir(o.stdout);
+}
+function Ir(e) {
+  return e.split("\x00").some((n) => {
+    let r = n.indexOf(`
+`),
+      i = r === -1 ? n : n.slice(0, r),
+      o = r === -1 ? "true" : n.slice(r + 1);
+    return (
+      i === "extensions.partialclone" ||
+      /^remote\..*\.partialclonefilter$/s.test(i) ||
+      (/^remote\..*\.promisor$/s.test(i) &&
+        !["false", "no", "off", "0", ""].includes(o.toLowerCase()))
+    );
+  });
+}
+function vn(e, n, r) {
+  return Lk(e, ["update-ref", "--no-deref", ...n], r);
+}
+var Od =
+    'Commit the files that you want the cloud session to see (git add <file>, then git commit -m "initial"), then retry.',
+  Yt =
+    "Commit the files that you changed by name (git add <file>, then git commit), then retry.";
+function so(e) {
+  return `${Yt} Do not run \`git add .\` or \`git commit -a\` here: this checkout tracks ${e} file ${e === 1 ? "name" : "names"} that Windows cannot hold, which git lists as deleted, and either command would record the ${e === 1 ? "deletion" : "deletions"}.`;
+}
+async function Nd(e, n) {
+  let r = await e.hold(n);
+  return r === "not_held" ? Mse(n) : r === "gone" ? null : r.id;
+}
+async function ao(e, n, r) {
+  if (e === void 0) return;
+  let i = await Promise.all((VDt(n) === r ? [n] : [n, r]).map((o) => e(o)));
+  return (o) => i.some((c) => c(o));
+}
+function zt(e) {
+  let n =
+      e.on === "mid_build"
+        ? e.fault
+        : e.on === "root_at_layout_read"
+          ? "work_tree_replaced"
+          : "git_dir_tampered",
+    r = xo[n];
+  return (
+    t(`[gitBundle] ${r}`),
+    a("tengu_ccr_bundle_upload", {
+      hardened: !0,
+      outcome: u(n),
+      tampered_on: u(e.on),
+      ...(e.on === "changed_under_hold" && { hold_unopened: e.unopened }),
+      ...(e.on === "root_at_layout_read" && { folder_read: u(e.folderRead) }),
+    }),
+    m("teleport_git_bundle_upload", n),
+    { success: !1, error: r, failReason: "git_dir_tampered" }
+  );
+}
+function $d(e, n, r, i) {
+  let o = So(e, n);
+  return (
+    a("tengu_ccr_bundle_upload", { ...r, outcome: S("seed_ref_held"), ...i }),
+    m("teleport_git_bundle_upload", "seed_ref_held"),
+    { success: !1, ...o }
+  );
+}
+function So(e, n) {
+  t(`[gitBundle] could not update a temporary seed ref: ${e.slice(0, 200)}`);
+  let r = Wl(Kn(wr(e.trim())), Kt);
+  return {
+    error:
+      n !== void 0
+        ? `Could not write a temporary ref in the private git directory that this upload builds in (${r}). Retry; if it keeps failing, check that ${_e(Ve(n))} is writable and its disk has room.`
+        : `Could not write the temporary ref this upload uses under .git/refs/seed (${r}). If another git process is running here, let it finish, then retry; if it keeps failing, check that this checkout\u2019s git directory is writable and its disk has room. If it fails even so, something that git did not put there may be in the way at .git/refs/seed. ${wt}`,
+    failReason: "git_error",
+  };
+}
+var Cn =
+  "Not uploading this working tree: its git directory changed while the upload was being prepared, holds something git itself never puts there, or could not be inspected \u2014 another git process (a background fetch or gc) may have written packs meanwhile, in which case let it finish and retry; otherwise look for a commondir or objects/info/alternates file, or a link, special or unreadable entry where its branches, tags, HEAD, the temporary refs/seed entries, their logs, or objects go (commondir, refs/heads, refs/tags, refs/seed, logs/refs/seed, logs/HEAD, objects/info, objects/pack) before retrying.";
+function mt() {
+  return { error: Cn, failReason: "git_dir_tampered" };
+}
+var kr =
+    "is not one plain file: it is a link, has a second name (a hard link, as tools that merge identical files make), is a folder or a special file, is missing where git needs it, or could not be examined. Git normally writes a plain file with one name there. Check with ls -l: a link shows an arrow (->), and the number after the permissions counts the names. If it is a plain file and that number is above 1, copy the file, move the copy over it (cp, then mv; git reads the copy the same), and retry. If it is anything else, start from a fresh clone of the repository instead (your uncommitted changes stay in this folder); where git itself writes links there (its core.preferSymlinkRefs setting), switch that setting off first.",
+  xo = {
+    work_tree_replaced:
+      "Not uploading this working tree: this folder was moved, removed or replaced while the upload was being prepared, or could not be examined. Try again; if it happens again, look for another program that moves or recreates this folder.",
+    git_dir_replaced: Cn,
+    git_dir_head_not_plain: `Not uploading this working tree: HEAD in its git directory (usually .git/HEAD) ${kr}`,
+    git_dir_packed_refs_not_plain: `Not uploading this working tree: packed-refs in its git directory (usually .git/packed-refs) ${kr}`,
+    git_dir_refs_not_plain: `Not uploading this working tree: an entry at or under refs/heads, refs/tags or refs/remotes in its git directory (in an ordinary checkout, find .git/refs -type l -o -type f -links +1 lists such entries) ${kr}`,
+    git_dir_logs_not_plain: Cn,
+    git_dir_tampered: Cn,
+    git_dir_objects_not_plain: `Not uploading this working tree: the objects folder in its git directory (usually .git/objects) holds a link, a special file, a file directly in it that has a second name (a hard link), a folder where git keeps only files (in objects/pack or in objects/00 to objects/ff), an entry whose name is not valid UTF-8, more than ${Vlr.toLocaleString("en-US")} folders directly in it, or something that could not be examined (ls -lR .git/objects shows which). ${wt}`,
+    git_dir_objects_changed:
+      "Not uploading this working tree: something wrote to objects/pack or objects/info in its git directory (usually .git) while the upload was being prepared. Usually that is another git process, such as a fetch, gc or maintenance run that an editor started. Let it finish, then retry. If it keeps happening with no git running, find out what else writes there.",
+  },
+  To = {
+    git_refused_dubious_ownership:
+      "Git will not work in this checkout because its folder, or the .git in it, belongs to another user (\u201Cdetected dubious ownership\u201D), so nothing was uploaded. That is common in containers and on mounted folders. Whether to go on is a question of whether you trust that user: git\u2019s safe.directory setting grants a folder. Run `git rev-parse --git-dir` here (it changes nothing): git\u2019s answer shows how. If that command works for you, your grant is given only through git\u2019s environment variables (GIT_CONFIG_PARAMETERS, or GIT_CONFIG_COUNT and its keys), which do not reach this upload\u2019s git: the grant has to stand in a file that git reads.",
+    git_refused_not_a_repository:
+      "Git does not recognise the .git here as a repository (\u201Cnot a git repository\u201D), so nothing was uploaded. Its HEAD, objects or refs may be missing, empty or unreadable, as after an interrupted copy. Start from a fresh clone, or from the folder that holds the real repository.",
+    git_refused_bad_config:
+      "Git cannot parse one of its configuration files (\u201Cbad config\u201D), so nothing was uploaded. Run `git rev-parse --git-dir` here (it changes nothing): its error names the file and the line, or the setting at fault. Fix that, then retry.",
+    git_refused_config_unreadable:
+      "Git cannot open one of its configuration files (\u201Cunable to access\u201D), so nothing was uploaded. Run `git rev-parse --git-dir` here (it changes nothing): its error names the file. Make that file readable for your user, or remove the include that points to it, then retry.",
+    git_refused_unknown_extension:
+      "This repository uses a git feature that the git on your PATH does not know (\u201Cunknown repository extension\u201D), so nothing was uploaded. Update git, or put a newer git first on the PATH that Claude Code is started with, then retry.",
+    git_did_not_run:
+      "The program that runs as git on your PATH started and ran no git, so nothing was uploaded. A version manager\u2019s shim (asdf\u2019s, for one) does that where no git version is set for the folder. Run `git --version` here to see what it says. Set a version, or put a real git first on the PATH that Claude Code is started with, then retry.",
+    git_did_not_run_from_outside: "",
+    git_dir_objects_folder_missing:
+      "This checkout\u2019s git directory lacks objects/info or objects/pack, so nothing was uploaded. Git makes both in every repository and works without them; a copy that skips empty folders loses them. To make them again, in an ordinary checkout, at its top level, where .git is: first look with ls -ld .git .git/objects (a link shows an arrow, ->). If either is a link, stop, since the folders would be made wherever it points, and start from a fresh clone instead. Otherwise run mkdir .git/objects/info .git/objects/pack (an error that one of them exists does no harm), then retry.",
+    launch_folder_unresolved:
+      "This folder\u2019s own path could not be resolved just now: a link on the way to it changed, or a folder above it cannot be entered. So nothing was uploaded. Retry from the folder itself, by its real path.",
+    keyed_folder_unresolved:
+      "The folder under which Claude Code keeps this worktree\u2019s trust and settings could not be resolved just now: too many files may be open, or a folder on the way to it changed. So nothing was uploaded. Retry.",
+  };
+export { U3s, PGl, eAa, OGl, IGl, MGl, HGl, DGl, LGl };

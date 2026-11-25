@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{s}from"/$bunfs/root/chunk-c203g5kd.js";import{t}from"/$bunfs/root/chunk-w578pjby.js";import{kt}from"/$bunfs/root/chunk-7fsmgfxx.js";import{Vf}from"/$bunfs/root/chunk-66srb2mf.js";import{homedir as c}from"os";import{dirname as v,join as n,resolve as C}from"path";function a(){let e=s.SHELL||"",i=c(),r=n(i,".claude");if(e.endsWith("/zsh")||e.endsWith("/zsh.exe")){let o=n(r,"completion.zsh");return{name:"zsh",rcFile:n(i,".zshrc"),cacheFile:o,completionLine:`[[ -f "${o}" ]] && source "${o}"`,shellFlag:"zsh"}}if(e.endsWith("/bash")||e.endsWith("/bash.exe")){let o=n(r,"completion.bash");return{name:"bash",rcFile:n(i,".bashrc"),cacheFile:o,completionLine:`[ -f "${o}" ] && source "${o}"`,shellFlag:"bash"}}if(e.endsWith("/fish")||e.endsWith("/fish.exe")){let o=s.XDG_CONFIG_HOME||n(i,".config"),l=n(r,"completion.fish");return{name:"fish",rcFile:n(o,"fish","config.fish"),cacheFile:l,completionLine:`[ -f "${l}" ] && source "${l}"`,shellFlag:"fish"}}return null}async function z2s(){return}function m(e){let{cmd:i,prefixArgs:r}=Vf();return kt(i,[...r,"completion",e.shellFlag,"--output",e.cacheFile])}
+export{z2s};

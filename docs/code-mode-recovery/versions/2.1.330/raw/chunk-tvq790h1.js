@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{t}from"/$bunfs/root/chunk-w578pjby.js";import{s}from"/$bunfs/root/chunk-c203g5kd.js";import{p}from"/$bunfs/root/chunk-2cbgkbm2.js";import{Kwe,fCs,FTt,pCs,Oxe}from"/$bunfs/root/chunk-mgntjepj.js";import{n,c,B}from"/$bunfs/root/chunk-adx6804h.js";B();var u=/^skill_(?:staging_|local_)?[A-Za-z0-9]{1,64}$/;function $Oi(i){return u.test(i)}var r="skill_id";function iin(i,e){let o={};if(typeof i==="string"&&$Oi(i))o.skillId=i;if(typeof e==="string"&&Oxe(e))o.pluginId=e;return o.skillId===void 0&&o.pluginId===void 0?void 0:o}var d=p(()=>c({[r]:n().regex(u).optional().catch(void 0),[FTt]:n().regex(pCs).optional().catch(void 0)})),a=262144,_=()=>{return};function YUt(){let i=s.CLAUDE_CODE_SKILL_ATTRIBUTION;if(i===void 0)return _;let e=fCs("CLAUDE_CODE_SKILL_ATTRIBUTION",i,a,f);return(o)=>e.get(Kwe(o))}function f(i){let e=d().safeParse(i);if(!e.success){t("Ignoring a CLAUDE_CODE_SKILL_ATTRIBUTION entry: not a JSON object");return}let o=iin(e.data[r],e.data[FTt]);if(typeof i==="object"&&i!==null){for(let[l,S]of[[r,o?.skillId],[FTt,o?.pluginId]])if(l in i&&S===void 0)t(`Ignoring a CLAUDE_CODE_SKILL_ATTRIBUTION entry field: invalid ${l}`)}return o}
+export{$Oi,iin,YUt};

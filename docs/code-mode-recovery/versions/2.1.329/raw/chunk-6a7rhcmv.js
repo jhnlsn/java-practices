@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+var k4s="So far, how have you used AI for coding?",E4s={new:"Not much yet",chat:"Autocomplete or chat",agents:"Agents that make changes for me"},v4s="How do you want to work with Claude at first?",t={own:{label:"Let Claude work on its own",description:"Works through your task and shows you what changed"},check:{label:"Check in on bigger changes",description:"Asks Claude to share its plan and wait on multi-file or risky work"},step:{label:"Review each step",description:"Asks Claude to stop after each step and show you the change"}};function T4s(o){return(o==="new"?["step","check","own"]:["own","check","step"]).map((e)=>({pace:e,...t[e],...o==="new"&&e==="own"&&{description:"Works through your task, with a few extra check-ins at first"}}))}var C4s={checked_in:"That's 5 sessions. Claude will check in less from now on.",explained_only:"That's 5 sessions. Claude will explain less from now on."},A4s={checked_in:"Keep check-ins",explained_only:"Keep explanations"},R4s="OK",PTa="How Claude works with you at first",OTa="Turn off",ITa="You can't turn this on again.";
+export{k4s,E4s,v4s,T4s,C4s,A4s,R4s,PTa,OTa,ITa};

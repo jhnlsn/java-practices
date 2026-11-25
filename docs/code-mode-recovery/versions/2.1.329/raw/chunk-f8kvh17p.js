@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{Sl}from"/$bunfs/root/chunk-kgzzwvwc.js";import{bt}from"/$bunfs/root/chunk-0yzsvyn8.js";import{QH}from"/$bunfs/root/chunk-pxy9yt8m.js";import{ec,Ot,Zt,b}from"/$bunfs/root/chunk-aq3ms068.js";import{eS}from"/$bunfs/root/chunk-1mpmvcta.js";import{Ie}from"/$bunfs/root/chunk-b03afx74.js";function wXn(){return QH("autoContinueAtUsageLimit")[0]}function mzr(e){return wXn()??e==="absent"}var i="tengu_marble_heron";function a2o(){let e=t();return o(e)?e:{}}function Gft(){let e=t();return r(o(e)?e.enabled:e)}function iwn(){return Sl()&&!Zt()&&!bt()}function kCa(){return iwn()&&Gft()}function hzr(){return r(a2o().autoArm)}function t(){return b(i,{})}function o(e){return typeof e==="object"&&e!==null&&!Array.isArray(e)}function r(e){if(e===void 0)return!0;if(typeof e==="string"){let n=e.trim().toLowerCase();return n!==""&&n!=="false"&&n!=="0"}return Boolean(e)}function kXn(e){if(!Ie("tengu_encapsulated_crab",{safe:!0}))return"same";let n=eS();if(!Ot()||e&&!n||e?.organizationUuid&&!n?.organizationUuid)return"missing";return n&&!ec(n,e)?"other":"same"}
+export{wXn,mzr,a2o,Gft,iwn,kCa,hzr,kXn};

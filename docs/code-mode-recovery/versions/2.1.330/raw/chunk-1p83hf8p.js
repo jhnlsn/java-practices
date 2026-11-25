@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{Ye,QB}from"/$bunfs/root/chunk-jv7av99m.js";import{t}from"/$bunfs/root/chunk-w578pjby.js";import{i}from"/$bunfs/root/chunk-k449cc64.js";import{Uvi,G}from"/$bunfs/root/chunk-bs4h6795.js";G();var a="a boundary caught a throw (message not reported)";class px extends Uvi{constructor(r){super(r);this.state={hasError:!1,resetKey:r.resetKey}}static getDerivedStateFromError(){return{hasError:!0}}static getDerivedStateFromProps(r,e){return Object.is(r.resetKey,e.resetKey)?null:{hasError:!1,resetKey:r.resetKey}}componentDidCatch(r,e){let o=this.reported(r);if(o!==null)i(o);try{this.props.onError?.(r,e)}catch(s){t(`SentryErrorBoundary: onError threw: ${s instanceof Error?s.message:"a value that is no error"}`,{level:"error"})}}reported(r){if(this.props.telemetryMessage===void 0)return r;let e=this.messageAsked(this.props.telemetryMessage);if(e===null)return null;let o=Ye(r,e);return QB(o)===void 0?Ye(Error("a value that takes no telemetry message was thrown"),e):o}messageAsked(r){try{return r()}catch{return a}}render(){if(this.state.hasError)return this.props.fallback??null;return this.props.children}}
+export{px};

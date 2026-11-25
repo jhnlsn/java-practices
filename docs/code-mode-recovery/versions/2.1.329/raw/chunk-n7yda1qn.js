@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{A}from"/$bunfs/root/chunk-avbzeyf3.js";import{Stl}from"/$bunfs/root/chunk-f3w0nfx9.js";var o="Nothing was sent: this background session can't use its API key, token or workload identity here. To go on, stop it, then run claude --resume in a terminal that has it.",n={admin:"Your organization's settings need an update. Ask your administrator to fix the API key helper configuration.",settings_unloaded:"Couldn't load your organization's settings. Check your connection, then restart Claude Code.",session_environment:o,restart_needed:"Restart Claude Code to finish signing in.",session_owner:"This session belongs to another account, so nothing was sent. Send a message to choose which account to use.",session_profile:Stl,organization_gateway:"Your organization's gateway doesn't accept your own Anthropic sign-in. Claude Code didn't send it."};class UC extends A{reason;constructor(e){super(n[e],"Stored login held back",`stored_login_refused_${e}`);this.reason=e;this.name="StoredLoginHeldBackError"}}
+export{UC};

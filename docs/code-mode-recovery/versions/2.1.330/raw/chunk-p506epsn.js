@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{W,N3n}from"/$bunfs/root/chunk-f9x2f6cx.js";import{S,f}from"/$bunfs/root/chunk-78g0060s.js";import{s}from"/$bunfs/root/chunk-c203g5kd.js";import{dDe,Hf,Lu,Is,Wd}from"/$bunfs/root/chunk-9e5mdyfk.js";import{a}from"/$bunfs/root/chunk-y53wbr8a.js";import{u}from"/$bunfs/root/chunk-cqa9hrgx.js";import{Qt,yke}from"/$bunfs/root/chunk-865at33z.js";import{Yr}from"/$bunfs/root/chunk-bzyb60p0.js";import{aer}from"/$bunfs/root/chunk-4hz7p0re.js";import{Ce}from"/$bunfs/root/chunk-49zxha55.js";function p(){return s.CLAUDE_JOB_DIR}async function eqr(i,e,n){a("tengu_bg_agent_action",{action:S("stop"),source:f(i),jobSessionId:Ce(W())}),N3n(void 0);let o=p();if(Qt()&&o){let r=new Date().toISOString(),t=await Is(o,e);if(t&&!Wd(t))await Hf(o,{...t,state:"stopped",detail:"stopped from session",tempo:"idle",needs:void 0,block:void 0,inFlight:void 0,updatedAt:r,firstTerminalAt:t.firstTerminalAt??r},e).catch(Lu);else await aer(o,e);if(yke())process.stdout.write(dDe(n??"Session stopped."))}return u("job_stop_self"),Yr(0,"prompt_input_exit",{suppressResumeHint:!0})}
+export{eqr};

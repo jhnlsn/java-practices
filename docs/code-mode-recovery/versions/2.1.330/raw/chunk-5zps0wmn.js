@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{ce,hb}from"/$bunfs/root/chunk-865at33z.js";import{yd,hu}from"/$bunfs/root/chunk-59mwkeke.js";import{OFe}from"/$bunfs/root/chunk-xcgcdx61.js";import{Wwe}from"/$bunfs/root/chunk-ygx90amt.js";import{Ogr}from"/$bunfs/root/chunk-vnc2yc9b.js";import{d7e,c7e,WGt}from"/$bunfs/root/chunk-8bq2fhrn.js";var Lh=(o)=>o.name===OFe&&yd(o);var Ib=(o)=>{let e=o.startsWith("classic.")||o==="tool.describe"||o==="tool.call"||o==="tool.run"||o==="tool.check";return ce().loadedModules.filter((t)=>!(e&&Lh(t))&&!(o==="tool.check"&&t.name===Ogr&&yd(t)))};function qLn(o,e,t,s){let r=typeof t.tool==="string"?{...t,tool:hb(t.tool)}:t,l=yd(o)?d7e:c7e;return[o.matcherFor(e)].flat(1/0).some((d)=>WGt(d,r,s,l))}function Qi(o,e,t){let s=e&&Wwe(o);return(t??ce().loadedModules).some((r)=>r.hooks(o)&&hu(r)&&(e===void 0||qLn(r,o,e,s)))}var Gq=(o,e=Ib("tool.call"))=>Qi("tool.call",{tool:o},e)||Qi("tool.run",{tool:o},e);var i="toolu_01AAAAAAAAAAAAAAAAAAAAAA",aAe=(o,e,t=i)=>Qi("tool.check",o,e)||Qi("tool.judge",{...o,tool_use_id:t},e.flatMap((s)=>[s.matcherFor("tool.judge")].flat(1/0).map((r)=>({...s,matcherFor:()=>r}))));
+export{Lh,Ib,qLn,Qi,Gq,aAe};

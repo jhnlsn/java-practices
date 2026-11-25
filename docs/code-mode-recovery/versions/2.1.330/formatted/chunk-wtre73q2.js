@@ -1,0 +1,381 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import { N, Cl } from "/$bunfs/root/chunk-f9x2f6cx.js";
+import { f } from "/$bunfs/root/chunk-78g0060s.js";
+import { a } from "/$bunfs/root/chunk-y53wbr8a.js";
+import { Ct, t } from "/$bunfs/root/chunk-w578pjby.js";
+import { Ke, ge, zPr } from "/$bunfs/root/chunk-865at33z.js";
+import { s } from "/$bunfs/root/chunk-c203g5kd.js";
+import { Esa } from "/$bunfs/root/chunk-ndrgvsn7.js";
+import { i } from "/$bunfs/root/chunk-k449cc64.js";
+import { x } from "/$bunfs/root/chunk-cg8dqz0a.js";
+import { ts } from "/$bunfs/root/chunk-k5jn5rx9.js";
+import { Wm } from "/$bunfs/root/chunk-rb36kwbn.js";
+import { _5e, Nnn, Mf, a7, DDn } from "/$bunfs/root/chunk-8c111j67.js";
+import { Zr } from "/$bunfs/root/chunk-bzyb60p0.js";
+import { j } from "/$bunfs/root/chunk-2904xtvq.js";
+import { hostname as v } from "os";
+var D = 2,
+  O = 1e4,
+  R = 600000,
+  w = 2592000000;
+function S() {
+  try {
+    return v();
+  } catch {
+    return "unknown";
+  }
+}
+function P(e) {
+  return {
+    now: e,
+    version: {
+      ISSUES_EXPLAINER:
+        "report the issue at https://github.com/anthropics/claude-code/issues",
+      PACKAGE_URL: "@anthropic-ai/claude-code",
+      README_URL: "https://code.claude.com/docs/en/overview",
+      VERSION: "2.1.330",
+      FEEDBACK_CHANNEL: "https://github.com/anthropics/claude-code/issues",
+      BUILD_TIME: "2026-11-20T17:34:37Z",
+      GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+      HOOKS_WORKER_URL:
+        "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+      DD_SOURCEMAP_GROUP: "darwin",
+    }.VERSION,
+    host: S(),
+    platform: x(),
+    ownPid: process.pid,
+    isGone: Wm,
+  };
+}
+function _(e, n) {
+  let o = n.stickyStrikes ?? D,
+    l = { ...e.fullscreenBootPending },
+    u = e.fullscreenAutoDisabled,
+    d =
+      e.fullscreenBootStrikes?.version === n.version
+        ? e.fullscreenBootStrikes.count
+        : 0;
+  if (u && u.version !== n.version) u = void 0;
+  let r = 0,
+    c = !1,
+    y = Number.POSITIVE_INFINITY;
+  for (let [m, p] of Object.entries(l)) {
+    let k = Number(m);
+    if (!Number.isInteger(k) || k < 1 || typeof p !== "object" || !p) {
+      delete l[m];
+      continue;
+    }
+    let g = Math.max(0, n.now - p.startedAt);
+    if (p.host !== n.host || p.platform !== n.platform) {
+      if (g > w) delete l[m];
+      continue;
+    }
+    if (p.died !== void 0 || k === n.ownPid || n.isGone(k)) {
+      if ((delete l[m], p.version === n.version))
+        ((r += 1), (y = Math.min(y, g)));
+    } else if (g > R) delete l[m];
+    else c = !0;
+  }
+  let h = { kind: "none" };
+  if (u) h = { kind: "disabled" };
+  else if (r > 0) {
+    d += r;
+    let m = Number.isFinite(y) ? y : 0;
+    if (d >= o)
+      ((u = { version: n.version, at: n.now, strikes: d }),
+        (h = { kind: "tripped", strikes: d, newStrikes: r, pendingAgeMs: m }),
+        (d = 0));
+    else h = { kind: "strike", strikes: d, newStrikes: r, pendingAgeMs: m };
+  } else if (c) h = { kind: "pending_alive" };
+  return {
+    next: {
+      fullscreenBootPending: Object.keys(l).length > 0 ? l : void 0,
+      fullscreenBootStrikes: d > 0 ? { count: d, version: n.version } : void 0,
+      fullscreenAutoDisabled: u,
+    },
+    decision: h,
+  };
+}
+function B(e, n) {
+  let o = (l) =>
+    Object.keys(l.fullscreenBootPending ?? {})
+      .sort()
+      .join(",");
+  return (
+    o(e) !== o(n) ||
+    (e.fullscreenBootStrikes?.count ?? 0) !==
+      (n.fullscreenBootStrikes?.count ?? 0) ||
+    e.fullscreenBootStrikes?.version !== n.fullscreenBootStrikes?.version ||
+    e.fullscreenAutoDisabled?.version !== n.fullscreenAutoDisabled?.version ||
+    e.fullscreenAutoDisabled?.at !== n.fullscreenAutoDisabled?.at
+  );
+}
+function SKr() {
+  let e = ge();
+  return (
+    e.fullscreenAutoDisabled?.version ===
+      {
+        ISSUES_EXPLAINER:
+          "report the issue at https://github.com/anthropics/claude-code/issues",
+        PACKAGE_URL: "@anthropic-ai/claude-code",
+        README_URL: "https://code.claude.com/docs/en/overview",
+        VERSION: "2.1.330",
+        FEEDBACK_CHANNEL: "https://github.com/anthropics/claude-code/issues",
+        BUILD_TIME: "2026-11-20T17:34:37Z",
+        GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+        HOOKS_WORKER_URL:
+          "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+        DD_SOURCEMAP_GROUP: "darwin",
+      }.VERSION ||
+    (e.fullscreenBootStrikes?.version ===
+      {
+        ISSUES_EXPLAINER:
+          "report the issue at https://github.com/anthropics/claude-code/issues",
+        PACKAGE_URL: "@anthropic-ai/claude-code",
+        README_URL: "https://code.claude.com/docs/en/overview",
+        VERSION: "2.1.330",
+        FEEDBACK_CHANNEL: "https://github.com/anthropics/claude-code/issues",
+        BUILD_TIME: "2026-11-20T17:34:37Z",
+        GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+        HOOKS_WORKER_URL:
+          "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+        DD_SOURCEMAP_GROUP: "darwin",
+      }.VERSION &&
+      e.fullscreenBootStrikes.count > 0)
+  );
+}
+var T = `Claude Code's fullscreen renderer didn't finish starting last time on this machine, so this launch is using the classic renderer. It will try fullscreen again next launch; /tui classic keeps the classic renderer.
+`,
+  M = `Claude Code's fullscreen renderer has repeatedly failed to start on this machine, so it has been turned off here. Run /tui fullscreen to try it again (this also resets after an update).
+`;
+function GPa(e) {
+  let n = e?.state ?? _5e,
+    o = a7(n);
+  if (
+    o === "env_on" ||
+    o === "bg_forced_on" ||
+    s.CLAUDE_CODE_EXIT_AFTER_FIRST_RENDER
+  )
+    return { kind: "none" };
+  let l = P(Date.now()),
+    u = ge(),
+    { next: d, decision: r } = _(u, l);
+  if (B(u, d))
+    Ke((c) => {
+      let y = _(c, l).next;
+      return B(c, y) ? { ...c, ...y } : c;
+    }, e?.storageV5);
+  if (r.kind === "strike" || r.kind === "tripped" || r.kind === "disabled") {
+    n.crashAutoOff = !0;
+    let c = DDn(o) === "fullscreen";
+    if (r.kind !== "disabled") {
+      if (
+        (a("tengu_fullscreen_crash_auto_off", {
+          sticky: r.kind === "tripped",
+          strikes: r.strikes,
+          new_strikes: r.newStrikes,
+          pending_age_ms: r.pendingAgeMs,
+          would_be_entry_path: f(o),
+          overrides_fullscreen: c,
+        }),
+        c)
+      )
+        process.stderr.write(r.kind === "tripped" ? M : T);
+    }
+    t(
+      `fullscreen disabled: a previous fullscreen launch on this machine died before it was healthy (${r.kind}) \xB7 /tui fullscreen or CLAUDE_CODE_NO_FLICKER=1 to override`,
+    );
+  } else if (r.kind !== "none") t(`fullscreen boot canary: ${r.kind}`);
+  return r;
+}
+function gVo(e) {
+  return Ke(
+    (n) =>
+      n.fullscreenAutoDisabled === void 0 && n.fullscreenBootStrikes === void 0
+        ? n
+        : {
+            ...n,
+            fullscreenAutoDisabled: void 0,
+            fullscreenBootStrikes: void 0,
+          },
+    e,
+  );
+}
+var F = new Set([
+  "settings_on",
+  "upsell_trial_on",
+  "ant_default",
+  "fresh_install_on",
+  "gb_on",
+]);
+class C {
+  canary = { status: "idle" };
+  recordMaybeOnDisk = void 0;
+  exitHook = void 0;
+  retire() {
+    if (this.canary.status === "armed") {
+      if ((this.canary.cleanup(), this.canary.timer !== void 0))
+        clearTimeout(this.canary.timer);
+    }
+    if (
+      ((this.canary = { status: "idle" }),
+      (this.recordMaybeOnDisk = void 0),
+      this.exitHook !== void 0)
+    )
+      (process.off("exit", this.exitHook), (this.exitHook = void 0));
+  }
+}
+var I = new j(() => new C());
+function b() {
+  return I.of(N().host);
+}
+function E(e, n, o) {
+  let l = e.fullscreenBootPending?.[String(n)] !== void 0;
+  if (!l && !(o && e.fullscreenBootStrikes)) return e;
+  let u = e.fullscreenBootPending;
+  if (l && u) {
+    let { [String(n)]: d, ...r } = u;
+    u = Object.keys(r).length > 0 ? r : void 0;
+  }
+  return {
+    ...e,
+    fullscreenBootPending: u,
+    fullscreenBootStrikes: o ? void 0 : e.fullscreenBootStrikes,
+  };
+}
+function H(e) {
+  if (e.exitHook !== void 0) return;
+  ((e.exitHook = () => {
+    if (e.recordMaybeOnDisk !== void 0 && Zr()) {
+      let n = e.recordMaybeOnDisk;
+      zPr((o) => E(o, n, !1));
+    }
+  }),
+    process.on("exit", e.exitHook));
+}
+async function zPa(e) {
+  let n = e?.state ?? _5e,
+    o = b();
+  if (o.canary.status !== "idle") return o.canary.status === "armed";
+  if (!Cl() || s.CLAUDE_CODE_EXIT_AFTER_FIRST_RENDER) return !1;
+  if (!n.crashAutoOff && Nnn() && F.has(a7(n)))
+    ((n.crashAutoOff = !0),
+      t(
+        "fullscreen disabled: turned off on this machine after repeated failed starts (recorded sticky auto-disable, honoured at REPL mount) \xB7 /tui fullscreen or CLAUDE_CODE_NO_FLICKER=1 to override",
+      ));
+  if (!Mf(n)) return !1;
+  if (!F.has(a7(n))) return !1;
+  let l = process.pid,
+    u = {
+      startedAt: Date.now(),
+      version: {
+        ISSUES_EXPLAINER:
+          "report the issue at https://github.com/anthropics/claude-code/issues",
+        PACKAGE_URL: "@anthropic-ai/claude-code",
+        README_URL: "https://code.claude.com/docs/en/overview",
+        VERSION: "2.1.330",
+        FEEDBACK_CHANNEL: "https://github.com/anthropics/claude-code/issues",
+        BUILD_TIME: "2026-11-20T17:34:37Z",
+        GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+        HOOKS_WORKER_URL:
+          "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+        DD_SOURCEMAP_GROUP: "darwin",
+      }.VERSION,
+      host: S(),
+      platform: x(),
+    },
+    d = Ct(() =>
+      A(
+        o,
+        o.canary.status === "armed" &&
+          o.canary.firstFrameAt !== void 0 &&
+          (process.exitCode === void 0 || process.exitCode === 0) &&
+          !Esa()
+          ? "healthy"
+          : "withdrawn",
+      ),
+    );
+  (H(o),
+    (o.canary = {
+      status: "armed",
+      pid: l,
+      cleanup: d,
+      onHealthy: e?.onHealthy,
+      healthyAfterMs: e?.healthyAfterMs ?? O,
+      firstFrameAt: void 0,
+      timer: void 0,
+      storageV5: e?.storageV5,
+    }),
+    (o.recordMaybeOnDisk = l),
+    ts("fullscreen_canary_arm_start"));
+  try {
+    await Ke(
+      (r) => ({
+        ...r,
+        fullscreenBootPending: { ...r.fullscreenBootPending, [String(l)]: u },
+      }),
+      e?.storageV5,
+    );
+  } catch (r) {
+    i(r);
+  } finally {
+    ts("fullscreen_canary_armed");
+  }
+  return o.canary.status === "armed";
+}
+function VPa(e = Date.now()) {
+  let n = b();
+  if (n.canary.status !== "armed" || n.canary.firstFrameAt !== void 0) return;
+  ((n.canary.firstFrameAt = e),
+    (n.canary.timer = setTimeout(
+      (o) => {
+        A(o, "healthy").catch(i);
+      },
+      n.canary.healthyAfterMs,
+      n,
+    )),
+    n.canary.timer.unref?.());
+}
+async function A(e, n) {
+  if (e.canary.status !== "armed") return;
+  let { pid: o, cleanup: l, timer: u, onHealthy: d, storageV5: r } = e.canary;
+  if (((e.canary = { status: "settled" }), l(), u !== void 0)) clearTimeout(u);
+  if ((await Ke((c) => E(c, o, n === "healthy"), r), e.recordMaybeOnDisk === o))
+    e.recordMaybeOnDisk = void 0;
+  if ((t(`fullscreen boot canary: ${n}`), n === "healthy" && d))
+    try {
+      await d();
+    } catch (c) {
+      i(c);
+    }
+}
+async function bKr() {
+  let e = b();
+  if (e.canary.status !== "armed") return !1;
+  let { pid: n, cleanup: o, timer: l, storageV5: u } = e.canary;
+  if (((e.canary = { status: "settled" }), o(), l !== void 0)) clearTimeout(l);
+  if (e.recordMaybeOnDisk === n) e.recordMaybeOnDisk = void 0;
+  let d = !1;
+  return (
+    await Ke((r) => {
+      let c = r.fullscreenBootPending?.[String(n)];
+      if (c === void 0 || c.died !== void 0) return r;
+      return (
+        (d = !0),
+        {
+          ...r,
+          fullscreenBootPending: {
+            ...r.fullscreenBootPending,
+            [String(n)]: { ...c, died: "render_error" },
+          },
+        }
+      );
+    }, u),
+    t("fullscreen boot canary: failure recorded"),
+    d
+  );
+}
+export { SKr, GPa, gVo, zPa, VPa, bKr };

@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{VR,gFe,gIo}from"/$bunfs/root/chunk-tvttgr51.js";var l=["dev","engine","aot"];function e8t(n){return l.find((e)=>n.includes(`-${e}.`))??null}function gXn(n){return e8t(n)!==null}function t8t(n,e){if(!n)return!1;let t=e8t(n),r=e8t(e);return t!==null&&r!==null&&t!==r}var u=new RegExp(`-(?:${l.join("|")})\\.(\\d{8})\\.t(\\d{6})(?:\\.|$)`,"g");function n8t(n){let e;for(let i of n.matchAll(u))e=i;let t=e?.[1],r=e?.[2];if(!t||!r)return null;let s=Date.UTC(Number(t.slice(0,4)),Number(t.slice(4,6))-1,Number(t.slice(6,8)),Number(r.slice(0,2)),Number(r.slice(2,4)),Number(r.slice(4,6)));return new Date(s).toISOString().slice(0,19).replace(/[-:]/g,"").replace("T","t")===`${t}t${r}`?s:null}function KSa(n,e){let t=n8t(n),r=n8t(e);return t!==null&&r!==null&&r<t}function Vmt(n,e){let t=n8t(n),r=n8t(e);if(t!==null&&r!==null){if(e8t(n)!==e8t(e))return!1;return t>r}if(gXn(n)||gXn(e))return!1;return VR(n)!==null&&VR(e)!==null&&gFe(n,e)}function _Xn(n,e,t){if(!n)return!1;if(n===t)return!0;let r=n8t(n);if(r!==null)return r>=e.commitMs;if(gXn(n))return!1;return VR(n)!==null&&gIo(n,e.release)}
+export{e8t,gXn,t8t,n8t,KSa,Vmt,_Xn};

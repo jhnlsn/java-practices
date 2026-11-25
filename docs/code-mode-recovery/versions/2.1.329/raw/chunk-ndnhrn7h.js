@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{Oa}from"/$bunfs/root/chunk-t39fw2cy.js";import{Yn}from"/$bunfs/root/chunk-4t09bv92.js";import{Owo}from"/$bunfs/root/chunk-w03c3634.js";import{hF}from"/$bunfs/root/chunk-d1pd8gzf.js";import{pTl}from"/$bunfs/root/chunk-73rzabst.js";var t="(value set by your organization)";function Ext(r,e){if(e!=="managed")return r;return{...r,url:pTl(r.url)??t,...r.headers&&{headers:Yn(r.headers,()=>t)}}}function $qt(r){return r==="cached"?"pending":r}function M1r(r){return r.map((e)=>{let o;if(e.config.type==="sse"||e.config.type==="http")o=Ext({type:e.config.type,url:e.config.url,headers:e.config.headers},e.config.scope);else if(e.config.type==="claudeai-proxy")o={type:"claudeai-proxy",url:e.config.url,id:e.config.id};else if(e.config.type==="stdio"||e.config.type===void 0)o={type:"stdio",command:e.config.command,args:e.config.args};return{name:e.name,status:$qt(e.type),config:o,scope:e.config.scope,source:hF(e.name,e.config),serverInfo:Oa(e)?e.serverInfo:void 0,error:e.type==="failed"?e.error:void 0,error_code:Owo(e)}})}
+export{Ext,$qt,M1r};

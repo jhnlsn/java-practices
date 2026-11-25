@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{kr}from"/$bunfs/root/chunk-f9x2f6cx.js";import{j}from"/$bunfs/root/chunk-2904xtvq.js";function L4n(e){let t;for(let n in e)if(n.startsWith("_PROTO_")){if(t===void 0)t={...e};delete t[n]}return t??e}var u=1000;function l(){return{eventQueue:[],sink:null,droppedEventCount:0}}function i(e,t){if(e.eventQueue.length>=u)e.eventQueue.shift(),e.droppedEventCount++;e.eventQueue.push(t)}class r{state=l()}var c=new j(()=>new r);function s(){return kr(c)}function Kra(e){let t=s().state;if(t.sink!==null)return!1;if(t.sink=e,t.eventQueue.length>0){let n=t.eventQueue;t.eventQueue=[],queueMicrotask(()=>{for(let o of n)if(o.async)e.logEventAsync(o.eventName,o.metadata);else e.logEvent(o.eventName,o.metadata)})}return!0}function qra(){try{return s().state.sink?.keepsWholeEvents?.()??!0}catch{return!0}}function a(e,t){let n=s().state;if(n.sink===null){i(n,{eventName:e,metadata:t,async:!1});return}n.sink.logEvent(e,t)}async function Ma(e,t){let n=s().state;if(n.sink===null){i(n,{eventName:e,metadata:t,async:!0});return}await n.sink.logEventAsync(e,t)}
+export{L4n,Kra,qra,a,Ma};

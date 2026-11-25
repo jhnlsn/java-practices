@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{me}from"/$bunfs/root/chunk-5appeerh.js";import{Xn}from"/$bunfs/root/chunk-2gtmjt3y.js";import{Lze,m8,J1,h8,FNl,IMr}from"/$bunfs/root/chunk-hazyxdac.js";import{execFile as l}from"child_process";var u=1e4,pXi=250,p=[44,36],i=null,f;function pnd(){return f===!0}function mnd(){return h8().lastKnown}function hnd(e){h8().lastKnown=e}function s(e,n=!1){return new Promise((o)=>{try{l("security",["find-generic-password","-a",J1(),"-w","-s",e],{encoding:"utf-8",timeout:u,windowsHide:!0},(t,a)=>{let r=Boolean(t&&"killed"in t&&t.killed),c=!n||!t||p.includes(t.code);o(r||!c?null:{stdout:t?null:a?.trim()||null})})}catch{o(null)}})}function mXi(){let e=Xn();if(i||e)return;let n=h8(),o=n.generation;n.legacyApiKeyPrefetch="pending";let t=s(m8(Lze),!0).then((r)=>{if(r?.stdout)IMr(n,!0,o);if(r)FNl(r.stdout,o,n)}),a=s(m8()).then((r)=>{if(r&&n.legacyApiKeyPrefetch==="pending")n.legacyApiKeyPrefetch=r});i=Promise.all([t,a]).then(()=>{})}async function OMr(e){if(!i)return;await(e===void 0?i:me(i,e))}function GIs(){let e=h8().legacyApiKeyPrefetch;return e==="pending"?null:e}function zIs(){h8().legacyApiKeyPrefetch=null}
+export{pXi,pnd,mnd,hnd,mXi,OMr,GIs,zIs};

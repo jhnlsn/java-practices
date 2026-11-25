@@ -1,0 +1,5 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{fM}from"/$bunfs/root/chunk-hg1yqkjk.js";import{Tgt}from"/$bunfs/root/chunk-g4jweshk.js";import{al}from"/$bunfs/root/chunk-xhbt85pw.js";import{Ybn}from"/$bunfs/root/chunk-0cw29n2z.js";import{Whe,koe,D4s,L4s,Gbn}from"/$bunfs/root/chunk-dtf9v4kj.js";function qgn(){return Ybn()||Tgt("auto_mode_off")||Gbn()||Tgt("unattended_serving_off")}function Ygn(n){try{if(Ybn())return fM()==="settings"?"settings":"breaker";if(Tgt("auto_mode_off"))return"settings";let e=Tgt("unattended_serving_off");if(!Gbn(n)&&!e)return"none";if(koe()||e)return"consent_forced_off";let t=Whe();if(t==="declined")return"consent_declined";if(t==="accepted"||D4s())return"consent_unknown";return L4s()?"sandbox_off":"consent_unset"}catch{return"consent_unknown"}}function yFs(n){let e=Ygn();if(e==="none")return;return{key:`served-auto-off-${e==="consent_unset"||e==="consent_declined"?"consent":e}`,text:al.auto_off_notice(n,al[`auto_off.reason.${e}`])}}export{qgn,Ygn,yFs};

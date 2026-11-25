@@ -1,0 +1,2722 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import { S, u, fe } from "/$bunfs/root/chunk-y98mhv74.js";
+import { d, w, zy, J } from "/$bunfs/root/chunk-avbzeyf3.js";
+import { Ae } from "/$bunfs/root/chunk-kgzzwvwc.js";
+import { K } from "/$bunfs/root/chunk-q3pjyhpy.js";
+import { bn, Lr, Sd, ta, td } from "/$bunfs/root/chunk-ca90c7br.js";
+import { t, _, te, jg, Jq, le } from "/$bunfs/root/chunk-c2c9kwmh.js";
+import { I, nt, Vr } from "/$bunfs/root/chunk-m55722gg.js";
+import { Ds } from "/$bunfs/root/chunk-92tjbk8v.js";
+import { i } from "/$bunfs/root/chunk-ht6e56zb.js";
+import { x } from "/$bunfs/root/chunk-kg2zehkt.js";
+import { wu, ln, Cl } from "/$bunfs/root/chunk-w03c3634.js";
+import { z5 } from "/$bunfs/root/chunk-rjw4t165.js";
+import { pe } from "/$bunfs/root/chunk-ahqq8jsg.js";
+import { s } from "/$bunfs/root/chunk-gvhwnc7g.js";
+import { Un, li } from "/$bunfs/root/chunk-rqs3939j.js";
+import { kt, mt } from "/$bunfs/root/chunk-921fq3rt.js";
+import { a } from "/$bunfs/root/chunk-487kez16.js";
+import { f, m, l } from "/$bunfs/root/chunk-3mgc6ahd.js";
+import { Ny, Yk, df } from "/$bunfs/root/chunk-5ghdkswv.js";
+import { uG, ji, mr } from "/$bunfs/root/chunk-dnaxttmk.js";
+import { st } from "/$bunfs/root/chunk-4gsb5pr1.js";
+import { f4, Pia, B7, Mia, Nia } from "/$bunfs/root/chunk-xw42t3pf.js";
+import {
+  CM,
+  Z_e,
+  cso,
+  I$e,
+  MMe,
+  XLt,
+  AM,
+  dTe,
+} from "/$bunfs/root/chunk-j9d89see.js";
+import { p } from "/$bunfs/root/chunk-3kmy2srk.js";
+import { Rq, Mbe, YR, WL, Hjt } from "/$bunfs/root/chunk-hwa9etb0.js";
+import {
+  Cqe,
+  Vf,
+  HB,
+  bve,
+  vZr,
+  Xui,
+  OJt,
+  Qui,
+  Fxn,
+  Uxn,
+  Bxn,
+  Dgt,
+  DHt,
+  Wxn,
+  LHt,
+  jxn,
+  NHt,
+  Gxn,
+  lK,
+  wve,
+  RZr,
+  rar,
+  yz,
+  Rs,
+  wf,
+  mu,
+  I_,
+  Ms,
+  aar,
+  jN,
+  JD,
+  Ed,
+  gE,
+  NJt,
+} from "/$bunfs/root/chunk-yzxvzrvh.js";
+import { Te } from "/$bunfs/root/chunk-p2amrmaz.js";
+import { b$, pr, qRr, Ft } from "/$bunfs/root/chunk-pt7yf14c.js";
+import { Zpe } from "/$bunfs/root/chunk-x7f8sr97.js";
+import { ud } from "/$bunfs/root/chunk-tyy049k4.js";
+import { rR } from "/$bunfs/root/chunk-pxy9yt8m.js";
+import { tk, IUe, Zsr } from "/$bunfs/root/chunk-wtmc4k02.js";
+import { dK, Xg, KJt, oeo, oPn } from "/$bunfs/root/chunk-cnnwpgh2.js";
+import { DRn, ZE } from "/$bunfs/root/chunk-qgx0rrv2.js";
+import {
+  MNs,
+  pla,
+  GRt,
+  XKt,
+  Lgn,
+  TPe,
+  JLr,
+} from "/$bunfs/root/chunk-34tybhbg.js";
+import { pE, mSn } from "/$bunfs/root/chunk-4er5a4x4.js";
+import { k8, vse, zZr, Mqe, Y4, LX, YZr } from "/$bunfs/root/chunk-jmrs8tc7.js";
+import { ey } from "/$bunfs/root/chunk-dkm38jbw.js";
+import { eNr } from "/$bunfs/root/chunk-jw1688vp.js";
+import { EKt } from "/$bunfs/root/chunk-cpjq6eqa.js";
+import { Ay, th } from "/$bunfs/root/chunk-pdq1gvqh.js";
+import { HS } from "/$bunfs/root/chunk-v1ke29af.js";
+import {
+  J9r,
+  ynr,
+  HMt,
+  vKe,
+  oht,
+  BTn,
+  DMt,
+  knr,
+  t5o,
+  e8r,
+  t8r,
+  wce,
+  GTn,
+  n5o,
+  p8r,
+} from "/$bunfs/root/chunk-hg1yqkjk.js";
+import { tie } from "/$bunfs/root/chunk-pwzdwc4b.js";
+import { lqn, QMo, cqn, ZMo, PDs, mRt } from "/$bunfs/root/chunk-1gwksfzj.js";
+import { ONs, _ut, INs } from "/$bunfs/root/chunk-n7qnpr78.js";
+import { cE } from "/$bunfs/root/chunk-n17k9fdn.js";
+import { aoe, eyn } from "/$bunfs/root/chunk-gt6290xy.js";
+import { Ede, Vqt, Ahe } from "/$bunfs/root/chunk-xt7d01yp.js";
+import { n5t } from "/$bunfs/root/chunk-7m6qh9tg.js";
+import { dXn } from "/$bunfs/root/chunk-g1bspx6f.js";
+import { q0, rv } from "/$bunfs/root/chunk-0nb7ajhk.js";
+import { ld } from "/$bunfs/root/chunk-4mb4vc73.js";
+import { we, Xn, oo, tn } from "/$bunfs/root/chunk-n07h0k5w.js";
+import { pp } from "/$bunfs/root/chunk-qgghjkta.js";
+import { Qe } from "/$bunfs/root/chunk-2xdvqr6d.js";
+import { dw } from "/$bunfs/root/chunk-rj55rmx8.js";
+import { ve } from "/$bunfs/root/chunk-5hv562wg.js";
+import { re } from "/$bunfs/root/chunk-y83kjw73.js";
+import {
+  lstat as tt,
+  mkdir as Kr,
+  readdir as Yr,
+  rename as tr,
+  unlink as et,
+} from "fs/promises";
+import { join as de } from "path";
+var rr = 900000,
+  Rt = 86400000;
+function Je(e, r) {
+  return r - e >= Rt || e > r + 60000;
+}
+var nr = /^[A-Za-z0-9-]{1,64}$/;
+function ot(e) {
+  return de(I$e(), `${e}.json`);
+}
+var rt = 8192;
+function We(e) {
+  return st.daemon([cso, e]);
+}
+function Et(e) {
+  return We(`${e}.json`);
+}
+var or = dw();
+function at(e, r) {
+  return or.run("g:" + e, r).catch(() => {});
+}
+async function cRt(e, r, o) {
+  if (!nr.test(e)) return;
+  let n = {
+    gestureId: e,
+    surface: r,
+    startedAtEpochMs: Date.now(),
+    attempt: 0,
+  };
+  (f4().ownedBeacons.set(e, n),
+    await at(e, async () => {
+      if (((n.pid = process.pid), (n.procStart = await Yk()), o)) {
+        if (!(await vt(o, e, n, !0))) f4().ownedBeacons.delete(e);
+        return;
+      }
+      if ((await Kr(I$e(), { recursive: !0, mode: 448 }), !(await ye()))) {
+        f4().ownedBeacons.delete(e);
+        return;
+      }
+      if (f4().ownedBeacons.get(e) !== n) return;
+      await mr(ot(e), _(n), 384);
+    }),
+    await Zr(o));
+}
+async function vt(e, r, o, n = !1) {
+  if (!(await ye(n))) return !1;
+  if (f4().ownedBeacons.get(r) === o) await e.write(Et(r), _(o));
+  return !0;
+}
+function ar(e, r, o) {
+  let n = f4().ownedBeacons.get(e);
+  if (!n || !Number.isInteger(r) || r <= (n.attempt ?? 0)) return;
+  ((n.attempt = r),
+    at(e, async () => {
+      if (((n.procStart ??= await Yk()), o)) {
+        await vt(o, e, n);
+        return;
+      }
+      if (!(await ye())) return;
+      if (f4().ownedBeacons.get(e) !== n) return;
+      await mr(ot(e), _(n), 384);
+    }));
+}
+function Phn(e, r, o) {
+  let n = f4().ownedBeacons.get(e);
+  if (!n) return;
+  if (r.marksExpected !== void 0)
+    n.marksExpected = n.marksExpected === !0 || r.marksExpected;
+  if (r.daemonBooted !== void 0)
+    n.daemonBooted = n.daemonBooted === !0 || r.daemonBooted;
+  if (r.interactiveReached) n.interactiveReached = !0;
+  if (r.attachMs !== void 0) n.attachMs ??= r.attachMs;
+  if (r.msgsLoaded !== void 0) n.msgsLoaded ??= r.msgsLoaded;
+  if (r.msgsInJsonl !== void 0) n.msgsInJsonl ??= r.msgsInJsonl;
+  if (r.msgsRenderedAtFirstPaint !== void 0)
+    n.msgsRenderedAtFirstPaint ??= r.msgsRenderedAtFirstPaint;
+  if (r.attachCold !== void 0 && n.interactiveReached !== !0)
+    n.attachCold = r.attachCold;
+  if (r.via !== void 0 && n.interactiveReached !== !0) n.via = r.via;
+  at(e, async () => {
+    if (((n.procStart ??= await Yk()), o)) {
+      await vt(o, e, n);
+      return;
+    }
+    if (!(await ye())) return;
+    if (f4().ownedBeacons.get(e) !== n) return;
+    await mr(ot(e), _(n), 384);
+  });
+}
+async function RG(e, r) {
+  if (!nr.test(e)) return;
+  (f4().ownedBeacons.delete(e),
+    await at(e, async () => {
+      if (r) {
+        if (!(await ye())) return;
+        let n = !1;
+        for (let h = 0; ; h++) {
+          let c = await r.delete(Et(e));
+          if (c.ok) return;
+          let b = "telemetryCode" in c.error ? c.error.telemetryCode : void 0;
+          if (
+            ((n = b !== void 0 && uG.has(b)),
+            n && x() === "windows" && h < Qt - 1)
+          ) {
+            await K(er);
+            continue;
+          }
+          break;
+        }
+        if (!n) return;
+        await r.write(Et(e), "{}");
+        return;
+      }
+      let o = ot(e);
+      if (!(await ye())) return;
+      for (let n = 0; ; n++)
+        try {
+          await et(o);
+          return;
+        } catch (h) {
+          let c = w(h);
+          if (c === "ENOENT") return;
+          if (x() === "windows" && c !== void 0 && uG.has(c) && n < Qt - 1) {
+            await K(er);
+            continue;
+          }
+          break;
+        }
+      await tr(o, `${o}.${process.pid}.cleared`).catch(() => {});
+    }));
+}
+var Qt = 4,
+  er = 50;
+async function ye(e = !1) {
+  try {
+    return (await tt(I$e())).isDirectory();
+  } catch (r) {
+    return e && w(r) === "ENOENT";
+  }
+}
+async function zr(e) {
+  try {
+    let r = await wu(de(I$e(), e), rt);
+    if (r === null) return null;
+    return ir(r);
+  } catch {
+    return null;
+  }
+}
+async function qr(e, r) {
+  let o = We(r),
+    n = await e.statMeta(o);
+  if (!n.ok || n.value.size > rt) return null;
+  let h = await e.read([o]);
+  if (!h.ok) return null;
+  let c = h.value.items[0];
+  if (!c.found || c.totalBytes > rt) return null;
+  let b = ir(Buffer.from(c.value).toString("utf8"));
+  return b === null
+    ? null
+    : { entry: b, version: c.version, mtimeMs: c.mtimeMs };
+}
+function ir(e) {
+  try {
+    let r = te(e);
+    return !!r &&
+      typeof r === "object" &&
+      typeof r.gestureId === "string" &&
+      typeof r.startedAtEpochMs === "number" &&
+      Number.isFinite(r.startedAtEpochMs) &&
+      r.startedAtEpochMs <= Date.now() + 60000
+      ? r
+      : null;
+  } catch {
+    return null;
+  }
+}
+async function sr(e) {
+  if (typeof e.pid !== "number" || !Number.isInteger(e.pid) || e.pid <= 0)
+    return !1;
+  if (!ld(e.pid)) return !0;
+  if (e.procStart === void 0) return !1;
+  let r = await df(e.pid);
+  return r !== void 0 && r !== e.procStart;
+}
+async function Xr(e, r) {
+  try {
+    let o = await tt(de(I$e(), e));
+    return Je(o.mtimeMs, r);
+  } catch {
+    return !1;
+  }
+}
+function Zr(e) {
+  return or.run("reconcile", () => Qr(e));
+}
+async function Qr(e) {
+  if (e) return en(e);
+  if (!(await ye())) return [];
+  let r;
+  try {
+    r = await Yr(I$e());
+  } catch {
+    return [];
+  }
+  let o = Date.now(),
+    n = [];
+  for (let h of r) {
+    if (!h.endsWith(".json")) {
+      try {
+        let y = await tt(de(I$e(), h));
+        if (Je(y.mtimeMs, o)) await et(de(I$e(), h));
+      } catch {}
+      continue;
+    }
+    let c = await zr(h);
+    if (c === null) {
+      try {
+        let y = await tt(de(I$e(), h));
+        if (Je(y.mtimeMs, o)) await et(de(I$e(), h));
+      } catch {}
+      continue;
+    }
+    let b = o - c.startedAtEpochMs;
+    if (
+      !(typeof c.pid === "number" && Number.isInteger(c.pid) && c.pid > 0
+        ? b >= rr &&
+          ((await sr(c)) || (c.procStart === void 0 && (await Xr(h, o))))
+        : b >= Rt)
+    ) {
+      n.push(c);
+      continue;
+    }
+    let T = de(I$e(), `${h}.${process.pid}.claimed`);
+    try {
+      await tr(de(I$e(), h), T);
+    } catch {
+      continue;
+    }
+    (await et(T).catch(() => {}), dr(c));
+  }
+  return n;
+}
+function dr(e) {
+  let r = e.interactiveReached === !0,
+    o = !r && e.marksExpected === !1,
+    n =
+      r &&
+      typeof e.attachMs === "number" &&
+      Number.isFinite(e.attachMs) &&
+      e.attachMs >= 0 &&
+      e.attachMs < 86400000
+        ? Math.round(e.attachMs)
+        : void 0;
+  a("tengu_bg_attach_outcome", {
+    outcome: u(r || o ? "detached" : "error"),
+    got_ack: r || typeof e.marksExpected === "boolean",
+    got_first_frame: r ? !0 : o ? void 0 : !1,
+    synthetic: !0,
+    apc_detach: !1,
+    timed_out: r || o ? void 0 : !0,
+    journal_recovered: !0,
+    attach_ms: n,
+    first_frame_kind: fe(r ? "real" : void 0),
+    marks_expected: r
+      ? !0
+      : typeof e.marksExpected === "boolean"
+        ? e.marksExpected
+        : void 0,
+    attempt:
+      typeof e.attempt === "number" &&
+      Number.isInteger(e.attempt) &&
+      e.attempt >= 0 &&
+      e.attempt < 1e6
+        ? e.attempt + 1
+        : 0,
+    gesture_id: ve(e.gestureId),
+    surface: fe(
+      e.surface === "fleet" || e.surface === "bg_cli" ? e.surface : void 0,
+    ),
+    daemon_booted:
+      typeof e.daemonBooted === "boolean" ? e.daemonBooted : void 0,
+    attach_cold: typeof e.attachCold === "boolean" ? e.attachCold : void 0,
+    via: fe(eyn(e.via)),
+    msgs_loaded: r ? OJt(e.msgsLoaded) : void 0,
+    msgs_in_jsonl: r ? OJt(e.msgsInJsonl) : void 0,
+    msgs_rendered_at_first_paint: r ? OJt(e.msgsRenderedAtFirstPaint) : void 0,
+  });
+}
+async function en(e) {
+  if (!(await ye())) return [];
+  let r = [],
+    o;
+  do {
+    let c = await e.listEntries(
+      { namespace: "daemon", relPath: [cso] },
+      o === void 0 ? void 0 : { cursor: o },
+    );
+    if (!c.ok) return [];
+    for (let b of c.value.items) {
+      if (
+        b.kind !== "key" ||
+        b.key.namespace !== "daemon" ||
+        b.key.relPath.length !== 2 ||
+        b.key.relPath[0] !== cso
+      )
+        continue;
+      let v = b.key.relPath[1];
+      if (v !== void 0) r.push({ file: v, size: b.size, mtimeMs: b.mtimeMs });
+    }
+    o = c.value.cursor;
+  } while (o !== void 0);
+  let n = Date.now(),
+    h = [];
+  for (let { file: c, size: b, mtimeMs: v } of r) {
+    let k = v !== void 0 && Je(v, n);
+    if (!c.endsWith(".json")) {
+      if (k) await e.delete(We(c));
+      continue;
+    }
+    let T = b !== void 0 && b > rt ? null : await qr(e, c);
+    if (T === null) {
+      if (k) await e.delete(We(c));
+      continue;
+    }
+    let y = T.entry,
+      R = n - y.startedAtEpochMs;
+    if (
+      !(typeof y.pid === "number" && Number.isInteger(y.pid) && y.pid > 0
+        ? R >= rr &&
+          ((await sr(y)) || (y.procStart === void 0 && Je(T.mtimeMs, n)))
+        : R >= Rt)
+    ) {
+      h.push(y);
+      continue;
+    }
+    let U = await e.delete(We(c), {
+      precondition: { type: "ifMatch", version: T.version },
+    });
+    if (!U.ok || !U.value.existed) continue;
+    dr(y);
+  }
+  return h;
+}
+import { randomUUID as an } from "crypto";
+import { connect as sn } from "net";
+var it = Buffer.alloc(0),
+  Tt = Buffer.from(`${KJt}${Xg.PROGRAM_STATUS};`),
+  dt = Buffer.from(`${KJt}${Xg.PROGRAM_STATUS};?`),
+  rn = KJt.length + 1,
+  nn = 256,
+  on = 92;
+function cr(e) {
+  for (let r = 0; r < e.length; r++) {
+    let o = e[r];
+    if (o === Rq.BEL || o === Rq.CAN || o === Rq.SUB)
+      return { end: r + 1, held: 0 };
+    if (o === Rq.ESC) {
+      if (r + 1 === e.length) return { end: void 0, held: 1 };
+      return { end: e[r + 1] === on ? r + 2 : r, held: 0 };
+    }
+  }
+  return { end: void 0, held: 0 };
+}
+class At {
+  stdout;
+  tellDaemon;
+  #o = !1;
+  #e = it;
+  #r = !1;
+  #n = !1;
+  #t = it;
+  #a = !1;
+  constructor(e, r) {
+    this.stdout = e;
+    this.tellDaemon = r;
+  }
+  get #i() {
+    return this.#a || ZE().now("programStatus");
+  }
+  begin(e) {
+    if (((this.#o = !0), e && ZE().get("programStatus").state === "pending"))
+      ((this.#n = !0), this.stdout.write(eNr().request));
+  }
+  leave() {
+    return this.#i ? oPn : "";
+  }
+  output(e) {
+    if (!this.#o) return e;
+    let r = this.#e.length > 0 ? Buffer.concat([this.#e, e]) : e;
+    this.#e = it;
+    let o = [];
+    while (r.length > 0) {
+      if (this.#r) {
+        let { end: h, held: c } = cr(r);
+        if (h === void 0) {
+          this.#e = Buffer.from(r.subarray(r.length - c));
+          break;
+        }
+        ((this.#r = !1), (r = r.subarray(h)));
+        continue;
+      }
+      if (this.#i) {
+        o.push(r);
+        break;
+      }
+      let n = r.indexOf(Tt);
+      if (n < 0) {
+        let h = Cqe(r, Tt);
+        ((this.#e = Buffer.from(r.subarray(r.length - h))),
+          o.push(r.subarray(0, r.length - h)));
+        break;
+      }
+      (o.push(r.subarray(0, n)),
+        (this.#r = !0),
+        (r = r.subarray(n + Tt.length)));
+    }
+    return o.length === 1 ? o[0] : Buffer.concat(o);
+  }
+  input(e) {
+    if (!this.#n) return e;
+    let r = Buffer.concat([this.#t, e]);
+    this.#t = it;
+    let o = r.indexOf(dt);
+    if (o < 0) {
+      let h = Cqe(r, dt);
+      if (h < rn) return r;
+      return (
+        (this.#t = Buffer.from(r.subarray(r.length - h))),
+        r.subarray(0, r.length - h)
+      );
+    }
+    let { end: n } = cr(r.subarray(o + dt.length));
+    if (n === void 0) {
+      if (r.length - o > nn) return r;
+      return ((this.#t = Buffer.from(r.subarray(o))), r.subarray(0, o));
+    }
+    return (
+      (this.#n = !1),
+      (this.#a = !0),
+      ZE().answer("programStatus", !0, "attach: OSC 7501 reply"),
+      z5(() => void this.stdout.write(this.leave())),
+      this.tellDaemon(),
+      Buffer.concat([r.subarray(0, o), r.subarray(o + dt.length + n)])
+    );
+  }
+}
+var dn = 1e4,
+  EDr = "ENORESPONSE",
+  Ohn = "Session isn't responding",
+  lr = {
+    ENOJOB: "enojob",
+    ETIMEOUT: "etimeout",
+    ECWDGONE: "ecwdgone",
+    EUNKNOWN: "eunknown",
+    ENOREPLY: "enoreply",
+    ERESPAWNING: "erespawning",
+    ESTALE: "estale",
+    EALIVE: "ealive",
+    ESTARTING: "estarting",
+    EPEERUID: "epeeruid",
+    ETOOLARGE: "etoolarge",
+    EUNVERIFIED: "eunverified",
+    EAUTH: "eauth",
+    EPROTO: "eproto",
+    EHOSTDEAD: "ehostdead",
+    ESKEW: "eskew",
+  };
+function cn(e) {
+  return Object.hasOwn(lr, e) ? lr[e] : "unknown_code";
+}
+function un(e) {
+  if (e === void 0 || e === "") return;
+  if (NHt.test(e)) return "ekicked";
+  if (e.includes("ERESPAWNING")) return "erespawning";
+  if (e.includes("ESTARTING")) return "estarting";
+  if (e.includes("ESTALLED")) return "estalled";
+  if (e.includes("EUNVERIFIED")) return "eunverified";
+  if (e.includes("EHOSTDEAD")) return "ehostdead";
+  if (Gxn.test(e)) return "unknown_code";
+  return "worker_detach";
+}
+function cde(e, r, o) {
+  if (!e) return;
+  let n = e.interactive?.reached,
+    h = r === "detached" ? e.interactive?.marksExpected : void 0,
+    c = r === "detached" && n === void 0 && h === !0,
+    b = c && e.t0 !== void 0 ? Math.round(performance.now() - e.t0) : void 0;
+  a("tengu_bg_attach_outcome", {
+    outcome: u(r),
+    got_ack: !1,
+    got_first_frame: !1,
+    synthetic: !0,
+    apc_detach: !1,
+    failure_class: fe(r === "error" ? (o ?? "daemon_unavailable") : void 0),
+    gesture_id: ve(e.gestureId),
+    attempt: ++e.attempt,
+    surface: fe(e.surface),
+    daemon_booted: e.daemonBooted,
+    via: fe(e.interactive?.via),
+    attach_cold: e.interactive?.attachCold,
+    attach_ms: n !== void 0 ? n.attachMs : b,
+    content_paint_ms: n !== void 0 ? Math.round(n.contentPaintMs) : void 0,
+    prompt_idle_ms: n !== void 0 ? Math.round(n.promptIdleMs) : void 0,
+    msgs_loaded: n?.msgsLoaded,
+    msgs_in_jsonl: n?.msgsInJsonl,
+    msgs_rendered_at_first_paint: n?.msgsRenderedAtFirstPaint,
+    first_frame_kind: fe(n !== void 0 ? "real" : void 0),
+    marks_expected: n !== void 0 ? !0 : h,
+    attach_censored: c ? !0 : void 0,
+  });
+}
+async function vDr(e) {
+  let r = await ey({ proto: Vf, op: "has", short: e });
+  return r.ok && r.op === "has" && r.present === !1;
+}
+var ct = 2,
+  hr = 26,
+  gr = 100,
+  fn = 8,
+  mn = Buffer.from([127]),
+  _r = 98,
+  br = 122,
+  lt = Buffer.from("\x1B[27;5;98~", "latin1"),
+  yr = Buffer.from("\x1B[27;5;122~", "latin1"),
+  pn = Buffer.from("\x1B[27u", "latin1"),
+  hn = Buffer.from("\x1B[27;1u", "latin1"),
+  gn = 3,
+  _n = 99,
+  yn = Buffer.from("\x1B[27;5;99~", "latin1"),
+  ur = Buffer.from(bve, "ascii"),
+  Ct = Buffer.from(vZr, "ascii"),
+  fr = Buffer.from("\x1B_cc-d", "ascii"),
+  $e = Buffer.from("\x1B[?9001", "ascii"),
+  wn = 100,
+  kn = 800;
+function Ce(e, r, o) {
+  return (
+    e.length - r >= o.length && e.compare(o, 0, o.length, r, r + o.length) === 0
+  );
+}
+function He(e, r, o) {
+  if (e[r] !== 27 || e[r + 1] !== 91) return 0;
+  let n = r + 2,
+    h = () => {
+      let k = -1;
+      for (let T = 0; T < 8 && n < e.length; T++) {
+        let y = e[n];
+        if (y < 48 || y > 57) break;
+        ((k = (k < 0 ? 0 : k) * 10 + (y - 48)), n++);
+      }
+      return k;
+    },
+    c = h();
+  if (c < 0) return 0;
+  let b = -1;
+  if (e[n] === 58) {
+    if ((n++, h(), e[n] === 58)) (n++, (b = h()));
+  }
+  if (e[n] !== 59 || e[n + 1] !== 53 || e[n + 2] !== 117) return 0;
+  return (c > 127 && b >= 0 ? b : c) === o ? n + 3 - r : 0;
+}
+var X = Buffer.alloc(0);
+function wr(e, r) {
+  for (let o = 0; o < e.length; o++) {
+    let n = e[o];
+    if (r) {
+      if (((r = !1), n === gr)) return { matched: !0, prefixArmed: !1 };
+      continue;
+    }
+    if (
+      n === hr ||
+      n === gn ||
+      He(e, o, br) ||
+      Ce(e, o, yr) ||
+      He(e, o, _n) ||
+      Ce(e, o, yn)
+    )
+      return { matched: !0, prefixArmed: !1 };
+    let h = n === ct ? 1 : He(e, o, _r) || (Ce(e, o, lt) ? lt.length : 0);
+    if (h) ((o += h - 1), (r = !0));
+  }
+  return { matched: !1, prefixArmed: r };
+}
+function kr(e) {
+  let r = !1,
+    o = !1,
+    n,
+    h = new Promise((b) => {
+      n = b;
+    }),
+    c = () => {
+      if (r) return;
+      let b;
+      while ((b = e.read()) !== null) {
+        let v = typeof b === "string" ? Buffer.from(b, "utf8") : b,
+          k = wr(v, o);
+        if (((o = k.prefixArmed), k.matched)) {
+          ((r = !0), n());
+          return;
+        }
+      }
+    };
+  if ((e.on("readable", c), "resume" in e && "pause" in e))
+    (e.resume(), e.pause());
+  return (
+    c(),
+    {
+      promise: h,
+      cancel: () => {
+        ((r = !0), e.removeListener("readable", c));
+      },
+    }
+  );
+}
+function TDr(e) {
+  return wr(e, !1).matched;
+}
+async function jMo(e, r = {}) {
+  let o = r.stdin ?? process.stdin,
+    n = r.stdout ?? process.stdout,
+    h = "columns" in n ? n.columns || 120 : 120,
+    c = "rows" in n ? n.rows || 30 : 30,
+    b = h,
+    v = c,
+    k = an(),
+    T = await Z_e(),
+    y = Date.now(),
+    R = performance.now(),
+    M = r.telemetry?.t0,
+    j =
+      M !== void 0 && Number.isFinite(M) && M >= 0 && M <= R && R - M < 86400000
+        ? M
+        : R;
+  if (r.telemetry?.gestureId !== void 0)
+    ar(r.telemetry.gestureId, r.telemetry.attempt, r.telemetry.storageV5);
+  let U,
+    A,
+    z,
+    ee,
+    V,
+    D = X,
+    O = r.telemetry?.interactive?.reached,
+    ce = !1,
+    Ne,
+    ue = setTimeout(
+      () => {
+        if (O === void 0 && (U === void 0 || A === void 0))
+          ((ce = !0), (Ne = performance.now() - j));
+      },
+      Math.max(0, 30000 - (R - j)),
+    ),
+    Be = !1,
+    Oe,
+    H,
+    G,
+    me,
+    Fe,
+    ke,
+    Pe,
+    Se,
+    he,
+    ie = !1,
+    ge;
+  function Le(C) {
+    let B = Date.now() - y;
+    if (C && ge === void 0) ge = B;
+    if (ie) return;
+    ((ie = !0),
+      (Be = !C),
+      a("tengu_bg_attach_first_frame", {
+        ms: B,
+        meaningful_ms: ge,
+        ack_ms: Oe,
+        gesture_id: ve(r.telemetry?.gestureId),
+        attempt: r.telemetry?.attempt,
+        via: fe(H),
+        tempo: fe(me),
+        stale: ke,
+        state: aoe(Fe),
+        cached: Se,
+      }));
+  }
+  let Ue,
+    gt = new Promise((C) => {
+      Ue = C;
+    }),
+    Z = !1,
+    Q = !1,
+    Ee,
+    oe = !1,
+    q,
+    ae,
+    Nt = h,
+    Lt = c,
+    Ye = new At(
+      n,
+      () => void ey({ proto: Vf, op: "program-status", short: e, attachId: k }),
+    ),
+    Ve = lqn(),
+    Ut = () =>
+      XKt({
+        legacyKitty:
+          Pe !==
+          {
+            ISSUES_EXPLAINER:
+              "report the issue at https://github.com/anthropics/claude-code/issues",
+            PACKAGE_URL: "@anthropic-ai/claude-code",
+            README_URL: "https://code.claude.com/docs/en/overview",
+            VERSION: "2.1.329",
+            FEEDBACK_CHANNEL:
+              "https://github.com/anthropics/claude-code/issues",
+            BUILD_TIME: "2026-11-19T16:23:05Z",
+            GIT_SHA: "6a49dd29d929a6fe40c060bbccfeb5a7f037c958",
+            HOOKS_WORKER_URL:
+              "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+            DD_SOURCEMAP_GROUP: "darwin",
+          }.VERSION,
+      }),
+    Dr = x() === "windows" && !ONs(),
+    Nr =
+      r.holdScreenOnDisconnect && x() === "windows"
+        ? !0
+        : "isRaw" in o
+          ? Boolean(o.isRaw)
+          : !1,
+    _t = x() === "windows",
+    Me = Buffer.from(Y4, "ascii"),
+    Fr = Buffer.from(LX, "ascii"),
+    jt = _t && INs(),
+    Wt = !1,
+    bt,
+    se;
+  try {
+    se = sn(dTe());
+  } catch (C) {
+    let B = r.telemetry?.interactive?.reached,
+      E =
+        typeof r.telemetry?.interactive?.marksExpected === "boolean"
+          ? r.telemetry.interactive.marksExpected
+          : void 0;
+    return (
+      a("tengu_bg_attach_outcome", {
+        outcome: u("error"),
+        got_ack: !1,
+        got_first_frame: !1,
+        ms: Date.now() - y,
+        apc_detach: !1,
+        failure_class: u("connect_throw"),
+        gesture_id: ve(r.telemetry?.gestureId),
+        attempt: r.telemetry?.attempt,
+        surface: fe(r.telemetry?.surface),
+        daemon_booted: r.telemetry?.daemonBooted,
+        attach_ms:
+          B !== void 0
+            ? B.attachMs
+            : E === !0
+              ? Math.round(performance.now() - j)
+              : void 0,
+        content_paint_ms: B !== void 0 ? Math.round(B.contentPaintMs) : void 0,
+        prompt_idle_ms: B !== void 0 ? Math.round(B.promptIdleMs) : void 0,
+        msgs_loaded: B?.msgsLoaded,
+        msgs_in_jsonl: B?.msgsInJsonl,
+        msgs_rendered_at_first_paint: B?.msgsRenderedAtFirstPaint,
+        first_frame_kind: fe(B !== void 0 ? "real" : void 0),
+        marks_expected: B !== void 0 ? !0 : E,
+        attach_censored: B === void 0 && E === !0 ? !0 : void 0,
+        via: fe(r.telemetry?.interactive?.via),
+        attach_cold: r.telemetry?.interactive?.attachCold,
+      }),
+      clearTimeout(ue),
+      { outcome: "error", msg: CM(d(C)) }
+    );
+  }
+  se.setTimeout(1e4, () => {
+    if (!Q) ne("error", Zsr(), { failureClass: "ack_timeout" });
+  });
+  function ne(C, B, E) {
+    if (Z) return;
+    let { viaApc: F, beforeFirstFrame: g, failureClass: L } = E ?? {};
+    ((Z = !0),
+      clearTimeout(bt),
+      clearTimeout(ue),
+      clearTimeout(Ee),
+      clearTimeout(q));
+    let N = Math.round(performance.now() - j),
+      P = U !== void 0 && A !== void 0 ? Math.round(Math.max(U, A)) : void 0,
+      W = he !== void 0 || r.telemetry?.interactive?.marksExpected === !0,
+      Y = O === void 0 && W && ce && P === void 0,
+      be = O === void 0 && W && !Y && P === void 0,
+      $r = O !== void 0 ? O.attachMs : Y ? Math.round(Ne ?? N) : be ? N : P,
+      Hr =
+        O !== void 0
+          ? "real"
+          : P !== void 0
+            ? "real"
+            : ie
+              ? Be && ge === void 0
+                ? "dimhint"
+                : "unknown"
+              : void 0;
+    if (
+      (a("tengu_bg_attach_outcome", {
+        outcome: u(C),
+        got_ack: Q,
+        got_first_frame: ie,
+        ms: Date.now() - y,
+        gesture_id: ve(r.telemetry?.gestureId),
+        attempt: r.telemetry?.attempt,
+        via: fe(r.telemetry?.interactive?.via ?? H),
+        tempo: fe(me),
+        apc_detach: F === !0,
+        failure_class: fe(L),
+        state: aoe(Fe),
+        cached: Se,
+        meaningful_ms: ge,
+        input_accepted_ms: ze,
+        input_delivered_ms: ze,
+        keys_dropped: Gt,
+        attach_ms: $r,
+        content_paint_ms:
+          O !== void 0
+            ? Math.round(O.contentPaintMs)
+            : U !== void 0
+              ? Math.round(U)
+              : void 0,
+        prompt_idle_ms:
+          O !== void 0
+            ? Math.round(O.promptIdleMs)
+            : A !== void 0
+              ? Math.round(A)
+              : void 0,
+        timed_out: Y,
+        attach_censored: be,
+        marks_expected:
+          O !== void 0
+            ? !0
+            : Q || typeof r.telemetry?.interactive?.marksExpected === "boolean"
+              ? W
+              : void 0,
+        attach_cold:
+          r.telemetry?.interactive?.attachCold ??
+          (H !== void 0 ? H === "cold" && (G ?? !0) : void 0),
+        daemon_booted: r.telemetry?.daemonBooted,
+        surface: fe(r.telemetry?.surface),
+        first_frame_kind: fe(Hr),
+        msgs_loaded: O?.msgsLoaded ?? z,
+        msgs_in_jsonl: O?.msgsInJsonl ?? ee,
+        msgs_rendered_at_first_paint: O?.msgsRenderedAtFirstPaint ?? V,
+      }),
+      Q)
+    ) {
+      let Gr =
+        r.alreadyInAlt || (C === "disconnected" && r.holdScreenOnDisconnect);
+      n.write(
+        zZr +
+          Ve.snapshot().map(vse).reverse().join("") +
+          Y4 +
+          Mqe +
+          (x() === "windows" ? YZr : "") +
+          "\x1B[0m\x1B7" +
+          Hjt +
+          "\x1B8" +
+          (GRt() ? oeo : "") +
+          Ye.leave() +
+          (Gr ? "" : TPe()),
+      );
+    }
+    if (!Nr) cE(o, !1);
+    if (
+      (o.removeListener("readable", wt),
+      o.removeListener("end", Kt),
+      "removeListener" in n)
+    )
+      n.removeListener("resize", yt);
+    (clearTimeout(ae),
+      se.destroy(),
+      Ue({ outcome: C, msg: B, viaApc: F, beforeFirstFrame: g }));
+  }
+  function Ur() {
+    ne("error", `${EDr}: ${Ohn}`, { failureClass: "no_response" });
+  }
+  function yt() {
+    if (Z) return;
+    if (ae === void 0) ((Nt = b), (Lt = v));
+    ((b = "columns" in n ? n.columns || h : h),
+      (v = "rows" in n ? n.rows || c : c),
+      clearTimeout(ae),
+      (ae = setTimeout(() => {
+        if (((ae = void 0), Z)) return;
+        if (b < Nt || v < Lt) n.write(WL + YR);
+        ($t(),
+          ey({
+            proto: Vf,
+            op: "resize",
+            short: e,
+            cols: b,
+            rows: v,
+            attachId: k,
+          }));
+      }, 50)));
+  }
+  let Jt = performance.now();
+  function $t() {
+    let C = Ve.snapshot();
+    if (!C.includes(1004)) return;
+    n.write(Ut() + C.map(k8).join(""));
+  }
+  let Ht = r.gateStdinUntilFirstFrame === !0 && "isTTY" in o && o.isTTY === !0,
+    ze,
+    Gt = 0,
+    jr = Pia();
+  function _e(C) {
+    let B = () => jr(C.toString("latin1"));
+    if (!Ht || ie) {
+      if (ze === void 0 && !B()) ze = Date.now() - y;
+      se.write(C);
+    } else if (!B()) Gt++;
+  }
+  function Wr(C) {
+    if (Z) return;
+    let B = typeof C === "string" ? Buffer.from(C, "utf8") : C,
+      E = Ye.input(B),
+      F = 0;
+    for (let g = 0; g < E.length; g++) {
+      let L = E[g];
+      if (oe) {
+        if (((oe = !1), clearTimeout(q), g > F)) _e(E.subarray(F, g));
+        if (L === gr) return ne("detached");
+        (_e(Buffer.from([ct, L])), (F = g + 1));
+        continue;
+      }
+      if (
+        Ht &&
+        !ie &&
+        ((L === 27 && E.length === 1) || Ce(E, g, pn) || Ce(E, g, hn))
+      )
+        return ne("detached", void 0, { beforeFirstFrame: !0 });
+      if (L === hr || He(E, g, br) || Ce(E, g, yr)) {
+        if (g > F) _e(E.subarray(F, g));
+        return ne("detached");
+      }
+      if (Dr && L === fn) {
+        if (g > F) _e(E.subarray(F, g));
+        (_e(mn), (F = g + 1));
+        continue;
+      }
+      let N = L === ct ? 1 : He(E, g, _r) || (Ce(E, g, lt) ? lt.length : 0);
+      if (N) {
+        if (g > F) _e(E.subarray(F, g));
+        ((g += N - 1),
+          (F = g + 1),
+          (oe = !0),
+          (q = setTimeout(() => {
+            ((oe = !1), _e(Buffer.from([ct])));
+          }, kn)));
+      }
+    }
+    if (F < E.length) _e(E.subarray(F));
+  }
+  function wt() {
+    let C = performance.now();
+    if (C - Jt > JLr) $t();
+    Jt = C;
+    let B;
+    while ((B = o.read()) !== null) Wr(B);
+  }
+  function Kt() {
+    ne("detached");
+  }
+  let je = X,
+    qe = X,
+    xe = X,
+    Re = X;
+  function Yt(C) {
+    if (!_t) return C;
+    let B = xe.length > 0,
+      E = B ? Buffer.concat([xe, C]) : C;
+    if (B) xe = X;
+    if (jt) {
+      let Y = E.lastIndexOf(Me),
+        be = E.lastIndexOf(Fr);
+      if (Y !== be) Wt = Y > be;
+    }
+    let F = E.indexOf(Me);
+    if (F < 0) {
+      let Y = Cqe(E, Me);
+      if (Y === 0) return E;
+      return (
+        (xe = Buffer.from(E.subarray(E.length - Y))),
+        E.subarray(0, E.length - Y)
+      );
+    }
+    let g = [],
+      L = 0,
+      N = F;
+    for (;;) {
+      if (N > L) g.push(E.subarray(L, N));
+      if (((L = N + Me.length), (N = E.indexOf(Me, L)), N < 0)) break;
+    }
+    let P = E.subarray(L),
+      W = Cqe(P, Me);
+    if (W > 0) xe = Buffer.from(P.subarray(P.length - W));
+    if (P.length > W) g.push(P.subarray(0, P.length - W));
+    if (g.length === 0) return X;
+    if (g.length === 1) return g[0];
+    return Buffer.concat(g);
+  }
+  function Vt(C) {
+    let B = Re.length > 0,
+      E = B ? Buffer.concat([Re, C]) : C;
+    if (B) Re = X;
+    let F = E.indexOf($e);
+    if (F < 0) {
+      let P = Cqe(E, $e);
+      if (P === 0) return E;
+      return (
+        (Re = Buffer.from(E.subarray(E.length - P))),
+        E.subarray(0, E.length - P)
+      );
+    }
+    let g = [],
+      L = 0,
+      N = F;
+    while (N >= 0) {
+      let P = N + $e.length;
+      if (P >= E.length) {
+        if (N > L) g.push(E.subarray(L, N));
+        ((Re = Buffer.from(E.subarray(N))), (L = E.length));
+        break;
+      }
+      let W = E[P];
+      if (W === 104 || W === 108) {
+        if (N > L) g.push(E.subarray(L, N));
+        L = P + 1;
+      }
+      N = E.indexOf($e, Math.max(L, N + 1));
+    }
+    if (L < E.length) {
+      let P = E.subarray(L),
+        W = Cqe(P, $e);
+      if (W > 0) Re = Buffer.from(P.subarray(P.length - W));
+      if (P.length > W) g.push(P.subarray(0, P.length - W));
+    }
+    if (g.length === 0) return X;
+    if (g.length === 1) return g[0];
+    return Buffer.concat(g);
+  }
+  let zt = r.alreadyInAlt && !r.holdingFrame;
+  function qt(C) {
+    let { out: B, meaningful: E, renders: F } = Jr(Ye.output(C));
+    if (B.length === 0) return;
+    if (!F) {
+      n.write(B);
+      return;
+    }
+    if (zt) ((zt = !1), n.write(WL + YR));
+    (n.write(B),
+      Ve.feed(B.toString("latin1"), (g) => {
+        if (g === 1004) {
+          let L = Ut();
+          if (L) n.write(L);
+        }
+      }),
+      Le(E));
+  }
+  let Xe = X,
+    Ze = !1,
+    Ie = !1,
+    St = !1;
+  function Xt(C) {
+    let B = !1,
+      E = 0;
+    if (St) {
+      if (((St = !1), (Ie = !1), C[0] === 92)) E = 1;
+    }
+    while (E < C.length) {
+      if (Ie) {
+        let g = E;
+        while (g < C.length && C[g] !== 27 && C[g] !== 24 && C[g] !== 26) g++;
+        if (g >= C.length) return B;
+        if (C[g] !== 27) {
+          ((Ie = !1), (E = g + 1));
+          continue;
+        }
+        if (g === C.length - 1) return ((St = !0), B);
+        if (C[g + 1] === 92) {
+          ((Ie = !1), (E = g + 2));
+          continue;
+        }
+        ((Ie = !1), (E = g));
+        continue;
+      }
+      let F = C.indexOf(fr, E);
+      if (F < 0) return !0;
+      ((B ||= F > E), (Ie = !0), (E = F + fr.length));
+    }
+    return B;
+  }
+  function Jr(C) {
+    let B = Xe.length > 0 ? Buffer.concat([Xe, C]) : C;
+    Xe = X;
+    let E = !1,
+      F = !1,
+      g = [],
+      L = 0;
+    for (;;) {
+      let Y = B.indexOf(Ct, L);
+      if (Y < 0) break;
+      if (Y > L) {
+        let be = B.subarray(L, Y);
+        if ((g.push(be), !Ze)) E = Xt(be) || E;
+        else F = !0;
+      }
+      ((Ze = !Ze), (L = Y + Ct.length));
+    }
+    let N = B.subarray(L),
+      P = Cqe(N, Ct);
+    if (P > 0)
+      ((Xe = Buffer.from(N.subarray(N.length - P))),
+        (N = N.subarray(0, N.length - P)));
+    if (N.length > 0)
+      if ((g.push(N), !Ze)) E = Xt(N) || E;
+      else F = !0;
+    return {
+      out: g.length === 0 ? X : g.length === 1 ? g[0] : Buffer.concat(g),
+      meaningful: E,
+      renders: E || F,
+    };
+  }
+  function Zt(C) {
+    if (Z) return;
+    let B = he !== void 0 && O === void 0 && (U === void 0 || A === void 0),
+      E = Xui(D, C, { requireNonce: he });
+    D = E.carry;
+    let F = E.cleaned;
+    if (B)
+      for (let P of E.marks) {
+        let W = performance.now() - j;
+        if (P.kind === "content_paint" && U === void 0)
+          ((U = W),
+            (z = P.msgsLoaded),
+            (ee = P.msgsInJsonl),
+            (V = P.msgsRenderedAtFirstPaint));
+        else if (P.kind === "prompt_idle" && A === void 0) A = W;
+        if (U !== void 0 && A !== void 0) {
+          clearTimeout(ue);
+          let Y = Math.round(Math.max(U, A));
+          if (r.telemetry?.interactive !== void 0)
+            r.telemetry.interactive.reached = {
+              attachMs: Y,
+              contentPaintMs: U,
+              promptIdleMs: A,
+              msgsLoaded: z,
+              msgsInJsonl: ee,
+              msgsRenderedAtFirstPaint: V,
+            };
+          if (r.telemetry?.gestureId !== void 0)
+            Phn(
+              r.telemetry.gestureId,
+              {
+                interactiveReached: !0,
+                attachMs: Y,
+                msgsLoaded: z,
+                msgsInJsonl: ee,
+                msgsRenderedAtFirstPaint: V,
+              },
+              r.telemetry.storageV5,
+            );
+        }
+      }
+    let g = qe.length > 0 ? Buffer.concat([qe, F]) : F,
+      L = g.indexOf(ur);
+    if (L >= 0) {
+      let P = g.subarray(0, L);
+      if (L > 0) {
+        let Y = Vt(Yt(P));
+        if (Y.length > 0) qt(Y);
+      }
+      ((qe = X), (xe = X), (Re = X));
+      let W = Qui(P);
+      return ne("detached", W, { viaApc: !0, failureClass: un(W) });
+    }
+    let N = Cqe(g, ur);
+    if (g.length > N) {
+      let P = g.subarray(0, g.length - N),
+        W = Vt(Yt(P));
+      if (W.length > 0) qt(W);
+    }
+    if (((qe = N > 0 ? Buffer.from(g.subarray(g.length - N)) : X), jt))
+      (clearTimeout(bt),
+        (bt = setTimeout(() => {
+          if (!Z && Wt) n.write(Y4);
+        }, wn)));
+  }
+  return (
+    se.on("data", (C) => {
+      if (Z) return;
+      if (Q) {
+        (clearTimeout(Ee), Zt(C));
+        return;
+      }
+      je = Buffer.concat([je, C]);
+      let B = je.indexOf(10);
+      if (B < 0) return;
+      let E = je.subarray(0, B).toString("utf8"),
+        F = je.subarray(B + 1),
+        g;
+      try {
+        g = te(E);
+      } catch (W) {
+        return ne("error", `bad ack: ${d(W)}`, { failureClass: "bad_ack" });
+      }
+      if (typeof g !== "object" || g === null)
+        return ne("error", "bad ack: non-object ack line", {
+          failureClass: "bad_ack",
+        });
+      if (!g.ok)
+        return ne("error", `${g.code}: ${g.error}`, {
+          failureClass: cn(g.code),
+        });
+      if (((Q = !0), se.setTimeout(0), !r.holdingFrame && F.length === 0))
+        Ee = setTimeout(Ur, dn);
+      if (
+        ((Oe = Date.now() - y),
+        (H = g.op === "attach" ? eyn(g.via) : void 0),
+        (G =
+          g.op === "attach" && typeof g.booting === "boolean"
+            ? g.booting
+            : void 0),
+        (he =
+          g.op === "attach" && typeof g.imarkNonce === "string"
+            ? g.imarkNonce
+            : void 0),
+        r.telemetry?.gestureId !== void 0)
+      )
+        Phn(
+          r.telemetry.gestureId,
+          {
+            marksExpected: he !== void 0,
+            daemonBooted:
+              typeof r.telemetry.daemonBooted === "boolean"
+                ? r.telemetry.daemonBooted
+                : void 0,
+            attachCold: H !== void 0 ? H === "cold" && (G ?? !0) : void 0,
+            via: H,
+          },
+          r.telemetry.storageV5,
+        );
+      if (r.telemetry?.interactive !== void 0) {
+        if (
+          ((r.telemetry.interactive.marksExpected =
+            r.telemetry.interactive.marksExpected === !0 || he !== void 0),
+          H !== void 0 && r.telemetry.interactive.reached === void 0)
+        )
+          ((r.telemetry.interactive.attachCold = H === "cold" && (G ?? !0)),
+            (r.telemetry.interactive.via = H));
+      }
+      if (
+        ((me = g.op === "attach" ? g.tempo : void 0),
+        (Fe = g.op === "attach" ? g.state : void 0),
+        (ke = g.op === "attach" ? g.stale : void 0),
+        (Pe = g.op === "attach" ? g.workerCliVersion : void 0),
+        (Se = g.op === "attach" ? g.cached : void 0),
+        s.TMUX && !f4().tmuxRgbApplied)
+      )
+        ((f4().tmuxRgbApplied = !0),
+          kt("tmux", ["set", "-as", "terminal-features", ",*:RGB"]));
+      let N = ((g.op === "attach" ? g.decModes : void 0) ?? [])
+        .map(k8)
+        .join("");
+      if ((Ve.feed(N), "ref" in o)) o.ref();
+      cE(o, !0);
+      let P =
+        Pe !==
+        {
+          ISSUES_EXPLAINER:
+            "report the issue at https://github.com/anthropics/claude-code/issues",
+          PACKAGE_URL: "@anthropic-ai/claude-code",
+          README_URL: "https://code.claude.com/docs/en/overview",
+          VERSION: "2.1.329",
+          FEEDBACK_CHANNEL: "https://github.com/anthropics/claude-code/issues",
+          BUILD_TIME: "2026-11-19T16:23:05Z",
+          GIT_SHA: "6a49dd29d929a6fe40c060bbccfeb5a7f037c958",
+          HOOKS_WORKER_URL:
+            "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+          DD_SOURCEMAP_GROUP: "darwin",
+        }.VERSION;
+      if (
+        (n.write(
+          r.alreadyInAlt
+            ? LX + XKt({ legacyKitty: P }) + N
+            : Lgn({ legacyKitty: P }) +
+                N +
+                (_t ? LX : "") +
+                `
+  \x1B[2mAttaching\u2026\x1B[0m
+`,
+        ),
+        g.op === "attach" && g.programStatus === !0)
+      )
+        Ye.begin(
+          "isTTY" in o && o.isTTY === !0 && "isTTY" in n && n.isTTY === !0,
+        );
+      if ("on" in n) n.on("resize", yt);
+      if (
+        ("columns" in n && (n.columns || h) !== h) ||
+        ("rows" in n && (n.rows || c) !== c)
+      )
+        yt();
+      if ((o.on("readable", wt), "resume" in o && "pause" in o))
+        (o.resume(), o.pause());
+      if ((o.once("end", Kt), wt(), F.length)) Zt(F);
+    }),
+    se.on("error", (C) =>
+      ne("error", CM(d(C)), { failureClass: "socket_error" }),
+    ),
+    se.once("close", () => {
+      if (!Z)
+        ne(Q ? "disconnected" : "error", "control socket closed", {
+          failureClass: "socket_closed",
+        });
+    }),
+    se.once("connect", () => {
+      se.write(
+        _({
+          proto: Vf,
+          op: "attach",
+          short: e,
+          auth: T,
+          cols: h,
+          rows: c,
+          attachId: k,
+          caps: {
+            ...Sn(),
+            ...(r.sessionTabs !== void 0 && {
+              sessionTabs: r.sessionTabs,
+              ...(r.cloudTabs === !0 && { cloudTabs: !0 }),
+              ...(r.tabsLanding && { tabsLanding: r.tabsLanding }),
+            }),
+          },
+          ...(r.holdingFrame && { holdingFrame: !0 }),
+        }) +
+          `
+`,
+      );
+    }),
+    gt
+  );
+}
+function Sn() {
+  return {
+    imark: !0,
+    terminal: s.terminal,
+    mux: s.TMUX
+      ? "tmux"
+      : process.env.ZELLIJ != null
+        ? "zellij"
+        : s.STY
+          ? "screen"
+          : null,
+    ssh: s.isSSH(),
+    wheelFlood: MNs(),
+    hyperlinks: pE(),
+    mayWriteHyperlinks: mSn(),
+    progressReporting: GRt(),
+    printsUnknownSequences: dK(),
+    wtSession: !!s.WT_SESSION,
+    isVscodeTerm: s.TERM_PROGRAM === "vscode",
+    isGhosttyXtv: n5t(),
+    keyDialect: DRn(s.TERM),
+    browser: s.BROWSER ?? null,
+    colorLevel: Te.level,
+    syncOutput: pla(),
+    programStatus: ZE().now("programStatus"),
+    editor: s.VISUAL || s.EDITOR || null,
+    systemTheme: dXn(),
+    ...(s.TMUX && { tmuxSocket: nt(s.TMUX, ",") }),
+  };
+}
+import { randomUUID as In } from "crypto";
+import {
+  lstat as Dn,
+  readdir as Nn,
+  realpath as Ke,
+  rm as Fn,
+  unlink as vr,
+  writeFile as Ln,
+} from "fs/promises";
+import {
+  isAbsolute as ht,
+  join as Dt,
+  normalize as jn,
+  relative as Wn,
+} from "path";
+import { readFile as En, unlink as Rn } from "fs/promises";
+import { join as vn } from "path";
+var Tn = 250,
+  An = 604800000,
+  Cn = 256,
+  Bn = p(() =>
+    tn({
+      writtenAtMs: Xn().optional(),
+      shells: oo(
+        tn({
+          pid: Xn().int().positive(),
+          procStart: we().optional(),
+          startTimeTicks: Xn().int().optional(),
+        }),
+      ).catch([]),
+    }),
+  );
+async function Sr(e, r = {}) {
+  let o = vn(e, "adopt.json"),
+    n = `${o}.reap.${process.pid}`,
+    h = Date.now() + (r.waitMs ?? 0);
+  for (;;)
+    try {
+      await ji(o, n);
+      break;
+    } catch (c) {
+      if (Date.now() >= h) {
+        if (!J(c)) t(`[adopt] reap claim failed: ${c}`, { level: "warn" });
+        return { found: !1, reaped: 0 };
+      }
+      await K(Tn);
+    }
+  try {
+    let c = Bn().safeParse(te(await En(n, "utf-8")));
+    if (!c.success) return { found: !0, reaped: 0 };
+    let { writtenAtMs: b, shells: v } = c.data,
+      k = b !== void 0 ? Date.now() - b : void 0;
+    if ((k !== void 0 && k > An) || v.length > Cn)
+      return (
+        t(
+          `[adopt] reap skipped: implausible payload (age ${k ?? "?"}ms, ${v.length} entries)`,
+          { level: "warn" },
+        ),
+        { found: !0, reaped: 0 }
+      );
+    if (
+      (await Promise.all(
+        v.map((T) => EKt(T.pid, T.startTimeTicks, T.procStart)),
+      ),
+      v.length > 0)
+    )
+      a("tengu_adopt_exit_reap", { reaped_shells: v.length });
+    return { found: !0, reaped: v.length };
+  } catch (c) {
+    return (
+      t(`[adopt] reap read/parse failed: ${c}`, { level: "warn" }),
+      { found: !0, reaped: 0 }
+    );
+  } finally {
+    await Rn(n).catch(() => {});
+  }
+}
+var On = 7,
+  Pn = { head: 40, tail: 20 },
+  Mn = { head: 50, tail: 30 },
+  Er = 1000,
+  xn = 1e6;
+async function ut(e) {
+  let [r, o] = await Promise.all([
+    Bt(e, [
+      "log",
+      "--no-show-signature",
+      `--max-count=${Er}`,
+      "--format=%H%x00%s",
+      "HEAD",
+      "--not",
+      "--remotes",
+      "--",
+    ]),
+    Bt(e, ["symbolic-ref", "-q", "--short", "HEAD"]),
+  ]);
+  if (r.code !== 0) return;
+  let n = r.stdout
+      .split(
+        `
+`,
+      )
+      .map((c) => c.split("\x00"))
+      .filter((c) => c.length === 2 && c[0] !== ""),
+    h = n[0];
+  if (h === void 0 || !b$(h[0])) return;
+  return {
+    branch: o.code === 0 ? ud(o.stdout, Mn) || null : null,
+    count: n.length,
+    headSha: h[0],
+    shortSha: h[0].slice(0, On),
+    subject: ud(h[1], Pn),
+  };
+}
+function vDs(e) {
+  return `${e.count}${Rr(e)} unpushed ${I(e.count, "commit")} on ${e.branch ?? "detached HEAD"}`;
+}
+function xia(e) {
+  let r = e.count > 1 ? ` and ${e.count - 1}${Rr(e)} more` : "";
+  return `${vDs(e)}: ${[e.shortSha, e.subject].filter(Boolean).join(" ")}${r}`;
+}
+async function Ot(e, r) {
+  if (!b$(r)) return !1;
+  let o = await Bt(e, ["rev-parse", "HEAD"]);
+  return o.code === 0 && o.stdout.trim() === r;
+}
+async function Bt(e, r) {
+  return mt(Ft(), [...Un, ...r], { cwd: e, env: li(), maxBuffer: xn });
+}
+function Rr(e) {
+  return e.count >= Er ? "+" : "";
+}
+var oqn = "recap.trigger";
+function Jn(e, r) {
+  if (re() && r !== void 0) {
+    let o = st.job(e, [oqn]);
+    if (HS(o) === void 0) {
+      r.write(o, "", { publishDiscipline: "inPlace" }).catch(() => {});
+      return;
+    }
+  }
+  Ln(Dt(Rs(e), oqn), "").catch(() => {});
+}
+async function PXe(e, r, o, n) {
+  let h = o?.handoff ? !0 : void 0,
+    c = o?.evict ? !0 : void 0,
+    b = o?.knownGone
+      ? { ok: !1, code: "ENOJOB", error: "job already gone (caller-verified)" }
+      : await ey({ proto: Vf, op: "kill", short: e, handoff: h, evict: c });
+  for (let v = 0; !b.ok && b.code === "ESTARTING" && v < 10; v++)
+    (await K(200),
+      (b = await ey({
+        proto: Vf,
+        op: "kill",
+        short: e,
+        handoff: h,
+        evict: c,
+      })));
+  if (b.ok) return { confirmed: !0 };
+  if (b.code === "ENOJOB" || b.code === "ENOCONN" || b.code === "ETIMEOUT") {
+    let v = await GMo(e, n);
+    if (v.anyMatch && b.code === "ENOJOB") return { confirmed: v.confirmed };
+    let k = !1,
+      T = !1;
+    if (b.code === "ENOCONN" || b.code === "ETIMEOUT") {
+      let y;
+      if (v.anyMatch) y = v.confirmed;
+      else {
+        let R = await lK({ silent: !0 }, n),
+          M = R.workers[e];
+        if (M !== void 0) {
+          let j = await RZr(M.pid, M.procStart);
+          if (j === "zombie")
+            if (
+              M.procStart !== void 0 &&
+              (await Ny(M.pid, M.procStart)) === !0
+            ) {
+              try {
+                process.kill(-M.pid, "SIGKILL");
+              } catch {
+                try {
+                  process.kill(M.pid, "SIGKILL");
+                } catch {}
+              }
+              y = !0;
+            } else y = !1;
+          else y = j !== "live";
+        } else {
+          let j = !v.scanFailed && !R.parseFailed;
+          ((k =
+            b.code === "ENOCONN" &&
+            j &&
+            r?.state !== void 0 &&
+            Ed({ state: r.state, tempo: r.tempo })),
+            (y = k),
+            (T = j && !y));
+        }
+      }
+      if (c && y && b.code === "ENOCONN" && !k)
+        await wve((R) => {
+          delete R.workers[e];
+        }, n).catch((R) => i(R));
+      return T ? { confirmed: y, noWorkerFound: T } : { confirmed: y };
+    }
+    return { confirmed: !0 };
+  }
+  return { confirmed: !1, error: b.error };
+}
+async function GMo(e, r) {
+  let o = await mRt(AM(e)),
+    n = !1,
+    h = !0,
+    c = !1,
+    b = await tie(r).catch(() => ((c = !0), []));
+  for (let v of b)
+    if (Ir(v, e)) {
+      if (((n = !0), !o))
+        try {
+          process.kill(v.pid, "SIGTERM");
+        } catch {}
+      let k = Date.now() + 3000,
+        T = !0;
+      while ((T = await rar(v.pid, v.procStart)) && Date.now() < k)
+        await K(100);
+      if (T) {
+        a("tengu_bg_killjob_ctrl_fallback", { ctrlSent: o });
+        try {
+          process.kill(v.pid, "SIGTERM");
+        } catch {}
+        let y = Date.now() + 500;
+        while ((T = await rar(v.pid, v.procStart)) && Date.now() < y)
+          await K(100);
+      }
+      if (T) h = !1;
+    }
+  return { confirmed: h, anyMatch: n, scanFailed: c };
+}
+async function sqn(e) {
+  let r = await ey({ proto: Vf, op: "list" });
+  if (r.ok && r.op === "list")
+    return {
+      shorts: new Set(r.jobs.map((c) => c.short)),
+      records: r.jobs.filter((c) => !c.outcome),
+    };
+  let o = await lK({ silent: !0 }, e),
+    n = Object.entries(o.workers),
+    h = await Promise.all(n.map(([, c]) => rar(c.pid, c.procStart)));
+  return {
+    shorts: new Set(n.filter((c, b) => h[b]).map(([c]) => c)),
+    records: [],
+  };
+}
+async function CDr(e, r) {
+  let o = await ey({ proto: Vf, op: "has", short: e });
+  if (o.ok && o.op === "has")
+    return { alive: o.alive, present: o.present ?? o.alive, daemonUp: !0 };
+  let n = (await lK({ silent: !0 }, r)).workers[e],
+    h = n !== void 0 && (await rar(n.pid, n.procStart));
+  return { alive: h, present: h, daemonUp: !1 };
+}
+async function TDs(e) {
+  let r = await ey({ proto: Vf, op: "has", short: e });
+  return r.ok && r.op === "has" ? (r.present ?? r.alive) : !1;
+}
+function oKt(e, r) {
+  let o = p8r(e);
+  return {
+    ...e,
+    ...(NJt(e) && { state: "working" }),
+    detail: th(Ds(r).replace(/\s+/g, " ").trim(), Ay),
+    ...(!o && { tempo: "active", needs: void 0, block: void 0 }),
+    suggestedReply: void 0,
+    output: null,
+    updatedAt: new Date().toISOString(),
+  };
+}
+var Kct = "That session isn't running \u2014 restart it first";
+function Br() {
+  return `Couldn't reach the ${tk()} \u2014 it may be restarting. Press Enter to retry`;
+}
+function CDs(e) {
+  return e.startsWith(Br());
+}
+var Pt =
+  " \u2014 your message was saved and will be sent when you next restart this session";
+async function Tr(e, r, o) {
+  I_(e);
+  let n = await Ms(e, o);
+  if (!n || Ede(r, n)) return !1;
+  let h = Vqt(n);
+  if (h !== void 0) return h === r;
+  return Ahe(e, n, r, o);
+}
+async function sKt(e, r, o, n, h, c, { nextTurn: b = !1 } = {}) {
+  let v = Date.now(),
+    k = (D, O, ce) => {
+      a("tengu_bg_reply_outcome", {
+        ms: Date.now() - v,
+        outcome: u(D),
+        error_code: fe(O),
+        errno: zy(ce),
+      });
+    },
+    T = Rs(e),
+    y = n ?? (await Ms(T, c)),
+    R = await Z_e(),
+    M = !1,
+    j = !1,
+    U = async () => {
+      if (b) {
+        let O = await ey({ proto: Vf, op: "ping" });
+        if (!O.ok) return O;
+        if (
+          O.op !== "ping" ||
+          O.version !==
+            {
+              ISSUES_EXPLAINER:
+                "report the issue at https://github.com/anthropics/claude-code/issues",
+              PACKAGE_URL: "@anthropic-ai/claude-code",
+              README_URL: "https://code.claude.com/docs/en/overview",
+              VERSION: "2.1.329",
+              FEEDBACK_CHANNEL:
+                "https://github.com/anthropics/claude-code/issues",
+              BUILD_TIME: "2026-11-19T16:23:05Z",
+              GIT_SHA: "6a49dd29d929a6fe40c060bbccfeb5a7f037c958",
+              HOOKS_WORKER_URL:
+                "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+              DD_SOURCEMAP_GROUP: "darwin",
+            }.VERSION
+        )
+          return (
+            (j = !0),
+            {
+              ok: !1,
+              error:
+                "its background service runs a different Claude Code version",
+              code: "ESKEW",
+            }
+          );
+      }
+      let D = await ey({
+        proto: Vf,
+        op: "reply",
+        short: e,
+        text: r,
+        auth: R,
+        ...(b && { nextTurn: b }),
+      });
+      if (!D.ok && "connected" in D && D.connected === !0) M = !0;
+      return D;
+    },
+    A = await U(),
+    z = async () => {
+      let D = 10;
+      for (
+        let O = 0;
+        !A.ok &&
+        (A.code === "ESTARTING" ||
+          A.code === "ENOREPLY" ||
+          A.code === "ERESPAWNING") &&
+        O < D;
+        O++
+      ) {
+        if (A.code === "ERESPAWNING") D = 60;
+        (await K(200), (A = await U()));
+      }
+    };
+  if ((await z(), !A.ok && A.code === "EAUTH")) {
+    let D = await Z_e();
+    if (D && D !== R) ((R = D), (A = await U()));
+  }
+  let ee = !1;
+  if (!A.ok && (A.code === "ENOCONN" || A.code === "ETIMEOUT") && !(b && M)) {
+    let D = await B7({ forceTransient: !0 }, c);
+    if (((ee = !D.ok), D.ok))
+      ((R = (await Z_e()) ?? R), (A = await U()), await z());
+  }
+  if (A.ok) {
+    if (y && !n) {
+      I_(T);
+      let D = (await Ms(T, c)) ?? y,
+        O = oKt(D, r);
+      if (O.queuedPrompt === r) O.queuedPrompt = void 0;
+      await wf(T, O, c).catch(mu);
+    }
+    if (!n)
+      (a("tengu_bg_agent_action", {
+        action: S("reply"),
+        wasTerminal: y ? JD(y.state) : !1,
+        daemon: !0,
+        jobSessionId: ve(o?.sessionId ?? y?.sessionId),
+        ...h?.(),
+      }),
+        f("job_reply"),
+        k("ok"));
+    return null;
+  }
+  if (A.code === "ESKEW") {
+    let D = j ? "job_reply_daemon_skewed" : "job_reply_worker_skewed";
+    return (m("job_reply", D), k("bad", D), { err: A.error, code: A.code });
+  }
+  if (A.code === "ENOJOB") {
+    if (!n)
+      (l("job_reply", "job_reply_not_running"),
+        k("sad", "job_reply_not_running"));
+    return { err: Kct, code: A.code };
+  }
+  if (A.code === "ENOCONN" || A.code === "ETIMEOUT") {
+    if (!n && A.code === "ENOCONN") {
+      let O = (await lK({ silent: !0 }, c)).workers[y?.daemonShort ?? e];
+      if (O && !(await rar(O.pid, O.procStart)))
+        return (
+          l("job_reply", "job_reply_not_running"),
+          k("sad", "job_reply_not_running"),
+          { err: Kct, code: "ENOJOB" }
+        );
+    }
+    if (!n)
+      (m("job_reply", "job_reply_daemon_unreachable", {
+        errno: u(A.code),
+        ensure_failed: ee,
+      }),
+        k("bad", "job_reply_daemon_unreachable"));
+    let D =
+      !n && A.code === "ENOCONN" && !A.connected && !M && (await Tr(T, r, c));
+    if (b && !M)
+      return {
+        err: "its background service didn't answer" + (D ? Pt : ""),
+        code: "EUNREACHABLE",
+        queued: D,
+      };
+    return { err: Br() + (D ? Pt : ""), code: A.code, queued: D };
+  }
+  if (!n)
+    (m("job_reply", "job_reply_send_failed"),
+      k("bad", "job_reply_send_failed", A.code));
+  let V = !n && !M && (await Tr(T, r, c));
+  return {
+    err: `Couldn't send your message \u2014 ${A.error}` + (V ? Pt : ""),
+    code: A.code,
+    queued: V,
+  };
+}
+async function zMo(e, r) {
+  if (gE(e)) return !1;
+  let o = rv(q0(r)),
+    n = await Zpe(
+      e.resumeSessionId ?? e.sessionId,
+      e.cwd,
+      e.linkScanPath,
+      void 0,
+      o,
+    ).catch(() => {
+      return;
+    });
+  return n?.hasMessages === !0 && !n.unverifiable;
+}
+async function Ar(e, r, o) {
+  let n = await aar(Rs(e), o);
+  if (n === null)
+    return (
+      f("job_attach"),
+      cde(r, "detached"),
+      { kind: "error", ended: !0, msg: "That session was removed" }
+    );
+  if (n.state === "done" || n.state === "stopped" || n.state === "blocked")
+    return (
+      f("job_attach"),
+      cde(r, "detached"),
+      {
+        kind: "error",
+        ended: !0,
+        msg:
+          n.state === "stopped"
+            ? "That session was stopped"
+            : n.state === "blocked"
+              ? "That session is blocked"
+              : (await zMo(n, o))
+                ? "That session exited. Press Enter to resume it"
+                : "That session ended",
+      }
+    );
+  if (n.state === "failed") {
+    if (n.detail === Dgt || n.detail === Wxn)
+      return (
+        m("job_attach", "job_attach_host_dead"),
+        cde(r, "error"),
+        {
+          kind: "error",
+          msg: n.detail === Wxn ? LHt : `${DHt}. Press Enter to restart it`,
+        }
+      );
+    let h = /^[^\u2014:]*? before init(?: \u2014 )?/,
+      c = h.test(n.detail);
+    return (
+      l(
+        "job_attach",
+        c ? "job_attach_pre_init_crash" : "job_attach_crash_loop",
+      ),
+      {
+        kind: "error",
+        ended: !0,
+        crashed: !0,
+        msg: `Session can't start \u2014 ${n.detail.replace(h, "").replace(/^Error:\s*/, "") || n.detail || "it crashed repeatedly"}`,
+      }
+    );
+  }
+  return;
+}
+var Mt = { forceTransient: !0, standsDownAtExit: !0 };
+async function ADs(e, r = {}) {
+  return await $n(e, r, { overStream: !1, onlyToRetry: !1 });
+}
+async function $n(e, r, o) {
+  (Jn(e, r.storageV5), t("[PERF:bg-attach-start]"), _ut());
+  let n = Uxn,
+    h = void 0,
+    c = Fxn,
+    b = {
+      holdScreenOnDisconnect: !0,
+      alreadyInAlt: r.alreadyInAlt,
+      gateStdinUntilFirstFrame: r.gateStdinUntilFirstFrame,
+      sessionTabs: h,
+      cloudTabs: r.cloudTabs,
+      tabsLanding: r.tabsLanding,
+    },
+    v = {
+      ...b,
+      holdingFrame: !0,
+      gateStdinUntilFirstFrame: !1,
+      tabsLanding: void 0,
+    },
+    k = r.gesture ?? { gestureId: In(), attempt: 0, interactive: {} },
+    T = !r.alreadyInAlt,
+    y = await Ge(e, o, {
+      ...b,
+      telemetry: {
+        gestureId: k.gestureId,
+        attempt: ++k.attempt,
+        t0: k.t0,
+        surface: k.surface,
+        daemonBooted: k.daemonBooted,
+        interactive: k.interactive,
+        storageV5: r.storageV5,
+      },
+    }),
+    R;
+  if (y.outcome === "error" && y.msg && n.test(y.msg)) {
+    if (((R = await B7(Mt, r.storageV5)), R.ok))
+      y = await Ge(e, o, {
+        ...b,
+        telemetry: {
+          gestureId: k.gestureId,
+          attempt: ++k.attempt,
+          t0: k.t0,
+          surface: k.surface,
+          daemonBooted: k.daemonBooted,
+          interactive: k.interactive,
+          storageV5: r.storageV5,
+        },
+      });
+  }
+  for (let j = 0; y.msg && c.test(y.msg) && j < 20; j++)
+    (await K(500),
+      (y = await Ge(e, o, {
+        ...b,
+        telemetry: {
+          gestureId: k.gestureId,
+          attempt: ++k.attempt,
+          t0: k.t0,
+          surface: k.surface,
+          daemonBooted: k.daemonBooted,
+          interactive: k.interactive,
+          storageV5: r.storageV5,
+        },
+      })));
+  let M = async () => {
+    if (T) process.stdout.write(TPe());
+    let j = await Ar(e, k, r.storageV5);
+    if (j) return j;
+    return (
+      l("job_attach", "job_attach_crashed"),
+      {
+        kind: "error",
+        orphaned: !0,
+        msg: "Session crashed. Press Enter to restart it",
+      }
+    );
+  };
+  while (y.outcome === "disconnected") {
+    if (ln()) {
+      if (T) process.stdout.write(TPe());
+      return xt("loop_head", r);
+    }
+    let j = " Reconnecting\u2026 ",
+      U = Math.max(1, (process.stdout.columns ?? 80) - j.length);
+    process.stdout.write(`\x1B7${Mbe(1, U)}\x1B[2;7m${j}\x1B[0m\x1B8`);
+    let A;
+    if (process.stdin.isTTY) {
+      let V = "isRaw" in process.stdin ? Boolean(process.stdin.isRaw) : !1;
+      if (!V) cE(process.stdin, !0);
+      let D = kr(process.stdin);
+      try {
+        A = await Promise.race([
+          B7(Mt, r.storageV5),
+          D.promise.then(() => "detach"),
+        ]);
+      } finally {
+        if ((D.cancel(), !V)) cE(process.stdin, !1);
+      }
+    } else A = await B7(Mt, r.storageV5);
+    if (A === "detach") {
+      if (T) process.stdout.write(TPe());
+      return (
+        t("[PERF:bg-attach-end]"),
+        f("job_attach"),
+        cde(k, "detached"),
+        { kind: "detached" }
+      );
+    }
+    let z = A;
+    if (!z.ok) {
+      if (T) process.stdout.write(TPe());
+      if (z.stoodDown) return xt("reconnect", r, z);
+      return (
+        m("job_attach", `job_attach_daemon_start_failed_${z.causeCode}`),
+        cde(k, "error"),
+        { kind: "error", msg: `Couldn't restart the ${tk()}: ${z.reason}` }
+      );
+    }
+    let ee = _ut();
+    if (ee && TDr(ee)) {
+      if (T) process.stdout.write(TPe());
+      return (
+        t("[PERF:bg-attach-end]"),
+        f("job_attach"),
+        cde(k, "detached"),
+        { kind: "detached" }
+      );
+    }
+    if (await vDr(e))
+      return (
+        t(
+          `[bg-attach] worker gone on reconnect probe short=${e} \u2014 settled while attached`,
+        ),
+        M()
+      );
+    y = await Ge(e, o, {
+      ...v,
+      telemetry: {
+        gestureId: k.gestureId,
+        attempt: ++k.attempt,
+        t0: k.t0,
+        surface: k.surface,
+        daemonBooted: k.daemonBooted,
+        interactive: k.interactive,
+        storageV5: r.storageV5,
+      },
+    });
+    for (let V = 0; y.msg && c.test(y.msg) && V < 10; V++)
+      (await K(200),
+        (y = await Ge(e, o, {
+          ...v,
+          telemetry: {
+            gestureId: k.gestureId,
+            attempt: ++k.attempt,
+            t0: k.t0,
+            surface: k.surface,
+            daemonBooted: k.daemonBooted,
+            interactive: k.interactive,
+            storageV5: r.storageV5,
+          },
+        })));
+    if (y.msg?.includes("ENOJOB"))
+      return (
+        t(
+          `[bg-attach] ENOJOB on reconnect short=${e} \u2014 daemon has no handle (or it's killing/settled)`,
+        ),
+        M()
+      );
+    if (y.outcome === "error" && T) process.stdout.write(TPe());
+  }
+  if (
+    y.outcome === "detached" &&
+    y.msg &&
+    !o.onlyToRetry &&
+    (jxn.test(y.msg) || c.test(y.msg))
+  ) {
+    if (T) process.stdout.write(TPe());
+    return (
+      m("job_attach", "job_attach_stalled"),
+      {
+        kind: "error",
+        msg: y.msg.replace(/^E(STALLED|RESPAWNING|STARTING):\s*/, ""),
+      }
+    );
+  }
+  if (y.outcome === "error") {
+    if (y.msg?.startsWith(`${Bxn}:`)) {
+      m("job_attach", "job_attach_host_dead");
+      let U = await Ms(Rs(e), r.storageV5).catch(() => null),
+        A = y.msg.slice(Bxn.length + 1).trim();
+      return {
+        kind: "error",
+        msg: U !== null && gE(U) ? A : `${A}. Press Enter to restart it`,
+      };
+    }
+    if (y.msg?.startsWith(`${EDr}:`)) {
+      m("job_attach", "job_attach_no_response");
+      let U = await Ms(Rs(e), r.storageV5).catch(() => null);
+      if (U !== null && gE(U))
+        return {
+          kind: "error",
+          msg: `${Ohn}. Press ctrl+x to stop it. Its shell command won't be run again for you`,
+        };
+      return {
+        kind: "error",
+        notResponding: !0,
+        msg: `${Ohn}. Press Enter again to restart it (the session is saved)`,
+      };
+    }
+    if (y.msg?.includes("ENOJOB")) {
+      t(
+        `[bg-attach] ENOJOB on first attach short=${e} \u2014 daemon has no handle (or it's killing/settled)`,
+      );
+      let U = await Ar(e, void 0, r.storageV5);
+      if (U) return U;
+      return (
+        l("job_attach", "job_attach_orphaned"),
+        {
+          kind: "error",
+          orphaned: !0,
+          msg: `${IUe()} lost track of this session. Press Enter to restart it`,
+        }
+      );
+    }
+    if (R && !R.ok) {
+      if (R.stoodDown) return xt("first_attach", r, R);
+      return (
+        m("job_attach", `job_attach_daemon_start_failed_${R.causeCode}`),
+        cde(k, "error"),
+        { kind: "error", msg: `Couldn't start the ${tk()}: ${R.reason}` }
+      );
+    }
+    let j =
+      y.msg && c.test(y.msg)
+        ? `${IUe()} is still starting. Try again in a moment`
+        : y.msg && n.test(y.msg)
+          ? `${IUe()} didn't respond after starting. Try again in a moment`
+          : y.msg
+            ? `Couldn't attach \u2014 ${y.msg}`
+            : "Couldn't attach to that session";
+    return (m("job_attach", "job_attach_failed"), { kind: "error", msg: j });
+  }
+  if ((t("[PERF:bg-attach-end]"), f("job_attach"), y.msg && NHt.test(y.msg)))
+    return { kind: "detached", msg: y.msg.replace(NHt, "") };
+  return y.beforeFirstFrame
+    ? { kind: "detached", beforeFirstFrame: !0 }
+    : { kind: "detached" };
+}
+var Hn =
+  "Background sessions still running will stop in about a minute. Run 'claude agents' to keep them.";
+async function xt(e, r, o) {
+  let n = x(),
+    [h, c] = o
+      ? [void 0, o.viaService === !0 && n !== "macos"]
+      : await Promise.all([
+          ey({ proto: Vf, op: "ping" }, { timeoutMs: 300 }),
+          Mia(),
+        ]),
+    b = h !== void 0 && (h.ok || h.code === "ETIMEOUT"),
+    v =
+      !b && !c && n !== "windows" && process.stdout.isTTY
+        ? `${Hn}
+`
+        : "";
+  if (
+    (t(`[bg-attach] held: this process is exiting (${e})`),
+    a("tengu_bg_attach_held_at_exit", {
+      loop_head: e === "loop_head",
+      first_attach: e === "first_attach",
+      daemon_up: b,
+      service_restart: c,
+      notice: v !== "",
+    }),
+    r.alreadyInAlt)
+  )
+    r.onExitNotice?.(v);
+  else if (v) process.stdout.write(v);
+  return Cl();
+}
+var Or = 32,
+  Gn = { head: 50, tail: 30 },
+  Kn = { head: 60, tail: 100 },
+  VMo = new RegExp(`^[0-9a-f]{${Or}}$`);
+function Yn(e) {
+  return Qe(e).slice(0, Or);
+}
+async function oke(e, r = {}, o) {
+  let n = await Ms(Rs(e), o),
+    h = n?.worktreePath ? await tie(o).catch(() => []) : [],
+    c = new Set();
+  for (let R of h) if (Ir(R, e)) c.add(R.pid);
+  let b = await PXe(
+    e,
+    n ?? void 0,
+    { knownGone: r.knownGone, evict: !0 },
+    o,
+  ).catch((R) => ({ confirmed: !1, error: d(R) }));
+  if (!b.confirmed) {
+    if (
+      (t(
+        `deleteJob: kill unconfirmed for ${e} \u2014 skipping jobdir/worktree removal to avoid stranding a live worker`,
+        { level: "warn" },
+      ),
+      !r.internal)
+    )
+      m("job_delete", "kill_unconfirmed", {
+        had_worktree: Boolean(n?.worktreePath),
+      });
+    return { removed: !1, error: b.error, errorCode: "kill_unconfirmed" };
+  }
+  let v,
+    k,
+    T = !1;
+  if (n?.worktreePath) {
+    let R = n.worktreePath,
+      M,
+      j,
+      U,
+      A = null,
+      z = "present",
+      ee = !1,
+      V,
+      D,
+      O,
+      {
+        dirty: ce,
+        trackedChanges: Ne,
+        gitError: ue,
+        submoduleWork: Be,
+        connectorDownloads: Oe,
+      } = await oht(R, void 0),
+      H = J9r(R, n.originCwd) ?? void 0,
+      G = await Ke(R).catch(() => R),
+      me = Yn(G);
+    T =
+      r.discardUnpushed !== void 0 &&
+      !ue &&
+      r.discardUnpushed.worktreeDigest === me &&
+      (await Ot(G, r.discardUnpushed.headSha));
+    let Fe = !ue && H ? await vKe(H).catch(() => null) : null,
+      ke,
+      Pe = !1;
+    for (let [Ee, oe] of (Fe ?? []).entries())
+      if ((await Ke(oe.worktreePath).catch(() => oe.worktreePath)) === G) {
+        ((ke = oe), (Pe = Ee > 0 && !oe.prunable));
+        break;
+      }
+    let Se = t5o(G),
+      he =
+        H !== void 0 &&
+        Se !== null &&
+        (await Ke(Se).catch(() => Se)) === (await Ke(H).catch(() => H)),
+      ie =
+        Pe && he
+          ? Be?.kind === "unverifiable"
+            ? "submodule"
+            : Ne
+              ? "tracked_changes"
+              : void 0
+          : H !== void 0 && (await e8r(G, H))
+            ? void 0
+            : "not_registered",
+      ge = r.forceRemoveWorktree !== void 0 && r.forceRemoveWorktree === me,
+      Le = ge && ie === void 0 && t8r(G),
+      Ue = Le
+        ? "job_delete_force_remove"
+        : r.force === !0 || T
+          ? "job_delete_force"
+          : "job_delete",
+      gt = knr(Ue),
+      Z = ynr(ke?.lockReason),
+      Q;
+    if ((Q = await Vn(e, G, R, o)) !== null)
+      ((M = "in_use"),
+        (V = Q.verified && HB.test(Q.jobId) ? Q.jobId : void 0),
+        t(
+          `deleteJob: ${R} is claimed by running job ${Q.jobId}'s state.json (${Q.verified ? "verified" : "unverifiable claim"}) \u2014 not ours to remove`,
+          { level: "warn" },
+        ));
+    else if (
+      ((ee = (await qRr(R)) === null) || T || Le) &&
+      (z = await rR(R)) !== "gone" &&
+      (A =
+        z === "unreadable"
+          ? "unreadable"
+          : await It(e, G, R, { includeUnsettled: T || Le }, o)) !== null
+    ) {
+      if (A === "claimed" && !ee && T)
+        ((M = "unpushed_shared"),
+          (D = await ut(R).catch(() => {
+            return;
+          })));
+      else M = A === "claimed" ? "shared_record" : "records_unreadable";
+      t(
+        A === "claimed"
+          ? `deleteJob: ${R} is also recorded by another settled job's state.json \u2014 not removing another session's output`
+          : `deleteJob: could not verify ${R} against sibling records \u2014 refusing until records are readable`,
+        { level: "warn" },
+      );
+    } else if (!(await HMt(ke?.lockReason)) && !(Z !== null && c.has(Z)))
+      ((M = "live_lock"),
+        (V = Z !== null ? `pid ${Z}` : void 0),
+        t(
+          `deleteJob: ${R} is locked by a live Claude Code process, or with a reason we did not write (${ke?.lockReason}) \u2014 not ours to remove`,
+          { level: "warn" },
+        ));
+    else if (
+      (O = await zn(h, e, c, G, R)) !== void 0 &&
+      (await rR(R)) !== "gone"
+    )
+      ((M = "occupied"),
+        (V =
+          O.pid === process.pid
+            ? `${typeof O.parkedJobId === "string" && HB.test(O.parkedJobId) ? `session ${O.parkedJobId},` : "a session"} moved to the background from this window, pid ${O.pid}`
+            : O.kind === "bg" && typeof O.jobId === "string" && HB.test(O.jobId)
+              ? `background session ${O.jobId}, pid ${O.pid}`
+              : `pid ${O.pid}, ${O.kind}`),
+        t(
+          `deleteJob: ${R} is the working directory of a live session (pid ${O.pid}, ${O.kind}) \u2014 not ours to remove`,
+          { level: "warn" },
+        ));
+    else if (ce && !ue && !gt)
+      ((M = "dirty"),
+        t(`deleteJob: kept ${R} \xB7 ${BTn(Oe)}`, { level: "warn" }));
+    else if (
+      !ue &&
+      H &&
+      !T &&
+      !(await n5o(R, await GTn(H), { primaryCheckoutVouches: !0 }))
+    ) {
+      if ((await It(e, G, R, { includeUnsettled: !1 }, o)) === "claimed")
+        ((M = "unpushed_shared"),
+          t(
+            `deleteJob: ${R} has unpushed commits and is also recorded by another settled job's state.json \u2014 not offering a discard`,
+            { level: "warn" },
+          ));
+      else
+        ((M = "unpushed"),
+          t(`deleteJob: ${R} has commits that are on no remote, kept`, {
+            level: "warn",
+          }));
+      D = await ut(R).catch(() => {
+        return;
+      });
+    } else if (
+      T &&
+      r.discardUnpushed !== void 0 &&
+      !(await Ot(G, r.discardUnpushed.headSha))
+    )
+      ((M = "unpushed"),
+        t(`deleteJob: ${R} HEAD moved past the confirmed discard pin, kept`, {
+          level: "warn",
+        }),
+        (D = await ut(R).catch(() => {
+          return;
+        })));
+    else {
+      let Ee = J9r(R, n.originCwd) ?? void 0,
+        oe = (n.originCwd ? pr(n.originCwd) : null) ?? void 0,
+        q = await wce(R, n.worktreeBranch, Ee, n.worktreeHookBased, Ue, G, oe, {
+          storageV5: o,
+          forceRemoveRequested: ge,
+        }).catch(
+          (ae) => (
+            t(`deleteJob: removeAgentWorktree threw for ${R}: ${d(ae)}`, {
+              level: "error",
+            }),
+            {
+              outcome: "failed",
+              errorSummary: `the removal failed unexpectedly (${ud(d(ae), Kn)})`,
+            }
+          ),
+        );
+      if (q.outcome === "failed") {
+        if (
+          ((M = q.needsForce
+            ? "unverified"
+            : q.errorSummary === DMt
+              ? "identity_changed"
+              : q.holdsWorktreesInside
+                ? "worktrees_inside"
+                : "remove_failed"),
+          (V = q.needsForce ? void 0 : q.errorSummary),
+          q.forceRemovable !== void 0 && t8r(G))
+        )
+          if (ie !== void 0) U = ie;
+          else if (
+            (await It(e, G, R, { includeUnsettled: !1 }, o)) === "claimed"
+          )
+            U = "shared_record";
+          else j = q.forceRemovable;
+      } else if (q.outcome === "left_in_place") v = ud(R);
+      else if (q.forcedDirectoryRemoval) {
+        let { keptBranch: ae } = q.forcedDirectoryRemoval;
+        k = {
+          worktree: ud(G),
+          ...(ae !== void 0 && { keptBranch: ud(ae, Gn) }),
+        };
+      }
+    }
+    if (M) {
+      if (!r.internal)
+        l("job_delete", `worktree_kept_${M}`, { had_worktree: !0 });
+      return {
+        removed: !1,
+        keptWorktree: ud(G),
+        keptReason: M,
+        ...(V !== void 0 && { keptErrorSummary: V }),
+        ...(D !== void 0 && { keptUnpushed: D }),
+        ...(M === "unpushed" && D !== void 0
+          ? { discardUnpushed: { headSha: D.headSha, worktreeDigest: me } }
+          : j !== void 0 &&
+            T &&
+            r.discardUnpushed !== void 0 && {
+              discardUnpushed: r.discardUnpushed,
+            }),
+        ...(j !== void 0 && {
+          forceRemoveWorktree: { worktreeDigest: me, cause: j },
+        }),
+        ...(U !== void 0 && { forceRemoveWithheld: U }),
+        ...(Be !== void 0 &&
+          (M === "dirty" || M === "remove_failed") && { submoduleWork: Be }),
+        ...(Oe !== void 0 && M === "dirty" && { connectorDownloads: Oe }),
+      };
+    }
+  }
+  let y = n?.fan?.some((R) => R.kind === "shell" && R.doneAt === void 0) ?? !1;
+  await Sr(Rs(e), { waitMs: y ? 4000 : 0 });
+  try {
+    await Fn(Rs(e), { recursive: !0, force: !0 });
+  } catch (R) {
+    if (
+      (I_(Rs(e)),
+      t(`deleteJob: failed to remove job dir for ${e}: ${d(R)}`, {
+        level: "warn",
+      }),
+      !r.internal)
+    )
+      m("job_delete", "jobdir_rm_failed", {
+        had_worktree: Boolean(n?.worktreePath),
+      });
+    return {
+      removed: !1,
+      error: `couldn't remove the session's state directory (${Vr(d(R))})`,
+      errorCode: "jobdir_rm_failed",
+    };
+  }
+  if (re() && o !== void 0 && HS(QMo(e)) === void 0) await cqn(o, e);
+  else await vr(MMe(e)).catch(() => {});
+  if ((await Nia(e), re() && o !== void 0 && HS(ZMo(e)) === void 0))
+    await PDs(o, e);
+  else await vr(XLt(e)).catch(() => {});
+  if ((I_(Rs(e)), !r.internal))
+    if (v)
+      l("job_delete", "worktree_left_in_place", {
+        had_worktree: !0,
+        discard_confirmed: T,
+      });
+    else if (k)
+      l("job_delete", "worktree_force_removed", {
+        had_worktree: !0,
+        discard_confirmed: T,
+      });
+    else
+      f("job_delete", {
+        had_worktree: Boolean(n?.worktreePath),
+        discard_confirmed: T,
+      });
+  return {
+    removed: !0,
+    discardConfirmed: T,
+    ...(v && { leftWorktreeDir: v }),
+    ...(k && { forcedWorktreeRemoval: k }),
+  };
+}
+async function Vn(e, r, o, n) {
+  for (let h of await jN(void 0, n).catch(() => [])) {
+    if (h.id === e || !h.state.worktreePath || Ed(h.state)) continue;
+    let c = Pr(h.state.worktreePath, r, o);
+    if (c === "match") return { jobId: h.id, verified: !0 };
+    if (c === "unverifiable") return { jobId: h.id, verified: !1 };
+    let b = await Mr(h.state.worktreePath, o);
+    if (De(b, r)) return { jobId: h.id, verified: !0 };
+  }
+  return null;
+}
+function Pr(e, r, o) {
+  if (De(e, o) || De(e, r)) return "match";
+  if (!Sd(e)) return "no_match";
+  let n = jn(e);
+  if (De(n, o) || De(n, r)) return "match";
+  return ht(e) && !Lr(e) && !td(e) ? "unverifiable" : "no_match";
+}
+function De(e, r) {
+  return pt(e) === pt(r);
+}
+function pt(e) {
+  return pp(bn(e));
+}
+function Cr(e, r) {
+  let o = Wn(pt(r), pt(e));
+  return o.split(/[/\\]/, 1)[0] !== ".." && !ht(o);
+}
+async function zn(e, r, o, n, h) {
+  for (let c of e) {
+    if (c.kind !== "interactive" && c.kind !== "bg") continue;
+    if (o.has(c.pid) || c.parkedJobId === r) continue;
+    if (c.pid === process.pid && c.parkedJobId === void 0) continue;
+    let b = c.pid === process.pid ? Ae() : c.cwd;
+    if (typeof b !== "string" || !ht(b)) continue;
+    if (!Cr(b, n) && !Cr(b, h)) continue;
+    if (c.kind === "bg" && typeof c.jobId === "string" && HB.test(c.jobId)) {
+      if ((await xr(Rs(c.jobId))) === "missing") continue;
+    }
+    return c;
+  }
+  return;
+}
+function Mr(e, r) {
+  let o = pe();
+  if (!ht(e) || Sd(e) || (ta(e, o) && ta(e, r))) return e;
+  let n = Jq(le(), e, { surfaceNetworkRaw: !0, anchors: [o, r] });
+  if (n === jg) return e;
+  if (n !== void 0 && (Sd(n) || (ta(n, o) && ta(n, r)))) return e;
+  return Ke(e).catch(() => e);
+}
+async function xr(e) {
+  return Dn(Dt(e, "state.json")).then(
+    () => "present",
+    (r) => (J(r) ? "missing" : "unreadable"),
+  );
+}
+async function It(e, r, o, { includeUnsettled: n }, h) {
+  let c;
+  try {
+    c = await Nn(yz(), { withFileTypes: !0 });
+  } catch (b) {
+    return J(b) ? null : "unreadable";
+  }
+  for (let b of c) {
+    if (!b.isDirectory() || b.name === e) continue;
+    let v = Dt(yz(), b.name),
+      k = await Ms(v, h);
+    if (k === null) {
+      if ((await xr(v)) === "missing") continue;
+      return "unreadable";
+    }
+    if (!k.worktreePath || (!n && !Ed(k))) continue;
+    let T = Pr(k.worktreePath, r, o);
+    if (T === "match") return "claimed";
+    if (T === "unverifiable") return "unreadable";
+    let y = await Mr(k.worktreePath, o);
+    if (De(y, r)) return "claimed";
+  }
+  return null;
+}
+async function Ge(e, r, o) {
+  return await jMo(e, o);
+}
+function Ir(e, r) {
+  return (
+    e.kind === "bg" &&
+    (e.jobId === void 0 ? e.sessionId?.startsWith(r) === !0 : e.jobId === r)
+  );
+}
+export {
+  cRt,
+  Phn,
+  RG,
+  EDr,
+  Ohn,
+  cde,
+  vDr,
+  TDr,
+  jMo,
+  vDs,
+  xia,
+  oqn,
+  PXe,
+  GMo,
+  sqn,
+  CDr,
+  TDs,
+  oKt,
+  Kct,
+  CDs,
+  sKt,
+  zMo,
+  ADs,
+  VMo,
+  oke,
+};

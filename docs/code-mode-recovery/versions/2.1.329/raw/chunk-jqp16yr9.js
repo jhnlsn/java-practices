@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{Xr,le}from"/$bunfs/root/chunk-c2c9kwmh.js";import{CO}from"/$bunfs/root/chunk-dnaxttmk.js";import{nC,yQ}from"/$bunfs/root/chunk-aq3ms068.js";import{G6,qm}from"/$bunfs/root/chunk-mkb20618.js";import{Ie}from"/$bunfs/root/chunk-b03afx74.js";import{sr,Pv}from"/$bunfs/root/chunk-yj4act9t.js";import{randomBytes as f}from"crypto";import{constants as a}from"fs";import{mkdir as p,writeFile as w}from"fs/promises";import{basename as l,dirname as E,join as n}from"path";var _="tengu_mossy_knuth";async function wqn(t,i,r,o){let e=qm();if(!Ie(_,{safe:!0})){let m=o?n(e,o):e;await p(m,{recursive:!0,mode:448});let c=n(m,`${t}${Date.now()}${i}`);return await w(c,r),c}await p(e,{recursive:!0,mode:448}),G6(e);let s=n(Xr(le(),E(e)).resolvedPath,l(e),`${t}${f(8).toString("hex")}${i}`);return await qDs(s,r),s}async function qDs(t,i){let r=await nC(t,[t],{leaf:"replace"});try{await r.recheckBeforeWrite(),await CO(r.ioPath),await w(r.ioPath,i,{mode:384,flag:a.O_WRONLY|a.O_CREAT|a.O_EXCL|sr|Pv})}catch(o){yQ(o,r,t)}finally{await r.close()}}
+export{wqn,qDs};

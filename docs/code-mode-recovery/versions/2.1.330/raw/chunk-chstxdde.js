@@ -1,0 +1,7 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{Ne}from"/$bunfs/root/chunk-69qhefwa.js";import{Tb,ZOe}from"/$bunfs/root/chunk-dw5px5e0.js";import{me}from"/$bunfs/root/chunk-5appeerh.js";import{ht}from"/$bunfs/root/chunk-mzmcvr6c.js";import{LV}from"/$bunfs/root/chunk-hym6yzrf.js";var l=1000;function Wjn(e=process.argv.slice(2)){return ZOe(e)&&Tb("--output-format",e)==="stream-json"}function pGe(){return Ne(process.env.CLAUDE_CODE_STARTUP_FAILURE_RESULTS)}var d=new Set(["org_config_required_unavailable","org_config_refused","config_file_invalid"]);function f(e){return d.has(e)||pGe()}function jjn(e,t=process.argv.slice(2)){let r=Tb("--session-id",t);return(Tb("--sdk-url",t)===void 0?ht(r):r)||e}function Tlt({sessionId:e,message:t,reason:r,invalidConfigFile:i,resultIndex:n=0}){return{...LV(e,[t]),...r!==void 0&&{startup_failure_reason:r},...i!==void 0&&{invalid_config_file:i},...n!==null&&{result_index:n}}}async function xj(e){if(f(e.reason))await TGt([Tlt({...e,sessionId:jjn(e.sessionId)})])}async function TGt(e,{goesOn:t=!1}={}){let r=process.stdout;if(!Wjn()||r.writableEnded||r.destroyed)return!1;let i=e.map((o)=>JSON.stringify(o)+`
+`).join(""),n=(o)=>{},u=new Promise((o)=>{n=o}),s=()=>n(!1);r.once("error",s);try{r.write(i,(o)=>n(!o))}catch{return!1}let a=await me(u,l)??!1;if(t&&a)r.off("error",s);return a}
+export{Wjn,pGe,jjn,Tlt,xj,TGt};

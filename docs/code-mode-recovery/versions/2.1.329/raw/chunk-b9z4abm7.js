@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{IA,fnt}from"/$bunfs/root/chunk-r6qcz1v1.js";import{sd,eC}from"/$bunfs/root/chunk-aq3ms068.js";import{Woe,LN,jj,Hge,v9o}from"/$bunfs/root/chunk-hg1yqkjk.js";import{Z}from"/$bunfs/root/chunk-q9rzh92c.js";async function y8n({toolUseContext:e,forkContextMessages:o,mainThreadAgentDefinition:t}){await fnt(e);let{systemPrompt:s,userContext:m,systemContext:r}=v9o()??await i(e,t);return{systemPrompt:s,userContext:m,systemContext:r,toolUseContext:e,forkContextMessages:o,advisorModel:e.getAdvisorSetting()}}async function i(e,o){let[t,s,m]=await Promise.all([e.renderedSystemPrompt??n(e,o),LN(e.session,e.storageV5,e.credentials),Woe(e.session,e.options.cacheBreakerPhrase)]);return{systemPrompt:t,userContext:s,systemContext:m}}async function n(e,o){let t=Z(e),s=await jj(IA(e),eC({permissionMode:t.mode,setting:sd(),mainLoopModel:e.options.mainLoopModel}));return Hge({mainThreadAgentDefinition:o,toolUseContext:e,customSystemPrompt:e.options.customSystemPrompt,defaultSystemPrompt:s,appendSystemPrompt:e.options.appendSystemPrompt})}
+export{y8n};

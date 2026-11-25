@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{no,le}from"/$bunfs/root/chunk-w578pjby.js";import{vI}from"/$bunfs/root/chunk-q7qjcthc.js";import{NC,see}from"/$bunfs/root/chunk-865at33z.js";import{_K,ih}from"/$bunfs/root/chunk-8nvd6fqx.js";import{Pe}from"/$bunfs/root/chunk-sghy0qej.js";import{cr,oC}from"/$bunfs/root/chunk-jxja0v0z.js";import{randomBytes as f}from"crypto";import{constants as a}from"fs";import{mkdir as p,writeFile as w}from"fs/promises";import{basename as l,dirname as E,join as n}from"path";var _="tengu_mossy_knuth";async function zYn(t,i,r,o){let e=ih();if(!Pe(_,{safe:!0})){let m=o?n(e,o):e;await p(m,{recursive:!0,mode:448});let c=n(m,`${t}${Date.now()}${i}`);return await w(c,r),c}await p(e,{recursive:!0,mode:448}),_K(e);let s=n(no(le(),E(e)).resolvedPath,l(e),`${t}${f(8).toString("hex")}${i}`);return await i2s(s,r),s}async function i2s(t,i){let r=await NC(t,[t],{leaf:"replace"});try{await r.recheckBeforeWrite(),await vI(r.ioPath),await w(r.ioPath,i,{mode:384,flag:a.O_WRONLY|a.O_CREAT|a.O_EXCL|cr|oC})}catch(o){see(o,r,t)}finally{await r.close()}}
+export{zYn,i2s};

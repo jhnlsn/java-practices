@@ -4,7 +4,7 @@ This documents the full locally recovered behavior of Claude Code **2.1.329** an
 
 **Recovered** means the implementation is present in the shipped binary. **Tested** means the path was executed with controlled host adapters. **Host-dependent** means behavior still relies on the Claude runtime or remote services. Recovery of the embedded JavaScript does not establish a standalone implementation with end-to-end parity.
 
-This specification is self-contained. Evidence identifiers refer to the [local recovery inventory](#evidence-inventory); the recovered application source and local test harness are not included in this repository. The original prompt extract remains a historical record; unconditional claims in it should be read alongside the version-specific behavior here.
+This specification is self-contained. The [complete extraction and test harness](code-mode-recovery/README.md) are published alongside this document. Evidence identifiers link to the [recovery inventory](#evidence-inventory). The original prompt extract remains a historical record; unconditional claims in it should be read alongside the version-specific behavior here.
 
 ## Architecture and execution
 
@@ -271,7 +271,7 @@ Model-facing guidance should explain the persistent JavaScript context, the abse
 
 ## Evidence inventory
 
-The extraction and verification were performed locally on 2026-11-21. Artifact paths below are relative to the local recovery archive; they are identifiers, not links to files shipped in this repository. Behavioral conclusions and test coverage are included above so this document remains usable without that archive.
+The extraction and verification were performed locally on 2026-11-21. Artifact paths below are relative to the [published recovery archive](code-mode-recovery/README.md). Each evidence entry links to the committed artifact; behavioral conclusions and test coverage are also summarized above.
 
 | Version | Embedded entries verified | Archived content bytes | Parsed JavaScript modules | Missing literal embedded references | Source maps |
 |---|---:|---:|---:|---:|---:|
@@ -287,20 +287,20 @@ Every archived entry was compared with its binary offset and SHA-256 digest. All
 
 | ID | Local evidence | Artifact identifier |
 |---|---|---|
-| E1 | 330 runtime/tool core | `versions/2.1.330/formatted/chunk-v7j43e2p.js` |
-| E2 | 330 configuration and limits | `versions/2.1.330/formatted/chunk-w50zedgp.js` |
-| E3 | 330 instrumentation and parser integration | `versions/2.1.330/formatted/chunk-zg2mw0h6.js` |
-| E4 | 330 async scheduler | `versions/2.1.330/formatted/chunk-yaw6xb6n.js` |
-| E5 | 330 VM context-global guard | `versions/2.1.330/formatted/chunk-kbr9bg9m.js` |
-| E6 | 330 activation and opt-in | `versions/2.1.330/formatted/chunk-37g0b5az.js` |
-| E7 | Bash async declarations | `versions/2.1.330/assets/core.bash.async.d.ts-6ecbb55e.txt` |
-| E8 | PowerShell async declarations | `versions/2.1.330/assets/core.powershell.async.d.ts-550adb89.txt` |
-| E9 | Context declarations | `versions/2.1.330/assets/team.async.d.ts-t0nj35ss.txt` |
-| E10 | External-tool declarations | `versions/2.1.330/assets/tools-external.d.ts-f7115890.txt` |
-| E11 | Generated shell implementation | `versions/2.1.330/assets/shell.prelude.js-77bab478.txt` |
-| E12 | Generated file implementation | `versions/2.1.330/assets/file.prelude.js-rv1w439g.txt` |
-| E13 | Generated context implementation | `versions/2.1.330/assets/team.prelude.js-jyv8vsvj.txt` |
-| E14 | Structural version comparison | `evidence/core-version-map.json` |
+| E1 | 330 runtime/tool core | [versions/2.1.330/formatted/chunk-v7j43e2p.js](code-mode-recovery/versions/2.1.330/formatted/chunk-v7j43e2p.js) |
+| E2 | 330 configuration and limits | [versions/2.1.330/formatted/chunk-w50zedgp.js](code-mode-recovery/versions/2.1.330/formatted/chunk-w50zedgp.js) |
+| E3 | 330 instrumentation and parser integration | [versions/2.1.330/formatted/chunk-zg2mw0h6.js](code-mode-recovery/versions/2.1.330/formatted/chunk-zg2mw0h6.js) |
+| E4 | 330 async scheduler | [versions/2.1.330/formatted/chunk-yaw6xb6n.js](code-mode-recovery/versions/2.1.330/formatted/chunk-yaw6xb6n.js) |
+| E5 | 330 VM context-global guard | [versions/2.1.330/formatted/chunk-kbr9bg9m.js](code-mode-recovery/versions/2.1.330/formatted/chunk-kbr9bg9m.js) |
+| E6 | 330 activation and opt-in | [versions/2.1.330/formatted/chunk-37g0b5az.js](code-mode-recovery/versions/2.1.330/formatted/chunk-37g0b5az.js) |
+| E7 | Bash async declarations | [versions/2.1.330/assets/core.bash.async.d.ts-6ecbb55e.txt](code-mode-recovery/versions/2.1.330/assets/core.bash.async.d.ts-6ecbb55e.txt) |
+| E8 | PowerShell async declarations | [versions/2.1.330/assets/core.powershell.async.d.ts-550adb89.txt](code-mode-recovery/versions/2.1.330/assets/core.powershell.async.d.ts-550adb89.txt) |
+| E9 | Context declarations | [versions/2.1.330/assets/team.async.d.ts-t0nj35ss.txt](code-mode-recovery/versions/2.1.330/assets/team.async.d.ts-t0nj35ss.txt) |
+| E10 | External-tool declarations | [versions/2.1.330/assets/tools-external.d.ts-f7115890.txt](code-mode-recovery/versions/2.1.330/assets/tools-external.d.ts-f7115890.txt) |
+| E11 | Generated shell implementation | [versions/2.1.330/assets/shell.prelude.js-77bab478.txt](code-mode-recovery/versions/2.1.330/assets/shell.prelude.js-77bab478.txt) |
+| E12 | Generated file implementation | [versions/2.1.330/assets/file.prelude.js-rv1w439g.txt](code-mode-recovery/versions/2.1.330/assets/file.prelude.js-rv1w439g.txt) |
+| E13 | Generated context implementation | [versions/2.1.330/assets/team.prelude.js-jyv8vsvj.txt](code-mode-recovery/versions/2.1.330/assets/team.prelude.js-jyv8vsvj.txt) |
+| E14 | Structural version comparison | [evidence/core-version-map.json](code-mode-recovery/evidence/core-version-map.json) |
 
 The 329 core is `versions/2.1.329/formatted/chunk-xgav7f9x.js`. The 330 parser and walker sources are `versions/2.1.330/raw/chunk-dzjs7e5t.js` and `versions/2.1.330/raw/chunk-qkq8jy2e.js`. Additional evidence records are `evidence/integrity.json`, `evidence/summary.json`, `evidence/tests.tap`, and the two versions' manifests and module graphs.
 

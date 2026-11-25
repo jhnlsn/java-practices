@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{en}from"/$bunfs/root/chunk-f9x2f6cx.js";import{s}from"/$bunfs/root/chunk-c203g5kd.js";import{KA}from"/$bunfs/root/chunk-3t7ve0wy.js";import{hLr}from"/$bunfs/root/chunk-zhr7rpv7.js";import{lxt}from"/$bunfs/root/chunk-pbteexar.js";import{Vit}from"/$bunfs/root/chunk-p2s0km69.js";import{TBt}from"/$bunfs/root/chunk-z2xw6net.js";import{Gca}from"/$bunfs/root/chunk-tb84sczh.js";function Rst(e){let n={CLAUDECODE:"1",CLAUDE_CODE_SESSION_ID:e.sessionId,CLAUDE_CODE_CHILD_SESSION:"1",CLAUDE_CODE_SESSION_ATTENDED:KA()?"1":"0",CLAUDE_PID:String(process.pid),...!e.isDisplayOnly&&Vit(e.sessionId)};if(en().lastingConnectorDownloads()!==void 0)n.CLAUDE_CODE_STARTER_MAY_HOLD_CONNECTOR_FILE="1";if(e.source==="agent")n.AI_AGENT=Gca("agent");if(e.effortLevel!==void 0)n.CLAUDE_EFFORT=e.effortLevel;if(hLr()){let o=TBt();if(o!==void 0)n.TRACEPARENT=o}return n}function zSe(e){return{sessionId:e.session_id,effortLevel:e.effort?.level,source:"harness"}}function ZW(){return Boolean(s.CLAUDE_CODE_CHILD_SESSION||s.CLAUDECODE)}function t(e){return e&&e.length?lxt(e):[]}var GQ=t;
+export{Rst,zSe,ZW,GQ};

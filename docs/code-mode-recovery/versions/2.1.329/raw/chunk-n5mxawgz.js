@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{SEr,p8e,H$n,KU,me}from"/$bunfs/root/chunk-aq3ms068.js";import{mm,ye,xr}from"/$bunfs/root/chunk-pxy9yt8m.js";import{Wo}from"/$bunfs/root/chunk-jngxzq9c.js";import{Yr}from"/$bunfs/root/chunk-b8jbx83a.js";var B5e=["theme","editorMode","verbose","preferredNotifChannel","autoCompactEnabled","autoScrollEnabled","fileCheckpointingEnabled","showTurnDuration","showMessageTimestamps","terminalProgressBarEnabled","todoFeatureEnabled","teammateMode","remoteControlAtStartup","autoUploadSessions","inputNeededNotifEnabled","agentPushNotifEnabled"];function Ja(o,r){let n=Wo();for(let e=n.length-1;e>=0;e--){let t=n[e],s=ye(t)?.[o];if(s===void 0)continue;if(t==="projectSettings"&&n.includes("userSettings")&&mm())continue;return{value:s,source:t}}if(B5e.includes(o)){let e=o,t=me()[e];if(t!==void 0&&t!==KU[e]){let s=SEr(e)?H$n(e,t):p8e(e,t);if(s!==void 0)return{value:s,source:"legacyGlobalConfig"}}}return{value:r,source:"default"}}function Vx({error:o}){if(o)Yr().saveFailed.emit()}function zie(o,r,n){xr("userSettings",{[o]:r},void 0,n).then(Vx)}
+export{B5e,Ja,Vx,zie};

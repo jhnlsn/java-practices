@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{i0r,REe}from"/$bunfs/root/chunk-dvkg7v5x.js";var a=[".local",".internal",".intranet",".lan",".corp",".home",".home.arpa",".localdomain",".private",".ts.net"];function Qti(s){if(s.type===void 0||s.type==="stdio")return"stdio";switch(s.type){case"sdk":case"sse-ide":case"ws-ide":case"claudeai-proxy":return"managed";case"sse":case"http":case"ws":return r(s.url)}}function r(s){if(/\$\{[^}]*\}/.test(s)||/^[a-z][a-z0-9+.-]*:\/\/\//i.test(s))return"other";let e;try{e=new URL(s).hostname.toLowerCase().replace(/^\[|\]$/g,"").replace(/\.$/,"")}catch{return"other"}if(!e)return"other";e=i0r(e)??e;let t=REe(e);if(e==="localhost"||e==="localhost.localdomain"||e==="0.0.0.0"||e.endsWith(".localhost")||t==="loopback"||t==="unspecified")return"localhost";if(!e.includes(".")&&!e.includes(":")||t!==void 0&&t!=="this_network"||a.some((o)=>e.endsWith(o)))return"private_network";return"public"}function LFa(s){let e=new Set;for(let t of s)e.add(Qti(t));return{has_mcp_stdio:e.has("stdio"),has_mcp_managed:e.has("managed"),has_mcp_localhost:e.has("localhost"),has_mcp_private_network:e.has("private_network"),has_mcp_public:e.has("public"),has_mcp_other:e.has("other")}}
+export{Qti,LFa};

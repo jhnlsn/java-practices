@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{Ae}from"/$bunfs/root/chunk-kgzzwvwc.js";import{p}from"/$bunfs/root/chunk-3kmy2srk.js";import{U9,y4}from"/$bunfs/root/chunk-y7kkbvfd.js";import{r4}from"/$bunfs/root/chunk-ynpk6n7b.js";import{uct}from"/$bunfs/root/chunk-04jmw2rr.js";import{O,c,Pe,v,W}from"/$bunfs/root/chunk-8s3h5g9z.js";W();var r="anthropic/renderUnderSessionRules";function JBl(){return{experimental:{[r]:{v:1}}}}var b=p(()=>c({experimental:c({[r]:c({v:v(1)})})}));var a=p(()=>Pe({v:v(1),permissionContext:U9(),offersHandOff:O(),classifiesEveryCall:O(),grantsApply:O()}));function aIs(n,i,t){let e=y4(n)?void 0:a().safeParse(n).data;if(e===void 0||i===void 0)return;let{mode:o,...s}=e.permissionContext;if(!(o==="default"||o==="dontAsk"||o==="acceptEdits"||o==="auto"&&e.offersHandOff)||Object.values(s.alwaysAllowRules).some((l)=>l.length>0)||s.strippedDangerousRules!==void 0||s.additionalWorkingDirectories.$map.length>0||s.trustedNetworkDirectories!==void 0)return;return{offersHandOff:e.offersHandOff,classifiesEveryCall:e.classifiesEveryCall,toolPermissionContext:{...uct(r4(e.permissionContext,i,Ae(),t)),...!e.grantsApply&&{pollEventDeliveryGuard:!0}}}}
+export{JBl,aIs};

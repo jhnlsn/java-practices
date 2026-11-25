@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{S}from"/$bunfs/root/chunk-y98mhv74.js";import{a}from"/$bunfs/root/chunk-487kez16.js";function UCe(i){let t=i.trim();if(/https?:\/\/(localhost|127\.0\.0\.1|\[::1\])[:/]/i.test(t))return e(S("local_address"),"That address only works in a browser on this machine. Open the sign-in address shown above instead, and paste the code its last page shows.");if(/https?:\/\/|\/magic-link#/i.test(t))return e(S("web_address"),"That's a web address, not the code. If it's a sign-in link, open it in your browser. If the last page shows a code, paste it here.");if(/^\d{4,10}$/.test(t.replace(/[\s-]/g,"")))return e(S("verification_code"),"That looks like a verification code. Enter it in your browser, on the page that asks for it. If a page then shows a longer code, paste it here.");let[o,n]=t.split("#");if(!o||!n)return e(t?S("incomplete"):S("blank"),"That doesn't look like the full code. Copy all of it, including the # in the middle.");return{authorizationCode:o,state:n}}function e(i,t){return a("tengu_oauth_manual_entry_refused",{reason:i}),{problem:t}}
+export{UCe};

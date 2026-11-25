@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{yt}from"/$bunfs/root/chunk-rb36kwbn.js";import{gt,GP}from"/$bunfs/root/chunk-4vsz8a99.js";import{Vo}from"/$bunfs/root/chunk-3grsnd7a.js";import{vo}from"/$bunfs/root/chunk-h4t4qfaq.js";import{IP,i$t}from"/$bunfs/root/chunk-b83x8d52.js";import{Vv}from"/$bunfs/root/chunk-6dfy8crz.js";import{ga}from"/$bunfs/root/chunk-2b1wcpvk.js";import{b6,dfe}from"/$bunfs/root/chunk-bzyb60p0.js";import{vR,Gd}from"/$bunfs/root/chunk-wwft95x8.js";import{De}from"/$bunfs/root/chunk-k883m4fq.js";import{ke}from"/$bunfs/root/chunk-hn3cwwzt.js";function rzo(e){return gt(e,ke)&&!Gd()||gt(e,yt)&&!vR()}function f(e){return e.isMcp!==!0&&(gt(e,Vo)||gt(e,Vv))}function DYl(e,t,s){return e.some((r)=>r.isMcp!==!0&&gt(r,vo))?wht(e,t,s):[]}function wht(e,t,s){let r=i$t(IP(dfe().filter((o)=>!rzo(o)),t)),n=s===void 0?r:r.filter((o)=>s.has(o.name)),a=new Set(e.map((o)=>o.name)),i=e.filter((o)=>!gt(o,vo)&&(o.isMcp===!0||!gt(o,ga))&&!GP(o)&&!f(o));for(let o of n)if(!a.has(o.name))i.push(o);let l=t.toolAliases??{};if([ke,De].some((o)=>Object.hasOwn(l,o)&&l[o]!==o)&&i.some((o)=>o.isMcp!==!0&&gt(o,ke))){let o=b6();return i.filter((m)=>m.isMcp===!0||!o.has(m.name))}return i}
+export{rzo,DYl,wht};

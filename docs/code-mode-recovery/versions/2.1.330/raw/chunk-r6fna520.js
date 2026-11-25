@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+var O_l=10485760,I_l=2000,M_l=2000,YWt=3000,B7=512000;var I={imageMaxRawBytes:307200,wholePdfMaxRawBytes:0,pdfMaxPagesPerRead:3},a={imageMaxRawBytes:512000,wholePdfMaxRawBytes:2500000,pdfMaxPagesPerRead:6};function Mys(e){switch(e){case"session":case"relay":return a;case"bridge":case"direct":return I;default:{let _=e;return I}}}var Jyo=28;function Qpe(e,_){if(e<=0||_<=0)return 0;return Math.ceil(e/Jyo)*Math.ceil(_/Jyo)}function iUn(e,_,t=1568,o=1568){if(e<=t&&_<=t&&Qpe(e,_)<=o)return[e,_];if(_>e){let[E,n]=iUn(_,e,t,o);return[n,E]}let M=e/_,r=1,A=e;while(r+1<A){let E=Math.floor((r+A)/2),n=Math.max(s(E/M),1);if(E<=t&&Qpe(E,n)<=o)r=E;else A=E}return[r,Math.max(s(r/M),1)]}function s(e){let _=Math.floor(e),t=e-_;return t>0.5||t===0.5&&_%2===1?_+1:_}var Qv={maxWidth:2000,maxHeight:2000,maxBase64Size:5242880,targetRawSize:3932160},XWt=33554432,aUn=20971520,H_l=100,lUn=104857600,gle=20,JWt=10,D_l=100,Qyo=600,D1i=20,L_l=[510,255,127],N_l=78643200,L1i=XWt-8388608,F_l=25165824,N1i=10485760,Ckr=64000,$_l=65536;
+export{O_l,I_l,M_l,YWt,B7,Mys,Jyo,Qpe,iUn,Qv,XWt,aUn,H_l,lUn,gle,JWt,D_l,Qyo,D1i,L_l,N_l,L1i,F_l,N1i,Ckr,$_l};

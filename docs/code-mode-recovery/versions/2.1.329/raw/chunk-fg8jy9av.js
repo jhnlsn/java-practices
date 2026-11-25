@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{vl,fA,gp,Sj}from"/$bunfs/root/chunk-ca90c7br.js";import{t}from"/$bunfs/root/chunk-c2c9kwmh.js";import{s}from"/$bunfs/root/chunk-gvhwnc7g.js";import{delimiter as a,isAbsolute as u,resolve as o}from"path";var jUo="CLAUDE_CODE_PLUGIN_DIRS",ezs="Unset CLAUDE_CODE_PLUGIN_DIRS (in the environment, or in the settings `env` block that sets it) to run without those folders.";function GUo(){let n=(s.CLAUDE_CODE_PLUGIN_DIRS??"").split(a).map((e)=>gp(e.trim())).filter((e)=>e!==""),i=n.filter((e)=>!l(e));if(i.length>0)t(`${jUo}: skipped ${i.join(", ")}: a plugin folder here is an absolute local path or starts with ~`,{level:"warn"});return n.filter(l).map((e)=>o(e))}function tzs(){let n=GUo();if(s.CLAUDE_CODE_PLUGIN_DIRS!==void 0)s.set("CLAUDE_CODE_PLUGIN_DIRS",n.join(a));return n}function I9(...n){let i=new Map;for(let e of n.flat()){let r=o(e);if(!i.has(r))i.set(r,e)}return[...i.values()]}function d6e(n,i){let e=new Set(i.map((r)=>o(r)));return n.filter((r)=>!e.has(o(r)))}function l(n){return u(n)&&!Sj(n)&&!vl(n)&&!fA(n)}
+export{jUo,ezs,GUo,tzs,I9,d6e};

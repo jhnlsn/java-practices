@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{zd}from"/$bunfs/root/chunk-3b216adx.js";var a=200000,m=1000;function upt(n){try{if(!b(n)||Array.isArray(n))return;let i={},s=[[n,i,1]],l=a,y=(e,t)=>{if(l--<=0)return c;if(e===null||e===void 0||typeof e==="string"||typeof e==="number"||typeof e==="boolean")return e;if(t>m||!b(e))return c;let u=Array.isArray(e)?[]:{};return s.push([e,u,t]),u};while(s.length>0){let[e,t,u]=s.pop(),d=Object.getOwnPropertyDescriptors(e);if(Array.isArray(e)){let f=d.length?.value;if(typeof f!=="number")return;for(let r=0;r<f;r++){let o=d[r];if(o!==void 0&&!("value"in o))return;let p=y(o?.value,u+1);if(p===c)return;t[r]=p}Object.freeze(t);continue}if(Object.getOwnPropertySymbols(e).length>0)return;for(let[f,r]of Object.entries(d)){if(!("value"in r))return;if(!r.enumerable)continue;let o=y(r.value,u+1);if(o===c)return;Object.defineProperty(t,f,{value:o,writable:!0,enumerable:!0,configurable:!0})}Object.freeze(t)}return i}catch{return}}var c=Symbol("not plain data");function b(n){if(typeof n!=="object"||n===null||zd(n))return!1;if(Array.isArray(n))return!0;let i=Object.getPrototypeOf(n);return i===Object.prototype||i===null}
+export{upt};

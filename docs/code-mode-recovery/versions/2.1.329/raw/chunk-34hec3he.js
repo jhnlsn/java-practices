@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{qo}from"/$bunfs/root/chunk-wrjcstwp.js";import{Bm}from"/$bunfs/root/chunk-496v3ed2.js";function BPe(e,n){let a;for(let s of Object.values(n))if(Bm(s)&&s.identity.agentId===e){if(s.status==="running")return s;if(!a)a=s}return a}function oBr(e,n){let a=BPe(e,n);if(a)return{status:"found",task:a};let s=Object.values(n).filter(Bm).filter((t)=>t.identity.resumableAgentId===e),o=s.find((t)=>t.status==="running")??s[0];if(o)return{status:"found",task:o};let i=new Map;for(let t of Object.values(n)){if(!Bm(t)||t.identity.agentName!==e)continue;let d=i.get(t.identity.agentId);if(!d||d.status!=="running"&&t.status==="running")i.set(t.identity.agentId,t)}let u=[...i.values()],m=u.filter((t)=>t.status==="running"),r=m.length>0?m:u;if(r.length===1)return{status:"found",task:r[0]};if(r.length>1)return{status:"ambiguous",candidates:r.map((t)=>t.identity.agentId),anyLive:r.some((t)=>!qo(t.status))};return{status:"not_found"}}function Lya(e){return O4t(e).filter((n)=>n.status==="running").map((n)=>n.identity.agentId)}function O4t(e){return Object.values(e).filter(Bm)}
+export{BPe,oBr,Lya,O4t};

@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{u}from"/$bunfs/root/chunk-y98mhv74.js";import{a}from"/$bunfs/root/chunk-487kez16.js";import{t}from"/$bunfs/root/chunk-c2c9kwmh.js";import{s}from"/$bunfs/root/chunk-gvhwnc7g.js";import{de}from"/$bunfs/root/chunk-pb0k2vmd.js";class c{latched=void 0;v1Selected=!1;latch(e,o){this.latched=e,this.v1Selected=o}reset(){this.latched=void 0,this.v1Selected=!1}}var r=de(new c,(e)=>e.reset());function p2(){if(r.latched!==void 0)return r.latched;let e=s.MCP_SDK_GENERATION,o=e==="v1"||e==="v2"?e:void 0;if(e!==void 0&&o===void 0)t(`MCP_SDK_GENERATION=${e} is invalid; expected 'v1' or 'v2' \u2014 ignoring`,{level:"warn"});let i=o??"v2",n="v2",d=o===void 0?"default":i===n?"env":"env_v1_compat";if(r.latch(n,i==="v1"),i!==n)t("The v1 MCP client was selected, but this build has only the v2 client. It uses the older handshake and relaxed sign-in checks.",{level:"warn"});return t(`mcp runtime arm: ${n} (source: ${d})`),a("tengu_mcp_sdk_generation",{generation:u(n),source:u(d)}),n}function nF(){return p2(),r.v1Selected}
+export{p2,nF};

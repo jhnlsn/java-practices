@@ -1,0 +1,3 @@
+versions/** -text linguist-vendored
+evidence/** -text
+tests/** -text

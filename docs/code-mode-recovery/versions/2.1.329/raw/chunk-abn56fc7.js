@@ -1,0 +1,5 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import"/$bunfs/root/chunk-cqahc80t.js";import"/$bunfs/root/chunk-5w3q3ks2.js";import"/$bunfs/root/chunk-ex77tta5.js";import{Se,On}from"/$bunfs/root/chunk-kgzzwvwc.js";import"/$bunfs/root/chunk-a1e4jb01.js";import"/$bunfs/root/chunk-y98mhv74.js";import"/$bunfs/root/chunk-avbzeyf3.js";import"/$bunfs/root/chunk-q3pjyhpy.js";import"/$bunfs/root/chunk-ca90c7br.js";import"/$bunfs/root/chunk-c84xzna8.js";import"/$bunfs/root/chunk-gn0dtfqq.js";var e={type:"local-jsx",name:"goal",description:"Set a goal Claude checks before stopping",argumentHint:"[<condition> | clear]",immediate:!0},o={type:"local",name:"goal",supportsNonInteractive:!0,thinClientDispatch:"post-text",description:"Set a goal \u2014 keep working until the condition is met",get isHidden(){return!Se()},isEnabled:()=>Se()||On(),load:()=>import("/$bunfs/root/chunk-g50r13jy.js")},n=e;export{n as default,o as goalNonInteractive};

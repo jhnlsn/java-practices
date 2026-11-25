@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{f}from"/$bunfs/root/chunk-78g0060s.js";import{s}from"/$bunfs/root/chunk-c203g5kd.js";import{xft,ste}from"/$bunfs/root/chunk-3t7ve0wy.js";import{ve}from"/$bunfs/root/chunk-zhr7rpv7.js";import{a}from"/$bunfs/root/chunk-y53wbr8a.js";import{Mr,iL}from"/$bunfs/root/chunk-2yx6c1y2.js";import{EVi,Yme,QV,b}from"/$bunfs/root/chunk-865at33z.js";import{JQ}from"/$bunfs/root/chunk-gq1dr8pm.js";import{ne}from"/$bunfs/root/chunk-m15w38ag.js";function O5r(){let e=QV();if(e.error)return EVi()?"gateway":"no_creds";let t=e.headers["x-api-key"];return t&&Yme(t)===null?"gateway":null}function Lnr(){return iL("feedbackDrafts")[0]??"notify"}function sZs(){if(JQ()!==null)return!1;if(xft())return!1;if(ste())return!1;if(ve()!=="firstParty")return!1;let e=s.CLAUDE_CODE_SEND_FEEDBACK;if(e===!1)return!1;return(e===!0&&!1||b("tengu_juniper_relay",!1))&&O5r()!=="gateway"}function uie(){return Lnr()!=="off"&&sZs()}function I5r(e,{storageV5:t,via:r}){let n=ne()&&t!==void 0?Mr("userSettings",{feedbackDrafts:e},void 0,t):Mr("userSettings",{feedbackDrafts:e});return a("tengu_feedback_drafts_setting_changed",{value:f(e),via:f(r)}),n}
+export{O5r,Lnr,sZs,uie,I5r};

@@ -1,0 +1,877 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import { Se, X, On, Fv, yD } from "/$bunfs/root/chunk-kgzzwvwc.js";
+import { A, d } from "/$bunfs/root/chunk-avbzeyf3.js";
+import { K } from "/$bunfs/root/chunk-q3pjyhpy.js";
+import { yt } from "/$bunfs/root/chunk-agyyqm1q.js";
+import { t, te } from "/$bunfs/root/chunk-c2c9kwmh.js";
+import { Ze } from "/$bunfs/root/chunk-8wtweva8.js";
+import { s } from "/$bunfs/root/chunk-gvhwnc7g.js";
+import { uc, Ue } from "/$bunfs/root/chunk-ht6e56zb.js";
+import { Dm, El } from "/$bunfs/root/chunk-0v6g5ynk.js";
+import { Tr, Itn, vd, UA } from "/$bunfs/root/chunk-p7ap8jfx.js";
+import {
+  gge,
+  Cee,
+  qDa,
+  L3r,
+  hqo,
+  gqo,
+  YVe,
+  Bee,
+  Ru,
+  Xs,
+} from "/$bunfs/root/chunk-hg1yqkjk.js";
+import { p } from "/$bunfs/root/chunk-3kmy2srk.js";
+import { st } from "/$bunfs/root/chunk-4gsb5pr1.js";
+import { ue } from "/$bunfs/root/chunk-ex299d27.js";
+import { ur } from "/$bunfs/root/chunk-be81kym3.js";
+import { oUn, Iyo, ce, Ht, Iae } from "/$bunfs/root/chunk-aq3ms068.js";
+import { cl } from "/$bunfs/root/chunk-np6n65sm.js";
+import { Gn } from "/$bunfs/root/chunk-pfd1s9m0.js";
+import { A8e } from "/$bunfs/root/chunk-hrrs5w99.js";
+import { zDe } from "/$bunfs/root/chunk-73rzabst.js";
+import { ye } from "/$bunfs/root/chunk-pxy9yt8m.js";
+import { Ee } from "/$bunfs/root/chunk-cd3hqxcc.js";
+import { opt } from "/$bunfs/root/chunk-2bzkjwxf.js";
+import { hF } from "/$bunfs/root/chunk-d1pd8gzf.js";
+import { Z } from "/$bunfs/root/chunk-q9rzh92c.js";
+import { tZe } from "/$bunfs/root/chunk-eb31gpz3.js";
+import { mqe } from "/$bunfs/root/chunk-g4jweshk.js";
+import { pJ, pg } from "/$bunfs/root/chunk-09zj247f.js";
+import { __ } from "/$bunfs/root/chunk-y61sx1j8.js";
+import { Dl } from "/$bunfs/root/chunk-9khj8v09.js";
+import { oue, $Dt } from "/$bunfs/root/chunk-fewk3btv.js";
+import { Roe } from "/$bunfs/root/chunk-qxx3gt0f.js";
+import { G8s, Ys } from "/$bunfs/root/chunk-njk3nrhp.js";
+import { jde, spt } from "/$bunfs/root/chunk-9pbss9x1.js";
+import { lEe, Rm } from "/$bunfs/root/chunk-920d5thj.js";
+import { us } from "/$bunfs/root/chunk-crt5y45a.js";
+import { MM, HTe, Bis } from "/$bunfs/root/chunk-ww6ykenb.js";
+import { Ig } from "/$bunfs/root/chunk-15e5qt5d.js";
+import { Yfe, _Ae, mhl, _hl } from "/$bunfs/root/chunk-j5nsdt1y.js";
+import { Ie } from "/$bunfs/root/chunk-b03afx74.js";
+import { $l } from "/$bunfs/root/chunk-0dbf4486.js";
+import { on } from "/$bunfs/root/chunk-7zycn5p7.js";
+import { n, c, W } from "/$bunfs/root/chunk-8s3h5g9z.js";
+import { dn } from "/$bunfs/root/chunk-xgbdbym2.js";
+import { j } from "/$bunfs/root/chunk-z749tmkd.js";
+import { re } from "/$bunfs/root/chunk-y83kjw73.js";
+async function oe(e) {
+  let o = new AbortController(),
+    r = async () => {
+      let l = new Set();
+      for (let a = e; a !== void 0 && !l.has(a); a = Yfe())
+        (l.add(a), await a.catch(() => {}));
+    },
+    i = async () => {
+      if ((await K(qDa, o.signal), o.signal.aborted)) return;
+      let l = ce();
+      for (let a of [e, l.hooksLoadAtStartup, l.hookRegistrationInFlight])
+        if (a !== void 0) yt().spentHooksLoads.add(a);
+    };
+  await Promise.race([r(), i()]).finally(() => o.abort());
+}
+async function U() {
+  let e = Yfe(),
+    o = yt();
+  if (e === void 0 || o.spentHooksLoads.has(e)) return;
+  ((o.hooksLoadWait ??= oe(e).finally(() => {
+    o.hooksLoadWait = void 0;
+  })),
+    await o.hooksLoadWait);
+}
+async function D(e, o, r) {
+  return (await r.hasLiveConnection(e, o)) || (await r.hasUnsettledDial(e, o));
+}
+function JQe(e, { pluginSource: o }) {
+  return o !== void 0 && (_Ae({ source: o }) || !mhl(o, e)) ? o : void 0;
+}
+async function H(e, o, r) {
+  try {
+    if ((await U(), o.pluginSource !== void 0)) {
+      if ((await _hl(o.pluginSource, o.pluginPath), JQe(e, o) !== void 0))
+        return o.pluginSource;
+    }
+    let i = L3r.get();
+    if (i === null || !i.isHooked()) {
+      Cee.delete(e);
+      return;
+    }
+    if (i.isConnecting(e) || (await D(e, o, r))) return;
+    return await i.raise(e, o);
+  } catch (i) {
+    (Cee.delete(e), uc(e, `mcp.connect raise failed: ${cl(i, o)}`));
+    return;
+  }
+}
+function Sxa() {
+  let e = yt().joinRounds;
+  return (
+    (e.count += 1),
+    {
+      ask: async (o, r, i) => {
+        await U();
+        let l = ce().loadedModules;
+        if (e.modules !== l) ((e.modules = l), e.answers.clear());
+        let a = e.answers.get(o) ?? H(o, r, i);
+        e.answers.set(o, a);
+        let f = await a;
+        return f === void 0 || L3r.get()?.isConnecting(o) || (await D(o, r, i))
+          ? JQe(o, r)
+          : f;
+      },
+      close: () => {
+        if (((e.count -= 1), e.count === 0)) e.answers.clear();
+      },
+    }
+  );
+}
+function IJn(e, o, r) {
+  return {
+    client: { name: e, type: "disabled", config: o, heldBy: r },
+    tools: [],
+    commands: [],
+  };
+}
+function Bde(e, o, r, i) {
+  let l = Yfe(),
+    a = L3r.get();
+  if (
+    (l === void 0 ||
+      (r.pluginSource === void 0 && yt().spentHooksLoads.has(l))) &&
+    (a === null || !a.isHooked()) &&
+    JQe(o, r) === void 0
+  )
+    return (Cee.delete(o), i());
+  return H(o, r, e).then((f) => (f === void 0 ? i() : IJn(o, r, f)));
+}
+import { join as ne } from "path";
+function rVr() {
+  if (X())
+    throw Error(
+      "Cannot use the MCP needs-auth cache file in a diskless session: only a storage backend can hold the cache",
+    );
+  return ne(Ze(), "mcp-needs-auth-cache.json");
+}
+function GGo() {
+  return st.state("mcp-needs-auth-cache");
+}
+function zGo(e) {
+  if (Iae(e)) return Promise.resolve({});
+  let o = yt();
+  if (!o.authCacheRead)
+    o.authCacheRead =
+      re() && e !== void 0
+        ? se(e)
+        : Gn()
+            .read(rVr())
+            .then((r) => te(r))
+            .catch(() => ({}));
+  return o.authCacheRead;
+}
+async function se(e) {
+  try {
+    let o = await e.read([GGo()]);
+    if (!o.ok) return {};
+    let r = o.value.items[0];
+    if (!r.found) return {};
+    return te(Buffer.from(r.value).toString("utf8"));
+  } catch {
+    return {};
+  }
+}
+function S8s() {
+  yt().authCacheRead = null;
+}
+function eVe(e) {
+  if (((yt().authCacheRead = null), re() && e !== void 0)) {
+    e.delete(GGo())
+      .then((o) => {
+        if (!o.ok)
+          t(`mcp needs-auth cache delete failed: ${dn(o.error)}`, {
+            level: "error",
+          });
+      })
+      .catch(() => {});
+    return;
+  }
+  if (X()) return;
+  Gn()
+    .delete(rVr())
+    .catch(() => {});
+}
+W();
+W();
+var F = "the user can reconnect it in their claude.ai connector settings",
+  x =
+    "the chat may now show the user a sign-in card for it; ask them to sign in there or in their claude.ai connector settings, and retry only after they say they have";
+function z(e) {
+  return Dm() && "url" in e && zDe(e.url);
+}
+var jFe = {
+  notConnected(e) {
+    return Iyo()
+      ? `MCP server "${e}" needs to be connected in claude.ai`
+      : `MCP server "${e}" needs to be connected in claude.ai (run /mcp to connect it)`;
+  },
+  signInAgain(e, o) {
+    if (MM(e)) return Bis;
+    let r = `MCP server "${e}" needs you to sign in again`;
+    return Dm()
+      ? `${r} (${z(o) ? x : F})`
+      : oUn()
+        ? r
+        : `${r} (run /mcp to re-authenticate)`;
+  },
+  helperRejected(e) {
+    let o = `MCP server "${e}" rejected the credential from its headersHelper`;
+    return oUn()
+      ? `${o} (check the helper, then start a new task or chat)`
+      : `${o} (check the helper and run /mcp to reconnect, or to authenticate if the server also uses OAuth)`;
+  },
+  headerRejected(e) {
+    let o = `MCP server "${e}" rejected the Authorization header in its config`;
+    return oUn()
+      ? `${o} (update it, then start a new task or chat)`
+      : `${o} (update it, then run /mcp to reconnect)`;
+  },
+  dialNeedsAuth(e, o) {
+    if (MM(e)) return HTe("needs_auth");
+    let r = `MCP server "${e}" needs authentication`;
+    return z(o) ? `${r} (${x})` : r;
+  },
+  dialNotConnected(e, o) {
+    if (MM(e)) return HTe("failed");
+    return `MCP server "${e}" is not connected${o}`;
+  },
+  sessionCredentialRejected(e, o) {
+    if (MM(e)) return Bis;
+    return `MCP server "${e}" rejected the session credential (HTTP ${o})`;
+  },
+  stepUp(e, o) {
+    if (MM(e)) return Bis;
+    let r = vd(o ?? "", void 0, "none"),
+      i = `MCP server "${e}" needs additional permissions (scope: "${r}")`;
+    return Dm()
+      ? `${i} \u2014 ${F}`
+      : `${i} \u2014 run /mcp to re-authenticate`;
+  },
+};
+var ae = "tengu_eager_raccoon",
+  bxa = "connector_signed_in",
+  le = p(() => c({})),
+  de = new j(() => new Map());
+function g8s() {
+  return El() && Ht(ae, !1);
+}
+function _8s() {
+  return g8s() && __() && !pJ();
+}
+function hkn(e, o) {
+  return _8s() && Dl().lapsedCcrSignIns.has(us(e, o));
+}
+async function y8s(e, o, r, i) {
+  let l = Cee.get(o);
+  if (l !== void 0) throw new A(gge(o, l), "MCP server held by a hook");
+  let a = await e.peekSettledConnection(o, r);
+  if (a !== void 0 && (a.type !== "connected" || a.discoveryAuthFailure))
+    await e.clearServerCache(o, r);
+  return e.ensureConnectedClient(
+    { name: o, type: "cached", config: r, capabilities: {}, cacheSavedAt: 0 },
+    i,
+  );
+}
+function B(e, o, r) {
+  let i = Tr(e),
+    l = `The "${i}" connector is installed, but its sign-in has stopped working, so its tools are unavailable. Call this tool only when the user's request needs this connector (even if they didn't name it explicitly). It tries the connection again. If the connector still needs a sign-in, the call fails, and the user may be shown a prompt to sign in again. Then tell them in one short sentence that ${i} needs them to sign in again, carry on with whatever does not need it, and do not call this tool again until they send another message. If the call fails for another reason, tell them that ${i} is not available right now. If the connection succeeds, the connector's tools become available. Do not ask the user for authorization codes, tokens, or URLs.`;
+  return {
+    name: ur(e, oue),
+    isMcp: !0,
+    mcpInfo: {
+      serverName: e,
+      toolName: oue,
+      serverType: o.type ?? "stdio",
+      source: hF(e, o),
+      isAuthStub: !0,
+      serverId: Ig(o),
+      serverIdStamp: spt(e, o),
+      ...jde(o),
+    },
+    isEnabled: () => !0,
+    isConcurrencySafe: () => !1,
+    isReadOnly: () => !1,
+    backgrounding: "never",
+    toAutoClassifierInput: () => e,
+    userFacingName: () => `${e} - authenticate (MCP)`,
+    maxResultSizeChars: 1e4,
+    renderToolUseMessage: () => `Check the sign-in of ${e}`,
+    async description() {
+      return l;
+    },
+    async prompt() {
+      return l;
+    },
+    get inputSchema() {
+      return le();
+    },
+    async checkPermissions(a) {
+      return { behavior: "allow", updatedInput: a };
+    },
+    async call(a, f) {
+      let g = de.of(f.session.host),
+        m = yD();
+      if (g.get(e) === m)
+        throw new A(
+          `The "${i}" connector was already tried in this turn.`,
+          "Connector sign-in tool called twice in one turn",
+        );
+      g.set(e, m);
+      let u = r(),
+        S = Promise.withResolvers();
+      try {
+        let h = await y8s(u, e, o, {
+            context: "MCP sign-in check",
+            signal: f.abortController.signal,
+            toolUseId: f.toolUseId,
+            toolUseIdWithListingsUntil: S.promise,
+          }),
+          y = await u.fetchToolsForClient(h, f.storageV5);
+        if (h.discoveryAuthFailure)
+          throw Object.assign(
+            new A(jFe.dialNeedsAuth(i, o), "MCP server needs authentication"),
+            { mcpErrorSource: "user_auth" },
+          );
+        if (u.getToolsListErrorForResult(y) !== void 0)
+          throw new A(
+            `The "${i}" connector connected, but its tools could not be listed.`,
+            "Connector connected but its tools could not be listed",
+          );
+        return {
+          data: {
+            message: `The "${i}" connector is connected again. Its tools are being added and should be available shortly.`,
+          },
+        };
+      } catch (h) {
+        let y = jFe.dialNotConnected(e, "");
+        if (h instanceof Error && h.message.startsWith(y))
+          h.message = jFe.dialNotConnected(i, "");
+        throw h;
+      } finally {
+        S.resolve();
+      }
+    },
+    mapToolResultToToolResultBlockParam(a, f) {
+      return { tool_use_id: f, type: "tool_result", content: a.message };
+    },
+  };
+}
+function q() {
+  return import.meta.require("/$bunfs/root/chunk-a5tfrce8.js");
+}
+function b() {
+  return q().mcpAuthModule();
+}
+function R() {
+  return q().mcpClientModule();
+}
+var he = p(() => c({})),
+  me = p(() =>
+    c({
+      callback_url: n().describe(
+        "The full callback URL from the browser address bar after authorizing, e.g. http://localhost:<port>/callback?code=...&state=...",
+      ),
+    }),
+  );
+function fe() {
+  return s.isSSH() || s.CLAUDE_CODE_REMOTE || On();
+}
+var G = new j(() => new Map()),
+  ge = 180000;
+function Ce(e) {
+  try {
+    let o = new URL(e).searchParams.get("redirect_uri");
+    if (o) return o;
+  } catch {}
+  return "http://localhost:<port>/callback";
+}
+function yee(e, o) {
+  if (Se()) return hkn(e, o) ? [B(e, o, R)] : [];
+  let r = lEe(e, o, { detail: "origin" });
+  return [be(e, o, r), Ae(e, o)];
+}
+function Y(e) {
+  let o = e !== void 0 ? pg(e) : pJ();
+  return ue() && o
+    ? "callable inside the REPL environment (this surface routes MCP tools through the REPL rather than advertising them as top-level tools)"
+    : "available automatically";
+}
+function Q(e) {
+  return ue() && pg(e)
+    ? "The server's tools are now callable inside the REPL environment (this surface routes MCP tools through the REPL rather than advertising them as top-level tools)."
+    : "The server's tools should now be available.";
+}
+function be(e, o, r) {
+  let i = o.type ?? "stdio",
+    l = r && r !== i ? `${i} at ${Itn(r, 256)}` : i,
+    a = $l(
+      async () =>
+        `The "${Tr(e)}" MCP server (${l}) is installed but requires authentication. ${(await yt().searchRedial?.offers({ name: e, config: o })) ? "A sign-in may still be good: calling one of the server's own tools by name, or searching for the server's name, connects again with the sign-in already held, so try that first. " : ""}` +
+        "Call this tool to start the OAuth flow \u2014 you'll receive an authorization URL to share with the user. " +
+        `Once the user completes authorization in their browser, the server's real tools will become ${Y()}.`,
+    );
+  return {
+    name: ur(e, oue),
+    isMcp: !0,
+    mcpInfo: {
+      serverName: e,
+      toolName: oue,
+      serverType: i,
+      source: hF(e, o),
+      ...(o.pluginSource !== void 0 && { pluginSource: o.pluginSource }),
+      isAuthStub: !0,
+      serverId: Ig(o),
+      serverIdStamp: spt(e, o),
+      ...jde(o),
+    },
+    isEnabled: () => !0,
+    isConcurrencySafe: () => !1,
+    isReadOnly: () => !1,
+    toAutoClassifierInput: () => e,
+    userFacingName: () => `${e} - authenticate (MCP)`,
+    maxResultSizeChars: 1e4,
+    renderToolUseMessage: () => `Authenticate ${e} MCP server`,
+    description: a,
+    prompt: a,
+    get inputSchema() {
+      return he();
+    },
+    async checkPermissions(f) {
+      return { behavior: "allow", updatedInput: f };
+    },
+    async call(f, g) {
+      try {
+        await mqe(e, o, {
+          credentials: g.credentials,
+          signal: g.abortController.signal,
+        });
+      } catch (C) {
+        if (g.abortController.signal.aborted) throw C;
+        return { data: { status: "error", message: vd(d(C)) } };
+      }
+      let m = Ru(e, o);
+      if (m === "managed-policy")
+        return {
+          data: {
+            status: "error",
+            message: YVe(
+              e,
+              m,
+              o,
+              `${hqo(e)}. Only an organization admin can change this; do not retry or ask the user to enable it.`,
+            ),
+          },
+        };
+      if (Xs(e))
+        return {
+          data: {
+            status: "error",
+            message: `MCP server ${Tr(e)} is disabled. Ask the user to enable it in /mcp before authenticating.`,
+          },
+        };
+      if (m === "project-approval")
+        return {
+          data: {
+            status: "error",
+            message: `${gqo(e)}. Ask the user to approve it; do not retry until they have.`,
+          },
+        };
+      let u = Roe(e, o);
+      if (u.kind === "claudeai-proxy")
+        return {
+          data: {
+            status: "unsupported",
+            message: `This is a claude.ai MCP connector. Ask the user to run /mcp and select "${Tr(e)}" to authenticate.`,
+          },
+        };
+      if (u.kind === "unsupported-transport")
+        return {
+          data: {
+            status: "unsupported",
+            message: `Server "${Tr(e)}" uses ${i} transport which does not support OAuth from this tool. Ask the user to run /mcp and authenticate manually.`,
+          },
+        };
+      if (u.kind === "anthropic-hosted")
+        return {
+          data: { status: "unsupported", message: vd(u.message, 1024, "none") },
+        };
+      if (yt().refusedRefreshServers.has(e) && (await A8e(e, u.config)))
+        return {
+          data: {
+            status: "unsupported",
+            message: `The sign-in server refused the last token refresh of MCP server "${Tr(e)}", perhaps only for a moment. Ask the user to run \`/mcp reconnect ${Tr(e)}\` or, if that doesn't help, \`/mcp\` to sign in again.`,
+          },
+        };
+      let S = G.of(g.session.host),
+        h = S.get(e);
+      if (
+        h !== void 0 &&
+        h.flow === b().getActiveOAuthPromise(e) &&
+        h.receivesPastedCallbacks() &&
+        on(h.config, u.config) &&
+        h.accountToken !== void 0 &&
+        h.accountToken === G8s() &&
+        h.identityEpoch === Ys() &&
+        Date.now() - h.startedAt < ge
+      )
+        return J({
+          serverName: e,
+          config: o,
+          authUrlPromise: h.authUrl,
+          oauthPromise: h.flow,
+          reused: !0,
+          context: g,
+        });
+      let y,
+        M = new Promise((C) => {
+          y = C;
+        }),
+        I,
+        O,
+        w = b().performMCPOAuthFlow(e, u.config, (C) => y?.(C), void 0, {
+          skipBrowserOpen: !0,
+          onWaitingForCallback: (C, E, P) => {
+            ((I = C), (O = P));
+          },
+        });
+      b().setActiveOAuthPromise(e, w);
+      let v = {
+        flow: w,
+        authUrl: M,
+        receivesPastedCallbacks: () =>
+          I !== void 0 && b().getOAuthCallbackSubmitter(e) === I,
+        callbackState: () => O,
+        config: u.config,
+        accountToken: G8s(),
+        identityEpoch: Ys(),
+        startedAt: Date.now(),
+      };
+      (S.set(e, v),
+        w
+          .catch(() => {})
+          .finally(() => {
+            if (S.get(e) === v) S.delete(e);
+          }));
+      let _ = v.identityEpoch;
+      return (
+        w
+          .then(async () => {
+            if (Ys() !== _) {
+              Ue(
+                e,
+                "OAuth completed after an identity change; discarding without reconnecting",
+              );
+              return;
+            }
+            if ((eVe(g.storageV5), Xs(e) || Bee(e, o))) {
+              Ue(
+                e,
+                "OAuth completed but the server is now disabled or policy-blocked; not reconnecting",
+              );
+              return;
+            }
+            let C = await Bde(R(), e, o, () =>
+              R().reconnectMcpServerImpl(e, o, g.storageV5, g.credentials),
+            );
+            if (Ys() !== _) {
+              Ue(
+                e,
+                "OAuth completed after an identity change; discarding the stale reconnect",
+              );
+              return;
+            }
+            let E = g.getMcp().clients.some((k) => k.name === e),
+              P = g.session.mcpSessionWiring.connections();
+            if (!E || P === void 0 || Xs(e) || Bee(e, o)) {
+              (Ue(
+                e,
+                "OAuth completed after the server was removed, disabled, or policy-blocked; discarding the fresh connection",
+              ),
+                R()
+                  .clearServerCache(e, o)
+                  .catch((k) =>
+                    Ue(e, `Orphan-connection cleanup failed: ${cl(k, o)}`),
+                  ),
+                P?.markReconnectDiscarded(e, o));
+              return;
+            }
+            let L = P.adoptServer(e, C);
+            if (L !== "adopted") {
+              (Ue(
+                e,
+                `Sign-in finished, but its connection was not adopted (${L}); discarding it`,
+              ),
+                R()
+                  .clearServerCache(e, o)
+                  .catch((k) =>
+                    Ue(e, `Orphan-connection cleanup failed: ${cl(k, o)}`),
+                  ));
+              return;
+            }
+            Ue(e, `OAuth complete, reconnected with ${C.tools.length} tool(s)`);
+          })
+          .catch((C) => {
+            uc(
+              e,
+              `OAuth flow failed after tool-triggered start: ${UA(Rm(e, o, d(C)))}`,
+            );
+          }),
+        J({
+          serverName: e,
+          config: o,
+          authUrlPromise: M,
+          oauthPromise: w,
+          reused: !1,
+          context: g,
+        })
+      );
+    },
+    mapToolResultToToolResultBlockParam(f, g) {
+      return { tool_use_id: g, type: "tool_result", content: f.message };
+    },
+  };
+}
+async function J({
+  serverName: e,
+  config: o,
+  authUrlPromise: r,
+  oauthPromise: i,
+  reused: l,
+  context: a,
+}) {
+  let { tools: f } = a.options,
+    g = l
+      ? `A sign-in for ${Tr(e)} that started earlier is still in progress, so the link below is that sign-in's link, not a new one. If the user says the sign-in page showed an error before they could approve access, ask them to run /mcp and sign in there instead.
+
+`
+      : "";
+  try {
+    let m = await Promise.race([r, i.then(() => null)]);
+    if (m) {
+      let u = ur(e, $Dt),
+        S = Ce(m),
+        h = N(a)
+          ? `
+
+A URL pasted into this conversation cannot finish this sign-in. If the browser shows a connection error on the redirect page, ask the user to run /mcp in this session's terminal, sign in again there, and paste the new redirect URL into the box /mcp shows.`
+          : fe()
+            ? `
+
+This session is remote, so after authorizing the browser will try to load \`${S}?code=...\` and show a connection error \u2014 that's expected. Ask the user to copy the full URL from the browser's address bar and paste it into chat, then call \`${u}\` with that URL as \`callback_url\`.`
+            : `
+
+If the browser shows a connection error on the redirect page, ask the user to paste the full URL from the address bar and call \`${u}\` with it.`;
+      return {
+        data: {
+          status: "auth_url",
+          authUrl: m,
+          message: `${g}Ask the user to open this URL in their browser to authorize the ${Tr(e)} MCP server:
+
+${m}
+
+Once they complete the flow, the server's tools will become ${Y(f)}.${h}`,
+        },
+      };
+    }
+    return {
+      data: {
+        status: "auth_url",
+        message: `Authentication completed silently for ${Tr(e)}. ${Q(f)}`,
+      },
+    };
+  } catch (m) {
+    let u = vd(Rm(e, o, d(m)));
+    return {
+      data: {
+        status: "error",
+        message: `Failed to start OAuth flow for ${Tr(e)}: ${u}. Ask the user to run /mcp and authenticate manually.`,
+      },
+    };
+  }
+}
+var Me = "tengu_cobalt_ferrule",
+  we =
+    "Claude submitted this URL. Approve only if you started this sign-in and just copied it from your own browser. A URL from anywhere else can connect this server to someone else's account.";
+function Ae(e, o) {
+  let r = ur(e, oue),
+    i =
+      `Complete an in-progress OAuth flow for the "${Tr(e)}" MCP server by submitting the callback URL. Call \`${r}\` first to start the flow and get the authorization URL. ` +
+      "After the user authorizes in their browser, the browser is redirected to a `http://localhost:<port>/callback?code=...&state=...` URL \u2014 " +
+      "on remote sessions that page fails to load, but the URL in the address bar is still valid. Pass that full URL here as `callback_url`. If the user declines this call, do not retry it. If this session cannot ask them, tell them to finish signing in by running /mcp.",
+    l = `No OAuth flow is in progress for ${Tr(e)}; it may have timed out. Call \`${r}\` to start a new one, then, once the user has approved it, ask them for the full URL in their browser's address bar.`,
+    a =
+      "A URL pasted into this conversation cannot finish this sign-in. Ask the user to run /mcp in this session's terminal and sign in again there. If the browser then shows a connection error, they should paste the address from the browser's address bar into the box /mcp shows.",
+    f =
+      "Invalid callback URL: missing authorization code. Ask the user to paste the full redirect URL from their browser's address bar, including the `?code=...&state=...` query string.",
+    g = `That callback URL belongs to a different sign-in attempt for ${Tr(e)} (its state does not match the flow in progress), or carries no authorization code. The current flow is still waiting: ask the user for the URL from the page this sign-in opened, then retry.`;
+  return {
+    name: ur(e, $Dt),
+    isMcp: !0,
+    mcpInfo: {
+      serverName: e,
+      toolName: $Dt,
+      serverType: o.type ?? "stdio",
+      source: hF(e, o),
+      ...(o.pluginSource !== void 0 && { pluginSource: o.pluginSource }),
+      isAuthStub: !0,
+      serverId: Ig(o),
+      serverIdStamp: spt(e, o),
+      ...jde(o),
+    },
+    isEnabled: () => !0,
+    isConcurrencySafe: () => !1,
+    isReadOnly: () => !1,
+    toAutoClassifierInput: () => e,
+    userFacingName: () => `${e} - complete authentication (MCP)`,
+    maxResultSizeChars: 1e4,
+    renderToolUseMessage: () => `Complete authentication for ${e} MCP server`,
+    async description() {
+      return i;
+    },
+    async prompt() {
+      return i;
+    },
+    get inputSchema() {
+      return me();
+    },
+    requiresUserInteraction: () => T(),
+    suppressesAlwaysAllowRule: () => T(),
+    async validateInput({ callback_url: m }, u) {
+      if (!T()) return { result: !0 };
+      if (N(u))
+        return {
+          result: !1,
+          message:
+            "A URL pasted into this conversation cannot finish this sign-in. Ask the user to run /mcp in this session's terminal and sign in again there. If the browser then shows a connection error, they should paste the address from the browser's address bar into the box /mcp shows.",
+          errorCode: 3,
+        };
+      if (!b().getOAuthCallbackSubmitter(e))
+        return { result: !1, message: l, errorCode: 1 };
+      if (!V(m))
+        return {
+          result: !1,
+          message:
+            "Invalid callback URL: missing authorization code. Ask the user to paste the full redirect URL from their browser's address bar, including the `?code=...&state=...` query string.",
+          errorCode: 2,
+        };
+      let S = G.of(u.session.host).get(e);
+      if (
+        S?.receivesPastedCallbacks() &&
+        new URL(m).searchParams.get("state") !== S.callbackState()
+      )
+        return { result: !1, message: g, errorCode: 4 };
+      return { result: !0 };
+    },
+    async checkPermissions(m) {
+      if (!T()) return { behavior: "allow", updatedInput: m };
+      return {
+        behavior: "ask",
+        message: `Finish signing in to ${Tr(e)} with a callback URL.`,
+        suggestions: [],
+        suppressAlwaysAllowRule: !0,
+        defaultToNo: !0,
+        decisionReason: {
+          type: "safetyCheck",
+          reason: we,
+          classifierApprovable: !1,
+        },
+      };
+    },
+    async call(m, u) {
+      let { callback_url: S } = m,
+        h = b().getOAuthCallbackSubmitter(e);
+      if (!h) return { data: { status: "error", message: l } };
+      if (!V(S))
+        return {
+          data: {
+            status: "error",
+            message:
+              "Invalid callback URL: missing authorization code. Ask the user to paste the full redirect URL from their browser's address bar, including the `?code=...&state=...` query string.",
+          },
+        };
+      let y = b().getActiveOAuthPromise(e);
+      if (!h(S)) return { data: { status: "error", message: g } };
+      try {
+        return (
+          await y,
+          {
+            data: {
+              status: "success",
+              message: `Authentication complete for ${Tr(e)}. ${Q(u.options.tools)}`,
+            },
+          }
+        );
+      } catch (M) {
+        if (M instanceof b().AuthenticationCancelledError)
+          return {
+            data: {
+              status: "error",
+              message: `The OAuth flow for ${Tr(e)} was cancelled (a newer attempt may have superseded it). Call \`${r}\` again to restart.`,
+            },
+          };
+        return {
+          data: {
+            status: "error",
+            message: `Authentication failed for ${Tr(e)}: ${vd(Rm(e, o, d(M)))}`,
+          },
+        };
+      }
+    },
+    mapToolResultToToolResultBlockParam(m, u) {
+      return { tool_use_id: u, type: "tool_result", content: m.message };
+    },
+  };
+}
+function T() {
+  return Ie(Me, { safe: !0 });
+}
+function N(e) {
+  if (!T()) return !1;
+  let { mode: o, shouldAvoidPermissionPrompts: r } = Z(e);
+  return (
+    o === "dontAsk" ||
+    r === !0 ||
+    (Fv().length > 0 &&
+      !opt() &&
+      Ee() === "firstParty" &&
+      !tZe(ye("policySettings")))
+  );
+}
+function V(e) {
+  try {
+    let { searchParams: o } = new URL(e);
+    return Boolean(o.get("code") || o.get("error"));
+  } catch {
+    return !1;
+  }
+}
+export {
+  JQe,
+  Sxa,
+  IJn,
+  Bde,
+  jFe,
+  bxa,
+  g8s,
+  _8s,
+  hkn,
+  y8s,
+  rVr,
+  GGo,
+  zGo,
+  S8s,
+  eVe,
+  yee,
+};

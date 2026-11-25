@@ -1,0 +1,375 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import { obe, jk, b } from "/$bunfs/root/chunk-aq3ms068.js";
+import { qs } from "/$bunfs/root/chunk-kgzzwvwc.js";
+import { he } from "/$bunfs/root/chunk-q3pjyhpy.js";
+import { a } from "/$bunfs/root/chunk-487kez16.js";
+import { rt } from "/$bunfs/root/chunk-pwxp2pn6.js";
+import { p } from "/$bunfs/root/chunk-3kmy2srk.js";
+import { Al } from "/$bunfs/root/chunk-agyyqm1q.js";
+import { Xc, jzi, uWn, fWn } from "/$bunfs/root/chunk-jnqtrw4b.js";
+import { Eu, ur } from "/$bunfs/root/chunk-be81kym3.js";
+import { Pje } from "/$bunfs/root/chunk-w03c3634.js";
+import { gjt, n$ } from "/$bunfs/root/chunk-e9fhcxkx.js";
+import { gt } from "/$bunfs/root/chunk-bxxahqqj.js";
+import { ht, cp } from "/$bunfs/root/chunk-fd03jnvq.js";
+import { mc } from "/$bunfs/root/chunk-v4hzksrd.js";
+import { LFe, Yft } from "/$bunfs/root/chunk-6s3cjv5s.js";
+import { Kh } from "/$bunfs/root/chunk-hg1yqkjk.js";
+import { PMn } from "/$bunfs/root/chunk-8xw2rxmj.js";
+import { n, cu, O, ae, C, c, ge, W } from "/$bunfs/root/chunk-8s3h5g9z.js";
+import { B } from "/$bunfs/root/chunk-b8e2yqms.js";
+W();
+var H = "tengu_rc_thread_reply_gate";
+function ONo() {
+  return b(H, !0);
+}
+var Y = "tengu_candid_wren",
+  Ojl = 5000,
+  Ijl = 1000,
+  P = ur(Xc, "no_reply_needed"),
+  F = "rc_owner",
+  A = 4,
+  L = 64,
+  U = p(() => {
+    let t = n().min(1).max(256),
+      e = n().trim().min(1).max(4096),
+      r = cu().min(0).max(A);
+    return c({
+      terminal_tools: C(t).min(1).max(L),
+      ask_text: e,
+      max_asks_after_person: r,
+      max_asks_after_server_event: r,
+      max_asks_after_own_task: r.optional(),
+      skip_while_worker_out: O().optional(),
+      max_asks_after_error: r.optional(),
+      ask_texts_after_error: ge(t, e)
+        .refine((o) => Object.keys(o).length <= L)
+        .optional(),
+      skip_retry_while_server_down: O().optional(),
+      status_nudge: ae().optional(),
+      prompt_reminder: ae().optional(),
+    });
+  }),
+  K = 60,
+  J = p(() =>
+    c({
+      seconds: cu().min(1).max(86400),
+      visible_tools: C(n().min(1).max(128)).min(1).max(32),
+      text: n().trim().min(1).max(2048),
+    }),
+  ),
+  V = p(() => n().trim().min(1).max(2048));
+function w$s(t) {
+  let e = U().safeParse(rt(t, !1));
+  if (!e.success)
+    return {
+      invalidField: (e.error.issues[0]?.path ?? [])
+        .filter((l, s) => s === 0 || typeof l === "number")
+        .join("."),
+    };
+  let r = J().safeParse(e.data.status_nudge),
+    o = V().safeParse(e.data.prompt_reminder);
+  return {
+    policy: {
+      terminalTools: e.data.terminal_tools,
+      askText: e.data.ask_text,
+      maxAsksAfterPerson: e.data.max_asks_after_person,
+      maxAsksAfterServerEvent: e.data.max_asks_after_server_event,
+      ...(e.data.max_asks_after_own_task !== void 0 && {
+        maxAsksAfterOwnTask: e.data.max_asks_after_own_task,
+      }),
+      ...(e.data.skip_while_worker_out !== void 0 && {
+        skipWhileWorkerOut: e.data.skip_while_worker_out,
+      }),
+      ...(e.data.max_asks_after_error !== void 0 && {
+        maxAsksAfterError: e.data.max_asks_after_error,
+      }),
+      ...(e.data.ask_texts_after_error !== void 0 && {
+        askTextsAfterError: new Map(
+          Object.entries(e.data.ask_texts_after_error),
+        ),
+      }),
+      ...(e.data.skip_retry_while_server_down !== void 0 && {
+        skipRetryWhileServerDown: e.data.skip_retry_while_server_down,
+      }),
+      ...(r.success && {
+        statusNudge: {
+          seconds: Math.max(K, r.data.seconds),
+          visibleTools: r.data.visible_tools,
+          text: r.data.text,
+        },
+      }),
+      ...(o.success && { promptReminder: o.data }),
+    },
+    unreadBlocks: [
+      ...(e.data.status_nudge !== void 0 && !r.success ? ["status_nudge"] : []),
+      ...(e.data.prompt_reminder !== void 0 && !o.success
+        ? ["prompt_reminder"]
+        : []),
+    ],
+  };
+}
+function k$s(t, e) {
+  let r =
+    "longerThan" in e
+      ? `its text is over the limit of ${e.longerThan} characters`
+      : e.invalidField === ""
+        ? "it is not a JSON object"
+        : `its ${e.invalidField} is missing or invalid`;
+  return `ignoring ${t}: ${r}, so Claude will not be re-prompted when a turn ends without a reply tool call`;
+}
+var X = [ht, cp, mc],
+  q = new Set([
+    "max_tokens",
+    "model_context_window_exceeded",
+    "pause_turn",
+    "refusal",
+  ]);
+function INo(t) {
+  let e = t.mcp.clients.find((r) => r.name === Xc);
+  return e !== void 0 && e.type === "connected" && Al(e.config);
+}
+async function Mjl(t, e, r) {
+  if (!ONo()) return;
+  let o = performance.now(),
+    l = await he(
+      t.then(() => !0),
+      r,
+    );
+  a("tengu_bridge_projects_mount_wait", {
+    waited_ms: Math.round(performance.now() - o),
+    settled: l === !0,
+    connected: INo(e()),
+  });
+}
+function E$s(t) {
+  let e = jk(t).decider,
+    r = e === null ? void 0 : t[e.index];
+  if (e === null || r === void 0) return !1;
+  return (
+    (g(r)?.startsWith(gjt) === !0 || j(r)) &&
+    !k(t.slice(e.index + 1), fWn).answered
+  );
+}
+function Hjl(t, e, r, o) {
+  let l = jk(t).decider,
+    s = 0,
+    i = l;
+  while (i !== null) {
+    let u = t[i.index];
+    if (g(u)?.startsWith(gjt) === !0) s++;
+    else if (r.kind !== "policy" || u === void 0 || !n$(u)) break;
+    i = jk(t.slice(0, i.index)).decider;
+  }
+  let _ = i === null ? void 0 : t[i.index],
+    d = Q(_, i),
+    T = d === "person",
+    E = Z(r, _, d);
+  if (s === 0 && E === 0)
+    return (
+      o?.({ verdict: "skip", why: "not_held", opener: d }),
+      { kind: "skip" }
+    );
+  let w = [...t.slice(l === null ? 0 : l.index + 1), ...e];
+  if (!w.some(G))
+    return (
+      o?.({ verdict: "skip", why: "no_completion", opener: d }),
+      { kind: "skip" }
+    );
+  let R = [...t.slice(i === null ? 0 : i.index + 1), ...e],
+    f = r.kind === "policy" ? R : w,
+    S =
+      r.kind === "remote_control" &&
+      (R.some(
+        (u) =>
+          u.type === "assistant" &&
+          u.message.content.some(
+            (N) => N.type === "tool_use" && r.workOutFrom.has(N.id),
+          ),
+      ) ||
+        b(Y, !1) === !0),
+    {
+      answered: I,
+      noReplyOnly: z,
+      erroredTerminalTool: M,
+      firstErroredAt: v,
+    } = k(f, r.kind === "policy" ? r.policy.terminalTools : S ? fWn : jzi);
+  if (I)
+    return (
+      o?.({ verdict: "answered", opener: d }),
+      { kind: "answered", noReplyOnly: z, personOpened: T }
+    );
+  if (r.kind === "policy" && r.replMode === !0)
+    return (
+      o?.({ verdict: "skip", why: "repl_mode", opener: d }),
+      { kind: "skip" }
+    );
+  if (
+    r.kind === "policy" &&
+    (Kh(e)?.isApiErrorMessage === !0 ||
+      q.has(w.findLast(G)?.message.stop_reason ?? null))
+  )
+    return (
+      o?.({ verdict: "skip", why: "unclean_stop", opener: d }),
+      { kind: "skip" }
+    );
+  if (
+    r.kind === "policy" &&
+    r.policy.skipWhileWorkerOut === !0 &&
+    r.coordinatorMode === !0 &&
+    r.workerStillRunning === !0 &&
+    (d === "own_task" || (i !== null && k(f, X).answered))
+  )
+    return (
+      o?.({ verdict: "skip", why: "worker_out", opener: d }),
+      { kind: "skip" }
+    );
+  let m = M !== void 0 ? "reply_errored" : "silent_turn",
+    y =
+      r.kind === "policy" &&
+      r.policy.maxAsksAfterError !== void 0 &&
+      v !== void 0
+        ? {
+            used: B(f.slice(v + 1), (u) => g(u)?.startsWith(gjt) === !0),
+            cap: r.policy.maxAsksAfterError,
+            cap_of: "after_error",
+          }
+        : { used: s, cap: E, cap_of: "opener" },
+    h =
+      y.used >= y.cap
+        ? y
+        : s >= A
+          ? { used: s, cap: A, cap_of: "turn" }
+          : void 0;
+  if (h !== void 0 && s === 0)
+    return (
+      o?.({ verdict: "skip", why: "no_ask_after_error", opener: d }),
+      { kind: "skip" }
+    );
+  if (h !== void 0)
+    return (
+      o?.({ verdict: "still_silent", reason: m, opener: d, ...h }),
+      { kind: "still_silent", reason: m, personOpened: T }
+    );
+  o?.({ verdict: "bounce", reason: m, opener: d, ...y });
+  let x =
+    r.kind === "remote_control" && m === "silent_turn" && k(f, uWn).answered;
+  return {
+    kind: "bounce",
+    reason: m,
+    text: `${gjt} ${ee(r, M, S, x)}`,
+    personOpened: T,
+    ...(x && { afterChecklist: x }),
+  };
+}
+function Z(t, e, r) {
+  switch (t.kind) {
+    case "remote_control":
+      return e !== void 0 && j(e) ? 1 : 0;
+    case "policy":
+      switch (r) {
+        case "person":
+          return t.policy.maxAsksAfterPerson;
+        case "own_task":
+          return (
+            t.policy.maxAsksAfterOwnTask ?? t.policy.maxAsksAfterServerEvent
+          );
+        case "other":
+          return t.policy.maxAsksAfterServerEvent;
+      }
+  }
+}
+function Q(t, e) {
+  if (t !== void 0 && (e?.userDriven === !0 || D(t))) return "person";
+  return Pje(e?.origin, t?.type === "user" ? t[obe] : void 0)
+    ? "own_task"
+    : "other";
+}
+function Djl(t, e, r) {
+  let o = r.filter(
+      (s) =>
+        s.type === "failed" || s.type === "needs-auth" || s.type === "disabled",
+    ),
+    l = e.filter((s) => t.terminalTools.some((i) => gt(s, i)));
+  return (
+    l.length > 0 &&
+    l.every((s) => s.isMcp === !0 && o.some((i) => Eu(s, i.name)))
+  );
+}
+function ee(t, e, r, o) {
+  switch (t.kind) {
+    case "remote_control":
+      return e !== void 0
+        ? `Your \`${e}\` call this turn returned an error, so it did not reach the project thread. Call \`${t.toolNames.reply}\` again with what the thread should see, or \`${P}\` if no reply is warranted.`
+        : `Your last turn ended without a reply to the project thread: plain text is not delivered there${o ? ", and a checklist is not a reply" : ""}. Call \`${t.toolNames.reply}\` now with what the thread should see, ${r ? `\`${t.toolNames.status}\` if you dispatched work that reports back later, ` : ""}or \`${P}\` if no reply is warranted.`;
+    case "policy":
+      return (
+        (e !== void 0 ? t.policy.askTextsAfterError?.get(e) : void 0) ??
+        t.policy.askText
+      );
+  }
+}
+function G(t) {
+  return t.type === "assistant" && t.message.model !== qs;
+}
+function g(t) {
+  return t?.type === "user" &&
+    t.isMeta === !0 &&
+    typeof t.message.content === "string"
+    ? t.message.content
+    : void 0;
+}
+function j(t) {
+  if (D(t)) return !0;
+  if (t.type !== "user") return !1;
+  let e = t.message.content,
+    r = typeof e === "string" ? e : e[0]?.type === "text" ? e[0].text : void 0;
+  if (r === void 0) return !1;
+  let o = LFe(r);
+  return o !== null && Yft(o) && o.data.sender_kind === F;
+}
+function D(t) {
+  return t.type === "attachment"
+    ? t.attachment.type === "queued_command" &&
+        t.attachment.projectsUserTurn === !0
+    : t.type === "user" && t.projectsUserTurn === !0;
+}
+function k(t, e) {
+  let r = new Set();
+  for (let i of t) {
+    if (i.type !== "user" || !Array.isArray(i.message.content)) continue;
+    for (let _ of i.message.content)
+      if (_.type === "tool_result" && _.is_error === !0) r.add(_.tool_use_id);
+  }
+  let o = !1,
+    l,
+    s;
+  for (let [i, _] of t.entries()) {
+    if (_.type !== "assistant") continue;
+    for (let d of _.message.content) {
+      if (d.type !== "tool_use" || !e.includes(d.name)) continue;
+      if (r.has(d.id)) {
+        ((l = d.name), (s ??= i));
+        continue;
+      }
+      if (!d.name.endsWith(PMn))
+        return {
+          answered: !0,
+          noReplyOnly: !1,
+          erroredTerminalTool: void 0,
+          firstErroredAt: void 0,
+        };
+      o = !0;
+    }
+  }
+  return {
+    answered: o,
+    noReplyOnly: o,
+    erroredTerminalTool: o ? void 0 : l,
+    firstErroredAt: o ? void 0 : s,
+  };
+}
+export { ONo, Ojl, Ijl, w$s, k$s, INo, Mjl, E$s, Hjl, Djl };

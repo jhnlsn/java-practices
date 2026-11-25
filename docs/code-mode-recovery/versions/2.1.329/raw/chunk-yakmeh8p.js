@@ -1,0 +1,5 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{Sa,ba,wn,dr,fS,kQ}from"/$bunfs/root/chunk-aq3ms068.js";import{D}from"/$bunfs/root/chunk-avbzeyf3.js";import{t}from"/$bunfs/root/chunk-c2c9kwmh.js";var pPt="no stored login";function kBr(){try{if(ba().source!=="claude.ai"||!fS()||!Sa())return pPt;let o=wn(),n=dr();if(!o?.accountUuid||!o.organizationUuid||n===null)return;return`${o.accountUuid}:${o.organizationUuid}:${n}`}catch(o){t(`claude-platform: could not read who is signed in (${D(o).name}); the plugin is not offered`,{level:"error"});return}}function s8n(){try{let o=wn(),n=kQ();return o?.accountUuid!==void 0&&o.organizationUuid!==void 0&&n.accountUuid===o.accountUuid&&n.organizationUuid===o.organizationUuid}catch(o){return t(`claude-platform: could not read the account Claude Code's flag client was built with (${D(o).name}); the plugin is not offered`,{level:"error"}),!1}}export{pPt,kBr,s8n};

@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{Dr}from"/$bunfs/root/chunk-d1scfh43.js";import{x}from"/$bunfs/root/chunk-kg2zehkt.js";import{fle}from"/$bunfs/root/chunk-mtj7v8bq.js";import{ur}from"/$bunfs/root/chunk-be81kym3.js";import{Ws}from"/$bunfs/root/chunk-agyyqm1q.js";import{Ne}from"/$bunfs/root/chunk-jh9bnqg2.js";import{Uh}from"/$bunfs/root/chunk-e08hgx8f.js";import n from"path";function Gpr(){let r=[process.execPath],o=process.argv[1];if(!Uh()&&o)r.push(o);return r}var a="--eval-artifacts-server",zpr=["publish_version","edit_version","publish_files","create_from_type"],Erl=["guide","get_artifact","read_artifact","list_artifacts","list_files","read_file","list_types"];function Vpr(r){return r.map((o)=>ur(Ws,o))}var p=/[*?[{]/;function vrl(r,o){let e=(o.alwaysAllowRules.cliArg??[]).flatMap((t)=>{let{toolName:i,ruleContent:s}=Dr(t);return i===Ne&&s?.startsWith("//")===!0?[s.slice(1).replace(/\/\*\*$/,"")]:[]});return[r,...e.filter((t)=>!p.test(t)).map((t)=>n.posix.normalize(t).replace(/\/+$/,"")).filter((t)=>t!==""&&t!==".").map((t)=>x()==="windows"?fle(t):t)]}function Trl(r,o){let[e=process.execPath,...t]=Gpr();return{type:"stdio",command:e,args:[...t,a,r,...o],env:{}}}
+export{Gpr,zpr,Erl,Vpr,vrl,Trl};

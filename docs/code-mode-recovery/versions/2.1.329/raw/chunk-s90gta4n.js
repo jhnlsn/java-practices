@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{Lr,Ha,vT}from"/$bunfs/root/chunk-ca90c7br.js";import{pe}from"/$bunfs/root/chunk-ahqq8jsg.js";import{usn,G0i}from"/$bunfs/root/chunk-tdmt21n9.js";import{cC}from"/$bunfs/root/chunk-pxy9yt8m.js";import{isAbsolute as n,resolve as c}from"path";import{pathToFileURL as a}from"url";function fz(r){if(!cC(r))return null;try{let e=vT(r),t=vT(c(e));if(Ha(e)||Lr(t)||usn(e)||usn(t))return null;let s=a(e);return s.hostname!==""||G0i(s.href)?null:s.href}catch{return null}}function uJr(r){let e=/^file:/i.test(r);if(!e){if(!(r.startsWith("/")&&!Lr(r)))return r}let t=e?r.slice(5):r;if(t.startsWith("//")){if(t=t.slice(2),t==="localhost")t="/";else if(t.startsWith("localhost/"))t=t.slice(9)}let s=t.search(/[#?]/),u=s===-1?"":t.slice(s),l=s===-1?t:t.slice(0,s);if(l==="")return null;try{l=decodeURIComponent(l)}catch{}if(l=h(l),!cC(l))return null;let f=n(l)?l:c(pe(),l),i=fz(f);if(i===null)return null;let o=i+u;return G0i(o)?null:o}function h(r,e=n){if(/^\/[A-Za-z]:(?=[\\/]|$)/.test(r)&&e(r.slice(1)))return r.slice(1);return r}
+export{fz,uJr};

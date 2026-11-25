@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{Be}from"/$bunfs/root/chunk-69qhefwa.js";import{ps}from"/$bunfs/root/chunk-se72nykz.js";import{de}from"/$bunfs/root/chunk-t57w17k7.js";var t={notice:null,shownLoggedForDraftId:null,promptedCount:0,sessionDraftCount:0,seededFromDisk:!1,seedStarted:!1,toolCallCount:0};class n{autoDenyPresence=Be();mainLoopBusy=ps({busy:!1});blockingToolProgress=ps({active:!1});dialogHostUnmounted=ps({unmounted:!1});onScreenBlockingDialog=ps({surfaceMounted:!1,kind:null});headerGauge=ps({mounts:0});pendingSurveyFeedbackSource=null;terminalFocus="unknown";terminalFocusGainedAt=Number.NEGATIVE_INFINITY;terminalFocusChanged=Be();feedbackNotice=ps(t);promptDigitCaptures=ps({count:0});clawdEntranceTaken=!1;startupUpdateSummary=void 0;orgMemoryWritesRowSeen=!1;orgMemoryReadRowSeen=!1;remoteHomeSettingsRowSeen=!1;configRowsSeen=new Set;configRowNotices=new Map}var nd=de(new n,(o)=>{o.configRowsSeen.clear(),o.configRowNotices.clear(),o.mainLoopBusy.setState((e)=>e.busy?{busy:!1}:e),o.headerGauge.setState((e)=>e.mounts===0?e:{mounts:0})});
+export{nd};

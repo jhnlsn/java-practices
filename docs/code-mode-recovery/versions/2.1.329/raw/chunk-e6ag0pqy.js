@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{Xb}from"/$bunfs/root/chunk-88hchn22.js";import{p}from"/$bunfs/root/chunk-3kmy2srk.js";import{mPr}from"/$bunfs/root/chunk-k936fbc4.js";import{ls}from"/$bunfs/root/chunk-vp9cgba2.js";function Bji(e){return e.hookCaller}function q_(e){return(e.agentId===void 0||e.agentId===e.agentCall?.agentId)&&e.forRemoteExecution!==!0&&e.forPromptShellCommand===void 0?e.hookCaller:void 0}function Y_(e){return e.hookCaller!==void 0||e.pluginSteered===!0}function iko(e){let n=Bji(e);if(n!==void 0)return mPr(n)?n:"";return Y_(e)?"":void 0}function R8e(e){return e?.type==="remote-agent"||e?.type==="plugin"}function ivr(e,n){return[...e.filter((r)=>r.value===n),...e.filter((r)=>r.value!==n)]}function Wws(e){if(!Array.isArray(e))return null;try{return e.filter((n)=>typeof n==="object"&&n!==null&&("type"in n)&&n.type==="addDirectories")}catch{return null}}var x8e=ls({kind:"permission_prompt",payload:p(()=>Xb((e)=>typeof e==="object"&&e!==null&&("requestId"in e)&&("toolName"in e)&&("permissionResult"in e))),result:p(()=>Xb((e)=>typeof e==="object"&&e!==null&&("behavior"in e))),default:{behavior:"cancelled"}});
+export{Bji,q_,Y_,iko,R8e,ivr,Wws,x8e};

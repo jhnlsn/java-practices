@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{s}from"/$bunfs/root/chunk-gvhwnc7g.js";import{x}from"/$bunfs/root/chunk-kg2zehkt.js";import{createServer as b}from"http";function $Jn(n){let r=Array.isArray(n)?n[0]:n;return r?r:void 0}var f=3118;function p(){return{range:x()==="windows"?{min:39152,max:49151}:{min:49152,max:65535},fallback:f}}function tzo(n=f){return`http://localhost:${n}/callback`}function A(){let n=s.MCP_OAUTH_CALLBACK_PORT;return n!==void 0&&n<=65535?n:void 0}async function TVr(n,r=p()){let t=A();if(t)return t;if(n&&await i(n))return n;let{min:e,max:o}=r.range,a=o-e+1,l=Math.min(a,100);for(let d=0;d<l;d++){let c=e+Math.floor(Math.random()*a);if(await i(c))return c}if(await i(r.fallback))return r.fallback;let u=await m(0);if(u!==void 0)return u;throw Error("No available ports for OAuth redirect")}async function i(n){return await m(n)!==void 0}async function m(n){try{return await new Promise((r,t)=>{let e=b();e.once("error",t),e.listen(n,"127.0.0.1",()=>{let o=e.address(),a=typeof o==="object"&&o?o.port:void 0;e.close(()=>a!==void 0?r(a):t(Error("no address on bound server")))})})}catch{return}}
+export{$Jn,tzo,TVr};

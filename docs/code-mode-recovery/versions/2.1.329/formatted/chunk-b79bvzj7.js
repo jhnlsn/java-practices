@@ -1,0 +1,10223 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import {
+  GWe,
+  H9e,
+  nP,
+  z_,
+  uDe,
+  QSs,
+  I$i,
+  Ykt,
+  wbo,
+  kbo,
+  ZSs,
+  n$n,
+  Ebo,
+  ebs,
+  NL,
+  Xt,
+  wne,
+  b,
+} from "/$bunfs/root/chunk-aq3ms068.js";
+import { $e } from "/$bunfs/root/chunk-cqahc80t.js";
+import { pt } from "/$bunfs/root/chunk-5w3q3ks2.js";
+import { N, V, sn } from "/$bunfs/root/chunk-kgzzwvwc.js";
+import { S, u } from "/$bunfs/root/chunk-y98mhv74.js";
+import { d, w, Nre } from "/$bunfs/root/chunk-avbzeyf3.js";
+import { K, Jt, he } from "/$bunfs/root/chunk-q3pjyhpy.js";
+import { a } from "/$bunfs/root/chunk-487kez16.js";
+import { Rt, SC, t, _, ts, te } from "/$bunfs/root/chunk-c2c9kwmh.js";
+import { nt } from "/$bunfs/root/chunk-m55722gg.js";
+import { Ble } from "/$bunfs/root/chunk-k936fbc4.js";
+import { Pyr } from "/$bunfs/root/chunk-6afj00az.js";
+import { q, Ult } from "/$bunfs/root/chunk-k266h4m8.js";
+import { s } from "/$bunfs/root/chunk-gvhwnc7g.js";
+import { cn } from "/$bunfs/root/chunk-3q5b9bqc.js";
+import { wt, i } from "/$bunfs/root/chunk-ht6e56zb.js";
+import { Nn } from "/$bunfs/root/chunk-pm8n3wkz.js";
+import { dIt, uqr, WIa, WQn, zIa } from "/$bunfs/root/chunk-z71jk8gd.js";
+import { f, m, l } from "/$bunfs/root/chunk-3mgc6ahd.js";
+import { dWn, cWn, pWn } from "/$bunfs/root/chunk-jnqtrw4b.js";
+import { p } from "/$bunfs/root/chunk-3kmy2srk.js";
+import { tMa } from "/$bunfs/root/chunk-rmsqdnnp.js";
+import { kb, pn } from "/$bunfs/root/chunk-92h2y9s9.js";
+import { _n, xat, ZTr, IRe, dl } from "/$bunfs/root/chunk-2jhxnfds.js";
+import { Pr } from "/$bunfs/root/chunk-rqs3939j.js";
+import {
+  $Xa,
+  BXa,
+  eJ,
+  bue,
+  ibi,
+  abi,
+  ZXa,
+  Kcr,
+  Eos,
+  eJa,
+  eNt,
+  rJa,
+  sJa,
+} from "/$bunfs/root/chunk-mca8v9g1.js";
+import { Pbi, Obi } from "/$bunfs/root/chunk-tdrk3znb.js";
+import { BIa } from "/$bunfs/root/chunk-87pk6j9s.js";
+import { $fl, Bfl, oHe, tne, Esn, e9e } from "/$bunfs/root/chunk-5k9zjjmd.js";
+import { Do } from "/$bunfs/root/chunk-4kf3zhcj.js";
+import { Go } from "/$bunfs/root/chunk-nypy1b10.js";
+import { Us } from "/$bunfs/root/chunk-phb99ctz.js";
+import { Ma } from "/$bunfs/root/chunk-w03c3634.js";
+import { VH } from "/$bunfs/root/chunk-66cxqkc1.js";
+import { Dbe, XEt } from "/$bunfs/root/chunk-mcjkceg0.js";
+import { kNt } from "/$bunfs/root/chunk-4yjmbvsy.js";
+import { bOe } from "/$bunfs/root/chunk-zdr9ttrw.js";
+import { M$t, tSr, _pl, Mho } from "/$bunfs/root/chunk-4qbb1rwh.js";
+import { H9t } from "/$bunfs/root/chunk-jtp8xwam.js";
+import { cqr, $Ia } from "/$bunfs/root/chunk-dwzyj349.js";
+import { yVe } from "/$bunfs/root/chunk-1sy5xrq3.js";
+import { tEn } from "/$bunfs/root/chunk-gc4xxwrm.js";
+import { _Ze } from "/$bunfs/root/chunk-5vwbhsj6.js";
+import { rEn } from "/$bunfs/root/chunk-bgfff9yf.js";
+import { cJa } from "/$bunfs/root/chunk-jfrm0057.js";
+import { qB } from "/$bunfs/root/chunk-kqdwsewr.js";
+import { _Te } from "/$bunfs/root/chunk-da0h09m0.js";
+import { Zyt } from "/$bunfs/root/chunk-1btxfhvg.js";
+import { q8e, $W } from "/$bunfs/root/chunk-ma4qntxv.js";
+import { on } from "/$bunfs/root/chunk-7zycn5p7.js";
+import { Lo } from "/$bunfs/root/chunk-wfeeaam6.js";
+import { wc, l7, HRe, hvo } from "/$bunfs/root/chunk-6wzr4jy0.js";
+import { xn } from "/$bunfs/root/chunk-pvk49ays.js";
+import { Wc } from "/$bunfs/root/chunk-3tasjpr9.js";
+import { T } from "/$bunfs/root/chunk-rhrgztck.js";
+import {
+  n,
+  E,
+  O,
+  ae,
+  C,
+  c,
+  Ut,
+  ge,
+  v,
+  W,
+} from "/$bunfs/root/chunk-8s3h5g9z.js";
+import { j } from "/$bunfs/root/chunk-z749tmkd.js";
+import { Tc } from "/$bunfs/root/chunk-jsbj869z.js";
+import { B, Vme, M } from "/$bunfs/root/chunk-b8e2yqms.js";
+import { Ri, c_ } from "/$bunfs/root/chunk-7g60jkbz.js";
+W();
+import { randomUUID as Ee } from "crypto";
+var un = new j(() => ({ ask: void 0 }));
+function Pt(e, r) {
+  let { ask: o } = un.of(N().host);
+  return o?.(new URL(e).pathname, $Ia(r));
+}
+var hn = ["x-ccr-ticket-rev", Zyt, "x-ccr-ticket-seq"],
+  fn = /^[A-Za-z0-9_-]{1,4096}$/;
+class Ve {
+  authorization;
+  held = new Map();
+  headersFor(e) {
+    if (e === void 0) return {};
+    if (e !== this.authorization) (this.held.clear(), (this.authorization = e));
+    return Object.fromEntries(this.held);
+  }
+  sessionTicketFor(e) {
+    return e !== void 0 && e === this.authorization
+      ? this.held.get(Zyt)
+      : void 0;
+  }
+  note(e, r) {
+    if (e === void 0 || e !== this.authorization) return;
+    if (
+      r.redirected ||
+      (r.status >= 400 && r.status < 500 && r.status !== 429)
+    ) {
+      this.held.clear();
+      return;
+    }
+    for (let o of hn) {
+      let h = r.headers.get(o);
+      if (h === "") this.held.delete(o);
+      else if (h !== null && fn.test(h)) this.held.set(o, h);
+    }
+  }
+}
+var Ot = 8,
+  mn = 300000,
+  vn = 240000,
+  gn = new Set([
+    "assistant",
+    "queued_notification",
+    "rate_limit_event",
+    "result",
+    "session_notice",
+    "stream_event",
+    "tool_progress",
+    "tool_use_summary",
+    "user",
+  ]);
+class Ye {
+  quietSinceMs;
+  pulsesInARow = 0;
+  transcriptUploadAccepted = !1;
+  loggedWaitForTranscript = !1;
+  constructor(e) {
+    this.quietSinceMs = e;
+  }
+  noteTranscriptUploadAccepted(e, r) {
+    ((this.transcriptUploadAccepted = !0), this.noteUploadAccepted(e, r));
+  }
+  noteUploadAccepted(e, r) {
+    if (
+      e.some(
+        ({ ephemeral: o, payload: h }) =>
+          h.type !== "keep_alive" &&
+          (o || (gn.has(h.type) && h.isReplay !== !0)),
+      )
+    )
+      ((this.quietSinceMs = r), (this.pulsesInARow = 0));
+    else if (e.some(({ payload: o }) => o.type === "keep_alive"))
+      this.quietSinceMs = r;
+  }
+  takePulse(e) {
+    if (!e.isRunning)
+      return ((this.quietSinceMs = e.nowMs), (this.pulsesInARow = 0), !1);
+    if (!e.isModelCallOpen) return !1;
+    let r = Math.min(vn, mn - 2 * e.tickMs);
+    if (r <= 0 || e.nowMs - this.quietSinceMs < r || this.pulsesInARow > Ot)
+      return !1;
+    if (!this.transcriptUploadAccepted) {
+      if (!this.loggedWaitForTranscript)
+        ((this.loggedWaitForTranscript = !0),
+          l("ccr_quiet_call_pulse", "no_transcript_upload_yet"));
+      return !1;
+    }
+    if ((this.pulsesInARow++, this.pulsesInARow > Ot))
+      return (l("ccr_quiet_call_pulse", "pulse_limit_reached"), !1);
+    return ((this.quietSinceMs = e.nowMs), f("ccr_quiet_call_pulse"), !0);
+  }
+}
+var Ft = String.raw`\s*:\s*"(?:[^"\\]|\\[^u]|\\u[0-9a-fA-F]{4})*?\p{L}`,
+  Wt = String.raw`"(?:thread_id|message_id)"\s*:\s*"[^"\\]+"`,
+  It = new RegExp(`"text"${Ft}`, "u"),
+  wn = new RegExp(Wt),
+  yn = new RegExp(`${Wt}[^]*"project_ack"${Ft}`, "u"),
+  Sn = new Map([[dWn, [It]], [cWn, [It]], ...pWn.map((e) => [e, [wn, yn]])]),
+  xt = 1024;
+class Ue {
+  pointsLeft;
+  read = "";
+  constructor(e) {
+    this.pointsLeft = e;
+  }
+  static of(e) {
+    let r = e === void 0 ? void 0 : Sn.get(e);
+    return r && new Ue(r);
+  }
+  reachesPointWith(e) {
+    if (this.pointsLeft.length === 0 || this.read.length >= xt) return !1;
+    this.read += e.slice(0, xt - this.read.length);
+    let r = this.pointsLeft.filter((h) => !h.test(this.read)),
+      o = r.length < this.pointsLeft.length;
+    return ((this.pointsLeft = r), o);
+  }
+}
+var bn = 64;
+class Xe {
+  rowsAhead;
+  queuedSince = new WeakSet();
+  attempts = [];
+  posts = 0;
+  failedPosts = 0;
+  rows = 0;
+  constructor(e) {
+    this.rowsAhead = e;
+  }
+  noteQueued(e) {
+    for (let r of e) this.queuedSince.add(r);
+  }
+  noteAttempt(e, r, o) {
+    let h = B(e, (g) => this.queuedSince.has(g));
+    if ((this.posts++, o)) this.rows += h;
+    else this.failedPosts++;
+    if (this.attempts.length < bn)
+      this.attempts.push({
+        startedAt: r,
+        endedAt: performance.now(),
+        ahead: h === 0,
+      });
+  }
+  seen(e) {
+    let r = 0,
+      o = 0;
+    for (let { startedAt: h, endedAt: g, ahead: y } of this.attempts) {
+      let R = Math.max(0, g - Math.max(h, e));
+      if (y) r += R;
+      else o += R;
+    }
+    return {
+      aheadMs: r,
+      postMs: o,
+      posts: this.posts,
+      failedPosts: this.failedPosts,
+      rowsAhead: this.rowsAhead,
+      rows: this.rows,
+    };
+  }
+}
+var o1e = 1536;
+function Qe(e) {
+  return Array.isArray(e) && e.every((r) => typeof r === "string");
+}
+function Lt(e, r = o1e) {
+  let o = e.compactMetadata;
+  if (!T(o)) return null;
+  let h = o.preservedMessages;
+  if (!T(h)) return null;
+  let g = h.uuids;
+  if (!Qe(g) || g.length <= r) return null;
+  let y = g.slice(-r),
+    R = y[0],
+    k = h.allUuids,
+    U = Qe(k) ? k.indexOf(R) : -1,
+    P = o.preservedSegment;
+  return {
+    ...e,
+    compactMetadata: {
+      ...o,
+      preservedMessages: {
+        ...h,
+        uuids: y,
+        ...(Qe(k) && { allUuids: U >= 0 ? k.slice(U) : k.slice(-r) }),
+      },
+      ...(T(P) && { preservedSegment: { ...P, headUuid: R } }),
+    },
+  };
+}
+var Zzo = Symbol("requestFollowsInit");
+var MIa = "tengu_patient_ledger",
+  Rn = 10,
+  En = 1e4,
+  e6o = 400,
+  kn = 2097152;
+function We(e) {
+  return (
+    typeof e === "string" &&
+    /^\d{4}-\d{2}-\d{2}T/.test(e) &&
+    !Number.isNaN(Date.parse(e))
+  );
+}
+function Mn(e) {
+  if (!T(e) || e.v !== 1 || !Array.isArray(e.spans)) return [];
+  return e.spans.flatMap((r) =>
+    T(r) && We(r.since)
+      ? [
+          {
+            since: r.since,
+            ...(typeof r.until === "string" &&
+              r.until !== "" && { until: r.until }),
+            tries:
+              Number.isInteger(r.tries) && Number(r.tries) > 0
+                ? Number(r.tries)
+                : 0,
+          },
+        ]
+      : [],
+  );
+}
+class Ze {
+  earlier = [];
+  sentAgain = new Set();
+  own = void 0;
+  unanswered = new Set();
+  writes = !1;
+  refused = !1;
+  runOpen = !1;
+  startedAt = "";
+  runOpenedAt = "";
+  guardLapsed = !1;
+  stampsCountFrom = 0;
+  spansGivenUpAtStart = 0;
+  get earlierSpans() {
+    return this.earlier;
+  }
+  get rowsSentAgain() {
+    return this.sentAgain;
+  }
+  get writesNoMore() {
+    return this.refused;
+  }
+  workerRecordRead(e, r) {
+    if (e.readFailed === !0) return;
+    ((this.writes = !0),
+      (this.startedAt = r.toISOString()),
+      (this.stampsCountFrom = r.getTime()),
+      (this.runOpenedAt = this.startedAt));
+    let o = Mn(e.internal?.client_rows_owed);
+    ((this.earlier = o.filter((h) => h.tries < Rn)),
+      (this.spansGivenUpAtStart = o.length - this.earlier.length));
+  }
+  stateReported(e, r, o) {
+    if (this.runOpen === (e === "idle"))
+      ((this.runOpen = !this.runOpen),
+        (this.runOpenedAt = this.runOpen ? r.toISOString() : this.runOpenedAt));
+    if (!o) return this.guardEnded(r.getTime());
+    return (
+      (this.runOpen ? this.openOwnSpan(r) : this.rowsAnswered([])) ??
+      (this.writes && (this.own !== void 0 || this.earlier.length > 0)
+        ? this.note()
+        : void 0)
+    );
+  }
+  rowsEntered(e, r) {
+    let o = e.filter((g) => Bt(g) !== void 0);
+    for (let g of o) this.unanswered.add(String(g.uuid));
+    if (this.unanswered.size > En)
+      (this.unanswered.clear(), (this.writes = !1));
+    if (o.length === 0) return;
+    let h = Math.min(
+      r.getTime(),
+      ...o
+        .flatMap((g) => (We(g.timestamp) ? [Date.parse(g.timestamp)] : []))
+        .filter((g) => g >= this.stampsCountFrom),
+    );
+    if (this.own === void 0) return this.openOwnSpan(new Date(h));
+    if (!this.writes || h >= Date.parse(this.own.since)) return;
+    return (
+      (this.own = { ...this.own, since: new Date(h).toISOString() }),
+      this.note()
+    );
+  }
+  rowsAnswered(e) {
+    let r = this.sentAgain.size > 0;
+    for (let g of e) (this.unanswered.delete(g), this.sentAgain.delete(g));
+    let o = r && this.sentAgain.size === 0,
+      h = this.own !== void 0 && !this.runOpen && this.unanswered.size === 0;
+    if (!this.writes || (!o && !h)) return;
+    return (
+      (this.earlier = o ? [] : this.earlier),
+      (this.own = h ? void 0 : this.own),
+      this.note()
+    );
+  }
+  guardEnded(e) {
+    if (
+      ((this.guardLapsed = !0),
+      (this.stampsCountFrom = e),
+      this.unanswered.clear(),
+      !this.writes || this.own === void 0)
+    )
+      return;
+    return ((this.own = void 0), this.note());
+  }
+  earlierSpansTried(e) {
+    return this.replaceEarlier(
+      this.earlier.map((r) => ({
+        ...r,
+        until: r.until ?? e ?? this.startedAt,
+        tries: r.tries + 1,
+      })),
+    );
+  }
+  earlierRowsSentAgain(e) {
+    for (let r of e) this.sentAgain.add(r);
+  }
+  earlierRowsWithdrawn() {
+    this.sentAgain.clear();
+  }
+  earlierSpansGivenUp() {
+    return this.replaceEarlier([]);
+  }
+  reportWithNoteRefused() {
+    ((this.writes = !1), (this.refused = !0));
+  }
+  replaceEarlier(e) {
+    if (!this.writes || this.earlier.length === 0) return;
+    return ((this.earlier = e), this.note());
+  }
+  openOwnSpan(e) {
+    if (!this.writes || this.own !== void 0) return;
+    return (
+      (this.own = {
+        since: this.guardLapsed
+          ? e.toISOString()
+          : new Date(
+              Math.max(Date.parse(this.runOpenedAt), this.stampsCountFrom),
+            ).toISOString(),
+        tries: 0,
+      }),
+      (this.guardLapsed = !1),
+      this.note()
+    );
+  }
+  note() {
+    let e = this.earlier.map((o) => ({
+        ...o,
+        until: o.until ?? this.startedAt,
+      })),
+      r = this.own ? [...e, this.own] : e;
+    return { client_rows_owed: r.length > 0 ? { v: 1, spans: r } : null };
+  }
+}
+function Bt(e) {
+  let r = T(e.message) ? e.message.content : void 0;
+  return typeof e.uuid === "string" &&
+    Array.isArray(r) &&
+    e.isSidechain !== !0 &&
+    !e.parent_tool_use_id &&
+    (e.type === "assistant" ||
+      (e.type === "user" && r.some((o) => T(o) && o.type === "tool_result")))
+    ? e.uuid
+    : void 0;
+}
+function HIa(e, r, o = () => !0) {
+  let h = "nothing",
+    g = e.flatMap(({ since: R, until: k }) => {
+      let U = r.findIndex(Je(R)),
+        P = U < 0 ? [] : r.slice(U),
+        x =
+          k === void 0
+            ? -1
+            : We(k)
+              ? P.findIndex(Je(k))
+              : P.findIndex((G) => G.uuid === k) + 1,
+        L = x < 0 ? P : P.slice(0, x);
+      if (
+        (k !== void 0 && !We(k) && !r.some((G) => G.uuid === k)) ||
+        L.some((G) => G.type === "system" && G.subtype === "compact_boundary")
+      )
+        h = "rows_before_a_compaction";
+      let A = [];
+      for (let G of L) {
+        let z = Bt(G) !== void 0 && o(G);
+        if (z === "nor_any_after_it") {
+          h = "reply_without_this_sessions_mark";
+          break;
+        }
+        if (z) A.push(G);
+      }
+      return A.length > 0 ? [A] : [];
+    }),
+    y = new Set();
+  for (let R of g) {
+    let k = 0,
+      U = 0,
+      P = R.toReversed().findIndex(
+        (x, L) => (
+          (k += Buffer.byteLength(_(x))),
+          (U +=
+            T(x.message) && Array.isArray(x.message.content)
+              ? x.message.content.length
+              : 1),
+          L > 0 && (U > Math.floor(e6o / g.length) || k > kn / g.length)
+        ),
+      );
+    for (let x of P < 0 ? R : R.slice(R.length - P)) y.add(x);
+    if (P >= 0) h = "rows_over_the_limits";
+  }
+  return { rows: [...y], leftOut: h };
+}
+function DIa(e, r, o) {
+  let h = r.findIndex(Je(Math.min(...e.map(({ since: y }) => Date.parse(y))))),
+    g = (h < 0 ? r : r.slice(0, h)).findLast(o)?.uuid;
+  return typeof g === "string" ? g : void 0;
+}
+function Je(e) {
+  let r = new Date(e).getTime();
+  return (o) => typeof o.timestamp === "string" && Date.parse(o.timestamp) >= r;
+}
+var Tn = {
+    message_start: !0,
+    message_delta: !0,
+    message_stop: !0,
+    content_block_start: !0,
+    content_block_delta: !0,
+    content_block_stop: !0,
+  },
+  An = {
+    text_delta: !0,
+    input_json_delta: !0,
+    citations_delta: !0,
+    thinking_delta: !0,
+    signature_delta: !0,
+    compaction_delta: !0,
+  };
+function Nt(e) {
+  let { event: r } = e;
+  if (r.type === "message_start" && r.message?.input_transformations) {
+    let { input_transformations: o, ...h } = r.message;
+    return { ...e, event: { ...r, message: h } };
+  }
+  if (r.type === "message_delta" && r.input_transformations) {
+    let { input_transformations: o, ...h } = r;
+    return { ...e, event: h };
+  }
+  return e;
+}
+function et(e, r) {
+  let o = Cn(e.event),
+    h = Object.entries(o)
+      .map(([g, y]) => `${g}=${y}`)
+      .join(" ");
+  (t(
+    `CCRClient: dropping oversize ephemeral stream_event (${h}, ${r} bytes, over the ${dIt}-byte limit)`,
+    { level: "warn" },
+  ),
+    l("ccr_partial_messages", "oversize_ephemeral_skipped", {
+      ...o,
+      bytes: r,
+    }));
+}
+function Cn(e) {
+  if (!T(e)) return { event_type: S("other") };
+  let { type: r, delta: o, content_block: h } = e,
+    g = T(h) ? h.type : void 0;
+  return {
+    event_type: u(Dt(Tn, r)),
+    ...(r === "content_block_delta" && {
+      delta_type: u(Dt(An, T(o) ? o.type : void 0)),
+    }),
+    ...(r === "content_block_start" && {
+      content_block_type: H9e(g) ? u(g) : S("other"),
+    }),
+  };
+}
+function Dt(e, r) {
+  for (let o in e) if (o === r) return o;
+  return "other";
+}
+import { randomUUID as Pn } from "crypto";
+var Ht = "content_block_restated";
+function qt(e) {
+  return e.event?.type === Ht;
+}
+class tt {
+  response;
+  textSeen = !1;
+  block;
+  note(e) {
+    let { event: r } = e;
+    switch (r.type) {
+      case "message_start":
+        ((this.response = e), (this.textSeen = !1), (this.block = void 0));
+        return;
+      case "content_block_start": {
+        let o = r.content_block;
+        if (
+          ((this.block = void 0),
+          (this.textSeen ||= o.type === "text"),
+          this.response?.text_runs_joined && this.textSeen)
+        )
+          return;
+        if (o.type === "thinking") this.open(r.index, "thinking", o.thinking);
+        else if (o.type === "text") this.open(r.index, "text", o.text);
+        return;
+      }
+      case "content_block_delta": {
+        let { block: o } = this;
+        if (!o || o.index !== r.index) return;
+        if (o.kind === "text" && r.delta.type === "text_delta")
+          this.add(o, e, r.delta.text);
+        else if (o.kind === "thinking" && r.delta.type === "thinking_delta")
+          this.add(o, e, r.delta.thinking);
+        return;
+      }
+      case "message_delta":
+        return;
+      case "content_block_stop":
+        this.block = void 0;
+        return;
+      case "message_stop":
+        this.clear();
+        return;
+    }
+  }
+  noteRow(e) {
+    let { block: r } = this;
+    if (r && e.some((o) => o.type === r.kind && o[r.kind] === r.words))
+      this.block = void 0;
+  }
+  clear() {
+    ((this.response = void 0), (this.block = void 0));
+  }
+  restatement() {
+    let { block: e, response: r } = this,
+      o = e?.words;
+    if (!e?.firstDelta || r?.event.type !== "message_start" || !o?.trim())
+      return;
+    let { firstDelta: h } = e,
+      g = {
+        type: "stream_event",
+        uuid: Pn(),
+        session_id: h.session_id,
+        parent_tool_use_id: null,
+        thinking_display: h.thinking_display,
+        api_message_id: h.api_message_id,
+        text_runs_joined: r.text_runs_joined,
+        event: {
+          type: Ht,
+          message_id: r.event.message.id,
+          index: e.index,
+          content_block:
+            e.kind === "text"
+              ? { type: "text", text: o }
+              : { type: "thinking", thinking: o },
+          started_ms_ago: Math.max(
+            0,
+            Math.round(performance.now() - e.startedAtMs),
+          ),
+        },
+      };
+    if (Buffer.byteLength(_(g)) > dIt) {
+      e.words = void 0;
+      return;
+    }
+    return g;
+  }
+  open(e, r, o) {
+    this.block = {
+      index: e,
+      kind: r,
+      words: o,
+      startedAtMs: performance.now(),
+      firstDelta: void 0,
+    };
+  }
+  add(e, r, o) {
+    if (
+      ((e.firstDelta ??= r),
+      e.words === void 0 ||
+        typeof o !== "string" ||
+        e.firstDelta.thinking_display !== r.thinking_display ||
+        e.words.length + o.length > dIt)
+    ) {
+      e.words = void 0;
+      return;
+    }
+    e.words += o;
+  }
+}
+class st {
+  events;
+  bound;
+  bytesOfRows = 0;
+  bytesKept = 0;
+  weighed = 0;
+  withMedia = [];
+  constructor(e, r) {
+    this.events = e;
+    this.bound = r;
+  }
+  hasReplaced() {
+    return this.bytesKept < this.bytesOfRows;
+  }
+  fit(e) {
+    this.weighNewRows();
+    let r = this.bound.maxBytes * e;
+    while (this.bytesKept > r) {
+      let o = this.withMedia.shift();
+      if (o === void 0) return !1;
+      ((this.events[o.at] = o.replacement), (this.bytesKept -= o.frees));
+    }
+    return !0;
+  }
+  weighNewRows() {
+    for (let e of this.events.slice(this.weighed)) {
+      let r = Buffer.byteLength(ts(e));
+      ((this.bytesOfRows += r), (this.bytesKept += r));
+      let o = On(e.payload);
+      if (o !== e.payload) {
+        let h = { ...e, payload: o },
+          g = r - Buffer.byteLength(ts(h));
+        if (g > 0)
+          this.withMedia.push({ at: this.weighed, replacement: h, frees: g });
+      }
+      this.weighed++;
+    }
+  }
+}
+function On(e) {
+  if (!T(e) || e.type !== "user") return e;
+  let { message: r } = e;
+  if (!T(r) || !Array.isArray(r.content)) return e;
+  let o = !1,
+    h = r.content.map((g) =>
+      T(g) && g.type === "tool_result" && Array.isArray(g.content)
+        ? {
+            ...g,
+            content: g.content.map((y) => {
+              if (
+                !eJ(y) ||
+                !("type" in y) ||
+                (y.type !== "image" && y.type !== "document")
+              )
+                return y;
+              return ((o = !0), { type: "text", text: eNt });
+            }),
+          }
+        : g,
+    );
+  return o ? { ...e, message: { ...r, content: h } } : e;
+}
+var In = 500,
+  Fn = 60000;
+function Un(e) {
+  if (e.type !== "stream_event" || e.parent_tool_use_id != null) return !1;
+  let { event: r } = e;
+  if (!T(r) || r.type !== "content_block_delta") return !1;
+  let { delta: o } = r;
+  return (
+    T(o) &&
+    o.type === "text_delta" &&
+    typeof o.text === "string" &&
+    /\S/.test(o.text)
+  );
+}
+function Gt(e, r, o, h) {
+  let g = r.filter((P) => Un(P.payload) && !o.has(P));
+  if (g.length === 0) return;
+  for (let P of g) o.add(P);
+  let y = jt(e),
+    { posts: R, gapsOver500Ms: k, lastPostAtMs: U } = y;
+  if ((y.posts++, U !== void 0 && h - U > In)) y.gapsOver500Ms++;
+  return (
+    (y.lastPostAtMs = h),
+    () => {
+      for (let P of g) o.delete(P);
+      ((y.posts = R), (y.gapsOver500Ms = k), (y.lastPostAtMs = U));
+    }
+  );
+}
+function $t(e, r) {
+  if (!(r >= 0)) return;
+  let o = jt(e);
+  o.timerMaxLateMs = Math.max(
+    o.timerMaxLateMs ?? 0,
+    Math.min(Math.round(r), Fn),
+  );
+}
+function jt(e) {
+  return (
+    (e.textRhythm ??= {
+      posts: 0,
+      gapsOver500Ms: 0,
+      lastPostAtMs: void 0,
+      timerMaxLateMs: void 0,
+    }),
+    e.textRhythm
+  );
+}
+class rt {
+  counts = {
+    wholeTurnHolds: 0,
+    wholeTurnHoldsKeptToTurnEnd: 0,
+    clientEvents: { releases: 0, heldRows: 0, maxHeldRows: 0, maxHeldMs: 0 },
+    internalEvents: { releases: 0, heldRows: 0, maxHeldRows: 0, maxHeldMs: 0 },
+  };
+  wholeTurnHoldStands = !1;
+  released(e, r, o) {
+    let h =
+      e === "client_events"
+        ? this.counts.clientEvents
+        : this.counts.internalEvents;
+    ((h.releases += 1),
+      (h.heldRows += r),
+      (h.maxHeldRows = Math.max(h.maxHeldRows, r)),
+      (h.maxHeldMs = Math.max(h.maxHeldMs, o)));
+  }
+  wholeTurnHoldStarted() {
+    if (!this.wholeTurnHoldStands)
+      ((this.wholeTurnHoldStands = !0), (this.counts.wholeTurnHolds += 1));
+  }
+  wholeTurnHoldEndedEarly() {
+    this.wholeTurnHoldStands = !1;
+  }
+  turnEnded() {
+    if (this.wholeTurnHoldStands)
+      ((this.wholeTurnHoldStands = !1),
+        (this.counts.wholeTurnHoldsKeptToTurnEnd += 1));
+  }
+}
+class it {
+  inflight = null;
+  pending = null;
+  pendingWaits = !1;
+  pendingSince = 0;
+  waitTimer = null;
+  requeued = null;
+  requeuedMetadata = null;
+  remembered = {};
+  sending = null;
+  closingToNewPatches = new AbortController();
+  hasDroppedSomething = !1;
+  cutKeptMetadata = !1;
+  closed = !1;
+  config;
+  constructor(e) {
+    this.config = e;
+  }
+  enqueue(e) {
+    if (this.closed || this.isClosedToNewPatches) {
+      this.hasDroppedSomething = !0;
+      return;
+    }
+    if (this.pending && "worker_status" in this.pending && "worker_status" in e)
+      this.drain();
+    let r = !("worker_status" in e) && (this.config.waitsForStatus?.(e) ?? !1);
+    if (
+      ((this.pendingWaits =
+        (this.pending === null || this.pendingWaits) && r !== !1),
+      this.pendingWaits && typeof r === "number")
+    )
+      this.waitTimer ??= setTimeout(() => this.sendWaiting(), r);
+    if (this.pending === null)
+      ((this.pendingSince = Date.now()), (this.pending = e));
+    else this.pending = Ce(this.pending, e);
+    if ("worker_status" in e) this.requeued = null;
+    if (
+      ((this.requeuedMetadata &&= Le(this.requeuedMetadata, e)),
+      this.remember(e),
+      this.config.mergesSameRun?.())
+    )
+      queueMicrotask(() => void this.drain());
+    else this.drain();
+  }
+  requeueStatus(e) {
+    if (this.closed || this.isClosedToNewPatches) {
+      this.hasDroppedSomething = !0;
+      return;
+    }
+    if (this.pending && "worker_status" in this.pending) return;
+    ((this.requeued = e), this.drain());
+  }
+  requeueMetadata(e) {
+    if (this.closed || this.isClosedToNewPatches) {
+      this.hasDroppedSomething = !0;
+      return;
+    }
+    this.putBackMetadata(e);
+  }
+  putBackMetadata(e) {
+    ((this.requeuedMetadata = Le(
+      Ce(this.requeuedMetadata ?? {}, e),
+      this.pending ?? {},
+    )),
+      this.drain());
+  }
+  remember(e) {
+    if (this.config.remembers) this.remembered = Ce(this.remembered, e);
+  }
+  sendWaiting(e = 0) {
+    if (this.pendingWaits && (e <= 0 || Date.now() - this.pendingSince >= e))
+      ((this.pendingWaits = !1), this.drain());
+  }
+  closeToNewPatches() {
+    if (this.closed) return;
+    if (
+      ((this.pendingWaits = !1),
+      this.disarmWaitTimer(),
+      this.drain(),
+      this.closingToNewPatches.abort(),
+      (this.hasDroppedSomething ||= this.requeued !== null),
+      (this.requeued = null),
+      this.pending)
+    )
+      ((this.hasDroppedSomething ||= "worker_status" in this.pending),
+        (this.pending = this.withoutStatus(this.pending)));
+  }
+  get isClosedToNewPatches() {
+    return this.closingToNewPatches.signal.aborted;
+  }
+  get hasCutKeptMetadata() {
+    return this.cutKeptMetadata;
+  }
+  get owesMetadata() {
+    return (
+      this.isClosedToNewPatches &&
+      !this.closed &&
+      (this.pending !== null ||
+        this.requeuedMetadata !== null ||
+        (this.sending !== null && this.withoutStatus(this.sending) !== null))
+    );
+  }
+  keepsWithoutStatus(e) {
+    return this.withoutStatus(e) !== null;
+  }
+  withoutStatus(e) {
+    if (!("worker_status" in e)) return e;
+    let r = e.internal_metadata,
+      o = T(r)
+        ? xn(
+            r,
+            (this.config.ridesAStatus ?? []).filter(
+              (h) =>
+                r[h] !== null || !this.config.deleteOutlivesStatus?.includes(h),
+            ),
+          )
+        : {};
+    return Object.keys(o).length > 0 ? { internal_metadata: o } : null;
+  }
+  close() {
+    ((this.pendingWaits = !1),
+      this.drain(),
+      (this.closed = !0),
+      this.clearPending(),
+      (this.requeued = null),
+      (this.requeuedMetadata = null));
+  }
+  get unsent() {
+    return this.inflight !== null || this.pending !== null;
+  }
+  async flush() {
+    while (!this.closed)
+      if (this.inflight) await this.inflight;
+      else if (this.pending || this.requeued || this.requeuedMetadata)
+        ((this.pendingWaits = !1), await this.drain());
+      else return !this.hasDroppedSomething;
+    return !1;
+  }
+  async flushInternalKeyAndSendStatus(e) {
+    let r = (o) =>
+      o !== null && T(o.internal_metadata) && e in o.internal_metadata;
+    while (!this.closed) {
+      if (
+        !(
+          r(this.pending) ||
+          r(this.requeuedMetadata) ||
+          this.requeued !== null ||
+          (this.pending !== null && "worker_status" in this.pending)
+        ) &&
+        !r(this.sending)
+      )
+        return !this.hasDroppedSomething;
+      if (this.inflight) await this.inflight;
+      else ((this.pendingWaits = !1), await this.drain());
+    }
+    return !1;
+  }
+  async drain() {
+    if (this.inflight || this.closed) return;
+    let e = this.pendingWaits ? null : this.pending,
+      r = e ?? this.requeued,
+      o = !e;
+    if (e) this.clearPending();
+    else if (this.requeued) this.requeued = null;
+    else if (this.requeuedMetadata) {
+      let h = Le(this.requeuedMetadata, {
+        internal_metadata: Object.fromEntries(
+          (this.config.requeuedAlone ?? []).map((R) => [R, null]),
+        ),
+      });
+      if (h === null && this.pending) return;
+      let [[g, y] = []] = Object.entries(h ?? this.requeuedMetadata);
+      ((r = g === void 0 ? null : { [g]: y }),
+        (this.requeuedMetadata = r && Le(this.requeuedMetadata, r)));
+    }
+    if (!r) return;
+    this.inflight = this.sendWithRetry(r, o).then(() => {
+      if (
+        ((this.inflight = null),
+        (this.sending = null),
+        (this.pending || this.requeued || this.requeuedMetadata) &&
+          !this.closed)
+      )
+        this.drain();
+    });
+  }
+  async sendWithRetry(e, r) {
+    let o = e,
+      h = 0,
+      g = !1;
+    while (!this.closed) {
+      if (((this.sending = o), await this.config.send(o))) return;
+      if (this.handsBackWithoutStatus(o)) return;
+      if (
+        this.isClosedToNewPatches &&
+        r &&
+        !("worker_status" in o) &&
+        this.pending &&
+        !this.closed
+      ) {
+        this.putBackMetadata(o);
+        return;
+      }
+      if (this.isClosedToNewPatches && !g) ((g = !0), (h = 0));
+      if (
+        (h++,
+        await K(
+          this.retryDelay(h),
+          this.isClosedToNewPatches ? void 0 : this.closingToNewPatches.signal,
+        ),
+        this.handsBackWithoutStatus(o))
+      )
+        return;
+      if (this.pending && !this.closed) {
+        if (r) {
+          if (!("worker_status" in o) && !this.pendingWaits) {
+            this.putBackMetadata(o);
+            return;
+          }
+          if ("worker_status" in o && "worker_status" in this.pending) return;
+          continue;
+        }
+        ((o = Ce(o, this.pending)), this.clearPending());
+      }
+    }
+  }
+  handsBackWithoutStatus(e) {
+    if (!this.isClosedToNewPatches || !("worker_status" in e)) return !1;
+    if (this.closed) return !0;
+    return (
+      (this.hasDroppedSomething = !0),
+      (this.cutKeptMetadata ||=
+        this.pending !== null && "external_metadata" in this.pending),
+      (this.pending = this.withoutStatus(
+        this.pending ? Ce(e, this.pending) : e,
+      )),
+      !0
+    );
+  }
+  clearPending() {
+    ((this.pending = null), this.disarmWaitTimer());
+  }
+  disarmWaitTimer() {
+    if (this.waitTimer) (clearTimeout(this.waitTimer), (this.waitTimer = null));
+  }
+  retryDelay(e) {
+    let r = Math.min(
+        this.config.baseDelayMs * 2 ** (e - 1),
+        this.config.maxDelayMs,
+      ),
+      o = Math.random() * this.config.jitterMs;
+    return r + o;
+  }
+}
+function Le(e, r) {
+  let o = {};
+  for (let [h, g] of Object.entries(e)) {
+    let y = Pr(g, (R, k) => !(k in (r[h] ?? {})));
+    if (Object.keys(y).length > 0) o[h] = y;
+  }
+  return Object.keys(o).length > 0 ? o : null;
+}
+function Ce(e, r) {
+  let o = { ...e };
+  for (let [h, g] of Object.entries(r))
+    if (
+      (h === "external_metadata" || h === "internal_metadata") &&
+      o[h] &&
+      typeof o[h] === "object" &&
+      typeof g === "object" &&
+      g !== null
+    )
+      o[h] = { ...o[h], ...g };
+    else o[h] = g;
+  return o;
+}
+var zt = {},
+  Ms = 20000,
+  Kt = 1e4,
+  Ts = 15000,
+  As = 5000,
+  Cs = As,
+  Bn = 5000,
+  Dn = 300000,
+  t6o = 2000,
+  Hn = Ts + Cs + 2 * Ms,
+  qn = 5000,
+  Vt = 1.5,
+  Gn = 3,
+  $n = new Set([401, 403, 404, 429]),
+  eEn = 100,
+  n6o = 20;
+function me(e) {
+  return e === 400 || e === 413 || e === 422;
+}
+var mt = "/worker/event-batch",
+  jn = new Set([404, 405, 501]),
+  zn = 60000,
+  Kn = 1920000,
+  Vn = "x-ccr-upload-attempt",
+  vt = 1e4,
+  Yn = 60000,
+  Xn = 1e4,
+  Yt = 60000,
+  St = 1048576,
+  Qn = 4 * St - 65536,
+  Jn = 5000,
+  Zn = 120000,
+  er = 1.5,
+  Ge = 262144,
+  tr = 100;
+function Qt(e, { maxMs: r, minMs: o = vt }) {
+  let h = vt + Math.round((e.bytes / St) * (Jn / 1000)) * 1000,
+    g = e.bytes >= Ge && !e.cuttable ? h * er ** e.retryCount : h;
+  return Math.max(o, Math.min(r, Math.round(g)));
+}
+var sr = new Set(["remote_tool_call", "remote_plumbing_call"]);
+function nr(e) {
+  return sr.has(Ps(e));
+}
+var rr = new Set(yVe),
+  ir = 256,
+  or = new Set([
+    "apply_flag_settings",
+    "set_max_thinking_tokens",
+    "set_permission_mode",
+    "mcp_set_servers",
+    "mcp_reconnect",
+    "reload_skills",
+    "comparison_fork",
+  ]),
+  Zt = 1000,
+  ar = 64,
+  lr = new Set([
+    "initialize",
+    "stage_file",
+    "prefetch_attachments",
+    "set_chrome_browser_hints",
+    "mcp_toggle",
+    "set_mcp_permission_mode_override",
+    "set_model",
+    "comparison_fork",
+  ]);
+function es(e) {
+  if (!T(e)) return !1;
+  return e.type === "control_request"
+    ? T(e.request) && or.has(e.request.subtype)
+    : e.type === "control_response";
+}
+function Ps(e) {
+  let r = e.payload.type === "control_request" ? e.payload.request : void 0;
+  return typeof r === "object" && r !== null && "subtype" in r
+    ? r.subtype
+    : void 0;
+}
+function Be(e) {
+  let r = w(e);
+  if (r) return r;
+  if (e && typeof e === "object" && "name" in e && typeof e.name === "string")
+    return e.name;
+  return;
+}
+class _Ve extends Error {
+  reason;
+  httpStatus;
+  noAnswer;
+  constructor(e, r, o = !1) {
+    super(`CCRClient init failed: ${e}`);
+    this.reason = e;
+    this.httpStatus = r;
+    this.noAnswer = o;
+  }
+}
+function LIa(e) {
+  return (
+    e instanceof _Ve &&
+    e.reason === "worker_register_failed" &&
+    !me(e.httpStatus)
+  );
+}
+var dr = 10,
+  r6o = {
+    epoch_conflict: 4090,
+    superseded_by_worker: 4090,
+    session_not_active: 4090,
+    organization_moved_away: 4090,
+    epoch_stale: 4090,
+    session_not_found: 4090,
+    token_expired: 4094,
+    auth_exhausted: 4094,
+  },
+  ur = {
+    epoch_conflict: !0,
+    superseded_by_worker: !0,
+    session_not_active: !0,
+    organization_moved_away: !0,
+    epoch_stale: !0,
+    session_not_found: !1,
+    token_expired: !1,
+    auth_exhausted: !1,
+  },
+  cr = 3,
+  hr = 10,
+  pr = 3,
+  Pe = 3,
+  fr = 100,
+  ss = [100, 25, 7, 2, 1],
+  _r = 200,
+  mr = 0.75;
+async function vr(e, r) {
+  let o = e.body?.getReader(),
+    h = new TextDecoder(),
+    g = "",
+    y = 0;
+  for (let R = await o?.read(); R !== void 0 && !R.done; R = await o?.read()) {
+    if (((y += R.value.byteLength), y > r)) return (await o?.cancel(), null);
+    let k = h.decode(R.value, { stream: !0 });
+    if (k === "" && R.value.byteLength > 6)
+      throw (
+        o?.cancel().catch(() => {}),
+        RangeError("out of memory while decoding a page")
+      );
+    g += k;
+  }
+  return { text: g + h.decode(), bytes: y };
+}
+function gr(e, r) {
+  let o = e.payload?.timestamp;
+  return (
+    r === void 0 || o === void 0 || (typeof o === "string" && o.length <= r)
+  );
+}
+var wr = 1e4,
+  ns = 30000,
+  yr = 60000;
+function rs(e) {
+  return e !== void 0 && e >= 400 && e < 500 ? "not_accepted" : "indeterminate";
+}
+function ot(e) {
+  let r = !1,
+    o = !1;
+  for (let h of e)
+    if (h.payload.subtype === "task_notification") r = !0;
+    else if (h.payload.subtype === "background_tasks_changed") o = !0;
+  return r || o ? { has_terminal_bookend: r, has_level: o } : null;
+}
+function De(e) {
+  return Math.min(Math.max(0, Math.trunc(e) || 0), 2147483647);
+}
+var at = {
+    "/worker": "worker_state",
+    [mt]: "events",
+    "/worker/events": "events",
+    "/worker/events/delivery": "delivery",
+    "/worker/heartbeat": "heartbeat",
+    "/worker/internal-events": "internal_events",
+  },
+  Sr = 512,
+  br = "upgrade_relay_marker",
+  Rr = 3000,
+  gt = 30000,
+  Er = 5000;
+function Os(e) {
+  return {
+    tool_name: e.tool_name,
+    display_tool_name: e.display_tool_name,
+    action_description: e.action_description,
+    raw_command: e.raw_command,
+    request_id:
+      e.request_id ||
+      (e.shown_texts_whole === !0 && !e.suppressed_request_id
+        ? (e.cut_request_id ?? "")
+        : ""),
+    tool_use_id: e.tool_use_id,
+  };
+}
+var kr = p(() =>
+    c({
+      tool_name: n().refine((e) => !e.startsWith("dialog:")),
+      display_tool_name: n().nullish(),
+      action_description: n(),
+      raw_command: n().nullish(),
+      request_id: n(),
+      tool_use_id: n().min(1),
+      suppressed_request_id: n().nullish(),
+      cut_request_id: n().nullish(),
+      shown_texts_whole: O()
+        .nullish()
+        .catch(void 0),
+    }),
+  ),
+  Is = p(() =>
+    Ut({
+      event_id: n(),
+      event_type: n(),
+      payload: ge(n(), ae()),
+      event_metadata: ge(n(), ae()).nullish(),
+      is_compaction: O(),
+      created_at: n(),
+      session_agent_id: n().optional(),
+    }),
+  ),
+  Mr = p(() => c({ data: C(Is()), next_cursor: n().optional() })),
+  Tr = p(() =>
+    c({
+      data: C(
+        Is().extend({
+          payload: Ut({ type: v("agent_metadata") }),
+          session_agent_id: n(),
+        }),
+      ).optional(),
+    }),
+  ),
+  Ar = p(() => c({ results: C(c({ event_id: n(), duplicate: O() })) }));
+function Cr(e) {
+  let r = kr().safeParse(e);
+  if (!r.success) return;
+  let o = r.data,
+    h = qB(o);
+  if (h === void 0) return;
+  return {
+    requestId: h,
+    details: Os({
+      tool_name: o.tool_name,
+      display_tool_name: o.display_tool_name ?? void 0,
+      action_description: o.action_description,
+      raw_command: o.raw_command ?? void 0,
+      request_id: o.request_id,
+      suppressed_request_id: o.suppressed_request_id ?? void 0,
+      cut_request_id: o.cut_request_id ?? void 0,
+      shown_texts_whole: o.shown_texts_whole === !0 || void 0,
+      tool_use_id: o.tool_use_id,
+    }),
+  };
+}
+function Or(e) {
+  if (e === "pending") return { status: "idle", reason: "get_pending" };
+  if (e.readFailed) return { status: "idle", reason: "get_failed" };
+  let r = e.external?.pending_action;
+  if (r === void 0 || r === null)
+    return { status: "idle", reason: "no_pending_action" };
+  let o = Cr(r);
+  if (!o) return { status: "idle", reason: "not_reportable" };
+  return { status: "requires_action", reason: "park", ...o };
+}
+function xs(e) {
+  let r = e.external?.pending_actions;
+  return (
+    e.readFailed === !0 ||
+    (e.external?.pending_action !== void 0 &&
+      e.external.pending_action !== null) ||
+    (Array.isArray(r) && r.length > 0)
+  );
+}
+function Ir(e, r) {
+  if (e === "requires_action") return { reported: e };
+  return { reported: e, pendingActionOutstanding: xs(r) };
+}
+var xr = p(() =>
+    Ut({
+      max_events: E().nullish(),
+      max_age_ms: E().nullish(),
+      max_bytes: E().nullish(),
+      flush_on_sampling_end: O().nullish(),
+      flush_on_assistant: O().nullish(),
+      event_batch_upload: O()
+        .nullish()
+        .catch(void 0),
+      hold_across_model_calls: O()
+        .nullish()
+        .catch(void 0),
+      hold_again: Ut({
+        soft_age_ms: E().nullish(),
+        soft_events: E().nullish(),
+        after: C(n()).nullish(),
+        never_after_tools: C(n()).nullish(),
+        tools_whose_results_wait: C(n()).nullish(),
+        results_go_beside_running_calls: O()
+          .nullish()
+          .catch(void 0),
+        later_worker_holds_first_turn: O()
+          .nullish()
+          .catch(void 0),
+      })
+        .nullish()
+        .catch(void 0),
+      may_wait_types: C(n())
+        .nullish()
+        .catch(void 0),
+      flush_after_tool_names: C(n())
+        .nullish()
+        .catch(void 0),
+      flush_on_call_of_tool_names: C(n())
+        .nullish()
+        .catch(void 0),
+      settings_receipts_max_wait_ms: E()
+        .nullish()
+        .catch(void 0),
+      messages_received_waits: O()
+        .nullish()
+        .catch(void 0),
+      receipts_ride_uploads: O()
+        .nullish()
+        .catch(void 0),
+      flush_before_tools_wait_ms: E().nullish(),
+      flush_after_tools: n().nullish(),
+      must_flush_types: C(n()).nullish(),
+      live_twin_types: C(n())
+        .nullish()
+        .catch(void 0),
+      live_only_types: C(n())
+        .nullish()
+        .catch(void 0),
+      transcript_max_age_ms: E()
+        .nullish()
+        .catch(void 0),
+      no_turn_max_age_ms: E()
+        .nullish()
+        .catch(void 0),
+      merge_worker_reports: O()
+        .nullish()
+        .catch(void 0),
+      control_traffic_keeps_hold: O()
+        .nullish()
+        .catch(void 0),
+      empty_checkpoint_keeps_hold: O()
+        .nullish()
+        .catch(void 0),
+      first_turn_holds_each_call: O()
+        .nullish()
+        .catch(void 0),
+      settings_answers_max_wait_ms: E()
+        .nullish()
+        .catch(void 0),
+      init_max_wait_ms: E()
+        .nullish()
+        .catch(void 0),
+      metadata_waits_for_status: C(n())
+        .nullish()
+        .catch(void 0),
+      metadata_never_sent: C(n())
+        .nullish()
+        .catch(void 0),
+      metadata_max_wait_ms: E()
+        .nullish()
+        .catch(void 0),
+      cost_report_max_wait_ms: E()
+        .nullish()
+        .catch(void 0),
+      policy_version: n().nullish(),
+    }),
+  ),
+  Fr = 50,
+  Ur = 90,
+  Fs = 120000,
+  Ws = 60000,
+  Oe = 240000,
+  is = 30000,
+  Wr = 2000,
+  Lr = 1e4,
+  Br = 600000,
+  Dr = 5000,
+  Nr = 1000,
+  Hr = 256,
+  qr = 2000,
+  os = 5000,
+  Gr = 1048576,
+  Ls = "Write",
+  $r = new Set(["Bash", Ls, "Edit", "NotebookEdit", "Agent"]),
+  lt = 256,
+  jr = /^\s*\{\s*"file_path"\s*:\s*"([^"\\]*)"/,
+  zr = /\.html?\s*$/i,
+  Kr = 3000,
+  Vr = 5000,
+  Yr = 100,
+  as = 32,
+  Ne = 32,
+  Xr = Oe,
+  Qr = 16;
+function He(e, r) {
+  return r === "processed";
+}
+var Jr = new Set([
+    "apply_flag_settings",
+    "set_max_thinking_tokens",
+    "mcp_set_servers",
+  ]),
+  Bs = "system/foreground_shell_task_rows",
+  Ds = "system/status_requesting_repeat",
+  Ns = "system/status_requesting_repeat_releasing",
+  Hs = "system/status_requesting_repeat_starting",
+  qs = "system/status_requesting_first",
+  Gs = "system/status_requesting_repeat_waiting",
+  $s = "system/status_requesting_repeat_after_input",
+  yt = "system/status_requesting_behind_sub_agent",
+  Zr = new Set(["system/task_summary", Bs, Ds, Ns, Hs, qs, Gs, $s, yt]),
+  ls = new Set([
+    "rate_limit_event/allowed",
+    "system/task_summary",
+    "system/task_list_statuses",
+    "system/post_turn_summary",
+    "system/commands_changed",
+    "system/permission_check_status",
+    "system/hook_started",
+    "system/hook_response",
+    "system/informational",
+    "system/peer_message_hold",
+    "system/permission_denied",
+    "system/session_metadata",
+    "system/session_title_changed",
+    "system/per_turn_effort_changed",
+    "system/instruction_size_warning",
+    "system/slack_tag_title",
+    "system/vcs_state_changed",
+    "tool_use_summary",
+    "system/task_started_foreground_shell",
+    "system/task_notification_foreground_shell",
+  ]),
+  ei = 32,
+  js = [
+    "post_turn_summary",
+    "recap",
+    "context_usage",
+    "rate_limit_info",
+    "task_summary",
+  ],
+  ti = new Set([...js, "turn"]),
+  si = new Set([...js, "last_served_model"]),
+  ni = Oe,
+  ri = new Set([
+    "context_usage",
+    "cross_session_inbound",
+    "is_ultraplan_mode",
+    "last_served_model",
+    "permission_mode",
+    "rate_limit_info",
+  ]),
+  ii = new Set([
+    "had_background_launcher",
+    "plan_doc",
+    "plan_entered_by",
+    "worker_permission_mode",
+  ]),
+  ds = M$t,
+  us = 64512,
+  oi = /^[A-Za-z0-9._-]{1,16}$/,
+  ai = 30000,
+  li = 2000,
+  di = ["none", "write", "all"],
+  ui = 64,
+  ci = 50,
+  hi = 5000,
+  pi = !1,
+  dt = 3000,
+  cs = 100,
+  fi = St,
+  _i = 1e4,
+  Me = (e) => e.ephemeral === !0 || e.payload.type === "keep_alive",
+  ut = (e) => Me(e) || e.payload.type === "control_response",
+  hs = () => !1;
+function mXs() {
+  return s.CLAUDE_CODE_WORKER_EPOCH ?? NaN;
+}
+var mi = [
+    "cumulative_cost_usd",
+    "cumulative_input_tokens",
+    "cumulative_output_tokens",
+    "cumulative_cache_read_tokens",
+    "cumulative_cache_write_tokens",
+  ],
+  zs = new Set([
+    ...mi,
+    "cost_state",
+    "memory_extract_place",
+    "model_turn_stored",
+  ]),
+  vi = "thread_carry",
+  qe = "disabled_mcp_servers",
+  gi = 64;
+function ps(e) {
+  return Object.entries(e).filter(
+    ([r]) =>
+      zs.has(r) ||
+      r === "last_served_model" ||
+      r === "turn" ||
+      r === "worker_permission_mode" ||
+      r === "plan_doc" ||
+      r === "plan_entered_by" ||
+      r === "card_turn_stamp" ||
+      r === "card_answer_handed_on" ||
+      r === "safety_monitor_blocked",
+  );
+}
+function ke(e) {
+  return 1 + (e < 128 ? 1 : e < 16384 ? 2 : e < 2097152 ? 3 : 4) + e;
+}
+function gpt(e) {
+  if (e instanceof bue) return gpt(e.toJSON());
+  if (typeof e === "string") return ke(Buffer.byteLength(e));
+  if (typeof e === "number") return 9;
+  let r = 0;
+  if (Array.isArray(e)) for (let o of e) r += ke(gpt(o));
+  else if (T(e)) {
+    for (let [o, h] of Object.entries(e))
+      if (h !== void 0) r += ke(ke(Buffer.byteLength(o)) + ke(gpt(h)));
+  } else return 2;
+  return ke(r);
+}
+function wi(e) {
+  let r = e?.error;
+  return r?.type === "not_found_error" && r.resource_type === "client_event";
+}
+function fs(e, r) {
+  return e.toLowerCase() === r.toLowerCase();
+}
+function yi(e) {
+  if (e === 404) return "http_404_unknown_body";
+  if (e === 401 || e === 403) return "http_refused";
+  if (e === 429) return "http_rate_limited";
+  if (e === 501) return "http_not_served";
+  return e >= 500 ? "http_server_error" : "http_other";
+}
+var Si = p(() =>
+  c({
+    event_id: n(),
+    source: v("client"),
+    created_at: n(),
+    payload: Ut({ uuid: n() }),
+    sent_by_account_id: n().nullish(),
+    device_attestation_status: ae().optional(),
+    session_agent_owned: O(),
+  }),
+);
+function bi(e, r) {
+  let o = Si().safeParse(e);
+  if (!o.success) return { kind: "unavailable", why: "malformed" };
+  let { event_id: h, created_at: g, payload: y } = o.data,
+    R = Date.parse(g);
+  if (!fs(h, r) || !Number.isFinite(R) || !fs(y.uuid, r))
+    return { kind: "unavailable", why: "malformed" };
+  return {
+    kind: "event",
+    event: {
+      eventId: r,
+      createdAtMs: R,
+      sentByAccountId: o.data.sent_by_account_id ?? void 0,
+      deviceAttestationStatus: o.data.device_attestation_status,
+      sessionAgentOwned: o.data.session_agent_owned,
+      payload: y,
+    },
+  };
+}
+function o6o(e, r) {
+  if (e.protocol !== "http:" && e.protocol !== "https:") {
+    let h = Pyr(e.protocol, "session_url_protocol");
+    throw Error(
+      `CCRClient: Expected http(s) URL${h === void 0 ? "" : `, got ${h}`}`,
+    );
+  }
+  let o = e.pathname.replace(/\/$/, "");
+  return { sessionBaseUrl: `${e.protocol}//${e.host}${o}`, getAuthHeaders: r };
+}
+function _s(e, r) {
+  return r === "idle" ? {} : e;
+}
+class Uj {
+  workerEpoch = 0;
+  heartbeatIntervalMs;
+  heartbeatJitterFraction;
+  seedHeartbeatIntervalMs;
+  advertiseHeartbeatProbeSupport;
+  uploadTrim;
+  withholdsWholeFiles = kb();
+  keepsRequestId;
+  uploadHoldMarker;
+  skipsGoodbyeDuringResumeLoad;
+  holdsAMessage;
+  liveOnlyShellStarts = new Map();
+  servedCallRequestsJumpQueue;
+  resendsUnheardStreamEvents;
+  maxEventPostTimeoutMs;
+  urgentRequestIds = new Set();
+  followsServedPolicy;
+  launchFlushPolicy;
+  processExiting;
+  gatesToolCalls;
+  toolCallRowGraceMs;
+  flushPolicy;
+  holdRule;
+  settingsRequestIds = new Set();
+  waitingAnswers = [];
+  waitingAnswersTimer = null;
+  lastRateLimitKind;
+  lastRateLimitRepeat;
+  seesModelCallBoundaries = !1;
+  lastRequestingList;
+  liveOnlyFirstRow;
+  turnTookInput = !1;
+  housekeepingRequestIds = new Set();
+  toolResultEndsCall = !1;
+  liveOnlyRequestingRow;
+  heldRepeatUuid;
+  subAgentWroteSinceStoredRequesting = !1;
+  indexBehindHeldToolResult;
+  liveOnlyStartingRow;
+  turnHold = "open";
+  modelTurnEnded = !1;
+  recordAtStart;
+  reportedKeys = new Set();
+  lastReportedInternal = new Map();
+  autocompactStateStored;
+  stateRowTypesWritten = new Set();
+  sessionModelTurnStored = !1;
+  resultThatMarks;
+  secondCallStartsHold = !1;
+  modelCallStreamed = !1;
+  streamedResponseId;
+  holdsNoMoreThisTurn = !1;
+  newestResponseId;
+  unansweredCalls = new Set();
+  callsWhoseResultsWait = new Set();
+  heldResultNeedsStore = !1;
+  heldResultsNeedingStore = new Set();
+  pickupBarriers = [];
+  pickupTakesTick = !1;
+  pickupWaitMs;
+  inboundMessageUuids = new Set();
+  messageInHandWaiters = new Set();
+  liveTurnId;
+  nextLiveIndex = 0;
+  heldShellTaskIds = new Set();
+  rowsMarkedLiveOnly = new WeakSet();
+  tasksWithListSent = new Set();
+  artifactSocketIds;
+  lastTaskList;
+  droppedBeforeLiveTurn = 0;
+  lastViewerCheckpointAtMs = 0;
+  openBlock;
+  restatementOwed = !1;
+  lastRestatementAtMs = 0;
+  replyRestated = !1;
+  loggedOpenBlockRestated = !1;
+  viewerCheckpointTimer = null;
+  shutdownReleased = !1;
+  shutdownKeepsClientEvents = !1;
+  shutdownBeganAtMs = 0;
+  owedMetadataDropsAtShutdown = 0;
+  viewerAbsentReported = !1;
+  stopToolCallGate;
+  keepAliveAtWorkStart;
+  quietCallPulse;
+  stopWorkStartKeepAlive;
+  toolCallRows = { client_events: new Map(), internal_events: new Map() };
+  toolCallRowWaiters = new Map();
+  awaitedToolCalls = new Set();
+  transcriptLaneInUse = !1;
+  toolCallsWhoseResultReleases = new Set();
+  lanesNotAnswering = new Set();
+  loggedUnreadableFlushPolicy = !1;
+  loggedTranscriptEnvelopeStrip = !1;
+  loggedToolResultBlank = !1;
+  loggedMcpImageBlank = !1;
+  loggedWholeFileWithheld = !1;
+  loggedRequestIdKept = !1;
+  maxAdvisedIntervalMs;
+  beatOnStaleReconnect;
+  beatOnReactivation;
+  skipRedundantHeartbeats;
+  idleTracker;
+  heartbeatGap;
+  unsubscribeIdleTracker;
+  probeBeatSpacingMs;
+  heartbeatTimer = null;
+  heartbeatInFlight = !1;
+  lastHeartbeatSentAtMs = 0;
+  lastCadenceTickAtMs = 0;
+  lastBeatingEventsPostOkAtMs = 0;
+  lastEventsAnswerOrPulseAtMs = 0;
+  keepAliveAloneSentAtMs = -1 / 0;
+  eventsPostsFailingSinceMs;
+  eventsPostRateLimited = !1;
+  skippedPreviousCadenceBeat = !1;
+  lastHeartbeatSuccessAtMs = Date.now();
+  heartbeatsSent = 0;
+  lastSucceededBeat = 0;
+  lastSettledBeat = 0;
+  lastHeartbeat429AtMs = 0;
+  idleGrantLatched = !1;
+  reactivationBeatArmed = !1;
+  pendingForcedBeat = !1;
+  probeBeatTimer = null;
+  pendingBeatTrigger = null;
+  closed = !1;
+  closeAbort = new AbortController();
+  goodbyeFlushed = Promise.resolve();
+  leftMidTurn = !1;
+  epochSuperseded = !1;
+  lastEpochMismatchCause;
+  epochMismatchCount = 0;
+  consecutiveAuthFailures = 0;
+  lastAuthRefreshBadReason = null;
+  consecutiveNotFound = 0;
+  consecutiveHeartbeatFailures = 0;
+  currentState = null;
+  statedTurn;
+  reportParkAtInit;
+  guardsClientRows;
+  clientRowsSwitchIsOn = !1;
+  hasDisplayHooks = void 0;
+  displayHookSeen = !1;
+  clientRowsOwed = new Ze();
+  ownRowsWaitBehindRowsSentAgainSince = void 0;
+  initExternalMetadata;
+  initialWorkerStatus;
+  initialTurn;
+  initStateGetOrderingBoundMs;
+  clearsCardAfterLateRead;
+  hasReportedPendingAction = !1;
+  stateReadEndsAtRegistration;
+  startReportsMaxWaitMs;
+  startReportsWaitUntilMs = 0;
+  firstStatusDueUntilMs = 0;
+  parkReportedAtInitRequestId = void 0;
+  sessionBaseUrl;
+  sessionId;
+  readSource;
+  streamEventBuffer = [];
+  streamEventTimer = null;
+  firstFrameUpload;
+  firstTextFrameUpload;
+  firstBlockFrameUpload;
+  countedTextEvents = new WeakSet();
+  streamEventBufferedAt = 0;
+  streamEventFlushDueAt = 0;
+  streamEventFlushIntervalMs = eEn;
+  streamEventFirstFlushMs = 0;
+  streamEventWindowRunsFromLastFlush = !1;
+  heldBunchFlushMs = n6o;
+  firstDeltaFlushTimer = null;
+  firstContentFlushPending = !1;
+  thinkingStartGoesAtOnce = !1;
+  messageWordsGoFirst = !1;
+  messageCallInput;
+  loggedMessageWordsFirst = !1;
+  awaitingFirstBlock = !1;
+  loggedThinkingStartAtOnce = !1;
+  textEarlyUploadsMs = [];
+  textBlockOpen = !1;
+  textFirstDeltaAt;
+  textEarlyUploadsUsed = 0;
+  textEarlyUploadTimer = null;
+  loggedTextEarlyUpload = !1;
+  thinkingFlushMs = 0;
+  thinkingBlockOpen = !1;
+  toolInputFlushMs = 0;
+  liveTwinWaitMs = 0;
+  bufferHoldsFirstFrames = !1;
+  toolInputMayWait = !1;
+  toolInputChars = 0;
+  writeInputHead;
+  streamEventTimerIsSlow = !1;
+  streamEventsTakenAt = 0;
+  loggedThinkingFlush = !1;
+  loggedToolInputFlush = !1;
+  loggedLiveTwinWait = !1;
+  parkedRows = [];
+  noSubscriberStreamEventFlushIntervalMs = 0;
+  noSubscriberUploadHoldMs = 0;
+  closingForSuccessor = !1;
+  uploadHoldTally = new rt();
+  undeliveredClientEventsAtClose;
+  undeliveredInternalEventsAtClose;
+  dropUnwatchedStreamEvents = !1;
+  lastReportedHasSubscribers;
+  lastInboundEventAtMs = Number.NEGATIVE_INFINITY;
+  unheard;
+  lastStreamEventDropAtMs = Number.NEGATIVE_INFINITY;
+  viewerReportedSinceLastFalse = !1;
+  lastViewerLeftAtMs = Number.NEGATIVE_INFINITY;
+  unwatchedPastGrace = !1;
+  onStreamEventDropChange;
+  toldStreamEventDrop = !1;
+  hasSubscribersReports = 0;
+  streamEventsDroppedUnwatched = 0;
+  streamedEphemeralSinceLastAssistant = !1;
+  workerState;
+  eventUploader;
+  workerSocket;
+  internalEventUploader;
+  ridingRows;
+  takenRiders;
+  ridesRefused = !1;
+  ridesPausedUntilMs = 0;
+  routeOnlyFailures = 0;
+  ridePauses = 0;
+  transcriptPostsMayBeAborted = !1;
+  abortableTranscriptPost;
+  transcriptPostsAborted = 0;
+  failedRide;
+  loggedRowsLeftOut = !1;
+  eventsLaneSends = 0;
+  internalEventPostWatch;
+  rowsAwaitingCompactSummary = new Map();
+  rowsAwaitingCompactSummaryAtClose;
+  onInternalBatchAcked;
+  onInternalEventLaneClosed;
+  rowsRepeatedAfterCompaction;
+  deliveryUploader;
+  unrunReasons = new Map();
+  pendingProcessingAcks = [];
+  waitingReceipts = new Map();
+  waitingReceiptsTimer;
+  messagesInProcessing = new Set();
+  resultPostWaits;
+  receiptsRide;
+  receiptsRideRefused = !1;
+  onEpochMismatch;
+  lastLineWhen;
+  onDurableEventsDropped = void 0;
+  onDurableEventsUpload = void 0;
+  getAuthHeaders;
+  tickets = new Ve();
+  providerWithheldReason;
+  onDiagnostic;
+  onCardRecordRefused;
+  onRequestAuthOk;
+  onHeartbeatLost;
+  stopWhenNothingAccepted;
+  nothingAcceptedSinceMs;
+  longestNothingAcceptedMs = 0;
+  readTransport;
+  nonOrigin403Transient;
+  nonOriginRuns = new Map();
+  heartbeatStreakStartedAtMs = 0;
+  heartbeatLostFiredForStreak = !1;
+  adoptRefreshedAuth;
+  gzipRequestBodyFetch;
+  ownConnectionPool;
+  leavesPool;
+  lastBeatLeftPool = !1;
+  constructor(e, r, o) {
+    ((this.lastLineWhen = o?.onEpochMismatch ? "queued" : "now"),
+      (this.onEpochMismatch =
+        o?.onEpochMismatch ??
+        (() => {
+          process.exit(1);
+        })),
+      (this.onHeartbeatLost = o?.onHeartbeatLost),
+      (this.stopWhenNothingAccepted = o?.stopWhenNothingAccepted),
+      (this.readTransport = e),
+      (this.workerSocket = o?.workerSocket),
+      (this.nonOrigin403Transient = o?.nonOrigin403Transient ?? !1),
+      (this.heartbeatIntervalMs = o?.heartbeatIntervalMs ?? Ms),
+      (this.seedHeartbeatIntervalMs = this.heartbeatIntervalMs),
+      (this.advertiseHeartbeatProbeSupport =
+        o?.advertiseHeartbeatProbeSupport ?? !1),
+      (this.uploadTrim = o?.uploadTrim ?? (() => zt)),
+      (this.keepsRequestId = () => o?.keepsRequestId?.() === !0),
+      (this.uploadHoldMarker = () => o?.uploadHoldMarker?.() === !0),
+      (this.skipsGoodbyeDuringResumeLoad = () =>
+        o?.skipsGoodbyeDuringResumeLoad?.() !== !1),
+      (this.holdsAMessage = () => o?.holdsAMessage?.() === !0),
+      (this.artifactSocketIds = o?.artifactSocketIds),
+      (this.servedCallRequestsJumpQueue = () =>
+        o?.servedCallRequestsJumpQueue?.() === !0),
+      (this.resendsUnheardStreamEvents = () =>
+        o?.resendsUnheardStreamEvents?.() === !0),
+      (this.maxEventPostTimeoutMs = o?.maxEventPostTimeoutMs ?? Zn),
+      (this.followsServedPolicy = o?.followsServedPolicy === !0),
+      (this.keepAliveAtWorkStart = o?.keepAliveAtWorkStart),
+      (this.quietCallPulse = o?.pulsesInQuietCalls
+        ? new Ye(performance.now())
+        : void 0),
+      (this.onStreamEventDropChange = o?.onStreamEventDropChange),
+      (this.launchFlushPolicy = o?.launchFlushPolicy),
+      (this.processExiting = o?.processExiting ?? (() => !1)),
+      (this.gatesToolCalls = o?.gatesToolCalls === !0),
+      (this.toolCallRowGraceMs = o?.toolCallRowGraceMs ?? li),
+      (this.pickupWaitMs = o?.pickupWaitMs ?? Dr),
+      (this.beatOnStaleReconnect = o?.beatOnStaleReconnect ?? !1),
+      (this.idleTracker = o?.idleTracker),
+      (this.heartbeatGap = o?.heartbeatGap),
+      (this.beatOnReactivation =
+        (o?.beatOnReactivation ?? !1) && this.idleTracker !== void 0),
+      (this.skipRedundantHeartbeats = o?.skipRedundantHeartbeats ?? !1),
+      (this.probeBeatSpacingMs = o?.probeBeatSpacingMs ?? qn),
+      (this.heartbeatJitterFraction = o?.heartbeatJitterFraction ?? 0),
+      (this.maxAdvisedIntervalMs = this.maxAdvisedIntervalFor(
+        this.advertiseHeartbeatProbeSupport,
+      )),
+      (this.getAuthHeaders = o?.getAuthHeaders ?? l7));
+    let h = o?.isFirstPartyProvider;
+    ((this.providerWithheldReason =
+      h === void 0
+        ? () => "provider-unknown"
+        : () => (h() ? void 0 : "data-residency")),
+      (this.onDiagnostic = o?.onDiagnostic),
+      (this.onCardRecordRefused = o?.onCardRecordRefused),
+      (this.onRequestAuthOk = o?.onRequestAuthOk),
+      (this.adoptRefreshedAuth = o?.adoptRefreshedAuth),
+      (this.gzipRequestBodyFetch = o?.gzipRequestBodyFetch),
+      (this.ownConnectionPool = o?.ownConnectionPool),
+      (this.leavesPool = o?.leavesPool),
+      (this.reportParkAtInit = o?.reportParkAtInit ?? !1),
+      (this.guardsClientRows = o?.guardsClientRows),
+      this.flagsRefreshed(),
+      (this.initExternalMetadata = o?.initExternalMetadata ?? {}),
+      (this.initialTurn = o?.initialTurn),
+      (this.initialWorkerStatus = o?.initialWorkerStatus ?? "idle"),
+      (this.initStateGetOrderingBoundMs = o?.initStateGetOrderingBoundMs ?? wr),
+      (this.clearsCardAfterLateRead = o?.clearsCardAfterLateRead),
+      (this.stateReadEndsAtRegistration = o?.stateReadEndsAtRegistration ?? !1),
+      (this.startReportsMaxWaitMs = o?.startReportsMaxWaitMs ?? qr),
+      (this.readSource = {
+        ...o6o(r, this.getAuthHeaders),
+        isClosed: () => this.closed,
+        onConflict: (y) => this.handleEpochMismatch(y),
+        ownConnectionPool: this.ownConnectionPool,
+        leavesPool: this.leavesPool,
+      }),
+      (this.sessionBaseUrl = this.readSource.sessionBaseUrl),
+      (this.sessionId = r.pathname.replace(/\/$/, "").split("/").pop() || ""),
+      (this.workerState = new it({
+        send: async (y) => {
+          let R =
+              this.clientRowsOwed.writesNoMore && T(y.internal_metadata)
+                ? {
+                    ...y,
+                    internal_metadata: xn(
+                      y.internal_metadata,
+                      "client_rows_owed",
+                    ),
+                  }
+                : y,
+            k = T(R.internal_metadata) ? R.internal_metadata : {},
+            U = qe in k;
+          if (U) this.refusedSwitchedOffMcpServers = null;
+          let P = await this.request(
+            "put",
+            "/worker",
+            { worker_epoch: this.workerEpoch, ...R },
+            "PUT worker",
+          );
+          if (P.ok) {
+            if (R.worker_status !== void 0) f("ccr_worker_state_publish");
+            let x = this.refusedSwitchedOffMcpServers;
+            if (U) this.switchedOffMcpServersRefusedAlone = 0;
+            else if (
+              x !== null &&
+              x.writesToWaitFor > 0 &&
+              Object.keys(k).length > 0
+            )
+              x.writesToWaitFor--;
+            return (this.requeueRefusedSwitchedOffMcpServersOnceIdle(), !0);
+          }
+          if (this.closed && P.status === 409) {
+            if (
+              (q("warn", "cli_worker_state_4xx_dropped", { status: P.status }),
+              this.droppedWorkerStatePatchCount++,
+              this.workerState.keepsWithoutStatus(R))
+            )
+              this.droppedOwedMetadataPatchCount++;
+            return !0;
+          }
+          if (me(P.status)) {
+            q("warn", "cli_worker_state_4xx_dropped", { status: P.status });
+            let x =
+              U && Object.keys(R).length === 1 && Object.keys(k).length === 1;
+            if (!x) this.droppedWorkerStatePatchCount++;
+            if (this.workerState.keepsWithoutStatus(R))
+              this.droppedOwedMetadataPatchCount++;
+            if (
+              T(R.internal_metadata) &&
+              "client_rows_owed" in R.internal_metadata
+            )
+              (l("ccr_client_rows_owed", "report_with_note_refused", {
+                status: P.status,
+              }),
+                this.clientRowsOwed.reportWithNoteRefused());
+            let L = T(R.external_metadata) ? R.external_metadata : {};
+            if (T(L.pending_action)) this.onCardRecordRefused?.(P.status, R);
+            if (U)
+              (l("mcp_switched_off_record", "write_refused"),
+                (this.refusedSwitchedOffMcpServers = {
+                  value: k[qe],
+                  writesToWaitFor: x
+                    ? Math.min(
+                        2 ** this.switchedOffMcpServersRefusedAlone++,
+                        gi,
+                      )
+                    : 1,
+                }));
+            this.requeueRefusedSwitchedOffMcpServersOnceIdle();
+            for (let se of Object.keys(k)) this.lastReportedInternal.delete(se);
+            let { internal_metadata: A, external_metadata: G, ...z } = R,
+              H = ps(k),
+              J = ps(L);
+            if (
+              (H.length > 0 && J.length > 0) ||
+              (H.length + J.length > 0 &&
+                H.length + J.length <
+                  Object.keys(z).length +
+                    Object.keys(k).length +
+                    Object.keys(L).length)
+            )
+              this.workerState.requeueMetadata({
+                ...(H.length > 0 && {
+                  internal_metadata: Object.fromEntries(H),
+                }),
+                ...(J.length > 0 && {
+                  external_metadata: Object.fromEntries(J),
+                }),
+              });
+            if (R.worker_status !== void 0) {
+              let se = {
+                worker_status: R.worker_status,
+                ...("requires_action_details" in R && {
+                  requires_action_details: R.requires_action_details,
+                }),
+                ...("reply_degraded" in k && {
+                  internal_metadata: { reply_degraded: k.reply_degraded },
+                }),
+              };
+              if (
+                Object.keys(R).length > Object.keys(se).length ||
+                Object.keys(k).length > 1
+              )
+                return (this.workerState.requeueStatus(se), !0);
+              l("ccr_worker_state_publish", "state_4xx_dropped");
+            }
+            return !0;
+          }
+          return !1;
+        },
+        baseDelayMs: 500,
+        maxDelayMs: 30000,
+        jitterMs: 500,
+        ridesAStatus: ["reply_degraded", "card_turn_stamp"],
+        deleteOutlivesStatus: ["card_turn_stamp"],
+        requeuedAlone: [qe],
+        mergesSameRun: () =>
+          this.flushPolicy?.mergeWorkerReports === !0 &&
+          this.followsServedPolicy,
+        waitsForStatus: (y) => {
+          let R = this.flushPolicy,
+            { external_metadata: k = {}, internal_metadata: U = {}, ...P } = y;
+          if (
+            !R ||
+            !this.followsServedPolicy ||
+            Object.keys(P).length > 0 ||
+            !T(k) ||
+            !T(U) ||
+            [...Object.values(k), ...Object.values(U)].includes(null)
+          )
+            return !1;
+          let x = this.startReportsWaitUntilMs - performance.now();
+          if (
+            R.mergeWorkerReports &&
+            x > 0 &&
+            this.inboundMessageUuids.size > 0 &&
+            !("worker_permission_mode" in U)
+          )
+            return x;
+          let L = this.firstStatusDueUntilMs - performance.now();
+          if (
+            R.mergeWorkerReports &&
+            L > 0 &&
+            Object.keys(U).length === 0 &&
+            Object.keys(k).length === 1 &&
+            "cross_session_inbound" in k
+          )
+            return L;
+          if (
+            this.currentState !== "running" ||
+            !Object.keys(k).every((A) => R.metadataWaitsForStatus.has(A)) ||
+            !Object.keys(U).every(
+              (A) => R.costReportMaxWaitMs > 0 && (zs.has(A) || A === vi),
+            )
+          )
+            return !1;
+          if (Object.keys(U).length > 0) return R.costReportMaxWaitMs;
+          return Object.keys(k).length > 0;
+        },
+      })),
+      (this.eventUploader = new n$n({
+        maxBatchSize: cs,
+        maxBatchBytes: () =>
+          Math.min(Ebo, this.workerSocket?.maxBatchBytes() ?? 1 / 0),
+        maxQueueSize: 1e5,
+        send: this.settlesTakenRiders(async (y, R) => {
+          let k = ebs(y);
+          if (k > 0)
+            t(
+              `CCRClient: dropped ${k} repeated-uuid durable event(s) from one live-view POST`,
+            );
+          let U = this.resendsUnheardStreamEvents(),
+            P = R.urgent || !U ? void 0 : this.unheard;
+          if (!R.urgent) this.unheard = void 0;
+          if (P && (P.events.length + y.length > cs || P.bytes + R.bytes > fi))
+            (l("ccr_unheard_stream_events", "no_room"), (P = void 0));
+          let x = P ? [...P.events, ...y] : y,
+            L = R.bytes + (P?.bytes ?? 0),
+            A = R.urgent ? void 0 : this.ridingRows,
+            G = this.failedRide;
+          if (
+            ((this.failedRide = void 0),
+            A &&
+              (this.ridesAreOff() ||
+                y.every(
+                  (X) => Me(X) || X.payload.type === "control_response",
+                ) ||
+                L + A.bytes >
+                  Math.min(Qn, this.workerSocket?.maxBatchBytes() ?? 1 / 0)))
+          )
+            (this.giveBackRidingRows(), (A = void 0));
+          if (A) ((this.ridingRows = void 0), (this.takenRiders = A));
+          let z = !R.urgent && !y.every(ut);
+          if (
+            z &&
+            this.receiptsMayRide() &&
+            this.messagesInProcessing.size > 0 &&
+            y.some((X) => X.payload.type === "result")
+          )
+            (await new Promise((X) => {
+              ((this.resultPostWaits = X), setImmediate(X));
+            }),
+              (this.resultPostWaits = void 0),
+              this.messagesInProcessing.clear());
+          let H =
+              z && this.receiptsMayRide()
+                ? [...this.waitingReceipts]
+                    .filter(([X, ue]) => ue === "processed" && pt(X) !== null)
+                    .slice(0, Qr)
+                    .map(([X]) => X)
+                : [],
+            J = A || P ? { ...R, bytes: L + (A?.bytes ?? 0) } : R,
+            se = Qt(J, {
+              maxMs: this.maxEventPostTimeoutMs,
+              minMs: y.some(nr)
+                ? Yt
+                : R.followsUrgent
+                  ? Math.min(Yt, this.maxEventPostTimeoutMs)
+                  : void 0,
+            });
+          this.reportDurableUpload(y, "sending");
+          let Y = this.actsOnSubscribersReports(),
+            oe =
+              Y ||
+              U ||
+              this.onSubscribersReported !== void 0 ||
+              A !== void 0 ||
+              H.length > 0,
+            de = this.hasSubscribersReports,
+            I = [];
+          for (let X of this.trackedFrameUploads("ackedAtMs"))
+            if (y.some((ue) => ue.payload.uuid === X.uuid)) I.push(X.timing);
+          let ie = [];
+          for (let X of I)
+            if (X.postedAtMs === void 0)
+              ((X.postedAtMs = performance.now()),
+                (X.postedWallMs = Date.now()),
+                ie.push(X));
+          let Q = this.firstTextFrameUpload?.timing,
+            F =
+              Q?.postedAtMs === void 0
+                ? void 0
+                : Gt(Q, y, this.countedTextEvents, performance.now()),
+            D;
+          try {
+            D = await this.request(
+              "post",
+              A ? mt : "/worker/events",
+              {
+                ...this.uploadBody(x, R),
+                ...(A && { worker_events: A.rows }),
+                ...(H.length > 0 && {
+                  delivery_updates: H.map((X) => ({
+                    event_id: X,
+                    status: "processed",
+                  })),
+                }),
+              },
+              "client events",
+              {
+                timeout: se,
+                parseBody: oe,
+                countTowardEscalation: !y.every(ut),
+                uploadAttempt:
+                  P && R.attempt === "first" ? "resend_with_new" : R.attempt,
+                carriesDurableEvent: y.some((X) => !Me(X)),
+              },
+            );
+          } catch (X) {
+            throw (A?.settle(!1), X);
+          } finally {
+            if (H.length > 0) {
+              let X = this.takeWaitingReceipts((ue) => H.includes(ue));
+              if (!D?.ok || D.data?.delivery_updates_applied !== !0)
+                this.queueDeliveryAcks(X);
+            }
+          }
+          let Z = D.ok ? D.data?.worker_results : void 0,
+            ne = Array.isArray(Z) && Z.length === A?.rows.length;
+          if ((A?.settle(ne), A !== void 0 && D.ok))
+            ((this.routeOnlyFailures = 0), (this.ridePauses = 0));
+          let ee = D.ok ? 200 : D.status,
+            le = A !== void 0 && D.ok && T(D.data) && Z === void 0;
+          if (
+            (A || H.length > 0) &&
+            !D.ok &&
+            (me(ee) || (A !== void 0 && jn.has(ee)))
+          ) {
+            if (
+              ((D = await this.request(
+                "post",
+                "/worker/events",
+                this.uploadBody(x, R),
+                "client events (resent without worker_events and delivery_updates)",
+                {
+                  timeout: se,
+                  parseBody: oe,
+                  uploadAttempt: "resend",
+                  carriesDurableEvent: y.some((X) => !Me(X)),
+                },
+              )),
+              D.ok && ee !== 413)
+            ) {
+              if (A !== void 0 && me(ee)) le = !0;
+              else if (A !== void 0) this.noteRouteOnlyFailure(ee);
+              if (H.length > 0 && me(ee))
+                ((this.receiptsRideRefused = !0),
+                  q("warn", "cli_ccr_receipts_ride_turned_off", {
+                    status: ee,
+                  }));
+            }
+          } else if (A !== void 0) {
+            if (!D.ok) this.failedRide = { status: ee };
+          } else if (G !== void 0 && D.ok) this.noteRouteOnlyFailure(G.status);
+          if (le)
+            ((this.ridesRefused = !0),
+              q("warn", "cli_ccr_joint_upload_turned_off", { status: ee }));
+          else if (A && ee === 200 && !ne && !this.loggedRowsLeftOut)
+            ((this.loggedRowsLeftOut = !0),
+              q("warn", "cli_ccr_joint_upload_rows_left_out"));
+          if (D.ok) {
+            for (let re of I)
+              if (re.ackedAtMs === void 0) re.ackedAtMs = performance.now();
+            let X = ot(y);
+            if (X) f("ccr_task_status_publish", X);
+            if (
+              (this.noteBeatingEventsPostOk(y),
+              this.reportDurableUpload(y, "accepted"),
+              this.noteToolCallRowsSettled("client_events", "stored", y),
+              this.noteClientRowsSettled("stored", y),
+              Y && de === this.hasSubscribersReports)
+            )
+              this.setHasSubscribers(D.data?.has_subscribers, "no_report");
+            this.tellSubscribersReported(D.data?.has_subscribers);
+            let ue = D.data?.has_subscribers === !1,
+              ce = P ? Math.round(performance.now() - P.sinceMs) : 0;
+            if (
+              U &&
+              ue &&
+              ce < dt &&
+              this.senderMayNotBeAttachedYet() &&
+              performance.now() - this.lastStreamEventDropAtMs >= dt
+            ) {
+              let re =
+                  x.findLastIndex(
+                    (pe) =>
+                      pe.payload.type === "assistant" ||
+                      pe.payload.type === "result",
+                  ) + 1,
+                fe = x.findIndex(
+                  (pe, Ae) =>
+                    Ae >= re &&
+                    pe.payload.type === "stream_event" &&
+                    T(pe.payload.event) &&
+                    pe.payload.event.type === "message_start",
+                );
+              if (fe >= 0) {
+                let pe = x
+                  .slice(fe)
+                  .filter((Ae) => Ae.payload.type === "stream_event");
+                this.unheard = {
+                  events: pe,
+                  bytes: Buffer.byteLength(_(pe)),
+                  sinceMs:
+                    P && fe < P.events.length ? P.sinceMs : performance.now(),
+                };
+              }
+            }
+            if (P && this.unheard?.sinceMs !== P.sinceMs)
+              if (ue)
+                l("ccr_unheard_stream_events", "nobody_came", { wait_ms: ce });
+              else f("ccr_unheard_stream_events", { wait_ms: ce });
+            return;
+          }
+          if (P) l("ccr_unheard_stream_events", "post_failed");
+          if (
+            (this.reportDurableUpload(y, rs(D.status)),
+            this.closed && D.status === 409 && y.every((X) => X.ephemeral))
+          ) {
+            q("warn", "cli_worker_events_4xx_ephemeral_dropped", {
+              status: D.status,
+              count: y.length,
+            });
+            return;
+          }
+          if (me(D.status)) {
+            let X = y.filter((fe) => !fe.ephemeral),
+              ue = y.length - X.length,
+              ce = D.status;
+            if (ue > 0) {
+              if (
+                (t(
+                  `CCRClient: client event POST rejected (${D.status}) \u2014 dropping ${ue} ephemeral event(s), retrying ${X.length} durable event(s)`,
+                  { level: "warn" },
+                ),
+                l("ccr_partial_messages", "ephemeral_dropped_on_4xx", {
+                  status: D.status,
+                  count: ue,
+                }),
+                this.replyRestated && !y.some((pe) => qt(pe.payload)))
+              )
+                this.restatementOwed = !0;
+              if (
+                (y.splice(0, y.length, ...X),
+                q("warn", "cli_worker_events_4xx_ephemeral_dropped", {
+                  status: D.status,
+                  count: ue,
+                }),
+                X.length === 0)
+              )
+                return;
+              this.reportDurableUpload(X, "sending");
+              let fe = await this.request(
+                "post",
+                "/worker/events",
+                this.uploadBody(X, R),
+                "client events (durable retry)",
+                {
+                  timeout: se,
+                  uploadAttempt: "resend",
+                  carriesDurableEvent: X.some((pe) => !Me(pe)),
+                },
+              );
+              if (fe.ok) {
+                let pe = ot(X);
+                if (pe) f("ccr_task_status_publish", pe);
+                (this.noteBeatingEventsPostOk(X),
+                  this.reportDurableUpload(X, "accepted"),
+                  this.noteToolCallRowsSettled("client_events", "stored", X),
+                  this.noteClientRowsSettled("stored", X));
+                return;
+              }
+              if ((this.reportDurableUpload(X, rs(fe.status)), !me(fe.status)))
+                throw (
+                  this.noteEventsPostFailed(fe.status),
+                  fe.fetchFailed
+                    ? this.retrySmaller("client_events", X, R, se, {
+                        bytes: X.reduce(
+                          (pe, Ae) => pe + Buffer.byteLength(_(Ae)),
+                          0,
+                        ),
+                      })
+                    : new Ykt("client event POST failed", fe.retryAfterMs)
+                );
+              ce = fe.status;
+            }
+            if (X.length > 0) {
+              (this.droppedDurableEventBatches++,
+                (this.lastRateLimitKind = void 0),
+                (this.lastTaskList = void 0),
+                this.tasksWithListSent.clear(),
+                this.noteToolCallRowsSettled("client_events", "dropped", X),
+                this.noteClientRowsSettled("dropped", X));
+              try {
+                this.onDurableEventsDropped?.(X, ce);
+              } catch (fe) {
+                t(
+                  `CCRClient: onDurableEventsDropped threw; batch still dropped: ${d(fe)}`,
+                  { level: "warn" },
+                );
+              }
+            }
+            q("warn", "cli_worker_events_4xx_dropped", {
+              status: ce,
+              count: X.length,
+              ...ys(X),
+            });
+            let re = ot(X);
+            if (re)
+              m("ccr_task_status_publish", "status_events_4xx_dropped", re);
+            return;
+          }
+          if ((this.rowsSentAgainStepAside(y), y.length === 0)) return;
+          if ((this.noteEventsPostFailed(D.status), D.fetchFailed))
+            throw this.retrySmaller("client_events", y, R, se);
+          if (ee === void 0 && D.reason === "no_auth_headers") {
+            for (let X of ie)
+              ((X.postedAtMs = void 0), (X.postedWallMs = void 0));
+            throw (F?.(), new wbo("client event POST not sent"));
+          }
+          throw new Ykt("client event POST failed", D.retryAfterMs);
+        }),
+        baseDelayMs: 500,
+        maxDelayMs: 30000,
+        jitterMs: 500,
+        onHoldRelease: this.logUploadHoldEnd.bind(this, "client_events"),
+        onDrained: this.logUploadDrain.bind(this, "client_events"),
+        onIdle: () => {
+          if ((this.giveBackRidingRows(), this.receiptsRide))
+            this.sendWaitingReceipts(He);
+        },
+      })));
+    let g = o?.internalEventUploader;
+    ((this.internalEventUploader = new n$n({
+      maxBatchSize: 100,
+      maxBatchBytes: () =>
+        g?.maxBatchBytes ??
+        Math.min(Ebo, this.workerSocket?.maxBatchBytes() ?? 1 / 0),
+      maxQueueSize: 200,
+      maxConsecutiveFailures: g?.maxConsecutiveFailures,
+      onBatchDropped: (y, R) => {
+        (this.droppedInternalEventBatches++,
+          q("warn", "cli_worker_internal_events_give_up_dropped", {
+            count: y,
+            consecutive_failures: R,
+          }),
+          a("tengu_ccr_internal_events_dropped", {
+            reason: S("give_up"),
+            count: y,
+            consecutive_failures: R,
+          }));
+      },
+      send: async (y, R) => {
+        let k = this.dropOrphanedHandedOffLines(y);
+        if (k > 0) {
+          if (
+            (q("warn", "cli_worker_internal_events_handoff_orphans_dropped", {
+              count: k,
+            }),
+            a("tengu_ccr_internal_events_dropped", {
+              reason: S("handoff_orphan"),
+              count: k,
+            }),
+            y.length === 0)
+          )
+            return;
+        }
+        let U = performance.now(),
+          P = Qt(R, {
+            maxMs: this.maxEventPostTimeoutMs,
+            minMs: g?.requestTimeoutMs,
+          }),
+          x = this.offerToEventsPost(y, R),
+          L =
+            x && (await x)
+              ? { ok: !0 }
+              : await this.postTranscriptRows(y, R, P);
+        if (
+          (this.markInternalEventPostWatch((A) => A.noteAttempt(y, U, L.ok)),
+          L.ok)
+        ) {
+          (this.quietCallPulse?.noteTranscriptUploadAccepted(
+            y,
+            performance.now(),
+          ),
+            this.noteToolCallRowsSettled("internal_events", "stored", y),
+            Promise.resolve()
+              .then(() => this.onInternalBatchAcked?.(y))
+              .catch(() => {}));
+          return;
+        }
+        if (me(L.status) && k === 0 && R.mayResendInTwo())
+          throw (
+            a("tengu_ccr_internal_events_refused_will_split", {
+              count: y.length,
+              status: L.status,
+            }),
+            new kbo()
+          );
+        if (me(L.status)) {
+          (this.droppedInternalEventBatches++,
+            this.noteRefusedInternalEvents(y),
+            this.noteToolCallRowsSettled("internal_events", "dropped", y),
+            q("warn", "cli_worker_internal_events_4xx_dropped", {
+              status: L.status,
+              count: y.length,
+              ...ys(y),
+            }),
+            a("tengu_ccr_internal_events_dropped", {
+              reason: S("4xx"),
+              count: y.length,
+              status: L.status,
+            }));
+          let A = B(
+            y,
+            (G) => Eos(G.payload) && typeof G.payload.requestId === "string",
+          );
+          if (this.loggedRequestIdKept && A > 0)
+            m(
+              "ccr_worker_error_request_id_kept",
+              `upload_refused_${L.status}`,
+              { count: A, status: L.status },
+            );
+          return;
+        }
+        if (L.fetchFailed) throw this.retrySmaller("internal_events", y, R, P);
+        if (L.reason === "no_auth_headers")
+          throw new wbo("internal event POST not sent");
+        throw new Ykt(
+          "internal event POST failed",
+          L.nonOriginRefusal ? ns : L.retryAfterMs,
+        );
+      },
+      baseDelayMs: 500,
+      maxDelayMs: ns,
+      jitterMs: 500,
+      holdMaxItems: 50,
+      gatherTick: !0,
+      onHoldRelease: this.logUploadHoldEnd.bind(this, "internal_events"),
+      onDrained: this.logUploadDrain.bind(this, "internal_events"),
+      longWaitForRoom: {
+        afterMs: yr,
+        report: (y, R) => {
+          (q("warn", "cli_ccr_transcript_waits_for_room", {
+            wait_ms: y,
+            over: R,
+          }),
+            this.onDiagnostic?.(
+              R
+                ? `transcript rows waited ${Math.round(y / 1000)} s for room in the upload queue; the wait ended because a batch left the queue, sent or refused for good, or the worker is closing`
+                : `transcript rows have waited ${Math.round(y / 1000)} s for room: the upload queue is full and no upload has gone through in that time; the main conversation's turn stops at its next tool result until one does`,
+              "warn",
+              R ? "transcript_wait_for_room_over" : "transcript_waits_for_room",
+            ));
+        },
+      },
+    })),
+      (this.deliveryUploader = new n$n({
+        maxBatchSize: 64,
+        maxQueueSize: 64,
+        send: async (y) => {
+          let R = await this.request(
+            "post",
+            "/worker/events/delivery",
+            {
+              worker_epoch: this.workerEpoch,
+              updates: y.map((k) => ({
+                event_id: k.eventId,
+                status: k.status,
+                ...(k.unrun !== void 0 && { unrun: k.unrun }),
+              })),
+            },
+            "delivery batch",
+          );
+          if (R.ok) return;
+          if (me(R.status)) {
+            (q("warn", "cli_worker_delivery_4xx_dropped", {
+              status: R.status,
+              count: y.length,
+            }),
+              this.droppedDeliveryAckBatches++);
+            return;
+          }
+          throw new Ykt("delivery POST failed", R.retryAfterMs);
+        },
+        baseDelayMs: 500,
+        maxDelayMs: 30000,
+        jitterMs: 500,
+      })),
+      this.setStreamEventFlushIntervalMs(o?.streamEventFlushIntervalMs),
+      this.setStreamEventFirstFlushMs(o?.streamEventFirstFlushMs),
+      this.setThinkingStartGoesAtOnce(o?.thinkingStartGoesAtOnce),
+      this.setMessageWordsGoFirst(o?.messageWordsGoFirst),
+      this.setTextEarlyUploadsMs(o?.textEarlyUploadsMs),
+      this.setStreamEventWindowRunsFromLastFlush(
+        o?.streamEventWindowRunsFromLastFlush,
+      ),
+      this.setHeldBunchFlushMs(o?.heldBunchFlushMs),
+      this.setThinkingFlushMs(o?.thinkingFlushMs),
+      this.setToolInputFlushMs(o?.toolInputFlushMs),
+      this.setLiveTwinWaitMs(o?.liveTwinWaitMs),
+      this.setNoSubscriberStreamEventFlushIntervalMs(
+        o?.noSubscriberStreamEventFlushIntervalMs,
+      ),
+      this.setNoSubscriberUploadHoldMs(o?.noSubscriberUploadHoldMs),
+      this.setDropUnwatchedStreamEvents(o?.dropUnwatchedStreamEvents),
+      this.setRestateOpenBlock(o?.restateOpenBlock),
+      e.setOnEvent((y) => {
+        if (this.processExiting() && bt(y)) return;
+        this.noteSettingsRequest(y.payload);
+        let R =
+          T(y.payload) &&
+          y.payload.type === "control_request" &&
+          T(y.payload.request)
+            ? y.payload.request.subtype
+            : void 0;
+        if (lr.has(R)) {
+          for (let k of [y.event_id, y.payload.uuid])
+            if (typeof k === "string")
+              (this.housekeepingRequestIds.add(k),
+                be(this.housekeepingRequestIds));
+        }
+        this.reportDelivery(
+          y.event_id,
+          "received",
+          T(y.payload) &&
+            y.payload.type === "user" &&
+            typeof y.payload.uuid === "string"
+            ? y.payload.uuid
+            : void 0,
+          { controlTraffic: es(y.payload), settingsRequest: Jr.has(R) },
+        );
+      }),
+      e.setOnHeartbeatProbe(() => {
+        (this.setHasSubscribers(void 0, "reset"), this.heartbeatNow("probe"));
+      }),
+      e.setOnCheckpointRequest(() => this.checkpointForViewer("watcher")),
+      e.setOnReconnected(() => {
+        if (
+          (this.resyncAfterReconnect(),
+          o?.onStreamReconnected?.(),
+          this.holdsAcrossModelCalls())
+        )
+          this.checkpointForViewer("reconnect");
+      }),
+      (this.unsubscribeIdleTracker = this.beatOnReactivation
+        ? this.idleTracker?.onActivity(() => this.sendReactivationBeat())
+        : void 0));
+  }
+  maxAdvisedIntervalFor(e) {
+    return e ? Math.floor(Wc / (1 + this.heartbeatJitterFraction)) : Dn;
+  }
+  setFeatureGatedOptions({
+    advertiseHeartbeatProbeSupport: e,
+    beatOnStaleReconnect: r,
+    beatOnReactivation: o,
+    skipRedundantHeartbeats: h,
+  }) {
+    ((this.advertiseHeartbeatProbeSupport = e),
+      (this.maxAdvisedIntervalMs = this.maxAdvisedIntervalFor(e)),
+      (this.beatOnStaleReconnect = r),
+      (this.skipRedundantHeartbeats = h));
+    let g = o && this.idleTracker !== void 0;
+    if (g !== this.beatOnReactivation)
+      ((this.beatOnReactivation = g),
+        this.unsubscribeIdleTracker?.(),
+        (this.unsubscribeIdleTracker =
+          g && !this.closed
+            ? this.idleTracker?.onActivity(() => this.sendReactivationBeat())
+            : void 0));
+  }
+  async initialize(e) {
+    let r = Date.now();
+    if (Object.keys(this.getAuthHeaders()).length === 0)
+      throw new _Ve("no_auth_headers");
+    if (e === void 0) e = mXs();
+    if (isNaN(e)) throw new _Ve("missing_epoch");
+    if (((this.workerEpoch = e), !this.flushPolicy))
+      this.takeUpFlushPolicy(void 0);
+    let o = new AbortController(),
+      h = !1,
+      g = new AbortController(),
+      y = this.getWorkerState(
+        "worker_state",
+        !1,
+        AbortSignal.any([this.closeAbort.signal, o.signal]),
+      ),
+      R = await Promise.race([
+        y.then(
+          (F) => ((h = !0), F.metadata),
+          () => ((h = !0), { external: null, internal: null, readFailed: !0 }),
+        ),
+        K(this.initStateGetOrderingBoundMs, g.signal).then(() => "pending"),
+      ]);
+    g.abort();
+    let k = this.reportParkAtInit ? Or(R) : void 0,
+      U =
+        k === void 0 &&
+        R === "pending" &&
+        this.clearsCardAfterLateRead?.() === !0,
+      P = this.followsServedPolicy
+        ? this.flushPolicy?.metadataNeverSent
+        : void 0,
+      x = this.initialTurn && _s(this.initialTurn, this.initialWorkerStatus),
+      L = {
+        ...this.initExternalMetadata,
+        ...(x && { turn: x }),
+        ...Object.fromEntries(Array.from(P ?? [], (F) => [F, null])),
+      },
+      A = {
+        worker_status: "idle",
+        worker_epoch: this.workerEpoch,
+        external_metadata: { ...L, task_summary: null },
+      },
+      G =
+        k === void 0
+          ? {
+              worker_status: this.initialWorkerStatus,
+              worker_epoch: this.workerEpoch,
+              external_metadata: {
+                ...L,
+                ...(!U && { pending_action: null, pending_actions: null }),
+                task_summary: null,
+              },
+            }
+          : k.status === "requires_action"
+            ? {
+                ...A,
+                worker_status: "requires_action",
+                requires_action_details: k.details,
+              }
+            : A,
+      z = { ok: !1 },
+      H = new Set(),
+      J = 10,
+      se = 0;
+    for (let F = 1; F <= J; F++) {
+      if (this.closed) break;
+      if (
+        ((se = F),
+        (z = await this.request("put", "/worker", G, "PUT worker (init)")),
+        z.ok || this.closed)
+      )
+        break;
+      if (z.reason) H.add(z.reason);
+      if (
+        (this.onDiagnostic?.(
+          `PUT /worker failed (${z.reason ?? "unknown"}) attempt=${F}/${J}, ${Math.round((Date.now() - r) / 1000)}s elapsed`,
+          "warn",
+          "worker_registration_attempt_failed",
+        ),
+        me(z.status))
+      ) {
+        if (k?.status === "requires_action") {
+          ((k = { status: "idle", reason: "park_rejected" }), (G = A), F--);
+          continue;
+        }
+        break;
+      }
+      if (F < J) {
+        let D = Math.min(500 * 2 ** (F - 1), 30000) + Math.random() * 500;
+        await K(D);
+      }
+    }
+    if (!z.ok) {
+      if (!this.closed)
+        (q("error", "cli_worker_init_put_retries_exhausted"),
+          this.onDiagnostic?.(
+            `PUT /worker retries exhausted: ${se} attempts over ${Math.round((Date.now() - r) / 1000)}s, errors=[${[...H].join(",") || "unknown"}]`,
+            "warn",
+            "worker_registration_gave_up",
+          ));
+      throw new _Ve("worker_register_failed", z.status, z.fetchFailed === !0);
+    }
+    ((this.currentState = k?.status ?? this.initialWorkerStatus),
+      (this.statedTurn = x),
+      (this.startReportsWaitUntilMs =
+        this.currentState === "idle"
+          ? performance.now() + this.startReportsMaxWaitMs
+          : 0),
+      (this.firstStatusDueUntilMs =
+        this.currentState === "running"
+          ? performance.now() + this.startReportsMaxWaitMs
+          : 0));
+    let { worker_epoch: Y, ...oe } = G;
+    if (
+      (this.workerState.remember(oe),
+      this.applyUploadHold("idle"),
+      (this.parkReportedAtInitRequestId =
+        k?.status === "requires_action" ? k.requestId : void 0),
+      this.startHeartbeat(),
+      !this.closed)
+    ) {
+      $fl(() => {
+        this.writeEvent({ type: "keep_alive" });
+      });
+      let F = this.keepAliveAtWorkStart;
+      if (F)
+        this.stopWorkStartKeepAlive = Esn(() => {
+          try {
+            if (Date.now() - this.lastEventsAnswerOrPulseAtMs >= is && F())
+              ((this.lastEventsAnswerOrPulseAtMs = Date.now()),
+                this.writeEvent({ type: "keep_alive" }));
+          } catch (D) {
+            i(D);
+          }
+        });
+      if (this.gatesToolCalls)
+        this.stopToolCallGate = sJa((D) => this.gateToolCall(D));
+    }
+    if (
+      (t(`CCRClient: initialized, epoch=${this.workerEpoch}`),
+      q("info", "cli_worker_lifecycle_initialized", {
+        epoch: this.workerEpoch,
+        duration_ms: Date.now() - r,
+        reported_status: this.currentState,
+      }),
+      Do("worker_init_ms", Date.now() - r, r - performance.timeOrigin),
+      k)
+    )
+      a("tengu_ccr_init_park_report", {
+        reported: u(k.status),
+        reason: u(k.reason),
+      });
+    let de = this.stateReadEndsAtRegistration && !h;
+    if (de) o.abort();
+    let { metadata: I, durationMs: ie } = await y,
+      Q = I;
+    if (U && xs(I) && !this.hasReportedPendingAction && !this.closed) {
+      this.workerState.enqueue({
+        external_metadata: { pending_action: null, pending_actions: null },
+      });
+      let F = await he(
+        this.workerState.flush(),
+        this.initStateGetOrderingBoundMs,
+      );
+      if (!F && I.external)
+        Q = {
+          ...I,
+          external: xn(I.external, ["pending_action", "pending_actions"]),
+        };
+      if (I.external?.pending_action)
+        if (F) f("ccr_card_read_before_late_clear");
+        else l("ccr_card_read_before_late_clear", "clear_unanswered");
+    }
+    if (this.stateReadEndsAtRegistration && Q.readFailed)
+      t(
+        "CCRClient: GET /worker had not succeeded when the worker registered; continuing without the stored worker state",
+        { level: "warn" },
+      );
+    if (
+      (this.clientRowsOwed.workerRecordRead(Q, new Date()),
+      this.clientRowsOwed.spansGivenUpAtStart > 0)
+    )
+      m("ccr_client_rows_owed", "gave_up_after_tries", {
+        spans: this.clientRowsOwed.spansGivenUpAtStart,
+      });
+    if (
+      ((this.sessionModelTurnStored = Q.internal?.model_turn_stored === !0),
+      !Q.readFailed)
+    )
+      this.recordAtStart = { ...Q.external, ...L };
+    if (!this.closed)
+      q("info", "cli_worker_state_restored", {
+        duration_ms: ie,
+        had_state: Q.external !== null || Q.internal !== null,
+        read_failed: Q.readFailed === !0,
+        read_abandoned_at_registration: de && Q.readFailed === !0,
+      });
+    return k ? { ...Q, initParkReport: Ir(k.status, Q) } : Q;
+  }
+  async getWorkerState(e = "worker_state", r = !1, o = this.closeAbort.signal) {
+    let h = Date.now(),
+      g = this.getAuthHeaders();
+    if (Object.keys(g).length === 0)
+      return {
+        metadata: { external: null, internal: null, readFailed: !0 },
+        projectsBinding: { read: !1 },
+        durationMs: 0,
+      };
+    let y = await Uj.getWithRetry(
+      this.readSource,
+      `${this.sessionBaseUrl}/worker${Rs(r)}`,
+      g,
+      e,
+      void 0,
+      void 0,
+      { signal: o },
+    );
+    return {
+      metadata: {
+        external: y?.worker?.external_metadata ?? null,
+        internal: y?.worker?.internal_metadata ?? null,
+        ...(y === null && { readFailed: !0 }),
+      },
+      projectsBinding: Es(y),
+      durationMs: Date.now() - h,
+    };
+  }
+  get currentWorkerEpoch() {
+    return this.workerEpoch;
+  }
+  readOwnClientEvent(e) {
+    return Uj.readOwnClientEventFrom(this.readSource, e);
+  }
+  static async readOwnClientEventFrom(e, r) {
+    let o = `${e.sessionBaseUrl}/worker/events/${encodeURIComponent(r.toLowerCase())}`,
+      h = { kind: "unavailable", why: "network" };
+    for (let g = 1; g <= Pe; g++) {
+      let y;
+      try {
+        y = e.getAuthHeaders();
+      } catch {
+        return { kind: "unavailable", why: "no_auth_headers" };
+      }
+      if (Object.keys(y).length === 0)
+        return { kind: "unavailable", why: "no_auth_headers" };
+      let R;
+      try {
+        R = await uDe(
+          o,
+          {
+            headers: {
+              ...y,
+              "anthropic-version": "2023-06-01",
+              "anthropic-client-platform": c_(),
+              "User-Agent": Ri(),
+            },
+            signal: AbortSignal.timeout(1e4),
+            ...dl({ url: o }),
+          },
+          e.ownConnectionPool,
+          e.leavesPool,
+        );
+      } catch {
+        h = { kind: "unavailable", why: "network" };
+      }
+      if (R !== void 0) {
+        let k = await R.json().catch(() => {
+          return;
+        });
+        if (R.ok) return bi(k, r);
+        if (R.status === 404 && wi(k)) return { kind: "absent" };
+        if (
+          ((h = { kind: "unavailable", why: yi(R.status) }),
+          R.status < 500 || R.status === 501)
+        )
+          return h;
+      }
+      if (g < Pe)
+        await K(Math.min(500 * 2 ** (g - 1), 4000) + Math.random() * 500);
+    }
+    return h;
+  }
+  async readProjectsBinding() {
+    return (await this.getWorkerState("projects_binding", !0)).projectsBinding;
+  }
+  readChromeTabGroupTitle() {
+    return Uj.readChromeTabGroupTitleFrom(this.readSource);
+  }
+  static async readChromeTabGroupTitleFrom(e) {
+    let r = { kind: "ask_again", askAgainAfterMs: gt },
+      o = `${e.sessionBaseUrl}/worker?include_chrome_tab_group_title=true`;
+    try {
+      let h = e.getAuthHeaders();
+      if (Object.keys(h).length === 0) return r;
+      let g = await uDe(
+        o,
+        {
+          headers: {
+            ...h,
+            "anthropic-version": "2023-06-01",
+            "anthropic-client-platform": c_(),
+            "User-Agent": Ri(),
+          },
+          signal: AbortSignal.timeout(Rr),
+          ...dl({ url: o }),
+        },
+        e.ownConnectionPool,
+        e.leavesPool,
+      );
+      if (!g.ok) {
+        if ((await $W(g), g.status === 400)) return { kind: "stop" };
+        if (g.status !== 429) return r;
+        return {
+          kind: "ask_again",
+          askAgainAfterMs: Math.max(gt, GWe(g.headers.get("retry-after")) ?? 0),
+        };
+      }
+      let y = await g.json();
+      return Ui(y.chrome_tab_group_title);
+    } catch {
+      return r;
+    }
+  }
+  async readWorkerState(e) {
+    return (
+      await this.getWorkerState(
+        "worker_state_reread",
+        !1,
+        e && AbortSignal.any([e, this.closeAbort.signal]),
+      )
+    ).metadata;
+  }
+  static async readProjectsBindingFor(e, r) {
+    let o = o6o(e, r);
+    if (Object.keys(r()).length === 0) return { read: !1 };
+    return Es(
+      await Uj.getWithRetry(
+        o,
+        `${o.sessionBaseUrl}/worker${Rs(!0)}`,
+        r(),
+        "projects_binding",
+      ),
+    );
+  }
+  request(e, r, o, h, g = {}) {
+    let y = Pbi("uploads");
+    try {
+      return this.sendRequest(e, r, o, h, g);
+    } finally {
+      Obi(y);
+    }
+  }
+  async sendRequest(
+    e,
+    r,
+    o,
+    h,
+    {
+      timeout: g = vt,
+      parseBody: y = !1,
+      countTowardEscalation: R = !0,
+      signal: k,
+      onLateSocketAnswer: U,
+      uploadAttempt: P,
+      outsideItsLane: x = !1,
+      carriesDurableEvent: L = !1,
+    },
+  ) {
+    let A = this.getAuthHeaders();
+    if (Object.keys(A).length === 0)
+      return { ok: !1, reason: "no_auth_headers" };
+    if (at[r] === "events") this.eventsLaneSends++;
+    let G = `${this.sessionBaseUrl}${r}`,
+      z = k ? Lo(k, { timeoutMs: g, refTimer: !0 }) : void 0,
+      H = !1,
+      J = A.Authorization;
+    try {
+      let se = _(o),
+        Y = performance.now(),
+        oe = k
+          ? void 0
+          : r === "/worker/heartbeat"
+            ? this.workerSocket?.beat(se, g, (Z) => U?.(Z))
+            : this.workerSocket?.carry(r, se, g),
+        de = oe && (await oe),
+        I = de;
+      if (!I) {
+        if (oe && r === "/worker/heartbeat" && this.closed)
+          return { ok: !1, reason: "closed" };
+        z ??= Lo(void 0, {
+          timeoutMs:
+            oe && r === "/worker/heartbeat"
+              ? Math.max(0, g - (performance.now() - Y))
+              : g,
+          refTimer: !0,
+          timeoutError: !0,
+          fewListeners: !0,
+        });
+        let Z = {
+          method: e.toUpperCase(),
+          headers: {
+            ...A,
+            "Content-Type": "application/json",
+            "anthropic-version": "2023-06-01",
+            "anthropic-client-platform": c_(),
+            "User-Agent": Ri(),
+            ...(P !== void 0 && { [Vn]: P }),
+          },
+          body: se,
+          signal: z.signal,
+          ...dl({ url: G }),
+        };
+        if (oe) {
+          let le = {};
+          try {
+            le = this.getAuthHeaders();
+          } catch (X) {
+            t(
+              `CCRClient: could not read credentials again for a request the worker socket handed to POST: ${d(X)}`,
+              { level: "warn" },
+            );
+          }
+          if (Object.keys(le).length > 0) {
+            let X = Z.headers;
+            for (let ue of Object.keys(A)) delete X[ue];
+            (Object.assign(X, le), (J = le.Authorization));
+          }
+        }
+        Object.assign(Z.headers, this.tickets.headersFor(J));
+        let ne = L && r === "/worker/events" ? Pt(G, se) : void 0,
+          ee = ne && (await ne);
+        if (ee !== void 0) Object.assign(Z.headers, { [cqr]: ee });
+        I =
+          this.gzipRequestBodyFetch && ee === void 0
+            ? await this.gzipRequestBodyFetch(G, Z, (le) =>
+                uDe(G, le, this.ownConnectionPool, this.leavesPool),
+              )
+            : await uDe(G, Z, this.ownConnectionPool, this.leavesPool);
+      }
+      if (((H = !0), !de)) this.tickets.note(J, I);
+      if (I.ok) {
+        if (r !== "/worker/heartbeat") this.heartbeatGap?.noteOther("answered");
+        ((this.consecutiveAuthFailures = 0),
+          (this.consecutiveNotFound = 0),
+          this.endNothingAcceptedRun());
+        let Z = at[r];
+        if (!x)
+          (this.reportNonOriginRun("onCleared", Z),
+            this.nonOriginRuns.delete(Z));
+        for (let [ne, ee] of this.nonOriginRuns)
+          if (ne !== Z) ee.othersPassed = !0;
+        if (y)
+          try {
+            return { ok: !0, data: await I.json() };
+          } catch {
+            return { ok: !0 };
+          }
+        return (await $W(I), { ok: !0 });
+      }
+      let ie;
+      if (I.status === 409 && !this.closed) ie = await ct(I);
+      else await $W(I);
+      if (this.closed)
+        return { ok: !1, status: I.status, reason: `http_${I.status}` };
+      if (I.status === 409) this.handleEpochMismatch(ie);
+      if (I.status === 404 && R && r !== mt) {
+        if ((this.consecutiveNotFound++, this.consecutiveNotFound >= cr))
+          (t(
+            `CCRClient: ${this.consecutiveNotFound} consecutive 404s \u2014 session gone, exiting`,
+            { level: "error" },
+          ),
+            q(
+              "error",
+              "cli_worker_session_not_found",
+              void 0,
+              this.lastLineWhen,
+            ),
+            this.onDiagnostic?.(
+              `${this.consecutiveNotFound} consecutive 404s on ${r} \u2014 session gone, exiting`,
+              "warn",
+              "session_not_found",
+            ),
+            this.escalateEpochMismatch("session_not_found"));
+      }
+      let Q =
+          I.status !== 403
+            ? void 0
+            : de
+              ? "origin"
+              : Dbe((Z) => I.headers.get(Z)),
+        F = this.nonOrigin403Transient,
+        D = F !== !1 && XEt(Q);
+      if (D && typeof F === "object" && !x) {
+        let Z = at[r],
+          ne = performance.now(),
+          ee = this.nonOriginRuns.get(Z) ?? {
+            sinceMs: ne,
+            refusals: 0,
+            windowsSpent: 0,
+            othersPassed: !1,
+          };
+        if (
+          (this.nonOriginRuns.set(Z, ee),
+          ee.refusals++,
+          (D = ne - ee.sinceMs < F.windowMs),
+          D)
+        )
+          try {
+            F.onRefused(Z);
+          } catch (le) {
+            t(`CCRClient: onRefused threw: ${d(le)}`, { level: "error" });
+          }
+        else if (ne - ee.sinceMs >= (ee.windowsSpent + 1) * F.windowMs)
+          (ee.windowsSpent++, this.reportNonOriginRun("onWindowSpent", Z));
+      }
+      if (I.status === 401 || I.status === 403) {
+        let Z = wc(),
+          ne = Z ? VH(Z) : null;
+        if (ne !== null && ne * 1000 < Date.now())
+          (t(
+            `CCRClient: session_token expired (exp=${new Date(ne * 1000).toISOString()}) \u2014 no refresh was delivered, exiting`,
+            { level: "error" },
+          ),
+            q(
+              "error",
+              "cli_worker_token_expired_no_refresh",
+              void 0,
+              this.lastLineWhen,
+            ),
+            this.onDiagnostic?.(
+              `session_token expired (exp=${new Date(ne * 1000).toISOString()}) \u2014 no refresh delivered, exiting`,
+              "warn",
+              "token_expired",
+            ),
+            this.escalateEpochMismatch("token_expired"));
+        if (R && !D) {
+          if (
+            (this.consecutiveAuthFailures++, this.consecutiveAuthFailures >= dr)
+          )
+            (t(
+              `CCRClient: ${this.consecutiveAuthFailures} consecutive auth failures with a valid-looking token \u2014 server-side auth unrecoverable, exiting`,
+              { level: "error" },
+            ),
+              q(
+                "error",
+                "cli_worker_auth_failures_exhausted",
+                void 0,
+                this.lastLineWhen,
+              ),
+              this.onDiagnostic?.(
+                `${this.consecutiveAuthFailures} consecutive auth failures (HTTP ${I.status}) with valid-looking token \u2014 exiting`,
+                "warn",
+                "auth_exhausted",
+              ),
+              this.escalateEpochMismatch("auth_exhausted"));
+        }
+      }
+      if (
+        (t(`CCRClient: ${h} returned ${I.status}`, { level: "warn" }),
+        q("warn", "cli_worker_request_failed", {
+          method: e,
+          path: r,
+          status: I.status,
+          ...(Q !== void 0 && { source: Q }),
+        }),
+        I.status === 429)
+      ) {
+        let Z = GWe(I.headers.get("retry-after"));
+        if (Z !== void 0 && Z >= 0)
+          return {
+            ok: !1,
+            retryAfterMs: Z,
+            status: I.status,
+            reason: `http_${I.status}`,
+          };
+      }
+      return {
+        ok: !1,
+        status: I.status,
+        reason: `http_${I.status}`,
+        ...(D && { nonOriginRefusal: D }),
+      };
+    } catch (se) {
+      if (
+        (t(`CCRClient: ${h} failed: ${d(se)}`, { level: "warn" }),
+        q("warn", "cli_worker_request_error", {
+          method: e,
+          path: r,
+          error_code: Be(se),
+        }),
+        !H && r !== "/worker/heartbeat")
+      )
+        this.heartbeatGap?.noteOther("unanswered");
+      let Y = `fetch_failed:${Be(se)}`;
+      return H ? { ok: !1, reason: Y } : { ok: !1, fetchFailed: !0, reason: Y };
+    } finally {
+      z?.cleanup();
+    }
+  }
+  reportNonOriginRun(e, r) {
+    let o = this.nonOriginRuns.get(r);
+    if (o === void 0 || typeof this.nonOrigin403Transient !== "object") return;
+    let h = Math.round(performance.now() - o.sinceMs),
+      { unsentClientEvents: g, unsentInternalEvents: y } = this.uploadBacklog();
+    t(
+      `CCRClient: ${r} ${e === "onCleared" ? "accepted again" : "still refused"} after ${h}ms of non-origin 403s (${o.refusals} refusals)`,
+      { level: "warn" },
+    );
+    try {
+      this.nonOrigin403Transient[e]({
+        lane: r,
+        refusals: o.refusals,
+        runMs: h,
+        windowsSpent: o.windowsSpent,
+        othersPassed: o.othersPassed,
+        backlog: g + y,
+      });
+    } catch (R) {
+      t(`CCRClient: ${e} threw: ${d(R)}`, { level: "error" });
+    }
+  }
+  reportState(e, r, o) {
+    if (e === this.currentState && !r) {
+      if (o) this.reportTurn(o);
+      return;
+    }
+    let h = this.parkReportedAtInitRequestId;
+    if (
+      ((this.parkReportedAtInitRequestId = void 0),
+      h !== void 0 &&
+        e === "requires_action" &&
+        this.currentState === "requires_action" &&
+        qB(r) === h)
+    )
+      return;
+    if (e === "idle")
+      (this.openPickupBarriers(this.pickupBarriers.length), this.resetTurn());
+    ((this.currentState = e),
+      (this.startReportsWaitUntilMs = 0),
+      (this.firstStatusDueUntilMs = 0));
+    let g = o && this.noteTurn(o),
+      y = {
+        ...(this.autocompactStateStored !== void 0 && {
+          autocompact_state: this.autocompactStateStored,
+        }),
+        ...g,
+      };
+    (this.workerState.enqueue({
+      worker_status: e,
+      requires_action_details: r ? Os(r) : null,
+      internal_metadata: {
+        reply_degraded: tMa(),
+        ...(this.guardsClientRows !== void 0 &&
+          this.clientRowsOwed.stateReported(
+            e,
+            new Date(),
+            this.flagsRefreshed() && this.clientRowsAreGuarded(),
+          )),
+      },
+      ...(Object.keys(y).length > 0 && { external_metadata: y }),
+    }),
+      (this.autocompactStateStored = void 0),
+      this.applyUploadHold(e === "running" ? "idle" : e));
+  }
+  reportTurn(e) {
+    let r = this.noteTurn(e);
+    if (r) this.workerState.enqueue({ external_metadata: r });
+  }
+  noteTurn(e) {
+    let r = _s(e, this.currentState);
+    if (
+      on(r, this.statedTurn) ||
+      (this.followsServedPolicy &&
+        this.flushPolicy?.metadataNeverSent.has("turn"))
+    )
+      return;
+    return ((this.statedTurn = r), { turn: r });
+  }
+  reportMetadata(e) {
+    this.hasReportedPendingAction ||= "pending_action" in e;
+    let r = this.flushPolicy?.metadataNeverSent,
+      o = this.withoutRepeatsOfRecord(
+        r?.size && this.followsServedPolicy
+          ? Pr(e, (h, g) => h === null || !r.has(g))
+          : e,
+      );
+    if (o !== e && Object.keys(o).length === 0) return;
+    this.workerState.enqueue({ external_metadata: Ei(o) });
+  }
+  withoutRepeatsOfRecord(e) {
+    let r = Object.keys(e).filter((o) => {
+      if (!ri.has(o) || this.reportedKeys.has(o)) return !1;
+      return (
+        this.reportedKeys.add(o),
+        this.recordAtStart !== void 0 &&
+          on(e[o] ?? void 0, this.recordAtStart[o] ?? void 0)
+      );
+    });
+    return r.length > 0 ? Pr(e, (o, h) => !r.includes(h)) : e;
+  }
+  reportInternalMetadata(e) {
+    let r = Object.entries(e),
+      o =
+        r.length > 0 &&
+        r.every(
+          ([h, g]) =>
+            this.lastReportedInternal.has(h) &&
+            on(g, this.lastReportedInternal.get(h)),
+        );
+    for (let [h, g] of r) if (ii.has(h)) this.lastReportedInternal.set(h, g);
+    if (!o) this.workerState.enqueue({ internal_metadata: e });
+  }
+  handleEpochMismatch(e) {
+    let r = e ?? "epoch_conflict",
+      o = e ?? "unattributed";
+    (t(`CCRClient: Epoch mismatch (409, reason=${o}), shutting down`, {
+      level: "error",
+    }),
+      q(
+        "error",
+        r === "epoch_stale"
+          ? "cli_worker_epoch_stale"
+          : r === "session_not_active"
+            ? "cli_worker_session_not_active"
+            : r === "organization_moved_away"
+              ? "cli_worker_organization_moved_away"
+              : "cli_worker_epoch_mismatch",
+        { reason: o },
+        this.lastLineWhen,
+      ));
+    let h =
+      r === "epoch_stale"
+        ? "stale registration (no live successor)"
+        : r === "session_not_active"
+          ? "session archived or no longer active"
+          : r === "organization_moved_away"
+            ? "organization moved to another region"
+            : r === "superseded_by_worker"
+              ? "superseded by a newer worker"
+              : "unattributed conflict, treated as superseded";
+    (this.onDiagnostic?.(
+      `worker epoch mismatch (409) reason=${o} epoch=${this.workerEpoch} \u2014 ${h}, exiting`,
+      "warn",
+      r,
+    ),
+      this.escalateEpochMismatch(r));
+  }
+  escalateEpochMismatch(e) {
+    return (
+      (this.lastEpochMismatchCause = e),
+      this.epochMismatchCount++,
+      (this.epochSuperseded = !0),
+      this.onEpochMismatch(e)
+    );
+  }
+  sessionTicketFor(e) {
+    return this.tickets.sessionTicketFor(e);
+  }
+  startHeartbeat() {
+    if ((this.stopHeartbeat(), this.closed)) return;
+    let e = () => {
+        let o =
+            Math.max(
+              this.heartbeatIntervalMs * this.heartbeatJitterFraction,
+              this.keepAlivesGoAlone() ? Wr : 0,
+            ) *
+            (2 * Math.random() - 1),
+          h = Math.min(Wc, this.heartbeatIntervalMs + o);
+        ((this.heartbeatTimer = setTimeout(r, h)),
+          this.heartbeatGap?.noteTimerArmed(Date.now() + h));
+      },
+      r = () => {
+        let o = this.lastCadenceTickAtMs;
+        if (
+          ((this.lastCadenceTickAtMs = Date.now()), this.canSkipCadenceBeat(o))
+        )
+          ((this.skippedPreviousCadenceBeat = !0),
+            this.idleTracker?.sampleIdleSeconds(),
+            t("CCRClient: Heartbeat skipped (events beat)"));
+        else this.sendHeartbeat();
+        if (this.heartbeatTimer === null) return;
+        if (
+          s.CLAUDE_CODE_REMOTE_SEND_KEEPALIVES &&
+          tne() &&
+          (this.keepAlivesGoAlone() ||
+            (this.holdsAcrossModelCalls() &&
+              this.turnHold === "whole" &&
+              this.lastCadenceTickAtMs - this.lastEventsAnswerOrPulseAtMs >=
+                is))
+        )
+          ((this.lastEventsAnswerOrPulseAtMs = this.lastCadenceTickAtMs),
+            this.writeEvent({ type: "keep_alive" }));
+        try {
+          if (
+            this.quietCallPulse?.takePulse({
+              isRunning: this.currentState === "running",
+              isModelCallOpen: oHe("api_call"),
+              tickMs: this.heartbeatIntervalMs,
+              nowMs: performance.now(),
+            })
+          )
+            ((this.lastEventsAnswerOrPulseAtMs = this.lastCadenceTickAtMs),
+              this.writeEvent({ type: "keep_alive" }).catch(i));
+        } catch (h) {
+          i(h);
+        }
+        e();
+      };
+    ((this.lastCadenceTickAtMs = Date.now()), e());
+  }
+  noteBeatingEventsPostOk(e) {
+    if (
+      ((this.lastEventsAnswerOrPulseAtMs = Date.now()),
+      (this.eventsPostsFailingSinceMs = void 0),
+      (this.eventsPostRateLimited = !1),
+      !this.workerSocket?.isTransport() && e.some((r) => !r.ephemeral))
+    )
+      this.lastBeatingEventsPostOkAtMs = Date.now();
+    this.quietCallPulse?.noteUploadAccepted(e, performance.now());
+  }
+  canSkipCadenceBeat(e) {
+    let r = this.heartbeatIntervalMs * (1 + this.heartbeatJitterFraction);
+    if (
+      !this.skipRedundantHeartbeats ||
+      this.closed ||
+      this.lastBeatingEventsPostOkAtMs < e ||
+      this.lastBeatingEventsPostOkAtMs > this.lastCadenceTickAtMs ||
+      this.lastCadenceTickAtMs - this.lastBeatingEventsPostOkAtMs > r * Vt ||
+      this.heartbeatIntervalMs > this.seedHeartbeatIntervalMs ||
+      this.isIdleAdvised() ||
+      this.consecutiveHeartbeatFailures > 0 ||
+      this.skippedPreviousCadenceBeat
+    )
+      return !1;
+    let o = r * 2;
+    return this.clampToTokenLifetime(o) >= o;
+  }
+  stopHeartbeat() {
+    if (this.heartbeatTimer)
+      (clearTimeout(this.heartbeatTimer), (this.heartbeatTimer = null));
+  }
+  clearProbeBeatTimer() {
+    if (this.probeBeatTimer)
+      (clearTimeout(this.probeBeatTimer), (this.probeBeatTimer = null));
+  }
+  msSinceAnsweredHeartbeat() {
+    return Date.now() - this.lastHeartbeatSuccessAtMs;
+  }
+  async releaseLease({ drained: e = !1 } = {}) {
+    if (this.workerEpoch <= 0 || this.epochSuperseded) return !0;
+    try {
+      let r = await this.request(
+        "post",
+        "/worker/heartbeat",
+        {
+          session_id: this.sessionId,
+          worker_epoch: this.workerEpoch,
+          release_lease: !0,
+          ...(e && { drained: !0 }),
+        },
+        "POST worker/heartbeat (release)",
+        { timeout: t6o, countTowardEscalation: !1 },
+      );
+      if (r.ok) f("ccr_worker_lease_release");
+      else if (r.status !== 409)
+        l(
+          "ccr_worker_lease_release",
+          r.status !== void 0 ? `http_${r.status}` : "send_failed",
+        );
+      return r.ok || r.status === 409;
+    } catch (r) {
+      return (i(r), l("ccr_worker_lease_release", "send_threw"), !1);
+    }
+  }
+  sendGoodbye() {
+    if (this.workerEpoch <= 0 || this.epochSuperseded) return;
+    if (this.currentState === "running") {
+      (q("info", "cli_worker_goodbye_skipped_mid_turn"),
+        (this.leftMidTurn = !0));
+      return;
+    }
+    if (
+      pn() &&
+      oHe("resume_load") &&
+      !s.CLAUDE_CODE_DISABLE_RESUME_LOAD_GOODBYE_SKIP &&
+      this.skipsGoodbyeDuringResumeLoad()
+    ) {
+      q("info", "cli_worker_goodbye_skipped_resume_load");
+      return;
+    }
+    if (
+      pn() &&
+      this.currentState !== "requires_action" &&
+      this.holdsAMessage()
+    ) {
+      q("info", "cli_worker_goodbye_skipped_held_message");
+      return;
+    }
+    this.goodbyeFlushed = this.request(
+      "put",
+      "/worker",
+      { worker_epoch: this.workerEpoch, connection_status: "disconnected" },
+      "PUT worker (goodbye)",
+      { timeout: t6o, countTowardEscalation: !1 },
+    )
+      .then((e) => {
+        if (e.ok) f("ccr_worker_goodbye");
+        else if (e.status !== 409)
+          l(
+            "ccr_worker_goodbye",
+            e.status !== void 0 ? `http_${e.status}` : "send_failed",
+          );
+      })
+      .catch(() => {
+        l("ccr_worker_goodbye", "send_threw");
+      });
+  }
+  heartbeatNow(e = "probe") {
+    if (this.closed) return;
+    if (
+      e === "probe"
+        ? this.pendingBeatTrigger === "reactivate"
+        : e === "reactivate" && this.pendingBeatTrigger === "probe"
+    )
+      this.restoreReactivationArm();
+    if (
+      e === "probe" ||
+      this.pendingBeatTrigger === null ||
+      (e === "reactivate" && this.pendingBeatTrigger !== "probe")
+    )
+      this.pendingBeatTrigger = e;
+    if (this.heartbeatInFlight) {
+      this.pendingForcedBeat = !0;
+      return;
+    }
+    let o = Date.now() - this.lastHeartbeatSentAtMs;
+    if (o < this.probeBeatSpacingMs) {
+      if (this.probeBeatTimer) return;
+      this.probeBeatTimer = setTimeout(() => {
+        ((this.probeBeatTimer = null), this.refireForcedBeat());
+      }, this.probeBeatSpacingMs - o);
+      return;
+    }
+    let h = this.pendingBeatTrigger ?? e;
+    ((this.pendingBeatTrigger = null),
+      this.clearProbeBeatTimer(),
+      this.sendHeartbeat(h));
+  }
+  refireForcedBeat() {
+    let e = this.pendingBeatTrigger ?? "probe";
+    if (e === "resync_stale" && !this.staleReconnectBeatWanted()) {
+      ((this.pendingBeatTrigger = null), this.clearProbeBeatTimer());
+      return;
+    }
+    if (e === "reactivate") {
+      if ((this.restoreReactivationArm(), !this.reactivationBeatWanted())) {
+        ((this.pendingBeatTrigger = null), this.clearProbeBeatTimer());
+        return;
+      }
+      this.reactivationBeatArmed = !1;
+    }
+    this.heartbeatNow(e);
+  }
+  reactivationBeatWanted() {
+    return (
+      this.beatOnReactivation &&
+      this.reactivationBeatArmed &&
+      this.isIdleAdvised() &&
+      Date.now() - this.lastHeartbeat429AtMs > this.seedHeartbeatIntervalMs
+    );
+  }
+  restoreReactivationArm() {
+    this.reactivationBeatArmed = this.idleGrantLatched;
+  }
+  armReactivationIfEarned(e, r) {
+    if (this.beatOnReactivation && e !== void 0 && e >= r)
+      this.reactivationBeatArmed = !0;
+  }
+  sendReactivationBeat() {
+    if (!this.reactivationBeatWanted()) return;
+    ((this.reactivationBeatArmed = !1), this.heartbeatNow("reactivate"));
+  }
+  isIdleAdvised() {
+    return this.advertiseHeartbeatProbeSupport && this.idleGrantLatched;
+  }
+  applyShorterIntervalNow(e) {
+    if (e >= this.heartbeatIntervalMs) return;
+    if (((this.heartbeatIntervalMs = e), this.heartbeatTimer !== null))
+      this.startHeartbeat();
+  }
+  clampToTokenLifetime(e) {
+    if (!this.advertiseHeartbeatProbeSupport || !this.adoptRefreshedAuth)
+      return e;
+    let r = wc(),
+      o = r ? VH(r) : null;
+    if (o === null) return e;
+    let h = o * 1000 - Date.now() - Hn;
+    if (h >= e) return e;
+    return Math.max(Kt, h);
+  }
+  reclampCurrentIntervalToTokenLifetime() {
+    let e = this.clampToTokenLifetime(this.heartbeatIntervalMs);
+    if (e < this.heartbeatIntervalMs)
+      (q("info", "cli_heartbeat_interval_updated", {
+        from_ms: this.heartbeatIntervalMs,
+        to_ms: e,
+      }),
+        this.applyShorterIntervalNow(e));
+  }
+  renewStream() {
+    let e = () => this.readTransport.renewConnection();
+    if (this.workerSocket) this.workerSocket.whenQuiet(e);
+    else e();
+  }
+  resyncAfterReconnect() {
+    if (this.isIdleAdvised()) {
+      this.heartbeatNow("resync");
+      return;
+    }
+    if (this.staleReconnectBeatWanted()) this.heartbeatNow("resync_stale");
+  }
+  staleReconnectBeatWanted() {
+    if (
+      !this.beatOnStaleReconnect ||
+      this.heartbeatIntervalMs <= this.seedHeartbeatIntervalMs
+    )
+      return !1;
+    let e = Date.now();
+    if (e - this.lastHeartbeatSuccessAtMs <= this.heartbeatIntervalMs * Vt)
+      return !1;
+    return e - this.lastHeartbeat429AtMs > this.heartbeatIntervalMs;
+  }
+  resetHeartbeatStreak() {
+    ((this.consecutiveHeartbeatFailures = 0),
+      (this.heartbeatLostFiredForStreak = !1));
+  }
+  endNothingAcceptedRun() {
+    if (this.nothingAcceptedSinceMs !== void 0) {
+      let e = Date.now() - this.nothingAcceptedSinceMs;
+      (f("ccr_worker_nothing_accepted", { wait_ms: e }),
+        (this.longestNothingAcceptedMs = Math.max(
+          this.longestNothingAcceptedMs,
+          e,
+        )),
+        (this.nothingAcceptedSinceMs = void 0));
+    }
+  }
+  nothingAcceptedRuns() {
+    return {
+      longestEndedMs: this.longestNothingAcceptedMs,
+      openMs:
+        this.nothingAcceptedSinceMs === void 0
+          ? 0
+          : Date.now() - this.nothingAcceptedSinceMs,
+    };
+  }
+  async sendHeartbeat(e) {
+    if (this.closed) {
+      this.stopHeartbeat();
+      return;
+    }
+    if (
+      (this.workerState.sendWaiting(
+        this.followsServedPolicy ? this.flushPolicy?.metadataMaxWaitMs : 0,
+      ),
+      this.heartbeatInFlight)
+    )
+      return;
+    ((this.heartbeatInFlight = !0), (this.lastHeartbeatSentAtMs = Date.now()));
+    let r = this.lastHeartbeatSentAtMs,
+      o = ++this.heartbeatsSent,
+      h = { succeededLateOnSocket: !1 };
+    if (((this.skippedPreviousCadenceBeat = !1), e === "resync_stale"))
+      q("info", "cli_heartbeat_reconnect_stale_beat", {
+        gap_ms: this.lastHeartbeatSentAtMs - this.lastHeartbeatSuccessAtMs,
+        interval_ms: this.heartbeatIntervalMs,
+      });
+    try {
+      if (e === "reactivate")
+        q("info", "cli_heartbeat_reactivation_beat", {
+          interval_ms: this.heartbeatIntervalMs,
+        });
+      let g = this.idleTracker?.sampleIdleSeconds(),
+        y = this.advertiseHeartbeatProbeSupport ? g : void 0;
+      this.heartbeatGap?.noteSent(g);
+      let R = await this.request(
+        "post",
+        "/worker/heartbeat",
+        {
+          session_id: this.sessionId,
+          worker_epoch: this.workerEpoch,
+          ...(this.advertiseHeartbeatProbeSupport && {
+            supports_heartbeat_probe: !0,
+            current_interval_seconds: Math.round(
+              this.heartbeatIntervalMs / 1000,
+            ),
+            ...(y !== void 0 && { idle_seconds: y }),
+          }),
+        },
+        "Heartbeat",
+        {
+          timeout: Math.max(
+            Bn,
+            Math.min(
+              Ts,
+              this.heartbeatIntervalMs * (1 - this.heartbeatJitterFraction) -
+                As,
+            ),
+          ),
+          parseBody: !0,
+          countTowardEscalation: e === void 0,
+          onLateSocketAnswer: (k) => {
+            ((h.succeededLateOnSocket = !0), this.takeUpLateBeat(k, r, o, y));
+          },
+        },
+      );
+      if (!R.ok && R.reason === "closed") return;
+      if (
+        ((this.lastSettledBeat = Math.max(this.lastSettledBeat, o)),
+        this.lastBeatLeftPool)
+      )
+        if (((this.lastBeatLeftPool = !1), !R.ok && R.fetchFailed))
+          l("ccr_worker_no_answer", "next_beat_unanswered");
+        else f("ccr_worker_no_answer");
+      if (!R.ok && h.succeededLateOnSocket) {
+        if (R.status === 429) this.lastHeartbeat429AtMs = Date.now();
+        t(
+          "CCRClient: Heartbeat succeeded late on the worker socket; its POST failed, which is not counted as a missed heartbeat",
+        );
+      }
+      if (!R.ok && !h.succeededLateOnSocket) {
+        if (R.status === 429) this.endNothingAcceptedRun();
+        else if (this.stopWhenNothingAccepted !== void 0 && !this.closed) {
+          this.nothingAcceptedSinceMs ??= Date.now();
+          let k = Date.now() - this.nothingAcceptedSinceMs;
+          try {
+            if (k >= this.stopWhenNothingAccepted.afterMs) {
+              (m("ccr_worker_nothing_accepted", "stopped", { wait_ms: k }),
+                q("error", "cli_worker_nothing_accepted", { wait_ms: k }),
+                this.onDiagnostic?.(
+                  `CCR has accepted no heartbeat or upload from this worker for ${Math.round(k / 1000)} s \u2014 exiting`,
+                  "warn",
+                  "nothing_accepted",
+                ),
+                this.stopWhenNothingAccepted.stop());
+              return;
+            }
+          } catch (U) {
+            i(Error("stopWhenNothingAccepted threw", { cause: U }));
+          }
+        }
+        if (
+          R.fetchFailed &&
+          R.reason === "fetch_failed:TimeoutError" &&
+          this.leavesPool?.()
+        )
+          this.lastBeatLeftPool = QSs();
+        if (e === "probe") m("ccr_heartbeat_probe", "beat_failed");
+        else if (e === "resync_stale") m("ccr_reconnect_beat", "beat_failed");
+        else if (e === "reactivate") m("ccr_reactivation_beat", "beat_failed");
+        if (R.status === 429) {
+          if (
+            ((this.lastHeartbeat429AtMs = Date.now()),
+            this.heartbeatGap?.noteAccepted(r),
+            e === "reactivate")
+          )
+            this.restoreReactivationArm();
+        } else
+          this.heartbeatGap?.noteMiss(
+            R.reason,
+            this.sessionBaseUrl,
+            this.readTransport.lastLivenessEvidenceAt(),
+          );
+        if (this.isIdleAdvised() && R.status !== 429)
+          (q("warn", "cli_heartbeat_idle_reverted_on_failure", {
+            status: R.status,
+          }),
+            (this.idleGrantLatched = !1),
+            (this.reactivationBeatArmed = !1),
+            this.applyShorterIntervalNow(this.seedHeartbeatIntervalMs));
+        if (
+          (this.reclampCurrentIntervalToTokenLifetime(),
+          R.status !== void 0 && $n.has(R.status) && !R.nonOriginRefusal)
+        ) {
+          this.resetHeartbeatStreak();
+          return;
+        }
+        if (!this.readTransport.isReadStreamRecentlyAlive()) {
+          this.resetHeartbeatStreak();
+          return;
+        }
+        if (this.consecutiveHeartbeatFailures === 0)
+          this.heartbeatStreakStartedAtMs = Date.now();
+        if (
+          (this.consecutiveHeartbeatFailures++,
+          !this.heartbeatLostFiredForStreak &&
+            this.consecutiveHeartbeatFailures >= Gn &&
+            Date.now() - this.heartbeatStreakStartedAtMs >=
+              this.readTransport.getReadStreamRecentLivenessWindowMs())
+        ) {
+          this.heartbeatLostFiredForStreak = !0;
+          try {
+            this.onHeartbeatLost?.();
+          } catch (k) {
+            i(k);
+          }
+        }
+        return;
+      }
+      if (e === "probe") f("ccr_heartbeat_probe");
+      else if (e === "resync_stale") f("ccr_reconnect_beat");
+      else if (e === "reactivate") f("ccr_reactivation_beat");
+      if (R.ok)
+        (t("CCRClient: Heartbeat sent"),
+          await this.takeUpBeatAnswer(R.data, r, o, y));
+    } finally {
+      if (
+        ((this.heartbeatInFlight = !1), this.pendingForcedBeat && !this.closed)
+      )
+        ((this.pendingForcedBeat = !1), this.refireForcedBeat());
+    }
+  }
+  async takeUpBeatAnswer(e, r, o, h) {
+    let g = () => this.lastSucceededBeat > o;
+    if (this.lastSettledBeat <= o) this.resetHeartbeatStreak();
+    if (!g())
+      ((this.lastSucceededBeat = o),
+        (this.lastHeartbeatSuccessAtMs = r),
+        this.heartbeatGap?.noteAccepted(r));
+    if ((this.onRequestAuthOk?.(), !g() && T(e)))
+      this.takeUpFlushPolicy(e.event_flush_policy);
+    if (e?.refreshed_auth && this.adoptRefreshedAuth) {
+      let k = !1;
+      try {
+        let U = !1,
+          P = this.adoptRefreshedAuth(e.refreshed_auth.expires_in_seconds);
+        P.then(
+          (A) => {
+            if (U && A.adopted)
+              ((this.lastAuthRefreshBadReason = null),
+                f("ccr_worker_auth_refresh"),
+                q("info", "cli_heartbeat_refreshed_auth_late_adopted"),
+                this.renewSocketForNewToken());
+          },
+          () => {},
+        );
+        let x = await he(P, Math.min(Cs, this.heartbeatIntervalMs)),
+          L;
+        if (x === void 0)
+          ((U = !0), (L = { adopted: !1, reason: "adopt_timeout" }));
+        else L = x;
+        if (
+          (q("info", "cli_heartbeat_refreshed_auth_signal", {
+            adopted: L.adopted,
+            reason: L.reason,
+            expires_in_seconds: e.refreshed_auth.expires_in_seconds,
+          }),
+          L.adopted)
+        )
+          (f("ccr_worker_auth_refresh"),
+            (this.lastAuthRefreshBadReason = null),
+            (k = !0));
+        else if (
+          L.reason &&
+          L.reason !== "unchanged" &&
+          L.reason !== this.lastAuthRefreshBadReason
+        )
+          ((this.lastAuthRefreshBadReason = L.reason),
+            m("ccr_worker_auth_refresh", L.reason));
+      } catch {
+        if (this.lastAuthRefreshBadReason !== "adopt_threw")
+          ((this.lastAuthRefreshBadReason = "adopt_threw"),
+            m("ccr_worker_auth_refresh", "adopt_threw"));
+        q("error", "cli_heartbeat_refreshed_auth_adopt_threw");
+      }
+      if (k) this.renewSocketForNewToken();
+    }
+    if (g()) return;
+    let y = e?.heartbeat_interval_seconds;
+    if (typeof y !== "number" || !Number.isFinite(y) || y <= 0) {
+      if (this.idleGrantLatched)
+        this.armReactivationIfEarned(h, this.heartbeatIntervalMs / 1000);
+      this.reclampCurrentIntervalToTokenLifetime();
+      return;
+    }
+    if (this.advertiseHeartbeatProbeSupport) {
+      let k = y * 1000 > this.seedHeartbeatIntervalMs;
+      if (k) this.armReactivationIfEarned(h, y);
+      else this.reactivationBeatArmed = !1;
+      this.idleGrantLatched = k;
+    }
+    let R = this.clampToTokenLifetime(
+      Math.min(Math.max(y * 1000, Kt), this.maxAdvisedIntervalMs),
+    );
+    if (R === this.heartbeatIntervalMs) return;
+    if (
+      (q("info", "cli_heartbeat_interval_updated", {
+        from_ms: this.heartbeatIntervalMs,
+        to_ms: R,
+      }),
+      R < this.heartbeatIntervalMs)
+    )
+      this.applyShorterIntervalNow(R);
+    else this.heartbeatIntervalMs = R;
+  }
+  async takeUpLateBeat(e, r, o, h) {
+    try {
+      if (this.closed || !e.ok) return;
+      let g = await e.json();
+      if (this.closed) return;
+      (t("CCRClient: Heartbeat answered late on the worker socket"),
+        (this.consecutiveAuthFailures = 0),
+        (this.consecutiveNotFound = 0),
+        this.endNothingAcceptedRun(),
+        await this.takeUpBeatAnswer(g, r, o, h));
+    } catch (g) {
+      t(
+        `CCRClient: could not act on a heartbeat answer that arrived late on the worker socket: ${d(g)}`,
+        { level: "warn" },
+      );
+    }
+  }
+  renewSocketForNewToken() {
+    if (!this.workerSocket?.isTransport()) return;
+    try {
+      this.workerSocket.whenQuiet(
+        () => this.readTransport.renewConnection(),
+        !0,
+      );
+    } catch (e) {
+      t(
+        `CCRClient: could not renew the worker socket for a new token: ${d(e)}`,
+        { level: "warn" },
+      );
+    }
+  }
+  reportDurableUpload(e, r) {
+    let o = this.resultThatMarks;
+    if (
+      r === "accepted" &&
+      o &&
+      o.marked !== this.sessionModelTurnStored &&
+      e.some((g) => g.payload.uuid === o.uuid)
+    )
+      ((this.sessionModelTurnStored = o.marked),
+        this.reportInternalMetadata({ model_turn_stored: o.marked }));
+    if (r === "accepted")
+      this.autocompactStateStored =
+        e.findLast(
+          (g) => !g.ephemeral && g.payload.type === "autocompact_state",
+        )?.payload.value ?? this.autocompactStateStored;
+    if (this.onDurableEventsUpload === void 0) return;
+    let h = e.filter((g) => !g.ephemeral);
+    if (h.length === 0) return;
+    try {
+      this.onDurableEventsUpload(h, r);
+    } catch (g) {
+      t(
+        `CCRClient: onDurableEventsUpload(${r}) threw; the batch's fate is unchanged: ${d(g)}`,
+        { level: "warn" },
+      );
+    }
+  }
+  writeEvent(e) {
+    try {
+      if (this.bufferLoneDelta(e)) return Promise.resolve();
+    } catch (r) {
+      return Promise.reject(r);
+    }
+    return this.writeEvents([e]);
+  }
+  bufferLoneDelta(e) {
+    if (
+      this.streamEventFlushIntervalMs <= 0 ||
+      this.pickupBarriers.length > 0 ||
+      this.guardsClientRows !== void 0 ||
+      e.type !== "stream_event" ||
+      e.event.type !== "content_block_delta" ||
+      "resume_reason" in e
+    )
+      return !1;
+    return (
+      (this.streamedEphemeralSinceLastAssistant = !0),
+      this.bufferEphemeral(e),
+      !0
+    );
+  }
+  trackFirstFrameUpload(e) {
+    let r = {};
+    return ((this.firstFrameUpload = { uuid: e, timing: r }), r);
+  }
+  trackFirstTextFrameUpload(e) {
+    let r = {};
+    return ((this.firstTextFrameUpload = { uuid: e, timing: r }), r);
+  }
+  trackFirstBlockFrameUpload(e) {
+    let r = {};
+    return ((this.firstBlockFrameUpload = { uuid: e, timing: r }), r);
+  }
+  trackedFrameUploads(e) {
+    let r = [];
+    for (let o of [
+      this.firstFrameUpload,
+      this.firstTextFrameUpload,
+      this.firstBlockFrameUpload,
+    ])
+      if (o && o.timing[e] === void 0) r.push(o);
+    return r;
+  }
+  writeEvents(e, r) {
+    let o = e.flatMap((A) => {
+        if (
+          A.type !== "system" ||
+          (A.subtype !== "task_started" &&
+            A.subtype !== "task_updated" &&
+            A.subtype !== "task_notification")
+        )
+          return [A];
+        let G =
+          A.subtype !== "task_started"
+            ? this.liveOnlyShellStarts.get(A.task_id)
+            : Se(A) === "system/task_started_foreground_shell" &&
+                this.followsServedPolicy &&
+                this.flushPolicy?.liveOnlyTypes.has(Bs)
+              ? A
+              : void 0;
+        if ((this.liveOnlyShellStarts.delete(A.task_id), !G)) return [A];
+        if (
+          (A.subtype === "task_updated" && A.patch.is_backgrounded) ||
+          Buffer.byteLength(_(A)) > ds
+        )
+          return G === A ? [A] : [{ ...G }, A];
+        if (A.subtype !== "task_notification")
+          this.liveOnlyShellStarts.set(A.task_id, G);
+        return (this.rowsMarkedLiveOnly.add(A), [A]);
+      }),
+      h = this.artifactSocketIds,
+      y = (
+        !h
+          ? o
+          : o.flatMap((A) => {
+              if (A.type !== "system") return [A];
+              switch (A.subtype) {
+                case "background_tasks_changed": {
+                  h.clear();
+                  let G = A.tasks.filter((J) => {
+                      if (J.task_type !== "monitor_ws" || J.ambient !== !0)
+                        return !0;
+                      return (h.add(J.task_id), !1);
+                    }),
+                    z = { whole: _(A.tasks), withoutSockets: _(G) },
+                    H =
+                      this.lastTaskList !== void 0 &&
+                      z.whole !== this.lastTaskList.whole &&
+                      z.withoutSockets === this.lastTaskList.withoutSockets;
+                  return (
+                    (this.lastTaskList = z),
+                    H ? [] : [{ ...A, tasks: G }]
+                  );
+                }
+                case "task_started":
+                  if (A.task_type !== "monitor_ws" || A.ambient !== !0)
+                    return [A];
+                  return (h.add(A.task_id), []);
+                case "task_updated":
+                  return h.has(A.task_id) ? [] : [A];
+                case "task_notification":
+                  return A.ambient === !0 && A.task_id.startsWith("s")
+                    ? []
+                    : [A];
+                default:
+                  return [A];
+              }
+            })
+      ).filter((A) => {
+        if (
+          A.type === "system" &&
+          A.subtype === "task_progress" &&
+          A.summary === void 0 &&
+          A.workflow_progress === void 0
+        )
+          return !1;
+        if (
+          A.type === "system" &&
+          A.subtype === "task_progress" &&
+          A.workflow_progress !== void 0
+        ) {
+          if (A.resent && this.tasksWithListSent.has(A.task_id)) {
+            if (gpt(A) > us) return !1;
+            this.rowsMarkedLiveOnly.add(A);
+          }
+          this.tasksWithListSent.add(A.task_id);
+        }
+        if (A.type === "system" && A.subtype === "task_notification")
+          this.tasksWithListSent.delete(A.task_id);
+        if (A.type === "active_goal" || A.type === "autocompact_state") {
+          let H = !this.stateRowTypesWritten.has(A.type);
+          this.stateRowTypesWritten.add(A.type);
+          let J = this.recordAtStart?.goal;
+          return !(
+            H &&
+            (A.type === "autocompact_state"
+              ? on(A.value, this.recordAtStart?.autocompact_state)
+              : A.value === null &&
+                this.recordAtStart !== void 0 &&
+                (!T(J) || J.met === !0))
+          );
+        }
+        if (A.type !== "rate_limit_event") return !0;
+        let G = Se(A),
+          z =
+            G === "rate_limit_event/allowed" &&
+            G === this.lastRateLimitKind &&
+            A.rate_limit_info.overagePeriodMonthly === void 0 &&
+            A.rate_limit_info.overagePeriodChannel === void 0;
+        return (
+          (this.lastRateLimitKind = G),
+          (this.lastRateLimitRepeat =
+            z && this.currentUploadTrim().rate_limit_repeats === !0
+              ? A
+              : void 0),
+          this.lastRateLimitRepeat === void 0
+        );
+      }),
+      R = y.findIndex((A) => A.type === "result");
+    if (R !== -1 && this.lastRateLimitRepeat !== void 0)
+      (y.splice(R, 0, this.lastRateLimitRepeat),
+        (this.lastRateLimitRepeat = void 0));
+    if (e.length > 0 && y.length === 0) return Promise.resolve();
+    if (this.guardsClientRows !== void 0)
+      this.reportClientRowsOwed(
+        this.clientRowsAreGuarded()
+          ? this.clientRowsOwed.rowsEntered(y, new Date())
+          : this.clientRowsOwed.guardEnded(Date.now()),
+      );
+    let k = this.flushPolicy?.settingsAnswersMaxWaitMs ?? 0,
+      U = this.flushPolicy?.initMaxWaitMs ?? 0;
+    if (
+      (k > 0 || U > 0) &&
+      y.length > 0 &&
+      this.followsServedPolicy &&
+      !this.closed &&
+      this.pickupBarriers.length === 0
+    ) {
+      let A = y.map((G) =>
+        this.isSettingsAnswer(G)
+          ? k
+          : ws(G) ||
+              (G.type === "user" &&
+                "isReplay" in G &&
+                G.isReplay &&
+                this.turnHold === "open")
+            ? U
+            : 0,
+      );
+      if (A.every((G) => G > 0))
+        return (
+          this.waitingAnswers.push(...y),
+          (this.waitingAnswersTimer ??= setTimeout(
+            () => this.sendWaitingAnswers(),
+            Math.min(...A),
+          )),
+          Promise.resolve()
+        );
+    }
+    let P =
+        this.waitingAnswers.length > 0 &&
+        (y.length === 0 || y.some((A) => A.type !== "stream_event"))
+          ? [...this.takeWaitingAnswers(), ...y]
+          : y,
+      x = this.pickupBarriers.at(-1);
+    if (!x) return this.writeEventsNow(P, r);
+    let L = Promise.withResolvers();
+    if (
+      (x.writes.push({ messages: P, opts: r, written: L }),
+      this.pickupBarriers.reduce((A, G) => A + G.writes.length, 0) >= Nr)
+    )
+      this.openPickupBarriers(this.pickupBarriers.length);
+    return L.promise;
+  }
+  noteSettingsRequest(e) {
+    if (
+      !T(e) ||
+      e.type !== "control_request" ||
+      typeof e.request_id !== "string" ||
+      !es(e)
+    )
+      return;
+    this.settingsRequestIds.add(e.request_id);
+    let r = this.settingsRequestIds.values().next().value;
+    if (this.settingsRequestIds.size > ar && r !== void 0)
+      this.settingsRequestIds.delete(r);
+  }
+  isSettingsAnswer(e) {
+    return (
+      e.type === "control_response" &&
+      e.response.subtype === "success" &&
+      this.settingsRequestIds.has(e.response.request_id)
+    );
+  }
+  sendWaitingAnswers() {
+    if (this.waitingAnswers.length > 0) this.writeEvents([]);
+  }
+  takeWaitingAnswers() {
+    if (this.waitingAnswersTimer)
+      (clearTimeout(this.waitingAnswersTimer),
+        (this.waitingAnswersTimer = null));
+    return this.waitingAnswers.splice(0);
+  }
+  async writeEventsNow(e, r) {
+    let o = [],
+      h = [],
+      g,
+      y,
+      R = !1,
+      k,
+      U,
+      P = !1,
+      x = [],
+      L = [],
+      A = [],
+      G = [],
+      z,
+      H = !1,
+      J = !1,
+      se = !1,
+      Y = !1;
+    for (let Q of e) {
+      let F = Q.type === "stream_event" ? Nt(Q) : Q;
+      if (
+        F.type === "stream_event" &&
+        F.event.type === "message_start" &&
+        !F.parent_tool_use_id
+      ) {
+        if (
+          ((this.modelCallStreamed = !0),
+          (this.streamedResponseId = F.event.message.id),
+          this.liveTwinTypes()?.size)
+        )
+          ((F = { ...F }),
+            G.push({
+              frame: F,
+              at: o.length,
+              turnId: this.liveTurnId,
+              index: this.nextLiveIndex,
+            }));
+      }
+      if ((F.type === "assistant" || F.type === "user") && F.parent_tool_use_id)
+        this.subAgentWroteSinceStoredRequesting = !0;
+      let D = this.noteRequestingRow(F);
+      if (D) {
+        let re = this.toClientEvent(D);
+        o.push(D === this.liveOnlyStartingRow ? this.withStamp(re) : re);
+      }
+      let Z = y ? void 0 : this.holdAgainAt(F),
+        ne = this.turnHold === "open",
+        ee = this.releaseFor(F, Z);
+      if (ee === "event" && !y) k = Se(F);
+      if (
+        ((se ||= ee === "tool_call"),
+        (Y ||=
+          (ee !== void 0 && ee !== "tool_call") ||
+          (F.type === "assistant" &&
+            F.message.id !== this.streamedResponseId &&
+            this.isLiveTwinRow(F))),
+        (y ??= ee),
+        ne && ee === "round_trip" && this.flushPolicy?.holdAcrossModelCalls)
+      )
+        ((y = ee), (k = void 0));
+      if (
+        (ne && ee === "round_trip") ||
+        F.type === "result" ||
+        F.type.startsWith("control_") ||
+        (F.type === "system" &&
+          "subtype" in F &&
+          (F.subtype === "init" || F.subtype === "task_notification"))
+      )
+        U ??= Se(F);
+      if (
+        ((this.streamEventFirstFlushMs > 0 && !ee) ||
+          this.noSubscriberStreamEventFlushIntervalMs > 0 ||
+          this.dropUnwatchedStreamEvents ||
+          (this.unwatched() && this.currentState === "running")) &&
+        this.streamEventFlushIntervalMs > 0 &&
+        bs(F)
+      ) {
+        this.bufferEphemeral(F);
+        continue;
+      }
+      if (F.type === "stream_event") {
+        if (
+          ((this.streamedEphemeralSinceLastAssistant = !0),
+          F.event.type === "message_stop" &&
+            this.holdRule === "served_policy" &&
+            this.flushPolicy?.flushOnSamplingEnd)
+        ) {
+          (this.bufferEphemeral(F),
+            (g ??= this.streamEventBufferedAt),
+            (R = !0));
+          let re = this.takeStreamEventBuffer();
+          ((y ??= re.release),
+            (Y ||= re.release !== void 0),
+            o.push(...re.events));
+          continue;
+        }
+        if (this.streamEventFlushIntervalMs <= 0) {
+          let re = Buffer.byteLength(_(F));
+          if (re <= dIt) o.push({ payload: F, ephemeral: !0 });
+          else et(F, re);
+          continue;
+        }
+        if (
+          (this.bufferEphemeral(F),
+          F.event.type === "content_block_start" && this.parkedRows.length > 0)
+        ) {
+          g ??= this.streamEventBufferedAt;
+          let re = this.takeStreamEventBuffer();
+          ((y ??= re.release),
+            (Y ||= re.release !== void 0),
+            (J ||= re.firstFrames),
+            o.push(...re.events));
+        }
+        continue;
+      }
+      let le = F.type === "control_request" ? this.toClientEvent(F) : void 0;
+      if (
+        F.type === "control_request" &&
+        le !== void 0 &&
+        rr.has(Ps(le)) &&
+        this.servedCallRequestsJumpQueue()
+      ) {
+        if (
+          !this.holdsAcrossModelCalls() &&
+          this.clientRowsOwed.rowsSentAgain.size === 0
+        ) {
+          (h.push(le), this.urgentRequestIds.add(F.request_id));
+          let re = this.urgentRequestIds.values().next().value;
+          if (this.urgentRequestIds.size > ir && re !== void 0)
+            this.urgentRequestIds.delete(re);
+          continue;
+        }
+        P = !0;
+      }
+      if (
+        F.type === "control_cancel_request" &&
+        this.urgentRequestIds.delete(F.request_id)
+      ) {
+        h.push(this.toClientEvent(F));
+        continue;
+      }
+      if (F.type === "control_cancel_request" && this.holdsAcrossModelCalls())
+        P = !0;
+      if (F.type === "assistant" && this.streamedEphemeralSinceLastAssistant)
+        (f("ccr_partial_messages", {
+          stream_events_dropped_unwatched: this.streamEventsDroppedUnwatched,
+        }),
+          (this.streamedEphemeralSinceLastAssistant = !1),
+          (this.streamEventsDroppedUnwatched = 0));
+      if (ee === void 0 && this.mayParkTextRow(F)) {
+        this.parkedRows.push({ message: F, event: this.toClientEvent(F) });
+        continue;
+      }
+      if (this.streamEventTimer) {
+        g ??= this.streamEventBufferedAt;
+        let re = this.takeStreamEventBuffer();
+        ((y ??= re.release),
+          (Y ||= re.release !== void 0),
+          (J ||= re.firstFrames),
+          o.push(...re.events));
+      }
+      if (F.type === "keep_alive" && this.keepAlivesGoAlone()) {
+        (this.sendKeepAliveAlone(), (H = !0));
+        continue;
+      }
+      if (this.gatesToolCalls) {
+        let re = we(F);
+        if (re.some((fe) => this.awaitedToolCalls.has(fe))) y ??= "tool_call";
+        x.push(...re);
+      }
+      let X = this.flushPolicy?.flushAfterToolNames;
+      if (X && X.size > 0)
+        for (let re of we(F, X))
+          (this.toolCallsWhoseResultReleases.add(re),
+            be(this.toolCallsWhoseResultReleases));
+      if (this.flushPolicy?.transcriptMaxAgeMs)
+        for (let re of we(F, Ci))
+          (this.toolCallsWhoseResultReleases.add(re),
+            be(this.toolCallsWhoseResultReleases));
+      let ue = this.flushPolicy?.holdAgain;
+      if (ue && F.type === "assistant" && !F.parent_tool_use_id) {
+        if (F.message.id !== this.newestResponseId)
+          ((this.newestResponseId = F.message.id),
+            this.unansweredCalls.clear());
+        for (let re of we(F)) this.unansweredCalls.add(re);
+        if (we(F, ue.neverAfterTools).length > 0) this.holdsNoMoreThisTurn = !0;
+        if (ue.toolsWhoseResultsWait)
+          for (let re of we(F, ue.toolsWhoseResultsWait))
+            (this.callsWhoseResultsWait.add(re),
+              be(this.callsWhoseResultsWait));
+      }
+      if (ue && F.type === "user") {
+        for (let re of je(F.message, "tool_result", "tool_use_id"))
+          this.unansweredCalls.delete(re);
+        if (
+          ue.toolsWhoseResultsWait &&
+          !F.parent_tool_use_id &&
+          Array.isArray(F.message.content) &&
+          F.message.content.some(
+            (re) =>
+              re.type === "tool_result" &&
+              (re.is_error === !0 ||
+                !this.callsWhoseResultsWait.has(re.tool_use_id)),
+          )
+        ) {
+          if (((this.heldResultNeedsStore = !0), this.holdsAcrossModelCalls()))
+            for (let re of je(F.message, "tool_result", "tool_use_id"))
+              this.heldResultsNeedingStore.add(re);
+        }
+      }
+      if (
+        ue?.toolsWhoseResultsWait &&
+        F.type === "system" &&
+        F.subtype === "task_list_statuses"
+      )
+        this.heldResultNeedsStore = !0;
+      if (
+        ue?.resultsGoBesideRunningCalls &&
+        this.heldResultsNeedingStore.size > 0 &&
+        this.unansweredCalls.size > 0 &&
+        this.holdsAcrossModelCalls() &&
+        !this.viewerAbsentReported
+      ) {
+        ((y ??= "tool_result"), (se = !0));
+        for (let re of this.heldResultsNeedingStore)
+          (this.toolCallsWhoseResultReleases.add(re),
+            be(this.toolCallsWhoseResultReleases));
+      }
+      if (this.isLiveTwinRow(F)) L.push(o.length);
+      if (
+        F === this.liveOnlyRequestingRow &&
+        this.holdsAcrossModelCalls() &&
+        !(
+          ee === "round_trip" &&
+          !ne &&
+          (!this.subAgentWroteSinceStoredRequesting ||
+            this.flushPolicy?.liveOnlyTypes.has(yt)) &&
+          this.flushPolicy?.liveOnlyTypes.has(Ns) &&
+          (Z !== "starts" ||
+            (this.nextLiveIndex === this.indexBehindHeldToolResult &&
+              this.flushPolicy.liveOnlyTypes.has(Hs)))
+        )
+      )
+        ((this.liveOnlyRequestingRow = void 0), (z = o.length));
+      if (
+        ee === "round_trip" &&
+        F !== this.liveOnlyRequestingRow &&
+        F !== this.liveOnlyFirstRow &&
+        !("parent_tool_use_id" in F && F.parent_tool_use_id)
+      )
+        this.subAgentWroteSinceStoredRequesting = !1;
+      if (
+        F.type === "system" &&
+        F.subtype === "task_started" &&
+        Se(F) === "system/task_started_foreground_shell" &&
+        !this.isLiveOnlyRow(F)
+      )
+        A.push([o.length, F.task_id]);
+      let ce = le ?? this.toClientEvent(F);
+      if (Z === "starts")
+        if (F === this.liveOnlyRequestingRow) this.liveOnlyStartingRow = F;
+        else ce = this.withStamp(ce);
+      if (
+        F.type === "system" &&
+        "subtype" in F &&
+        F.subtype === "init" &&
+        !ce.payload.parent_tool_use_id
+      ) {
+        if (
+          ((this.liveTurnId = ce.payload.uuid),
+          (this.nextLiveIndex = 0),
+          this.resetTurn(),
+          (this.droppedBeforeLiveTurn = this.droppedDurableBatches),
+          Zzo in F &&
+            this.followsServedPolicy &&
+            this.flushPolicy?.liveOnlyTypes.has(qs) &&
+            !(
+              this.flushPolicy.holdAcrossModelCalls &&
+              this.subAgentWroteSinceStoredRequesting &&
+              !this.flushPolicy.liveOnlyTypes.has(yt)
+            ))
+        )
+          ((ce.payload.request_at_init = !0), (this.liveOnlyFirstRow = "next"));
+      }
+      if (!ce.ephemeral) this.indexBehindHeldToolResult = void 0;
+      o.push(ce);
+    }
+    let oe = [],
+      de = this.heldRepeatUuid,
+      I = L.some((Q) =>
+        ["assistant", "user"].includes(o[Q]?.payload.type ?? ""),
+      ),
+      ie = se && !Y && !this.viewerAbsentReported;
+    if ((!y || ie) && !R) {
+      let Q = L.filter((F) => {
+        let D = o[F];
+        return D && !D.historical && this.eventUploader.holdsOnArrival(D);
+      });
+      if (
+        !this.viewerAbsentReported &&
+        Q.some(
+          (F) =>
+            Buffer.byteLength(_(o[F]?.payload)) > ds || gpt(o[F]?.payload) > us,
+        )
+      )
+        y ??= "twin_too_large";
+      else {
+        for (let [D, Z] of y ? [] : A) {
+          let ne = o[D];
+          if (ne && this.eventUploader.holdsOnArrival(ne))
+            this.heldShellTaskIds.add(Z);
+        }
+        oe = Q;
+        for (let D of Q) {
+          let Z = o[D];
+          if (Z) {
+            if (D === z && !y) this.heldRepeatUuid = Z.payload.uuid;
+            o[D] = this.withStamp(Z);
+          }
+        }
+        let F = Q.length > 0 ? o.findLast((D) => !D.ephemeral) : void 0;
+        if (!y && F?.payload.live_index !== void 0 && Te(F.payload.message))
+          this.indexBehindHeldToolResult = this.nextLiveIndex;
+        if (!this.viewerAbsentReported)
+          for (let D of Q.toReversed()) {
+            let Z = o[D];
+            if (Z) o.splice(D, 0, { payload: Z.payload, ephemeral: !0 });
+          }
+      }
+    }
+    if (
+      de !== void 0 &&
+      oe.length > 0 &&
+      (this.toolResultEndsCall ||
+        (this.flushPolicy?.liveOnlyTypes.has(Gs) &&
+          o.some(
+            (Q) =>
+              Q.payload.type === "assistant" && Q.payload.live_index !== void 0,
+          )))
+    )
+      ((this.heldRepeatUuid = void 0),
+        this.eventUploader.withdraw(
+          (Q) => !Q.ephemeral && Q.payload.uuid === de,
+        ));
+    for (let { frame: Q, at: F, turnId: D, index: Z } of G)
+      ((Q.live_turn_id = D), (Q.live_next_index = Z + B(oe, (ne) => ne < F)));
+    if (h.length > 0) this.enqueueClientEvents(h, { urgent: !0 });
+    if (o.length > 0) {
+      if (y) {
+        if (y !== "round_trip" && I) this.endWholeTurnHold(y);
+        (this.releaseTranscriptLane(y, k, U),
+          (this.heldResultNeedsStore = !1),
+          this.heldResultsNeedingStore.clear());
+      } else if (R) y = "sampling_end";
+      let Q =
+        !y &&
+        this.liveTwinWaitMs > 0 &&
+        this.streamEventFirstFlushMs > 0 &&
+        !J &&
+        this.trackedFrameUploads("enqueuedAtMs").every(
+          (D) => D === this.firstBlockFrameUpload,
+        ) &&
+        o.some((D) => D.ephemeral && D.payload.type === "assistant") &&
+        o.every(
+          (D) =>
+            D.payload.type === "assistant" ||
+            (D.ephemeral &&
+              (D.payload.type === "stream_event" ||
+                D.payload.subtype === "thinking_tokens")),
+        );
+      if (Q && !this.loggedLiveTwinWait && !this.eventUploader.busy())
+        ((this.loggedLiveTwinWait = !0), f("ccr_live_twin_wait"));
+      let F = this.enqueueClientEvents(o, {
+        ...(y ? { release: y, releasedBy: k } : { since: g }),
+        ...(r?.together && { together: !0 }),
+        ...(Q && { waitForMoreMs: this.liveTwinWaitMs }),
+      });
+      if (this.flushPolicy?.noTurnMaxAgeMs) this.applyUploadHold("reset");
+      if (P) this.eventUploader.cutBackoff();
+      (await F, this.noteToolCallRows("client_events", x, "queued"));
+    } else if ((h.length > 0 || H) && y) {
+      if (this.parkedRows.length > 0) this.flushStreamEventBuffer();
+      (this.releaseTranscriptLane(y, void 0, U), this.releaseClientEvents(y));
+    } else if (R) this.releaseClientEvents("sampling_end");
+  }
+  noteEventsPostFailed(e) {
+    if (
+      ((this.eventsPostRateLimited ||= e === 429),
+      this.eventsPostsFailingSinceMs !== void 0)
+    )
+      return;
+    if (
+      ((this.eventsPostsFailingSinceMs = performance.now()),
+      this.keepAlivesGoAlone() && s.CLAUDE_CODE_REMOTE_SEND_KEEPALIVES && tne())
+    )
+      this.sendKeepAliveAlone();
+  }
+  keepAlivesGoAlone() {
+    return (
+      this.eventsPostsFailingSinceMs !== void 0 &&
+      performance.now() - this.eventsPostsFailingSinceMs <= Br &&
+      !this.eventsPostRateLimited &&
+      !wt() &&
+      this.providerWithheldReason() === void 0
+    );
+  }
+  sendKeepAliveAlone() {
+    if (this.closed || performance.now() - this.keepAliveAloneSentAtMs < Lr)
+      return;
+    let e = {
+      worker_epoch: this.workerEpoch,
+      events: [this.toClientEvent({ type: "keep_alive" })],
+    };
+    ((this.keepAliveAloneSentAtMs = performance.now()),
+      (this.lastEventsAnswerOrPulseAtMs = Date.now()),
+      this.request("post", "/worker/events", e, "keep_alive (own POST)", {
+        signal: this.closeAbort.signal,
+        countTowardEscalation: !1,
+        outsideItsLane: !0,
+      })
+        .then((r) => {
+          if (
+            ((this.eventsPostRateLimited ||= !r.ok && r.status === 429), r.ok)
+          )
+            f("ccr_keep_alive_own_post");
+          else if (!this.closed)
+            l(
+              "ccr_keep_alive_own_post",
+              r.status !== void 0
+                ? `http_${r.status}`
+                : r.fetchFailed
+                  ? "no_answer"
+                  : "no_status",
+            );
+        })
+        .catch(i));
+  }
+  releaseTranscriptLane(e, r, o) {
+    if (
+      this.holdRule !== "served_policy" ||
+      !this.flushPolicy?.transcriptMaxAgeMs
+    )
+      this.internalEventUploader.release(e, r);
+    else if (o !== void 0) this.internalEventUploader.release("event", o);
+  }
+  releaseFor(e, r) {
+    if (e.type === "result") {
+      let h = this.turnHold !== "open";
+      if (
+        ((this.modelTurnEnded ||= h),
+        this.flushPolicy?.holdAgain?.laterWorkerHoldsFirstTurn &&
+          (h || e.is_error))
+      )
+        this.resultThatMarks = { uuid: e.uuid, marked: h };
+      this.resetTurn();
+    }
+    if (
+      e.type === "system" &&
+      "subtype" in e &&
+      e.subtype === "status" &&
+      "status" in e &&
+      e.status === "requesting"
+    ) {
+      if (!this.seesModelCallBoundaries)
+        ((this.seesModelCallBoundaries = !0), this.applyUploadHold("reset"));
+      if (this.holdRule === "served_policy") {
+        let h = this.turnHold === "whole" && !r && this.requestingRowMayWait(e);
+        if (
+          this.turnHold === "open" &&
+          this.flushPolicy?.firstTurnHoldsEachCall &&
+          !this.modelTurnEnded &&
+          !(
+            this.flushPolicy.holdAgain?.laterWorkerHoldsFirstTurn &&
+            this.sessionModelTurnStored
+          )
+        )
+          ((this.turnHold = "each_call"), (this.holdsNoMoreThisTurn = !0));
+        else if (this.turnHold === "open" || r === "starts") {
+          if (
+            ((this.secondCallStartsHold =
+              this.turnHold === "open" && !this.modelTurnEnded),
+            (this.turnHold = "whole"),
+            this.holdsAcrossModelCalls())
+          )
+            this.uploadHoldTally.wholeTurnHoldStarted();
+        } else if (r === "ends")
+          ((this.turnHold = "each_call"),
+            this.uploadHoldTally.wholeTurnHoldEndedEarly());
+        return h ? void 0 : "round_trip";
+      }
+    }
+    if (e.type === "user" && this.toolResultReleases(e.message))
+      return "tool_result";
+    let o = this.flushPolicy?.flushOnCallOfToolNames;
+    if (this.holdRule === "served_policy" && o?.size && we(e, o).length > 0)
+      return "tool_call";
+    if (
+      e.type === "assistant" &&
+      e.message.id !== this.streamedResponseId &&
+      this.isLiveTwinRow(e)
+    )
+      return "event";
+    if (this.holdRule === void 0 || this.mayWaitUnderHold(e)) return;
+    return "event";
+  }
+  requestingRowMayWait(e) {
+    return (
+      this.holdsAcrossModelCalls() &&
+      Ti(e) &&
+      !this.flushPolicy?.mustFlushTypes.has(e.type)
+    );
+  }
+  holdAgainAt(e) {
+    let r = this.flushPolicy?.holdAgain;
+    if (
+      !r ||
+      e.type !== "system" ||
+      !("subtype" in e) ||
+      e.subtype !== "status" ||
+      !("status" in e) ||
+      e.status !== "requesting" ||
+      !this.holdsAcrossModelCalls() ||
+      !this.isLiveTwinRow(e)
+    )
+      return;
+    if (
+      this.holdsNoMoreThisTurn ||
+      this.droppedDurableBatches !== this.droppedBeforeLiveTurn
+    )
+      return "ends";
+    let o = this.requestingRowMayWait(e);
+    if (this.unansweredCalls.size > 0) return o ? void 0 : "ends";
+    let h = this.eventUploader.held();
+    return this.turnHold === "each_call" ||
+      !o ||
+      this.heldResultNeedsStore ||
+      (r.laterWorkerHoldsFirstTurn && this.secondCallStartsHold) ||
+      (r.softAgeMs > 0 && h.ageMs >= r.softAgeMs) ||
+      (r.softEvents > 0 && h.count >= r.softEvents)
+      ? "starts"
+      : void 0;
+  }
+  toolResultReleases(e) {
+    if (this.holdRule !== "served_policy") return !1;
+    let r = this.flushPolicy?.flushAfterTools === "all";
+    return je(e, "tool_result", "tool_use_id").some(
+      (o) => r || this.toolCallsWhoseResultReleases.has(o),
+    );
+  }
+  gateToolCall(e) {
+    let r = this.flushPolicy;
+    if (
+      !r ||
+      (r.flushAfterTools !== "write" && r.flushBeforeToolsWaitMs <= 0) ||
+      e.agentId !== void 0 ||
+      this.closed ||
+      !this.followsServedPolicy ||
+      !e.mayWrite()
+    )
+      return;
+    if (r.flushAfterTools === "write")
+      (this.toolCallsWhoseResultReleases.add(e.toolUseId),
+        be(this.toolCallsWhoseResultReleases));
+    let o = this.transcriptLaneInUse
+      ? ["client_events", "internal_events"]
+      : ["client_events"];
+    if (
+      r.flushBeforeToolsWaitMs <= 0 ||
+      this.lanesNotAnswering.size > 0 ||
+      e.signal.aborted ||
+      o.every((h) => this.toolCallRows[h].get(e.toolUseId) === "stored")
+    )
+      return;
+    return this.awaitToolCallStored(e, o, r.flushBeforeToolsWaitMs);
+  }
+  async awaitToolCallStored(e, r, o) {
+    let h = e.toolUseId,
+      g = Date.now(),
+      y = Lo(e.signal, { timeoutMs: o, refTimer: !0 });
+    this.awaitedToolCalls.add(h);
+    let R = this.pickupBarriers.at(-1);
+    if (R && !this.toolCallRows.client_events.has(h))
+      (this.internalEventUploader.release("tool_call"),
+        await Promise.race([R.opened.promise, ft(y.signal)]));
+    let k = Lo(y.signal, { timeoutMs: this.toolCallRowGraceMs, refTimer: !0 }),
+      U = !1,
+      P = !1;
+    try {
+      if (
+        (this.releaseClientEvents("tool_call"),
+        this.internalEventUploader.release("tool_call"),
+        await Promise.race([
+          this.toolCallRowReaches("client_events", h, "queued"),
+          ft(k.signal),
+        ]),
+        (U = this.toolCallRows.client_events.has(h)),
+        (P = k.signal.aborted && !y.signal.aborted),
+        U && !this.closed)
+      )
+        await Promise.race([
+          Promise.all(r.map((A) => this.toolCallRowReaches(A, h, "settled"))),
+          ft(y.signal),
+        ]);
+    } finally {
+      (k.cleanup(), y.cleanup(), this.awaitedToolCalls.delete(h));
+      for (let A of r) this.toolCallRowWaiters.delete(`${A} ${h}`);
+    }
+    let L = r.every((A) => this.toolCallRows[A].get(h) === "stored")
+      ? "stored"
+      : this.closed
+        ? "closed"
+        : e.signal.aborted
+          ? "aborted"
+          : r.some((A) => this.toolCallRows[A].get(h) === "dropped")
+            ? "dropped"
+            : P && !U
+              ? "row_never_queued"
+              : "timeout";
+    if (L === "timeout" || L === "dropped") {
+      for (let A of r)
+        if (this.toolCallRows[A].get(h) === "queued")
+          this.lanesNotAnswering.add(A);
+    }
+    q(
+      L === "stored" || L === "closed" || L === "aborted" ? "info" : "warn",
+      "cli_ccr_tool_call_upload_wait",
+      {
+        outcome: L,
+        waited_ms: Date.now() - g,
+        limit_ms: o,
+        live_view_row: this.toolCallRows.client_events.get(h) ?? "none",
+        transcript_row: r.includes("internal_events")
+          ? (this.toolCallRows.internal_events.get(h) ?? "none")
+          : "lane_unused",
+      },
+    );
+  }
+  toolCallRowReaches(e, r, o) {
+    let h = this.toolCallRows[e].get(r);
+    if (h !== void 0 && (h !== "queued" || o === "queued"))
+      return Promise.resolve();
+    return new Promise((g) => {
+      let y = `${e} ${r}`,
+        R = { until: o, reached: g },
+        k = this.toolCallRowWaiters.get(y);
+      if (k) k.push(R);
+      else this.toolCallRowWaiters.set(y, [R]);
+    });
+  }
+  noteToolCallRows(e, r, o) {
+    let h = this.toolCallRows[e];
+    for (let g of r) {
+      if (
+        (o === "queued" && h.has(g)) ||
+        (o === "dropped" && h.get(g) === "stored")
+      )
+        continue;
+      (h.set(g, o), be(h));
+      let y = `${e} ${g}`,
+        R = (this.toolCallRowWaiters.get(y) ?? []).filter((k) => {
+          if (k.until === "queued" || o !== "queued") return (k.reached(), !1);
+          return !0;
+        });
+      if (R.length > 0) this.toolCallRowWaiters.set(y, R);
+      else this.toolCallRowWaiters.delete(y);
+    }
+  }
+  noteToolCallRowsSettled(e, r, o) {
+    if (!this.gatesToolCalls) return;
+    if (r === "stored") this.lanesNotAnswering.delete(e);
+    this.noteToolCallRows(
+      e,
+      o.flatMap((h) =>
+        ("session_agent_id" in h && h.session_agent_id) ||
+        ("ephemeral" in h && h.ephemeral)
+          ? []
+          : we(h.payload),
+      ),
+      r,
+    );
+  }
+  clientRowsAreGuarded() {
+    if (!this.clientRowsSwitchIsOn || this.hasDisplayHooks === void 0)
+      return !1;
+    return (
+      (this.displayHookSeen ||= this.hasDisplayHooks()),
+      !this.displayHookSeen
+    );
+  }
+  flagsRefreshed() {
+    return (
+      (this.clientRowsSwitchIsOn = this.guardsClientRows?.() === !0),
+      this.clientRowsSwitchIsOn
+    );
+  }
+  markOfRepliesShownAsStored() {
+    return this.clientRowsAreGuarded() ? Nn(this.sessionId) || void 0 : void 0;
+  }
+  setDisplayHooksProbe(e) {
+    this.hasDisplayHooks = e;
+  }
+  noteClientRowsSettled(e, r) {
+    if (this.guardsClientRows === void 0) return;
+    if (!this.clientRowsAreGuarded()) {
+      if (
+        (this.reportClientRowsOwed(this.clientRowsOwed.guardEnded(Date.now())),
+        this.clientRowsOwed.rowsSentAgain.size === 0)
+      )
+        return;
+    }
+    let o = r.flatMap((g) => (g.ephemeral ? [] : [g.payload.uuid])),
+      h = B(o, (g) => this.clientRowsOwed.rowsSentAgain.has(g));
+    if (h > 0)
+      if (((this.ownRowsWaitBehindRowsSentAgainSince = void 0), e === "stored"))
+        f("ccr_client_rows_owed", { rows: h });
+      else m("ccr_client_rows_owed", "upload_refused", { rows: h });
+    this.reportClientRowsOwed(this.clientRowsOwed.rowsAnswered(o));
+  }
+  reportClientRowsOwed(e) {
+    if (e !== void 0) this.workerState.enqueue({ internal_metadata: e });
+  }
+  async clientRowsOwedByEarlierWorkers(e) {
+    if (
+      this.guardsClientRows === void 0 ||
+      this.clientRowsOwed.earlierSpans.length === 0
+    )
+      return [];
+    return (
+      await e(),
+      this.flagsRefreshed() ? this.clientRowsOwed.earlierSpans : []
+    );
+  }
+  async tryClientRowsOwedByEarlierWorkers(e) {
+    if (
+      (this.reportClientRowsOwed(this.clientRowsOwed.earlierSpansTried(e)),
+      !(await he(this.flushWorkerState(), Xn)))
+    )
+      l("ccr_client_rows_owed", "try_report_unanswered");
+  }
+  async sendOwedClientRowsAgain(e) {
+    if (!this.flagsRefreshed()) return;
+    let r = Us(
+      e.map((o) => this.toClientEvent(o)),
+      (o) => o.payload.uuid,
+    );
+    this.clientRowsOwed.earlierRowsSentAgain(r.map((o) => o.payload.uuid));
+    try {
+      await this.enqueueClientEvents(r, { urgent: !0 });
+    } catch (o) {
+      throw (this.clientRowsOwed.earlierRowsWithdrawn(), o);
+    }
+  }
+  giveUpClientRowsOwedByEarlierWorkers() {
+    this.reportClientRowsOwed(this.clientRowsOwed.earlierSpansGivenUp());
+  }
+  rowsSentAgainStepAside(e) {
+    let { rowsSentAgain: r } = this.clientRowsOwed;
+    if (!e.some((h) => r.has(h.payload.uuid))) return;
+    if (this.eventUploader.backlog().unsent <= r.size) {
+      this.ownRowsWaitBehindRowsSentAgainSince = void 0;
+      return;
+    }
+    if (
+      ((this.ownRowsWaitBehindRowsSentAgainSince ??= Date.now()),
+      Date.now() - this.ownRowsWaitBehindRowsSentAgainSince < Yn)
+    )
+      return;
+    this.ownRowsWaitBehindRowsSentAgainSince = void 0;
+    let o = new Set(r);
+    (e.splice(0, e.length, ...e.filter((h) => !ks(h, o))),
+      this.eventUploader.withdraw((h) => ks(h, o)),
+      l("ccr_client_rows_owed", "upload_kept_failing", { rows: o.size }),
+      this.clientRowsOwed.earlierRowsWithdrawn());
+  }
+  mayParkTextRow(e) {
+    if (
+      e.type !== "assistant" ||
+      !this.streamEventTimer ||
+      this.streamEventTimerIsSlow ||
+      this.lastReportedHasSubscribers === !1 ||
+      this.closed ||
+      this.isLiveTwinRow(e)
+    )
+      return !1;
+    let r = e.message.content;
+    return (
+      Array.isArray(r) && r.length > 0 && r.every((o) => o.type === "text")
+    );
+  }
+  liveTwinTypes() {
+    return this.holdRule === "served_policy" &&
+      this.liveTurnId !== void 0 &&
+      this.turnHold !== "open"
+      ? this.flushPolicy?.liveTwinTypes
+      : void 0;
+  }
+  isLiveTwinRow(e) {
+    let r = this.liveTwinTypes();
+    return (
+      r !== void 0 &&
+      (e.type === "tool_progress"
+        ? e.heartbeat === !0 && !e.tool_use_id.startsWith("hook-")
+        : !("parent_tool_use_id" in e && e.parent_tool_use_id)) &&
+      (e.type !== "user" ||
+        (Array.isArray(e.message.content) &&
+          e.message.content.every((o) => o.type === "tool_result"))) &&
+      (r.has(e.type) || ("subtype" in e && r.has(`${e.type}/${e.subtype}`)))
+    );
+  }
+  takeParkedRows() {
+    let e = this.parkedRows.map(({ event: r }) => r);
+    return ((this.parkedRows = []), e);
+  }
+  mayWaitUnderHold(e) {
+    if (this.isLiveOnlyRow(e)) return !0;
+    if (e.type === "keep_alive" && this.holdRule === "served_policy")
+      return (
+        this.seesModelCallBoundaries &&
+        !this.flushPolicy?.mustFlushTypes.has(e.type)
+      );
+    if (
+      e.type === "control_response" &&
+      this.flushPolicy?.controlTrafficKeepsHold &&
+      this.holdsAcrossModelCalls()
+    )
+      return (
+        !this.flushPolicy.mustFlushTypes.has(e.type) &&
+        this.settingsRequestIds.has(e.response.request_id)
+      );
+    if (!hXs(e))
+      return (
+        this.holdRule === "served_policy" &&
+        this.seesModelCallBoundaries &&
+        this.turnHold !== "open" &&
+        !(BIa in e && !this.viewerAbsentReported) &&
+        this.flushPolicy?.mayWaitTypes.has(
+          e.type === "system" &&
+            e.subtype === "task_notification" &&
+            this.heldShellTaskIds.has(e.task_id)
+            ? "system/task_notification_foreground_shell"
+            : Se(e),
+        ) === !0 &&
+        !this.flushPolicy.mustFlushTypes.has(e.type)
+      );
+    if (this.holdRule === "no_subscriber_flag" && !pi) return !0;
+    if (e.type === "user" && "isReplay" in e && e.isReplay) return !1;
+    let r = this.flushPolicy;
+    if (!r) return !0;
+    if (e.type === "assistant" && r.flushOnAssistant) return !1;
+    return !r.mustFlushTypes.has(e.type);
+  }
+  isLiveOnlyRow(e) {
+    return (
+      this.rowsMarkedLiveOnly.has(e) ||
+      (this.followsServedPolicy &&
+        this.flushPolicy?.liveOnlyTypes.has(Se(e)) === !0)
+    );
+  }
+  noteRequestingRow(e) {
+    if (e.type === "result") this.openBlock?.clear();
+    if ("parent_tool_use_id" in e && e.parent_tool_use_id) return;
+    if (
+      this.openBlock &&
+      e.type === "assistant" &&
+      Array.isArray(e.message.content)
+    )
+      this.openBlock.noteRow(e.message.content);
+    if ("resume_reason" in e && e.resume_reason) this.turnTookInput = !0;
+    if (e.type === "assistant" || e.type === "user")
+      ((this.toolResultEndsCall = e.type === "user" && Te(e.message)),
+        (this.liveOnlyRequestingRow = void 0));
+    if (e.type !== "system" || !("subtype" in e)) return;
+    let r = e.subtype === "status" && "status" in e ? e.status : void 0;
+    if (r === "compacting" || e.subtype === "compact_boundary") {
+      let g = this.liveOnlyRequestingRow;
+      return ((this.liveOnlyRequestingRow = void 0), g);
+    }
+    if (r !== "requesting") return;
+    this.openBlock?.clear();
+    let o = _(
+        "user_message_uuids" in e ? (e.user_message_uuids ?? null) : null,
+      ),
+      h =
+        o === this.lastRequestingList &&
+        this.toolResultEndsCall &&
+        !this.turnTookInput &&
+        this.followsServedPolicy &&
+        this.flushPolicy?.liveOnlyTypes.has(Ds) === !0;
+    if (this.liveOnlyFirstRow === "next") this.liveOnlyFirstRow = e;
+    if (
+      ((this.lastRequestingList = o),
+      (this.toolResultEndsCall = !1),
+      (this.liveOnlyRequestingRow = h ? e : void 0),
+      e !== this.liveOnlyFirstRow && this.flushPolicy?.liveOnlyTypes.has($s))
+    )
+      this.turnTookInput = !1;
+    this.heldRepeatUuid = void 0;
+    return;
+  }
+  withStamp(e) {
+    return {
+      ...e,
+      payload: {
+        ...e.payload,
+        live_turn_id: this.liveTurnId,
+        live_index: this.nextLiveIndex++,
+        emitted_at_ms: Date.now(),
+      },
+    };
+  }
+  sendLiveOnlyRow(e) {
+    this.enqueueClientEvents(
+      [{ payload: { ...e, uuid: Ee() }, ephemeral: !0 }],
+      { urgent: !0 },
+    ).catch(i);
+  }
+  areUploadsSlow() {
+    return (
+      this.eventsPostsFailingSinceMs !== void 0 ||
+      (this.eventUploader.backlog().inFlightMs ?? 0) > 1000
+    );
+  }
+  hasSubscribers() {
+    return this.lastReportedHasSubscribers === !0;
+  }
+  hasNoSubscribers() {
+    return this.lastReportedHasSubscribers === !1;
+  }
+  toClientEvent(e) {
+    let r = _pl(e, M$t),
+      o = r.historical === !0,
+      h =
+        bs(e) ||
+        tSr(r) ||
+        this.isLiveOnlyRow(e) ||
+        e === this.liveOnlyRequestingRow ||
+        e === this.liveOnlyFirstRow,
+      g =
+        r.type === "user"
+          ? this.uploadedToolResult(
+              r.tool_use_result,
+              r.message,
+              r.is_virtual === !0,
+            )
+          : r.tool_use_result;
+    return {
+      payload: {
+        ...r,
+        ...(g !== r.tool_use_result && { tool_use_result: g }),
+        uuid: typeof r.uuid === "string" ? r.uuid : Ee(),
+      },
+      ...(o && { historical: !0 }),
+      ...(h && { ephemeral: !0 }),
+    };
+  }
+  uploadedToolResult(e, r, o) {
+    let h = o ? e : this.trimmedToolResult(e, r);
+    if (!this.withholdsWholeFiles) return h;
+    let g = abi(h);
+    if (g !== h && !this.loggedWholeFileWithheld)
+      ((this.loggedWholeFileWithheld = !0), f("ccr_whole_file_withheld"));
+    return g;
+  }
+  trimmedToolResult(e, r) {
+    let o = this.currentUploadTrim(),
+      h = ibi(e, o);
+    if (h !== e && !this.loggedToolResultBlank)
+      ((this.loggedToolResultBlank = !0), f("ccr_tool_result_blank"));
+    let g = ZXa(h, r, o);
+    if (g !== h && !this.loggedMcpImageBlank)
+      ((this.loggedMcpImageBlank = !0), f("ccr_mcp_image_blank"));
+    return g;
+  }
+  setStreamEventFlushIntervalMs(e) {
+    if (
+      ((this.streamEventFlushIntervalMs = ye(
+        "streamEventFlushIntervalMs",
+        e,
+        eEn,
+      )),
+      this.streamEventFlushIntervalMs <= 0 && this.streamEventTimer)
+    )
+      this.flushStreamEventBuffer();
+    if (this.streamEventFlushIntervalMs <= 0)
+      ((this.toolInputMayWait = !1),
+        (this.writeInputHead = void 0),
+        (this.messageCallInput = void 0),
+        (this.thinkingBlockOpen = !1),
+        (this.textBlockOpen = !1),
+        this.cancelTextEarlyUpload(),
+        (this.awaitingFirstBlock = !1),
+        this.openBlock?.clear());
+    this.tellStreamEventDrop();
+  }
+  setStreamEventFirstFlushMs(e) {
+    if (
+      ((this.streamEventFirstFlushMs = ye("streamEventFirstFlushMs", e, 0)),
+      this.streamEventFirstFlushMs <= 0)
+    )
+      this.cancelTextEarlyUpload();
+  }
+  setThinkingStartGoesAtOnce(e) {
+    this.thinkingStartGoesAtOnce = e === !0;
+  }
+  setMessageWordsGoFirst(e) {
+    this.messageWordsGoFirst = e === !0;
+  }
+  setTextEarlyUploadsMs(e) {
+    this.textEarlyUploadsMs = Fi(e);
+  }
+  setStreamEventWindowRunsFromLastFlush(e) {
+    this.streamEventWindowRunsFromLastFlush = e === !0;
+  }
+  setHeldBunchFlushMs(e) {
+    this.heldBunchFlushMs = ye("heldBunchFlushMs", e, n6o);
+  }
+  setThinkingFlushMs(e) {
+    this.thinkingFlushMs = Oi(e);
+  }
+  setToolInputFlushMs(e) {
+    this.toolInputFlushMs = Ii(e);
+  }
+  setLiveTwinWaitMs(e) {
+    this.liveTwinWaitMs = xi(e);
+  }
+  setNoSubscriberStreamEventFlushIntervalMs(e) {
+    let r = ye("noSubscriberStreamEventFlushIntervalMs", e, 0);
+    if (r === this.noSubscriberStreamEventFlushIntervalMs) return;
+    ((this.noSubscriberStreamEventFlushIntervalMs = r),
+      this.setHasSubscribers(void 0, "reset"));
+  }
+  setNoSubscriberUploadHoldMs(e) {
+    let r = ye("noSubscriberUploadHoldMs", e, 0);
+    if (r === this.noSubscriberUploadHoldMs) return;
+    ((this.noSubscriberUploadHoldMs = r),
+      this.setHasSubscribers(void 0, "reset"));
+  }
+  setRestateOpenBlock(e) {
+    if (e !== !0)
+      ((this.openBlock = void 0),
+        (this.restatementOwed = !1),
+        (this.replyRestated = !1));
+    else this.openBlock ??= new tt();
+  }
+  setDropUnwatchedStreamEvents(e) {
+    let r = e === !0;
+    if (r === this.dropUnwatchedStreamEvents) return;
+    (this.setHasSubscribers(void 0, "reset"),
+      (this.dropUnwatchedStreamEvents = r));
+  }
+  tellStreamEventDrop() {
+    let e =
+      !this.closed &&
+      this.streamEventFlushIntervalMs > 0 &&
+      this.dropUnwatchedStreamEvents &&
+      this.unwatchedPastGrace;
+    if (e !== this.toldStreamEventDrop)
+      ((this.toldStreamEventDrop = e), this.onStreamEventDropChange?.(e));
+  }
+  onSubscribersReported;
+  setSubscribersReportedListener(e) {
+    this.onSubscribersReported = e;
+  }
+  tellSubscribersReported(e) {
+    if (typeof e !== "boolean" || this.onSubscribersReported === void 0) return;
+    if (e || !this.senderMayNotBeAttachedYet()) this.onSubscribersReported(e);
+  }
+  senderMayNotBeAttachedYet() {
+    return Date.now() - this.lastInboundEventAtMs < dt;
+  }
+  unwatched() {
+    return (
+      this.noSubscriberUploadHoldMs > 0 &&
+      this.lastReportedHasSubscribers === !1
+    );
+  }
+  mayHoldUploads() {
+    return this.noSubscriberUploadHoldMs > 0 || this.servedPolicyHolds();
+  }
+  servedPolicyHolds() {
+    return (this.flushPolicy?.maxEvents ?? 0) > 1 && this.followsServedPolicy;
+  }
+  checkpointForViewer(e) {
+    if (
+      ((this.restatementOwed = this.openBlock !== void 0),
+      this.closed || this.viewerCheckpointTimer)
+    )
+      return;
+    if (!this.holdsAcrossModelCalls()) {
+      if (this.dropUnwatchedStreamEvents)
+        this.setHasSubscribers(void 0, "watcher");
+      return;
+    }
+    this.viewerCheckpointTimer = setTimeout(
+      (r, o) => {
+        if (((r.viewerCheckpointTimer = null), r.holdsAcrossModelCalls()))
+          r.uploadHeldRowsForViewer(o).catch(i);
+      },
+      Math.max(0, this.lastViewerCheckpointAtMs + os - Date.now()),
+      this,
+      e,
+    );
+  }
+  async uploadHeldRowsForViewer(e) {
+    if (
+      ((this.lastViewerCheckpointAtMs = Date.now()),
+      this.flushPolicy?.emptyCheckpointKeepsHold && !this.modelCallStreamed)
+    )
+      this.setHasSubscribers(void 0, "watcher");
+    else this.endWholeTurnHold(e);
+    let r = this.liveTurnId,
+      o = this.nextLiveIndex - 1,
+      h = this.droppedBeforeLiveTurn;
+    (this.internalEventUploader.release(e),
+      this.releaseClientEvents(e),
+      await this.flush(),
+      await this.enqueueClientEvents(
+        [
+          {
+            payload: {
+              type: "system",
+              subtype: "checkpoint_done",
+              uuid: Ee(),
+              live_turn_id: r,
+              stored_through_live_index:
+                this.droppedDurableBatches === h ? o : -1,
+            },
+            ephemeral: !0,
+          },
+        ],
+        {},
+      ));
+  }
+  endWholeTurnHold(e) {
+    if (this.turnHold === "open") return;
+    if (
+      ((this.turnHold = "each_call"),
+      this.uploadHoldTally.wholeTurnHoldEndedEarly(),
+      !e || !this.flushPolicy?.holdAgain?.after.has(e))
+    )
+      this.holdsNoMoreThisTurn = !0;
+  }
+  resetTurn() {
+    ((this.lastRequestingList = void 0),
+      (this.liveOnlyFirstRow = void 0),
+      (this.liveOnlyRequestingRow = void 0),
+      (this.turnTookInput = !1),
+      (this.modelCallStreamed = !1),
+      (this.turnHold = "open"),
+      this.uploadHoldTally.turnEnded(),
+      (this.holdsNoMoreThisTurn = !1),
+      (this.newestResponseId = void 0),
+      this.unansweredCalls.clear());
+  }
+  holdsAcrossModelCalls() {
+    return (
+      this.holdRule === "served_policy" &&
+      this.seesModelCallBoundaries &&
+      this.flushPolicy?.holdAcrossModelCalls === !0
+    );
+  }
+  decideHoldRule() {
+    if (this.currentState !== "running" || this.shutdownReleased) return;
+    if (
+      this.servedPolicyHolds() &&
+      (this.seesModelCallBoundaries || this.lastReportedHasSubscribers === !1)
+    )
+      return "served_policy";
+    return this.unwatched() ? "no_subscriber_flag" : void 0;
+  }
+  applyUploadHold(e) {
+    let r = this.decideHoldRule();
+    ((this.holdRule = r),
+      this.eventUploader.setHold(
+        r &&
+          this.laneHold(
+            r,
+            !this.seesModelCallBoundaries
+              ? hs
+              : this.flushPolicy?.controlTrafficKeepsHold
+                ? ut
+                : Me,
+            this.turnHold === "open"
+              ? this.flushPolicy?.noTurnMaxAgeMs
+              : void 0,
+          ),
+        e,
+      ),
+      this.internalEventUploader.setHold(
+        r && this.laneHold(r, hs, this.flushPolicy?.transcriptMaxAgeMs),
+        e,
+      ));
+  }
+  laneHold(e, r, o) {
+    let h = this.flushPolicy;
+    if (e === "served_policy" && h)
+      return {
+        rule: e,
+        maxAgeMs: Math.min(
+          o || h.maxAgeMs,
+          !this.seesModelCallBoundaries ? Ws : h.holdAcrossModelCalls ? Oe : Fs,
+        ),
+        maxItems: h.maxEvents,
+        maxBytes: h.maxBytes,
+        passes: r,
+      };
+    return {
+      rule: "no_subscriber_flag",
+      maxAgeMs: this.noSubscriberUploadHoldMs,
+    };
+  }
+  takeUpFlushPolicy(e) {
+    let r = e ?? this.launchFlushPolicy,
+      o = r == null ? void 0 : Mi(r);
+    if (r != null && !o && !this.loggedUnreadableFlushPolicy)
+      ((this.loggedUnreadableFlushPolicy = !0),
+        q("warn", "cli_ccr_flush_policy_unreadable"));
+    let h = this.flushPolicy;
+    if (!Pi(h, o)) {
+      if (
+        ((this.flushPolicy = o),
+        this.callsWhoseResultsWait.clear(),
+        h?.flushAfterTools !== o?.flushAfterTools ||
+          !Vme(h?.flushAfterToolNames, o?.flushAfterToolNames))
+      )
+        this.toolCallsWhoseResultReleases.clear();
+      (q(
+        "info",
+        o
+          ? h
+            ? "cli_ccr_flush_policy_changed"
+            : "cli_ccr_flush_policy_adopted"
+          : "cli_ccr_flush_policy_cleared",
+        {
+          ...(o && {
+            max_events: o.maxEvents,
+            max_age_ms: o.maxAgeMs,
+            max_bytes: o.maxBytes ?? 0,
+            flush_on_sampling_end: o.flushOnSamplingEnd,
+            flush_on_assistant: o.flushOnAssistant,
+            event_batch_upload: o.eventBatchUpload,
+            hold_across_model_calls: o.holdAcrossModelCalls,
+            hold_again: o.holdAgain !== void 0,
+            may_wait_types: o.mayWaitTypes.size,
+            may_wait_types_refused: o.mayWaitTypesRefused,
+            flush_after_tool_names: o.flushAfterToolNames.size,
+            flush_on_call_of_tool_names: o.flushOnCallOfToolNames.size,
+            settings_receipts_max_wait_ms: o.settingsReceiptsMaxWaitMs,
+            messages_received_waits: o.messagesReceivedWaits,
+            receipts_ride_uploads: o.receiptsRideUploads,
+            flush_before_tools_wait_ms: o.flushBeforeToolsWaitMs,
+            flush_after_tools: o.flushAfterTools,
+            must_flush_types: o.mustFlushTypes.size,
+            live_twin_types: o.liveTwinTypes.size,
+            live_only_types: o.liveOnlyTypes.size,
+            transcript_max_age_ms: o.transcriptMaxAgeMs,
+            no_turn_max_age_ms: o.noTurnMaxAgeMs,
+            merge_worker_reports: o.mergeWorkerReports,
+            control_traffic_keeps_hold: o.controlTrafficKeepsHold,
+            empty_checkpoint_keeps_hold: o.emptyCheckpointKeepsHold,
+            first_turn_holds_each_call: o.firstTurnHoldsEachCall,
+            results_go_beside_running_calls:
+              o.holdAgain?.resultsGoBesideRunningCalls === !0,
+            later_worker_holds_first_turn:
+              o.holdAgain?.laterWorkerHoldsFirstTurn === !0,
+            settings_answers_max_wait_ms: o.settingsAnswersMaxWaitMs,
+            init_max_wait_ms: o.initMaxWaitMs,
+            metadata_waits_for_status: o.metadataWaitsForStatus.size,
+            metadata_never_sent: o.metadataNeverSent.size,
+            metadata_max_wait_ms: o.metadataMaxWaitMs,
+            cost_report_max_wait_ms: o.costReportMaxWaitMs,
+            policy_version: o.policyVersion ?? "",
+          }),
+          hold_enabled: this.followsServedPolicy,
+        },
+      ),
+        this.applyUploadHold("reset"));
+    }
+  }
+  logUploadHoldEnd(e, r, o, h, g, y) {
+    if (g === "no_subscriber_flag") {
+      f("ccr_no_subscriber_hold", {
+        lane: u(e),
+        reason: u(r),
+        held_events: o,
+        held_ms: h,
+      });
+      return;
+    }
+    if (e === "client_events") {
+      if (
+        (this.heldShellTaskIds.clear(),
+        this.heldResultsNeedingStore.clear(),
+        (this.heldRepeatUuid = void 0),
+        (this.indexBehindHeldToolResult = void 0),
+        r !== "round_trip")
+      )
+        this.endWholeTurnHold(r);
+    }
+    (this.uploadHoldTally.released(e, o, h),
+      q("info", "cli_ccr_event_hold_release", {
+        lane: e,
+        reason: r,
+        ...(y !== void 0 && { released_by: y }),
+        held_events: o,
+        held_ms: h,
+      }));
+  }
+  async postTranscriptRows(e, r, o) {
+    let h =
+      this.transcriptPostsMayBeAborted && r.bytes < Ge
+        ? new AbortController()
+        : void 0;
+    this.abortableTranscriptPost = h && {
+      abort: h,
+      sentAtMs: performance.now(),
+    };
+    try {
+      return await this.request(
+        "post",
+        "/worker/internal-events",
+        this.uploadBody(e, r),
+        "internal events",
+        {
+          timeout: o,
+          uploadAttempt: r.attempt,
+          ...(h && { signal: h.signal }),
+        },
+      );
+    } finally {
+      this.abortableTranscriptPost = void 0;
+    }
+  }
+  letTranscriptPostsBeAborted() {
+    this.transcriptPostsMayBeAborted = !0;
+  }
+  abortUnansweredTranscriptPosts(e) {
+    let r = setInterval(this.abortTranscriptPostIfUnanswered.bind(this), tr, e);
+    return () => clearInterval(r);
+  }
+  abortTranscriptPostIfUnanswered(e) {
+    let r = this.abortableTranscriptPost;
+    if (
+      r !== void 0 &&
+      !r.abort.signal.aborted &&
+      performance.now() - r.sentAtMs >= e
+    )
+      (this.transcriptPostsAborted++,
+        this.internalEventUploader.cutBackoff(),
+        r.abort.abort());
+  }
+  uploadBody(e, r) {
+    let o = { worker_epoch: this.workerEpoch, events: e };
+    if (this.uploadHoldMarker())
+      o.upload_hold = {
+        held: r.held,
+        flush_reason: r.reason,
+        held_count: De(r.heldCount),
+        hold_age_ms: De(r.holdAgeMs),
+        inflight_retry_count: De(r.retryCount),
+        hold_rule: r.rule,
+        post_index: De(r.postIndex),
+        ...(this.flushPolicy?.policyVersion !== void 0 && {
+          policy_version: this.flushPolicy.policyVersion,
+        }),
+      };
+    return o;
+  }
+  retrySmaller(e, r, o, h, g = { bytes: o.bytes }) {
+    let y = {
+      count: r.length,
+      kib: Math.round(g.bytes / 1024),
+      retry_count: o.retryCount,
+      timeout_ms: h,
+    };
+    return (
+      t(
+        `CCRClient: ${e} POST of ${y.count} event(s), ${y.kib} KiB got no response (the connection failed, or no answer within ${h}ms) after ${y.retry_count} earlier failure(s); ${g.bytes >= Ge && o.cuttable ? "retrying it in smaller batches" : "retrying it"}`,
+        { level: "warn" },
+      ),
+      q(
+        "warn",
+        e === "client_events"
+          ? "cli_worker_events_no_response"
+          : "cli_worker_internal_events_no_response",
+        y,
+      ),
+      new ZSs(`${e} POST got no response`, Ge)
+    );
+  }
+  logUploadDrain(e, r) {
+    if (!this.uploadHoldMarker()) return;
+    f("ccr_upload_drain", {
+      lane: u(e),
+      trigger: u(r.trigger),
+      rule: u(r.rule),
+      held_events: r.heldEvents,
+      held_ms: r.heldMs,
+      posts: r.posts,
+      rows: r.rows,
+      max_rows_post: r.maxRowsPost,
+      failed_posts: r.failedPosts,
+      dropped_rows: r.droppedRows,
+      other_posts: r.otherPosts,
+      other_rows: r.otherRows,
+      drain_ms: r.drainMs,
+    });
+  }
+  logUndeliveredAtClose(e, r) {
+    if (e === "client_events") this.undeliveredClientEventsAtClose ??= r;
+    else this.undeliveredInternalEventsAtClose ??= r;
+    if (this.shutdownKeepsClientEvents)
+      t(`CCRClient: ${e} lane closed at shutdown, ${r} undelivered`, {
+        level: r > 0 ? "warn" : "info",
+      });
+    if (r <= 0) return;
+    if (this.noSubscriberUploadHoldMs > 0 && this.viewerAbsentReported)
+      l(
+        "ccr_no_subscriber_hold",
+        this.closingForSuccessor
+          ? "undelivered_at_rebuild"
+          : "undelivered_at_close",
+        { lane: u(e), undelivered_events: r },
+      );
+    if (this.servedPolicyHolds())
+      q("warn", "cli_ccr_event_hold_undelivered_at_close", {
+        lane: e,
+        undelivered_events: r,
+        for_successor: this.closingForSuccessor,
+      });
+  }
+  bufferEphemeral(e) {
+    if (this.openBlock && e.type === "stream_event" && !e.parent_tool_use_id)
+      this.openBlock.note(e);
+    let r =
+      this.messageCallInput !== void 0 &&
+      e.type === "stream_event" &&
+      !e.parent_tool_use_id &&
+      e.event.type === "content_block_delta" &&
+      e.event.delta.type === "input_json_delta" &&
+      this.messageCallInput.reachesPointWith(e.event.delta.partial_json);
+    if (
+      e.type === "stream_event" &&
+      e.event.type === "content_block_delta" &&
+      this.streamEventTimer &&
+      !this.streamEventTimerIsSlow &&
+      !this.firstContentFlushPending &&
+      !(this.dropUnwatchedStreamEvents && this.unwatchedPastGrace)
+    ) {
+      if (!e.parent_tool_use_id && e.event.delta.type === "input_json_delta")
+        this.noteToolInput(e.event.delta.partial_json);
+      if (
+        this.textEarlyUploadsUsed < this.textEarlyUploadsMs.length &&
+        this.streamEventBuffer.length === 0 &&
+        !e.parent_tool_use_id &&
+        e.event.delta.type === "text_delta"
+      )
+        this.scheduleTextEarlyUpload();
+      if (
+        this.textBlockOpen &&
+        this.textFirstDeltaAt === void 0 &&
+        !e.parent_tool_use_id &&
+        this.streamEventFirstFlushMs > 0
+      )
+        this.textFirstDeltaAt = Date.now();
+      if ((this.streamEventBuffer.push(e), r))
+        this.scheduleMessageWordsUpload();
+      return;
+    }
+    let o =
+        this.streamEventFirstFlushMs > 0 && e.type === "stream_event"
+          ? e.event.type
+          : void 0,
+      h = o === "content_block_start";
+    if (h) this.firstContentFlushPending = !0;
+    let g =
+        e.type === "stream_event" && !e.parent_tool_use_id ? e.event : void 0,
+      y = !1;
+    if (g?.type === "message_start") this.awaitingFirstBlock = !0;
+    else if (g?.type === "content_block_start")
+      ((y = this.awaitingFirstBlock && g.content_block.type === "thinking"),
+        (this.awaitingFirstBlock = !1));
+    if (g?.type === "content_block_start") {
+      let I =
+        g.content_block.type === "tool_use" ? g.content_block.name : void 0;
+      ((this.toolInputMayWait = I !== void 0 && $r.has(I)),
+        (this.toolInputChars = 0),
+        (this.writeInputHead = I === Ls ? "" : void 0),
+        (this.messageCallInput = Ue.of(I)),
+        (this.thinkingBlockOpen = g.content_block.type === "thinking"),
+        (this.textBlockOpen = g.content_block.type === "text"),
+        (this.textFirstDeltaAt = void 0),
+        (this.textEarlyUploadsUsed = 0),
+        this.cancelTextEarlyUpload());
+    } else if (
+      g?.type === "content_block_stop" ||
+      g?.type === "message_start"
+    ) {
+      if (
+        ((this.thinkingBlockOpen = !1),
+        (this.textBlockOpen = !1),
+        g.type === "message_start")
+      )
+        this.cancelTextEarlyUpload();
+    }
+    let R =
+        this.thinkingBlockOpen &&
+        this.thinkingFlushMs > this.streamEventFlushIntervalMs &&
+        this.streamEventFirstFlushMs > 0 &&
+        (e.type !== "stream_event" ||
+          (g?.type === "content_block_delta" &&
+            (g.delta.type === "signature_delta" ||
+              (g.delta.type === "thinking_delta" && g.delta.thinking === "")))),
+      k = this.toolInputChars >= lt,
+      U = !1;
+    if (
+      g?.type === "content_block_delta" &&
+      g.delta.type === "input_json_delta"
+    )
+      (this.noteToolInput(g.delta.partial_json),
+        (U = this.toolInputMayWait && this.toolInputFlushMs > 0));
+    if (this.dropUnwatchedStreamEvents && this.unwatchedPastGrace) {
+      if (e.type === "stream_event") {
+        if (
+          (this.streamEventsDroppedUnwatched++,
+          (this.lastStreamEventDropAtMs = performance.now()),
+          this.unheard)
+        )
+          (l("ccr_unheard_stream_events", "hole_behind"),
+            (this.unheard = void 0));
+      }
+      if (this.replyRestated) this.restatementOwed = !0;
+      return;
+    }
+    let P = this.streamEventBuffer.length === 0;
+    if ((this.streamEventBuffer.push(e), g?.type === "message_start"))
+      ((this.restatementOwed = !1), (this.replyRestated = !1));
+    let x = this.firstContentFlushPending && o === "content_block_delta";
+    if (x) this.firstContentFlushPending = !1;
+    let L =
+      this.textBlockOpen &&
+      this.textFirstDeltaAt === void 0 &&
+      o === "content_block_delta" &&
+      g !== void 0;
+    if (L) this.textFirstDeltaAt = Date.now();
+    if (
+      this.textEarlyUploadsUsed < this.textEarlyUploadsMs.length &&
+      P &&
+      !x &&
+      !L &&
+      g?.type === "content_block_delta" &&
+      g.delta.type === "text_delta"
+    )
+      this.scheduleTextEarlyUpload();
+    if (r && !x) this.scheduleMessageWordsUpload();
+    let A = h || (x && !U);
+    if (h || x) this.bufferHoldsFirstFrames = !0;
+    let G =
+        x &&
+        e.type === "stream_event" &&
+        e.event.type === "content_block_delta" &&
+        e.event.delta.type !== "input_json_delta",
+      z = this.thinkingStartGoesAtOnce && h && y;
+    if (
+      (G || z) &&
+      this.firstDeltaFlushTimer === null &&
+      !(
+        this.lastReportedHasSubscribers === !1 &&
+        (this.noSubscriberStreamEventFlushIntervalMs > 0 ||
+          this.noSubscriberUploadHoldMs > 0)
+      )
+    ) {
+      if (
+        ((this.firstDeltaFlushTimer = setTimeout(() => {
+          ((this.firstDeltaFlushTimer = null), this.flushStreamEventBuffer(!0));
+        }, 0)),
+        z && !this.loggedThinkingStartAtOnce)
+      )
+        ((this.loggedThinkingStartAtOnce = !0),
+          f("ccr_thinking_start_at_once"));
+    }
+    let H = this.streamEventTimerIsSlow && !U && !R;
+    if (this.streamEventTimer && !A && !H) return;
+    let J = (U && k) || (R && !A);
+    this.streamEventTimerIsSlow = J;
+    let se = Date.now(),
+      Y = Math.max(
+        U ? this.toolInputFlushMs : this.thinkingFlushMs,
+        this.streamEventFlushIntervalMs,
+      ),
+      oe = A
+        ? Math.min(
+            this.streamEventFirstFlushMs,
+            this.streamEventFlushIntervalMs,
+          )
+        : J
+          ? Math.min(
+              Math.max(
+                this.streamEventsTakenAt + Y - se,
+                this.streamEventFlushIntervalMs,
+              ),
+              Y,
+            )
+          : this.streamEventWindowRunsFromLastFlush
+            ? Math.min(
+                Math.max(
+                  this.streamEventsTakenAt +
+                    this.streamEventFlushIntervalMs -
+                    se,
+                  this.heldBunchFlushMs,
+                ),
+                this.streamEventFlushIntervalMs,
+              )
+            : this.streamEventFlushIntervalMs;
+    if (oe > this.streamEventFlushIntervalMs && U && !this.loggedToolInputFlush)
+      ((this.loggedToolInputFlush = !0), f("ccr_tool_input_flush"));
+    if (oe > this.streamEventFlushIntervalMs && R && !this.loggedThinkingFlush)
+      ((this.loggedThinkingFlush = !0), f("ccr_thinking_flush"));
+    let de =
+      this.lastReportedHasSubscribers === !1
+        ? Math.max(
+            this.noSubscriberStreamEventFlushIntervalMs,
+            this.noSubscriberUploadHoldMs,
+            oe,
+          )
+        : oe;
+    if (this.streamEventTimer) {
+      if (se + de >= this.streamEventFlushDueAt) return;
+      clearTimeout(this.streamEventTimer);
+    } else this.streamEventBufferedAt = se;
+    ((this.streamEventFlushDueAt = se + de),
+      (this.streamEventTimer = setTimeout(
+        () => void this.flushStreamEventBuffer(),
+        de,
+      )));
+  }
+  noteToolInput(e) {
+    if (((this.toolInputChars += e.length), this.writeInputHead === void 0))
+      return;
+    if (((this.writeInputHead += e), this.writeInputHead.length >= lt)) {
+      let r = jr.exec(this.writeInputHead.slice(0, lt))?.[1];
+      ((this.toolInputMayWait = r !== void 0 && !zr.test(r)),
+        (this.writeInputHead = void 0));
+    }
+  }
+  setHasSubscribers(e, r) {
+    this.hasSubscribersReports++;
+    let o =
+        typeof e === "boolean" && (e || !this.senderMayNotBeAttachedYet())
+          ? e
+          : void 0,
+      h = this.lastReportedHasSubscribers;
+    if (((this.lastReportedHasSubscribers = o), o === !0))
+      this.viewerReportedSinceLastFalse = !0;
+    else if (o === !1 && this.viewerReportedSinceLastFalse)
+      ((this.viewerReportedSinceLastFalse = !1),
+        (this.lastViewerLeftAtMs = Date.now()));
+    let g = this.unwatchedPastGrace;
+    if (
+      ((this.unwatchedPastGrace =
+        o === !1 && Date.now() - this.lastViewerLeftAtMs >= _i),
+      this.tellStreamEventDrop(),
+      this.dropUnwatchedStreamEvents && g !== this.unwatchedPastGrace)
+    )
+      t(
+        this.unwatchedPastGrace
+          ? "CCRClient: no subscribers reported; dropping stream deltas until one is"
+          : `CCRClient: resuming stream deltas (${o === !0 ? "watcher" : r})`,
+      );
+    if (h === !1 && o !== !1 && this.streamEventTimer)
+      this.flushStreamEventBuffer();
+    let y = o === !0 ? "watcher" : r;
+    if (o === !1) this.viewerAbsentReported = !0;
+    else if (this.viewerAbsentReported && y === "watcher") {
+      if (
+        ((this.viewerAbsentReported = !1), this.holdRule === "served_policy")
+      ) {
+        if (this.parkedRows.length > 0) this.flushStreamEventBuffer();
+        (this.releaseClientEvents("watcher"),
+          this.internalEventUploader.release("watcher"));
+      }
+    }
+    this.applyUploadHold(y);
+  }
+  async flushStreamEventBuffer(e = !1) {
+    let r = Pbi("uploads"),
+      o;
+    try {
+      let { events: h, release: g } = this.takeStreamEventBuffer(e);
+      if (h.length > 0) {
+        if (g) this.releaseTranscriptLane(g);
+        o = this.enqueueClientEvents(
+          h,
+          g ? { release: g } : { since: this.streamEventBufferedAt },
+        );
+      }
+    } finally {
+      Obi(r);
+    }
+    if (o) await o;
+  }
+  enqueueClientEvents(e, r) {
+    for (let o of this.trackedFrameUploads("enqueuedAtMs")) {
+      let h = e.find((R) => R.payload.uuid === o.uuid);
+      if (!h) continue;
+      let g = this.eventUploader.inFlightBatch(),
+        y;
+      if (r.release === void 0 && this.eventUploader.holdsOnArrival(h))
+        y = "hold";
+      else if (g !== void 0)
+        y = g.some((R) => !R.ephemeral) ? "durable_post" : "ephemeral_post";
+      else if (this.eventUploader.backlog().backingOff) y = "retry_backoff";
+      else y = "none";
+      ((o.timing.enqueuedAtMs = performance.now()),
+        (o.timing.queuedBehind = y));
+    }
+    return this.eventUploader.enqueue(e, r);
+  }
+  releaseClientEvents(e, r) {
+    this.eventUploader.release(e, r);
+  }
+  offerToEventsPost(e, r) {
+    if (
+      r.rule !== "served_policy" ||
+      this.closed ||
+      r.retryCount > 0 ||
+      this.flushPolicy?.eventBatchUpload !== !0 ||
+      this.ridesAreOff()
+    )
+      return;
+    let { promise: o, resolve: h } = Promise.withResolvers();
+    return (
+      (this.ridingRows = { rows: e, bytes: r.bytes, settle: h }),
+      queueMicrotask(() => {
+        if (this.ridingRows?.rows === e && !this.liveViewLaneSendsMore())
+          this.giveBackRidingRows();
+      }),
+      o
+    );
+  }
+  liveViewLaneSendsMore() {
+    let { unsent: e, backingOff: r } = this.eventUploader.backlog();
+    return (
+      !r &&
+      !this.eventUploader.waitsForMore() &&
+      e >
+        (this.eventUploader.inFlightBatch()?.length ?? 0) +
+          this.eventUploader.held().count
+    );
+  }
+  ridesAreOff() {
+    return this.ridesRefused || performance.now() < this.ridesPausedUntilMs;
+  }
+  noteRouteOnlyFailure(e) {
+    if (
+      (this.routeOnlyFailures++,
+      this.routeOnlyFailures < 2 && e !== 405 && e !== 501)
+    )
+      return;
+    let r = Math.min(zn * 2 ** this.ridePauses, Kn);
+    (this.ridePauses++,
+      (this.ridesPausedUntilMs = performance.now() + r),
+      q("warn", "cli_ccr_joint_upload_paused", { status: e, pause_ms: r }));
+  }
+  giveBackRidingRows() {
+    (this.ridingRows?.settle(!1), (this.ridingRows = void 0));
+  }
+  settlesTakenRiders(e) {
+    let r = () => {
+      (this.takenRiders?.settle(!1), (this.takenRiders = void 0));
+    };
+    return (o, h) => {
+      let g = e(o, h);
+      return (g.then(r, r), g);
+    };
+  }
+  cancelTextEarlyUpload() {
+    if (this.textEarlyUploadTimer)
+      (clearTimeout(this.textEarlyUploadTimer),
+        (this.textEarlyUploadTimer = null));
+  }
+  scheduleTextEarlyUpload() {
+    let e = this.textEarlyUploadsMs[this.textEarlyUploadsUsed];
+    if (
+      e === void 0 ||
+      !this.textBlockOpen ||
+      this.textFirstDeltaAt === void 0 ||
+      this.textEarlyUploadTimer !== null ||
+      this.streamEventFirstFlushMs <= 0 ||
+      this.streamEventWindowRunsFromLastFlush ||
+      this.lastReportedHasSubscribers === !1
+    )
+      return;
+    let r = Date.now(),
+      o = Math.max(this.textFirstDeltaAt + e - r, 0),
+      h = Math.min(
+        this.streamEventFirstFlushMs,
+        this.streamEventFlushIntervalMs,
+      );
+    if (
+      (this.streamEventTimer
+        ? this.streamEventFlushDueAt - r
+        : this.streamEventFlushIntervalMs) -
+        o <=
+      h
+    )
+      return;
+    if ((this.textEarlyUploadsUsed++, !this.loggedTextEarlyUpload))
+      ((this.loggedTextEarlyUpload = !0), f("ccr_text_early_upload"));
+    if (o === 0 && this.firstDeltaFlushTimer === null)
+      this.firstDeltaFlushTimer = setTimeout(() => {
+        ((this.firstDeltaFlushTimer = null), this.flushStreamEventBuffer(!0));
+      }, 0);
+    this.textEarlyUploadTimer = setTimeout(
+      () => {
+        if (
+          ((this.textEarlyUploadTimer = null),
+          this.lastReportedHasSubscribers !== !1 &&
+            !this.streamEventWindowRunsFromLastFlush &&
+            !this.bufferHoldsFirstFrames &&
+            this.streamEventBuffer.some(
+              (y) =>
+                y.type === "stream_event" &&
+                !y.parent_tool_use_id &&
+                y.event.type === "content_block_delta" &&
+                y.event.delta.type === "text_delta",
+            ))
+        )
+          this.flushStreamEventBuffer(!0);
+      },
+      o === 0 ? h : o,
+    );
+  }
+  scheduleMessageWordsUpload() {
+    let e = Math.min(
+        this.streamEventFirstFlushMs,
+        this.streamEventFlushIntervalMs,
+      ),
+      r = this.streamEventTimer
+        ? this.streamEventFlushDueAt - Date.now()
+        : this.streamEventFlushIntervalMs;
+    if (
+      !this.messageWordsGoFirst ||
+      e <= 0 ||
+      this.streamEventWindowRunsFromLastFlush ||
+      this.lastReportedHasSubscribers === !1 ||
+      this.firstDeltaFlushTimer !== null ||
+      r <= e
+    )
+      return;
+    if (!this.loggedMessageWordsFirst)
+      ((this.loggedMessageWordsFirst = !0), f("ccr_message_words_first"));
+    this.firstDeltaFlushTimer = setTimeout(() => {
+      ((this.firstDeltaFlushTimer = null), this.flushStreamEventBuffer(!0));
+    }, e);
+  }
+  actsOnSubscribersReports() {
+    return (
+      this.noSubscriberStreamEventFlushIntervalMs > 0 ||
+      this.noSubscriberUploadHoldMs > 0 ||
+      this.dropUnwatchedStreamEvents ||
+      this.servedPolicyHolds()
+    );
+  }
+  takeStreamEventBuffer(e = !1) {
+    if (!e) {
+      if (this.streamEventTimer) {
+        if (this.firstTextFrameUpload)
+          $t(
+            this.firstTextFrameUpload.timing,
+            Date.now() - this.streamEventFlushDueAt,
+          );
+        (clearTimeout(this.streamEventTimer), (this.streamEventTimer = null));
+      }
+      if (((this.streamEventTimerIsSlow = !1), this.firstDeltaFlushTimer))
+        (clearTimeout(this.firstDeltaFlushTimer),
+          (this.firstDeltaFlushTimer = null));
+    }
+    let r,
+      o = e ? [] : this.parkedRows;
+    for (let { message: x } of o) r ??= this.releaseFor(x);
+    if (this.streamEventBuffer.length === 0)
+      return {
+        events: e ? [] : this.takeParkedRows(),
+        release: r,
+        firstFrames: !1,
+      };
+    let h = [],
+      g,
+      y = 0;
+    for (let x of this.streamEventBuffer) {
+      if (x.type === "stream_event") {
+        h.push(x);
+        continue;
+      }
+      ((y =
+        (g !== void 0 &&
+        x.estimated_tokens - x.estimated_tokens_delta === g.estimated_tokens
+          ? y
+          : 0) + x.estimated_tokens_delta),
+        (g = x));
+    }
+    this.streamEventBuffer = [];
+    let R = this.bufferHoldsFirstFrames;
+    ((this.bufferHoldsFirstFrames = !1),
+      (this.streamEventsTakenAt = Date.now()));
+    for (let x of this.trackedFrameUploads("enqueuedAtMs"))
+      x.uuid = WIa(h, x.uuid);
+    let P = uqr(h)
+      .filter((x) => {
+        let L = Buffer.byteLength(_(x));
+        if (L <= dIt) return !0;
+        return (et(x, L), !1);
+      })
+      .map((x) => ({ payload: x, ephemeral: !0 }));
+    if (
+      this.restatementOwed &&
+      this.viewerCheckpointTimer === null &&
+      !(this.dropUnwatchedStreamEvents && this.unwatchedPastGrace) &&
+      Math.abs(Date.now() - this.lastRestatementAtMs) >= os
+    ) {
+      let x = this.openBlock?.restatement();
+      if (x) {
+        if (
+          (P.push({ payload: x, ephemeral: !0 }),
+          (this.restatementOwed = !1),
+          (this.replyRestated = !0),
+          (this.lastRestatementAtMs = Date.now()),
+          !this.loggedOpenBlockRestated)
+        )
+          ((this.loggedOpenBlockRestated = !0), f("ccr_open_block_restated"));
+      }
+    }
+    if (g) P.push(this.toClientEvent({ ...g, estimated_tokens_delta: y }));
+    if (!e) P.push(...this.takeParkedRows());
+    return { events: P, release: r, firstFrames: R };
+  }
+  currentUploadTrim() {
+    let e = this.uploadTrim();
+    return T(e) ? e : zt;
+  }
+  async writeInternalEvent(
+    e,
+    r,
+    {
+      isCompaction: o = !1,
+      agentId: h,
+      preservedEventIds: g,
+      behindMarker: y,
+    } = {},
+  ) {
+    if (y !== void 0 && this.closed)
+      throw Error("CCRClient: closed, so the marker is not queued");
+    if (y !== void 0 && (g?.length ?? 0) > o1e)
+      throw Error("CCRClient: the marker lists more rows than CCR keeps");
+    let R = g,
+      k = Lt(r);
+    if (R && R.length > o1e)
+      (a("tengu_ccr_preserved_event_ids_clamped", {
+        originalCount: R.length,
+        cap: o1e,
+        payloadClamped: k !== null,
+      }),
+        (R = R.slice(-o1e)));
+    let U = k ?? r;
+    if (this.currentUploadTrim().envelope === !0) {
+      let H = eJa(U, this.keepsRequestId);
+      if (H !== U && !this.loggedTranscriptEnvelopeStrip)
+        ((this.loggedTranscriptEnvelopeStrip = !0),
+          f("ccr_worker_envelope_strip"));
+      if (
+        !this.loggedRequestIdKept &&
+        Eos(H) &&
+        typeof H.requestId === "string" &&
+        this.keepsRequestId()
+      )
+        ((this.loggedRequestIdKept = !0),
+          f("ccr_worker_error_request_id_kept"));
+      U = H;
+    }
+    if (e === "transcript" && U.type === "user") {
+      let H = this.uploadedToolResult(
+        U.toolUseResult,
+        U.message,
+        U.isVirtual === !0,
+      );
+      if (H !== U.toolUseResult) U = { ...U, toolUseResult: H };
+    }
+    let x = [
+        {
+          payload: {
+            type: e,
+            ...U,
+            uuid: typeof U.uuid === "string" ? U.uuid : Ee(),
+          },
+          ...(o && { is_compaction: !0 }),
+          ...(h && { session_agent_id: h }),
+          ...(R?.length && { preserved_event_ids: R }),
+        },
+        ...(y ?? []).map((H) => ({
+          payload: { type: H.eventType, ...H.payload, uuid: Ee() },
+        })),
+      ],
+      L = h || "",
+      A = this.rowsAwaitingCompactSummary.get(L);
+    if (
+      e === "transcript" &&
+      (A !== void 0 || (o && this.rowsAwaitingCompactSummaryAtClose === void 0))
+    ) {
+      if (A === void 0)
+        ((A = { rows: [], timer: this.startCompactSummaryWaitTimer(L) }),
+          this.rowsAwaitingCompactSummary.set(L, A));
+      A.rows.push(...x);
+      let H =
+        U.isCompactSummary === !0
+          ? "summary"
+          : U.type === "user" || U.type === "assistant"
+            ? "user_or_assistant_row"
+            : y !== void 0
+              ? "no_summary_follows"
+              : A.rows.length >= ci
+                ? "row_cap"
+                : void 0;
+      if (H === void 0) return;
+      x = this.takeRowsAwaitingCompactSummary(L, H);
+    }
+    let G =
+        e === "transcript" &&
+        U.type === "user" &&
+        this.toolResultReleases(U.message),
+      z = this.gatesToolCalls && e === "transcript" && !h ? we(U) : [];
+    if (
+      (await this.queueInternalEvents(
+        x,
+        G
+          ? "tool_result"
+          : z.some((H) => this.awaitedToolCalls.has(H))
+            ? "tool_call"
+            : !this.transcriptRowMayWait(e, U, h)
+              ? "event"
+              : void 0,
+      ),
+      e === "transcript")
+    )
+      this.transcriptLaneInUse = !0;
+    this.noteToolCallRows("internal_events", z, "queued");
+  }
+  async queueInternalEvents(e, r) {
+    let o = e[0]?.is_compaction === !0 && this.holdRule !== void 0;
+    if (o) this.releaseClientEvents("event", "compaction");
+    let g = (
+        e[0]?.is_compaction === !0 && e[0].session_agent_id === void 0
+          ? (this.rowsRepeatedAfterCompaction?.() ?? [])
+          : []
+      ).map(({ eventType: R, payload: k }) => ({
+        payload: { type: R, ...k, uuid: Ee() },
+      })),
+      y = [...e, ...g];
+    (this.markInternalEventPostWatch((R) => R.noteQueued(y)),
+      await this.internalEventUploader.enqueue(y, {
+        together: !0,
+        release: o ? "event" : r,
+      }));
+  }
+  startCompactSummaryWaitTimer(e) {
+    let r = setTimeout(
+      (o, h) => {
+        let g = o.rowsAwaitingCompactSummary.get(h);
+        if (o.closed || g === void 0) return;
+        if (!o.internalEventUploader.hasRoomFor(1)) {
+          g.timer = o.startCompactSummaryWaitTimer(h);
+          return;
+        }
+        o.queueInternalEvents(
+          o.takeRowsAwaitingCompactSummary(h, "timeout"),
+          void 0,
+        ).catch(i);
+      },
+      hi,
+      this,
+      e,
+    );
+    return (r.unref?.(), r);
+  }
+  takeRowsAwaitingCompactSummary(e, r) {
+    let o = this.rowsAwaitingCompactSummary.get(e);
+    (this.rowsAwaitingCompactSummary.delete(e), clearTimeout(o?.timer));
+    let h = o?.rows ?? [];
+    if (r !== "summary" && r !== "close")
+      q("info", "cli_worker_compaction_marker_uploaded_without_summary", {
+        reason: r,
+        count: h.length,
+        subagent: e !== "",
+      });
+    return h;
+  }
+  transcriptRowMayWait(e, r, o) {
+    let h = this.flushPolicy;
+    if (this.holdRule !== "served_policy" || !h) return !0;
+    let g = e === "transcript" ? r.type : e;
+    if (typeof g !== "string" || h.mustFlushTypes.has(g)) return !1;
+    if (
+      g === "attachment" &&
+      !o &&
+      T(r.attachment) &&
+      r.attachment.type === "prompt_snapshot"
+    )
+      return this.internalEventUploader.hasHeld(
+        (y) =>
+          y.session_agent_id === void 0 &&
+          (y.payload.type === "assistant" ||
+            (y.payload.type === "user" &&
+              (y.payload.toolUseResult !== void 0 || Te(y.payload.message)))),
+      );
+    if (g === "user") {
+      if (h.holdAcrossModelCalls && this.turnHold === "open" && !o) return !1;
+      return (
+        r.toolUseResult !== void 0 ||
+        Te(r.message) ||
+        r.isMeta === !0 ||
+        r.isVirtual === !0 ||
+        r.isCompactSummary === !0
+      );
+    }
+    return !(g === "assistant" && h.flushOnAssistant);
+  }
+  flushInternalEvents(e) {
+    return this.internalEventUploader.flush(e);
+  }
+  eventsLaneSendCount() {
+    return this.eventsLaneSends;
+  }
+  watchInternalEventPosts() {
+    let e = new Xe(this.internalEventUploader.backlog().unsent);
+    return (
+      (this.internalEventPostWatch = e),
+      (r) => {
+        if (this.internalEventPostWatch === e)
+          this.internalEventPostWatch = void 0;
+        return e.seen(r);
+      }
+    );
+  }
+  markInternalEventPostWatch(e) {
+    let r = this.internalEventPostWatch;
+    if (r === void 0) return;
+    try {
+      e(r);
+    } catch (o) {
+      ((this.internalEventPostWatch = void 0), i(o));
+    }
+  }
+  hasUnsentUploads() {
+    let { unsentClientEvents: e, unsentInternalEvents: r } =
+      this.uploadBacklog();
+    return (
+      this.streamEventTimer !== null ||
+      e > 0 ||
+      r > 0 ||
+      this.deliveryUploader.backlog().unsent > 0 ||
+      this.workerState.unsent
+    );
+  }
+  uploadBacklog() {
+    let e = this.eventUploader.backlog(),
+      r = this.internalEventUploader.backlog(),
+      o = [e.inFlightMs, r.inFlightMs].filter((h) => h !== void 0);
+    return {
+      unsentClientEvents: e.unsent,
+      unsentInternalEvents: r.unsent + this.countRowsAwaitingCompactSummary(),
+      oldestInFlightMs: o.length ? Math.max(...o) : void 0,
+      backingOff: e.backingOff || r.backingOff,
+    };
+  }
+  async postInternalEventsBatch(e, r = {}) {
+    let o = this.refuseInternalEventsCall(!0);
+    if (o) return o;
+    let h = this.epochMismatchCount;
+    try {
+      let g = await this.request(
+        "post",
+        "/worker/internal-events",
+        { worker_epoch: this.workerEpoch, events: e },
+        "internal events batch",
+        { parseBody: !0, countTowardEscalation: !1, signal: r.signal },
+      );
+      if (g.ok) {
+        let y = Ar().safeParse(g.data);
+        return { ok: !0, results: y.success ? y.data.results : void 0 };
+      }
+      return this.internalEventsFailure(g, h);
+    } catch (g) {
+      return this.internalEventsFailure({ reason: `fetch_failed:${Be(g)}` }, h);
+    }
+  }
+  async getInternalEventsPage(e, r = {}) {
+    let o = this.refuseInternalEventsCall(!1);
+    if (o) return o;
+    let h = new URL(`${this.sessionBaseUrl}/worker/internal-events`);
+    if (e.limit !== void 0) h.searchParams.set("limit", String(e.limit));
+    if (e.agentId) h.searchParams.set("session_agent_id", e.agentId);
+    if (e.subagents) h.searchParams.set("subagents", "true");
+    if (e.cursor) h.searchParams.set("cursor", e.cursor);
+    else if (e.afterEventId)
+      h.searchParams.set("after_event_id", e.afterEventId);
+    let g = this.epochMismatchCount,
+      y;
+    try {
+      let R = this.getAuthHeaders();
+      if (Object.keys(R).length === 0)
+        return { ok: !1, reason: "no_auth_headers" };
+      y = Lo(r.signal, {
+        timeoutMs: 30000,
+        refTimer: !0,
+        timeoutError: r.signal === void 0,
+      });
+      let k = await fetch(h, {
+        headers: {
+          ...R,
+          "anthropic-version": "2023-06-01",
+          "anthropic-client-platform": c_(),
+          "User-Agent": Ri(),
+        },
+        signal: y.signal,
+        ...dl({ url: h.toString() }),
+      });
+      if (k.ok) {
+        let A;
+        try {
+          A = await k.json();
+        } catch (H) {
+          if (!(H instanceof SyntaxError)) throw H;
+        }
+        let G = Mr().safeParse(A);
+        if (!G.success)
+          return (
+            q("warn", "cli_worker_internal_events_page_foreign"),
+            { ok: !1, status: k.status, reason: "foreign_body" }
+          );
+        let z = Number(k.headers.get("content-length") ?? Number.NaN);
+        return {
+          ok: !0,
+          data: G.data.data.map(gs),
+          ...(G.data.next_cursor && { nextCursor: G.data.next_cursor }),
+          bytes: Number.isFinite(z) ? z : null,
+        };
+      }
+      let U, P, x, L;
+      if (k.status === 409) {
+        let A = await ct(k);
+        if (this.closed)
+          L = A ?? this.lastEpochMismatchCause ?? "epoch_conflict";
+        else
+          try {
+            this.handleEpochMismatch(A);
+          } catch (G) {
+            t(`CCRClient: onEpochMismatch threw during a page read: ${d(G)}`);
+          }
+      } else if (k.status === 404)
+        try {
+          let A = await k.json();
+          if (typeof A?.error?.type === "string") U = A.error.type;
+          if (typeof A?.error?.resource_type === "string")
+            P = A.error.resource_type;
+        } catch {}
+      else {
+        if (k.status === 429) {
+          let A = GWe(k.headers.get("retry-after"));
+          if (A !== void 0 && A >= 0) x = A;
+        }
+        k.body?.cancel();
+      }
+      return (
+        t(`CCRClient: internal events page returned ${k.status}`, {
+          level: "warn",
+        }),
+        q("warn", "cli_worker_request_failed", {
+          method: "get",
+          path: "/worker/internal-events",
+          status: k.status,
+        }),
+        this.internalEventsFailure(
+          { status: k.status, retryAfterMs: x, reason: `http_${k.status}` },
+          g,
+          { errorType: U, resourceType: P, closedConflict: L },
+        )
+      );
+    } catch (R) {
+      return (
+        t(`CCRClient: internal events page failed: ${d(R)}`, { level: "warn" }),
+        this.internalEventsFailure({ reason: `fetch_failed:${Be(R)}` }, g)
+      );
+    } finally {
+      y?.cleanup();
+    }
+  }
+  refuseInternalEventsCall(e) {
+    if (this.closed)
+      return {
+        ok: !1,
+        reason: "client_closed",
+        ...(this.lastEpochMismatchCause && {
+          conflict: this.lastEpochMismatchCause,
+        }),
+      };
+    if (e && this.workerEpoch <= 0)
+      return { ok: !1, reason: "not_initialized" };
+    return;
+  }
+  internalEventsFailure(
+    e,
+    r,
+    { errorType: o, resourceType: h, closedConflict: g } = {},
+  ) {
+    let y =
+        g ??
+        (this.epochMismatchCount > r
+          ? this.lastEpochMismatchCause
+          : e.status === 409
+            ? (this.lastEpochMismatchCause ?? "epoch_conflict")
+            : void 0),
+      R = e.status ?? (y && ur[y] ? 409 : void 0);
+    return {
+      ok: !1,
+      reason: R === 409 ? "http_409" : (e.reason ?? "unknown"),
+      ...(R !== void 0 && { status: R }),
+      ...(e.retryAfterMs !== void 0 && { retryAfterMs: e.retryAfterMs }),
+      ...(y && { conflict: y }),
+      ...(o && { errorType: o }),
+      ...(h && { resourceType: h }),
+    };
+  }
+  droppedInternalEventBatches = 0;
+  get droppedInternalBatches() {
+    return this.droppedInternalEventBatches;
+  }
+  refusedInternalEventUuids = new Set();
+  refusedInternalEvents(e) {
+    return e.filter((r) => this.refusedInternalEventUuids.has(r));
+  }
+  noteRefusedInternalEvents(e) {
+    for (let { payload: o, session_agent_id: h } of e)
+      if (h === void 0) this.refusedInternalEventUuids.add(o.uuid);
+    let r = this.refusedInternalEventUuids.size - Sr;
+    for (let o of this.refusedInternalEventUuids) {
+      if (r-- <= 0) break;
+      this.refusedInternalEventUuids.delete(o);
+    }
+  }
+  dropOrphanedHandedOffLines(e) {
+    let r = 0;
+    for (let o = 0; o < e.length;) {
+      let h = e[o],
+        { payload: g } = h;
+      if (
+        h.session_agent_id === void 0 &&
+        (g.handedOff === !0 || (g.type === "system" && g.subtype === br)) &&
+        !(g.type === "user" && !Te(g.message)) &&
+        typeof g.parentUuid === "string" &&
+        this.refusedInternalEventUuids.has(g.parentUuid)
+      ) {
+        (e.splice(o, 1), r++, this.noteRefusedInternalEvents([h]));
+        continue;
+      }
+      o++;
+    }
+    return r;
+  }
+  droppedDeliveryAckBatches = 0;
+  deliveryAcksWaitingForRoom = new Set();
+  async flushDeliveryAcksConfirmed() {
+    let e = this.droppedDeliveryAckBatches;
+    if (this.receiptsRide) await this.receiptsRide.promise;
+    return (
+      this.sendWaitingReceipts(),
+      await Promise.all(this.deliveryAcksWaitingForRoom),
+      await this.deliveryUploader.flush(),
+      this.droppedDeliveryAckBatches === e && !this.closed
+    );
+  }
+  flushDeliveryAcks(e) {
+    if (this.receiptsRide)
+      return this.receiptsRide.promise.then(() => this.flushDeliveryAcks(e));
+    return (this.sendWaitingReceipts(), this.deliveryUploader.flush(e));
+  }
+  async flush(e) {
+    if (this.waitingAnswers.length > 0) await this.writeEvents([]);
+    return (await this.flushStreamEventBuffer(), this.eventUploader.flush(e));
+  }
+  withdrawQueuedControlRequest(e) {
+    let r = (o) =>
+      !o.ephemeral &&
+      o.payload.type === "control_request" &&
+      o.payload.request_id === e;
+    return this.eventUploader.withdraw(r);
+  }
+  droppedDurableEventBatches = 0;
+  get droppedDurableBatches() {
+    return this.droppedDurableEventBatches;
+  }
+  takeUndeliveredClientEvents() {
+    return this.eventUploader.takeUndelivered().filter((e) => !e.ephemeral);
+  }
+  discardUndeliveredClientEvents() {
+    let e = this.eventUploader.peekUndelivered().filter((r) => !r.ephemeral);
+    return (this.eventUploader.discardUndelivered(), e);
+  }
+  adoptClientEvents(e) {
+    if (e.length === 0) return;
+    this.eventUploader.enqueue(e);
+  }
+  async flushWorkerState() {
+    return this.workerState.flush();
+  }
+  async permissionModeReportedWithMessageInHand(e) {
+    let r = this.droppedWorkerStatePatchCount,
+      o = AbortSignal.any([e, this.closeAbort.signal]);
+    if (this.inboundMessageUuids.size === 0 && !o.aborted) {
+      let { promise: g, resolve: y } = Promise.withResolvers();
+      (this.messageInHandWaiters.add(y),
+        o.addEventListener("abort", () => y(), { once: !0 }),
+        await g,
+        this.messageInHandWaiters.delete(y));
+    }
+    if (o.aborted) return !1;
+    return (
+      (await this.workerState.flushInternalKeyAndSendStatus(
+        "worker_permission_mode",
+      )) && this.droppedWorkerStatePatchCount === r
+    );
+  }
+  droppedWorkerStatePatchCount = 0;
+  droppedOwedMetadataPatchCount = 0;
+  get droppedWorkerStatePatches() {
+    return this.droppedWorkerStatePatchCount;
+  }
+  refusedSwitchedOffMcpServers = null;
+  switchedOffMcpServersRefusedAlone = 0;
+  requeueRefusedSwitchedOffMcpServersOnceIdle() {
+    if (
+      this.refusedSwitchedOffMcpServers === null ||
+      this.refusedSwitchedOffMcpServers.writesToWaitFor > 0
+    )
+      return;
+    setImmediate(
+      (e, r) => {
+        if (
+          e.refusedSwitchedOffMcpServers !== r ||
+          e.workerState.unsent ||
+          e.closed
+        )
+          return;
+        ((e.refusedSwitchedOffMcpServers = null),
+          e.workerState.requeueMetadata({
+            internal_metadata: { [qe]: r.value },
+          }));
+      },
+      this,
+      this.refusedSwitchedOffMcpServers,
+    );
+  }
+  async readInternalEvents(e, r, o) {
+    return Uj.readInternalEventsFrom(this.readSource, e, r, o);
+  }
+  async readInternalEventsForCatchUp(e, r, o) {
+    return Uj.paginatedGet(
+      this.readSource,
+      "/worker/internal-events",
+      { limit: "1000", ...(r && { after_event_id: r }) },
+      "internal_events",
+      { maxAttempts: Pe, signal: e },
+      o,
+    );
+  }
+  async readInternalEventsFromFirst(e, r) {
+    return Uj.paginatedGet(
+      this.readSource,
+      "/worker/internal-events",
+      { limit: "1000", from_first_event: "true" },
+      "internal_events",
+      { maxAttempts: Pe, signal: e },
+      r,
+    );
+  }
+  static readInternalEventsFrom(e, r, o, h) {
+    return Uj.paginatedGet(
+      e,
+      "/worker/internal-events",
+      { limit: "1000", ...(r && { after_event_id: r }) },
+      "internal_events",
+      { signal: o, maxAttempts: h?.maxAttempts },
+      h,
+    );
+  }
+  async readSubagentInternalEvents() {
+    return Uj.readSubagentInternalEventsFrom(this.readSource);
+  }
+  static readSubagentInternalEventsFrom(e) {
+    return Uj.paginatedGet(
+      e,
+      "/worker/internal-events",
+      { subagents: "true", limit: "1000" },
+      "subagent_events",
+    );
+  }
+  async readAgentInternalEvents(e, r, o, h, g = !1) {
+    return Uj.paginatedGet(
+      this.readSource,
+      "/worker/internal-events",
+      { session_agent_id: e, limit: "1000", ...(h && { after_event_id: h }) },
+      "agent_events",
+      { maxAttempts: Pe, signal: r },
+      o,
+      Boolean(h),
+      g,
+    );
+  }
+  async readAgentMetadataEvents(e, r) {
+    let h = wt() ? "essential-traffic-only" : this.providerWithheldReason();
+    if (h !== void 0)
+      return (
+        q("info", "cli_worker_request_withheld", {
+          method: "post",
+          path: "/worker/agent-metadata-events/batch-get",
+          reason: h,
+        }),
+        null
+      );
+    let g = [];
+    for (let y of _Ze(M(e), fr)) {
+      let R = this.readSource.getAuthHeaders();
+      if (Object.keys(R).length === 0) return null;
+      let k = await Uj.getWithRetry(
+        { ...this.readSource, onConflict: void 0 },
+        `${this.readSource.sessionBaseUrl}/worker/agent-metadata-events/batch-get`,
+        R,
+        "agent_metadata_events",
+        void 0,
+        (U) => {
+          q("warn", "cli_worker_request_failed", {
+            method: "post",
+            path: "/worker/agent-metadata-events/batch-get",
+            status: U,
+          });
+        },
+        {
+          signal: r,
+          postJson: _({ session_agent_ids: y }),
+          permanentStatuses: [403, 404, 501],
+          readBody: async (U) => {
+            let P;
+            try {
+              P = await U.json();
+            } catch (L) {
+              if (!(L instanceof SyntaxError)) throw L;
+            }
+            let x = Tr().safeParse(P);
+            if (!x.success)
+              return (
+                q("warn", "cli_worker_agent_metadata_events_foreign"),
+                null
+              );
+            return x.data.data ?? [];
+          },
+        },
+      );
+      if (k === null) return null;
+      g.push(...k);
+    }
+    return g;
+  }
+  static async paginatedGet(e, r, o, h, g = {}, y, R = !1, k = !1) {
+    let U = e.getAuthHeaders();
+    if (Object.keys(U).length === 0) return null;
+    let P = R ? { ...g, maxAttempts: 1 } : g,
+      x = [],
+      L = R ? void 0 : y?.maxBytesArrived,
+      A = y === void 0 || L === void 0 ? void 0 : new st(x, y),
+      G = 0,
+      z,
+      H = 0,
+      J = 0,
+      se = 0,
+      Y = 0,
+      oe = null;
+    for (;;) {
+      let de = new URL(`${e.sessionBaseUrl}${r}`);
+      for (let [D, Z] of Object.entries(o)) de.searchParams.set(D, Z);
+      if (G > 0) de.searchParams.set("limit", String(ss[G - 1]));
+      if (z)
+        (de.searchParams.set("cursor", z),
+          de.searchParams.delete("after_event_id"),
+          de.searchParams.delete("from_first_event"));
+      let I = !z && o.after_event_id !== void 0,
+        ie,
+        Q = await Uj.getWithRetry(
+          e,
+          de.toString(),
+          U,
+          h,
+          (D) => {
+            (H++, (oe ??= D.headers.get("content-encoding")));
+            let Z = D.headers.get("content-length");
+            if (Z !== null && Y !== null) Y += Number(Z);
+            else Y = null;
+          },
+          (D, Z) => {
+            if (!I) return;
+            if (D === 400) ie = "rejected";
+            else if (Z === "after_event_id_not_found") ie = "not-found";
+          },
+          y === void 0
+            ? { ...P, readBody: async (D) => vs(await D.json()) }
+            : {
+                ...P,
+                unencoded: !y.takesCompressedPages,
+                readBody: async (D) => {
+                  let Z = D.headers.get("content-encoding");
+                  if (!y.takesCompressedPages && Z !== null && Z !== "identity")
+                    return (await D.body?.cancel(), { encodedBody: !0 });
+                  let ne =
+                      L === void 0
+                        ? y.maxBytes - se
+                        : Math.min(y.maxBytes, L - se),
+                    ee = await vr(D, ne);
+                  if (ee === null) return ((se += ne), { pastLimit: "bytes" });
+                  let le = vs(
+                    y.parsePage ? await y.parsePage(ee.text) : te(ee.text),
+                  );
+                  return ((se += ee.bytes), le);
+                },
+              },
+        );
+      if (Q?.encodedBody)
+        return {
+          events: [],
+          stats: {
+            pageCount: H,
+            bytesReceived: Y,
+            contentEncoding: oe ?? "none",
+          },
+          encodedBody: !0,
+        };
+      if (!Q) {
+        if (ie) {
+          if (
+            (t(
+              `CCRClient: after_event_id ${ie === "rejected" ? "rejected by server (gate off)" : "not found (stale anchor)"} \u2014 ${k ? "read failed, no refetch" : "refetching without anchor"}`,
+              { level: "warn" },
+            ),
+            q(
+              "warn",
+              ie === "rejected"
+                ? "cli_worker_after_event_id_rejected"
+                : "cli_worker_after_event_id_not_found",
+              { context: h },
+            ),
+            k)
+          )
+            return null;
+          let { after_event_id: D, ...Z } = o,
+            ne = await Uj.paginatedGet(e, r, Z, h, g, y);
+          if (!ne) return null;
+          return { ...ne, anchorFallback: ie };
+        }
+        return null;
+      }
+      if (Q.pastLimit === "bytes" && L !== void 0 && se < L && G < ss.length) {
+        G++;
+        continue;
+      }
+      for (let D of Q.data ?? []) if (!rJa(D.payload)) x.push(D);
+      J += Math.max(1, Q.data?.length ?? 0);
+      let F =
+        y === void 0
+          ? void 0
+          : Q.pastLimit !== void 0
+            ? Q.pastLimit
+            : J > y.maxEvents || (G > 0 && H > _r)
+              ? "events"
+              : (Q.data ?? []).some((D) => !gr(D, y.maxTimestampChars))
+                ? "timestamp"
+                : A !== void 0 && se > y.maxBytes && !A.fit(1)
+                  ? "bytes"
+                  : void 0;
+      if ((R && Q.next_cursor) || F !== void 0) {
+        if (F !== void 0 && !k) y?.onPassed?.(F);
+        return {
+          events: [],
+          stats: {
+            pageCount: H,
+            bytesReceived: Y,
+            contentEncoding: oe ?? "none",
+          },
+          overBound: !0,
+          ...(F !== void 0 && { overBoundBy: F }),
+        };
+      }
+      if (((z = Q.next_cursor), !z)) break;
+    }
+    if (A?.hasReplaced()) A.fit(mr);
+    return (
+      t(
+        `CCRClient: Read ${x.length} internal events from ${r}${o.subagents ? " (subagents)" : ""}`,
+      ),
+      {
+        events: x.map(gs),
+        stats: {
+          pageCount: H,
+          bytesReceived: Y,
+          contentEncoding: oe ?? "none",
+          ...(y !== void 0 && { bytesDecoded: se }),
+        },
+      }
+    );
+  }
+  static getWithRetry(e, r, o, h, g, y, R = {}) {
+    return Uj.getWithRetryNow(e, r, o, h, g, y, R);
+  }
+  static async getWithRetryNow(
+    e,
+    r,
+    o,
+    h,
+    g,
+    y,
+    {
+      maxAttempts: R = hr,
+      signal: k,
+      readBody: U,
+      unencoded: P,
+      postJson: x,
+      permanentStatuses: L,
+    },
+  ) {
+    let A = 0;
+    for (let G = 1; G <= R; G++) {
+      if (k?.aborted) return null;
+      let z;
+      try {
+        if (
+          ((z = await uDe(
+            r,
+            {
+              ...(x !== void 0 && { method: "POST", body: x }),
+              headers: {
+                ...o,
+                ...(x !== void 0 && { "Content-Type": "application/json" }),
+                "anthropic-version": "2023-06-01",
+                "anthropic-client-platform": c_(),
+                "User-Agent": Ri(),
+                ...(P && { "Accept-Encoding": "identity" }),
+              },
+              ...(P && { decompress: !1 }),
+              signal: k
+                ? AbortSignal.any([AbortSignal.timeout(30000), k])
+                : AbortSignal.timeout(30000),
+              ...dl({ url: r }),
+            },
+            e.ownConnectionPool,
+            e.leavesPool,
+          )),
+          z.ok)
+        ) {
+          let J = U ? await U(z) : await z.json();
+          return (g?.(z), J);
+        }
+      } catch (J) {
+        if (k?.aborted) return null;
+        if (
+          (t(`CCRClient: GET ${r} failed (attempt ${G}/${R}): ${d(J)}`, {
+            level: "warn",
+          }),
+          J instanceof RangeError && ++A >= pr)
+        )
+          break;
+        if (G < R) {
+          let se = Math.min(500 * 2 ** (G - 1), 30000) + Math.random() * 500;
+          await K(se, k);
+        }
+        continue;
+      }
+      let H;
+      if (z.status === 404 && y)
+        try {
+          let J = await z.json();
+          if (typeof J?.error?.type === "string") H = J.error.type;
+        } catch {}
+      else if (z.status === 409) {
+        if (e.isClosed?.()) return (await $W(z), null);
+        let J = await ct(z);
+        if (e.isClosed?.()) return null;
+        if (J === void 0 && k?.aborted)
+          return (
+            t(
+              `CCRClient: GET ${r} returned 409 after its caller ended the read; its reason was not read, so the next request's 409 decides`,
+              { level: "warn" },
+            ),
+            null
+          );
+        return (e.onConflict?.(J), null);
+      } else await $W(z);
+      if (
+        me(z.status) ||
+        H === "after_event_id_not_found" ||
+        L?.includes(z.status) === !0
+      )
+        return (
+          t(
+            `CCRClient: GET ${r} returned ${z.status} \u2014 permanent, not retrying`,
+            { level: "warn" },
+          ),
+          y?.(z.status, H),
+          null
+        );
+      if (
+        (t(`CCRClient: GET ${r} returned ${z.status} (attempt ${G}/${R})`, {
+          level: "warn",
+        }),
+        G < R)
+      ) {
+        let J = Math.min(500 * 2 ** (G - 1), 30000) + Math.random() * 500;
+        await K(J, k);
+      }
+    }
+    return (
+      t("CCRClient: GET retries exhausted", { level: "error" }),
+      q("error", "cli_worker_get_retries_exhausted", { context: h }),
+      null
+    );
+  }
+  reportDelivery(e, r, o, h) {
+    if (
+      o !== void 0 &&
+      this.flushPolicy?.holdAcrossModelCalls &&
+      this.waitingAnswers.some(ws)
+    )
+      this.sendWaitingAnswers();
+    if (
+      !this.housekeepingRequestIds.has(e) &&
+      (r === "processing" || (r === "received" && !h?.controlTraffic))
+    )
+      ((this.turnTookInput = !0), (this.liveOnlyRequestingRow = void 0));
+    if (r === "received") {
+      this.lastInboundEventAtMs = Date.now();
+      let P =
+        h?.controlTraffic === !0 &&
+        this.flushPolicy?.controlTrafficKeepsHold === !0;
+      if (
+        (this.setHasSubscribers(void 0, P ? "reset" : "watcher"),
+        this.holdsAcrossModelCalls() && !P)
+      ) {
+        if (this.parkedRows.length > 0) this.flushStreamEventBuffer();
+        (this.internalEventUploader.release("event", "inbound_event"),
+          this.releaseClientEvents("event", "inbound_event"));
+      }
+      if (o !== void 0) {
+        ((this.holdsNoMoreThisTurn = !0), this.inboundMessageUuids.add(o));
+        for (let L of this.messageInHandWaiters) L();
+        let x = this.inboundMessageUuids.values().next().value;
+        if (this.inboundMessageUuids.size > Hr && x !== void 0)
+          this.inboundMessageUuids.delete(x);
+      }
+    }
+    let g = r !== "received" && this.inboundMessageUuids.delete(e);
+    if (r === "processing") {
+      if (this.closed) return;
+      if (g && this.receiptsMayRide()) this.messagesInProcessing.add(e);
+      let P = this.pendingProcessingAcks.push(e) === 1;
+      if (this.pickupTakesTick) return;
+      if (g && this.holdsAcrossModelCalls() && this.turnHold !== "open")
+        ((this.pickupTakesTick = !0),
+          this.endWholeTurnHold(),
+          this.ackPickupBehindWrittenRows().catch(i));
+      else if (P)
+        queueMicrotask(() => {
+          if (!this.pickupTakesTick)
+            this.sendProcessingAcks(this.pendingProcessingAcks);
+        });
+      return;
+    }
+    let y = r === "processed" ? this.unrunReasons.get(e) : void 0;
+    if (y !== void 0) {
+      (this.unrunReasons.delete(e),
+        this.takeWaitingReceipts((P) => P === e),
+        this.queueDeliveryAcks([
+          { eventId: e, status: "processed", unrun: y },
+        ]));
+      return;
+    }
+    let R = this.waitingReceipts.has(e),
+      k =
+        r === "processed" &&
+        this.messagesInProcessing.delete(e) &&
+        !this.closed &&
+        this.receiptsMayRide() &&
+        pt(e) !== null &&
+        (this.resultPostWaits !== void 0 || this.liveViewLaneSendsMore());
+    if (this.messagesInProcessing.size === 0) this.resultPostWaits?.();
+    let U =
+      (k ||
+        (r === "received" &&
+          (h?.settingsRequest ||
+            (o !== void 0 && this.flushPolicy?.messagesReceivedWaits)))) &&
+      !this.closed &&
+      this.followsServedPolicy
+        ? (this.flushPolicy?.settingsReceiptsMaxWaitMs ?? 0)
+        : 0;
+    if (!R && U <= 0) {
+      this.queueDeliveryAcks([
+        ...this.takeWaitingReceipts(He),
+        { eventId: e, status: r },
+      ]);
+      return;
+    }
+    if (!R || r === "processed") this.waitingReceipts.set(e, r);
+    if (k) this.receiptsRide ??= Promise.withResolvers();
+    this.waitingReceiptsTimer ??= setTimeout(
+      () => this.sendWaitingReceipts(),
+      U,
+    );
+  }
+  noteUnrun(e, r) {
+    this.unrunReasons.set(e, r);
+  }
+  receiptsMayRide() {
+    return (
+      this.flushPolicy?.receiptsRideUploads === !0 &&
+      this.flushPolicy.settingsReceiptsMaxWaitMs > 0 &&
+      !this.receiptsRideRefused &&
+      this.followsServedPolicy
+    );
+  }
+  takeWaitingReceipts(e = () => !0) {
+    let r = [...this.waitingReceipts]
+      .filter(([o, h]) => e(o, h))
+      .map(([o, h]) => ({ eventId: o, status: h }));
+    for (let { eventId: o } of r) this.waitingReceipts.delete(o);
+    if (this.waitingReceipts.size === 0)
+      (clearTimeout(this.waitingReceiptsTimer),
+        (this.waitingReceiptsTimer = void 0));
+    if (![...this.waitingReceipts.values()].includes("processed"))
+      (this.receiptsRide?.resolve(), (this.receiptsRide = void 0));
+    return r;
+  }
+  sendWaitingReceipts(e) {
+    this.queueDeliveryAcks(this.takeWaitingReceipts(e));
+  }
+  queueDeliveryAcks(e) {
+    let r = !this.deliveryUploader.hasRoomFor(e.length),
+      o = this.deliveryUploader.enqueue(e);
+    if (r)
+      (this.deliveryAcksWaitingForRoom.add(o),
+        o.finally(() => this.deliveryAcksWaitingForRoom.delete(o)));
+  }
+  async sendProcessingAcks(e) {
+    let r = e.splice(0);
+    if (this.closed || r.length === 0) return;
+    let o = this.takeWaitingReceipts(He);
+    if (
+      (
+        await this.request(
+          "post",
+          "/worker/events/delivery",
+          {
+            worker_epoch: this.workerEpoch,
+            updates: [
+              ...r.map((g) => ({ event_id: g, status: "processing" })),
+              ...o.map((g) => ({ event_id: g.eventId, status: g.status })),
+            ],
+          },
+          "processing ack",
+        )
+      ).ok
+    )
+      this.takeWaitingReceipts((g, y) => y === "received" && r.includes(g));
+    else this.queueDeliveryAcks(o);
+  }
+  async ackPickupBehindWrittenRows() {
+    this.sendWaitingAnswers();
+    let e = this.pickupBarriers.at(-1)?.opened.promise,
+      r = { opened: Promise.withResolvers(), writes: [], eventIds: [] };
+    this.pickupBarriers.push(r);
+    let o;
+    try {
+      if (
+        (await Promise.resolve(),
+        (r.eventIds = this.pendingProcessingAcks.splice(0)),
+        (this.pickupTakesTick = !1),
+        await e,
+        this.pickupBarriers.includes(r))
+      )
+        o = await he(
+          this.storeWrittenRowsThenAck(r.eventIds),
+          this.pickupWaitMs,
+        );
+      else ((o = !0), await this.sendProcessingAcks(r.eventIds));
+    } finally {
+      let h = this.pickupBarriers.indexOf(r);
+      this.openPickupBarriers(h < 0 || o ? h + 1 : this.pickupBarriers.length);
+    }
+  }
+  async storeWrittenRowsThenAck(e) {
+    return (
+      this.internalEventUploader.release("event", "pickup"),
+      await this.flush(),
+      await this.sendProcessingAcks(e),
+      !0
+    );
+  }
+  openPickupBarriers(e) {
+    for (let r of this.pickupBarriers.splice(0, e)) {
+      this.sendProcessingAcks(r.eventIds).catch(i);
+      for (let { messages: o, opts: h, written: g } of r.writes)
+        this.writeEventsNow(o, h).then(g.resolve, g.reject);
+      r.opened.resolve();
+    }
+  }
+  getWorkerEpoch() {
+    return this.workerEpoch;
+  }
+  get internalEventsPending() {
+    return (
+      this.internalEventUploader.pendingCount +
+      this.countRowsAwaitingCompactSummary() +
+      (this.rowsAwaitingCompactSummaryAtClose ?? 0)
+    );
+  }
+  uploadHoldInAll() {
+    let e = this.flushPolicy;
+    return e !== void 0 && this.servedPolicyHolds()
+      ? {
+          holdsAcrossModelCalls: e.holdAcrossModelCalls,
+          maxAgeMs: e.maxAgeMs,
+          maxEvents: e.maxEvents,
+          counts: this.uploadHoldTally.counts,
+        }
+      : void 0;
+  }
+  uploadLaneCounts() {
+    return {
+      clientEventsPending: this.eventUploader.pendingCount,
+      droppedDurableBatches: this.droppedDurableEventBatches,
+      undeliveredClientEventsAtClose: this.undeliveredClientEventsAtClose,
+      undeliveredInternalEventsAtClose: this.undeliveredInternalEventsAtClose,
+      clientEventsAfterClose: this.eventUploader.handedOverAfterCloseCount,
+      internalEventsAfterClose:
+        this.internalEventUploader.handedOverAfterCloseCount,
+      transcriptPostsAborted: this.transcriptPostsAborted,
+    };
+  }
+  countRowsAwaitingCompactSummary() {
+    let e = 0;
+    for (let r of this.rowsAwaitingCompactSummary.values()) e += r.rows.length;
+    return e;
+  }
+  get awaitsCompactSummary() {
+    return this.rowsAwaitingCompactSummary.has("");
+  }
+  hasInternalEventRoom(e) {
+    return (
+      !this.awaitsCompactSummary && this.internalEventUploader.hasRoomFor(e)
+    );
+  }
+  close(e) {
+    if (
+      (this.closeExceptInternalEvents(e),
+      this.refusedSwitchedOffMcpServers !== null)
+    )
+      (q("warn", "cli_worker_switched_off_mcp_servers_not_saved", {
+        times_refused_alone: this.switchedOffMcpServersRefusedAlone,
+        accepted_writes_until_due:
+          this.refusedSwitchedOffMcpServers.writesToWaitFor,
+      }),
+        (this.refusedSwitchedOffMcpServers = null));
+    let r = this.countRowsAwaitingCompactSummary();
+    for (let o of this.rowsAwaitingCompactSummary.keys())
+      this.takeRowsAwaitingCompactSummary(o, "close");
+    ((this.rowsAwaitingCompactSummaryAtClose ??= r),
+      this.logUndeliveredAtClose(
+        "internal_events",
+        this.internalEventUploader.close() + r,
+      ));
+  }
+  flushGoodbye() {
+    return this.goodbyeFlushed;
+  }
+  closeExceptInternalEvents(e) {
+    (this.sendWaitingAnswers(),
+      this.openPickupBarriers(this.pickupBarriers.length));
+    let r = this.closed;
+    if (
+      ((this.closed = !0),
+      this.tellStreamEventDrop(),
+      this.giveBackRidingRows(),
+      this.workerSocket?.usePostFromNowOn(),
+      this.closeAbort.abort(),
+      (this.closingForSuccessor = e?.retainUndeliveredClientEvents === !0),
+      e?.keepClientEvents === !0)
+    )
+      this.flushStreamEventBuffer().catch(i);
+    let o = this.takeParkedRows();
+    if (o.length > 0) this.eventUploader.enqueue(o);
+    if (e?.keepWaitingWorkerMetadata === !0)
+      this.workerState.closeToNewPatches();
+    else this.workerState.close();
+    if (!r && e?.goodbye !== !1) this.sendGoodbye();
+    if (
+      (this.stopHeartbeat(),
+      this.clearProbeBeatTimer(),
+      this.viewerCheckpointTimer)
+    )
+      (clearTimeout(this.viewerCheckpointTimer),
+        (this.viewerCheckpointTimer = null));
+    (this.unsubscribeIdleTracker?.(),
+      (this.heartbeatGap = void 0),
+      Bfl(),
+      this.stopWorkStartKeepAlive?.(),
+      this.stopToolCallGate?.());
+    for (let h of this.toolCallRowWaiters.values())
+      for (let g of h) g.reached();
+    if ((this.toolCallRowWaiters.clear(), this.streamEventTimer))
+      (clearTimeout(this.streamEventTimer), (this.streamEventTimer = null));
+    if (this.firstDeltaFlushTimer)
+      (clearTimeout(this.firstDeltaFlushTimer),
+        (this.firstDeltaFlushTimer = null));
+    if (
+      (this.cancelTextEarlyUpload(),
+      (this.streamEventBuffer = []),
+      (this.pendingProcessingAcks = []),
+      this.receiptsRide)
+    )
+      this.sendWaitingReceipts(He);
+    if ((clearTimeout(this.waitingReceiptsTimer), e?.keepClientEvents !== !0))
+      this.logUndeliveredAtClose(
+        "client_events",
+        this.eventUploader.close({
+          retainUndelivered: e?.retainUndeliveredClientEvents === !0,
+        }),
+      );
+    this.deliveryUploader.close();
+  }
+  registerShutdownCleanup(
+    e = { registerCleanup: Rt, registerPreExitFlush: SC },
+    r = ms,
+  ) {
+    (e.registerCleanup(() => this.beginShutdown()),
+      e.registerPreExitFlush(() => this.finishShutdown(r)));
+  }
+  beginShutdown() {
+    ((this.shutdownBeganAtMs = performance.now()),
+      (this.owedMetadataDropsAtShutdown = this.droppedOwedMetadataPatchCount),
+      this.sendWaitingReceipts());
+    try {
+      let e =
+        !this.closed &&
+        this.currentState === "running" &&
+        this.followsServedPolicy;
+      if (
+        ((this.shutdownKeepsClientEvents =
+          e || (!this.closed && this.servedPolicyHolds())),
+        this.shutdownKeepsClientEvents)
+      )
+        ((this.shutdownReleased = !0), this.applyUploadHold("shutdown"));
+    } finally {
+      this.closeExceptInternalEvents({
+        keepClientEvents: this.shutdownKeepsClientEvents,
+        keepWaitingWorkerMetadata: !0,
+      });
+    }
+  }
+  async finishShutdown(e = ms, r = 1 / 0) {
+    let o = performance.now();
+    await this.flushGoodbye();
+    let h = Math.max(0, r - (performance.now() - o)),
+      g = this.workerState.owesMetadata;
+    try {
+      await he(
+        Promise.allSettled([
+          this.flushEventLanesAtShutdown(Math.min(e, h)),
+          g
+            ? he(
+                this.flushWorkerState().then(() =>
+                  this.flushEventLanesAtShutdown(e),
+                ),
+                Math.max(
+                  0,
+                  Math.min(e - (performance.now() - this.shutdownBeganAtMs), h),
+                ),
+              )
+            : void 0,
+        ]),
+        e,
+      );
+    } finally {
+      let y =
+        this.droppedOwedMetadataPatchCount > this.owedMetadataDropsAtShutdown;
+      if (g || this.workerState.hasCutKeptMetadata || y)
+        q("info", "cli_worker_metadata_at_shutdown", {
+          outcome: this.workerState.owesMetadata
+            ? "timed_out"
+            : this.workerState.hasCutKeptMetadata
+              ? "cut"
+              : y
+                ? "refused"
+                : "drained",
+        });
+      (this.close(),
+        this.onInternalEventLaneClosed?.(),
+        await Ult().catch(() => {}));
+    }
+  }
+  flushEventLanesAtShutdown(e) {
+    return Promise.allSettled([
+      this.flushInternalEvents(),
+      this.shutdownKeepsClientEvents ? he(this.flush(), e) : void 0,
+    ]);
+  }
+}
+var ms = 3000;
+function Ei(e) {
+  let r = e.post_turn_summary;
+  if (!ki(r) || r.status_category !== "blocked") return e;
+  return { ...e, post_turn_summary: { ...r, status_category: "need_input" } };
+}
+function ki(e) {
+  return (
+    e !== null &&
+    typeof e === "object" &&
+    "status_category" in e &&
+    typeof e.status_category === "string"
+  );
+}
+async function ct(e) {
+  let r = ht(e.headers.get("x-ccr-conflict-reason"));
+  if (r !== void 0) return (await $W(e), r);
+  try {
+    let o = await e.json();
+    return ht(o?.error?.reason ?? o?.reason) ?? ht(o?.error?.type);
+  } catch {}
+  return;
+}
+function ht(e) {
+  switch (e) {
+    case "superseded_by_worker":
+    case "epoch_stale":
+    case "session_not_active":
+    case "organization_moved_away":
+      return e;
+    default:
+      return;
+  }
+}
+function Mi(e) {
+  let r = xr().safeParse(e);
+  if (!r.success) return;
+  let o = r.data,
+    h = o.hold_across_model_calls === !0,
+    g = _e(o.max_age_ms, h ? Oe : Fs),
+    y = g > 0 ? _e(o.max_events, h ? Ur : Fr) : 0,
+    R = _e(o.max_bytes, Gr),
+    k = h ? 0 : _e(o.transcript_max_age_ms, Ws),
+    U = k > g ? k : 0,
+    P = _e(o.no_turn_max_age_ms, g),
+    x = o.policy_version ?? void 0;
+  return {
+    maxEvents: y,
+    maxAgeMs: g,
+    maxBytes: R > 0 ? R : void 0,
+    flushOnSamplingEnd: o.flush_on_sampling_end === !0 && !h,
+    flushOnAssistant: o.flush_on_assistant === !0,
+    eventBatchUpload: o.event_batch_upload === !0,
+    holdAcrossModelCalls: h,
+    holdAgain:
+      h && o.hold_again
+        ? {
+            softAgeMs: _e(o.hold_again.soft_age_ms, g),
+            softEvents: _e(o.hold_again.soft_events, y),
+            after: new Set((o.hold_again.after ?? []).slice(0, as)),
+            neverAfterTools: new Set(
+              (o.hold_again.never_after_tools ?? []).slice(0, Ne),
+            ),
+            toolsWhoseResultsWait: o.hold_again.tools_whose_results_wait
+              ? new Set(o.hold_again.tools_whose_results_wait.slice(0, Ne))
+              : void 0,
+            resultsGoBesideRunningCalls:
+              o.hold_again.results_go_beside_running_calls === !0 &&
+              o.live_twin_types?.includes("system/status") === !0,
+            laterWorkerHoldsFirstTurn:
+              o.hold_again.later_worker_holds_first_turn === !0 &&
+              o.live_twin_types?.includes("system/status") === !0,
+          }
+        : void 0,
+    mayWaitTypes: new Set((o.may_wait_types ?? []).filter((L) => ls.has(L))),
+    mayWaitTypesRefused: B(o.may_wait_types ?? [], (L) => !ls.has(L)),
+    settingsReceiptsMaxWaitMs: _e(o.settings_receipts_max_wait_ms, Xr),
+    messagesReceivedWaits: o.messages_received_waits === !0,
+    receiptsRideUploads: o.receipts_ride_uploads === !0,
+    flushBeforeToolsWaitMs: _e(o.flush_before_tools_wait_ms, ai),
+    flushAfterTools: di.find((L) => L === o.flush_after_tools) ?? "none",
+    flushAfterToolNames: new Set((o.flush_after_tool_names ?? []).slice(0, Ne)),
+    flushOnCallOfToolNames: new Set(
+      (o.flush_on_call_of_tool_names ?? []).slice(0, Ne),
+    ),
+    mustFlushTypes: new Set((o.must_flush_types ?? []).slice(0, as)),
+    liveTwinTypes: new Set(
+      (o.live_twin_types ?? [])
+        .filter((L) => !L.startsWith("control_"))
+        .slice(0, ei),
+    ),
+    liveOnlyTypes: new Set((o.live_only_types ?? []).filter((L) => Zr.has(L))),
+    transcriptMaxAgeMs: U,
+    noTurnMaxAgeMs: P < g ? P : 0,
+    mergeWorkerReports: o.merge_worker_reports === !0,
+    controlTrafficKeepsHold: h && o.control_traffic_keeps_hold === !0,
+    emptyCheckpointKeepsHold: h && o.empty_checkpoint_keeps_hold === !0,
+    firstTurnHoldsEachCall: h && o.first_turn_holds_each_call === !0,
+    settingsAnswersMaxWaitMs: _e(o.settings_answers_max_wait_ms, Zt),
+    initMaxWaitMs: _e(o.init_max_wait_ms, Zt),
+    metadataWaitsForStatus: new Set(
+      (o.metadata_waits_for_status ?? []).filter((L) => si.has(L)),
+    ),
+    metadataNeverSent: new Set(
+      (o.metadata_never_sent ?? []).filter((L) => ti.has(L)),
+    ),
+    metadataMaxWaitMs: _e(o.metadata_max_wait_ms, Oe),
+    costReportMaxWaitMs: _e(o.cost_report_max_wait_ms, ni),
+    policyVersion: x !== void 0 && oi.test(x) ? x : void 0,
+  };
+}
+function vs(e) {
+  if (!T(e) || !Array.isArray(e.data) || !e.data.every(T))
+    throw Error("CCRClient: a page is no list of events");
+  return e;
+}
+function gs(e) {
+  let r = Kcr(e.payload);
+  return r === e.payload ? e : { ...e, payload: r };
+}
+function Ti(e) {
+  return (
+    "user_message_uuids" in e &&
+    Array.isArray(e.user_message_uuids) &&
+    e.user_message_uuids.length > 0 &&
+    e.user_message_uuids.every((r) => typeof r === "string")
+  );
+}
+function ws(e) {
+  return (
+    e.type === "system" &&
+    "subtype" in e &&
+    e.subtype === "init" &&
+    !("parent_tool_use_id" in e && e.parent_tool_use_id)
+  );
+}
+var Ai = new Set(["assistant", "attachment", "result", "system", "user"]);
+function ys(e) {
+  let r = e.length === 1 ? e[0].payload : void 0;
+  return (
+    r && {
+      row_type: Ai.has(r.type) ? r.type : "other",
+      row_has_tool_result: Te(r.message),
+      row_bytes: Buffer.byteLength(_(r)),
+    }
+  );
+}
+function Se(e) {
+  if (
+    e.type === "system" &&
+    e.subtype === "task_started" &&
+    e.task_type === "local_bash" &&
+    e.is_backgrounded === !1 &&
+    !("owned_by_subagent" in e && e.owned_by_subagent)
+  )
+    return "system/task_started_foreground_shell";
+  if (e.type === "rate_limit_event") {
+    let r = e.rate_limit_info;
+    if (!T(r) || typeof r.status !== "string") return e.type;
+    let o =
+      r.rateLimitGraceActive === !0
+        ? "_grace"
+        : r.overageInUse === !0 || r.isUsingOverage === !0
+          ? "_overage"
+          : "";
+    return `${e.type}/${r.status}${o}`;
+  }
+  return "subtype" in e && typeof e.subtype === "string"
+    ? `${e.type}/${e.subtype}`
+    : e.type;
+}
+function Te(e) {
+  let r = T(e) ? e.content : void 0;
+  return Array.isArray(r) && r.some((o) => T(o) && o.type === "tool_result");
+}
+var Ci = new Set(["ReadNotifications"]);
+function we(e, r) {
+  return T(e) && e.type === "assistant" && e.parent_tool_use_id == null
+    ? je(e.message, "tool_use", "id", r)
+    : [];
+}
+function je(e, r, o, h) {
+  let g = T(e) ? e.content : void 0;
+  if (!Array.isArray(g)) return [];
+  let y = [];
+  for (let R of g)
+    if (
+      T(R) &&
+      R.type === r &&
+      (h === void 0 || (typeof R.name === "string" && h.has(R.name)))
+    ) {
+      let k = R[o];
+      if (typeof k === "string") y.push(k);
+    }
+  return y;
+}
+function ft(e) {
+  return new Promise((r) => {
+    if (e.aborted) r();
+    else e.addEventListener("abort", () => r(), { once: !0 });
+  });
+}
+function be(e) {
+  if (e.size > ui) {
+    let r = e.keys().next().value;
+    if (r !== void 0) e.delete(r);
+  }
+}
+function _e(e, r) {
+  return typeof e === "number" && Number.isFinite(e)
+    ? Math.min(Math.max(0, Math.trunc(e)), r)
+    : 0;
+}
+function Pi(e, r) {
+  if (!e || !r) return e === r;
+  return (
+    e.maxEvents === r.maxEvents &&
+    e.maxAgeMs === r.maxAgeMs &&
+    e.maxBytes === r.maxBytes &&
+    e.flushOnSamplingEnd === r.flushOnSamplingEnd &&
+    e.flushOnAssistant === r.flushOnAssistant &&
+    e.eventBatchUpload === r.eventBatchUpload &&
+    e.holdAcrossModelCalls === r.holdAcrossModelCalls &&
+    e.holdAgain?.softAgeMs === r.holdAgain?.softAgeMs &&
+    e.holdAgain?.softEvents === r.holdAgain?.softEvents &&
+    Vme(e.holdAgain?.after, r.holdAgain?.after) &&
+    Vme(e.holdAgain?.neverAfterTools, r.holdAgain?.neverAfterTools) &&
+    Vme(
+      e.holdAgain?.toolsWhoseResultsWait,
+      r.holdAgain?.toolsWhoseResultsWait,
+    ) &&
+    e.holdAgain?.resultsGoBesideRunningCalls ===
+      r.holdAgain?.resultsGoBesideRunningCalls &&
+    e.holdAgain?.laterWorkerHoldsFirstTurn ===
+      r.holdAgain?.laterWorkerHoldsFirstTurn &&
+    Vme(e.mayWaitTypes, r.mayWaitTypes) &&
+    Vme(e.liveOnlyTypes, r.liveOnlyTypes) &&
+    Vme(e.flushAfterToolNames, r.flushAfterToolNames) &&
+    Vme(e.flushOnCallOfToolNames, r.flushOnCallOfToolNames) &&
+    e.settingsReceiptsMaxWaitMs === r.settingsReceiptsMaxWaitMs &&
+    e.messagesReceivedWaits === r.messagesReceivedWaits &&
+    e.receiptsRideUploads === r.receiptsRideUploads &&
+    e.flushBeforeToolsWaitMs === r.flushBeforeToolsWaitMs &&
+    e.flushAfterTools === r.flushAfterTools &&
+    e.mergeWorkerReports === r.mergeWorkerReports &&
+    e.transcriptMaxAgeMs === r.transcriptMaxAgeMs &&
+    e.noTurnMaxAgeMs === r.noTurnMaxAgeMs &&
+    e.controlTrafficKeepsHold === r.controlTrafficKeepsHold &&
+    e.emptyCheckpointKeepsHold === r.emptyCheckpointKeepsHold &&
+    e.firstTurnHoldsEachCall === r.firstTurnHoldsEachCall &&
+    e.settingsAnswersMaxWaitMs === r.settingsAnswersMaxWaitMs &&
+    e.initMaxWaitMs === r.initMaxWaitMs &&
+    e.policyVersion === r.policyVersion &&
+    e.mustFlushTypes.size === r.mustFlushTypes.size &&
+    [...e.mustFlushTypes].every((o) => r.mustFlushTypes.has(o)) &&
+    e.liveTwinTypes.size === r.liveTwinTypes.size &&
+    [...e.liveTwinTypes].every((o) => r.liveTwinTypes.has(o)) &&
+    e.metadataMaxWaitMs === r.metadataMaxWaitMs &&
+    e.costReportMaxWaitMs === r.costReportMaxWaitMs &&
+    e.metadataWaitsForStatus.size === r.metadataWaitsForStatus.size &&
+    [...e.metadataWaitsForStatus].every((o) =>
+      r.metadataWaitsForStatus.has(o),
+    ) &&
+    Vme(e.metadataNeverSent, r.metadataNeverSent)
+  );
+}
+function ye(e, r, o) {
+  let h = typeof r === "string" ? Number(r) : r;
+  if (typeof h === "number" && Number.isFinite(h))
+    return Math.min(Math.max(h, 0), 60000);
+  if (r !== void 0)
+    t(`CCRClient: non-finite ${e} (${typeof r}) \u2014 using ${o}ms`, {
+      level: "warn",
+    });
+  return o;
+}
+function Oi(e) {
+  return Math.min(ye("thinkingFlushMs", e, 0), Kr);
+}
+function Ii(e) {
+  return Math.min(ye("toolInputFlushMs", e, 0), Vr);
+}
+function xi(e) {
+  return Math.min(ye("liveTwinWaitMs", e, 0), Yr);
+}
+var Ss = 2,
+  _t = Object.freeze([]);
+function Fi(e) {
+  if (e === void 0 || e === null) return _t;
+  let r = Array.isArray(e) ? e : void 0;
+  if (r === void 0 || r.length > Ss)
+    return (
+      t(
+        `CCRClient: textEarlyUploadsMs must be a list of at most ${Ss} times in ms, such as [100, 300], but it is ${r === void 0 ? `of type ${typeof e}` : `a list of ${r.length}`}; early text uploads are off`,
+        { level: "warn" },
+      ),
+      _t
+    );
+  let o = [];
+  for (let h of r) {
+    let g = typeof h === "string" && h.trim() !== "" ? Number(h) : h;
+    if (typeof g !== "number" || !Number.isFinite(g))
+      return (
+        t(
+          `CCRClient: textEarlyUploadsMs entry ${String(_(h)).slice(0, 40)} is not a number of ms; early text uploads are off`,
+          { level: "warn" },
+        ),
+        _t
+      );
+    o.push(Math.min(Math.max(g, 0), 60000));
+  }
+  return o;
+}
+function bs(e) {
+  return (
+    e.type === "system" && "subtype" in e && e.subtype === "thinking_tokens"
+  );
+}
+function hXs(e) {
+  switch (e.type) {
+    case "user":
+    case "stream_event":
+    case "tool_progress":
+      return !0;
+    case "assistant":
+      return !e.message.content.some(
+        (r) =>
+          r.type === "tool_use" &&
+          (r.name === "SendUserMessage" || r.name === "PushNotification"),
+      );
+    case "system":
+      return (
+        "subtype" in e &&
+        (e.subtype === "thinking_tokens" ||
+          e.subtype === "task_progress" ||
+          e.subtype === "hook_progress")
+      );
+    default:
+      return !1;
+  }
+}
+function Rs(e) {
+  if (e) return "?include_hearth=true";
+  return "";
+}
+function Ui(e) {
+  let r = Math.max(Er, (e?.ask_again_after_seconds ?? 0) * 1000 || gt);
+  switch (e?.state) {
+    case "named": {
+      let o = typeof e.title === "string" ? Ma(e.title) : "";
+      return o
+        ? { kind: "named", title: o, askAgainAfterMs: r }
+        : { kind: "ask_again", askAgainAfterMs: r };
+    }
+    case "not_yet":
+    case "failed":
+      return { kind: "ask_again", askAgainAfterMs: r };
+    default:
+      return { kind: "stop" };
+  }
+}
+function Es(e) {
+  if (e === null) return { read: !1 };
+  return {
+    read: !0,
+    assertion: e.hearth,
+    spendProject: e.spend_project_tagged_id,
+  };
+}
+function ks(e, r) {
+  return e.historical === !0 && r.has(e.payload.uuid);
+}
+function bt(e) {
+  return e.payload.type === "user";
+}
+import { randomUUID as Wi } from "crypto";
+var Li = 3600000,
+  Bi = 300,
+  Di = 30;
+function $Qn(e, { lane: r, write: o }, h) {
+  try {
+    let g = pt(e.event_id)?.toLowerCase();
+    if (
+      g === void 0 ||
+      !Ni(e.payload) ||
+      !(Date.now() - Date.parse(e.created_at) < Li) ||
+      !rEn()
+    )
+      return;
+    let { inbound: y } = Go(),
+      { servedMessages: R } = y,
+      k = R.get(g)?.state;
+    if (k === void 0 && R.size >= Bi) {
+      let [U] = [...R].find(([, P]) => P.state !== "held") ?? [];
+      R.delete(U ?? "");
+    }
+    if (
+      (R.set(g, { lane: r, write: o, state: k ?? "arrived" }),
+      (y.reportServedOutcome = Et),
+      h === "refused")
+    )
+      Et(g, "refused");
+    else if (h === "unverified") Et(g, "dropped", "unverified");
+  } catch (g) {
+    (m("peer_outcome_report", "note_threw"), i(g));
+  }
+}
+function Ni(e) {
+  if (e.type === "queued_notification")
+    return T(e.notification) && e.notification.origin === nP;
+  if (e.type !== "user" || !T(e.message)) return !1;
+  let { content: r } = e.message,
+    o = Array.isArray(r) ? r[0]?.text : r;
+  return e.inbound_origin === nP || (typeof o === "string" && wne(o));
+}
+function Et(e, r, o) {
+  try {
+    let h = e?.toLowerCase() ?? "",
+      { inbound: g } = Go(),
+      y = g.servedMessages.get(h);
+    if (y === void 0 || y.state === "ended") return;
+    let R = y.state === "held";
+    if (
+      ((y.state = r === "held" ? "held" : "ended"),
+      (y.lane === "stdin" && (R || r === "held")) ||
+        (r === "expired" && !R) ||
+        !rEn())
+    )
+      return;
+    if (!R) {
+      let k = Date.now();
+      if (
+        ((g.servedReportsAt = g.servedReportsAt.filter((U) => k - U < 60000)),
+        g.servedReportsAt.length >= Di)
+      ) {
+        y.state = "ended";
+        return;
+      }
+      g.servedReportsAt.push(k);
+    }
+    return (
+      f("peer_outcome_report", { reason: u(o ?? r) }),
+      y.write({
+        type: "system",
+        subtype: "peer_message_hold",
+        ...(r === "held"
+          ? { state: "held" }
+          : r === "delivered"
+            ? { state: "released" }
+            : { state: "dropped", outcome: r, ...(o && { reason: o }) }),
+        message_uuid: h,
+        lane: y.lane,
+        from: "",
+        uuid: Wi(),
+        session_id: V(),
+      })
+    );
+  } catch (h) {
+    (m("peer_outcome_report", "report_threw"), i(h));
+  }
+}
+var Hi = 600000,
+  ze = { stream_alive: !1, answered: 0, unanswered: 0 };
+class BQn {
+  probe;
+  acceptedAtMs = Date.now();
+  sentAtMs = this.acceptedAtMs;
+  missedBeats = 0;
+  firstMissReason;
+  timerDueAtMs = 1 / 0;
+  timerLateMs = 0;
+  idleMs = 0;
+  runBeganAtMs = 0;
+  beatsWithNoAnswer = 0;
+  duringTrouble = ze;
+  beforeLastMiss = ze;
+  sinceLastMiss = { answered: 0, unanswered: 0 };
+  probedAtMs = -1 / 0;
+  path;
+  constructor(e) {
+    this.probe = e;
+  }
+  noteTimerArmed(e) {
+    this.timerDueAtMs = e;
+  }
+  noteSent(e = 0) {
+    this.sentAtMs = Date.now();
+    let r = this.sentAtMs - this.timerDueAtMs;
+    if (r >= tEn) this.timerLateMs = Math.max(this.timerLateMs, r);
+    this.idleMs = e * 1000;
+  }
+  noteMiss(e = "other", r = "", o = 0) {
+    if (
+      (this.missedBeats++,
+      (this.firstMissReason ??= e),
+      (this.beatsWithNoAnswer = e.startsWith("fetch_failed")
+        ? this.beatsWithNoAnswer + 1
+        : 0),
+      this.beatsWithNoAnswer < 2)
+    )
+      ((this.runBeganAtMs = Date.now()),
+        (this.duringTrouble = ze),
+        (this.beforeLastMiss = ze),
+        (this.sinceLastMiss = { answered: 0, unanswered: 0 }),
+        (this.path = void 0));
+    if (
+      ((this.duringTrouble = {
+        stream_alive:
+          this.duringTrouble.stream_alive || this.beforeLastMiss.stream_alive,
+        answered: this.duringTrouble.answered + this.beforeLastMiss.answered,
+        unanswered:
+          this.duringTrouble.unanswered + this.beforeLastMiss.unanswered,
+      }),
+      (this.beforeLastMiss = {
+        stream_alive: o > this.runBeganAtMs,
+        ...this.sinceLastMiss,
+      }),
+      (this.sinceLastMiss = { answered: 0, unanswered: 0 }),
+      this.probe &&
+        this.beatsWithNoAnswer === 2 &&
+        this.idleMs <= this.sentAtMs - this.acceptedAtMs)
+    )
+      if (Date.now() - this.probedAtMs < Hi) this.path = { cause: S("spaced") };
+      else {
+        ((this.probedAtMs = Date.now()), (this.path = { cause: S("pending") }));
+        let { runBeganAtMs: h } = this;
+        this.probe(r).then((g) => {
+          if (g?.wait_ms === void 0) this.probedAtMs = -1 / 0;
+          if (this.runBeganAtMs === h) this.path = g;
+        });
+      }
+  }
+  noteOther(e) {
+    this.sinceLastMiss[e]++;
+  }
+  noteAccepted(e) {
+    this.end(e, !1);
+  }
+  noteSessionEnded() {
+    this.end(this.sentAtMs, !0);
+  }
+  end(e, r) {
+    let o = e - this.acceptedAtMs;
+    if ((this.missedBeats > 0 || this.timerLateMs > 0) && this.idleMs <= o) {
+      let h = (this.firstMissReason ?? "timer_late").replace(":", "_"),
+        g = {
+          count: this.missedBeats,
+          duration_ms: o,
+          late_ms: this.timerLateMs,
+          ...(this.beatsWithNoAnswer > 2 &&
+            !r && { ...this.duringTrouble, ...this.path }),
+        };
+      if (r) m("ccr_heartbeat_gap", h, g);
+      else l("ccr_heartbeat_gap", h, g);
+    }
+    if (
+      ((this.acceptedAtMs = e),
+      (this.missedBeats = 0),
+      (this.firstMissReason = void 0),
+      (this.timerLateMs = 0),
+      (this.beatsWithNoAnswer = 0),
+      this.timerDueAtMs <= e)
+    )
+      this.timerDueAtMs = 1 / 0;
+  }
+}
+import { lookup as qi } from "dns/promises";
+import { once as Gi } from "events";
+import { connect as $i } from "net";
+var Ke = 5000,
+  Ie = "step timed out",
+  ji = Date.parse("2026-12-20");
+async function sqr(e) {
+  let r = performance.now(),
+    o = new AbortController(),
+    h = {},
+    g = "setup",
+    y;
+  try {
+    if (Date.now() > ji || !NL() || z_() || b("tengu_partitioned_platypus", !1))
+      return;
+    let {
+      hostname: R,
+      port: k,
+      protocol: U,
+      origin: P,
+    } = new URL(cn().BASE_API_URL);
+    if (IRe()) return { cause: S("proxy") };
+    if (new URL(e).origin !== P) return { cause: S("other_host") };
+    ((g = "dns"),
+      await Jt(qi(R), Ke, Ie),
+      (g = "connect"),
+      (y = $i({ host: R, port: Number(k) || (U === "https:" ? 443 : 80) })),
+      await Jt(Gi(y, "connect"), Ke, Ie),
+      y.destroy(),
+      (g = "request"));
+    let x = await Jt(
+      Xt.get("/api/hello", {
+        auth: "none",
+        freshConnection: !0,
+        maxRedirects: 0,
+        signal: o.signal,
+        validateStatus: () => !0,
+      }),
+      Ke,
+      Ie,
+    );
+    if (!x.ok) return;
+    ((h.http_status = x.status), (g = "fetch"));
+    let L = `${P}/api/hello`;
+    await Jt(
+      uDe(
+        L,
+        {
+          headers: { "User-Agent": Ri() },
+          keepalive: !1,
+          redirect: "manual",
+          signal: o.signal,
+          ...dl({ url: L }),
+        },
+        void 0,
+        kNt,
+      ),
+      Ke,
+      Ie,
+    );
+  } catch (R) {
+    let k = Nre(
+      `${g}_${R instanceof Error && R.message === Ie ? "timeout" : (w(R) ?? "failed")}`,
+    );
+    if (k) h.cause = k;
+  } finally {
+    (y?.destroy(), o.abort());
+  }
+  return { ...h, wait_ms: Math.round(performance.now() - r) };
+}
+function iqr(e) {
+  let r = e?.isTurnRunning ?? (() => e9e() > 0),
+    o = $e(),
+    h = Date.now();
+  return {
+    noteActivity() {
+      h = Date.now();
+      try {
+        o.emit();
+      } catch (g) {
+        i(g);
+      }
+    },
+    sampleIdleSeconds() {
+      let g = Date.now();
+      if (r()) return ((h = g), 0);
+      return Math.max(0, Math.floor((g - h) / 1000));
+    },
+    onActivity: o.subscribe,
+  };
+}
+var zi = new Set([
+  "file_suggestions",
+  "get_context_usage",
+  "get_settings",
+  "get_task_output",
+  "get_usage",
+  "get_workspace_diff",
+  "initialize",
+  "list_directory",
+  "mcp_status",
+  "read_file",
+]);
+function Ks({ type: e, request: r }) {
+  if (
+    e !== "keep_alive" &&
+    !(e === "control_request" && T(r) && zi.has(r.subtype))
+  )
+    sn().recordLastingEvent("RemoteControlInput");
+}
+W();
+var s6o = 30000;
+var Vs = 50,
+  Ki = 16384,
+  Ys = 500,
+  xe = 10,
+  Vi = 1000,
+  Yi = 1000,
+  Re = 3600000,
+  Xs = 1048576,
+  Xi = 1e6;
+class Mt {
+  clock;
+  sink;
+  watch = null;
+  cancelTick = null;
+  nextTickDueMs = 1 / 0;
+  lastTickLagMs = 0;
+  lastTickAtMs = 0;
+  lastLineAtMs = -1 / 0;
+  disabled = !1;
+  constructor(e = eo, r = Qi) {
+    this.clock = e;
+    this.sink = r;
+  }
+  observe(e, r, o) {
+    if (this.watch === null && o === 0 && !r.some(Qs)) return;
+    if (this.disabled) return;
+    try {
+      this.onRead(e, r, o);
+    } catch (h) {
+      this.disable(h);
+    }
+  }
+  stop() {
+    (this.cancelTick?.(),
+      (this.cancelTick = null),
+      (this.nextTickDueMs = 1 / 0),
+      (this.watch = null));
+  }
+  onRead(e, r, o) {
+    let h = r.length,
+      g = this.clock.nowMs(),
+      y = this.clock.cpuMicros(),
+      R = h > 0 ? Math.min(o, e) : 0,
+      k = this.watch,
+      U = null;
+    if (k !== null) {
+      if (k.reads === 0 && h === 0 && o === 0) return;
+      let P = {
+        gapMs: g - k.lastReadAtMs,
+        loopLagMs: this.loopLagAt(g),
+        cpuMs: (y - k.lastCpuMicros) / 1000,
+      };
+      if ((this.stop(), k.reads === 0)) {
+        if (P.loopLagMs !== null && P.gapMs - P.loopLagMs <= Ys)
+          U = { gapMs: P.gapMs, loopLagMs: P.loopLagMs, cpuMs: P.cpuMs };
+      } else {
+        if (P.gapMs > k.maxGap.gapMs)
+          ((k.maxGap = P), (k.maxGapOffsetBytes = k.bytes));
+        if (
+          (k.reads++,
+          (k.bytes += e),
+          (k.lastReadAtMs = g),
+          (k.lastCpuMicros = y),
+          h === 0)
+        ) {
+          ((this.watch = k), this.armTick(g));
+          return;
+        }
+        ((k.bytes -= R), this.report(k, g));
+      }
+    }
+    if (o > 0) {
+      ((this.watch = kt(g, y, {
+        reads: 1,
+        bytes: h === 0 ? e : R,
+        before: h === 0 ? U : null,
+      })),
+        this.armTick(g));
+      return;
+    }
+    if (U !== null && h === 1)
+      this.report(kt(g, y, { reads: 1, bytes: e, before: U }), g);
+    if (r.some(Qs))
+      ((this.watch = kt(g, y, { reads: 0, bytes: 0, before: null })),
+        this.armTick(g));
+  }
+  report(e, r) {
+    let { before: o, maxGap: h } = e,
+      g = o !== null && o.loopLagMs >= Vs && e.bytes >= Ki;
+    if (h.gapMs < Vs && !g) return;
+    if (r - this.lastLineAtMs < Yi) return;
+    ((this.lastLineAtMs = r),
+      this.sink({
+        frame_kib: ve(e.bytes / 1024, Xs),
+        read_count: ve(e.reads, Xi),
+        receive_ms: ve(r - e.startedAtMs, Re),
+        ...(o !== null && {
+          before_frame_gap_ms: ve(o.gapMs, Re),
+          before_frame_loop_lag_ms: ve(o.loopLagMs, Re),
+          before_frame_cpu_ms: ve(o.cpuMs, Re),
+        }),
+        max_gap_ms: ve(h.gapMs, Re),
+        max_gap_offset_kib: ve(e.maxGapOffsetBytes / 1024, Xs),
+        ...(h.loopLagMs !== null && {
+          max_gap_loop_lag_ms: ve(h.loopLagMs, Re),
+        }),
+        max_gap_cpu_ms: ve(h.cpuMs, Re),
+      }));
+  }
+  loopLagAt(e) {
+    if (this.nextTickDueMs !== 1 / 0)
+      return Math.max(this.lastTickLagMs, e - this.nextTickDueMs, 0);
+    return e - this.lastTickAtMs <= xe ? this.lastTickLagMs : null;
+  }
+  armTick(e) {
+    ((this.lastTickLagMs = 0),
+      (this.lastTickAtMs = e),
+      (this.nextTickDueMs = e + xe),
+      (this.cancelTick = this.clock.setTimer(this.onTick, xe)));
+  }
+  onTick = () => {
+    try {
+      this.cancelTick = null;
+      let e = this.watch;
+      if (e === null) return;
+      let r = this.clock.nowMs();
+      ((this.lastTickLagMs = Math.max(r - this.nextTickDueMs, 0)),
+        (this.lastTickAtMs = r));
+      let o = e.reads === 0 ? Ys : Vi;
+      if (r - e.lastReadAtMs >= o) {
+        this.nextTickDueMs = 1 / 0;
+        return;
+      }
+      ((this.nextTickDueMs = r + xe),
+        (this.cancelTick = this.clock.setTimer(this.onTick, xe)));
+    } catch (e) {
+      this.disable(e);
+    }
+  };
+  disable(e) {
+    ((this.disabled = !0), this.stop(), i(e));
+  }
+}
+function kt(e, r, { reads: o, bytes: h, before: g }) {
+  return {
+    reads: o,
+    bytes: h,
+    startedAtMs: e,
+    lastReadAtMs: e,
+    lastCpuMicros: r,
+    before: g,
+    maxGap: { gapMs: 0, loopLagMs: 0, cpuMs: 0 },
+    maxGapOffsetBytes: 0,
+  };
+}
+function Qs(e) {
+  return e.kind === "event" && e.event === "client_event";
+}
+function ve(e, r) {
+  return Number.isFinite(e) ? Math.min(Math.max(Math.round(e), 0), r) : 0;
+}
+function Qi(e) {
+  q("warn", "cli_sse_frame_stall", e);
+}
+function Ji() {
+  let e = process.cpuUsage();
+  return e.user + e.system;
+}
+function Zi(e, r) {
+  let o = setTimeout(e, r);
+  return (o.unref(), () => clearTimeout(o));
+}
+var eo = { nowMs: () => performance.now(), cpuMicros: Ji, setTimer: Zi };
+var to = new Map([
+  ["", "none"],
+  ["text/event-stream", "event-stream"],
+  ["text/html", "html"],
+  ["application/xhtml+xml", "html"],
+  ["application/json", "json"],
+  ["text/plain", "text"],
+  ["application/xml", "xml"],
+  ["text/xml", "xml"],
+]);
+function Js(e) {
+  let r = nt(nt(e ?? "", ";"), ",")
+    .trim()
+    .toLowerCase();
+  return to.get(r) ?? (r.endsWith("+json") ? "json" : "other");
+}
+var aqr = "worker_capabilities",
+  Zs = "attestation-floor/1",
+  NIa = "2",
+  en = "worker-socket/2",
+  FIa = "worker-socket-pad/1",
+  lqr = "x-ccr-attestation-policy",
+  so = new Map([
+    ["verified", "VERIFIED"],
+    ["verified_keyless_device", "VERIFIED_KEYLESS_DEVICE"],
+    ["verified_by_gate", "VERIFIED_BY_GATE"],
+  ]),
+  no = new Map([
+    ["server_authored", "SERVER_AUTHORED"],
+    ["server_replayed", "SERVER_REPLAYED"],
+    ["absent", "ABSENT"],
+    ["invalid", "INVALID"],
+    ["unchecked", "UNCHECKED"],
+    ["unspecified", "UNSPECIFIED"],
+  ]);
+function tn(e) {
+  if (e === null) return { policy: void 0, fault: void 0 };
+  let r = new Map();
+  for (let R of nt(e, ", ").split(";")) {
+    let k = R.trim(),
+      U = k.indexOf("="),
+      P = U === -1 ? "" : k.slice(0, U);
+    if (P !== "" && !r.has(P)) r.set(P, k.slice(U + 1));
+  }
+  let o = r.get("mode");
+  if (r.get("v") !== "1")
+    return { policy: void 0, fault: "policy_unparseable" };
+  if (o === "off") return { policy: void 0, fault: void 0 };
+  if (o !== "observe" && o !== "enforce")
+    return { policy: void 0, fault: "policy_unparseable" };
+  let h = so.get(r.get("level") ?? ""),
+    g = new Set(),
+    y = !1;
+  for (let R of (r.get("accept") ?? "").split(",")) {
+    let k = no.get(R);
+    if (k !== void 0) g.add(k);
+    else if (R !== "") y = !0;
+  }
+  return {
+    policy: {
+      enforce: o === "enforce",
+      acceptLevel: h ?? "VERIFIED_BY_GATE",
+      acceptStatuses: g,
+    },
+    fault: h === void 0 || y ? "policy_partial" : void 0,
+  };
+}
+var ro = 1000,
+  io = 30000,
+  oo = 60000,
+  Ct = 15,
+  ao = 60,
+  lo = 30000,
+  nn = 20,
+  i6o = new DOMException(
+    "no frame within the liveness timeout, or the process slept",
+    "AbortError",
+  ),
+  gXs = new DOMException("the connection is renewed", "AbortError"),
+  uo = 15000,
+  rn = 3,
+  co = "keepalive_tolerance_seconds",
+  _Xs = "x-ccr-sse-keepalive-interval-seconds",
+  an = 25,
+  ho = "long_poll_timeout_seconds",
+  po = "x-ccr-sse-long-poll-seconds",
+  fo = 60,
+  Tt = 2,
+  ln = 2000,
+  yXs = "x-ccr-shared-tool-request",
+  _o = new Set([401, 403, 404]),
+  mo = /\btext\/event-stream\b/i,
+  Fe = 10,
+  vo = 500,
+  go = 8000;
+function wo() {
+  return !0;
+}
+var SXs = new Set(["workflow_launch", "queued_notification", "session_notice"]),
+  yo = p(() =>
+    c({
+      event_type: n(),
+      payload: ae().optional(),
+      payload_json: ae().optional(),
+    }),
+  ),
+  So = "heartbeat_probe",
+  bo = "owner_present",
+  Ro = "checkpoint_request",
+  Eo = "session_claimed",
+  ko = "memory_ask_started",
+  Mo = /^[^\p{Cc}]{1,256}$/u,
+  To = "prefetch_attachments_asked",
+  Ao = new Set(["event_id"]);
+function Co(e) {
+  let r = (h) => {
+      if (
+        typeof h !== "object" ||
+        h === null ||
+        !("message_ref" in h) ||
+        typeof h.message_ref !== "string"
+      )
+        return;
+      let g = "wait_left_ms" in h ? h.wait_left_ms : void 0;
+      return {
+        messageUuid: h.message_ref,
+        waitLeftMs:
+          typeof g === "number" && Number.isSafeInteger(g) && g >= 0
+            ? g
+            : void 0,
+      };
+    },
+    o = r(e.payload);
+  if (o === void 0 && typeof e.payload_json === "string")
+    try {
+      o = r(te(e.payload_json));
+    } catch {
+      return;
+    }
+  return o !== void 0 && Mo.test(o.messageUuid) ? o : void 0;
+}
+var Po = /^"([\w-]{1,128})"$/;
+class dqr {
+  url;
+  state = "idle";
+  onData;
+  onUserFrameReceived;
+  onCloseCallback;
+  onEventCallback;
+  onDeliveredCallback;
+  eventFilter;
+  workerAttestationPolicySink;
+  connectionPolicyReading;
+  connectionSessionWriters;
+  currentToolHostRequestOffer = "not_offered";
+  frameSessionWriters = new WeakMap();
+  onEventVetoed;
+  mostMembersInAFrame;
+  lighterFrame;
+  streamOpener;
+  readerCapabilities;
+  leavesPool;
+  onFrameRefused;
+  onHeartbeatProbe;
+  onOwnerPresent;
+  onCheckpointRequest;
+  onSessionClaimed;
+  onMemoryAskStarted;
+  onPrefetchAttachmentsAsked;
+  onDeviceStatusPublished;
+  onReconnected;
+  onDiagnostic;
+  headers;
+  sessionId;
+  refreshHeaders;
+  getAuthHeaders;
+  connectTimeoutMs;
+  abortController = null;
+  lastSequenceNum = 0;
+  seenSequenceNums = new Set();
+  reconnectAttempts = 0;
+  hasEverConnected = !1;
+  reconnectStartTime = null;
+  reconnectTimer = null;
+  connectErrorsSeen = new Set();
+  livenessTimer = null;
+  lastLivenessEvidenceAtMs = 0;
+  lastLivenessEvidenceMonotonicMs = 0;
+  lastFrameReadAtMs = 0;
+  stopListeningForSleep;
+  frameWaitTimer = null;
+  sseKeepaliveMaxIntervalSeconds;
+  requireStreamEvidence;
+  onUnexpectedContentType;
+  advertisedMaxIntervalSeconds;
+  echoedIntervalSeconds;
+  longPollFallback;
+  longPollMode;
+  silentConnectionStreak = 0;
+  bodyBytesThisConnection = 0;
+  askedLongPollThisConnection = !1;
+  longPollEchoedSeconds;
+  sequenceNumAtOpen = 0;
+  requestStartedAtMs = 0;
+  quietRedial = !1;
+  redialsOnNewSocket = !1;
+  nonOriginPolicy;
+  nonOriginStreak = null;
+  postUrl;
+  serviceClockAtConnect;
+  serviceClockAtFirstConnect;
+  hasConnectedBefore = !1;
+  held = null;
+  isHeldForRenewal = !1;
+  statementRenewalGate;
+  endedForRenewal = new WeakSet();
+  constructor(
+    e,
+    r = {},
+    {
+      sessionId: o,
+      refreshHeaders: h,
+      initialSequenceNum: g,
+      getAuthHeaders: y,
+      connectTimeoutMs: R,
+      deferDelivery: k,
+      sseKeepaliveMaxIntervalSeconds: U,
+      longPollFallback: P,
+      initialLongPollMode: x,
+      requireStreamEvidence: L,
+      onUnexpectedContentType: A,
+      mostMembersInAFrame: G,
+      lighterFrame: z,
+      streamOpener: H,
+      readerCapabilities: J,
+      leavesPool: se,
+      onProcessSlept: Y,
+    } = {},
+  ) {
+    this.url = e;
+    if (
+      ((this.headers = r),
+      (this.sessionId = o),
+      (this.refreshHeaders = h),
+      (this.getAuthHeaders = y ?? l7),
+      (this.connectTimeoutMs = R ?? s6o),
+      (this.postUrl = Oo(e)),
+      (this.sseKeepaliveMaxIntervalSeconds = U),
+      (this.longPollFallback = P),
+      (this.longPollMode = x ?? !1),
+      (this.requireStreamEvidence = L ?? !1),
+      (this.onUnexpectedContentType = A),
+      (this.mostMembersInAFrame = G),
+      (this.lighterFrame = z),
+      (this.streamOpener = H),
+      (this.readerCapabilities = J ?? []),
+      (this.leavesPool = se),
+      (this.stopListeningForSleep = Y?.(this.onSleepNotice)),
+      g !== void 0 && g > 0)
+    )
+      this.lastSequenceNum = g;
+    if (k) this.held = { frames: [], close: null };
+    (t(`SSETransport: SSE URL = ${e.href}`),
+      t(`SSETransport: POST URL = ${this.postUrl}`),
+      q("info", "cli_sse_transport_initialized"));
+  }
+  serviceNow() {
+    let e = this.serviceClockAtConnect;
+    if (e === void 0) return;
+    let r = performance.now() - e.monotonicMs;
+    return Math.abs(Date.now() - e.wallMs - r) > oo ? void 0 : e.serviceMs + r;
+  }
+  serviceNowAtMost() {
+    let e = this.serviceClockAtConnect;
+    if (e === void 0) return;
+    return (
+      e.serviceMs +
+      Math.max(performance.now() - e.monotonicMs, Date.now() - e.wallMs)
+    );
+  }
+  firstConnectedServiceMs() {
+    return this.serviceClockAtFirstConnect;
+  }
+  getLastSequenceNum() {
+    return this.lastSequenceNum;
+  }
+  isLongPolling() {
+    return this.longPollMode || this.askedLongPollThisConnection;
+  }
+  connect() {
+    if (this.state !== "idle" && this.state !== "reconnecting")
+      return (
+        t(`SSETransport: Cannot connect, current state is ${this.state}`, {
+          level: "error",
+        }),
+        q("error", "cli_sse_connect_failed"),
+        Promise.resolve()
+      );
+    return ((this.state = "reconnecting"), this.openStream(void 0));
+  }
+  async openStream(e) {
+    let r = Date.now();
+    this.requestStartedAtMs = performance.now();
+    let o = this.quietRedial;
+    this.quietRedial = !1;
+    let h = this.redialsOnNewSocket || (Boolean(this.leavesPool?.()) && ZTr()),
+      g = dn(Math.floor(Number(this.sseKeepaliveMaxIntervalSeconds?.())));
+    ((this.advertisedMaxIntervalSeconds = g > Ct ? g : void 0),
+      (this.echoedIntervalSeconds = void 0),
+      (this.bodyBytesThisConnection = 0),
+      (this.longPollEchoedSeconds = void 0),
+      (this.sequenceNumAtOpen = this.lastSequenceNum));
+    let y = s.CLAUDE_CODE_CCR_LONG_POLL;
+    this.askedLongPollThisConnection =
+      y === !0 ||
+      (y !== !1 && this.longPollMode && this.longPollFallbackAllows());
+    let R = new URL(this.url.href);
+    if (this.lastSequenceNum > 0)
+      R.searchParams.set("from_sequence_num", String(this.lastSequenceNum));
+    if (this.advertisedMaxIntervalSeconds !== void 0)
+      R.searchParams.set(co, String(rn * this.advertisedMaxIntervalSeconds));
+    if (this.askedLongPollThisConnection) R.searchParams.set(ho, String(an));
+    let k = [
+      ...(this.workerAttestationPolicySink === void 0 ? [] : [Zs]),
+      ...(this.streamOpener === void 0 ? [] : [en]),
+      ...this.readerCapabilities,
+    ];
+    if (k.length > 0) R.searchParams.set(aqr, k.join(","));
+    let U = this.getAuthHeaders(),
+      P = {
+        ...this.headers,
+        ...U,
+        Accept: "text/event-stream",
+        "anthropic-version": "2023-06-01",
+        "anthropic-client-platform": c_(),
+        "User-Agent": Ri(),
+      };
+    if ((At(P, U), this.lastSequenceNum > 0))
+      P["Last-Event-ID"] = String(this.lastSequenceNum);
+    (t(`SSETransport: Opening ${R.href}`),
+      q("info", "cli_sse_connect_opening"));
+    let x = new AbortController();
+    this.abortController = x;
+    let L = !1,
+      A = Math.min(
+        typeof this.connectTimeoutMs === "function"
+          ? this.connectTimeoutMs()
+          : this.connectTimeoutMs,
+        Wc,
+      ),
+      G =
+        A > 0
+          ? setTimeout(() => {
+              ((L = !0), x.abort());
+            }, A)
+          : void 0;
+    try {
+      let z = () =>
+          fetch(R.href, {
+            headers: P,
+            signal: x.signal,
+            ...dl({ url: R.href }),
+            ...(h && { keepalive: !1 }),
+          }),
+        H;
+      try {
+        H = await (this.streamOpener
+          ? this.streamOpener.open({
+              url: R.href,
+              headers: P,
+              signal: x.signal,
+              openSse: z,
+            })
+          : z());
+      } catch (ne) {
+        if (x.signal.aborted && !L) return;
+        throw ne;
+      } finally {
+        (clearTimeout(G), e?.());
+      }
+      if (L) throw Error("the connect deadline fired as the response arrived");
+      if (!H.ok) {
+        if (xat(H.status) && this.leavesPool?.() === "after_no_answer_or_5xx")
+          I$i(H.status);
+        let ne = H.status === 403 ? Dbe((ce) => H.headers.get(ce)) : void 0;
+        if ((await $W(H, { timeoutMs: q8e }), x.signal.aborted)) return;
+        let ee = (this.nonOriginPolicy?.now ?? Date.now)(),
+          le = this.advanceNonOriginStreak(ne, ee),
+          X =
+            le !== null &&
+            this.nonOriginPolicy !== void 0 &&
+            ee - le.startedAtMs < this.nonOriginPolicy.windowMs,
+          ue = _o.has(H.status) && !X;
+        if (
+          (t(
+            `SSETransport: HTTP ${H.status}${ue ? " (permanent)" : ""}${ne ? ` source=${ne}` : ""}${X ? ` (not origin \u2014 retrying; attempt ${le?.attempts})` : ""}`,
+            { level: "error" },
+          ),
+          q("error", "cli_sse_connect_http_error", {
+            status: H.status,
+            ...(ne !== void 0 && { source: ne }),
+            ...(le !== null && { retried: X }),
+          }),
+          this.connectErrorsSeen.add(`http_${H.status}`),
+          this.diagConnectFailure(
+            `HTTP ${H.status}${ue ? " (permanent)" : ""}`,
+            r,
+          ),
+          ue)
+        ) {
+          ((this.nonOriginStreak = null),
+            (this.state = "closed"),
+            this.emitClose(
+              H.status,
+              ne === void 0
+                ? void 0
+                : le === null
+                  ? { rejectSource: ne }
+                  : {
+                      rejectSource: le.source,
+                      streak: {
+                        source: le.source,
+                        attempts: le.attempts,
+                        streakMs: ee - le.startedAtMs,
+                      },
+                    },
+            ));
+          return;
+        }
+        if (X)
+          try {
+            this.nonOriginPolicy?.onRefused?.();
+          } catch (ce) {
+            t(`SSETransport: onRefused handler threw: ${d(ce)}`, {
+              level: "error",
+            });
+          }
+        this.handleConnectionError();
+        return;
+      }
+      if (!H.body) {
+        (t("SSETransport: No response body"),
+          this.connectErrorsSeen.add("no_response_body"),
+          this.diagConnectFailure("no response body", r),
+          this.handleConnectionError());
+        return;
+      }
+      if (this.requireStreamEvidence) {
+        let ne = Js(H.headers.get("content-type"));
+        if (ne !== "event-stream") {
+          let ee = H.headers.has(WQn) || H.headers.has(lqr);
+          if (!ee) {
+            if ((await $W(H, { timeoutMs: q8e }), x.signal.aborted)) return;
+          }
+          let le = `HTTP ${H.status}, content_type=${ne}, ${ee ? "with" : "without"} a session service header`;
+          if (
+            (t(
+              `SSETransport: ${le}: ${ee ? "taken as the stream" : "a failed connect"}`,
+              { level: ee ? "warn" : "error" },
+            ),
+            q(
+              ee ? "warn" : "error",
+              "cli_sse_connect_unexpected_content_type",
+              { status: H.status, content_type: ne, accepted: ee },
+            ),
+            this.onUnexpectedContentType?.({
+              status: H.status,
+              contentType: ne,
+              accepted: ee,
+            }),
+            !ee)
+          ) {
+            (this.connectErrorsSeen.add("no_stream_evidence"),
+              this.diagConnectFailure(
+                `${le}: a proxy or gateway may have answered in place of the server`,
+                r,
+              ),
+              this.handleConnectionError());
+            return;
+          }
+        }
+      }
+      let J = Date.now() - r,
+        se = Date.parse(H.headers.get("date") ?? "");
+      if (!Number.isNaN(se))
+        this.serviceClockAtConnect = {
+          serviceMs: se,
+          wallMs: Date.now(),
+          monotonicMs: performance.now(),
+        };
+      if (!this.hasConnectedBefore)
+        ((this.hasConnectedBefore = !0),
+          (this.serviceClockAtFirstConnect = Number.isNaN(se) ? void 0 : se));
+      if (this.advertisedMaxIntervalSeconds !== void 0) {
+        let ne = Number(H.headers.get(_Xs));
+        if (Number.isInteger(ne) && ne > 0) this.echoedIntervalSeconds = dn(ne);
+      }
+      let Y = Number(H.headers.get(po));
+      this.longPollEchoedSeconds =
+        this.askedLongPollThisConnection && Number.isInteger(Y) && Y > 0
+          ? Math.min(Y, fo)
+          : void 0;
+      let oe =
+        this.workerAttestationPolicySink === void 0
+          ? void 0
+          : tn(H.headers.get(lqr));
+      this.connectionPolicyReading = oe;
+      let de = H.headers.get(WQn),
+        I = zIa(de),
+        ie = I === void 0 ? void 0 : { writers: I, statedAtMs: Date.now() };
+      if (
+        ((this.connectionSessionWriters = ie),
+        this.currentToolHostRequestOffer !== "refused_earlier")
+      )
+        this.currentToolHostRequestOffer =
+          H.headers.get(yXs) === "1" ? "offered" : "not_offered";
+      if (oe !== void 0) {
+        if ((this.workerAttestationPolicySink?.(oe), x.signal.aborted)) return;
+      }
+      let Q =
+          this.advertisedMaxIntervalSeconds === void 0
+            ? ""
+            : ` keepalive_interval=${this.keepaliveIntervalMs() / 1000}s${this.echoedIntervalSeconds === void 0 ? " (no echo)" : ""}`,
+        F = !this.askedLongPollThisConnection
+          ? ""
+          : this.longPollEchoedSeconds === void 0
+            ? ` long_poll=${an}s (no echo)`
+            : ` long_poll=${this.longPollEchoedSeconds}s`;
+      if (
+        (t("SSETransport: Connected" + Q + F),
+        q("info", "cli_sse_connect_connected", {
+          duration_ms: J,
+          ...this.keepaliveDiagnosticFields(),
+          ...(this.askedLongPollThisConnection && {
+            long_poll:
+              this.longPollEchoedSeconds === void 0 ? "no_echo" : "echoed",
+          }),
+          session_writers:
+            I ?? (de === null ? "header_absent" : "header_unreadable"),
+          ...(oe !== void 0 && {
+            attestation_policy:
+              oe.policy === void 0
+                ? "none"
+                : oe.policy.enforce
+                  ? "enforce"
+                  : "observe",
+            ...(oe.fault !== void 0 && { attestation_policy_fault: oe.fault }),
+          }),
+        }),
+        !this.hasEverConnected && this.reconnectAttempts === 0)
+      )
+        Do("sse_connect_ms", J, r - performance.timeOrigin);
+      if (this.reconnectAttempts > 0) {
+        let ne = this.reconnectStartTime
+          ? Math.round((Date.now() - this.reconnectStartTime) / 1000)
+          : 0;
+        this.onDiagnostic?.(
+          `SSE reconnected after ${this.reconnectAttempts} attempt(s), ${ne}s downtime` +
+            (this.connectErrorsSeen.size > 0
+              ? `, errors=[${[...this.connectErrorsSeen].join(",")}]`
+              : ""),
+          "warn",
+          "sse_recovered",
+        );
+      } else if (!o)
+        this.onDiagnostic?.(`SSE connected in ${J}ms`, "info", "sse_connected");
+      this.connectErrorsSeen.clear();
+      let D = this.hasEverConnected;
+      if (
+        ((this.hasEverConnected = !0),
+        (this.state = "connected"),
+        (this.redialsOnNewSocket = !1),
+        this.streamOpener?.restartsBackoffAtOpen() ?? !0)
+      )
+        this.reconnectAttempts = 0;
+      ((this.reconnectStartTime = null), this.resetLivenessTimer());
+      let Z = mo.test(H.headers.get("content-type") ?? "");
+      if (D && !o)
+        try {
+          this.onReconnected?.();
+        } catch (ne) {
+          (t(`SSETransport: onReconnected handler threw: ${d(ne)}`, {
+            level: "error",
+          }),
+            q("error", "cli_sse_reconnected_handler_threw"));
+        }
+      if (this.isHeldForRenewal) {
+        if ((this.deliverHeldForRenewal(ie), x.signal.aborted)) return;
+      }
+      await this.readStream(H.body, Z, ie);
+    } catch (z) {
+      if (L) {
+        if (
+          (t(`SSETransport: No response within ${A}ms, reconnecting`, {
+            level: "error",
+          }),
+          q("error", "cli_sse_connect_timeout", { timeout_ms: A }),
+          !this.streamOpener && !h && this.leavesPool?.())
+        )
+          QSs();
+        (this.connectErrorsSeen.add("connect_timeout"),
+          this.diagConnectFailure(`no response in ${A / 1000}s`, r),
+          this.handleConnectionError());
+        return;
+      }
+      (t(`SSETransport: Connection error: ${d(z)}`, { level: "error" }),
+        q("error", "cli_sse_connect_error"),
+        this.connectErrorsSeen.add("fetch_failed"),
+        this.diagConnectFailure(d(z), r),
+        this.handleConnectionError());
+    }
+  }
+  advanceNonOriginStreak(e, r) {
+    let o = this.nonOriginPolicy;
+    if (o === void 0 || e === void 0) return null;
+    if (!XEt(e)) return ((this.nonOriginStreak = null), null);
+    let h = this.nonOriginStreak;
+    if (h === null || r - h.lastAtMs > o.maxGapMs)
+      ((h = { source: e, startedAtMs: r, lastAtMs: r, attempts: 0 }),
+        (this.nonOriginStreak = h));
+    return (h.attempts++, (h.lastAtMs = r), h);
+  }
+  settleNonOriginStreakRecovered() {
+    let e = this.nonOriginStreak;
+    if (e === null) return;
+    this.nonOriginStreak = null;
+    let r = {
+      source: e.source,
+      attempts: e.attempts,
+      streakMs: (this.nonOriginPolicy?.now ?? Date.now)() - e.startedAtMs,
+    };
+    q("info", "cli_sse_nonorigin_403_recovered", {
+      source: r.source,
+      attempts: r.attempts,
+      streak_ms: r.streakMs,
+    });
+    try {
+      this.nonOriginPolicy?.onRecovered?.(r);
+    } catch (o) {
+      t(`SSETransport: onRecovered handler threw: ${d(o)}`, { level: "error" });
+    }
+  }
+  diagConnectFailure(e, r) {
+    if (!this.onDiagnostic) return;
+    let o = this.reconnectAttempts + 1;
+    if (o > 3 && o % 10 !== 0) return;
+    let h = Date.now() - r,
+      g = this.reconnectStartTime
+        ? `, ${Math.round((Date.now() - this.reconnectStartTime) / 1000)}s reconnecting`
+        : "",
+      y =
+        this.connectErrorsSeen.size > 1
+          ? `, errors=[${[...this.connectErrorsSeen].join(",")}]`
+          : "";
+    this.onDiagnostic(
+      `SSE connect failed (${e}) attempt=${o} took=${h}ms${g}${y}`,
+      "warn",
+      "sse_connect_failed",
+    );
+  }
+  async readStream(e, r, o) {
+    let h = e.getReader(),
+      g,
+      y = this.abortController,
+      R = () => y !== null && this.endedForRenewal.has(y),
+      k = r && s.CLAUDE_CODE_DIAGNOSTICS_FILE ? new Mt() : null,
+      U = !1;
+    try {
+      while (!0) {
+        let { done: P, value: x } = await h.read();
+        if (P) break;
+        if (x.byteLength > 0)
+          ((this.bodyBytesThisConnection += x.byteLength),
+            (this.silentConnectionStreak = 0));
+        let L = bOe(g, x);
+        ((g = L.state), k?.observe(x.byteLength, L.events, g.pendingBytes));
+        for (let A of L.events) {
+          if (A.kind === "event" && !A.data) continue;
+          if (!R())
+            (this.resetLivenessTimer(),
+              (this.lastFrameReadAtMs = this.lastLivenessEvidenceAtMs));
+          if (this.nonOriginStreak !== null && r)
+            this.settleNonOriginStreakRecovered();
+          if (A.kind !== "event") continue;
+          if (A.id && A.event !== "ephemeral_event") {
+            let G = parseInt(A.id, 10);
+            if (!isNaN(G)) {
+              if (this.seenSequenceNums.has(G))
+                (t(
+                  `SSETransport: DUPLICATE frame seq=${G} (lastSequenceNum=${this.lastSequenceNum}, seenCount=${this.seenSequenceNums.size})`,
+                  { level: "warn" },
+                ),
+                  q("warn", "cli_sse_duplicate_sequence"));
+              else if (
+                (this.seenSequenceNums.add(G),
+                this.seenSequenceNums.size > 1000)
+              ) {
+                let z = this.lastSequenceNum - 200;
+                for (let H of this.seenSequenceNums)
+                  if (H < z) this.seenSequenceNums.delete(H);
+              }
+              if (G > this.lastSequenceNum) this.lastSequenceNum = G;
+            }
+          }
+          if (A.event && A.data) this.handleSSEFrame(A.event, A.data, o);
+          else
+            (t(
+              "SSETransport: Frame has data: but no event: field \u2014 dropped",
+              { level: "warn" },
+            ),
+              q("warn", "cli_sse_frame_missing_event_field"));
+        }
+      }
+    } catch (P) {
+      if (this.abortController?.signal.aborted || R()) return;
+      ((U = !0),
+        t(`SSETransport: Stream read error: ${d(P)}`, { level: "error" }),
+        q("error", "cli_sse_stream_read_error"));
+    } finally {
+      (k?.stop(), h.releaseLock());
+    }
+    if (this.state !== "closing" && this.state !== "closed" && !R()) {
+      if (this.state === "connected") {
+        let P = performance.now() - this.requestStartedAtMs;
+        if (this.bodyBytesThisConnection === 0 && P >= ln)
+          this.countSilentConnection();
+        if (
+          this.askedLongPollThisConnection &&
+          !U &&
+          (this.lastSequenceNum > this.sequenceNumAtOpen || P >= ln)
+        ) {
+          (this.reopenAtOnce("long_poll"),
+            t("SSETransport: Long poll completed, reopening"));
+          return;
+        }
+      }
+      if (
+        (t("SSETransport: Stream ended, reconnecting"),
+        this.state === "connected")
+      )
+        (this.connectErrorsSeen.add("stream_ended"),
+          this.onDiagnostic?.(
+            "SSE stream ended by server, reconnecting",
+            "warn",
+            "sse_stream_ended",
+          ));
+      this.handleConnectionError();
+    }
+  }
+  handleSSEFrame(e, r, o, h = Date.now(), g = performance.now()) {
+    if (
+      this.mostMembersInAFrame !== void 0 &&
+      Ble(r, this.mostMembersInAFrame) === void 0
+    ) {
+      let k = this.lighterFrame?.(r);
+      if (k !== void 0 && Ble(k, this.mostMembersInAFrame) !== void 0) {
+        this.handleSSEFrame(e, k, o, h, g);
+        return;
+      }
+      this.onFrameRefused?.(Po.exec(_Te(r, Ao)?.get("event_id") ?? "")?.[1]);
+      return;
+    }
+    if (e === "ephemeral_event") {
+      this.handleEphemeralFrame(r);
+      return;
+    }
+    if (this.held !== null) {
+      this.held.frames.push({
+        eventType: e,
+        data: r,
+        policyReading: this.connectionPolicyReading,
+        sessionWriters: o,
+        receivedWallMs: h,
+        receivedAtMs: g,
+      });
+      return;
+    }
+    if (e !== "client_event") {
+      (t(`SSETransport: Unexpected SSE event type '${e}' on worker stream`, {
+        level: "warn",
+      }),
+        q("warn", "cli_sse_unexpected_event_type", { event_type: e }));
+      return;
+    }
+    let y;
+    try {
+      y = te(r);
+    } catch (k) {
+      t(`SSETransport: Failed to parse client_event data: ${d(k)}`, {
+        level: "error",
+      });
+      return;
+    }
+    let R = y.payload;
+    if (R && typeof R === "object" && "type" in R) {
+      let k = this.sessionId ? ` session=${this.sessionId}` : "",
+        U = y.device_attestation_status
+          ? ` attestation=${y.device_attestation_status}`
+          : "";
+      if (
+        (t(
+          `SSETransport: Event seq=${y.sequence_num} event_id=${y.event_id} event_type=${y.event_type} payload_type=${String(R.type)}${U}${k}`,
+        ),
+        q("info", "cli_sse_message_received"),
+        o !== void 0 &&
+          this.state === "connected" &&
+          this.statementRenewalGate?.(y, o) === !0)
+      ) {
+        ((this.held = {
+          frames: [
+            {
+              eventType: e,
+              data: r,
+              policyReading: this.connectionPolicyReading,
+              sessionWriters: o,
+              receivedWallMs: h,
+              receivedAtMs: g,
+            },
+          ],
+          close: null,
+        }),
+          (this.isHeldForRenewal = !0),
+          this.renewConnection());
+        return;
+      }
+      if (o !== void 0) this.frameSessionWriters.set(y, o);
+      let P = this.eventFilter?.(y);
+      if (P)
+        q(
+          "warn",
+          "cli_sse_event_filtered",
+          P === !0 ? void 0 : { decision: P },
+        );
+      else if (
+        typeof R.type === "string" &&
+        SXs.has(R.type) &&
+        y.event_type !== R.type
+      )
+        (q("warn", "cli_sse_server_only_event_type_mismatch", {
+          event_type: y.event_type,
+          payload_type: R.type,
+        }),
+          this.onEventVetoed?.(y));
+      else if (R.type === "control_request" && y.source === "worker")
+        q("warn", "cli_sse_worker_control_request_dropped");
+      else {
+        if (
+          (this.onDeliveredCallback?.(y, o, g),
+          R.type === "user" && typeof R.uuid === "string")
+        )
+          this.onUserFrameReceived?.(R.uuid, h, y.processing_at, g);
+        this.onData?.(
+          _(y.payload) +
+            `
+`,
+        );
+      }
+    } else
+      t(
+        `SSETransport: Ignoring client_event with no type in payload: event_id=${y.event_id}`,
+      );
+    this.onEventCallback?.(y);
+  }
+  emitClose(e, r) {
+    if (this.held !== null) {
+      if (((this.held.close = { code: e, detail: r }), this.isHeldForRenewal))
+        ((this.isHeldForRenewal = !1), this.startDelivery());
+      return;
+    }
+    this.onCloseCallback?.(e, r);
+  }
+  renewConnection() {
+    if (this.state !== "connected") return;
+    (t("SSETransport: Renewing the connection"),
+      q("info", "cli_sse_renew_connection"),
+      this.reopenAtOnce("renewal"));
+  }
+  reopenAtOnce(e) {
+    if (this.refreshHeaders) {
+      let r = this.refreshHeaders();
+      (Object.assign(this.headers, r), At(this.headers, r));
+    }
+    if (
+      (this.clearLivenessTimer(),
+      e !== "long_poll" && this.abortController !== null)
+    )
+      (this.endedForRenewal.add(this.abortController),
+        this.abortController.abort(e === "renewal" ? gXs : i6o));
+    if (
+      ((this.abortController = null), this.streamOpener?.restartsBackoffAtEnd())
+    )
+      this.reconnectAttempts = 0;
+    ((this.state = "reconnecting"),
+      (this.quietRedial = e === "long_poll"),
+      (this.redialsOnNewSocket = e === "sleep"),
+      (this.reconnectTimer = setTimeout(() => {
+        ((this.reconnectTimer = null), this.connect());
+      }, 0)));
+  }
+  setStatementRenewalGate(e) {
+    this.statementRenewalGate = e;
+  }
+  deliverHeldForRenewal(e) {
+    this.isHeldForRenewal = !1;
+    for (let r of this.held?.frames ?? []) r.sessionWriters = e;
+    this.startDelivery();
+  }
+  startDelivery() {
+    let e = this.held;
+    if (e === null) return;
+    this.held = null;
+    let r;
+    for (let o of e.frames) {
+      if (o.policyReading !== void 0 && o.policyReading !== r) {
+        if (((r = o.policyReading), !this.handSinkPolicyReading(r))) return;
+      }
+      this.handleSSEFrame(
+        o.eventType,
+        o.data,
+        o.sessionWriters,
+        o.receivedWallMs,
+        o.receivedAtMs,
+      );
+    }
+    if (
+      this.connectionPolicyReading !== void 0 &&
+      this.connectionPolicyReading !== r &&
+      !this.handSinkPolicyReading(this.connectionPolicyReading)
+    )
+      return;
+    if (e.close !== null) this.onCloseCallback?.(e.close.code, e.close.detail);
+  }
+  handSinkPolicyReading(e) {
+    return (this.workerAttestationPolicySink?.(e), this.state !== "closing");
+  }
+  handleEphemeralFrame(e) {
+    let r;
+    try {
+      r = te(e);
+    } catch (h) {
+      t(`SSETransport: Failed to parse ephemeral_event data: ${d(h)}`, {
+        level: "error",
+      });
+      return;
+    }
+    let o = yo().safeParse(r);
+    if (
+      o.success &&
+      o.data.event_type === bo &&
+      this.onOwnerPresent !== void 0
+    ) {
+      q("info", "cli_sse_owner_present_received");
+      try {
+        this.onOwnerPresent();
+      } catch (h) {
+        t(`SSETransport: onOwnerPresent handler threw: ${d(h)}`, {
+          level: "error",
+        });
+      }
+      return;
+    }
+    if (
+      o.success &&
+      o.data.event_type === Ro &&
+      this.onCheckpointRequest !== void 0
+    ) {
+      q("info", "cli_sse_checkpoint_request_received");
+      try {
+        this.onCheckpointRequest();
+      } catch (h) {
+        (i(h), q("error", "cli_sse_checkpoint_request_handler_threw"));
+      }
+      return;
+    }
+    if (
+      o.success &&
+      o.data.event_type === Eo &&
+      this.onSessionClaimed !== void 0
+    ) {
+      try {
+        this.onSessionClaimed();
+      } catch (h) {
+        i(h);
+      }
+      return;
+    }
+    if (
+      o.success &&
+      o.data.event_type === ko &&
+      this.onMemoryAskStarted !== void 0
+    ) {
+      let h = performance.now(),
+        g = Co(o.data);
+      if (
+        (q("info", "cli_sse_memory_ask_started_received", {
+          names_a_message: g !== void 0,
+          ...(g?.waitLeftMs !== void 0 && { wait_left_ms: g.waitLeftMs }),
+        }),
+        g !== void 0)
+      )
+        try {
+          this.onMemoryAskStarted(g.messageUuid, g.waitLeftMs, h);
+        } catch (y) {
+          i(y);
+        }
+      return;
+    }
+    if (
+      o.success &&
+      o.data.event_type === To &&
+      this.onPrefetchAttachmentsAsked !== void 0
+    ) {
+      try {
+        this.onPrefetchAttachmentsAsked(o.data.payload);
+      } catch (h) {
+        (i(h), q("error", "cli_sse_prefetch_attachments_asked_handler_threw"));
+      }
+      return;
+    }
+    if (!o.success || o.data.event_type !== So) {
+      q("warn", "cli_sse_unexpected_ephemeral_type", {
+        event_type: o.success ? o.data.event_type : "unparseable",
+      });
+      return;
+    }
+    q("info", "cli_sse_heartbeat_probe_received");
+    try {
+      this.onHeartbeatProbe?.();
+    } catch (h) {
+      (t(`SSETransport: onHeartbeatProbe handler threw: ${d(h)}`, {
+        level: "error",
+      }),
+        q("error", "cli_sse_heartbeat_probe_handler_threw"));
+    }
+  }
+  handleConnectionError() {
+    if (
+      (this.clearLivenessTimer(),
+      this.state === "closing" || this.state === "closed")
+    )
+      return;
+    (this.abortController?.abort(), (this.abortController = null));
+    let e = Date.now();
+    if (!this.reconnectStartTime) this.reconnectStartTime = e;
+    let r = e - this.reconnectStartTime;
+    if (this.reconnectTimer)
+      (clearTimeout(this.reconnectTimer), (this.reconnectTimer = null));
+    if (this.refreshHeaders) {
+      let h = this.refreshHeaders();
+      (Object.assign(this.headers, h),
+        At(this.headers, h),
+        t("SSETransport: Refreshed headers for reconnect"));
+    }
+    if (
+      ((this.state = "reconnecting"), this.streamOpener?.restartsBackoffAtEnd())
+    )
+      this.reconnectAttempts = 0;
+    this.reconnectAttempts++;
+    let o = this.streamOpener?.reconnectsAtOnce()
+      ? 0
+      : Tc({
+          attempt: this.reconnectAttempts,
+          baseMs: ro,
+          capMs: io,
+          jitter: { kind: "symmetric", ratio: 0.25 },
+        });
+    (t(
+      `SSETransport: Reconnecting in ${Math.round(o)}ms (attempt ${this.reconnectAttempts}, ${Math.round(r / 1000)}s elapsed)`,
+    ),
+      q("error", "cli_sse_reconnect_attempt", {
+        reconnectAttempts: this.reconnectAttempts,
+      }),
+      (this.reconnectTimer = setTimeout(() => {
+        ((this.reconnectTimer = null), this.connect());
+      }, o)));
+  }
+  reopenAfterSleep(e, r) {
+    if (this.state !== "connected") return !1;
+    if (this.frameWaitTimer)
+      (clearTimeout(this.frameWaitTimer), (this.frameWaitTimer = null));
+    try {
+      this.reopenAtOnce("sleep");
+    } catch (o) {
+      return (
+        t(
+          `SSETransport: Could not reconnect at once after a pause or sleep, so leaving it to the liveness timeout: ${d(o)}`,
+          { level: "error" },
+        ),
+        !1
+      );
+    }
+    return (
+      t(
+        `SSETransport: Reconnecting now with no backoff: the process was probably paused or asleep (the ${r === "liveness_timer" ? "liveness timer" : "stall detector"} ran at least ${Math.round(e / 1000)}s late)`,
+      ),
+      q("warn", "cli_sse_reopened_after_sleep", {
+        late_ms: Math.round(e),
+        seen_by: r,
+      }),
+      this.onDiagnostic?.(
+        `SSE: reconnecting at once: the process was probably paused or asleep (a check ran at least ${Math.round(e / 1000)}s late)`,
+        "warn",
+        "sse_reopened_after_sleep",
+      ),
+      !0
+    );
+  }
+  onSleepNotice = (e) => {
+    if (this.state !== "connected" || this.frameWaitTimer !== null) return;
+    if (this.silentForMs() < e) {
+      t(
+        `SSETransport: Keeping the stream after a pause or stall of at least ${Math.round(e / 1000)}s: it has connected or delivered a frame since then`,
+      );
+      return;
+    }
+    this.frameWaitTimer = setTimeout(
+      this.onFrameWaitEnd,
+      nn,
+      this.lastLivenessEvidenceMonotonicMs,
+      e,
+    );
+  };
+  onFrameWaitEnd = (e, r) => {
+    if (
+      ((this.frameWaitTimer = null), this.lastLivenessEvidenceMonotonicMs !== e)
+    ) {
+      t(
+        `SSETransport: Keeping the stream after a pause or stall of at least ${Math.round(r / 1000)}s: it connected or delivered a frame within ${nn} ms of the notice`,
+      );
+      return;
+    }
+    this.reopenAfterSleep(r, "stall_detector");
+  };
+  silentForMs() {
+    return Math.max(
+      Date.now() - this.lastLivenessEvidenceAtMs,
+      performance.now() - this.lastLivenessEvidenceMonotonicMs,
+    );
+  }
+  onLivenessTimeout = () => {
+    this.livenessTimer = null;
+    let e = this.silentForMs() - this.livenessTimeoutMs();
+    if (
+      (e > tEn || this.frameWaitTimer !== null) &&
+      this.reopenAfterSleep(e, "liveness_timer")
+    )
+      return;
+    (t("SSETransport: Liveness timeout, reconnecting", { level: "error" }),
+      q("error", "cli_sse_liveness_timeout", this.keepaliveDiagnosticFields()),
+      this.connectErrorsSeen.add("liveness_timeout"),
+      this.onDiagnostic?.(
+        `SSE liveness timeout \u2014 no frame in ${this.livenessTimeoutMs() / 1000}s, reconnecting`,
+        "warn",
+        "sse_liveness_timeout",
+      ));
+    let r = this.state === "connected" && this.bodyBytesThisConnection === 0;
+    if ((this.abortController?.abort(i6o), this.handleConnectionError(), r))
+      this.countSilentConnection();
+  };
+  countSilentConnection() {
+    if (
+      (this.silentConnectionStreak++,
+      this.silentConnectionStreak >= Tt &&
+        !this.longPollMode &&
+        s.CLAUDE_CODE_CCR_LONG_POLL !== !1 &&
+        this.longPollFallbackAllows())
+    )
+      ((this.longPollMode = !0),
+        t(
+          `SSETransport: No body bytes on ${Tt} connections in a row; asking for long-poll responses from here on`,
+          { level: "warn" },
+        ),
+        q("warn", "cli_sse_long_poll_mode"),
+        this.onDiagnostic?.(
+          `SSE stream delivered no bytes on ${Tt} consecutive connections; asking the server for long-poll responses (a proxy may be buffering the response body)`,
+          "warn",
+          "sse_long_poll_mode",
+        ));
+  }
+  longPollFallbackAllows() {
+    try {
+      return this.longPollFallback?.() === !0;
+    } catch (e) {
+      return (q("error", "cli_sse_long_poll_fallback_threw"), i(e), !1);
+    }
+  }
+  resetLivenessTimer() {
+    ((this.lastLivenessEvidenceAtMs = Date.now()),
+      (this.lastLivenessEvidenceMonotonicMs = performance.now()),
+      this.clearLivenessTimer(),
+      (this.livenessTimer = setTimeout(
+        this.onLivenessTimeout,
+        this.livenessTimeoutMs(),
+      )));
+  }
+  keepaliveIntervalMs() {
+    return (
+      (this.echoedIntervalSeconds ?? this.advertisedMaxIntervalSeconds ?? Ct) *
+      1000
+    );
+  }
+  livenessTimeoutMs() {
+    return this.longestExpectedSilenceMs() + lo;
+  }
+  longestExpectedSilenceMs() {
+    return Math.max(
+      this.keepaliveIntervalMs(),
+      (this.longPollEchoedSeconds ?? 0) * 1000,
+    );
+  }
+  keepaliveDiagnosticFields() {
+    return this.advertisedMaxIntervalSeconds === void 0
+      ? {}
+      : {
+          keepalive_tolerance_s: rn * this.advertisedMaxIntervalSeconds,
+          keepalive_interval_s: this.keepaliveIntervalMs() / 1000,
+          liveness_timeout_s: this.livenessTimeoutMs() / 1000,
+          keepalive_interval_echoed: this.echoedIntervalSeconds !== void 0,
+        };
+  }
+  clearLivenessTimer() {
+    if (this.livenessTimer)
+      (clearTimeout(this.livenessTimer), (this.livenessTimer = null));
+  }
+  async write(e) {
+    let r = this.getAuthHeaders();
+    if (Object.keys(r).length === 0) {
+      (t("SSETransport: No session token available for POST"),
+        q("warn", "cli_sse_post_no_token"));
+      return;
+    }
+    let o = {
+      ...r,
+      "Content-Type": "application/json",
+      "anthropic-version": "2023-06-01",
+      "anthropic-client-platform": c_(),
+      "User-Agent": Ri(),
+    };
+    t(`SSETransport: POST body keys=${Object.keys(e).join(",")}`);
+    for (let h = 1; h <= Fe; h++) {
+      try {
+        let g = await _n.post(this.postUrl, e, {
+          headers: o,
+          validateStatus: wo,
+        });
+        if (g.status === 200 || g.status === 201) {
+          t(`SSETransport: POST success type=${e.type}`);
+          return;
+        }
+        if (
+          (t(`SSETransport: POST ${g.status} body=${_(g.data).slice(0, 200)}`),
+          g.status >= 400 && g.status < 500 && g.status !== 429)
+        ) {
+          (t(
+            `SSETransport: POST returned ${g.status} (client error), not retrying`,
+          ),
+            q("warn", "cli_sse_post_client_error", { status: g.status }));
+          return;
+        }
+        (t(`SSETransport: POST returned ${g.status}, attempt ${h}/${Fe}`),
+          q("warn", "cli_sse_post_retryable_error", {
+            status: g.status,
+            attempt: h,
+          }));
+      } catch (g) {
+        (t(`SSETransport: POST error: ${d(g)}, attempt ${h}/${Fe}`),
+          q("warn", "cli_sse_post_network_error", { attempt: h }));
+      }
+      if (h === Fe) {
+        (t(`SSETransport: POST failed after ${Fe} attempts, continuing`),
+          q("warn", "cli_sse_post_retries_exhausted"));
+        return;
+      }
+      await K(Tc({ attempt: h, baseMs: vo, capMs: go }));
+    }
+  }
+  isConnectedStatus() {
+    return this.state === "connected";
+  }
+  isReadStreamRecentlyAlive() {
+    return (
+      this.state === "connected" &&
+      Date.now() - this.lastLivenessEvidenceAtMs <
+        this.getReadStreamRecentLivenessWindowMs()
+    );
+  }
+  lastLivenessEvidenceAt() {
+    return this.lastLivenessEvidenceAtMs;
+  }
+  toolHostRequestOffer() {
+    return this.currentToolHostRequestOffer;
+  }
+  noteToolHostRequestRefused() {
+    this.currentToolHostRequestOffer = "refused_earlier";
+  }
+  lastFrameReadAt() {
+    return this.lastFrameReadAtMs === 0 ? void 0 : this.lastFrameReadAtMs;
+  }
+  getReadStreamRecentLivenessWindowMs() {
+    return this.longestExpectedSilenceMs() + uo;
+  }
+  isClosedStatus() {
+    return this.state === "closed";
+  }
+  setOnData(e) {
+    this.onData = e;
+  }
+  setOnUserFrameReceived(e) {
+    this.onUserFrameReceived = e;
+  }
+  setOnClose(e) {
+    this.onCloseCallback = e;
+  }
+  setNonOriginRejectionPolicy(e) {
+    this.nonOriginPolicy = e;
+  }
+  setOnEvent(e) {
+    this.onEventCallback = e;
+  }
+  setOnDelivered(e) {
+    this.onDeliveredCallback = e;
+  }
+  getSessionWriters() {
+    return this.connectionSessionWriters?.writers;
+  }
+  getSessionWritersStatement() {
+    return this.connectionSessionWriters;
+  }
+  sessionWritersOf(e) {
+    return this.frameSessionWriters.get(e);
+  }
+  setOnDiagnostic(e) {
+    this.onDiagnostic = e;
+  }
+  setEventFilter(e) {
+    this.eventFilter = e;
+  }
+  setWorkerAttestationPolicySink(e) {
+    this.workerAttestationPolicySink = e;
+  }
+  requiresStreamEvidence() {
+    return this.requireStreamEvidence;
+  }
+  setOnFrameRefused(e) {
+    this.onFrameRefused = e;
+  }
+  setOnEventVetoed(e) {
+    this.onEventVetoed = e;
+  }
+  setOnHeartbeatProbe(e) {
+    this.onHeartbeatProbe = e;
+  }
+  setOnOwnerPresent(e) {
+    this.onOwnerPresent = e;
+  }
+  setOnCheckpointRequest(e) {
+    this.onCheckpointRequest = e;
+  }
+  setOnSessionClaimed(e) {
+    this.onSessionClaimed = e;
+  }
+  setOnMemoryAskStarted(e) {
+    this.onMemoryAskStarted = e;
+  }
+  setOnPrefetchAttachmentsAsked(e) {
+    this.onPrefetchAttachmentsAsked = e;
+  }
+  setOnDeviceStatusPublished(e) {
+    this.onDeviceStatusPublished = e;
+  }
+  setOnReconnected(e) {
+    this.onReconnected = e;
+  }
+  close() {
+    if (this.reconnectTimer)
+      (clearTimeout(this.reconnectTimer), (this.reconnectTimer = null));
+    if (
+      (this.clearLivenessTimer(),
+      this.stopListeningForSleep?.(),
+      this.frameWaitTimer)
+    )
+      (clearTimeout(this.frameWaitTimer), (this.frameWaitTimer = null));
+    ((this.state = "closing"),
+      (this.nonOriginStreak = null),
+      (this.held = null),
+      (this.isHeldForRenewal = !1),
+      this.abortController?.abort(),
+      (this.abortController = null));
+  }
+  [Symbol.dispose]() {
+    this.close();
+  }
+}
+function At(e, r) {
+  if (r.Cookie) delete e.Authorization;
+  if (r.Authorization) (delete e.Cookie, delete e["X-Organization-Uuid"]);
+}
+function dn(e) {
+  return Math.min(Math.max(e, Ct), ao);
+}
+function Oo(e) {
+  let r = e.pathname;
+  if (r.endsWith("/stream")) r = r.slice(0, -7);
+  return `${e.protocol}//${e.host}${r}`;
+}
+var bXs = 180000,
+  Io = 90000;
+async function wXs(e) {
+  let {
+      sessionUrl: r,
+      ingressToken: o,
+      sessionId: h,
+      initialSequenceNum: g,
+      getAuthToken: y,
+    } = e,
+    R = () => e.inboundReadReceipts?.() === !0,
+    k;
+  if (y) k = () => HRe(y());
+  else hvo(o);
+  let U = e.epoch ?? (await H9t(r, o));
+  t(
+    `[bridge:repl] CCR v2: worker sessionId=${h} epoch=${U}${e.epoch !== void 0 ? " (from /bridge)" : " (via registerWorker)"}`,
+  );
+  let P = new URL(r);
+  P.pathname = P.pathname.replace(/\/$/, "") + "/worker/events/stream";
+  let x = new dqr(
+      P,
+      {},
+      {
+        sessionId: h,
+        initialSequenceNum: g,
+        getAuthHeaders: k,
+        connectTimeoutMs: e.sseConnectTimeoutMs,
+        sseKeepaliveMaxIntervalSeconds: e.sseKeepaliveMaxIntervalSeconds,
+        longPollFallback: e.longPollFallback,
+        initialLongPollMode: e.initialLongPollMode,
+        leavesPool: e.leavesPool,
+      },
+    ),
+    L = !e.outboundOnly,
+    A = (e.selfHealHeartbeats ?? !1) && L,
+    G = (e.nonOrigin403Retry ?? !1) && L,
+    z = G && A;
+  if (G)
+    x.setNonOriginRejectionPolicy({
+      windowMs: bXs,
+      maxGapMs: Io,
+      onRecovered: e.onNonOriginRejectionRecovered,
+    });
+  let H,
+    J = !1;
+  function se(I, ie, Q, F) {
+    if (J) return;
+    J = !0;
+    try {
+      (Y.close({
+        goodbye: !1,
+        retainUndeliveredClientEvents: e.retainUndeliveredOnClose === !0,
+      }),
+        x.close());
+    } catch (D) {
+      i(D);
+    }
+    try {
+      H?.(I, ie, Q, F);
+    } catch (D) {
+      i(D);
+    }
+  }
+  let Y = new Uj(x, new URL(r), {
+    getAuthHeaders: k,
+    heartbeatIntervalMs: e.heartbeatIntervalMs,
+    heartbeatJitterFraction: e.heartbeatJitterFraction,
+    leavesPool: e.leavesPool,
+    advertiseHeartbeatProbeSupport:
+      (e.advertiseHeartbeatProbeSupport ?? !1) && L,
+    uploadTrim: e.uploadTrim,
+    keepsRequestId: e.keepsRequestId,
+    uploadHoldMarker: e.uploadHoldMarker,
+    artifactSocketIds: e.artifactSocketIds,
+    followsServedPolicy: e.followsServedPolicy,
+    initialWorkerStatus: e.initialWorkerStatus,
+    initialTurn: e.initialTurn,
+    initExternalMetadata: e.initExternalMetadata,
+    ...(e.processExiting && { processExiting: e.processExiting }),
+    beatOnStaleReconnect: (e.beatOnStaleReconnect ?? !1) && L,
+    idleTracker: e.idleTracker,
+    heartbeatGap: e.heartbeatGap,
+    beatOnReactivation: (e.beatOnReactivation ?? !1) && L,
+    skipRedundantHeartbeats: e.skipRedundantHeartbeats,
+    streamEventFlushIntervalMs: e.streamEventFlushIntervalMs,
+    streamEventFirstFlushMs: e.streamEventFirstFlushMs,
+    gzipRequestBodyFetch: e.gzipRequestBodyFetch,
+    noSubscriberStreamEventFlushIntervalMs:
+      e.noSubscriberStreamEventFlushIntervalMs,
+    noSubscriberUploadHoldMs: e.noSubscriberUploadHoldMs,
+    dropUnwatchedStreamEvents: e.dropUnwatchedStreamEvents,
+    nonOrigin403Transient: z,
+    internalEventUploader: e.internalEventUploader,
+    stateReadEndsAtRegistration: e.onConnectNeedsRecord !== !0,
+    onEpochMismatch: (I) => {
+      let ie = e.causeTypedCloseCodes ? r6o[I] : 4090;
+      throw (
+        t(
+          `[bridge:repl] CCR v2: terminal request-path condition (${I}) \u2014 closing with ${ie} for ${ie === 4094 ? "auth recovery" : "poll-loop recovery"}`,
+        ),
+        se(ie, I),
+        Error("terminal request-path condition")
+      );
+    },
+    onRequestAuthOk: e.onRequestAuthOk,
+    ...(A && {
+      onHeartbeatLost: () => {
+        if (J) return;
+        (t(
+          "[bridge:repl] CCR v2: heartbeats failing while SSE healthy \u2014 closing for transport rebuild",
+          { level: "warn" },
+        ),
+          se(4093));
+      },
+    }),
+  });
+  (x.setOnEvent((I) => {
+    if (e.processExiting?.() && bt(I)) return;
+    if ((Y.reportDelivery(I.event_id, "received"), !(R() && $Xa(I.event_id))))
+      Y.reportDelivery(I.event_id, "processed");
+  }),
+    x.setOnDelivered((I) => Ks(I.payload)),
+    x.setEventFilter((I) => {
+      if (Mho(I)) return (e.onEventJudged?.(I, !0), !0);
+      let ie = R() ? BXa(I) : !1;
+      if (!ie) e.onEventJudged?.(I, !1);
+      return ie;
+    }));
+  let oe,
+    de = !1;
+  return {
+    write(I) {
+      return Y.writeEvent(I);
+    },
+    writeBatch(I) {
+      return Y.writeEvents(I);
+    },
+    close(I) {
+      if (
+        ((J = !0),
+        Y.close({
+          goodbye: I?.goodbye,
+          retainUndeliveredClientEvents: I?.retainUndelivered,
+        }),
+        !I?.retainUndelivered)
+      )
+        Y.discardUndeliveredClientEvents();
+      x.close();
+    },
+    takeUndeliveredEvents() {
+      return Y.takeUndeliveredClientEvents();
+    },
+    discardUndeliveredEvents() {
+      return Y.discardUndeliveredClientEvents();
+    },
+    adoptUndeliveredEvents(I) {
+      Y.adoptClientEvents(I);
+    },
+    flushGoodbye() {
+      return Y.flushGoodbye();
+    },
+    isConnectedStatus() {
+      return de;
+    },
+    setOnData(I) {
+      x.setOnData(I);
+    },
+    setOnClose(I) {
+      ((H = I),
+        x.setOnClose((ie, Q) => {
+          se(ie ?? 4092, void 0, Q);
+        }));
+    },
+    setOnConnect(I) {
+      oe = I;
+    },
+    getLastSequenceNum() {
+      return x.getLastSequenceNum();
+    },
+    isLongPolling() {
+      return x.isLongPolling();
+    },
+    lastFrameReadAt() {
+      return x.lastFrameReadAt();
+    },
+    getEpoch() {
+      return U;
+    },
+    reportState(I, ie, Q) {
+      Y.reportState(I, ie, Q);
+    },
+    reportTurn(I) {
+      Y.reportTurn(I);
+    },
+    reportMetadata(I) {
+      Y.reportMetadata(I);
+    },
+    reportInternalMetadata(I) {
+      if (J) return !1;
+      return (Y.reportInternalMetadata(I), !0);
+    },
+    droppedDurableBatchCount() {
+      return Y.droppedDurableBatches;
+    },
+    flushWorkerState() {
+      return Y.flushWorkerState();
+    },
+    droppedWorkerStatePatchCount() {
+      return Y.droppedWorkerStatePatches;
+    },
+    reportDelivery(I, ie) {
+      Y.reportDelivery(I, ie);
+    },
+    setStreamEventFlushIntervalMs(I) {
+      Y.setStreamEventFlushIntervalMs(I);
+    },
+    setStreamEventFirstFlushMs(I) {
+      Y.setStreamEventFirstFlushMs(I);
+    },
+    setNoSubscriberStreamEventFlushIntervalMs(I) {
+      Y.setNoSubscriberStreamEventFlushIntervalMs(I);
+    },
+    setNoSubscriberUploadHoldMs(I) {
+      Y.setNoSubscriberUploadHoldMs(I);
+    },
+    setDropUnwatchedStreamEvents(I) {
+      Y.setDropUnwatchedStreamEvents(I);
+    },
+    setSubscribersReportedListener(I) {
+      Y.setSubscribersReportedListener(I);
+    },
+    mayHoldUploads() {
+      return Y.mayHoldUploads();
+    },
+    flush(I) {
+      return Y.flush(I);
+    },
+    flushDeliveryAcks(I) {
+      return Y.flushDeliveryAcks(I);
+    },
+    flushInternalEvents(I) {
+      return Y.flushInternalEvents(I);
+    },
+    getUploadBacklog() {
+      return Y.uploadBacklog();
+    },
+    getInternalEventBacklog() {
+      return {
+        pending: Y.internalEventsPending,
+        droppedBatches: Y.droppedInternalBatches,
+      };
+    },
+    trackFirstFrameUpload(I) {
+      return Y.trackFirstFrameUpload(I);
+    },
+    getInternalEventWriter() {
+      return (I, ie, Q) => Y.writeInternalEvent(I, cJa(ie), Q);
+    },
+    getInternalEventReaders() {
+      return {
+        readMain: (I) =>
+          I ? Y.readInternalEventsForCatchUp(I) : Y.readInternalEvents(),
+        readSubagents: () => Y.readSubagentInternalEvents(),
+        readSubagent: (I, ie) => Y.readAgentInternalEvents(I, ie),
+      };
+    },
+    getInternalEventsPort() {
+      return {
+        epoch: () => Y.getWorkerEpoch(),
+        postBatch: (I, ie) => Y.postInternalEventsBatch(I, ie),
+        listPage: (I, ie) => Y.getInternalEventsPage(I, ie),
+      };
+    },
+    connect() {
+      Y.initialize(U).then(
+        (I) => {
+          if (J) return;
+          if (
+            ((de = !0),
+            t(
+              `[bridge:repl] v2 transport ready for writes (epoch=${U}); opening the read stream`,
+            ),
+            oe?.(I),
+            !e.outboundOnly && !J)
+          )
+            x.connect();
+        },
+        (I) => {
+          (t(`[bridge:repl] CCR v2 initialize failed: ${d(I)}`, {
+            level: "error",
+          }),
+            se(
+              4091,
+              void 0,
+              void 0,
+              I instanceof _Ve && I.reason === "worker_register_failed"
+                ? { httpStatus: I.httpStatus, noAnswer: I.noAnswer }
+                : void 0,
+            ));
+        },
+      );
+    },
+  };
+}
+export {
+  o1e,
+  Zzo,
+  MIa,
+  e6o,
+  HIa,
+  DIa,
+  t6o,
+  eEn,
+  n6o,
+  _Ve,
+  LIa,
+  r6o,
+  mXs,
+  gpt,
+  o6o,
+  Uj,
+  hXs,
+  $Qn,
+  BQn,
+  sqr,
+  iqr,
+  s6o,
+  aqr,
+  NIa,
+  FIa,
+  lqr,
+  i6o,
+  gXs,
+  _Xs,
+  yXs,
+  SXs,
+  dqr,
+  bXs,
+  wXs,
+};

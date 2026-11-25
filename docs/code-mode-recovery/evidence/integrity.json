@@ -1,0 +1,48 @@
+{
+  "2.1.329": {
+    "verified_modules": 3657,
+    "verified_bytes": 72808784,
+    "parsed_javascript_modules": 3416,
+    "static_embedded_edges": 393031,
+    "missing_static_imports": [],
+    "literal_references_not_in_archive": [],
+    "formatted_modules": 115,
+    "source_map_count": 0,
+    "feature_marker_matches": 111,
+    "conservative_dependency_closure": 3650
+  },
+  "2.1.330": {
+    "verified_modules": 3776,
+    "verified_bytes": 74196409,
+    "parsed_javascript_modules": 3534,
+    "static_embedded_edges": 418861,
+    "missing_static_imports": [],
+    "literal_references_not_in_archive": [],
+    "formatted_modules": 118,
+    "source_map_count": 0,
+    "feature_marker_matches": 117,
+    "conservative_dependency_closure": 3769
+  },
+  "generated_helpers": {
+    "file.prelude.js-rv1w439g.txt": {
+      "bytes": 7364,
+      "sha256": "7326e450b4446dd86f44967a5e0c5ade6790a23117ad9bf3144b973a8aece154",
+      "identical_between_versions": true
+    },
+    "running.prelude.js-k1q1qyet.txt": {
+      "bytes": 1731,
+      "sha256": "1c7efa4d8c70af444819982eed4a88c303136d9d506310eee5e3a97e1e69feca",
+      "identical_between_versions": true
+    },
+    "shell.prelude.js-77bab478.txt": {
+      "bytes": 19791,
+      "sha256": "114140b365439b445966d2a7d4e92a59c501652fa669cc375b87601f856fbee4",
+      "identical_between_versions": true
+    },
+    "team.prelude.js-jyv8vsvj.txt": {
+      "bytes": 2966,
+      "sha256": "95f1d3b17170fbe852d01f120afee3f131f02e3ce09b462ee1f54cebb7ea45a4",
+      "identical_between_versions": true
+    }
+  }
+}

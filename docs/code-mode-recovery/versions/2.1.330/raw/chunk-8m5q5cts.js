@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{WPr,cXe,Qzn,QU,ge}from"/$bunfs/root/chunk-865at33z.js";import{fc}from"/$bunfs/root/chunk-8hfdvrr1.js";import{vm,_e,Mr}from"/$bunfs/root/chunk-2yx6c1y2.js";import{Ko}from"/$bunfs/root/chunk-xzvhvaa2.js";import{Br}from"/$bunfs/root/chunk-r3mm3x33.js";var HYe=["theme","editorMode","verbose","preferredNotifChannel","autoCompactEnabled","autoScrollEnabled","fileCheckpointingEnabled","showTurnDuration","showMessageTimestamps","terminalProgressBarEnabled","todoFeatureEnabled","teammateMode","remoteControlAtStartup","autoUploadSessions","inputNeededNotifEnabled","agentPushNotifEnabled"];function ll(o,r,s){let i=Ko();for(let e=i.length-1;e>=0;e--){let t=i[e],n=_e(t)?.[o];if(fc(n,s?[s]:[])===void 0)continue;if(t==="projectSettings"&&i.includes("userSettings")&&vm())continue;return{value:n,source:t}}if(HYe.includes(o)){let e=o,t=ge()[e];if(t!==void 0&&t!==QU[e]){let n=WPr(e)?Qzn(e,t):cXe(e,t);if(n!==void 0)return{value:n,source:"legacyGlobalConfig"}}}return{value:r,source:"default"}}function KP({error:o}){if(o)Br().saveFailed.emit()}function Ule(o,r,s){Mr("userSettings",{[o]:r},void 0,s).then(KP)}
+export{HYe,ll,KP,Ule};

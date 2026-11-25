@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{k}from"/$bunfs/root/chunk-0tz5nchn.js";import{Je,r}from"/$bunfs/root/chunk-0b3aev3g.js";import{Oo,ut}from"/$bunfs/root/chunk-4hvh0e00.js";import{h9}from"/$bunfs/root/chunk-fp4f4tfz.js";import{lgn}from"/$bunfs/root/chunk-rdkhxvf9.js";import{Ya}from"/$bunfs/root/chunk-syqny3n9.js";import{e}from"/$bunfs/root/chunk-9kwtmrrn.js";function l4(y){let i=k(18),{label:s,onPress:a,onCancel:l}=y,{refuseInput:n}=h9();if(Je()){let o;if(i[0]!==a||i[1]!==n)o=function(d){if(d.key==="return"&&d.name==="return"){if(d.preventDefault(),!n())a()}},i[0]=a,i[1]=n,i[2]=o;else o=i[2];let t;if(i[3]!==s)t=e(lgn,{active:!0,children:e(r,{children:s})}),i[3]=s,i[4]=t;else t=i[4];let u;if(i[5]!==o||i[6]!==t)u=e(Ya,{onKeyDown:o,children:t}),i[5]=o,i[6]=t,i[7]=u;else u=i[7];return u}let o;if(i[8]!==s)o=[{label:s,value:"press"}],i[8]=s,i[9]=o;else o=i[9];let t;if(i[10]!==a||i[11]!==n)t=()=>{if(n()){return!1}a()},i[10]=a,i[11]=n,i[12]=t;else t=i[12];let u;if(i[13]!==l||i[14]!==n||i[15]!==o||i[16]!==t)u=e(ut,{options:o,hideIndexes:!0,disablePrintableKeybindings:!0,selectedValue:Oo,refuseInput:n,onChange:t,onCancel:l}),i[13]=l,i[14]=n,i[15]=o,i[16]=t,i[17]=u;else u=i[17];return u}
+export{l4};

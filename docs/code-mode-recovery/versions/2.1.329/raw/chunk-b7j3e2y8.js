@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{H6,nc}from"/$bunfs/root/chunk-hrrs5w99.js";async function DHr(e,n,i){if(!(e instanceof Error)||!e.message.startsWith("SDK auth failed: ")||!(e.cause instanceof Error))return!1;let{cause:t}=e,s=import.meta.require("/$bunfs/root/chunk-a5tfrce8.js").mcpAuthModule().classifySdkAuthFailure(e.message,t);if(s!=="dcr_failed"&&s!=="dcr_rejected")return!1;if(!("status"in t)&&!("errorCode"in t))return t.message==="Incompatible auth server: does not support dynamic client registration";if(!((await H6())?.[nc(n,i)]?.discoveryState?.oauthMetadataFound??i.oauth?.authServerMetadataUrl!==void 0))return!1;let r=a(t);if(r!==void 0)return r>=400&&r<500&&r!==408&&r!==429;switch("errorCode"in t?t.errorCode:void 0){case"invalid_client_metadata":case"invalid_client":case"unauthorized_client":return!0;default:return!1}}function bsa(e){return e instanceof Error&&e.cause instanceof Error&&a(e.cause)===410}function a(e){let n="status"in e?e.status:Number(/^HTTP (\d{3}): Invalid OAuth error response: /.exec(e.message)?.[1]);return typeof n==="number"&&Number.isFinite(n)?n:void 0}
+export{DHr,bsa};

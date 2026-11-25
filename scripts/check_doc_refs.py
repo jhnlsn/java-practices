@@ -17,10 +17,15 @@ EXTENSIONS = "java|kts|kt|sql|yaml|yml|toml|md|xml|py"
 PATTERN = re.compile(rf"(?:docs|examples|scripts|\.github)/[A-Za-z0-9_./-]+\.(?:{EXTENSIONS})\b")
 
 SKIP_DIRS = {".git", "build", ".gradle", ".claude"}
+# Recovered upstream documents retain links into their own source tree. Their
+# contents are verified by the archive verifier rather than as repo-owned docs.
+VENDORED_DOC_ROOT = ROOT / "docs/code-mode-recovery/versions"
 
 
 def markdown_files():
     for path in ROOT.rglob("*.md"):
+        if path.is_relative_to(VENDORED_DOC_ROOT):
+            continue
         if not SKIP_DIRS.intersection(part for part in path.parts):
             yield path
 

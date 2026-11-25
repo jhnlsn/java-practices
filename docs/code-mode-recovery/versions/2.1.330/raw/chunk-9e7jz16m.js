@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{Lvt}from"/$bunfs/root/chunk-k59mf0h7.js";import{Xe,oo}from"/$bunfs/root/chunk-8bkqeb5d.js";import{_s,HF}from"/$bunfs/root/chunk-2t5dst6n.js";import{Ns,po}from"/$bunfs/root/chunk-z8dyhx9v.js";import{Yr,Da}from"/$bunfs/root/chunk-bzyb60p0.js";import{$l}from"/$bunfs/root/chunk-vs99e3g5.js";import{I,y,G}from"/$bunfs/root/chunk-bs4h6795.js";G();G();function h(){let[o]=y(()=>Lvt()?HF:_s);return o}function EZe(o,{selfOpened:u,hasOpeningGrace:r=u,onCancelled:S,owedAtExit:b}){let[C,s]=y(!1),n=I(!1),[c,R]=y(!1),e=I(!1),i=h(),E=oo(r?i:null),d=!r||E,x=Xe()?!0:!1,A=Ns(i),{refusedWithin:g,noteRefused:v}=po();function w(){if(r&&(A()||g(i)))return v(),!0;return!1}let a=$l(()=>{if(e.current)return;let t=n.current;n.current=!0;let l=S(t);if(l===void 0){e.current=!0;let p=b?.(t);if(p===void 0){Da(1);return}p.then((m)=>Yr(1,"other",m===void 0?void 0:{finalMessage:m}),()=>Yr(1));return}s(!0),f(l)},void 0,u&&!c);function _(){if(n.current||!d)return!1;return n.current=!0,s(!0),!0}function f(t){if(e.current)return;e.current=!0,R(!0),o(t)}return{choicesDisabled:!d&&!x,decided:C,take:_,refuseInput:w,settled:()=>e.current,handBack:f,exit:a,exitHintShowing:a.pending&&!c}}
+export{EZe};

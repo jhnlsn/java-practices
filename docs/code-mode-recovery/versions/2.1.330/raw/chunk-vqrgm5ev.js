@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{On}from"/$bunfs/root/chunk-865at33z.js";import{Pn}from"/$bunfs/root/chunk-qwbhh2k3.js";import{T}from"/$bunfs/root/chunk-ma3kja9f.js";import{xs}from"/$bunfs/root/chunk-bp9b0hd8.js";import{M}from"/$bunfs/root/chunk-4smdap7r.js";function AAe(a){return M(a.flatMap((t)=>t.type==="attachment"?t.attachment?.type==="credential_org"?[t.attachment.organizationUuid]:[]:t.type==="system"&&t.subtype==="compact_boundary"?t.compactMetadata?.preCompactOrganizations??[]:[]).map((t)=>String(t).toLowerCase()).reverse()).reverse()}function eOi(a){return a.some((t)=>On(t)&&t.compactMetadata?.preCompactOrganizationsCoverStart!==!0)||a.find((t)=>AAe([t]).length>0||t.type==="assistant"&&t.message?.model!==xs)?.type==="assistant"}function tOi(a){return a.some((t)=>On(t)&&t.compactMetadata?.preCompactOrganizationsCoverStart===void 0)}function RAe(a,t){let o=AAe(t);if(o.length>0)a.compactMetadata.preCompactOrganizations=o;a.compactMetadata.preCompactOrganizationsCoverStart=tOi(t)?void 0:!eOi(t)}function edl(a){return T(a.compactMetadata)?{...a,compactMetadata:Pn(a.compactMetadata,["preCompactOrganizations","preCompactOrganizationsCoverStart"])}:a}
+export{AAe,eOi,tOi,RAe,edl};

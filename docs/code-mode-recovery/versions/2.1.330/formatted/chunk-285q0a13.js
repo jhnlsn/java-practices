@@ -1,0 +1,3050 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import { jVt } from "/$bunfs/root/chunk-tvttgr51.js";
+import "/$bunfs/root/chunk-69qhefwa.js";
+import { ht } from "/$bunfs/root/chunk-mzmcvr6c.js";
+import "/$bunfs/root/chunk-kr68f0mb.js";
+import { Te, ns, qEe, Y, st } from "/$bunfs/root/chunk-f9x2f6cx.js";
+import "/$bunfs/root/chunk-h3s25p5k.js";
+import { f, fe } from "/$bunfs/root/chunk-78g0060s.js";
+import { Ie, A, d, w, Cr, HD, rH } from "/$bunfs/root/chunk-jv7av99m.js";
+import { K, Tn } from "/$bunfs/root/chunk-5appeerh.js";
+import "/$bunfs/root/chunk-z6pfqf6e.js";
+import "/$bunfs/root/chunk-psw95195.js";
+import { a } from "/$bunfs/root/chunk-y53wbr8a.js";
+import { u, l } from "/$bunfs/root/chunk-cqa9hrgx.js";
+import { t, _ } from "/$bunfs/root/chunk-w578pjby.js";
+import "/$bunfs/root/chunk-42tcgre6.js";
+import "/$bunfs/root/chunk-2gtmjt3y.js";
+import "/$bunfs/root/chunk-72r477hv.js";
+import { s } from "/$bunfs/root/chunk-c203g5kd.js";
+import "/$bunfs/root/chunk-ephf358x.js";
+import "/$bunfs/root/chunk-xppq9kzc.js";
+import "/$bunfs/root/chunk-kpby9tcv.js";
+import "/$bunfs/root/chunk-ndrgvsn7.js";
+import { FB } from "/$bunfs/root/chunk-7cfjrnwy.js";
+import "/$bunfs/root/chunk-kx2fp6pc.js";
+import { ute } from "/$bunfs/root/chunk-sah8dzn4.js";
+import "/$bunfs/root/chunk-k449cc64.js";
+import "/$bunfs/root/chunk-cg8dqz0a.js";
+import "/$bunfs/root/chunk-ds5wjsjg.js";
+import "/$bunfs/root/chunk-pm6bf5qr.js";
+import { QF } from "/$bunfs/root/chunk-w2hrk3t1.js";
+import {
+  NN,
+  s_,
+  rD,
+  CNe,
+  B4,
+  Qr,
+  Sr,
+  G9,
+  b,
+  Lt,
+} from "/$bunfs/root/chunk-865at33z.js";
+import "/$bunfs/root/chunk-z8cg6ntt.js";
+import "/$bunfs/root/chunk-dw5px5e0.js";
+import "/$bunfs/root/chunk-xzvhvaa2.js";
+import "/$bunfs/root/chunk-44yfdc64.js";
+import "/$bunfs/root/chunk-w5s307zm.js";
+import "/$bunfs/root/chunk-t7fzcstv.js";
+import "/$bunfs/root/chunk-t39bs2jr.js";
+import "/$bunfs/root/chunk-18rsj2ts.js";
+import "/$bunfs/root/chunk-9zdrdv25.js";
+import "/$bunfs/root/chunk-gd77dyw4.js";
+import "/$bunfs/root/chunk-7fsmgfxx.js";
+import "/$bunfs/root/chunk-aka192fb.js";
+import "/$bunfs/root/chunk-09gzjq1e.js";
+import "/$bunfs/root/chunk-1frjyv5h.js";
+import "/$bunfs/root/chunk-43nz5n02.js";
+import "/$bunfs/root/chunk-0jve1fep.js";
+import { p } from "/$bunfs/root/chunk-2cbgkbm2.js";
+import "/$bunfs/root/chunk-trwykz8a.js";
+import { nA, Sa } from "/$bunfs/root/chunk-3t7ve0wy.js";
+import "/$bunfs/root/chunk-qdcbcsg7.js";
+import "/$bunfs/root/chunk-418mqjww.js";
+import "/$bunfs/root/chunk-xcgcdx61.js";
+import "/$bunfs/root/chunk-yz5b8aaa.js";
+import "/$bunfs/root/chunk-2mwshd9r.js";
+import "/$bunfs/root/chunk-f2dee02n.js";
+import "/$bunfs/root/chunk-epy4sc29.js";
+import "/$bunfs/root/chunk-q3a5dy2r.js";
+import "/$bunfs/root/chunk-fbnv54pa.js";
+import "/$bunfs/root/chunk-dqanqm2x.js";
+import { yr } from "/$bunfs/root/chunk-q7qjcthc.js";
+import "/$bunfs/root/chunk-hkvzj051.js";
+import "/$bunfs/root/chunk-8hfdvrr1.js";
+import "/$bunfs/root/chunk-khxw3ng0.js";
+import "/$bunfs/root/chunk-pbteexar.js";
+import "/$bunfs/root/chunk-h4xqg980.js";
+import "/$bunfs/root/chunk-03kvdj1s.js";
+import "/$bunfs/root/chunk-tp3c5q2s.js";
+import "/$bunfs/root/chunk-r3kja8v6.js";
+import "/$bunfs/root/chunk-qebpc5de.js";
+import "/$bunfs/root/chunk-px0hhsq7.js";
+import "/$bunfs/root/chunk-6sjp0rab.js";
+import "/$bunfs/root/chunk-akwvpp7y.js";
+import "/$bunfs/root/chunk-mgh1y10w.js";
+import { nF } from "/$bunfs/root/chunk-n2dbhmj2.js";
+import { kRt, KC } from "/$bunfs/root/chunk-2yx6c1y2.js";
+import { mHr, hHr } from "/$bunfs/root/chunk-6mfepmbb.js";
+import "/$bunfs/root/chunk-rpdn91q1.js";
+import "/$bunfs/root/chunk-6e68m1dj.js";
+import "/$bunfs/root/chunk-k5jn5rx9.js";
+import "/$bunfs/root/chunk-zhr7rpv7.js";
+import "/$bunfs/root/chunk-0yc3wy8b.js";
+import "/$bunfs/root/chunk-7n1tpv84.js";
+import "/$bunfs/root/chunk-nnk8tdzz.js";
+import "/$bunfs/root/chunk-ch6jxpf8.js";
+import "/$bunfs/root/chunk-d57v19zt.js";
+import { Jr } from "/$bunfs/root/chunk-xfj2cwfv.js";
+import "/$bunfs/root/chunk-3jjr3wje.js";
+import "/$bunfs/root/chunk-fzp6hh55.js";
+import "/$bunfs/root/chunk-y6mqk49g.js";
+import "/$bunfs/root/chunk-cbnm4p23.js";
+import "/$bunfs/root/chunk-zzrn5zap.js";
+import "/$bunfs/root/chunk-hazyxdac.js";
+import "/$bunfs/root/chunk-kbsax5x5.js";
+import "/$bunfs/root/chunk-2zeyvjwb.js";
+import "/$bunfs/root/chunk-9b4aq7fb.js";
+import "/$bunfs/root/chunk-np189awg.js";
+import "/$bunfs/root/chunk-gq1dr8pm.js";
+import "/$bunfs/root/chunk-szvrpg0x.js";
+import { Ks, lt, Dt } from "/$bunfs/root/chunk-rb36kwbn.js";
+import "/$bunfs/root/chunk-jmxgdf7r.js";
+import "/$bunfs/root/chunk-r9kxf52b.js";
+import "/$bunfs/root/chunk-702cfzzh.js";
+import "/$bunfs/root/chunk-n25gt70y.js";
+import "/$bunfs/root/chunk-0f2gasyz.js";
+import "/$bunfs/root/chunk-yesjd46y.js";
+import "/$bunfs/root/chunk-4x1jja6d.js";
+import "/$bunfs/root/chunk-3grsnd7a.js";
+import "/$bunfs/root/chunk-0ha8wex8.js";
+import "/$bunfs/root/chunk-f64qna2j.js";
+import "/$bunfs/root/chunk-t3er6wbx.js";
+import "/$bunfs/root/chunk-8f66wxnw.js";
+import "/$bunfs/root/chunk-qbrmmydq.js";
+import "/$bunfs/root/chunk-49rkmh8j.js";
+import "/$bunfs/root/chunk-ay36ksef.js";
+import "/$bunfs/root/chunk-kypvvv9j.js";
+import "/$bunfs/root/chunk-n5qd9b6p.js";
+import "/$bunfs/root/chunk-8j3h6yzg.js";
+import "/$bunfs/root/chunk-3hr8g93j.js";
+import "/$bunfs/root/chunk-hr2stdq7.js";
+import "/$bunfs/root/chunk-r8478wtb.js";
+import { Yd } from "/$bunfs/root/chunk-cee6q0wn.js";
+import "/$bunfs/root/chunk-8tg38aha.js";
+import "/$bunfs/root/chunk-drk264d0.js";
+import "/$bunfs/root/chunk-wtm85h0y.js";
+import "/$bunfs/root/chunk-nr0e9cdy.js";
+import "/$bunfs/root/chunk-8nvd6fqx.js";
+import "/$bunfs/root/chunk-r6r2wdsw.js";
+import { Owe, Rn, Dp } from "/$bunfs/root/chunk-2nv4wrez.js";
+import "/$bunfs/root/chunk-fwgyarbe.js";
+import { v9e, J6 } from "/$bunfs/root/chunk-w82axegn.js";
+import "/$bunfs/root/chunk-syr33dp2.js";
+import "/$bunfs/root/chunk-46fskppy.js";
+import "/$bunfs/root/chunk-wj4me9k5.js";
+import { tn, vn } from "/$bunfs/root/chunk-4vsz8a99.js";
+import "/$bunfs/root/chunk-wgyw76w5.js";
+import "/$bunfs/root/chunk-57sd0ak5.js";
+import "/$bunfs/root/chunk-gt0vfa7p.js";
+import "/$bunfs/root/chunk-6zh1j84y.js";
+import "/$bunfs/root/chunk-0pb268nk.js";
+import "/$bunfs/root/chunk-hrmqj4hy.js";
+import "/$bunfs/root/chunk-an3w1y1q.js";
+import "/$bunfs/root/chunk-vcnr02by.js";
+import "/$bunfs/root/chunk-p9gcfhjr.js";
+import "/$bunfs/root/chunk-r0q0n8n3.js";
+import "/$bunfs/root/chunk-fraf4m31.js";
+import "/$bunfs/root/chunk-paa8n07f.js";
+import "/$bunfs/root/chunk-mgntjepj.js";
+import "/$bunfs/root/chunk-rfgw2dcy.js";
+import "/$bunfs/root/chunk-k67pwqya.js";
+import "/$bunfs/root/chunk-8m5q5cts.js";
+import "/$bunfs/root/chunk-qrpds8jv.js";
+import "/$bunfs/root/chunk-pmryp5f3.js";
+import "/$bunfs/root/chunk-060xwhvh.js";
+import "/$bunfs/root/chunk-59mwkeke.js";
+import "/$bunfs/root/chunk-1kh4zp5v.js";
+import "/$bunfs/root/chunk-qyhf6bts.js";
+import "/$bunfs/root/chunk-h4t4qfaq.js";
+import "/$bunfs/root/chunk-bz1f2qnq.js";
+import "/$bunfs/root/chunk-ddznn4yb.js";
+import "/$bunfs/root/chunk-dzf5h538.js";
+import "/$bunfs/root/chunk-trq47kfh.js";
+import "/$bunfs/root/chunk-gbskgz33.js";
+import "/$bunfs/root/chunk-42nfpkzm.js";
+import "/$bunfs/root/chunk-5e3gtsn9.js";
+import "/$bunfs/root/chunk-d2tjaek4.js";
+import "/$bunfs/root/chunk-a3fb7pa2.js";
+import { k2e, evt } from "/$bunfs/root/chunk-p1ewvgeh.js";
+import "/$bunfs/root/chunk-w0pnqmj8.js";
+import "/$bunfs/root/chunk-9y45rehj.js";
+import "/$bunfs/root/chunk-3f2ytgjw.js";
+import "/$bunfs/root/chunk-p44m8w7d.js";
+import "/$bunfs/root/chunk-fp3vnecp.js";
+import "/$bunfs/root/chunk-ge3qft6b.js";
+import "/$bunfs/root/chunk-hsqa3g9e.js";
+import "/$bunfs/root/chunk-fa4dxeec.js";
+import "/$bunfs/root/chunk-6xae35jp.js";
+import "/$bunfs/root/chunk-2fxy1zey.js";
+import "/$bunfs/root/chunk-nw2twe6x.js";
+import "/$bunfs/root/chunk-b9qnxh4s.js";
+import { EN, ORe, f1, cme } from "/$bunfs/root/chunk-mxhw2w5n.js";
+import "/$bunfs/root/chunk-tvbk4t18.js";
+import "/$bunfs/root/chunk-s0zsg6za.js";
+import { pu } from "/$bunfs/root/chunk-ht27b0vz.js";
+import "/$bunfs/root/chunk-d55td748.js";
+import "/$bunfs/root/chunk-s7eqtcpb.js";
+import "/$bunfs/root/chunk-kma6xjgr.js";
+import "/$bunfs/root/chunk-t9k2xeez.js";
+import "/$bunfs/root/chunk-xzph4c6z.js";
+import "/$bunfs/root/chunk-1ag56sne.js";
+import "/$bunfs/root/chunk-ha393e1n.js";
+import "/$bunfs/root/chunk-gtxzjvjq.js";
+import "/$bunfs/root/chunk-p548ry42.js";
+import "/$bunfs/root/chunk-zddv3vvj.js";
+import "/$bunfs/root/chunk-4f4ysf31.js";
+import "/$bunfs/root/chunk-8ewjdpbn.js";
+import "/$bunfs/root/chunk-271xsh6x.js";
+import "/$bunfs/root/chunk-0rkwgmhx.js";
+import "/$bunfs/root/chunk-0rbztqww.js";
+import "/$bunfs/root/chunk-pkzhb7kv.js";
+import "/$bunfs/root/chunk-qesvcmqe.js";
+import "/$bunfs/root/chunk-t9fn978c.js";
+import "/$bunfs/root/chunk-kbr9bg9m.js";
+import "/$bunfs/root/chunk-hcg738hf.js";
+import "/$bunfs/root/chunk-may4s35x.js";
+import "/$bunfs/root/chunk-vfyns8ja.js";
+import "/$bunfs/root/chunk-p9da7c9y.js";
+import "/$bunfs/root/chunk-f9mxtmjz.js";
+import "/$bunfs/root/chunk-sps8tde9.js";
+import "/$bunfs/root/chunk-zcpqgt0x.js";
+import "/$bunfs/root/chunk-1z1bgjzv.js";
+import "/$bunfs/root/chunk-xfr8663h.js";
+import "/$bunfs/root/chunk-z2xw6net.js";
+import "/$bunfs/root/chunk-fc3gfgch.js";
+import "/$bunfs/root/chunk-g03qj0bk.js";
+import "/$bunfs/root/chunk-pqb914sj.js";
+import "/$bunfs/root/chunk-b3gt63am.js";
+import "/$bunfs/root/chunk-yt7wk02j.js";
+import "/$bunfs/root/chunk-74mx55jd.js";
+import "/$bunfs/root/chunk-n74jpb9a.js";
+import { NRn } from "/$bunfs/root/chunk-5fa0b8dm.js";
+import "/$bunfs/root/chunk-mndk3x2g.js";
+import { Kv, tje } from "/$bunfs/root/chunk-7jczpc8b.js";
+import {
+  Bhl,
+  Whl,
+  x_o,
+  fy,
+  jhl,
+  ULi,
+  a1,
+} from "/$bunfs/root/chunk-ta6q9jek.js";
+import "/$bunfs/root/chunk-pzj67pdt.js";
+import "/$bunfs/root/chunk-6a9gdcsm.js";
+import "/$bunfs/root/chunk-929j4hj9.js";
+import { uEt } from "/$bunfs/root/chunk-g9n176jp.js";
+import "/$bunfs/root/chunk-4dnx2vkh.js";
+import "/$bunfs/root/chunk-vc431dg0.js";
+import "/$bunfs/root/chunk-yqt5s0xz.js";
+import "/$bunfs/root/chunk-5qhr9bm2.js";
+import "/$bunfs/root/chunk-qf73a9we.js";
+import "/$bunfs/root/chunk-2b1wcpvk.js";
+import "/$bunfs/root/chunk-qwcebyxc.js";
+import "/$bunfs/root/chunk-w50zedgp.js";
+import "/$bunfs/root/chunk-84n38n3t.js";
+import { zp } from "/$bunfs/root/chunk-vc58gmrj.js";
+import "/$bunfs/root/chunk-r6fna520.js";
+import "/$bunfs/root/chunk-30a5awzz.js";
+import {
+  zue,
+  wdi,
+  kdi,
+  ZXo,
+  qci,
+  RQo,
+  bKa,
+  wKa,
+  Yci,
+} from "/$bunfs/root/chunk-bzyb60p0.js";
+import "/$bunfs/root/chunk-2xjdqky3.js";
+import "/$bunfs/root/chunk-kmbc34js.js";
+import "/$bunfs/root/chunk-52ckkfmm.js";
+import "/$bunfs/root/chunk-vn6r8r95.js";
+import "/$bunfs/root/chunk-jtppe9b0.js";
+import "/$bunfs/root/chunk-4mh8nmh5.js";
+import "/$bunfs/root/chunk-yn71faep.js";
+import "/$bunfs/root/chunk-fe5esh7d.js";
+import "/$bunfs/root/chunk-sjqze7qg.js";
+import "/$bunfs/root/chunk-wzzzxdne.js";
+import { so } from "/$bunfs/root/chunk-e5q83yb8.js";
+import "/$bunfs/root/chunk-z9f6hbhp.js";
+import "/$bunfs/root/chunk-qp5chy39.js";
+import "/$bunfs/root/chunk-0w2wb7gk.js";
+import "/$bunfs/root/chunk-ygx90amt.js";
+import "/$bunfs/root/chunk-yg9g0473.js";
+import { P1 } from "/$bunfs/root/chunk-7fjbagnr.js";
+import "/$bunfs/root/chunk-q4pszsad.js";
+import "/$bunfs/root/chunk-pb0vn6an.js";
+import "/$bunfs/root/chunk-4ssv8fte.js";
+import "/$bunfs/root/chunk-ejeefcyk.js";
+import "/$bunfs/root/chunk-kvvabk01.js";
+import "/$bunfs/root/chunk-4b5275ey.js";
+import "/$bunfs/root/chunk-jg3mepas.js";
+import "/$bunfs/root/chunk-37zqqqnw.js";
+import "/$bunfs/root/chunk-5w3q7h0v.js";
+import "/$bunfs/root/chunk-znn7ks07.js";
+import "/$bunfs/root/chunk-f7aa6t06.js";
+import "/$bunfs/root/chunk-m0xr8k74.js";
+import "/$bunfs/root/chunk-pyawkp3j.js";
+import "/$bunfs/root/chunk-cy0ck7w2.js";
+import "/$bunfs/root/chunk-kzzkh06w.js";
+import "/$bunfs/root/chunk-yvad17bv.js";
+import "/$bunfs/root/chunk-4s4nxvxt.js";
+import "/$bunfs/root/chunk-3zfyrdna.js";
+import "/$bunfs/root/chunk-c1hnv4fm.js";
+import "/$bunfs/root/chunk-a6xqvbh2.js";
+import "/$bunfs/root/chunk-1ek4hhs6.js";
+import "/$bunfs/root/chunk-p2s0km69.js";
+import "/$bunfs/root/chunk-54j6k3fn.js";
+import "/$bunfs/root/chunk-tvq790h1.js";
+import "/$bunfs/root/chunk-m20gh621.js";
+import "/$bunfs/root/chunk-ac8t6db0.js";
+import "/$bunfs/root/chunk-5m00y1wc.js";
+import "/$bunfs/root/chunk-a7h1jnra.js";
+import "/$bunfs/root/chunk-nhpsytqr.js";
+import "/$bunfs/root/chunk-0canfdjs.js";
+import "/$bunfs/root/chunk-a9pcmp5n.js";
+import "/$bunfs/root/chunk-ze4kt7fs.js";
+import "/$bunfs/root/chunk-0vvtfqck.js";
+import "/$bunfs/root/chunk-4chf71g6.js";
+import "/$bunfs/root/chunk-0a69wnzr.js";
+import "/$bunfs/root/chunk-6k9zs54e.js";
+import "/$bunfs/root/chunk-p3d6wgn7.js";
+import "/$bunfs/root/chunk-zjhyjv3y.js";
+import "/$bunfs/root/chunk-etk95yep.js";
+import "/$bunfs/root/chunk-axd2vhx2.js";
+import "/$bunfs/root/chunk-ae4rjsvk.js";
+import "/$bunfs/root/chunk-w4dc83v7.js";
+import "/$bunfs/root/chunk-p052vp7t.js";
+import "/$bunfs/root/chunk-vs7p9j3v.js";
+import "/$bunfs/root/chunk-vhpt9t1j.js";
+import "/$bunfs/root/chunk-81q3wevd.js";
+import "/$bunfs/root/chunk-xkpbmcsq.js";
+import "/$bunfs/root/chunk-d775ds6c.js";
+import "/$bunfs/root/chunk-0c92mmpr.js";
+import "/$bunfs/root/chunk-jar84hn9.js";
+import "/$bunfs/root/chunk-npsm5tcc.js";
+import "/$bunfs/root/chunk-8704k7wd.js";
+import "/$bunfs/root/chunk-bq31aqv6.js";
+import "/$bunfs/root/chunk-mvszxaxb.js";
+import "/$bunfs/root/chunk-txqh3v33.js";
+import "/$bunfs/root/chunk-p51r1nb3.js";
+import "/$bunfs/root/chunk-8fkaxt3d.js";
+import "/$bunfs/root/chunk-tc5xmewh.js";
+import "/$bunfs/root/chunk-89bjmq9y.js";
+import "/$bunfs/root/chunk-jzfcqxfe.js";
+import "/$bunfs/root/chunk-478yxt5w.js";
+import "/$bunfs/root/chunk-x7880gvk.js";
+import "/$bunfs/root/chunk-t8x29mwc.js";
+import "/$bunfs/root/chunk-97tvwnfb.js";
+import "/$bunfs/root/chunk-1tyxkk56.js";
+import "/$bunfs/root/chunk-5cey7gvv.js";
+import "/$bunfs/root/chunk-3a2r0s2z.js";
+import "/$bunfs/root/chunk-j2ybpxmz.js";
+import "/$bunfs/root/chunk-g6k95sax.js";
+import "/$bunfs/root/chunk-qv6h6wr9.js";
+import "/$bunfs/root/chunk-8c111j67.js";
+import "/$bunfs/root/chunk-4yjj7pjs.js";
+import "/$bunfs/root/chunk-ky5sghtd.js";
+import "/$bunfs/root/chunk-cq1312e8.js";
+import "/$bunfs/root/chunk-zsqk76p8.js";
+import "/$bunfs/root/chunk-q2404y26.js";
+import "/$bunfs/root/chunk-yq00hd9s.js";
+import "/$bunfs/root/chunk-gp23aqt9.js";
+import "/$bunfs/root/chunk-6h9mds0d.js";
+import "/$bunfs/root/chunk-859v5edd.js";
+import "/$bunfs/root/chunk-e15pxvhz.js";
+import "/$bunfs/root/chunk-dkc86g0t.js";
+import "/$bunfs/root/chunk-jhdsf4g3.js";
+import "/$bunfs/root/chunk-jnrh77bs.js";
+import "/$bunfs/root/chunk-2vn4k5m6.js";
+import "/$bunfs/root/chunk-q7cfnzfy.js";
+import "/$bunfs/root/chunk-wddxyb00.js";
+import "/$bunfs/root/chunk-6dfy8crz.js";
+import "/$bunfs/root/chunk-wx7ffn80.js";
+import "/$bunfs/root/chunk-b83x8d52.js";
+import "/$bunfs/root/chunk-1ea72zr6.js";
+import "/$bunfs/root/chunk-j59m93ez.js";
+import "/$bunfs/root/chunk-507k3c1m.js";
+import "/$bunfs/root/chunk-sppbt6xz.js";
+import "/$bunfs/root/chunk-7625rswd.js";
+import "/$bunfs/root/chunk-179jgyn9.js";
+import "/$bunfs/root/chunk-a9nnd83v.js";
+import "/$bunfs/root/chunk-d70fgf5t.js";
+import "/$bunfs/root/chunk-6s9tac84.js";
+import "/$bunfs/root/chunk-r9ecxfn9.js";
+import "/$bunfs/root/chunk-fbqj9ad4.js";
+import "/$bunfs/root/chunk-q5veqmrm.js";
+import "/$bunfs/root/chunk-a152y2zc.js";
+import "/$bunfs/root/chunk-z12zbtvr.js";
+import "/$bunfs/root/chunk-tnmn1726.js";
+import "/$bunfs/root/chunk-vw137skj.js";
+import "/$bunfs/root/chunk-9r4r85pg.js";
+import "/$bunfs/root/chunk-2mwkxzk6.js";
+import "/$bunfs/root/chunk-hgbq13xy.js";
+import "/$bunfs/root/chunk-wnt799dt.js";
+import "/$bunfs/root/chunk-53snsm3k.js";
+import "/$bunfs/root/chunk-r60bafc1.js";
+import "/$bunfs/root/chunk-d0bewyh8.js";
+import "/$bunfs/root/chunk-339n78pp.js";
+import "/$bunfs/root/chunk-0dht3xy7.js";
+import "/$bunfs/root/chunk-snpsm13w.js";
+import "/$bunfs/root/chunk-gz6chcf8.js";
+import "/$bunfs/root/chunk-q0pdqy04.js";
+import "/$bunfs/root/chunk-d3vfy4gs.js";
+import "/$bunfs/root/chunk-qvjn7dva.js";
+import "/$bunfs/root/chunk-tfs0ssqe.js";
+import "/$bunfs/root/chunk-m3wvjg0t.js";
+import "/$bunfs/root/chunk-wxn0h5vf.js";
+import "/$bunfs/root/chunk-2wqvb3q7.js";
+import "/$bunfs/root/chunk-02wf5c4s.js";
+import "/$bunfs/root/chunk-5ke1b82m.js";
+import "/$bunfs/root/chunk-7r4ehpnw.js";
+import "/$bunfs/root/chunk-9e5mdyfk.js";
+import "/$bunfs/root/chunk-ak45b7eq.js";
+import "/$bunfs/root/chunk-00egnvdb.js";
+import "/$bunfs/root/chunk-hvkyrv0z.js";
+import "/$bunfs/root/chunk-6x49srhn.js";
+import "/$bunfs/root/chunk-pjgajh0r.js";
+import "/$bunfs/root/chunk-7ds2xzy3.js";
+import "/$bunfs/root/chunk-jgsh7w3m.js";
+import "/$bunfs/root/chunk-6b5tg8j3.js";
+import "/$bunfs/root/chunk-ddfyyyy7.js";
+import "/$bunfs/root/chunk-wvxk15ee.js";
+import "/$bunfs/root/chunk-1hg0ytx8.js";
+import "/$bunfs/root/chunk-31sz6df3.js";
+import "/$bunfs/root/chunk-07kqypdk.js";
+import { z0n } from "/$bunfs/root/chunk-qnq7dhb5.js";
+import "/$bunfs/root/chunk-y8kqnbqt.js";
+import "/$bunfs/root/chunk-1n9wdcmg.js";
+import "/$bunfs/root/chunk-7d2qr9z5.js";
+import "/$bunfs/root/chunk-f6abynt8.js";
+import "/$bunfs/root/chunk-0ty8qx28.js";
+import "/$bunfs/root/chunk-rnad4hj1.js";
+import "/$bunfs/root/chunk-0kyr8hth.js";
+import "/$bunfs/root/chunk-bs4v8td1.js";
+import "/$bunfs/root/chunk-z1z1qsrb.js";
+import "/$bunfs/root/chunk-qhpw13wh.js";
+import "/$bunfs/root/chunk-q2a93xh8.js";
+import "/$bunfs/root/chunk-qtg8rez4.js";
+import "/$bunfs/root/chunk-hmc67k1s.js";
+import "/$bunfs/root/chunk-02cqsykt.js";
+import "/$bunfs/root/chunk-tmh9ctw1.js";
+import "/$bunfs/root/chunk-21cxvf80.js";
+import "/$bunfs/root/chunk-w1zyy3zs.js";
+import "/$bunfs/root/chunk-wpyz5pav.js";
+import "/$bunfs/root/chunk-5gh3v8c1.js";
+import "/$bunfs/root/chunk-pcsags68.js";
+import "/$bunfs/root/chunk-271f5kxt.js";
+import "/$bunfs/root/chunk-1w26p6p9.js";
+import "/$bunfs/root/chunk-hj4mak61.js";
+import "/$bunfs/root/chunk-rmc00en4.js";
+import "/$bunfs/root/chunk-44g93ygc.js";
+import "/$bunfs/root/chunk-7q6ee47s.js";
+import "/$bunfs/root/chunk-ghhxe1kj.js";
+import "/$bunfs/root/chunk-c2m5gm43.js";
+import { NZa, Vot } from "/$bunfs/root/chunk-7f901c6t.js";
+import "/$bunfs/root/chunk-x9vzz8b9.js";
+import "/$bunfs/root/chunk-jmm1stqj.js";
+import "/$bunfs/root/chunk-mpk68jst.js";
+import "/$bunfs/root/chunk-zwfq7wpn.js";
+import "/$bunfs/root/chunk-sdks5h78.js";
+import "/$bunfs/root/chunk-vfw28y4s.js";
+import "/$bunfs/root/chunk-r3wrey46.js";
+import "/$bunfs/root/chunk-p6a07y1c.js";
+import "/$bunfs/root/chunk-r0jt20hr.js";
+import "/$bunfs/root/chunk-z2tg7jn4.js";
+import "/$bunfs/root/chunk-sr33d2zd.js";
+import "/$bunfs/root/chunk-kcy9vg4b.js";
+import "/$bunfs/root/chunk-6qsjjx4s.js";
+import "/$bunfs/root/chunk-zh47ka3v.js";
+import "/$bunfs/root/chunk-21y9ek9j.js";
+import "/$bunfs/root/chunk-sg5zbskk.js";
+import "/$bunfs/root/chunk-1dkksxs0.js";
+import "/$bunfs/root/chunk-1p0ddgd7.js";
+import "/$bunfs/root/chunk-jm0134kz.js";
+import "/$bunfs/root/chunk-qanr9g0g.js";
+import "/$bunfs/root/chunk-7xxwg4th.js";
+import "/$bunfs/root/chunk-5ft9yxne.js";
+import "/$bunfs/root/chunk-gvzh3pxp.js";
+import "/$bunfs/root/chunk-mw2v4wks.js";
+import "/$bunfs/root/chunk-vbjta162.js";
+import "/$bunfs/root/chunk-x9aavfmb.js";
+import "/$bunfs/root/chunk-gqe1nb2a.js";
+import "/$bunfs/root/chunk-mqj2w7ns.js";
+import "/$bunfs/root/chunk-yrh4vxq4.js";
+import {
+  lYo,
+  WWa,
+  rai,
+  y4e,
+  S4e,
+  txn,
+  MXr,
+  _6,
+  w4e,
+  A0t,
+} from "/$bunfs/root/chunk-h8v51dgb.js";
+import {
+  hq,
+  DXr,
+  aai,
+  GJt,
+  zsr,
+  LXr,
+  fYo,
+  _nt,
+  zWa,
+  lai,
+  VWa,
+  dai,
+  KWa,
+  qWa,
+  qD,
+  nxn,
+} from "/$bunfs/root/chunk-at8q9dqk.js";
+import {
+  hRa,
+  gRa,
+  b3s,
+  yRa,
+  W6r,
+  uYt,
+  SRa,
+  fYt,
+} from "/$bunfs/root/chunk-rdcxsb11.js";
+import { U6r, Pzo, mRa } from "/$bunfs/root/chunk-fzbkhwj9.js";
+import { cYt } from "/$bunfs/root/chunk-kp5g5c1k.js";
+import "/$bunfs/root/chunk-e1ww8aev.js";
+import "/$bunfs/root/chunk-0a5vv9nr.js";
+import "/$bunfs/root/chunk-48vr3t96.js";
+import "/$bunfs/root/chunk-drrj083m.js";
+import "/$bunfs/root/chunk-p0p19erm.js";
+import "/$bunfs/root/chunk-6geanr2a.js";
+import "/$bunfs/root/chunk-zdtzd1bp.js";
+import "/$bunfs/root/chunk-h9qt07a5.js";
+import "/$bunfs/root/chunk-wd66nsbc.js";
+import "/$bunfs/root/chunk-7sbhbwjm.js";
+import "/$bunfs/root/chunk-7p90qgrg.js";
+import "/$bunfs/root/chunk-6c0jwb75.js";
+import "/$bunfs/root/chunk-gea9tjyt.js";
+import "/$bunfs/root/chunk-ed372ykp.js";
+import "/$bunfs/root/chunk-abbz0fqx.js";
+import "/$bunfs/root/chunk-2tqq6ycx.js";
+import "/$bunfs/root/chunk-e09cft3a.js";
+import "/$bunfs/root/chunk-harsxaq1.js";
+import "/$bunfs/root/chunk-72w4k1fr.js";
+import "/$bunfs/root/chunk-s3bbbse4.js";
+import "/$bunfs/root/chunk-nbyg4q5d.js";
+import "/$bunfs/root/chunk-gkm2eky6.js";
+import "/$bunfs/root/chunk-4684b8fc.js";
+import "/$bunfs/root/chunk-p78dm83c.js";
+import "/$bunfs/root/chunk-bf14swcm.js";
+import "/$bunfs/root/chunk-sk0gc06z.js";
+import { Gp, $m } from "/$bunfs/root/chunk-mahb4v28.js";
+import "/$bunfs/root/chunk-bdxa2qdh.js";
+import "/$bunfs/root/chunk-58apc8rx.js";
+import "/$bunfs/root/chunk-1ksp50wj.js";
+import "/$bunfs/root/chunk-nb21njpa.js";
+import "/$bunfs/root/chunk-yvba4101.js";
+import "/$bunfs/root/chunk-rtsmzy7m.js";
+import "/$bunfs/root/chunk-5zps0wmn.js";
+import { dp } from "/$bunfs/root/chunk-wwft95x8.js";
+import "/$bunfs/root/chunk-tnzbvb83.js";
+import "/$bunfs/root/chunk-4vfdya4f.js";
+import "/$bunfs/root/chunk-g5kcfqmg.js";
+import "/$bunfs/root/chunk-vhsysgcd.js";
+import "/$bunfs/root/chunk-cwkztn5x.js";
+import "/$bunfs/root/chunk-zmrcnbgs.js";
+import "/$bunfs/root/chunk-1pan7v6b.js";
+import "/$bunfs/root/chunk-4fssttte.js";
+import "/$bunfs/root/chunk-5m9vge4h.js";
+import "/$bunfs/root/chunk-drtv8e2x.js";
+import "/$bunfs/root/chunk-jg286npj.js";
+import "/$bunfs/root/chunk-66srb2mf.js";
+import "/$bunfs/root/chunk-x0vfzwdd.js";
+import "/$bunfs/root/chunk-2xg3wmhp.js";
+import "/$bunfs/root/chunk-shs9e3r5.js";
+import "/$bunfs/root/chunk-5qqp06t1.js";
+import "/$bunfs/root/chunk-8mmj96hs.js";
+import "/$bunfs/root/chunk-nq3exp5d.js";
+import "/$bunfs/root/chunk-ksk52rm1.js";
+import "/$bunfs/root/chunk-vqrgm5ev.js";
+import "/$bunfs/root/chunk-r3e8vdzv.js";
+import "/$bunfs/root/chunk-cc0rj9gh.js";
+import "/$bunfs/root/chunk-07r720jc.js";
+import "/$bunfs/root/chunk-j7dp96he.js";
+import "/$bunfs/root/chunk-sxd14zzs.js";
+import "/$bunfs/root/chunk-mj4h1wdm.js";
+import "/$bunfs/root/chunk-q4y63y6c.js";
+import "/$bunfs/root/chunk-20m87428.js";
+import { My } from "/$bunfs/root/chunk-6eq0mqyj.js";
+import "/$bunfs/root/chunk-g78kc1rr.js";
+import "/$bunfs/root/chunk-z6hn62tj.js";
+import { Ra } from "/$bunfs/root/chunk-s1btam0h.js";
+import "/$bunfs/root/chunk-pnqybv63.js";
+import "/$bunfs/root/chunk-587zek71.js";
+import "/$bunfs/root/chunk-4rp6k6sw.js";
+import "/$bunfs/root/chunk-tps03s5j.js";
+import "/$bunfs/root/chunk-k4bqn7hc.js";
+import "/$bunfs/root/chunk-g3a1gwww.js";
+import "/$bunfs/root/chunk-3bjtjsgp.js";
+import "/$bunfs/root/chunk-8x650tx8.js";
+import "/$bunfs/root/chunk-spnfty7j.js";
+import { _an, GBt } from "/$bunfs/root/chunk-dwxd9se5.js";
+import "/$bunfs/root/chunk-pbbjnb48.js";
+import "/$bunfs/root/chunk-4xgvg9z4.js";
+import "/$bunfs/root/chunk-tsfdtsmv.js";
+import "/$bunfs/root/chunk-v6ez7m15.js";
+import "/$bunfs/root/chunk-75f58nqg.js";
+import "/$bunfs/root/chunk-r216zqgx.js";
+import "/$bunfs/root/chunk-01eypw0a.js";
+import "/$bunfs/root/chunk-etd6y4ew.js";
+import "/$bunfs/root/chunk-dd5safr0.js";
+import "/$bunfs/root/chunk-pyt5z6an.js";
+import { OA } from "/$bunfs/root/chunk-kemkq7qp.js";
+import "/$bunfs/root/chunk-s12kntv9.js";
+import "/$bunfs/root/chunk-d19q7hh0.js";
+import "/$bunfs/root/chunk-a9c4wn56.js";
+import "/$bunfs/root/chunk-vfxmw1me.js";
+import "/$bunfs/root/chunk-7j8he8m3.js";
+import "/$bunfs/root/chunk-0h9rvfx7.js";
+import { FG } from "/$bunfs/root/chunk-r949v7h0.js";
+import "/$bunfs/root/chunk-sqvd6je2.js";
+import { Ljt, Ale, eT, dbo } from "/$bunfs/root/chunk-5sjwf92x.js";
+import "/$bunfs/root/chunk-a8ey418s.js";
+import "/$bunfs/root/chunk-q1wcxxgg.js";
+import "/$bunfs/root/chunk-zsz02y6d.js";
+import "/$bunfs/root/chunk-vyzg3yfa.js";
+import { iS } from "/$bunfs/root/chunk-bkfd2ttj.js";
+import { co } from "/$bunfs/root/chunk-t99xdws4.js";
+import "/$bunfs/root/chunk-ch6321bk.js";
+import "/$bunfs/root/chunk-3b9jqhjk.js";
+import "/$bunfs/root/chunk-fpcs74d2.js";
+import "/$bunfs/root/chunk-0djtvg5h.js";
+import "/$bunfs/root/chunk-gftn60qp.js";
+import "/$bunfs/root/chunk-2hdy50wd.js";
+import "/$bunfs/root/chunk-tjdnrbvx.js";
+import "/$bunfs/root/chunk-pqpxa7em.js";
+import "/$bunfs/root/chunk-ts09sys6.js";
+import "/$bunfs/root/chunk-p6rv87rz.js";
+import "/$bunfs/root/chunk-thchq5z2.js";
+import "/$bunfs/root/chunk-c4zg4pwc.js";
+import "/$bunfs/root/chunk-98tkmkvx.js";
+import "/$bunfs/root/chunk-snmsx2fv.js";
+import "/$bunfs/root/chunk-wx2mpa0f.js";
+import "/$bunfs/root/chunk-jqm7sxzd.js";
+import "/$bunfs/root/chunk-3v09xgvh.js";
+import "/$bunfs/root/chunk-cy6vm0hs.js";
+import "/$bunfs/root/chunk-mh32mevx.js";
+import "/$bunfs/root/chunk-v6tczjz9.js";
+import "/$bunfs/root/chunk-fm523nqz.js";
+import "/$bunfs/root/chunk-nynf6rf6.js";
+import "/$bunfs/root/chunk-6wkvjx00.js";
+import "/$bunfs/root/chunk-hym6yzrf.js";
+import "/$bunfs/root/chunk-mjq4pbxz.js";
+import "/$bunfs/root/chunk-ya9q1k3s.js";
+import "/$bunfs/root/chunk-8bq2fhrn.js";
+import "/$bunfs/root/chunk-ayyyz8kh.js";
+import "/$bunfs/root/chunk-5nf47kr4.js";
+import "/$bunfs/root/chunk-wqe8b1g0.js";
+import "/$bunfs/root/chunk-xhqwsnqh.js";
+import "/$bunfs/root/chunk-9p9dsn6j.js";
+import "/$bunfs/root/chunk-sghy0qej.js";
+import "/$bunfs/root/chunk-qk25vh5t.js";
+import { De } from "/$bunfs/root/chunk-k883m4fq.js";
+import { HXe } from "/$bunfs/root/chunk-tt4yhkc0.js";
+import { qNe } from "/$bunfs/root/chunk-4jzbgp2v.js";
+import "/$bunfs/root/chunk-hz25f5zd.js";
+import "/$bunfs/root/chunk-se72nykz.js";
+import "/$bunfs/root/chunk-aj8wb2xh.js";
+import "/$bunfs/root/chunk-myvyhcm0.js";
+import "/$bunfs/root/chunk-2172r9j8.js";
+import "/$bunfs/root/chunk-cd75h1kz.js";
+import "/$bunfs/root/chunk-0bfd61k9.js";
+import "/$bunfs/root/chunk-tp0b74sz.js";
+import "/$bunfs/root/chunk-5rd4zsth.js";
+import "/$bunfs/root/chunk-13h3tw8q.js";
+import "/$bunfs/root/chunk-xytxbeb6.js";
+import "/$bunfs/root/chunk-r3mm3x33.js";
+import { T } from "/$bunfs/root/chunk-ma3kja9f.js";
+import { fm, Je } from "/$bunfs/root/chunk-ccm69jjy.js";
+import "/$bunfs/root/chunk-wn8z7ghn.js";
+import "/$bunfs/root/chunk-1m0ck3v8.js";
+import "/$bunfs/root/chunk-73gwqz1r.js";
+import "/$bunfs/root/chunk-jk26f2gn.js";
+import "/$bunfs/root/chunk-z3ydstra.js";
+import "/$bunfs/root/chunk-zmb62hr5.js";
+import {
+  n,
+  E,
+  P,
+  ie,
+  C,
+  c,
+  Ae,
+  zn,
+  he,
+  F,
+  v,
+  B,
+} from "/$bunfs/root/chunk-adx6804h.js";
+import "/$bunfs/root/chunk-49zxha55.js";
+import "/$bunfs/root/chunk-wbk1hf21.js";
+import { wQe, Xg } from "/$bunfs/root/chunk-7n1spq36.js";
+import "/$bunfs/root/chunk-pzzqg6s3.js";
+import { U, M } from "/$bunfs/root/chunk-4smdap7r.js";
+import { de } from "/$bunfs/root/chunk-t57w17k7.js";
+import { ne } from "/$bunfs/root/chunk-m15w38ag.js";
+import "/$bunfs/root/chunk-j4z7srhg.js";
+B();
+import { createHash as ro } from "crypto";
+import { constants as qe } from "fs";
+import { open as io, realpath as Ne, stat as ao } from "fs/promises";
+import { isAbsolute as Pe, join as _e, sep as Qe, resolve as me } from "path";
+var eo = "Note: `original` is not available in this session and was ignored.",
+  to = "Note: `if_version` is not available in this session and was ignored.";
+function Ge(e, { originalOffered: o, docVersionsOffered: r }) {
+  if (!T(e)) return null;
+  let i = typeof e.force === "boolean",
+    h = !o && "original" in e,
+    m = !r && "if_version" in e;
+  if (!i && !h && !m) return null;
+  let y = { ...e },
+    g = [];
+  if (i) (delete y.force, g.push("legacy_force"));
+  if (h) (delete y.original, g.push("original_while_off"));
+  if (m) (delete y.if_version, g.push("if_version_while_off"));
+  let j = [...(h && e.original === !0 ? [eo] : []), ...(m ? [to] : [])];
+  return {
+    input: y,
+    shapeClass: g.join("+"),
+    ...(j.length > 0 && {
+      resultNote: j.join(`
+`),
+    }),
+  };
+}
+var oo = new Set([
+  ...dp,
+  De,
+  lt,
+  Dt,
+  Ks,
+  Qr,
+  Sr,
+  Yd,
+  My,
+  Gp,
+  $m,
+  Ra,
+  co,
+  so,
+  OA,
+  iS,
+  z0n,
+]);
+function Ve(e, o, r, i) {
+  let h = CNe(e);
+  if (h === void 0) return !0;
+  let m = e.lastIndexOf(h),
+    y = e.slice(m),
+    g = e.slice(
+      e
+        .slice(0, m)
+        .findLastIndex(
+          (j) =>
+            cYt(j) &&
+            Vot(j) &&
+            j.message.content.some(
+              (S) =>
+                S.type !== "thinking" &&
+                S.type !== "redacted_thinking" &&
+                (S.type !== "text" || S.text.trim() !== ""),
+            ),
+        ) + 1,
+    );
+  return (
+    !B4(
+      y,
+      (j, S) =>
+        S.type === "user" && s_(S) && !rD(S) && S.promptRewritten !== !0,
+    ) ||
+    g.some(
+      (j) =>
+        j.type === "attachment" &&
+        j.attachment.type === "project_doc_reads" &&
+        (j.attachment.midChat === !0 || j.attachment.changed === !0) &&
+        (a1(j.attachment)?.length ?? 0) > 0,
+    ) ||
+    g.some(
+      (j) =>
+        j.type === "user" &&
+        Array.isArray(j.message.content) &&
+        j.message.content.some((S) => {
+          if (S.type !== "tool_result" || S.is_error !== !0) return !1;
+          let { content: O } = S;
+          return (
+            typeof O === "string" &&
+            Object.values(lYo).some((k) => O.includes(k))
+          );
+        }),
+    ) ||
+    y.some(NZa) ||
+    y.some(
+      (j) =>
+        j.type === "assistant" &&
+        j.message.content.some((S) => {
+          if (S.type !== "tool_use") return uEt(S.type);
+          if (i.includes(S.name))
+            return !(
+              typeof S.input === "object" &&
+              S.input !== null &&
+              "method" in S.input &&
+              (S.input.method === "project_write" ||
+                S.input.method === "project_delete")
+            );
+          let O = tn(o, S.name, r),
+            k = O?.isMcp === !0 ? G9(O) : O?.name;
+          return k === void 0 || !oo.has(k);
+        }),
+    )
+  );
+}
+var Xe = 3,
+  no = 2500;
+async function ge(e, o, r) {
+  for (let i = 1; ; i++)
+    try {
+      return await e();
+    } catch (h) {
+      if (!(h instanceof qD) || h.status !== 503 || i === Xe) throw h;
+      let m = NN(i, h.retryAfter);
+      if (m > no) throw h;
+      (t(
+        `Projects: ${h.action} was answered 503 on try ${i} of ${Xe}; trying again in ${m} ms`,
+      ),
+        await K(m, o, { clock: r, abortError: () => new Ie() }));
+    }
+}
+var Le = 255;
+function Ke(e) {
+  let o = e.replace(/^\.\//, "");
+  return (o.startsWith(_an) ? o.slice(_an.length) : o).normalize("NFD");
+}
+function Ye(e, o, r) {
+  let i = Ke(o.path),
+    h = new Map(),
+    m = !1;
+  for (let y of e)
+    if (y.type === "assistant" && Array.isArray(y.message.content)) {
+      for (let g of y.message.content)
+        if (
+          g.type === "tool_use" &&
+          r.includes(g.name) &&
+          T(g.input) &&
+          (g.input.method === "project_write" ||
+            g.input.method === "project_delete") &&
+          typeof g.input.path === "string" &&
+          g.input.path.length <= Le &&
+          Ke(g.input.path) === i
+        )
+          h.set(g.id, g.input.method === o.method && g.input.path === o.path);
+    } else if (y.type === "user" && Array.isArray(y.message.content)) {
+      let g = y.toolDenialKind !== void 0;
+      for (let j of y.message.content) {
+        if (j.type !== "tool_result") continue;
+        let S = h.get(j.tool_use_id);
+        if (g && S !== void 0) m ||= j.content !== qci;
+        else if (S === !0 && j.is_error !== !0) m = !1;
+      }
+    }
+  return m;
+}
+var St = (e, o) =>
+  Ae({
+    method: F([
+      "project_info",
+      "project_read",
+      "project_search",
+      "project_write",
+      "project_delete",
+      "project_memory_list",
+      "project_memory_read",
+    ]),
+    path: n()
+      .min(1)
+      .max(Le)
+      .optional()
+      .describe(
+        'project_read/project_write/project_delete: doc path. project_write: an existing path is replaced in place; a new bare filename (no "/") is namespaced to "claude/<name>". project_memory_read: memory file path as listed by project_memory_list.',
+      ),
+    content: n().optional().describe(e),
+    local_path: n().min(1).optional().describe(o),
+    present_to_user: P()
+      .optional()
+      .describe(
+        "project_write: true marks this doc as the file the user needs to " +
+          "see \u2014 the deliverable they asked for or must act on. Defaults to " +
+          "false; leave it unset for routine saves, notes, and bulk writes.",
+      ),
+    if_version: n()
+      .optional()
+      .describe(
+        "project_write to an existing doc: the `version` that came with the copy you worked from (from project_read or project_write). The write is refused if the doc has changed since. Omit for a new doc.",
+      ),
+    query: n()
+      .min(1)
+      .optional()
+      .describe("project_search: knowledge-base query"),
+    n: E()
+      .int()
+      .min(1)
+      .max(15)
+      .optional()
+      .describe("project_search: number of hits (default 5)"),
+    original: P()
+      .optional()
+      .describe(
+        "project_read: true saves the original file of a document-kind upload (PDF, docx) to a local file and returns its path, in place of its extracted text. Ignored for text docs and other uploads.",
+      ),
+  });
+function te() {
+  return Kv()?.maxBytes !== 0 && Lt("tengu_mossy_wirth", !1);
+}
+var Se = p(() =>
+    St(
+      "project_write: inline doc text. Mutually exclusive with local_path. Use local_path for anything you have on disk.",
+      "project_write: a file inside the working directory to upload. The " +
+        "tool reads, encodes, and uploads directly \u2014 contents never enter " +
+        "your context. Mutually exclusive with content.",
+    ),
+  ),
+  ke = p(() =>
+    St(
+      "project_write: inline doc text. Mutually exclusive with local_path.",
+      "project_write: the absolute path of a file that you have read or written in full in this session. Mutually exclusive with content.",
+    ),
+  ),
+  lo = p(() => Se().omit({ original: !0 })),
+  ho = p(() => ke().omit({ original: !0 })),
+  uo = p(() => Se().omit({ if_version: !0 })),
+  fo = p(() => ke().omit({ if_version: !0 })),
+  _o = p(() => Se().omit({ original: !0, if_version: !0 })),
+  po = p(() => ke().omit({ original: !0, if_version: !0 })),
+  mo = (e) =>
+    e.extend({
+      edits: n()
+        .min(1)
+        .optional()
+        .describe(
+          "project_write to an existing doc: SEARCH/REPLACE blocks for the passages that change. Mutually exclusive with content and local_path.",
+        ),
+    }),
+  Ze = new WeakMap();
+function wo(e) {
+  let o = Ze.get(e);
+  if (o === void 0) ((o = mo(e)), Ze.set(e, o));
+  return o;
+}
+function go() {
+  let e = ze() === "elsewhere";
+  if (!w4e()) {
+    if (e) return te() ? fo() : po();
+    return te() ? uo() : _o();
+  }
+  if (e) return te() ? ke() : ho();
+  return te() ? Se() : lo();
+}
+var re = { notice: n().optional() },
+  et = {
+    version: n()
+      .optional()
+      .describe(
+        "@internal Lowercase hex SHA-256 of the UTF-8 bytes of a text doc's whole text; never on a project_read that delivered only part of the doc. Set where docVersionsOffered; also, while tengu_lovely_rain is on, on a project_read that saved the whole text to a file, and on a project_write by local_path in a conversation (not a script's inner call); always on a project_write with edits. A later checked write by path looks for this hash.",
+      ),
+  },
+  yo = p(() => c({ knowledge_size: E(), max_knowledge_size: E() })),
+  At = p(() =>
+    c({
+      content_id: n(),
+      page: E().int().optional(),
+      media_type: F(["image/jpeg", "image/png", "image/gif", "image/webp"]),
+      data: n().min(1),
+    }),
+  ),
+  bo = 2,
+  jo = p(() =>
+    zn("method", [
+      c({
+        method: v("project_info"),
+        ...re,
+        local_file: n().optional(),
+        name: n(),
+        description: n(),
+        instructions: n(),
+        docs: C(c({ path: n(), created_at: n().nullable() })),
+        files: C(
+          c({ path: n(), file_kind: n(), created_at: n().nullable() }),
+        ).optional(),
+        sync_sources: C(
+          c({ type: n().nullable(), config: he(n(), ie()) }),
+        ).optional(),
+        knowledge: yo(),
+      }),
+      c({
+        method: v("project_read"),
+        ...re,
+        path: n(),
+        ...et,
+        file_kind: n().optional(),
+        content: n().optional(),
+        local_file: n().optional(),
+        size_bytes: E()
+          .optional()
+          .describe(
+            "@internal Size in UTF-8 bytes of the document's whole text. Set only when the text is in local_file and project_read had a token limit on inline text.",
+          ),
+        created_at: n().nullable(),
+      }),
+      c({
+        method: v("project_search"),
+        ...re,
+        rag: P(),
+        hits: C(
+          c({
+            name: n().optional(),
+            doc_uuid: n().optional(),
+            text: n().optional(),
+            image_attached: P().optional(),
+            page: E().optional(),
+          }),
+        ).optional(),
+        images: C(At())
+          .optional()
+          .describe(
+            "@internal Page images for the hits, sent to the model as image blocks after the JSON. Absent when there are none. stripForStorage removes it before the result is stored or sent to SDK clients.",
+          ),
+        docs: C(n()).optional(),
+      }),
+      c({
+        method: v("project_write"),
+        ...re,
+        path: n(),
+        doc_uuid: n(),
+        ...et,
+        replaced: P(),
+        present_to_user: P().optional(),
+        local_path: n().optional(),
+      }),
+      c({ method: v("project_delete"), ...re, path: n(), deleted: P() }),
+      c({
+        method: v("project_memory_list"),
+        ...re,
+        files: C(
+          c({
+            path: n(),
+            size_bytes: E(),
+            updated_at: n().nullable(),
+            truncated: P(),
+          }),
+        ),
+        truncated: P(),
+      }),
+      c({
+        method: v("project_memory_read"),
+        ...re,
+        path: n(),
+        content: n().optional(),
+        local_file: n().optional(),
+        size_bytes: E(),
+        updated_at: n().nullable(),
+        truncated: P(),
+      }),
+    ]),
+  ),
+  vo = {
+    project_info: [],
+    project_read: ["path"],
+    project_search: ["query"],
+    project_write: ["path"],
+    project_delete: ["path"],
+    project_memory_list: [],
+    project_memory_read: ["path"],
+  };
+function Ee(e) {
+  return (
+    e === "project_info" ||
+    e === "project_read" ||
+    e === "project_search" ||
+    e === "project_memory_list" ||
+    e === "project_memory_read"
+  );
+}
+function $e(e) {
+  return !Ee(e) && b("tengu_serene_curry", !0);
+}
+function Me(e) {
+  return !Ee(e) && wdi();
+}
+function kt(e) {
+  let o = ns();
+  if (o !== null) return me(o, e);
+  return Pe(e) ? me(e) : e;
+}
+function To(e) {
+  return KC(e) ? kt(e) : `a path of over ${kRt} characters`;
+}
+function ye(e) {
+  switch (e?.method) {
+    case "project_info":
+      return "Read project info";
+    case "project_read":
+      return e.path ? `Read ${e.path}` : "Read project doc";
+    case "project_search":
+      return e.query ? `Search "${e.query}"` : "Search project";
+    case "project_write": {
+      let o = e.path ?? "?",
+        r = e.local_path ? ` from ${To(e.local_path)}` : "";
+      return `Write ${o}${r}`;
+    }
+    case "project_delete":
+      return e.path ? `Delete ${e.path}` : "Delete project doc";
+    case "project_memory_list":
+      return "List project memory";
+    case "project_memory_read":
+      return e.path ? `Read memory ${e.path}` : "Read project memory file";
+    default:
+      return "Project";
+  }
+}
+function Eo(e) {
+  switch (e) {
+    case "custom_client":
+      return 'The claude.ai login uses a custom OAuth client, which cannot be granted project scopes. Run /login with the standard "Claude account with subscription" flow to use Projects.';
+    case "save_failed":
+      return "Could not save the refreshed claude.ai credentials (secure storage was unavailable), and the server has already consumed the stored ones. Run /login to reconnect, then retry.";
+    case "no_token":
+      return 'Run /login and select "Claude account with subscription", then retry \u2014 the "Anthropic Console account" option does not provide claude.ai credentials.';
+    case "no_refresh":
+      return "The claude.ai login cannot be refreshed in this session \u2014 the token was supplied via CLAUDE_CODE_OAUTH_TOKEN, or its refresh token has expired or was revoked. Run /login to reconnect.";
+    case "expand_failed":
+      return 'Could not add project scopes to the token. Run /login, select "Claude account with subscription", and retry.';
+    case "lock_contended":
+      return "Another Claude Code process is refreshing the OAuth token. Retry in a moment.";
+    case "wrong_provider":
+      return "Projects is only available with claude.ai authentication. It is not supported through Bedrock, Vertex, or other third-party providers.";
+    case "essential_traffic_only":
+      return "Projects is unavailable while nonessential network traffic is restricted (CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC is set).";
+    case "policy_disabled": {
+      let { featureLabel: o, verb: r } = Owe("allow_projects_tool");
+      return Dp("allow_projects_tool", o, r) ?? qNe(o);
+    }
+  }
+}
+var tt =
+  "Upgraded your claude.ai login to include project access (user:projects:read, user:projects:write). This lets the session read and write the project's knowledge docs on claude.ai.";
+class D extends Error {
+  reasonCode;
+  maxErrorChars;
+  constructor(e, o, r) {
+    super(e);
+    this.reasonCode = o;
+    this.maxErrorChars = r;
+    this.name = "ProjectsPreconditionError";
+  }
+}
+async function So(e) {
+  let o = await y4e(e);
+  if (!o.ok) {
+    let r =
+        o.reason === "wrong_provider" ||
+        o.reason === "essential_traffic_only" ||
+        o.reason === "policy_disabled" ||
+        o.reason === "lock_contended" ||
+        o.reason === "custom_client" ||
+        o.reason === "save_failed"
+          ? ""
+          : "Projects needs a claude.ai login. ",
+      i = o.detail ? ` (${o.detail})` : "";
+    throw new D(`${r}${Eo(o.reason)}${i}`);
+  }
+  return { accessToken: o.accessToken, expanded: o.expanded };
+}
+function ot() {
+  return s.CLAUDE_PROJECT_UUID;
+}
+var nt = vn({
+    registryToolId: "c50a73b9-1a31-5d19-abf6-f81a0fd74005",
+    name: fy,
+    searchHint: "read and write the session's attached claude.ai project",
+    backgrounding: "never",
+    maxResultSizeChars: 300000,
+    persistenceThresholdCeiling: 300000,
+    isEnabled() {
+      return Rn("allow_projects_tool") && ot() !== void 0;
+    },
+    async description() {
+      return ULi({
+        localUploads: ze(),
+        elsewhereMaxMiB: Fe(),
+        memory: !Y(),
+        original: te(),
+        versions: w4e(),
+        edits: A0t(),
+      });
+    },
+    async prompt() {
+      return ULi({
+        localUploads: ze(),
+        elsewhereMaxMiB: Fe(),
+        memory: !Y(),
+        original: te(),
+        versions: w4e(),
+        edits: A0t(),
+      });
+    },
+    get inputSchema() {
+      let e = go();
+      return A0t() ? wo(e) : e;
+    },
+    get outputSchema() {
+      return jo();
+    },
+    isConcurrencySafe() {
+      return !1;
+    },
+    isReadOnly(e) {
+      return Ee(e.method);
+    },
+    isDestructive(e) {
+      return e.method === "project_write" || e.method === "project_delete";
+    },
+    ignoresWholeToolAllowRule(e) {
+      return $e(e?.method) || Me(e?.method);
+    },
+    suppressesAlwaysAllowRule(e, o) {
+      return o !== !0 && ($e(e?.method) || Me(e?.method));
+    },
+    userFacingName(e) {
+      return `Project: ${ye(e)}`;
+    },
+    summaryRawKeys() {
+      return ["local_path"];
+    },
+    getToolUseSummary(e) {
+      return e?.method ? ute(ye(e)) : null;
+    },
+    toAutoClassifierInput(e) {
+      return ye(e);
+    },
+    renderToolUseMessage(e) {
+      return ye(e);
+    },
+    coerceInput(e) {
+      return Ge(e, { originalOffered: te(), docVersionsOffered: w4e() });
+    },
+    validationErrorSteer(e) {
+      return !A0t() && T(e) && "edits" in e
+        ? "edits is not available in this session. Make the change in the whole text of the doc, and pass that text, not the blocks, as content."
+        : null;
+    },
+    create(e) {
+      return {
+        async validateInput(o, r) {
+          let i = vo[o.method].filter((h) => o[h] === void 0);
+          if (i.length > 0)
+            return {
+              result: !1,
+              message: `${o.method} requires: ${i.join(", ")}.`,
+              errorCode: 1,
+            };
+          if (
+            o.method === "project_delete" &&
+            r.sameTurnToolUses?.some((h) =>
+              h.message.content.some(
+                (m) =>
+                  m.type === "tool_use" &&
+                  r.sameTurnErroredToolUseIds?.has(m.id) === !0 &&
+                  uYt(e).includes(m.name) &&
+                  T(m.input) &&
+                  m.input.method === "project_write",
+              ),
+            ) === !0
+          )
+            return {
+              result: !1,
+              message:
+                "This call deleted nothing. A project_write earlier in this response was refused or returned an error, and this call was sent before that result was known, so this doc may hold text that is saved nowhere else. This refusal applies to this response only.",
+              errorCode: 2,
+            };
+          if (o.method === "project_write") {
+            let h = [o.content, o.local_path, o.edits];
+            if (U(h, (y) => y !== void 0) !== 1)
+              return {
+                result: !1,
+                message: A0t()
+                  ? 'project_write requires exactly one of "content", "local_path" or "edits".'
+                  : 'project_write requires exactly one of "content" or "local_path".',
+                errorCode: 1,
+              };
+            let m = ZXo(fy, [["local_path", o.local_path ?? ""]]);
+            if (m) return m;
+            if (o.if_version !== void 0 && !fm.test(o.if_version))
+              return {
+                result: !1,
+                message:
+                  "Nothing was changed. if_version must be the 64-character `version` that came with the copy you worked from, copied exactly. If you do not have it, project_read the doc. Omit it for a new doc.",
+                errorCode: 1,
+              };
+          }
+          return { result: !0 };
+        },
+        async checkPermissions(o) {
+          if (zp(e.permissions().mode) === "arbiter" && $e(o.method))
+            return {
+              behavior: "passthrough",
+              message:
+                "Saving or deleting a project doc requires classifier review.",
+            };
+          if (
+            !Me(o.method) ||
+            Jr(e.permissions().mode, e.permissions().servedCall === !0)
+          )
+            return { behavior: "allow", updatedInput: o };
+          let r = b("tengu_splendid_locket", "off"),
+            i =
+              b("tengu_warm_twilight", !1) &&
+              o.path !== void 0 &&
+              Ye(e.messages(), { method: o.method, path: o.path }, uYt(e))
+                ? "repeat"
+                : (r === "after_outside_text" ||
+                      r === "every_call" ||
+                      !kdi(e.permissions())) &&
+                    Ve(e.messages(), e.tools, e.toolAliases, uYt(e))
+                  ? "after_outside_text"
+                  : r === "every_call"
+                    ? "every_call"
+                    : void 0;
+          if (i === void 0) return { behavior: "allow", updatedInput: o };
+          return (
+            a("tengu_projects_tool_asked", {
+              reason: f(i),
+              method: f(o.method),
+              is_subagent: e.agentId !== void 0,
+            }),
+            {
+              ...Yci(
+                o.method === "project_delete",
+                i === "repeat" ? bKa : i === "every_call" ? wKa : void 0,
+              ),
+              ...(i === "repeat" && { defaultToNo: !0 }),
+            }
+          );
+        },
+        async call(o, r) {
+          if (st() && !Ee(o.method)) a("tengu_projects_write_started", {});
+          let i = r.signal,
+            h = ot();
+          if (!h)
+            throw new D(
+              "No project attached to this session. Project tools are available when the session is in a claude.ai Project.",
+            );
+          let m = "";
+          try {
+            let y = await So(e.credentials);
+            m = y.accessToken;
+            let g = await nn(
+              o,
+              h,
+              e.session,
+              i,
+              e.storageV5,
+              e.credentials,
+              Ro(o, r, e),
+              () =>
+                Ht(e)
+                  ? gRa({
+                      facts: e.modelFacts(),
+                      configuredWindow: e.autoCompactWindow(),
+                      messages: e.messages(),
+                      room: r.innerCall === !0 ? void 0 : e.contextRoom(),
+                    })
+                  : void 0,
+              () => (Kv() === void 0 ? hRa(e.tools) : void 0),
+              e.permissions,
+              e.agentId === void 0 ? Pzo.peek(e.session)?.host : void 0,
+              e.agentId === void 0 ? e.readFileState : void 0,
+              r.innerCall === !0 || e.messages().length === 0
+                ? void 0
+                : (j, S, O) => rai(e.messages(), j, S, uYt(e), r.toolUseId, O),
+              (j) => Yo(j, h, e, r.innerCall === !0),
+              () => fYt(e.tools, e.permissions(), () => e),
+            );
+            return {
+              data: y.expanded
+                ? {
+                    ...g,
+                    notice: g.notice
+                      ? `${tt}
+
+${g.notice}`
+                      : tt,
+                  }
+                : g,
+            };
+          } catch (y) {
+            if (o.method === "project_write" && o.local_path !== void 0)
+              Vo(
+                y,
+                i,
+                e.agentId === void 0 ? Pzo.peek(e.session)?.host : void 0,
+              );
+            if (i.aborted) throw new Ie();
+            let g = Mt(y),
+              j = qWa(d(g), m);
+            if (g instanceof D) throw new D(j, g.reasonCode, g.maxErrorChars);
+            let S = o.method === "project_write" ? Bt(g) : void 0;
+            if (S !== void 0) throw S;
+            if (
+              o.method === "project_delete" &&
+              g instanceof qD &&
+              g.errorCode === "project_doc_too_large_to_save_again"
+            )
+              throw new D(Ut("delete"), "project_doc_too_large_to_save_again");
+            let O =
+                w(g) ??
+                (ne() &&
+                e.storageV5 !== void 0 &&
+                g instanceof Error &&
+                wQe(g.cause)
+                  ? Xg(g.cause)
+                  : void 0),
+              k =
+                y instanceof se
+                  ? Ho(y)
+                  : y instanceof Oe
+                    ? Wo(y.cause, o.method === "project_delete")
+                    : "",
+              I = Error(k === "" ? j : `${j.replace(/[.\s]*$/, "")}.${k}`);
+            if (
+              (HD(O) && O !== "EACCES" && O !== "EPERM") ||
+              O === "EISDIR" ||
+              O === "ENOSPC" ||
+              O === "EDQUOT" ||
+              O === "EIO"
+            )
+              I.code = O;
+            throw I;
+          }
+        },
+      };
+    },
+    mapToolResultToToolResultBlockParam(e, o) {
+      if (
+        e.method === "project_search" &&
+        e.images !== void 0 &&
+        e.images.length > 0
+      ) {
+        let { images: r, ...i } = e;
+        return {
+          tool_use_id: o,
+          type: "tool_result",
+          content: [
+            { type: "text", text: _(i) },
+            ...r.map((h) => ({
+              type: "image",
+              source: {
+                type: "base64",
+                media_type: h.media_type,
+                data: h.data,
+              },
+            })),
+          ],
+        };
+      }
+      return { tool_use_id: o, type: "tool_result", content: _(e) };
+    },
+    stripToolUseResultAtCreation: !0,
+    stripForStorage(e) {
+      if (
+        typeof e !== "object" ||
+        e === null ||
+        e.method !== "project_search" ||
+        !("images" in e)
+      )
+        return e;
+      let { images: o, ...r } = e;
+      return r;
+    },
+    restoreTransientForRemap(e, o) {
+      if (e.method !== "project_search" || o.method !== "project_search")
+        return o;
+      let { images: r, ...i } = o;
+      if (_(o.hits) !== _(e.hits)) return i;
+      let h = o.images ?? e.images;
+      return h !== void 0 && h.length > 0 ? { ...i, images: h } : i;
+    },
+  }),
+  Ot = { NFD: "canonical", NFKD: "compatibility" },
+  Ao = 36,
+  ko = 1024;
+function xt(e, o, r) {
+  let i = Math.min(Ao * e.length, ko),
+    h = e.normalize(r),
+    [m, y] = M(o.filter((g) => g.length <= i && g.normalize(r) === h));
+  return y === void 0 ? m : void 0;
+}
+function Rt(e, o, r, i) {
+  if (o.includes(e)) return e;
+  for (let h of r) {
+    let m = xt(e, o, h);
+    if (m !== void 0) return i(m, Ot[h]) ? m : e;
+  }
+  return e;
+}
+function Ct(e) {
+  let o = e.replace(/^\.\//, "");
+  return o.includes("/") ? [o] : [o, `${_an}${o}`];
+}
+function It(e, o, r, i) {
+  let h = Ct(e),
+    m = h.find((g) => o.includes(g));
+  if (m !== void 0) return { path: m, listed: m };
+  for (let g of h) {
+    let j = Rt(g, [...o, ...r], ["NFD"], (S, O) => o.includes(S) && i(S, O));
+    if (j !== g) return { path: g, listed: j };
+  }
+  let y = h.at(-1) ?? h[0];
+  return { path: y, listed: y };
+}
+function Oo(e, o, r) {
+  let i = Ct(e),
+    h = i.find((m) => o.includes(m));
+  if (h !== void 0) return h === e || r(h, "respelled") ? h : e;
+  for (let m of ["NFD", "NFKD"])
+    for (let y of i) {
+      let g = xt(y, o, m);
+      if (g !== void 0) return r(g, Ot[m]) ? g : e;
+    }
+  return e;
+}
+function xo(e, o, r, i) {
+  let h = r.permissionPhase?.pipeline,
+    m = h?.result.decisionReason,
+    y =
+      o === "canonical" &&
+      h?.result.behavior === "ask" &&
+      (r.permissionPhase?.checked?.result.behavior === "ask" ||
+        h.result.message === RQo);
+  if (
+    r.innerCall === !0 ||
+    r.remoteCall !== void 0 ||
+    h === void 0 ||
+    (h.result.behavior !== "allow" && !y) ||
+    h.answered !== void 0 ||
+    h.input.path !== e.path ||
+    h.input.method !== e.method ||
+    (!y &&
+      m !== void 0 &&
+      m.type !== "mode" &&
+      m.type !== "rule" &&
+      !(
+        m.type === "classifier" &&
+        m.classifierAllowed === !0 &&
+        (o === "canonical" || o === "renamed")
+      ))
+  )
+    return "not_plain_allow";
+  try {
+    return SRa(e, i);
+  } catch (g) {
+    return (
+      t(
+        `Projects: could not check hooks and permission rules, so only a stored name typed exactly was used: ${d(g)}`,
+        { level: "error" },
+      ),
+      "error"
+    );
+  }
+}
+function Ro(e, o, r) {
+  return (i, h) => {
+    let m = xo(e, h, o, r);
+    return (
+      a("tengu_projects_unicode_name_match", {
+        method: f(e.method),
+        form: f(h),
+        blocked_by: fe(m),
+      }),
+      m === void 0
+    );
+  };
+}
+var Co = 4,
+  Nt =
+    "Write refused; nothing in the project was changed. This write would put the project over its maximum size. Any doc already at this path still holds its old content; do not delete it to retry, because the retry can be refused too, and the content would then be lost. Do not delete other docs to make room unless the user asks. Tell the user the project is out of room: they can remove docs or files they no longer need, or ask you to write less.",
+  Io =
+    "Write refused; nothing in the project was changed. This text is over the 1.9 MB limit for one doc, and a new doc with the same text would be refused too. Any doc already at this path still holds its old content. This tool cannot bring back text that a delete or a shorter save removes, so do not delete that doc, and do not shorten, summarize or cut the text to fit, unless the user asks for that after you have told them what would be lost. Tell the user that the text was not saved, and offer only to save it whole as several smaller docs at new paths. One exception: if the project no longer holds the earlier text, for example because you deleted its doc in this session, save the whole text now as several smaller docs at new paths, and then tell the user.",
+  rt =
+    "Write refused; nothing in the project was changed. The doc at this path is no longer the version in if_version: someone else, another session, or an earlier save of yours has changed it. Call project_read on this path, make your change in the text that it returns, and write again with the version that it returns as if_version, up to two retries in total. If it is still refused, tell the user that the new content was not saved, and offer it to them another way. If project_read returns no version (its result says that only part of the doc was shown or saved), stop: tell the user that this session cannot safely update a doc this large, and offer them the new content another way. Do not drop if_version to force the write, and do not delete the doc.",
+  Lo =
+    "Write refused; nothing in the project was changed. This session cannot check if_version. Call project_read on this path, make your change in the text that it returns, and write again without if_version.",
+  No =
+    "Write refused; nothing in the project was changed. The doc at this path has changed since you last read or wrote it in this conversation. Call project_read on this path, make your change in the text that it returns, and write again. If project_read cannot show the whole text inline, follow what its result tells you instead; if the write is refused again, tell the user that the new content was not saved, and offer it to them another way. Do not delete the doc to write it afresh.",
+  Do =
+    "Write refused; nothing in the project was changed. The doc at this path has changed since you last read or wrote it in this conversation. Call project_read on this path, make your change from the text that it shows or saves whole, write the file again, and repeat this project_write. If it says that only part of the doc was saved or shown, or the write is refused again, tell the user that the new content was not saved, and offer it to them another way. Do not delete the doc to write it afresh.",
+  $o =
+    "Write refused; nothing in the project was changed. This session cannot check whether this doc has changed since you last read or wrote it, so it does not replace it. Do not delete the doc to write it afresh. Tell the user that the content was not saved, and offer it to them another way.",
+  $t =
+    "Write refused; nothing in the project was changed. if_version does not name the copy of this doc that this write is checked against: the last whole text of it that you were shown or typed in this conversation (for a write from a file, also the last one read to or written from a file). Call project_read on this path, make your change from what it returns, and write again without if_version.",
+  Mo =
+    "Write refused; nothing in the project was changed. A doc is already at this path, and this tool cannot find its current text in your context: the doc as shown to you in this conversation, a project_read of it, or your own earlier write of that text. Call project_read on this path, make your change in the text that it returns, and write again. Do not delete the doc to write it afresh: a delete cannot be undone here, and the new doc would hold only what you remember of the old one. If project_read cannot return the doc's whole text inline, do not repeat this write: follow what that result tells you, or tell the user that this doc could not be rewritten from here.",
+  it = "tengu_velvety_leaf",
+  Po = (HXe * 3) / 4,
+  Fo =
+    "Write refused; nothing in the project was changed. A doc is already at this path, and this tool cannot tell that the file holds a change to its current text: this conversation holds no project_read that showed or saved the whole of that current text, no earlier project_write of it from a file, and no copy of it shown to you. Call project_read on this path. If it shows the text, or saves the whole doc to a file, make your change from that text, write the file again, and repeat this project_write. If it says that only part of the doc was saved or shown, do not repeat this write: tell the user that this doc could not be rewritten from here. Do not delete the doc to write it afresh: a delete cannot be undone here.",
+  zo =
+    "This tool cannot undo a delete. To change a doc, do not delete it first: project_write to its path replaces the content in place.";
+class se extends Error {
+  cause;
+  at;
+  constructor(e, o) {
+    super("a project save failed");
+    this.cause = e;
+    this.at = o;
+  }
+}
+class Oe extends Error {
+  cause;
+  constructor(e) {
+    super("a project listing failed");
+    this.cause = e;
+  }
+}
+function Mt(e) {
+  return e instanceof se || e instanceof Oe ? e.cause : e;
+}
+var Bo = new Set([408, 429, 500, 502, 503, 504]);
+function Pt(e) {
+  return e instanceof qD ? Bo.has(e.status) : jVt(w(e));
+}
+function Wo(e, o) {
+  let [r, i, h, m] = o
+      ? [
+          "deleted",
+          "delete",
+          "project_delete",
+          "this delete did not go through, and that they can try removing the doc from the project in claude.ai.",
+        ]
+      : [
+          "saved",
+          "save",
+          "project_write",
+          "this save did not go through, and offer the content to them another way.",
+        ],
+    y = ` This call ${r} nothing: this tool reads the project's list of docs before every ${i}, and that read failed.`,
+    g = ` If an earlier call in this turn failed at the ${i} itself, also tell them that it may still have gone through.`;
+  return Pt(e)
+    ? `${y} Try the same ${h} again, up to two retries in total. If it still fails, tell the user that ${m}${g}`
+    : `${y} Tell the user that ${m}${g}`;
+}
+var Ft =
+  "Call project_read on this path before any other write or delete: if it returns the new content, stop and tell the user that an earlier copy may need removing from the project in claude.ai; if not, you may retry the write once, and only once in total unless the user asks you to try again.";
+function Ho({ cause: e, at: o }) {
+  let r = e instanceof qD ? e.status : void 0,
+    i = Pt(e)
+      ? "may_pass"
+      : r === void 0
+        ? "unknown"
+        : r === 404 || r === 410
+          ? "gone"
+          : r === 0 || (r >= 400 && r < 500)
+            ? "refused"
+            : "unknown",
+    h = "and offer it to them another way.";
+  if (i === "gone" || (i === "refused" && o === "no_doc"))
+    return " Tell the user that the content was not saved, and offer it to them another way.";
+  let m =
+    "Tell the user that the new content may not have been saved, and offer it to them another way.";
+  if (o === "no_doc")
+    return i === "may_pass"
+      ? " The content may not be in the project. Call project_read on this path: if it returns the content, the save went through late; if not, try the same project_write again, up to two retries in total. If it still fails, tell the user that it was not saved, and offer it to them another way."
+      : " The content may not be in the project. Tell the user that it may not have been saved, and offer it to them another way.";
+  let y =
+    "Do not delete it to retry: this tool cannot undo a delete, and if the retry failed too, the doc would be lost.";
+  if (i === "refused")
+    return ` This call changed nothing: the doc at this path is still there. ${y} Tell the user that this save did not go through, and offer the new content to them another way.`;
+  if (o === "doc_beside_new") {
+    let j = `The old doc at this path was not removed. ${y} The new content may have been saved late as a second doc at this path.`;
+    return i === "may_pass"
+      ? ` ${j} ${Ft} If that fails too, tell the user that the new content may not have been saved, and offer it to them another way.`
+      : ` ${j} ${m}`;
+  }
+  let g =
+    "The doc at this path was not removed: it holds its old content, or the new content if the save went through late.";
+  return i === "may_pass"
+    ? ` ${g} ${y} Try the same project_write again, up to two retries in total. If it still fails, tell the user that the new content was not saved, and offer it to them another way.`
+    : ` ${g} ${y} ${m}`;
+}
+function Uo(e, o) {
+  if (e.max_knowledge_size <= 0) return;
+  let r = Math.ceil(o / Co);
+  if (e.knowledge_size + r > e.max_knowledge_size)
+    throw new D(Nt, "write_would_exceed_project_size_limit");
+}
+var at = 26214400,
+  zt =
+    "project_write: local_path is not available in this session; pass the text as content.";
+function Fe() {
+  let e = Lt("tengu_merry_kite", 1);
+  return typeof e === "number" && Number.isInteger(e) && e >= 1
+    ? Math.min(e, U6r / 1048576)
+    : 1;
+}
+function ze() {
+  return !Y() ? "here" : mRa() ? "elsewhere" : "none";
+}
+var Go = [
+  "local_path_not_available",
+  "local_path_not_absolute",
+  "local_path_too_long",
+  "local_path_outside_cwd",
+  "local_path_no_file",
+  "local_path_os_permission_denied",
+  "local_path_not_regular_file",
+  "local_path_protected_file",
+  "local_path_read_needs_permission",
+  "local_path_file_not_read_yet",
+  "local_path_file_differs_from_read",
+  "local_path_notebook",
+  "local_path_hard_link",
+  "local_path_file_too_large",
+  "local_path_container_unreachable",
+  "local_path_repo_rules_unread",
+  "local_path_other_container_refusal",
+  "content_has_nul",
+  "write_would_exceed_project_size_limit",
+  "project_knowledge_full",
+  "project_doc_content_too_large",
+  "project_doc_too_large_to_replace",
+  "write_over_a_doc_not_in_view",
+  "project_doc_stale",
+  "if_version_not_held",
+  "if_version_not_served",
+];
+function W(e, o) {
+  return new D(e, o);
+}
+function Bt(e) {
+  if (!(e instanceof qD)) return;
+  switch (e.errorCode) {
+    case "project_knowledge_full":
+      return W(Nt, "project_knowledge_full");
+    case "project_doc_content_too_large":
+      return W(Io, "project_doc_content_too_large");
+    default:
+      return;
+  }
+}
+function be(e, o, r = {}) {
+  a("tengu_projects_write_by_local_path", {
+    outcome: f(e),
+    reason: fe(r.reason),
+    failed_step: fe(r.failedStep),
+    read_from: f(o !== void 0 ? "tool_container" : Y() ? "none" : "local_disk"),
+    replaced: r.replaced,
+    saved_bytes: r.savedBytes,
+    via_ccr_bridge: hq(),
+  });
+}
+function Vo(e, o, r) {
+  let i = Mt(e),
+    h = i instanceof D ? i : Bt(i);
+  if (o.aborted) be("cancelled", r);
+  else if (h !== void 0)
+    be("refused", r, { reason: Go.find((m) => m === h.reasonCode) });
+  else be("failed", r, { failedStep: e instanceof se ? "save" : "other" });
+}
+async function Xo(e, o, r, i) {
+  if (!Pe(e) || e.length > v9e)
+    throw W(
+      `project_write: local_path must be an absolute path of at most ${v9e} characters in this session.`,
+      Pe(e) ? "local_path_too_long" : "local_path_not_absolute",
+    );
+  if (o.ruleItCannotApply(r) !== void 0)
+    throw W(zt, "local_path_not_available");
+  if (nF(me(e.trim())))
+    throw W(
+      "project_write: a notebook is not uploaded by local_path in this session. Pass its text as content.",
+      "local_path_notebook",
+    );
+  let h = await o.read(e, i, Fe() * 1024 * 1024);
+  if (h.ok) return h.text;
+  switch (h.code) {
+    case "read_it_first":
+      throw W(
+        "project_write: Read the whole file at local_path first (again, if you read, wrote or edited it earlier in this chat), or pass its text as content.",
+        "local_path_file_not_read_yet",
+      );
+    case "not_as_read":
+      throw W(
+        "project_write: the file at local_path has changed since you read or wrote it. Read it again, or pass its text as content.",
+        "local_path_file_differs_from_read",
+      );
+    case "over_the_cap":
+      throw W(
+        "project_write: the file at local_path is too large to upload by path in this session, and too long to type as content. Nothing was written. Tell the user that this file is too large to save from here.",
+        "local_path_file_too_large",
+      );
+    case "repo_rules_unread":
+      throw W(
+        "project_write: this session's cloud environment could not read the repository's permission rules, so the file at local_path was not read and nothing was written. Retrying won't help: tell the user that .claude/settings.json or .claude/settings.local.json may have to be fixed or removed, or pass the text as content if it is fit to share.",
+        "local_path_repo_rules_unread",
+      );
+    case "container_unreachable":
+    case "no_answer":
+      throw W(
+        "project_write: this session's cloud environment could not be reached, so the file at local_path was not read and nothing was written. Try again, or pass its text as content.",
+        "local_path_container_unreachable",
+      );
+    case "refused":
+      throw W(
+        "project_write: the file at local_path cannot be uploaded by path: it is missing or unreadable, or its location, name or type is not allowed. If its text is fit to share, pass it as content.",
+        "local_path_other_container_refusal",
+      );
+    default:
+      throw W(
+        "project_write: the file at local_path cannot be uploaded by path; pass its text as content.",
+        "local_path_other_container_refusal",
+      );
+  }
+}
+async function ct(e, o, r) {
+  return r ? (await J6(e, o, { attached: !0 })) !== void 0 : NRn(e, o);
+}
+function dt(e, o, r) {
+  return e.some((i) => {
+    let h = o.get(i);
+    return (
+      Ale(h) &&
+      (r === void 0 ||
+        (h.readBaseline !== void 0 ? Ljt(h.readBaseline, eT(r)) : dbo(h, r)))
+    );
+  });
+}
+async function Ko(e, o, r) {
+  if (Y()) throw W(zt, "local_path_not_available");
+  if (!KC(e))
+    throw W(
+      `project_write: local_path must be at most ${kRt} characters.`,
+      "local_path_too_long",
+    );
+  let i = (x) => (x.endsWith(Qe) ? x : x + Qe),
+    h = me(Te()),
+    m = me(h, e),
+    y =
+      r !== void 0 &&
+      Sa() &&
+      FG(s.CLAUDE_CODE_REMOTE_SESSION_ID, s.CLAUDE_CODE_ENVIRONMENT_KIND)
+        ? hHr()
+        : [],
+    g = [h, ...y].find((x) => m === x || m.startsWith(i(x)));
+  if (g === void 0)
+    throw W(
+      "project_write: local_path must be inside the working directory.",
+      "local_path_outside_cwd",
+    );
+  if (m.length > v9e)
+    throw W(
+      "project_write: no file exists at local_path.",
+      "local_path_too_long",
+    );
+  let j =
+      "project_write: local_path must not name a credential file, a device, or a file that Claude Code keeps for itself (its config and token folders).",
+    S = (x) => {
+      let N = k2e([x], o(), { refuseAutomounterShapes: !0 });
+      if (
+        N.layer !== "allow" &&
+        !(
+          N.layer === "path-mode-ask" &&
+          N.decision.decisionReason?.type === "workingDir"
+        )
+      )
+        throw W(
+          "project_write: this session may not read the file at local_path without asking (a permission rule or setting, a network path, or links that cannot be followed), so it cannot be uploaded by path.",
+          "local_path_read_needs_permission",
+        );
+    },
+    O = g !== h && g === y[0];
+  if (await ct(m, m, O)) throw W(j, "local_path_protected_file");
+  S(m);
+  let k, I;
+  try {
+    [k, I] = await Promise.all([Ne(m), g !== h ? g : Ne(g)]);
+  } catch (x) {
+    let N = w(x);
+    if (N === "ENOENT" || N === "ENOTDIR" || N === "ENAMETOOLONG")
+      throw W(
+        "project_write: no file exists at local_path.",
+        "local_path_no_file",
+      );
+    if (N === "EACCES" || N === "EPERM")
+      throw W(
+        "project_write: local_path is not readable.",
+        "local_path_os_permission_denied",
+      );
+    throw x;
+  }
+  if (k !== I && !k.startsWith(i(I)))
+    throw Error(
+      "project_write: local_path resolves outside the working directory.",
+    );
+  if (await ct(m, k, O)) throw W(j, "local_path_protected_file");
+  S(k);
+  let V =
+      "project_write: Read the whole file at local_path first, or pass its text as content. Outside the working directory, a file is uploaded by path only when this session has read all of it and it has not changed since.",
+    X = [m, k];
+  if (g !== h && X.some(nF))
+    throw W(
+      "project_write: a notebook outside the working directory is not uploaded by local_path. Pass its text as content.",
+      "local_path_notebook",
+    );
+  if (g !== h && !(r && dt(X, r))) throw W(V, "local_path_file_not_read_yet");
+  let z = 0,
+    H = qe.O_NONBLOCK ?? 0,
+    L = 536870912,
+    R;
+  try {
+    R = await io(k, qe.O_RDONLY | z | L | H);
+  } catch (x) {
+    let N = w(x);
+    if (N === "ENOENT")
+      throw W(
+        "project_write: no file exists at local_path.",
+        "local_path_no_file",
+      );
+    if (N === "EACCES" || N === "EPERM")
+      throw W(
+        "project_write: local_path is not readable.",
+        "local_path_os_permission_denied",
+      );
+    if (N === "EISDIR" || N === "ENXIO" || N === "EOPNOTSUPP")
+      throw W(
+        "project_write: local_path must be a regular file.",
+        "local_path_not_regular_file",
+      );
+    if (N === "ELOOP")
+      throw Error("project_write: local_path was replaced during the upload.");
+    throw x;
+  }
+  try {
+    let x = await R.stat({ bigint: !0 }),
+      N = "project_write: local_path was replaced during the upload.",
+      q,
+      G;
+    try {
+      ((q = await Ne(m)), (G = await ao(q, { bigint: !0 })));
+    } catch {
+      throw Error("project_write: local_path was replaced during the upload.");
+    }
+    if (q !== k)
+      throw Error("project_write: local_path was replaced during the upload.");
+    if (G.dev !== x.dev)
+      throw Error("project_write: local_path was replaced during the upload.");
+    if (x.ino !== 0n && G.ino !== x.ino)
+      throw Error("project_write: local_path was replaced during the upload.");
+    if (!x.isFile())
+      throw W(
+        "project_write: local_path must be a regular file.",
+        "local_path_not_regular_file",
+      );
+    if (x.nlink > 1n)
+      throw W(
+        "project_write: the file at local_path has a second name (a hard link), so its name does not say what it is. Pass its text as content instead.",
+        "local_path_hard_link",
+      );
+    if (x.size > BigInt(at))
+      throw W(
+        `project_write: file at local_path exceeds the ${at}-byte limit.`,
+        "local_path_file_too_large",
+      );
+    let Q = (await R.readFile()).toString("utf8");
+    if (g === h) return Q;
+    if (!(r && dt(X, r, Q))) throw W(V, "local_path_file_differs_from_read");
+    return eT(Q);
+  } finally {
+    await R.close();
+  }
+}
+var ut = 450;
+function Wt(e) {
+  let o = [];
+  for (let r of e.split(`
+`)) {
+    let i = 0;
+    while (r.length - i > ut) {
+      let h = i + ut,
+        m = r.slice(i, h).lastIndexOf(" "),
+        y = m > 0 ? i + m + 1 : r.codePointAt(h - 1) > 65535 ? h - 1 : h;
+      (o.push(r.slice(i, y)), (i = y));
+    }
+    o.push(r.slice(i));
+  }
+  return o.join(`
+`);
+}
+async function Yo(e, o, r, i) {
+  let h = e.description ?? "",
+    m = e.prompt_template ?? "",
+    y = b3s(e, r.modelFacts(), r.autoCompactWindow(), !0, {
+      messages: r.messages(),
+      forToolResult: !0,
+    });
+  if (y === void 0 || (y.description === h && y.prompt_template === m))
+    return { name: y?.name ?? e.name, description: h, instructions: m };
+  let g = zue(r.messages())?.attachedProject;
+  if (
+    !i &&
+    yRa() &&
+    W6r(h, g) === Buffer.byteLength(h, "utf8") &&
+    W6r(m, g) === Buffer.byteLength(m, "utf8")
+  )
+    return {
+      notice:
+        'description and instructions are left out here because together they are too long to repeat. Both stand whole in this conversation, in the section that begins "This session is attached to the Project".',
+      name: y.name,
+      description: "",
+      instructions: "",
+    };
+  let j = (txn.peek(r.session)?.size ?? 0) > 0,
+    S = {
+      notice:
+        "description and instructions are too long to return together, and this session has no file that holds them. What this answer and the rest of this conversation show of them is all that can be read: ignore a note that says project_info can give a file. If the task depends on the rest, tell the user that the project's description and instructions are too long to read in full here.",
+      name: y.name,
+      description: j ? "" : y.description,
+      instructions: j ? "" : y.prompt_template,
+    };
+  if (!Ht(r)) return (l("projects_tool_info_to_file", "no_reader"), S);
+  let O = Wt(`# Project description
+
+${h}
+
+# Project instructions
+
+${m}
+`),
+    k = await Be(O, `instructions-${o}`, r.session, r.storageV5, !0);
+  if ("failure" in k) return (l("projects_tool_info_to_file", k.failure), S);
+  return (
+    u("projects_tool_info_to_file"),
+    {
+      notice:
+        "description and instructions are left out here, because together they are too long to return. local_file holds both in full, with long lines split, and is for reading only: edits to it do not change the project. Read only the parts you need, with an offset and a limit, or search it.",
+      local_file: k.local_file,
+      name: y.name,
+      description: "",
+      instructions: "",
+    }
+  );
+}
+function Ht(e) {
+  let o = Kv();
+  return o === void 0 ? evt(e) : o.maxBytes > 0;
+}
+function Ut(e) {
+  return `This call changed nothing. The doc at this path holds more text than the 1.9 MB limit for one doc, and claude.ai lets no tool ${e} such a doc. The user can still delete it in claude.ai, but this tool cannot bring its text back. A new doc under the limit can still be saved at a new path.`;
+}
+var qo = `Write refused; nothing in the project was changed. The doc at this path holds more than ${_nt} bytes, more than project_read shows inline, so a rewrite typed from what it showed you would drop the rest. Do not delete the doc to write it again unless the user asks: a delete cannot be undone here. If you have the whole new text in a file that this session accepts as \`local_path\`, pass that file, but not a file made from only part of the doc. Otherwise write the new text to a new path, and tell the user that this doc is too large to rewrite here.`;
+async function ft(e, o, r, i, h, m, y, g, j, S, O = () => !1) {
+  let k = j(),
+    { body: I, whole: V } = await Gt(
+      o,
+      "project-doc",
+      r,
+      i,
+      m,
+      y,
+      g,
+      k !== void 0,
+    );
+  if ("content" in I)
+    y?.claim?.(we(xe(I.content, y), y, I.content === o ? g : null));
+  return GBt(
+    e,
+    V ? (S ?? ("local_file" in I && O() ? Je(o) : void 0)) : void 0,
+    {
+      ...I,
+      ...(y !== void 0 &&
+        "local_file" in I && { size_bytes: Buffer.byteLength(o, "utf8") }),
+      ...(k !== void 0 &&
+        "local_file" in I && {
+          notice: I.notice === void 0 ? k : `${k} ${I.notice}`,
+        }),
+    },
+    h,
+  );
+}
+async function Gt(e, o, r, i, h, m, y = null, g = !1) {
+  let j = Buffer.byteLength(e, "utf8"),
+    S =
+      o === "project-doc" ? " project_search still covers the whole doc." : "",
+    O = `; the rest could not be saved to a file this session can open.${S}`;
+  if (j <= _nt) {
+    let I = m === void 0 ? "within" : Vt(e, j, m, y);
+    if (I === "within") return { body: { content: e }, whole: !0 };
+    if (I === "over_with_long_line" && !m?.splitLongLines)
+      return (
+        l("projects_tool_read_to_file", "long_line"),
+        { body: { content: e }, whole: !0 }
+      );
+    let V = await Be(e, r, i, h, g);
+    if ("failure" in V)
+      return (l("projects_tool_read_to_file", V.failure), _t(e, m, y, O));
+    if (I === "over")
+      return (u("projects_tool_read_to_file"), { body: V, whole: !0 });
+    let X = await Be(Wt(e), `${r}-split`, i, h, g);
+    if ("failure" in X)
+      return (
+        l("projects_tool_read_to_file", X.failure),
+        { body: { content: e }, whole: !0 }
+      );
+    return (
+      l("projects_tool_read_to_file", "long_line_file"),
+      {
+        body: {
+          ...V,
+          notice: `A line of local_file is too long for ${De}'s offset and limit. ${X.local_file} holds the same text with line breaks added to split long lines, for reading and searching only.`,
+        },
+        whole: !0,
+      }
+    );
+  }
+  let k = Kv();
+  if (k !== void 0) {
+    let I = FB(e, k.maxBytes),
+      V = Buffer.from(I, "utf8"),
+      X =
+        V.byteLength === 0
+          ? null
+          : await tje(k, { leafName: Ue(o, r), data: V });
+    if (X !== null) {
+      let z = I === e;
+      return {
+        body: z
+          ? { local_file: X.path }
+          : {
+              local_file: X.path,
+              notice: `Only the first ${V.byteLength} of ${j} bytes were saved to local_file, the most this session keeps in one file.${S}`,
+            },
+        whole: z,
+      };
+    }
+    return _t(
+      e,
+      m,
+      y,
+      k.maxBytes === 0
+        ? `: this session does not keep larger results as files.${S}`
+        : O,
+    );
+  }
+  return { body: { local_file: await Xt(o, r, e, i, h, g) }, whole: !0 };
+}
+function _t(e, o, r, i) {
+  let h = Buffer.byteLength(e, "utf8"),
+    m = o?.cutsUnsaved
+      ? Math.min(_nt, Math.floor((h * o.maxTokens) / we(xe(e, o), o, r)))
+      : _nt,
+    y = FB(e, m),
+    g = m < _nt ? ", as many as this reply's limit on inline text allows" : "";
+  return y === e
+    ? { body: { content: e }, whole: !0 }
+    : {
+        body: {
+          content: y,
+          notice: `Only the first ${m} of ${h} bytes are shown${g}${i}`,
+        },
+        whole: !1,
+      };
+}
+function we(e, o, r) {
+  let i = Math.ceil(e / o.bytesPerToken);
+  return o.claim !== void 0
+    ? Math.max(r ?? 0, i)
+    : Math.min(r !== null && r > 0 ? r : i, e);
+}
+function xe(e, o) {
+  return Buffer.byteLength(o.sizedAsSent ? _(e) : e, "utf8");
+}
+function Vt(e, o, r, i) {
+  if (we(xe(e, r), r, i) <= r.maxTokens) return "within";
+  let h = 0;
+  for (let m of e.split(`
+`))
+    h = Math.max(h, Buffer.byteLength(m));
+  if ((h / o) * we(o, r, i) > P1().maxTokens / 2) return "over_with_long_line";
+  return "over";
+}
+async function Be(e, o, r, i, h) {
+  let m = Buffer.byteLength(e, "utf8"),
+    y = Kv();
+  if (y !== void 0) {
+    let g =
+      m > y.maxBytes
+        ? null
+        : await tje(y, {
+            leafName: Ue("project-doc", o),
+            data: Buffer.from(e, "utf8"),
+          });
+    return g === null ? { failure: "not_stored" } : { local_file: g.path };
+  }
+  try {
+    return { local_file: await Xt("project-doc", o, e, r, i, h) };
+  } catch (g) {
+    return (
+      t(
+        `Projects tool: could not save a text of ${m} bytes to a file: ${d(g)}`,
+        { level: "warn" },
+      ),
+      { failure: "write_failed" }
+    );
+  }
+}
+function Ue(e, o) {
+  return `${e}-${o.replace(/[^a-zA-Z0-9-]/g, "_")}.txt`;
+}
+async function Xt(e, o, r, i, h, m) {
+  let y = Ue(e, o);
+  if (m && qEe() !== null) {
+    let S;
+    try {
+      let O = _e(mHr(), i.root.id),
+        k = await QF(O, 2);
+      if (typeof k !== "string") {
+        try {
+          await yr(_e(k.at, y), r, 384);
+        } finally {
+          await k.release();
+        }
+        return (u("projects_tool_doc_outside_config_home"), _e(O, y));
+      }
+      S = k;
+    } catch (O) {
+      S = Cr(O) ?? "unknown";
+    }
+    (l("projects_tool_doc_outside_config_home", S),
+      t(
+        `Projects tool: could not save a text in the project-docs folder (${S}), so it is saved under the session's tool-results folder`,
+        { level: "warn" },
+      ));
+  }
+  let g = EN(i),
+    j = _e(g, y);
+  if (
+    (await f1(g, h),
+    await Kt(
+      h,
+      g,
+      y,
+      r,
+      e === "project-memory" ? "project_memory_read" : "project_read",
+    ))
+  )
+    return j;
+  return (await cme(j, Buffer.from(r, "utf8"), 384), j);
+}
+async function Kt(e, o, r, i, h) {
+  if (ne() && e !== void 0) {
+    let m = ORe(o, r);
+    if (m !== void 0) {
+      let y = await e.write(m, i, { publishDiscipline: "inPlace", mode: 384 });
+      if (!y.ok)
+        throw h === "project_read"
+          ? Error("project_read: spill to tool-results failed", {
+              cause: y.error,
+            })
+          : Error("project_memory_read: spill to tool-results failed", {
+              cause: y.error,
+            });
+      return !0;
+    }
+  }
+  return !1;
+}
+var We =
+    "only its extracted text, if it has any, can be read here (project_read without `original`). If that is not enough, tell the user the original cannot be opened here.",
+  pt = "were saved to local_file. Open it with file-appropriate tooling.";
+function Yt(e, o, r) {
+  let i = `above the ${fYo}-byte limit for in-session downloads`,
+    h = r === void 0 ? `is ${i}` : `is ${r} bytes, ${i}`;
+  return o
+    ? new D(
+        `project_read: "${_6(e)}" ${h}. So ${We}`,
+        "project_original_too_large",
+      )
+    : new D(
+        `project_read: "${_6(e)}" has no text extract and ${h}; tell the user this file cannot be opened here.`,
+        "project_upload_too_large",
+      );
+}
+async function mt({
+  projectUuid: e,
+  path: o,
+  fileUuid: r,
+  signal: i,
+  credentials: h,
+  originalAsked: m,
+}) {
+  try {
+    return await zWa(e, r, i, h);
+  } catch (y) {
+    if (y instanceof qD && y.errorCode === "file_read_too_large")
+      throw Yt(o, m);
+    throw y;
+  }
+}
+function qt(e, o) {
+  if (ht(e) === null)
+    throw Error("project_read: server returned a malformed file id.");
+  let r =
+    (o.split(/[/\\]/).pop() ?? "")
+      .replace(/[^a-zA-Z0-9._-]/g, "_")
+      .slice(-64)
+      .replace(/^\.+/, "") || "file";
+  return `project-file-${e}-${r}`;
+}
+async function wt(e, o, r, i, h, m, y) {
+  let g = qt(e, o);
+  if (r !== void 0)
+    return (await r.fetchFile?.({ leafName: g, fileUuid: e }))?.path ?? null;
+  let { UPLOADED_FILE_MAX_BYTES: j, downloadFileById: S } =
+      await import("/$bunfs/root/chunk-ndefsymq.js"),
+    O = await S(e, j, h, y);
+  return "data" in O && O.data.byteLength > 0 ? Jt(g, O.data, i, m) : null;
+}
+async function Jo(e, o, r, i, h, m, y, g) {
+  let j = Kv();
+  if (j?.maxBytes === 0)
+    return {
+      method: "project_read",
+      path: o,
+      file_kind: r.file_kind,
+      created_at: r.created_at ?? null,
+      notice: `"${_6(o)}" is a ${_6(r.file_kind)} upload with no text extract, and this session does not keep files, so it was not downloaded; tell the user this file cannot be opened here.`,
+    };
+  let S = (L) => {
+      if (L > fYo) throw Yt(o, g, L);
+    },
+    O = {
+      projectUuid: e,
+      path: o,
+      fileUuid: r.file_uuid,
+      signal: h,
+      credentials: y,
+      originalAsked: g,
+    },
+    k;
+  try {
+    ((k = await mt(O)), S(k.file_size_bytes));
+  } catch (L) {
+    let R =
+      L instanceof D &&
+      (L.reasonCode === "project_original_too_large" ||
+        L.reasonCode === "project_upload_too_large")
+        ? await wt(r.file_uuid, r.file_name ?? o, j, i, h, m, y)
+        : null;
+    if (R === null) throw L;
+    return {
+      method: "project_read",
+      path: o,
+      file_kind: r.file_kind,
+      local_file: R,
+      created_at: r.created_at ?? null,
+      notice: `"${_6(o)}" is a ${_6(r.file_kind)} upload${g ? "" : " with no text extract"}; its original bytes ${pt}`,
+    };
+  }
+  let I = Buffer.from(k.content_base64, "base64");
+  if (I.byteLength !== k.file_size_bytes) {
+    if (
+      ((k = await mt(O)),
+      S(k.file_size_bytes),
+      (I = Buffer.from(k.content_base64, "base64")),
+      I.byteLength !== k.file_size_bytes)
+    )
+      throw Error(
+        "project_read: downloaded bytes do not match the reported file size (corrupt response, or the file is being modified " +
+          "concurrently \u2014 retry if a save was just issued).",
+      );
+  }
+  if (k.uuid !== r.file_uuid)
+    throw Error("project_read: server returned a different file.");
+  let V = qt(k.uuid, k.file_name),
+    X = `"${_6(o)}" is a ${_6(k.file_kind)} upload${g ? "" : " with no text extract"}; its original bytes (${k.file_size_bytes}) `,
+    z,
+    H = `${X}could not be saved to a file this session can open; ${g ? We : "tell the user this file could not be opened."}`;
+  if (j === void 0) z = await Jt(V, I, i, m);
+  else if (I.byteLength > j.maxBytes)
+    ((z = await wt(k.uuid, k.file_name, j, i, h, m, y)),
+      (H = `${X}are more than this session keeps in one file (${j.maxBytes} bytes), so they were not saved; ${g ? We : "tell the user this file cannot be opened here."}`));
+  else {
+    let L = await tje(j, { leafName: V, data: I });
+    z = L === null ? null : L.path;
+  }
+  return {
+    method: "project_read",
+    path: o,
+    file_kind: k.file_kind,
+    ...(z !== null && { local_file: z }),
+    created_at: k.created_at ?? null,
+    notice: z !== null ? `${X}${pt}` : H,
+  };
+}
+async function Jt(e, o, r, i) {
+  let h = EN(r),
+    m = _e(h, e);
+  if ((await f1(h, i), await Kt(i, h, e, o, "project_read"))) return m;
+  return (await cme(m, o, 384), m);
+}
+var Qo = 600000,
+  gt = de({ lackedUpdateAt: Number.NEGATIVE_INFINITY }, (e) => {
+    e.lackedUpdateAt = Number.NEGATIVE_INFINITY;
+  });
+async function Qt(e, o, r, i, h, m, y, g, j) {
+  if (!m || g !== void 0 || Date.now() - gt.lackedUpdateAt >= Qo)
+    try {
+      return await VWa(e, o, i, h, y, g?.sha256, j);
+    } catch (O) {
+      if (
+        g !== void 0 &&
+        O instanceof qD &&
+        O.errorCode === "project_doc_stale"
+      )
+        throw new D(g.stale, "project_doc_stale");
+      if (O instanceof qD && O.errorCode === "project_doc_too_large_to_replace")
+        throw new D(
+          j === void 0 ? Ut("save text under that limit over") : qo,
+          "project_doc_too_large_to_replace",
+        );
+      if (m && g !== void 0 && aai(O))
+        throw new D(g.unchecked, "if_version_not_served");
+      if (!m || !DXr(O)) throw new se(O, "doc_updated");
+      gt.lackedUpdateAt = Date.now();
+    }
+  if (h.aborted) throw new Ie();
+  if (g !== void 0) throw new D(g.unchecked, "if_version_not_served");
+  let S = await lai(e, r, i, void 0, y).catch((O) => {
+    throw new se(O, "doc_beside_new");
+  });
+  if (typeof S?.uuid !== "string" || S.uuid === o)
+    throw new A(
+      `project_write: could not confirm that the new content was saved. Nothing was removed, so the project may now list this path twice. ${Ft}`,
+      "project_write could not confirm that the new content was saved",
+    );
+  try {
+    await dai(e, o, void 0, y);
+  } catch (O) {
+    throw (
+      t(`Projects: the replaced doc ${o} could not be removed: ${d(O)}`, {
+        level: "error",
+      }),
+      Error(
+        "project_write: the new content was saved, but the earlier copy of this doc may not have been removed, so the project may now list this path twice. project_read returns the new content. Do not repeat this write, and do not call project_delete: it would remove the new content, not the earlier copy. Tell the user that the earlier copy may need removing from the project in claude.ai.",
+      )
+    );
+  }
+  return S;
+}
+async function yt(
+  e,
+  {
+    projectUuid: o,
+    docUuid: r,
+    listed: i,
+    signal: h,
+    credentials: m,
+    ccrBridge: y,
+    tokenLimit: g,
+    whyNoReadByItself: j,
+    heldVersion: S,
+    clock: O,
+  },
+) {
+  let k, I;
+  try {
+    k = j();
+  } catch (L) {
+    (t(
+      `Projects: the check of rules and hooks before a refused write's read threw: ${d(L)}`,
+      { level: "error" },
+    ),
+      (k = "hook_check_threw"));
+  }
+  if (k === void 0) {
+    if (
+      ((I = await ge(
+        () => zsr(o, r, h, m, MXr, !1, e === "changed"),
+        h,
+        O,
+      ).catch((L) => {
+        if (h.aborted) throw new Ie();
+        k = rH(L) ? "fetch_over_bound" : "read_failed";
+        return;
+      })),
+      I !== void 0 && typeof I.content !== "string")
+    )
+      ((I = void 0), (k = "read_failed"));
+    else if (I !== void 0 && S !== void 0 && Je(I.content) === S)
+      ((I = void 0), (k = "read_not_newer"));
+  }
+  if (I === void 0) {
+    l("projects_tool_write_refusal_doc_text", k ?? "read_failed", {
+      cause: f(e),
+    });
+    return;
+  }
+  let V = WWa(
+      GBt(
+        i,
+        w4e() ? Je(I.content) : void 0,
+        { content: I.content },
+        { created_at: I.created_at ?? null },
+      ),
+      e,
+    ),
+    X = Buffer.byteLength(I.content, "utf8"),
+    z = g(),
+    H =
+      X > _nt
+        ? "over_inline_limit"
+        : V.length > Po
+          ? "over_result_share"
+          : z !== void 0 &&
+              Vt(I.content, X, z, I.estimated_token_count) !== "within"
+            ? "does_not_fit"
+            : void 0;
+  if (H !== void 0) {
+    l("projects_tool_write_refusal_doc_text", H, { cause: f(e) });
+    return;
+  }
+  return (
+    z?.claim?.(we(xe(I.content, z), z, I.estimated_token_count)),
+    u("projects_tool_write_refusal_doc_text", {
+      via_ccr_bridge: y,
+      cause: f(e),
+    }),
+    V
+  );
+}
+function je(e, o, r, i) {
+  return ge(() => GJt(e, o, r), o, i);
+}
+function He(...e) {
+  return je(...e).catch((o) => {
+    throw new Oe(o);
+  });
+}
+function ve(e, o) {
+  let r = e.documents.find((i) => i.file_name === o);
+  return r ? { uuid: r.uuid, created_at: r.created_at ?? null } : void 0;
+}
+function bt(e, o) {
+  return (e.files ?? []).find((r) => r.file_name === o);
+}
+function ce(e) {
+  return e.documents
+    .map((o) => o.file_name)
+    .filter((o) => typeof o === "string");
+}
+function pe(e) {
+  return (e.files ?? [])
+    .map((o) => o.file_name)
+    .filter((o) => typeof o === "string");
+}
+function jt(e, o, r) {
+  let i = [...ce(e), ...pe(e)].map(_6),
+    h =
+      i.length > 0
+        ? ` Available: ${i.slice(0, 30).join(", ")}${i.length > 30 ? `, \u2026 and ${i.length - 30} more` : ""}`
+        : " The project has no docs or files.";
+  if (r === "project_read" && (e.sync_sources ?? []).length > 0)
+    h =
+      i.length > 0
+        ? `${h}. Files from the project's synced sources, such as GitHub or Google Drive, are not listed and cannot be read by name here.`
+        : " Files from the project's synced sources, such as GitHub or Google Drive, are not listed and cannot be read by name here.";
+  return new D(`No doc or file at "${_6(o)}".${h}`);
+}
+function Zo(e, o) {
+  let r = e.files.map((h) => _6(h.path)),
+    i =
+      r.length > 0
+        ? ` Available: ${r.slice(0, 30).join(", ")}${r.length > 30 ? `, \u2026 and ${r.length - 30} more` : ""}`
+        : " The project has no memory files.";
+  return new D(`No memory file at "${_6(o)}".${i}`);
+}
+function vt(e) {
+  if (e)
+    throw new D(
+      `This tool does not serve project memory in this session: it runs through the remote-session bridge, which has no memory route. ${jhl} The project's docs are still available through the other methods.`,
+      "project_memory_no_route",
+    );
+}
+var en = 500,
+  Tt =
+    "No project memory is available in this session. It may be turned off, or this server may not serve it yet. It is checked again when this session's context is next rebuilt (for example after /clear or a compaction) and in a new session.",
+  Et =
+    "Memory as read at this session's start or its last context refresh; not live.";
+function le(e, o, r) {
+  if (e === void 0) throw new D(`${r} requires "${o}"`);
+  return e;
+}
+var ee = "Write refused; nothing in the project was changed.",
+  ae = "pass the whole new text as content.";
+async function on(e, o, r, i, h, m, y, g, j, S, O) {
+  if (S === void 0 || r.content !== void 0 || r.local_path !== void 0)
+    throw new D(
+      `${ee} edits cannot be used from a script, or with content or local_path. Instead, ${ae}`,
+      "edits_not_available",
+    );
+  let k = await He(i, h, y, O),
+    { path: I, listed: V } = It(e, ce(k), pe(k), g),
+    X = ve(k, V);
+  if (!X)
+    throw new D(
+      `${ee} There is no text doc at this path to edit. To create one, ${ae}`,
+      "edits_without_a_doc",
+    );
+  let z = S(X.uuid, V, !1);
+  if (
+    (a("tengu_projects_write_text_in_view", {
+      outcome: f(z.text !== void 0 ? "in_view" : "not_in_view"),
+      found_in: f(z.foundIn),
+      new_bytes: Buffer.byteLength(o, "utf8"),
+      via_ccr_bridge: m,
+      by_path: !1,
+      edits: !0,
+    }),
+    z.text === void 0 || z.version === void 0)
+  )
+    throw new D(
+      `${ee} This tool cannot find the doc's whole current text in your context. Call project_read on this path. If it shows the whole text, send the blocks again against that text. If it does not, follow what its result tells you: edits cannot be used for this doc.`,
+      "write_over_a_doc_not_in_view",
+    );
+  if (r.if_version !== void 0 && r.if_version !== z.version)
+    throw new D($t, "if_version_not_held");
+  let H = x_o(z.text, o);
+  if ("failure" in H) {
+    let x = "block" in H ? `The search text of block ${H.block}` : "",
+      N = "then send all the blocks again.";
+    throw new D(
+      `${ee} ${{ malformed: `edits must be 1 to ${Bhl} complete SEARCH/REPLACE blocks and nothing else, each with a search text and with each marker once, on its own line. Send them again in that form. If the doc's own text has such a line, or there are more changes, ${ae}`, too_large: `The blocks are too long for a doc of this size. Send fewer in each call, or ${ae}`, mixed_line_ends: `This doc mixes CRLF and LF line ends, so edits cannot be matched safely. Instead, ${ae}`, not_found: `${x} is not in the doc. Copy it exactly from the doc, then send all the blocks again.`, not_unique: `${x} is in the doc more than once. Add the words around it so that it is found once, then send all the blocks again.`, overlap: `${x} overlaps that of an earlier block. Join the two blocks, then send all the blocks again.` }[H.failure]}`,
+      `edits_${H.failure}`,
+    );
+  }
+  let L = { content: H.text };
+  if (pu(j(), nt, L, "deny") ?? pu(j(), nt, L, "ask"))
+    throw new D(
+      `${ee} A permission rule covers the text that these edits would save, and only a write of the whole text is checked against it. Instead, ${ae}`,
+      "edits_under_a_content_rule",
+    );
+  if (H.text.includes("\x00"))
+    throw new D(
+      `${ee} The blocks contain NUL bytes, which project docs cannot store. Remove them, then send all the blocks again.`,
+      "content_has_nul",
+    );
+  let R = await Qt(
+    i,
+    X.uuid,
+    V,
+    H.text,
+    h,
+    m,
+    y,
+    {
+      sha256: z.version,
+      stale: `${ee} The doc at this path has changed since you last read or wrote it in this conversation. Call project_read on this path and check whether your change is already in it: an earlier try may have been saved. Then send blocks only for what is still missing.`,
+      unchecked: `${ee} This session cannot check whether the doc has changed, so it cannot apply edits. Instead, ${ae}`,
+    },
+    void 0,
+  ).finally(S4e);
+  return (
+    u("projects_tool_edits", {
+      count: H.blocks,
+      new_bytes: Buffer.byteLength(o, "utf8"),
+      saved_bytes: Buffer.byteLength(H.text, "utf8"),
+    }),
+    {
+      method: "project_write",
+      ...(R.notice && { notice: R.notice }),
+      path: I,
+      doc_uuid: R.uuid,
+      version: Je(H.text),
+      replaced: !0,
+      present_to_user: r.present_to_user ?? !1,
+    }
+  );
+}
+async function nn(e, o, r, i, h, m, y, g, j, S, O, k, I, V, X) {
+  let z = hq(),
+    H = r.host.clock;
+  switch (e.method) {
+    case "project_info": {
+      let L = await je(o, i, m, H);
+      return {
+        method: "project_info",
+        ...(await V(L)),
+        docs: L.documents.flatMap((R) =>
+          R.file_name !== null
+            ? [{ path: R.file_name, created_at: R.created_at ?? null }]
+            : [],
+        ),
+        files: (L.files ?? []).flatMap((R) =>
+          R.file_name !== null
+            ? [
+                {
+                  path: R.file_name,
+                  file_kind: R.file_kind,
+                  created_at: R.created_at ?? null,
+                },
+              ]
+            : [],
+        ),
+        sync_sources: (L.sync_sources ?? []).map((R) => ({
+          type: R.type,
+          config: R.config,
+        })),
+        knowledge: {
+          knowledge_size: L.knowledge_stats.knowledge_size,
+          max_knowledge_size: L.knowledge_stats.max_knowledge_size,
+        },
+      };
+    }
+    case "project_read": {
+      let L = le(e.path, "path", e.method),
+        R = await je(o, i, m, H),
+        x = Oo(L, [...ce(R), ...pe(R)], y),
+        N = ve(R, x);
+      if (!N) {
+        let G = bt(R, x);
+        if (!G) throw jt(R, x, e.method);
+        if (G.stored_name !== void 0 && !y(x, "renamed"))
+          throw new D(
+            `"${_6(x)}" was not read. That name was made up because another item is also called "${_6(G.stored_name)}", and this session's hooks and permission rules go by stored names, so they could not check it. "${_6(G.stored_name)}" is the other item, not this one. If a script made this call, call the tool directly. Otherwise tell the user that the file can be read once it is uploaded under a name of its own.`,
+            "project_renamed_upload_blocked",
+          );
+        let J = G.file_kind === "document" && e.original === !0 && te();
+        if (G.file_kind === "document" && !J) {
+          let Q = await LXr(o, G.file_uuid, i, m);
+          if (Q.file_kind === "document" && Q.content.trim() !== "")
+            return ft(
+              x,
+              Q.content,
+              G.file_uuid,
+              r,
+              { file_kind: Q.file_kind, created_at: Q.created_at ?? null },
+              h,
+              g(),
+              null,
+              j,
+            );
+        }
+        return Jo(o, x, G, r, i, h, m, J);
+      }
+      let q = await ge(() => zsr(o, N.uuid, i, m), i, H);
+      return ft(
+        x,
+        q.content,
+        N.uuid,
+        r,
+        { created_at: q.created_at ?? null },
+        h,
+        g(),
+        q.estimated_token_count,
+        j,
+        w4e() ? Je(q.content) : void 0,
+        () => b("tengu_lovely_rain", !1),
+      );
+    }
+    case "project_search": {
+      let L = le(e.query, "query", e.method),
+        R = e.n ?? 5;
+      try {
+        let x = await KWa(o, L, R, bo, i, m),
+          { hits: N, images: q } = rn(x);
+        return {
+          method: "project_search",
+          rag: !0,
+          hits: N,
+          ...(q.length > 0 && { images: q }),
+        };
+      } catch (x) {
+        if (x instanceof qD && x.status === 403) {
+          let N = await je(o, i, m, H);
+          return { method: "project_search", rag: !1, docs: ce(N) };
+        }
+        throw x;
+      }
+    }
+    case "project_write": {
+      let L = le(e.path, "path", e.method);
+      if (e.edits !== void 0) return on(L, e.edits, e, o, i, z, m, y, S, I, H);
+      let R =
+        e.local_path !== void 0
+          ? O !== void 0
+            ? await Xo(e.local_path, O, S(), i)
+            : await Ko(e.local_path, S, k)
+          : le(e.content, "content", e.method);
+      if (R.includes("\x00"))
+        throw W(
+          "Write refused; nothing in the project was changed. The content contains NUL bytes, which project docs cannot store (usually a binary or UTF-16 file). Convert it to UTF-8 text (re-encode UTF-16, extract the text from a binary, or remove the NUL bytes), then write again.",
+          "content_has_nul",
+        );
+      let x = await He(o, i, m, H),
+        { path: N, listed: q } = It(L, ce(x), pe(x), y),
+        G = ve(x, q);
+      if (!G) Uo(x.knowledge_stats, Buffer.byteLength(R, "utf8"));
+      if (G && Whl(R))
+        throw new D(
+          `${ee} The text is only SEARCH/REPLACE blocks, and would have replaced the whole doc. ${A0t() ? "Pass the blocks as edits, or pass" : "Pass"} the doc's whole new text. Do not delete the doc to write it afresh.`,
+          "edit_blocks_as_content",
+        );
+      let J = e.local_path !== void 0,
+        Q = I !== void 0 && (G !== void 0 || J) && b("tengu_lovely_rain", !1),
+        Re = Q && (!J || b("tengu_lucky_nebula", !1)) ? I : void 0,
+        ue;
+      if (G && Re) {
+        let Z = Re(G.uuid, q, J);
+        if (
+          (a("tengu_projects_write_text_in_view", {
+            outcome: f(Z.version !== void 0 ? "in_view" : "not_in_view"),
+            found_in: f(Z.foundIn),
+            new_bytes: Buffer.byteLength(R, "utf8"),
+            via_ccr_bridge: z,
+            by_path: J,
+          }),
+          Z.version === void 0)
+        ) {
+          let oe =
+            !J && ((nA() && b("tengu_candid_lantern", !1)) || b(it, !1))
+              ? await yt("not_in_view", {
+                  projectUuid: o,
+                  docUuid: G.uuid,
+                  listed: q,
+                  signal: i,
+                  credentials: m,
+                  ccrBridge: z,
+                  tokenLimit: g,
+                  whyNoReadByItself: X,
+                  heldVersion: void 0,
+                  clock: H,
+                })
+              : void 0;
+          throw oe === void 0
+            ? new D(J ? Fo : Mo, "write_over_a_doc_not_in_view")
+            : new D(oe, "write_over_a_doc_not_in_view", oe.length);
+        }
+        if (e.if_version !== void 0 && e.if_version !== Z.version)
+          throw new D($t, "if_version_not_held");
+        ue = Z.version;
+      }
+      let Ce = await (
+          G
+            ? Qt(
+                o,
+                G.uuid,
+                q,
+                R,
+                i,
+                z,
+                m,
+                ue !== void 0
+                  ? {
+                      sha256: ue,
+                      stale: e.if_version !== void 0 ? rt : J ? Do : No,
+                      unchecked: $o,
+                    }
+                  : e.if_version !== void 0
+                    ? { sha256: e.if_version, stale: rt, unchecked: Lo }
+                    : void 0,
+                e.local_path === void 0 && b("tengu_toasty_owl", !1)
+                  ? _nt
+                  : void 0,
+              )
+            : lai(o, N, R, i, m).catch((Z) => {
+                throw new se(Z, "no_doc");
+              })
+        )
+          .finally(S4e)
+          .catch(async (Z) => {
+            let oe =
+              G !== void 0 &&
+              ue !== void 0 &&
+              Z instanceof D &&
+              Z.reasonCode === "project_doc_stale" &&
+              b(it, !1)
+                ? await yt("changed", {
+                    projectUuid: o,
+                    docUuid: G.uuid,
+                    listed: q,
+                    signal: i,
+                    credentials: m,
+                    ccrBridge: z,
+                    tokenLimit: g,
+                    whyNoReadByItself: X,
+                    heldVersion: ue,
+                    clock: H,
+                  })
+                : void 0;
+            throw oe === void 0 ? Z : new D(oe, "project_doc_stale", oe.length);
+          }),
+        Zt = {
+          method: "project_write",
+          ...(Ce.notice && { notice: Ce.notice }),
+          path: N,
+          doc_uuid: Ce.uuid,
+          ...((w4e() || (J && Q)) && { version: Je(R) }),
+          replaced: G !== void 0,
+          present_to_user: e.present_to_user ?? !1,
+          ...(e.local_path !== void 0 ? { local_path: kt(e.local_path) } : {}),
+        };
+      if (G && w4e())
+        u("projects_tool_if_version", { sent: e.if_version !== void 0 });
+      if (e.local_path !== void 0)
+        be("saved", O, {
+          replaced: G !== void 0,
+          savedBytes: Buffer.byteLength(R, "utf8"),
+        });
+      return Zt;
+    }
+    case "project_delete": {
+      let L = le(e.path, "path", e.method),
+        R = await He(o, i, m, H),
+        x = Rt(L, [...ce(R), ...pe(R)], ["NFD"], y),
+        N = ve(R, x);
+      if (!N) {
+        if (bt(R, x))
+          throw new D(
+            `"${_6(L)}" is a file upload; project_delete only removes text docs. File uploads can be removed from the project in claude.ai.`,
+            "delete_of_an_upload",
+          );
+        throw jt(R, L, e.method);
+      }
+      return (
+        await dai(o, N.uuid, i, m).finally(S4e),
+        { method: "project_delete", path: L, deleted: !0, notice: zo }
+      );
+    }
+    case "project_memory_list": {
+      vt(z);
+      let L = await Tn(nxn(o, m), i, () => new Ie());
+      if (L === null)
+        return {
+          method: "project_memory_list",
+          files: [],
+          truncated: !1,
+          notice: Tt,
+        };
+      let R = L.files.slice(0, en),
+        x = L.files.length - R.length;
+      return {
+        method: "project_memory_list",
+        files: R.map((N) => ({
+          path: N.path,
+          size_bytes: N.size_bytes,
+          updated_at: N.updated_at,
+          truncated: N.truncated,
+        })),
+        truncated: x > 0 || L.truncated,
+        notice: [
+          Et,
+          ...(x > 0
+            ? [
+                `Showing the first ${R.length} of ${L.files.length} memory files; there is no way to list the rest in this session.`,
+              ]
+            : L.truncated
+              ? ["More memory files exist than the server returned."]
+              : []),
+        ].join(" "),
+      };
+    }
+    case "project_memory_read": {
+      vt(z);
+      let L = le(e.path, "path", e.method),
+        R = await Tn(nxn(o, m), i, () => new Ie());
+      if (R === null) throw new D(Tt);
+      let x = R.files.find((G) => G.path === L);
+      if (x === void 0) throw Zo(R, L);
+      let N = ro("sha256").update(L).digest("hex"),
+        { body: q } = await Gt(x.content, "project-memory", N, r, h);
+      return {
+        method: "project_memory_read",
+        path: x.path,
+        ...q,
+        size_bytes: x.size_bytes,
+        updated_at: x.updated_at,
+        truncated: x.truncated,
+        notice: [
+          Et,
+          ...("notice" in q && q.notice !== void 0 ? [q.notice] : []),
+          ...(x.truncated
+            ? [
+                "Only the first part of this file is returned: the server cut it at its size cap.",
+              ]
+            : []),
+        ].join(" "),
+      };
+    }
+  }
+}
+function rn(e) {
+  let o = [],
+    r = [];
+  if (e === null || typeof e !== "object") return { hits: o, images: r };
+  let i = e,
+    h = new Map(),
+    m = new Set();
+  for (let y of Array.isArray(i.image_results) ? i.image_results : []) {
+    let g = At().safeParse(y);
+    if (g.success) h.set(g.data.content_id, g.data);
+  }
+  for (let y of ["text_results", "rich_content_results"]) {
+    let g = i[y];
+    if (!Array.isArray(g)) continue;
+    for (let j of g) {
+      if (j === null || typeof j !== "object") continue;
+      let S = j,
+        O = S.chunk !== null && typeof S.chunk === "object" ? S.chunk : void 0,
+        k =
+          y === "rich_content_results" && O && typeof O.content_id === "string"
+            ? h.get(O.content_id)
+            : void 0;
+      if (k !== void 0 && !m.has(k.content_id))
+        (m.add(k.content_id), r.push(k));
+      o.push({
+        name: typeof S.name === "string" ? S.name : void 0,
+        doc_uuid: typeof S.doc_uuid === "string" ? S.doc_uuid : void 0,
+        text: O && typeof O.text === "string" ? O.text : void 0,
+        ...(k !== void 0 && { image_attached: !0 }),
+        ...(k?.page !== void 0 && k.page >= 1 && { page: k.page }),
+      });
+    }
+  }
+  return { hits: o, images: r };
+}
+export { nt as ProjectsTool };

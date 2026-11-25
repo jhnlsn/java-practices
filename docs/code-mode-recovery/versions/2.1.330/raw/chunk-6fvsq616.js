@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{bKe}from"/$bunfs/root/chunk-ddk99w14.js";import{$d}from"/$bunfs/root/chunk-9js1xpg4.js";import{H,It,y,Ot,G}from"/$bunfs/root/chunk-bs4h6795.js";G();function In(e,t,n={}){let{context:o="Global",isActive:i=!0}=n,r=$d(),[s]=y(()=>({handler:t}));It(()=>{s.handler=t}),H(()=>{if(!r||!i)return;return r.registerHandler({action:e,context:o,handler:()=>s.handler(),singleKey:!0})},[e,o,r,i,s])}function gs(e,t={}){let{context:n="Global",isActive:o=!0}=t,i=$d(),[r]=y(()=>({handlers:e})),s=Object.keys(e).sort().join("|");It(()=>{r.handlers=e}),H(()=>{if(!i||!o)return;let a=Object.keys(r.handlers).map((l)=>i.registerHandler({action:l,context:n,handler:()=>r.handlers[l]?.(),singleKey:!0}));return()=>{for(let l of a)l()}},[n,s,i,o,r])}function P9t(e){let t=$d(),n=Ot(t?.keyHandlerRegistry.handlersChanged.subscribe??bKe,()=>t?.hasHandler(e)??!1);return t!==null&&n?()=>t.runAction(e):null}function Pa(e,{isActive:t=!0}={}){let n=$d(),[o]=y(()=>({handler:e}));It(()=>{o.handler=e}),H(()=>{if(!t||!n)return;return n.registerPreDispatch({handler:(i,r,s)=>o.handler(i,r,s)})},[t,n,o])}
+export{In,gs,P9t,Pa};

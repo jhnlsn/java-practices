@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{Ey}from"/$bunfs/root/chunk-drk264d0.js";import{b}from"/$bunfs/root/chunk-865at33z.js";import{MK}from"/$bunfs/root/chunk-pbteexar.js";import{nqe}from"/$bunfs/root/chunk-ye28qmhg.js";import{ha}from"/$bunfs/root/chunk-bzyb60p0.js";function Uvn(n,o,s,e,i){return e||Ey(s)||n.suppressesAlwaysAllowRule?.(o,!b("tengu_valiant_crayon",!1))===!0&&!(i??[]).some((r)=>(r.type==="addRules"||r.type==="replaceRules")&&r.behavior==="allow"&&r.rules.some((t)=>t.ruleContent!==void 0))||void 0}function MVr(n,o,s,e,i){return e.ruleUsuallyOffered===!0&&e.suppressAlwaysAllowRule===!0&&e.defaultToNo!==!0&&e.hooksMayRefuse!==!0&&e.oneTimeAnswersOnly!==!0&&ha(e.decisionReason,(r)=>!r.classifierApprovable)===void 0&&Uvn(n,o,s,!1,i)===void 0||void 0}function HVr(n,o,s,e){return e.metadata?.mcpSkill!==void 0&&(e.matchedAskRule!==void 0||Uvn(n,o,s,e.suppressAlwaysAllowRule,e.suggestions)===!0)?void 0:e.suggestions}function Bvn(n,o,s){if(ha(n.decisionReason,MK)!==void 0||nqe(s))return!0;if(o.requiresUserInteraction?.())return!0;return n.forcedByCaller===!0||n.personOnly===!0}
+export{Uvn,MVr,HVr,Bvn};

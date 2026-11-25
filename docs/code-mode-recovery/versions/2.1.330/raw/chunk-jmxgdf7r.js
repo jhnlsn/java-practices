@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{te}from"/$bunfs/root/chunk-w578pjby.js";import{x}from"/$bunfs/root/chunk-cg8dqz0a.js";import{N0l}from"/$bunfs/root/chunk-v6cdm8tp.js";import{de}from"/$bunfs/root/chunk-t57w17k7.js";import{hostname as o}from"os";class e{pidSpace=null;pidDomain=void 0;uidsCollapse=null}var rRt=de(new e,(n)=>{n.pidDomain=void 0});function Ghe(){if(rRt.pidSpace===null){let n="";rRt.pidSpace=`${o()}${n===""?"":"#"+n}`}return rRt.pidSpace}function Q0(){return rRt.pidDomain??=(async()=>N0l(x()))().catch((n)=>{throw rRt.pidDomain=void 0,n}),rRt.pidDomain}import{timingSafeEqual as u}from"crypto";import{readFile as a}from"fs/promises";async function yhn(n){try{let t=te(await a(n,"utf8"));if(t===null||typeof t!=="object")return;let i={};if("rvAuth"in t&&typeof t.rvAuth==="string")i.rvAuth=t.rvAuth;if("ptyAuth"in t&&typeof t.ptyAuth==="string")i.ptyAuth=t.ptyAuth;if("claimAuth"in t&&typeof t.claimAuth==="string")i.claimAuth=t.claimAuth;return i}catch{return}}function Zj(n,t){if(typeof n!=="string"||!t||n.length===0)return!1;let i=Buffer.from(n),r=Buffer.from(t);if(i.length!==r.length)return!1;return u(i,r)}
+export{rRt,Ghe,Q0,yhn,Zj};

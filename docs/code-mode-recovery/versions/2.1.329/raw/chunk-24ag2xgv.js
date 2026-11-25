@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{extname as e}from"path";var a={".png":"image/png",".jpg":"image/jpeg",".jpeg":"image/jpeg",".gif":"image/gif",".webp":"image/webp",".svg":"image/svg+xml",".bmp":"image/bmp",".ico":"image/x-icon",".heic":"image/heic",".heif":"image/heif",".avif":"image/avif",".tif":"image/tiff",".tiff":"image/tiff",".mp4":"video/mp4",".m4v":"video/x-m4v",".mov":"video/quicktime",".webm":"video/webm",".avi":"video/x-msvideo",".mkv":"video/x-matroska",".mp3":"audio/mpeg",".m4a":"audio/mp4",".wav":"audio/wav",".ogg":"audio/ogg",".aac":"audio/aac",".flac":"audio/flac",".pdf":"application/pdf",".txt":"text/plain",".log":"text/plain",".md":"text/markdown",".json":"application/json",".csv":"text/csv",".html":"text/html",".htm":"text/html",".xml":"application/xml",".docx":"application/vnd.openxmlformats-officedocument.wordprocessingml.document",".xlsx":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",".pptx":"application/vnd.openxmlformats-officedocument.presentationml.presentation",".zip":"application/zip"};function bMe(i){return a[e(i).toLowerCase()]}
+export{bMe};

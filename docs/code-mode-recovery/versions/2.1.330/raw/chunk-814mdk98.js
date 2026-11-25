@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{d}from"/$bunfs/root/chunk-jv7av99m.js";import{t}from"/$bunfs/root/chunk-w578pjby.js";import{b}from"/$bunfs/root/chunk-865at33z.js";import{Mwe,gun}from"/$bunfs/root/chunk-53snsm3k.js";import{QYe}from"/$bunfs/root/chunk-sg5zbskk.js";import{_l,Vhr}from"/$bunfs/root/chunk-r9ecxfn9.js";import{Abi}from"/$bunfs/root/chunk-sjqze7qg.js";function n6s(){if(!Abi())return"off";try{return b("tengu_vast_tulip",!1)===!0?"enforce":"observe"}catch{return t("tool host attestation: reading tengu_vast_tulip threw; observing",{level:"warn"}),"observe"}}function s(e){let o=QYe(),{status:r,meetsLevel:n,configException:i}=gun(e,o,{isCloudWorker:!1});return{status:r,verdict:!o.enforce?"not_policed":n?"pass":i?"config_exception":"below_floor"}}function m$e(e){let o=n6s();return o==="off"?void 0:{mode:o,...s(Mwe(e))}}function IKe(e){return e?.mode==="enforce"&&e.verdict==="below_floor"}function u2r(){let e=m$e("UNSPECIFIED");return{attestation:e,heldBack:IKe(e)}}function fwa(e){try{e?.(Vhr,_l["repository_trust.served_calls.unattested"])}catch(o){t(`[remote-tools] the notice sink threw on ${Vhr}: ${d(o)}`,{level:"error"})}}
+export{n6s,m$e,IKe,u2r,fwa};

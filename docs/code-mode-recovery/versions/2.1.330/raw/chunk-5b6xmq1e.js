@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{N}from"/$bunfs/root/chunk-f9x2f6cx.js";import{dhe,i_}from"/$bunfs/root/chunk-865at33z.js";import{Xn}from"/$bunfs/root/chunk-2gtmjt3y.js";import{uP}from"/$bunfs/root/chunk-ephf358x.js";import{jn,pc}from"/$bunfs/root/chunk-zhr7rpv7.js";import{uo}from"/$bunfs/root/chunk-2zeyvjwb.js";import{hvt}from"/$bunfs/root/chunk-k67pwqya.js";import{HV,eD,v9,X2i,XYe}from"/$bunfs/root/chunk-2nv4wrez.js";function KKr(t){try{let e=dhe.of(N().host).value;if(e===void 0)return{answer:"not-now"};if(e===null)return{answer:"out"};let n=e.subscriptionType,r=n==="team"||n==="enterprise";if(!r&&t.consumerPlans!=="in")return{answer:"out"};if(!e.scopes?.includes(uP))return{answer:"out"};let o=!r&&n!=null,s=HV()!==null;if(!s&&!o)return{answer:"not-now"};let i=eD();if(i===void 0){if(!s||XYe()||!v9()||!X2i(e.accessToken))return{answer:"not-now"}}else if(!o||i!=="prosumer_oauth")return{answer:"out"};let a=hvt();if(a==="taint")return{answer:"out"};if(a==="pending")return{answer:"not-now"};if(t.zeroRetentionOrganizations!=="in"&&uo("zdr"))return{answer:"out"};return{answer:"clean",plan:n}}catch{return{answer:"out"}}}function ZYt(){return i_()||!jn()||!pc()||Xn()}
+export{KKr,ZYt};

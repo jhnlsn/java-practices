@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{t}from"/$bunfs/root/chunk-w578pjby.js";import{aee}from"/$bunfs/root/chunk-865at33z.js";import{Me}from"/$bunfs/root/chunk-bzyb60p0.js";import{tMe}from"/$bunfs/root/chunk-ndx89hd3.js";import{$o}from"/$bunfs/root/chunk-ed372ykp.js";import{Xm,yBt}from"/$bunfs/root/chunk-z6hn62tj.js";function d6o(e,a,s){if(s.get(e)?.status!=="running")return;s.updateTranscript(e,(n)=>({...n,messages:yBt(n.messages,a)}))}function IYt(e,a,s,n){let o=s.get(e);if(!o||$o(o.status)){t(`Dropping message for teammate task ${e}: task status is "${o?.status}"`);return}let i=Me({content:a,origin:n});s.update(e,(r)=>({...r,pendingUserMessages:[...r.pendingUserMessages,{text:a,origin:n,shownAs:i.uuid}]})),s.updateTranscript(e,(r)=>({...r,messages:yBt(r.messages,i)}))}function W5s(e,a){let s=a.get(e);if(!Xm(s)||!s.awaitingPlanApproval)return;a.update(e,(n)=>({...n,awaitingPlanApproval:!1,pendingPlanApproval:void 0})),IYt(e,"The person moved you out of plan mode. Continue your work.",a,{kind:"task-notification"})}function j5s(e,a,s){let n=tMe(aee(a,s),e);if(n?.status==="running")n.retryWake?.emit()}
+export{d6o,IYt,W5s,j5s};

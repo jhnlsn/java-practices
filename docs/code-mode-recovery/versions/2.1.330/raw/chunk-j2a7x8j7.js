@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{HR}from"/$bunfs/root/chunk-qrv5kr16.js";import{fvo}from"/$bunfs/root/chunk-kavq5bp6.js";import{vGt}from"/$bunfs/root/chunk-fe2jgj1j.js";import{Cj}from"/$bunfs/root/chunk-4vm1ywmw.js";import{gw}from"/$bunfs/root/chunk-fac79wqz.js";import{yb}from"/$bunfs/root/chunk-3jjr3wje.js";import{rt}from"/$bunfs/root/chunk-w1d7ygsk.js";var a=rt(Cj());var c=yb(),d=HR(),l=gw(),u=Cj(),S=vGt();var g=(e)=>`AWS_BEARER_TOKEN_${e.replace(/[\s-]/g,"_").toUpperCase()}`;var r=g;var s=rt(gw()),cvo=({logger:e,signingName:n}={})=>async()=>{if(e?.debug?.("@aws-sdk/token-providers - fromEnvSigningName"),!n)throw new s.TokenProviderError("Please pass 'signingName' to compute environment variable key",{logger:e});let t=r(n);if(!(t in process.env))throw new s.TokenProviderError(`Token not present in '${t}' environment variable`,{logger:e});let o={token:process.env[t]};return a.setTokenFeature(o,"BEARER_SERVICE_ENV_VARS","3"),o};var i=rt(gw());var uvo=(e={})=>i.memoize(i.chain(fvo(e),async()=>{throw new i.TokenProviderError("Could not load token from any providers",!1)}),(n)=>n.expiration!==void 0&&n.expiration.getTime()-Date.now()<300000,(n)=>n.expiration!==void 0);
+export{cvo,uvo};

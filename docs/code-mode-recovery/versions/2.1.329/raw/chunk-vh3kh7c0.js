@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{yD}from"/$bunfs/root/chunk-kgzzwvwc.js";import{xul,xl}from"/$bunfs/root/chunk-4je1pw3n.js";import{MU}from"/$bunfs/root/chunk-dr4n033a.js";function kjr(t,e){xl("user_prompt",{prompt_length:String(e?.length??0),...xul(e,t.origin),...t.attributes})}function _w(t){let e=t.trim();if(!e.startsWith("/"))return null;let{name:r,args:n}=MU(e);if(!r)return null;let o="(MCP)";if(n===o)return{commandName:`${r} ${o}`,args:"",isMcp:!0};if(n.startsWith(o)&&/\s/.test(n.charAt(o.length)))return{commandName:`${r} ${o}`,args:n.slice(o.length).trimStart(),isMcp:!0};return{commandName:r,args:n,isMcp:!1}}function JJe(t,e){if(!t.subcommands)return;let r=e.trimStart(),n=r.search(/\s/),o=n===-1?r:r.slice(0,n),s=o?t.subcommands[o.toLowerCase()]:void 0;if(s===void 0)return;let m=n===-1?"":r.slice(n+1).trim();if(t.subcommandsBareOnly&&m!=="")return;return{targetName:s,consumedToken:o,remainingArgs:m}}function OPt(t,e){let r=yD();if(e===void 0){kjr(t,t.text);return}e({text:t.text,attributes:{...r&&{"prompt.id":r},...t.attributes},origin:t.origin})}
+export{_w,JJe,kjr,OPt};

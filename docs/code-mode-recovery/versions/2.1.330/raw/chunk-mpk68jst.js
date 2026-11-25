@@ -1,0 +1,9 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{Pd}from"/$bunfs/root/chunk-f9x2f6cx.js";import{me}from"/$bunfs/root/chunk-5appeerh.js";import{Re}from"/$bunfs/root/chunk-d57v19zt.js";import{s}from"/$bunfs/root/chunk-c203g5kd.js";import{ix}from"/$bunfs/root/chunk-ndrgvsn7.js";import{q}from"/$bunfs/root/chunk-42tcgre6.js";import{vVt,eRt}from"/$bunfs/root/chunk-r9kxf52b.js";import{AM}from"/$bunfs/root/chunk-0yc3wy8b.js";import{ud}from"/$bunfs/root/chunk-7e1w6rv3.js";import{js}from"/$bunfs/root/chunk-13h3tw8q.js";function jWn(e,r,t="now"){if(e<=0||e>=128)return;try{q("error","cli_exit_cause",{exit_code:e,cause:r,spawned_by_session:Boolean(s.CLAUDE_CODE_CHILD_SESSION||s.CLAUDECODE)},t)}catch{}}function Hp(e){console.error(Re.red(e))}function Bn(e,r="cli_error",t="unnamed_cli_error",i=1){if(e)Hp(e);if(!Pd())ix(r);jWn(i,t),process.exit(i);return}function sX(e){if(e)process.stdout.write(e+`
+`);process.exit(0);return}function GWn(e){process.exit(e);return}async function am(e){await new Promise((r)=>{process.stdout.write(e,()=>r())})}function PN(e){process.stderr.write(Re.yellow(js(e))+`
+`)}var n=2000,o=250;async function IV({waitForOAuthRefresh:e=!0}={}){let r=vVt();if(e&&!r)await eRt();await me(AM(),n);try{let{flushAnalyticsSinks:t}=await import("/$bunfs/root/chunk-1s1e57bz.js");await t()}catch{}if(e&&r)await eRt(),await me(AM(),o)}async function Lo(e){await IV(),process.exit(e);return}function WTr(e){let r=ud(()=>void Lo(0));e.on("end",r),e.on("error",r)}async function ho(e,r){if(e)Hp(e);return await IV(),Bn(void 0,void 0,r)}async function IS(e){if(e)process.stdout.write(e+`
+`);return await IV(),sX()}
+export{jWn,Hp,Bn,sX,GWn,am,PN,IV,Lo,WTr,ho,IS};

@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{HJ}from"/$bunfs/root/chunk-aw136kab.js";import{qe}from"/$bunfs/root/chunk-6n6exvyx.js";import{$It,ckn,g,DF,Gr}from"/$bunfs/root/chunk-8bkqeb5d.js";import{NL}from"/$bunfs/root/chunk-v2br6d1p.js";import{e}from"/$bunfs/root/chunk-a46xeenj.js";import{be,It,I,y,G}from"/$bunfs/root/chunk-bs4h6795.js";G();function M$({children:x,lock:o="always",restartKey:i,maxRows:R=Number.POSITIVE_INFINITY}){let[w,{isVisible:H},d]=DF(),{rows:r,columns:s}=qe(),m=I(null),[t,u]=y({minHeight:0,rows:r,columns:s,restartKey:i}),f=o==="always"&&(t.rows!==r||t.columns!==s||t.restartKey!==i),N=be(NL),P=be($It),l=(o==="always"||!H&&!(N&&ckn(P)==="fullscreen"))&&!f,a=I(0),p=Math.max(t.minHeight,a.current),E=be(HJ)!==null;return It(()=>{if(!m.current)return;let{height:h}=Gr(m.current),n=Math.min(h,r);if(f){u({minHeight:n,rows:r,columns:s,restartKey:i});return}if(h>p){if(E&&o==="offscreen"&&!l&&n>=t.minHeight&&d()){a.current=n;return}a.current=0,u((c)=>c.minHeight===n?c:{...c,minHeight:n})}}),e(g,{minHeight:l?Math.min(p,R):void 0,ref:w,children:e(g,{ref:m,flexDirection:"column",children:x})})}
+export{M$};

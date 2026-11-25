@@ -1,0 +1,7 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{K}from"/$bunfs/root/chunk-5appeerh.js";import{Fv}from"/$bunfs/root/chunk-84d4qt5z.js";import{createInterface as S}from"readline";var E=5,FIe=250,Izs="That answer arrived too quickly after the question to count. Please answer again.";async function xve(e,s=process.stdin,{ignoreAnswersWithinMs:o=0,output:n=process.stdout,reaskPreamble:d="",signal:r}={}){if(o>0){if(await R(s,o))return!1}if(r?.aborted===!0)return!1;let a=()=>{},f=new Promise((c)=>{a=c}),t=S({input:s,output:n}),m=0,l=()=>{let c=performance.now();t.question(`${e} [y/N] `,(b)=>{if(o>0&&performance.now()-c<o){if(++m>E){a(!1),t.close();return}n.write(`${d}${Izs}
+`),l();return}let i=b.trim().toLowerCase();a(i==="y"||i==="yes"),t.close()})};return l(),t.once("close",()=>a(!1)),r?.addEventListener("abort",()=>t.close(),{once:!0}),f}async function R(e,s){let o="isTTY"in e&&e.isTTY===!0,n="isRaw"in e&&e.isRaw===!0,d=!1,r=()=>{d=!0},a=()=>{};if(e.once("end",r),e.once("close",r),e.on("data",a),o)Fv(e,!0);try{e.resume(),await K(s)}finally{if(e.removeListener("data",a),e.removeListener("end",r),e.removeListener("close",r),e.pause(),o)Fv(e,n)}return d||"readableEnded"in e&&e.readableEnded===!0||"destroyed"in e&&e.destroyed===!0}
+export{FIe,Izs,xve};

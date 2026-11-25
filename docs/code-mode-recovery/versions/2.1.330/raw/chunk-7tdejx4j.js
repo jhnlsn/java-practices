@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{k}from"/$bunfs/root/chunk-sng02qpc.js";import{e}from"/$bunfs/root/chunk-a46xeenj.js";import{an,be,y,Ot,G}from"/$bunfs/root/chunk-bs4h6795.js";import{ps}from"/$bunfs/root/chunk-se72nykz.js";G();function h(){let u=ps(v);let V=new l;return u.subscribe(()=>{if(u.getState().voiceState!=="recording")V.reset()}),{store:u,levelSmoother:V}}var v={voiceState:"idle",voiceError:null,voiceInterimTranscript:"",voiceAudioLevels:[],voiceWarmingUp:!1,awaitingVoiceSubmitDoubleTap:!1};class l{#e=0;next(o,t){return this.#e=this.#e*t+o*(1-t),this.#e}reset(){this.#e=0}}var i=an(null);function qBo(o){let s=k(3),{children:t}=o,[n]=y(h),c;if(s[0]!==t||s[1]!==n)c=e(i.Provider,{value:n,children:t}),s[0]=t,s[1]=n,s[2]=c;else c=s[2];return c}function r(){let o=be(i);if(!o){throw Error("useVoiceState must be used within a VoiceProvider")}return o}function NIt(){return r().store}function vGs(){return r().levelSmoother}function uE(o){let n=k(3),t=NIt(),s;if(n[0]!==o||n[1]!==t)s=()=>o(t.getState()),n[0]=o,n[1]=t,n[2]=s;else s=n[2];let c=s;return Ot(t.subscribe,c,c)}function ljr(){return NIt().setState}function Bmt(){return NIt().getState}
+export{qBo,NIt,vGs,uE,ljr,Bmt};

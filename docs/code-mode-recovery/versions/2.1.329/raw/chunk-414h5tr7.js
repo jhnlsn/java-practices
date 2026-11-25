@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{Zu}from"/$bunfs/root/chunk-kgzzwvwc.js";import{t}from"/$bunfs/root/chunk-c2c9kwmh.js";import{tp}from"/$bunfs/root/chunk-jngxzq9c.js";import{NS}from"/$bunfs/root/chunk-vshss2nx.js";import{Ist}from"/$bunfs/root/chunk-186hsk0z.js";import{cc}from"/$bunfs/root/chunk-t39fw2cy.js";function U3t(e){if(!e||Object.keys(e).length===0)return!1;for(let n of cc){let o=e[n];if(!o||o.length===0)continue;for(let r of o)if((r.hooks?.length??0)>0)return!0}return!1}function MEa(e,n,o,r,l=!1,u=!1,p=!1,k,s){if(!o||Object.keys(o).length===0)return;Ist(o,k);let i=0;for(let f of cc){let g=o[f];if(!g||g.length===0)continue;let c=f;if(l&&f==="Stop")c="SubagentStop",t(`Converting Stop hook to SubagentStop for ${r} (subagents trigger SubagentStop)`);for(let m of g){let S=m.matcher??"",a=m.hooks;if(!a||a.length===0)continue;for(let h of a)e.add(n,c,S,h,{personal:u,checkout:p,skillRoot:s}),i++}}if(i>0){if(s!==void 0)Zu()?.skillHooksRegistered(s,o);t(`Registered ${i} frontmatter hook(s) from ${r} for session ${n}`)}}function $3t(e){return NS()&&e!==void 0&&tp.has(e)}
+export{U3t,MEa,$3t};

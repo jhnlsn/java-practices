@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{et}from"/$bunfs/root/chunk-0jve1fep.js";import{p}from"/$bunfs/root/chunk-2cbgkbm2.js";import{ue}from"/$bunfs/root/chunk-r3kja8v6.js";import{kE}from"/$bunfs/root/chunk-qf73a9we.js";import{n,E,$t,v,B}from"/$bunfs/root/chunk-adx6804h.js";B();var l=p(()=>$t({eval:E().refine(Number.isSafeInteger),status:n().optional().catch(void 0)})),m=p(()=>$t({kind:v(kE),fields:l()}));function IDt(t,a){if(!ue())return;let r=m().safeParse(a);if(r.success)return u(r.data.fields);let d=/^<event\b([^>]*)>(?:\n(\{[^\n]*\})\n<\/event(?: nonce="([A-Za-z0-9_-]+)")?>$)?/,[,e,s,f]=d.exec(t)??[];if(e===void 0||!e.includes(` kind="${kE}"`))return;let i=/ eval="(\d+)"/.exec(e)?.[1];if(i!==void 0)return{evalId:Number(i),status:/ status="([^"]*)"/.exec(e)?.[1]};if(s===void 0||f!==/ nonce="([A-Za-z0-9_-]+)"/.exec(e)?.[1])return;let o=l().safeParse(et(s,!1));return o.success?u(o.data):void 0}function cNa(t){if(!ue())return[];let a=/<event\b[^>]*>(?:\n\{[^\n]*\}\n<\/event(?: nonce="[A-Za-z0-9_-]+")?>)?/g,r=[];for(let[d]of t.matchAll(a)){let e=IDt(d,void 0);if(e!==void 0)r.push(e)}return r}function u(t){return{evalId:t.eval,status:t.status}}
+export{IDt,cNa};

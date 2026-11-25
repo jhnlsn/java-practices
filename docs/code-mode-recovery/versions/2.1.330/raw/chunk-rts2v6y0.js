@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{p}from"/$bunfs/root/chunk-2cbgkbm2.js";import{vp,iwo}from"/$bunfs/root/chunk-syr33dp2.js";import{mT}from"/$bunfs/root/chunk-3f4m74y6.js";import{n,ie,c,v,B}from"/$bunfs/root/chunk-adx6804h.js";B();var Pqe="anthropic/devicePassthrough",r=["get_device_info","device_bash","list_devices","sync_files"],_="Claude_Browser__",s=128,S4o=1,a=p(()=>c({v:v(S4o),tool:n().min(1).max(s),target:ie().optional()}));function dnr(t){let e=a().safeParse(t);if(!e.success)return;let o=iwo(e.data.target);return o===void 0?void 0:{v:e.data.v,tool:vp(e.data.tool,s),target:o}}var i=r.map(mT),l=`${mT(_)}_`;function E(t){let e=`${mT(t)}_`;return i.some((o)=>e.startsWith(`${o}_`))}var u=new Set(["computer_request_access","computer_request_full_control","device_request_folder_access","device_request_delete_permission"]),d="device_bash";function b4o(t){let e=t.lastIndexOf("__"),o=e===-1?t:t.slice(e+2);return u.has(o)||t===d||`__${t}`.endsWith("__Claude_Browser__request_access")}function Z7l(t,e){return e==="desktop_app"||utt(t)}function utt(t){return!E(t)&&!`${mT(t)}_`.startsWith(l)&&!b4o(t)}
+export{Pqe,S4o,dnr,b4o,Z7l,utt};

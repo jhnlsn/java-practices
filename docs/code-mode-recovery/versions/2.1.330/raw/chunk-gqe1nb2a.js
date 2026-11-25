@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{k1e,N}from"/$bunfs/root/chunk-f9x2f6cx.js";import{a}from"/$bunfs/root/chunk-y53wbr8a.js";import{xt}from"/$bunfs/root/chunk-n2dbhmj2.js";import{nLe,Cjt,_j}from"/$bunfs/root/chunk-p1ewvgeh.js";import{Nq}from"/$bunfs/root/chunk-2tqq6ycx.js";import{v7}from"/$bunfs/root/chunk-4fssttte.js";import{x4}from"/$bunfs/root/chunk-ya9q1k3s.js";import{ze}from"/$bunfs/root/chunk-pzzqg6s3.js";var d=1000,u=new ze(()=>new Set);function r0n(e,r,o){let n=r.trustedNetworkDirectories;if(nLe(e,n))return"network";let t=xt(e);if(o==="person")return lN(t,r)?"denied":void 0;if(x4(e)||x4(t))return"network";let i=Nq(e,t,n);if(!i.ok)return"network";return[t,...i.pathsToCheck].some((s)=>lN(s,r))?"denied":void 0}function lN(e,r){try{return c(e,r)}catch(o){if(k1e(o))return!0;throw o}}function c(e,r){if(nLe(e,r.trustedNetworkDirectories)){let o=u.of(N());if(!o.has(e)&&o.size<d)o.add(e),a("tengu_attachment_unc_read_blocked",{});return!0}if(_j(e,r,[e]))return!0;if(v7(e,r))return!0;return Cjt(e,r,"read")!==null}
+export{r0n,lN};

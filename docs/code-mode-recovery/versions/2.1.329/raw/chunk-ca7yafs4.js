@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{Zle}from"/$bunfs/root/chunk-cqahc80t.js";import{Et}from"/$bunfs/root/chunk-r3zpj4t6.js";import{ue}from"/$bunfs/root/chunk-ex299d27.js";import{sI}from"/$bunfs/root/chunk-09zj247f.js";import{kye}from"/$bunfs/root/chunk-201k1m75.js";import{Wke}from"/$bunfs/root/chunk-ksgy793t.js";import{nBe}from"/$bunfs/root/chunk-wxkdbd5h.js";var L5n=48;function o2l(t){if(!nBe())return null;let n=t.get(kye);return{subscribe:(e)=>n.onRunningScriptsChange(e),getSnapshot:()=>n.runningScripts(sI)}}function s2l(t){if(!nBe())return null;let n=t.get(kye);return{subscribe:(e)=>n.onScriptTicksChange(Zle(e)),getSnapshot:()=>n.scriptTicks(sI)}}function BBs(t,n){if(!ue())return null;let e=[...t.values()].sort((r,u)=>i(r)-i(u)||r.evalId-u.evalId),c=e[0]===void 0?0:i(e[0]),o=e.map((r)=>({phase:i(r),text:Wke(r.description,n)})).filter(({text:r})=>r!==""),s=o[0];if(s===void 0||s.phase!==c)return null;let p=Et(s.text,L5n);return o.length===1?p:`${p} +${o.length-1} more`}function WBs(t){if(!ue())return!1;return[...t.values()].some((n)=>i(n)===0)}function i(t){return t.late?2:t.startedAt===void 0?1:0}
+export{L5n,o2l,s2l,BBs,WBs};

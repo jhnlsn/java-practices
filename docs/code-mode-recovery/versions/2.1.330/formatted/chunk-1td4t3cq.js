@@ -1,0 +1,2998 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import { Ad, b, ge } from "/$bunfs/root/chunk-865at33z.js";
+import { Be } from "/$bunfs/root/chunk-69qhefwa.js";
+import { N } from "/$bunfs/root/chunk-f9x2f6cx.js";
+import { S, f, fe } from "/$bunfs/root/chunk-78g0060s.js";
+import { d, w, Cr, Cy, w3t, k3t, J } from "/$bunfs/root/chunk-jv7av99m.js";
+import { K, me } from "/$bunfs/root/chunk-5appeerh.js";
+import { s } from "/$bunfs/root/chunk-c203g5kd.js";
+import { t, _, te, Cs } from "/$bunfs/root/chunk-w578pjby.js";
+import { ee, qa, q8, Wr } from "/$bunfs/root/chunk-7cfjrnwy.js";
+import { i } from "/$bunfs/root/chunk-k449cc64.js";
+import { x } from "/$bunfs/root/chunk-cg8dqz0a.js";
+import { a } from "/$bunfs/root/chunk-y53wbr8a.js";
+import { u, m, l } from "/$bunfs/root/chunk-cqa9hrgx.js";
+import { pe } from "/$bunfs/root/chunk-18rsj2ts.js";
+import { kt } from "/$bunfs/root/chunk-7fsmgfxx.js";
+import { p } from "/$bunfs/root/chunk-2cbgkbm2.js";
+import { Fc, JKn } from "/$bunfs/root/chunk-xcgcdx61.js";
+import { t3, Hhe, p8i, UAt, Lhe } from "/$bunfs/root/chunk-q3a5dy2r.js";
+import { yr } from "/$bunfs/root/chunk-q7qjcthc.js";
+import { oe } from "/$bunfs/root/chunk-mgh1y10w.js";
+import { Qk } from "/$bunfs/root/chunk-nnk8tdzz.js";
+import { Re } from "/$bunfs/root/chunk-d57v19zt.js";
+import { Uu, nn } from "/$bunfs/root/chunk-xfj2cwfv.js";
+import { VR, gFe } from "/$bunfs/root/chunk-tvttgr51.js";
+import { jX } from "/$bunfs/root/chunk-9b4aq7fb.js";
+import { fK } from "/$bunfs/root/chunk-rb36kwbn.js";
+import { Zj } from "/$bunfs/root/chunk-jmxgdf7r.js";
+import { Xx, rFe, YN } from "/$bunfs/root/chunk-0f2gasyz.js";
+import { Act, Au, R8i, x8i, Tt } from "/$bunfs/root/chunk-f64qna2j.js";
+import { sn } from "/$bunfs/root/chunk-hr2stdq7.js";
+import { JSt, QSt, Jss, Mk } from "/$bunfs/root/chunk-zwfq7wpn.js";
+import {
+  YP,
+  Wg,
+  kg,
+  OV,
+  Yji,
+  Xji,
+  K2t,
+  IZ,
+} from "/$bunfs/root/chunk-d2tjaek4.js";
+import { e8t, gXn, n8t } from "/$bunfs/root/chunk-96p696pm.js";
+import {
+  dHt,
+  G2,
+  $J,
+  DYt,
+  TZn,
+  WVr,
+  jvn,
+  AO,
+  xht,
+} from "/$bunfs/root/chunk-xkc7pn6f.js";
+import {
+  cps,
+  MH,
+  kll,
+  K_r,
+  CPi,
+  RPi,
+  Cpo,
+  CAe,
+} from "/$bunfs/root/chunk-d55td748.js";
+import { Sg, Bho, E8e, Cje, rle, S0e } from "/$bunfs/root/chunk-t8x29mwc.js";
+import { Phr, u$t } from "/$bunfs/root/chunk-sdks5h78.js";
+import {
+  ap,
+  jpr,
+  $nn,
+  dDe,
+  Bnn,
+  BDn,
+  n1t,
+  Gpr,
+  r1t,
+  o1t,
+  _ki,
+  Tao,
+  yki,
+  wbt,
+  i1t,
+  Cao,
+  MCe,
+  Bs,
+  Is,
+  kbt,
+} from "/$bunfs/root/chunk-9e5mdyfk.js";
+import { Ay } from "/$bunfs/root/chunk-c2gvx2m9.js";
+import { g2r } from "/$bunfs/root/chunk-mf29k4y3.js";
+import { m2r, i6s, NXn, MKe, FXn, h2r } from "/$bunfs/root/chunk-8j73rsm0.js";
+import { l7, IQ } from "/$bunfs/root/chunk-mqj2w7ns.js";
+import { xe } from "/$bunfs/root/chunk-7r4ehpnw.js";
+import { _Se } from "/$bunfs/root/chunk-sjqze7qg.js";
+import { Cwe } from "/$bunfs/root/chunk-h4t4qfaq.js";
+import { IJ } from "/$bunfs/root/chunk-apafj80n.js";
+import { Hwn, F2 } from "/$bunfs/root/chunk-d167qrvj.js";
+import { Xdl, lin } from "/$bunfs/root/chunk-p51r1nb3.js";
+import { uIt, fIt } from "/$bunfs/root/chunk-bsmkcyjt.js";
+import { Qse } from "/$bunfs/root/chunk-axqdjrej.js";
+import { cue } from "/$bunfs/root/chunk-r59sj93t.js";
+import { ls } from "/$bunfs/root/chunk-nn296t4g.js";
+import { eir } from "/$bunfs/root/chunk-fbthhpfj.js";
+import { s0, zv } from "/$bunfs/root/chunk-nbyg4q5d.js";
+import { Vf, VDe } from "/$bunfs/root/chunk-66srb2mf.js";
+import { ipl } from "/$bunfs/root/chunk-g3a1gwww.js";
+import { Tme } from "/$bunfs/root/chunk-thchq5z2.js";
+import { ul } from "/$bunfs/root/chunk-em52jhgp.js";
+import { n, $t, B } from "/$bunfs/root/chunk-adx6804h.js";
+import { HOe } from "/$bunfs/root/chunk-ghnve1xk.js";
+import { Tl } from "/$bunfs/root/chunk-wbk1hf21.js";
+import { dg } from "/$bunfs/root/chunk-wzdjp7c0.js";
+import { j } from "/$bunfs/root/chunk-2904xtvq.js";
+import {
+  lstat as Zr,
+  readFile as en,
+  realpath as tn,
+  rm as je,
+} from "fs/promises";
+import { dirname as Ge } from "path";
+import { setTimeout as Fe } from "timers/promises";
+import {
+  access as er,
+  mkdir as tr,
+  readFile as rr,
+  stat as Qe,
+  unlink as nr,
+  writeFile as or,
+} from "fs/promises";
+import { homedir as Ze } from "os";
+import { join as Ie } from "path";
+import { setTimeout as ir } from "timers/promises";
+var Se = "com.anthropic.claude-daemon";
+async function cIt() {
+  return !0;
+}
+function fUo() {
+  if (!dg()) return process.argv[1];
+  return Ie(Tme(), "claude");
+}
+function Te(r) {
+  return sn(r.replace(/[\r\n]/g, " "));
+}
+function ZBr(r) {
+  return;
+}
+function et() {
+  return Ie(Ze(), "Library", "LaunchAgents", `${Se}.plist`);
+}
+function ar() {
+  let r = s.XDG_CONFIG_HOME || Ie(Ze(), ".config");
+  return Ie(r, "systemd", "user", `${Se}.service`);
+}
+async function mt() {
+  return !1;
+}
+function gt() {
+  return `gui/${process.getuid()}`;
+}
+function Ue() {
+  return `${gt()}/${Se}`;
+}
+async function PYn(r) {
+  let { jsonPath: e, logPath: c } = r,
+    E = await K2t();
+  if (E)
+    return {
+      ok: !1,
+      error: `${E} \u2014 refusing to install a service that would run unwrapped`,
+      serviceId: Se,
+      servicePath: "",
+    };
+  let h = [...Wg(), fUo()],
+    v = Qk(() => s.PATH) || "/usr/local/bin:/usr/bin:/bin";
+  {
+    let y = et();
+    try {
+      (await tr(Ie(Ze(), "Library", "LaunchAgents"), { recursive: !0 }),
+        await or(
+          y,
+          `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>${Se}</string>
+  <key>ProgramArguments</key><array>
+${h.map((I) => `    <string>${Te(I)}</string>`).join(`
+`)}
+    <string>daemon</string>
+    <string>--json-path</string>
+    <string>${Te(e)}</string>
+    <string>--log-file</string>
+    <string>${Te(c)}</string>
+    <string>--origin</string>
+    <string>service</string>
+  </array>
+  <key>EnvironmentVariables</key><dict>
+    <key>PATH</key><string>${Te(v)}</string>
+  </dict>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><dict><key>SuccessfulExit</key><false/></dict>
+  <key>ThrottleInterval</key><integer>10</integer>
+  <key>StandardOutPath</key><string>${Te(c)}</string>
+  <key>StandardErrorPath</key><string>${Te(c)}</string>
+</dict></plist>
+`,
+          "utf8",
+        ));
+    } catch (I) {
+      return { ok: !1, error: d(I), serviceId: Se, servicePath: y };
+    }
+    await kt("launchctl", ["bootout", Ue()], { useCwd: !1 });
+    let {
+      code: R,
+      stderr: A,
+      error: D,
+    } = await kt("launchctl", ["bootstrap", gt(), y], { useCwd: !1 });
+    if (R !== 0)
+      return {
+        ok: !1,
+        error: A || D || "launchctl bootstrap failed",
+        serviceId: Se,
+        servicePath: y,
+      };
+    return { ok: !0, serviceId: Se, servicePath: y };
+  }
+  return {
+    ok: !1,
+    error: `service install not available on ${"darwin"} \u2014 the daemon runs on demand instead`,
+    serviceId: Se,
+    servicePath: "",
+  };
+}
+async function ywn() {
+  {
+    let r = et();
+    await kt("launchctl", ["bootout", Ue()], { useCwd: !1 });
+    try {
+      await nr(r);
+    } catch (e) {
+      if (!J(e)) return { ok: !1, error: d(e) };
+    }
+    return { ok: !0 };
+  }
+  return { ok: !1, error: "service uninstall not available on darwin" };
+}
+async function pUo() {
+  return tt("start");
+}
+async function OYn() {
+  return tt("stop");
+}
+async function x_a() {
+  return tt("restart");
+}
+async function tt(r) {
+  {
+    let e = Ue(),
+      c;
+    switch (r) {
+      case "start":
+        c = ["kickstart", e];
+        break;
+      case "stop":
+        c = ["kill", "SIGTERM", e];
+        break;
+      case "restart": {
+        await kt("launchctl", ["kill", "SIGTERM", e], { useCwd: !1 });
+        let y = !1;
+        for (let R = 0; R < 200; R++) {
+          let A = await kt("launchctl", ["print", e], { useCwd: !1 });
+          if (A.code !== 0 || !/^\s*pid = /m.test(A.stdout)) {
+            y = !0;
+            break;
+          }
+          await ir(50);
+        }
+        if (!y)
+          return {
+            ok: !1,
+            error:
+              "daemon did not exit within 10s of SIGTERM; restart aborted before kickstart",
+          };
+        c = ["kickstart", e];
+        break;
+      }
+    }
+    let {
+      code: E,
+      stderr: h,
+      error: v,
+    } = await kt("launchctl", c, { useCwd: !1 });
+    if (E !== 0) {
+      if (r === "stop") return { ok: !0 };
+      return { ok: !1, error: h || v || `launchctl ${c[0]} failed` };
+    }
+    return { ok: !0 };
+  }
+  return {
+    ok: !1,
+    error: `service ${r} not available on ${"darwin"} \u2014 the daemon runs on demand instead`,
+  };
+}
+async function sr() {
+  let r = et();
+  if (!r) return null;
+  let e;
+  try {
+    let c = await Qe(r);
+    if (!c.isFile() || c.size > 1048576) return null;
+    e = await rr(r, "utf8");
+  } catch {
+    return null;
+  }
+  return [
+    ...(e
+      .match(/<key>ProgramArguments<\/key><array>([\s\S]*?)<\/array>/)?.[1]
+      ?.matchAll(/<string>([^<]*)<\/string>/g) ?? []),
+  ].map((c) => c[1]);
+}
+function pt(r, e) {
+  return r
+    .replaceAll("&gt;", ">")
+    .replaceAll("&lt;", "<")
+    .replaceAll("&amp;", "&");
+}
+async function mUo() {
+  let r = { execPathStale: !1, launcherPrefixDead: !1 },
+    e = await sr();
+  if (!e) return r;
+  let c = e.lastIndexOf("daemon"),
+    E = c > 0 ? e[c - 1] : void 0;
+  if (!E) return r;
+  try {
+    await er(pt(E, c - 1));
+  } catch {
+    r.execPathStale = !0;
+  }
+  let h = e.slice(0, c - 1).map((v, y) => pt(v, y));
+  for (let v of Xji(h))
+    if (!(await Yji(v))) {
+      r.launcherPrefixDead = !0;
+      break;
+    }
+  return r;
+}
+async function ZVe() {
+  {
+    let { code: r } = await kt("launchctl", ["print", Ue()], {
+      useCwd: !1,
+      timeout: 5000,
+    });
+    return r === 0;
+  }
+  return !1;
+}
+class ht {
+  daemonConfirmedUp = !1;
+  ensureInFlight = null;
+  lastTransientSpawnAt = null;
+  prefixAxis = "idle";
+  prefixContractViolationLogged = !1;
+  tmuxRgbApplied = !1;
+  ownedBeacons = new Map();
+  reset() {
+    ((this.daemonConfirmedUp = !1),
+      (this.ensureInFlight = null),
+      (this.lastTransientSpawnAt = null),
+      (this.prefixAxis = "idle"),
+      (this.prefixContractViolationLogged = !1),
+      (this.tmuxRgbApplied = !1),
+      this.ownedBeacons.clear());
+  }
+}
+var lr = new j(() => new ht());
+function G3() {
+  return lr.of(N().host);
+}
+import { setTimeout as dr } from "timers/promises";
+var rt = 120000,
+  _t = 5000,
+  wt = 5000;
+function nt(r) {
+  let e = {
+    ...r,
+    childExit: null,
+    childExitAt: null,
+    stderr: null,
+    budgetExtended: !1,
+    nextLivenessProbeAt: r.spawnIssuedAt + _t,
+    siblingHolderSeen: !1,
+  };
+  return (
+    r.child?.exited.then((c) => {
+      ((e.childExit = c), (e.childExitAt = Date.now()));
+    }),
+    e
+  );
+}
+async function St(r, e) {
+  let c = r.childExit;
+  if (!c || r.siblingHolderSeen) return !1;
+  if (c.code === 0 && c.signal === null) return !1;
+  if (!FXn(e)) return !1;
+  switch (await i6s(e)) {
+    case "missing":
+    case "fresh_stub":
+      return !0;
+    case "stale_stub":
+      return !1;
+    case "present":
+      return (await Ve(r)).includes(eir);
+  }
+}
+function Et(r) {
+  if (r.trim().length === 0) return;
+  if (r.includes(eir)) return S("npm_stub");
+  if (/current working directory was deleted|uv_cwd|getcwd/i.test(r))
+    return S("cwd_deleted");
+  if (/launchctl|Could not switch to audit session|posix_spawn/.test(r))
+    return S("launchctl");
+  if (/Cannot find module|MODULE_NOT_FOUND|Module not found/.test(r))
+    return S("module_not_found");
+  if (
+    /dyld|Segmentation fault|Illegal instruction|Abort trap|Killed: 9|panic|bun has crashed|^error: /im.test(
+      r,
+    )
+  )
+    return S("runtime");
+  if (/^\s*(claude|Claude Code|daemon|bg manager)\b/im.test(r))
+    return S("claude_error");
+  return S("other");
+}
+async function Ve(r, e = !1) {
+  if (r.stderr === null || e)
+    r.stderr = r.stderrPath
+      ? ((await Uu(r.stderrPath, 1048576)) ?? "").slice(0, 2000)
+      : "";
+  return r.stderr;
+}
+async function ot(r) {
+  let e = r.childExit;
+  if (!e || r.siblingHolderSeen) return !1;
+  if (!r.budgetExtended) {
+    if ((await Ve(r)).trim().length === 0) return !1;
+    if (r.wrapperConfigured && e.code === 0 && e.signal === null) return !1;
+  }
+  let c = await yt(r, DYt);
+  if (c !== !1) return ((r.siblingHolderSeen = c === !0), !1);
+  return !0;
+}
+async function Me(r, e, c) {
+  let E = e;
+  while (!0) {
+    if (await ot(r)) return !1;
+    if (Date.now() >= E) return !1;
+    if ((await Ay({ proto: ap, op: "ping" })).ok) return !0;
+    if (c && Date.now() >= r.nextLivenessProbeAt) {
+      r.nextLivenessProbeAt = Date.now() + _t;
+      let y = await yt(r, 1);
+      if (!r.budgetExtended && y === !0)
+        ((r.budgetExtended = !0), (E = Math.max(E, r.spawnIssuedAt + rt)));
+      else if (r.budgetExtended && y === !1 && Date.now() >= e) return !1;
+    }
+    await dr(100);
+  }
+}
+async function yt(r, e) {
+  let c;
+  try {
+    c = await AO(e, r.storageV5);
+  } catch {
+    return null;
+  }
+  return c !== null && !c.bgDisabled && c.startedAt >= r.spawnIssuedAt - wt;
+}
+async function bt(r) {
+  let e;
+  try {
+    e = await $J(r.storageV5);
+  } catch {
+    return { lock_at_deadline: S("unreadable") };
+  }
+  if (!e) return { lock_at_deadline: S("absent") };
+  let c = {
+    holder_age_ms: Math.max(0, Date.now() - e.startedAt),
+    holder_version_skew:
+      e.version !==
+      {
+        ISSUES_EXPLAINER:
+          "report the issue at https://github.com/anthropics/claude-code/issues",
+        PACKAGE_URL: "@anthropic-ai/claude-code",
+        README_URL: "https://code.claude.com/docs/en/overview",
+        VERSION: "2.1.330",
+        FEEDBACK_CHANNEL: "https://github.com/anthropics/claude-code/issues",
+        BUILD_TIME: "2026-11-20T17:34:37Z",
+        GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+        HOOKS_WORKER_URL:
+          "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+        DD_SOURCEMAP_GROUP: "darwin",
+      }.VERSION,
+  };
+  if (
+    (r.child?.pid !== void 0 && e.pid === r.child.pid) ||
+    e.startedAt >= r.spawnIssuedAt - wt
+  )
+    return { lock_at_deadline: S("self_child"), ...c };
+  try {
+    process.kill(e.pid, 0);
+  } catch (v) {
+    if (w(v) !== "EPERM") return { lock_at_deadline: S("other_dead"), ...c };
+    return {
+      lock_at_deadline: (await WVr(e))
+        ? S("other_eperm_stale")
+        : S("other_eperm"),
+      ...c,
+    };
+  }
+  return {
+    lock_at_deadline: (await TZn(e.pid, fK(e), 1).catch(() => !1))
+      ? S("other_alive")
+      : S("other_dead"),
+    ...c,
+  };
+}
+import { randomBytes as Fr } from "crypto";
+import { unlink as Dt } from "fs/promises";
+import { createServer as Ur } from "net";
+import { StringDecoder as Vr } from "string_decoder";
+var vt =
+  /\x1b\[(?:<\d+;\d+;\d+[Mm]|M[\s\S]{3}|I|O|\??\d+;\d+(?:;\d+)*R|[?>]\d+(?:;\d+)*c|\?\d+(?:;\d+)*\$y|\?997;[12]n|\?\d+u)|\x1bP[^\x1b]*\x1b\\|\x1b\][^\x07\x1b]*(?:\x07|\x1b\\)/g;
+function Rt(r) {
+  if (!r.includes("\x1B")) return !1;
+  return r.replace(vt, "").length === 0;
+}
+var cr = "\x1B[<",
+  ur = /^(\d+);\d+;\d+[Mm]/,
+  fr = 96;
+function xt(r) {
+  return r
+    .split(cr)
+    .slice(1)
+    .some((e) => {
+      let c = ur.exec(e)?.[1];
+      return c !== void 0 && (Number(c) & fr) === 0;
+    });
+}
+var pr = 64,
+  mr =
+    /^\x1b(?:$|\[(?:[<?>]?\d*(?:;\d*)*\$?|M[\s\S]{0,2})$|P(?:$|[>01][^\x1b]*\x1b?$)|\](?:$|\d[^\x07\x1b]*\x1b?$))/;
+function R_a() {
+  let r = "";
+  return (e) => {
+    let c = r + e;
+    if (((r = ""), !c.includes("\x1B"))) return !1;
+    let E = c.replace(vt, "");
+    if (E.length === 0) return !0;
+    if (E.length <= pr && mr.test(E)) return ((r = E), !0);
+    return !1;
+  };
+}
+import {
+  closeSync as gr,
+  lstatSync as hr,
+  openSync as _r,
+  readSync as wr,
+} from "fs";
+var At = 262144,
+  Sr = 32768,
+  Er = 200,
+  br = 4096,
+  vr = 50;
+function Rr(r) {
+  let e = 0,
+    c = 0,
+    E = 0;
+  for (let h of r.split(`
+`)) {
+    let v = 0;
+    while (v < h.length && (h[v] === ">" || h[v] === " ")) {
+      if (h[v] === ">") E++;
+      v++;
+    }
+    if (/^ {0,3}(?:=+|-+)\s*$/.test(h)) c++;
+    for (let y = v; y < h.length; y++) {
+      let R = h[y];
+      if (R === "[") e++;
+      else if (R === "]" && e > 0) e--;
+    }
+  }
+  return e > 256 || c > 64 || E > 512;
+}
+var kr = "\x1B[2m",
+  It = "\x1B[0m",
+  xr = 2,
+  Ar = "dark",
+  Pt = xe.pointer,
+  Pr =
+    "  Session is starting, showing its transcript until then \xB7 Ctrl+Z to detach";
+function Tr(r) {
+  if (!/[\x00-\x09\x0b-\x1f\x7f-\x9f]/.test(r)) return r;
+  return Tl(r)
+    .replace(/\t/g, "  ")
+    .replace(q8, "")
+    .replace(/[\v\f\r]/g, "");
+}
+var Ot = new RegExp(`(${Act(";")})`),
+  Ir = new RegExp(`^${Act(";")}$`),
+  Or = new RegExp(Ot.source, "g");
+function Dr(r) {
+  if (!r.includes("\x1B")) return r;
+  let e = "",
+    c = 0;
+  while (c < r.length) {
+    let E = r.indexOf("\x1B", c);
+    if (E < 0) {
+      e += r.slice(c);
+      break;
+    }
+    e += r.slice(c, E);
+    let h = r[E + 1];
+    if (h === "[") {
+      let v = E + 2;
+      while (v < r.length) {
+        let y = r.charCodeAt(v);
+        if (y >= 64 && y <= 126) {
+          let R = r.slice(E, v + 1);
+          if (Ir.test(R)) e += R;
+          v++;
+          break;
+        }
+        if (y < 32 || y > 63) break;
+        v++;
+      }
+      c = v;
+    } else if (h === "]" || h === "P" || h === "X" || h === "^" || h === "_") {
+      let v = E + 2,
+        y = r.length;
+      while (v < r.length) {
+        if (h === "]" && r.charCodeAt(v) === 7) {
+          y = v + 1;
+          break;
+        }
+        if (r.charCodeAt(v) === 27 && r[v + 1] === "\\") {
+          y = v + 2;
+          break;
+        }
+        v++;
+      }
+      c = y;
+    } else if (h === void 0) c = r.length;
+    else c = E + 2;
+  }
+  return e;
+}
+var Nr = 128;
+function Lr(r) {
+  let e = r.filter((c) => c !== "").join(";");
+  return e === "" || e.length > Nr ? "" : `\x1B[${e}m`;
+}
+function Mr(r, e) {
+  if (oe(r) <= e) return [r];
+  let c = [],
+    E = "",
+    h = 0,
+    v = R8i();
+  for (let y of r.split(Ot)) {
+    if (y === "") continue;
+    if (y.charCodeAt(0) === 27) {
+      (x8i(y, v), (E += y));
+      continue;
+    }
+    for (let { segment: R } of ul().segment(y)) {
+      let A = R.length === 1 && R.charCodeAt(0) < 127 ? 1 : oe(R);
+      if (h > 0 && h + A > e)
+        (c.push(v.some((D) => D !== "") ? E + It : E), (E = Lr(v)), (h = 0));
+      ((E += R), (h += A));
+    }
+  }
+  return (c.push(E), c);
+}
+function it(r, e) {
+  return Au(r, e, { hard: !1, trim: !1 })
+    .split(
+      `
+`,
+    )
+    .flatMap((c) => Mr(c, e));
+}
+function $r(r) {
+  let e;
+  try {
+    e = Cs(r);
+  } catch {
+    return [];
+  }
+  if (typeof e !== "object" || e === null) return [];
+  let c = e;
+  if (
+    (c.type !== "user" && c.type !== "assistant") ||
+    c.isSidechain === !0 ||
+    c.isMeta === !0
+  )
+    return [];
+  let E = c.message?.content;
+  if (typeof E === "string") {
+    if (c.type === "user") return Ct(Hhe(E, c.pluginPrompt), t3(c));
+    let R = E.trim();
+    return R === "" ? [] : [{ role: "assistant", text: R }];
+  }
+  if (!Array.isArray(E)) return [];
+  if (c.type === "user") {
+    let R = [];
+    for (let A of E) {
+      let D = A;
+      if (D?.type === "text" && typeof D.text === "string") R.push(D.text);
+    }
+    return Ct(
+      R.join(`
+`),
+      t3(c),
+    );
+  }
+  let h = [],
+    v = [],
+    y = () => {
+      let R = v
+        .join(
+          `
+`,
+        )
+        .trim();
+      if (((v = []), R !== "")) h.push({ role: "assistant", text: R });
+    };
+  for (let R of E) {
+    let A = R;
+    if (A?.type === "text" && typeof A.text === "string") v.push(A.text);
+    else if (A?.type === "tool_use" && typeof A.name === "string") {
+      y();
+      let D = "";
+      if (typeof A.input === "object" && A.input !== null) {
+        for (let I of Object.values(A.input))
+          if (typeof I === "string" && I !== "") {
+            D = I;
+            break;
+          }
+      }
+      h.push({ role: "tool", text: `${Cwe(A.name)}(${D})` });
+    } else if (
+      A?.type === "thinking" &&
+      typeof A.thinking === "string" &&
+      A.thinking.trim() !== ""
+    )
+      (y(), h.push({ role: "thinking", text: A.thinking }));
+  }
+  return (y(), h);
+}
+function Ct(r, e) {
+  let c = HOe(r).trim();
+  if (c === "") return [];
+  if (e) return [{ role: "user", text: c }];
+  let E = /^<bash-input>([\s\S]*?)<\/bash-input>/.exec(c);
+  if (E) c = `! ${E[1].trim()}`;
+  else if (p8i.test(c)) return [];
+  return [{ role: "user", text: c }];
+}
+function Br(r, e) {
+  return (
+    Hwn(),
+    Dr(
+      _Se
+        .lexer(r)
+        .map((c) =>
+          F2(c, e, {
+            listDepth: 0,
+            orderedListNumber: null,
+            parent: null,
+            highlight: IJ(),
+            linkCap: !1,
+            windowed: !1,
+          }),
+        )
+        .join(""),
+    ).trim()
+  );
+}
+function Hr(r, e, c, E) {
+  let h = Math.max(1, e),
+    v = E?.colorLevel ?? xr,
+    y = E?.theme ?? Ar,
+    R = (T) => (v > 0 && T !== "" ? kr + T + It : T),
+    A = (T) => Math.max(1, Math.ceil(oe(T) / h)),
+    D = "\u2500".repeat(h),
+    I = ["", D, Pt, D, Pr],
+    H = I.reduce((T, V) => T + A(V), 0),
+    W = c - H;
+  if (W < 1) return null;
+  let q = Math.min(Math.ceil((W + 1) / 2), Er),
+    F = r.split(`
+`),
+    U = [],
+    Y = Sr;
+  e: for (let T = F.length - 1; T >= 0; T--) {
+    let V = $r(F[T]);
+    for (let G = V.length - 1; G >= 0; G--) {
+      if (U.length >= q) break e;
+      let Z = V[G];
+      if (Z.text.length > Y) {
+        if (U.length === 0) {
+          let X = qa(Z.text, Y),
+            re = X.indexOf(`
+`);
+          if (re >= 0) X = X.slice(re + 1);
+          if (X.trim() !== "") U.unshift({ role: Z.role, text: X });
+        }
+        break e;
+      }
+      ((Y -= Z.text.length), U.unshift(Z));
+    }
+  }
+  if (U.length === 0) return null;
+  let ae = [],
+    se = h >= 4 ? 2 : 0,
+    ie = Math.max(1, h - se),
+    Q = Re.level;
+  Re.level = v;
+  let le = performance.now();
+  try {
+    for (let T of U) {
+      if (ae.length > 0) ae.push({ text: "", dim: !1 });
+      let V = Tr(T.text);
+      switch (T.role) {
+        case "tool": {
+          let G = Tt(`${Fc} ${V.replace(/\n/g, " ")}`, h);
+          ae.push({ text: G, dim: !0 });
+          break;
+        }
+        case "thinking": {
+          let G = V.replace(/\s+/g, " ").trim();
+          for (let [Z, X] of it(G, ie).entries()) {
+            let re = se === 0 || X === "" ? "" : Z === 0 ? `${JKn} ` : "  ";
+            ae.push({ text: re + Re.italic(X), dim: !0 });
+          }
+          break;
+        }
+        case "assistant": {
+          let G = V;
+          if (V.length <= br && performance.now() - le < vr && !Rr(V))
+            try {
+              G = Br(V, y);
+            } catch {
+              G = V;
+            }
+          let Z = ls("text", y)(Fc);
+          for (let [X, re] of it(G, ie).entries()) {
+            let we = se === 0 || re === "" ? "" : X === 0 ? `${Z} ` : "  ";
+            ae.push({ text: we + re, dim: !1 });
+          }
+          break;
+        }
+        case "user": {
+          let G = ls("inactive", y)(`${Pt} `),
+            Z = ls("text", y),
+            X = ls("userMessageBackground", y, "background");
+          for (let [re, we] of it(V, ie).entries()) {
+            let be = se === 0 ? "" : re === 0 ? G : "  ";
+            ae.push({ text: X(be + Z(we)), dim: !1 });
+          }
+          break;
+        }
+        default:
+          T.role;
+      }
+    }
+  } finally {
+    Re.level = Q;
+  }
+  let de = 0,
+    C = [];
+  for (let T = ae.length - 1; T >= 0; T--) {
+    let V = ae[T],
+      G = A(V.text);
+    if (de + G > W) break;
+    ((de += G), C.unshift(V.dim ? R(V.text) : V.text));
+  }
+  if (C.length === 0) return null;
+  let g = c - de - H,
+    o = [];
+  for (let T = 0; T < g; T++) o.push("");
+  o.push(...C);
+  for (let T of I) o.push(R(T));
+  let P = o.join(`\r
+`);
+  if (P.length > 65536 + c * h * 32) P = P.replace(Or, "");
+  return IQ + P;
+}
+function at(r, e, c, E) {
+  let h;
+  try {
+    let v = hr(r);
+    if (!v.isFile() || v.size === 0) return null;
+    let y = v.size;
+    h = _r(r, "r");
+    let R = Math.max(0, y - At),
+      A = Buffer.alloc(Math.min(y, At)),
+      D = wr(h, A, 0, A.length, R),
+      I = A.subarray(0, D).toString("utf8");
+    if (R > 0) {
+      let H = I.indexOf(`
+`);
+      if (H < 0) return null;
+      I = I.slice(H + 1);
+    }
+    return Hr(I, e, c, E);
+  } catch {
+    return null;
+  } finally {
+    if (h !== void 0)
+      try {
+        gr(h);
+      } catch {}
+  }
+}
+var He = 1048576,
+  jr = 5000,
+  Gr = 12000,
+  st = 1000,
+  Nt = 500,
+  Kr = 6000,
+  zr = 30000;
+function Yr() {
+  let r = b("tengu_bg_attach_stall_ms", jr);
+  if (r === 0) return 0;
+  let e = Wg().length > 0 ? Gr : 2000;
+  return Math.max(e, r);
+}
+function Xr(r, e, c, E, h, v) {
+  let y = r.dispatch;
+  if (r.getPhase().kind !== "running" || e.destroyed || E()) return;
+  h.add(y.short);
+  let R = Is(Bs(y.short), v).catch(() => null);
+  (r.kill("SIGTERM"),
+    (async () => {
+      let A = Date.now() + Kr;
+      while (Date.now() < A && !r.record.outcome) await K(100);
+      if (!h.has(y.short)) return;
+      let D = await Is(Bs(y.short), v).catch(() => null),
+        I = D === null ? await uIt(Bs(y.short), v) : void 0,
+        H = D?.resumeSessionId ?? y.sessionId,
+        W = D?.cwd ?? y.cwd,
+        q = zv(s0(v)),
+        F = await Lhe(H, W, D?.linkScanPath, void 0, q),
+        U = F.hasMessages;
+      if (!U) await UAt(F.path, q);
+      if (!h.has(y.short)) return;
+      let Y = D?.respawnFlags ?? y.respawnFlags,
+        ae = (await R)?.tempo === "active";
+      if (I) fIt("attach_stall", I);
+      await c({
+        ...y,
+        cwd: W,
+        source: "respawn",
+        reattachEnv: void 0,
+        firstStart: void 0,
+        attachStallRespawns: (y.attachStallRespawns ?? 0) + 1,
+        launch: U
+          ? {
+              mode: "resume",
+              sessionId: H,
+              transcriptPath: F.path,
+              fork: !1,
+              flagArgs: ae ? Phr(Y) : u$t(Y),
+            }
+          : H !== y.sessionId
+            ? { mode: "prompt", args: ["--session-id", H, ...Y] }
+            : y.launch,
+      });
+    })()
+      .catch((A) => i(A))
+      .finally(() => h.delete(y.short)));
+}
+var lt = 1e4,
+  qr = 2500;
+async function P_a(
+  r,
+  e,
+  c,
+  E = () => 0,
+  h = () => !0,
+  v = () => !1,
+  y = new Promise(() => {}),
+  R,
+  A = async () => ({ retired: !1, reason: "no-state" }),
+) {
+  let D = CAe();
+  await K_r();
+  let I = await kll();
+  await Dt(D).catch(() => {});
+  let H = new Set(),
+    W = new Set(),
+    q = new Map(),
+    F = new Map(),
+    U = Be(),
+    se = {
+      handles: r,
+      onDispatch: e,
+      onNudge: c,
+      onShutdown: E,
+      ready: h,
+      whenReady: y,
+      onYield: v,
+      onRetireIfEmpty: A,
+      addLease: (C, g) => {
+        if (F.has(C)) return;
+        F.set(C, g);
+        let o = Qr(g?.label);
+        (a("tengu_daemon_lease", { op: S("open"), label: o }),
+          C.once("close", () => {
+            (F.delete(C),
+              a("tengu_daemon_lease", { op: S("close"), label: o }),
+              U.emit({ op: "close", client: g }));
+          }),
+          U.emit({ op: "open", client: g }));
+      },
+      listLeases: () => {
+        let C = [];
+        for (let g of F.values()) if (g) C.push(g);
+        return C;
+      },
+      stallRespawnPending: W,
+      settledDispatches: q,
+      controlKey: I,
+      holdsCredential: ipl(process.env),
+      storageV5: R,
+      legacyOpProbe: new Ht(),
+    },
+    ie = !1,
+    Q = Ur((C) => {
+      if (ie) {
+        C.destroy();
+        return;
+      }
+      (C.on("error", () => C.destroy()),
+        C.setTimeout(30000, () => C.destroy()),
+        H.add(C),
+        C.once("close", () => H.delete(C)));
+      let g = Xdl(C);
+      if (g) {
+        (a("tengu_daemon_peer_uid_reject", {}),
+          C.once("data", () => k(C, { ok: !1, code: "EPEERUID", error: g })));
+        return;
+      }
+      let o = Buffer.alloc(0),
+        P = (T) => {
+          o = Buffer.concat([o, T]);
+          let V = o.indexOf(10);
+          if (V < 0) {
+            if (o.length > He)
+              (C.off("data", P),
+                k(C, {
+                  ok: !1,
+                  code: "ETOOLARGE",
+                  error: `request exceeds ${He >> 20}MB \u2014 shorten the prompt or send in parts`,
+                }));
+            return;
+          }
+          (C.off("data", P), C.setTimeout(0));
+          let G = o.subarray(0, V).toString("utf8"),
+            Z = o.subarray(V + 1);
+          Jr(se, C, G, Z).catch((X) => {
+            k(C, { ok: !1, error: d(X), code: "EUNKNOWN" });
+          });
+        };
+      C.on("data", P);
+    }),
+    le = !1;
+  Q.on("error", (C) => {
+    if (le) {
+      t(`bg control server bind: ${MH(d(C))}`, { level: "warn" });
+      return;
+    }
+    i(C);
+  });
+  let de = Date.now() + lt;
+  for (;;)
+    try {
+      await new Promise((C, g) => {
+        let o = (P) => {
+          ((le = !1), g(P));
+        };
+        ((le = !0),
+          Q.once("error", o),
+          Q.listen(D, () => {
+            ((le = !1), Q.removeListener("error", o), C());
+          }));
+      });
+      break;
+    } catch (C) {
+      if (w(C) !== "EADDRINUSE" || Date.now() >= de) throw C;
+      (Q.removeAllListeners("listening"), await K(100));
+    }
+  return {
+    close: (C) =>
+      new Promise((g) => {
+        for (let o of H) o.destroy();
+        if (C?.skipUnlink) return ((ie = !0), Q.unref(), void g());
+        Q.close(() => {
+          if (!C?.skipUnlink) Dt(D).catch(() => {});
+          g();
+        });
+      }),
+    leaseCount: () => F.size,
+    onLeaseChange: U,
+    announceExit: (C) => {
+      for (let [g, o] of F)
+        if (o?.label === i1t)
+          g.write(
+            _({ op: "lease", closing: C }) +
+              `
+`,
+          );
+    },
+    noteSettledDispatch: (C, g, o) => {
+      (q.set(C, { nonce: g, refusal: o }),
+        setTimeout(
+          (P, T, V) => {
+            if (P.get(T)?.nonce === V) P.delete(T);
+          },
+          zr,
+          q,
+          C,
+          g,
+        ).unref());
+    },
+  };
+}
+function k(r, e) {
+  if (r.destroyed) return;
+  r.end(
+    _(e) +
+      `
+`,
+  );
+}
+function $e(r, e) {
+  if (r.destroyed) return;
+  if (r.writableLength > He) {
+    r.destroy();
+    return;
+  }
+  r.write(
+    _(e) +
+      `
+`,
+  );
+}
+function Oe(r) {
+  return !r.record.outcome && !r.isRetiring && !r.isKilling;
+}
+function Lt(r, e) {
+  return r !== void 0 && e === void 0 ? me(r, 25) : K(25);
+}
+async function Mt(r, e, c, E, h, v, y, R) {
+  let A = Date.now() + Math.min(y, 30000),
+    D = !1,
+    I = !1,
+    H,
+    W,
+    q = R?.then(
+      (F) => {
+        W = F;
+      },
+      (F) => {
+        (i(F), (W = "dropped"));
+      },
+    );
+  while (Date.now() < A) {
+    if (c.destroyed) return;
+    let F =
+        W === "dup-live" ||
+        W === "dropped" ||
+        W === "refused" ||
+        W === "closed",
+      U = r.get(h),
+      Y = v !== void 0 && U?.record.nonce !== v ? e.get(h) : void 0;
+    if (Y !== void 0 && Y.nonce === v) {
+      if (Y.refusal !== void 0)
+        return k(c, { ok: !1, error: Y.refusal, code: "ECWDGONE" });
+      return k(c, {
+        ok: !0,
+        op: E,
+        short: h,
+        pid: 0,
+        messagingSock: "",
+        via: "cold",
+      });
+    }
+    if (U) {
+      if (v && U.record.nonce !== v) {
+        if (((I = !0), (H = Oe(U) ? U : void 0), F)) break;
+        if (!H && !D) ((D = !0), (A += Math.min(y, 30000)));
+        await Lt(q, W);
+        continue;
+      }
+      return k(c, {
+        ok: !0,
+        op: E,
+        short: h,
+        pid: U.record.pid,
+        messagingSock: U.record.messagingSock ?? "",
+        via: U.via,
+      });
+    }
+    if (((H = void 0), F)) break;
+    await Lt(q, W);
+  }
+  if (I) {
+    if (H && r.get(h) === H && Oe(H))
+      return k(c, {
+        ok: !0,
+        op: E,
+        short: h,
+        pid: H.record.pid,
+        messagingSock: H.record.messagingSock ?? "",
+        via: H.via,
+      });
+    return k(c, {
+      ok: !1,
+      error:
+        "a previous dispatch with this id is still being cleaned up \u2014 retry in a moment",
+      code: "ESTALE",
+    });
+  }
+  return k(c, {
+    ok: !1,
+    error: `${Mk()} didn't acknowledge in time \u2014 retry`,
+    code: "ETIMEOUT",
+  });
+}
+class Ht {
+  fired = new Set();
+  markFired(r) {
+    if (this.fired.has(r)) return !1;
+    return (this.fired.add(r), !0);
+  }
+}
+function Bt(r, e) {
+  if (!r.markFired(e)) return;
+  a("tengu_dead_probe_bg_legacy_op", { op: f(e) });
+}
+async function Jr(r, e, c, E) {
+  let {
+      handles: h,
+      onDispatch: v,
+      onNudge: y,
+      onShutdown: R,
+      ready: A,
+      whenReady: D,
+      onYield: I,
+      onRetireIfEmpty: H,
+      addLease: W,
+      listLeases: q,
+      stallRespawnPending: F,
+      settledDispatches: U,
+      controlKey: Y,
+      holdsCredential: ae,
+      storageV5: se,
+      legacyOpProbe: ie,
+    } = r,
+    Q;
+  try {
+    Q = te(c);
+  } catch {
+    return k(e, { ok: !1, error: "bad json", code: "EUNKNOWN" });
+  }
+  if (Q === null || typeof Q !== "object")
+    return k(e, { ok: !1, error: "bad json", code: "EUNKNOWN" });
+  let le = Q.op;
+  if (le === "ping")
+    return k(e, {
+      ok: !0,
+      op: "ping",
+      version: {
+        ISSUES_EXPLAINER:
+          "report the issue at https://github.com/anthropics/claude-code/issues",
+        PACKAGE_URL: "@anthropic-ai/claude-code",
+        README_URL: "https://code.claude.com/docs/en/overview",
+        VERSION: "2.1.330",
+        FEEDBACK_CHANNEL: "https://github.com/anthropics/claude-code/issues",
+        BUILD_TIME: "2026-11-20T17:34:37Z",
+        GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+        HOOKS_WORKER_URL:
+          "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+        DD_SOURCEMAP_GROUP: "darwin",
+      }.VERSION,
+      proto: ap,
+      carriedPromptsFormat: g2r,
+      signInPinFormat: Bho,
+    });
+  if (le === "nudge") {
+    let o = await y();
+    return k(e, {
+      ok: !0,
+      op: "nudge",
+      restarting: o.restarting,
+      upgradePending: o.upgradePending,
+      version: {
+        ISSUES_EXPLAINER:
+          "report the issue at https://github.com/anthropics/claude-code/issues",
+        PACKAGE_URL: "@anthropic-ai/claude-code",
+        README_URL: "https://code.claude.com/docs/en/overview",
+        VERSION: "2.1.330",
+        FEEDBACK_CHANNEL: "https://github.com/anthropics/claude-code/issues",
+        BUILD_TIME: "2026-11-20T17:34:37Z",
+        GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+        HOOKS_WORKER_URL:
+          "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+        DD_SOURCEMAP_GROUP: "darwin",
+      }.VERSION,
+      processWrapper: IZ(),
+    });
+  }
+  if (le === "yield") return k(e, { ok: !0, op: "yield", yielding: I() });
+  if (le === "lease") {
+    let o = wbt().safeParse(Q.client).data;
+    (W(e, o ? { ...o, pid: lin(e) ?? o.pid } : null),
+      e.write(
+        _({ ok: !0, op: "lease" }) +
+          `
+`,
+      ));
+    return;
+  }
+  if (le === "leases") return k(e, { ok: !0, op: "leases", clients: q() });
+  if (le === "shutdown") {
+    let o = Q.reapWorkers !== !1,
+      P = R(o);
+    return k(e, { ok: !0, op: "shutdown", reaped: P });
+  }
+  if (!A() && le === "attach") {
+    if ((await Promise.race([D, K(qr, void 0, { unref: !0 })]), e.destroyed))
+      return;
+  }
+  if (!A())
+    return k(e, {
+      ok: !1,
+      error: `${Mk()} starting (adoption in progress)`,
+      code: "ESTARTING",
+    });
+  let de = Q.proto;
+  if (typeof de !== "number" || !Number.isInteger(de) || de < jpr || de > ap)
+    return (
+      a("tengu_bg_proto_mismatch", {
+        client_proto: typeof de === "number" ? de : -1,
+        server_proto: ap,
+      }),
+      k(e, {
+        ok: !1,
+        error: `proto mismatch (server=${ap}, client=${de}) \u2014 ${Mk()} and CLI versions differ; restart claude`,
+        code: "EPROTO",
+        serverProto: ap,
+        serverVersion: {
+          ISSUES_EXPLAINER:
+            "report the issue at https://github.com/anthropics/claude-code/issues",
+          PACKAGE_URL: "@anthropic-ai/claude-code",
+          README_URL: "https://code.claude.com/docs/en/overview",
+          VERSION: "2.1.330",
+          FEEDBACK_CHANNEL: "https://github.com/anthropics/claude-code/issues",
+          BUILD_TIME: "2026-11-20T17:34:37Z",
+          GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+          HOOKS_WORKER_URL:
+            "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+          DD_SOURCEMAP_GROUP: "darwin",
+        }.VERSION,
+      })
+    );
+  let C = yki().safeParse(Q);
+  if (!C.success)
+    return k(e, {
+      ok: !1,
+      error: `malformed request: ${C.error.issues[0]?.message ?? "invalid"}`,
+      code: "EUNKNOWN",
+    });
+  let g = C.data;
+  switch (g.op) {
+    case "ping":
+    case "nudge":
+    case "yield":
+    case "lease":
+    case "leases":
+    case "shutdown":
+      return;
+    case "list":
+      return k(e, {
+        ok: !0,
+        op: "list",
+        jobs: Array.from(h.values()).map((o) =>
+          o.isKilling || o.isRetiring ? { ...o.record, dying: !0 } : o.record,
+        ),
+      });
+    case "check-credential": {
+      if (!Zj(g.auth, Y))
+        return k(e, {
+          ok: !1,
+          error:
+            "check-credential rejected: this client didn't present the daemon control key",
+          code: "EAUTH",
+        });
+      return k(e, {
+        ok: !0,
+        op: "check-credential",
+        held: await ae(g.pin, g.fromSettings),
+      });
+    }
+    case "has": {
+      let o = h.get(g.short),
+        P = F.has(g.short);
+      return k(e, {
+        ok: !0,
+        op: "has",
+        alive: (o !== void 0 && Oe(o)) || P,
+        present: o !== void 0 || P,
+        ready: o !== void 0 && !o.isBooting,
+      });
+    }
+    case "await-ack":
+      return Mt(h, U, e, "await-ack", g.short, g.nonce, g.timeoutMs);
+    case "dispatch":
+      if (!Zj(g.auth, Y))
+        return k(e, {
+          ok: !1,
+          error:
+            "dispatch rejected: this client didn't present the daemon control key",
+          code: "EAUTH",
+        });
+      if ((await K(0), e.readableEnded || e.destroyed)) {
+        a("tengu_bg_dispatch_stale_drop", {});
+        return;
+      }
+      return Mt(h, U, e, "dispatch", g.d.short, g.d.nonce, g.timeoutMs, v(g.d));
+    case "reply": {
+      if (!Zj(g.auth, Y))
+        return k(e, {
+          ok: !1,
+          error:
+            g.auth === void 0
+              ? "reply rejected: this window didn't present the daemon control key \u2014 it is likely running a Claude Code older than the daemon (left open across an update?); restart this window and retry, or stop driving the control socket directly"
+              : "reply rejected: the presented daemon control key doesn't match \u2014 retry, and restart the Claude Code daemon if this persists",
+          code: "EAUTH",
+        });
+      let o = h.get(g.short);
+      if (F.has(g.short) && (!o || !Oe(o)))
+        return k(e, {
+          ok: !1,
+          error: `worker ${n1t} \u2014 restarting it; retry reply`,
+          code: "ERESPAWNING",
+        });
+      if (!o || o.isRetiring || o.isKilling || o.record.outcome)
+        return k(e, {
+          ok: !1,
+          error: "session not found \u2014 it may have already ended",
+          code: "ENOJOB",
+        });
+      if (o.isUpgrading)
+        return k(e, {
+          ok: !1,
+          error: `job is restarting on the ${BDn}; retry reply`,
+          code: "ERESPAWNING",
+        });
+      if (
+        g.nextTurn === !0 &&
+        o.record.cliVersion !==
+          {
+            ISSUES_EXPLAINER:
+              "report the issue at https://github.com/anthropics/claude-code/issues",
+            PACKAGE_URL: "@anthropic-ai/claude-code",
+            README_URL: "https://code.claude.com/docs/en/overview",
+            VERSION: "2.1.330",
+            FEEDBACK_CHANNEL:
+              "https://github.com/anthropics/claude-code/issues",
+            BUILD_TIME: "2026-11-20T17:34:37Z",
+            GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+            HOOKS_WORKER_URL:
+              "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+            DD_SOURCEMAP_GROUP: "darwin",
+          }.VERSION
+      )
+        return k(e, {
+          ok: !1,
+          error: "it runs a different Claude Code build",
+          code: "ESKEW",
+        });
+      if (!(await o.reply(g.text, { nextTurn: g.nextTurn === !0 }))) {
+        if (
+          (o.isBooting || (o.isSpawnPending && o.isReplyQueueOnly)) &&
+          !o.isUnverified &&
+          !o.record.legacy
+        ) {
+          let P = "ERESPAWNING";
+          if (!o.isBooting && g.nextTurn !== !0) {
+            let T = Bs(g.short);
+            if (
+              (cue(g.text, null) ||
+                (await kbt(T, se)
+                  .then((G) =>
+                    G === "absent"
+                      ? o.dispatch.source === "spare"
+                      : G !== null && cue(g.text, G),
+                  )
+                  .catch(() => !1))) &&
+              !o.isBooting
+            )
+              P = "ENOREPLY";
+          }
+          return k(e, {
+            ok: !1,
+            error: "the session is still starting",
+            code: P,
+          });
+        }
+        return k(e, {
+          ok: !1,
+          error: "session isn't accepting replies right now",
+          code: "ENOREPLY",
+        });
+      }
+      return k(e, { ok: !0, op: "reply" });
+    }
+    case "kill": {
+      if ((F.delete(g.short), g.evict))
+        MCe((P) => {
+          delete P.workers[g.short];
+        }, se).catch((P) => i(P));
+      let o = h.get(g.short);
+      if (!o)
+        return k(e, {
+          ok: !1,
+          error: "session not found \u2014 it may have already ended",
+          code: "ENOJOB",
+        });
+      if (o.dispatch.launch.mode === "exec" && o.record.outcome)
+        return (h.delete(g.short), k(e, { ok: !0, op: "kill" }));
+      return (
+        o.kill(g.signal ?? "SIGTERM", g.handoff ? "handoff" : "killed"),
+        k(e, { ok: !0, op: "kill" })
+      );
+    }
+    case "respawn-stale": {
+      Bt(ie, "respawn_stale");
+      let o = h.get(g.short);
+      if (!o)
+        return k(e, {
+          ok: !1,
+          error: "session not found \u2014 it may have already ended",
+          code: "ENOJOB",
+        });
+      let P = await o.respawnIfIdleStale();
+      return k(e, { ok: !0, op: "respawn-stale", ...P });
+    }
+    case "retire-if-empty": {
+      if (!Zj(g.auth, Y))
+        return k(e, {
+          ok: !1,
+          error:
+            "retire-if-empty rejected: the daemon control key is missing or doesn't match",
+          code: "EAUTH",
+        });
+      let o = h.get(g.short);
+      if (!o || o.record.sessionId !== g.sessionId)
+        return k(e, {
+          ok: !1,
+          error: "session not found \u2014 it may have already ended",
+          code: "ENOJOB",
+        });
+      let { retired: P } = await H(o);
+      return k(e, { ok: !0, op: "retire-if-empty", retired: P });
+    }
+    case "resize": {
+      let o = h.get(g.short);
+      if (!o)
+        return k(e, {
+          ok: !1,
+          error: "session not found \u2014 it may have already ended",
+          code: "ENOJOB",
+        });
+      if (g.attachId) {
+        let P = o.attachers.get(g.attachId);
+        if (!P) return k(e, { ok: !0, op: "resize" });
+        if (((P.cols = g.cols), (P.rows = g.rows), P.repaint))
+          return (P.repaint(), k(e, { ok: !0, op: "resize" }));
+      }
+      return (o.resize(g.cols, g.rows), k(e, { ok: !0, op: "resize" }));
+    }
+    case "program-status": {
+      let o = h.get(g.short);
+      if (!o)
+        return k(e, {
+          ok: !1,
+          error: "job not found \u2014 it may have already exited",
+          code: "ENOJOB",
+        });
+      let P = o.attachers.get(g.attachId);
+      if (P?.caps)
+        ((P.caps = { ...P.caps, programStatus: !0 }),
+          o.sendProgramStatusViewers());
+      return k(e, { ok: !0, op: "program-status" });
+    }
+    case "attach": {
+      if (g.auth === void 0)
+        t(
+          "[bg-attach] legacy client (no control key) \u2014 allowed via peerUid",
+          { level: "warn" },
+        );
+      else if (!Zj(g.auth, Y))
+        return k(e, {
+          ok: !1,
+          error:
+            "attach rejected: the presented daemon control key doesn't match \u2014 retry, and restart the Claude Code daemon if this persists",
+          code: "EAUTH",
+        });
+      let o = h.get(g.short);
+      if (F.has(g.short) && (!o || !Oe(o)))
+        return k(e, {
+          ok: !1,
+          error: `worker ${n1t} \u2014 restarting it; retry attach`,
+          code: "ERESPAWNING",
+        });
+      if (
+        !o ||
+        o.isKilling ||
+        (o.record.outcome && o.dispatch.launch.mode !== "exec")
+      )
+        return k(e, {
+          ok: !1,
+          error: "session not found \u2014 it may have already ended",
+          code: "ENOJOB",
+        });
+      if (o.isUnverified)
+        return k(e, {
+          ok: !1,
+          error:
+            "worker is live but supervisor could not verify its identity \u2014 try restarting the supervisor to re-adopt",
+          code: "EUNVERIFIED",
+        });
+      if (o.isRetiring)
+        return k(e, {
+          ok: !1,
+          error: "job is retiring; retry attach",
+          code: "ERESPAWNING",
+        });
+      if (o.record.legacy) {
+        let O = o.dispatch,
+          M = await Is(Bs(O.short), se).catch(() => null),
+          _e =
+            M === null && O.launch.mode !== "exec"
+              ? await uIt(Bs(O.short), se)
+              : void 0,
+          ce = M?.resumeSessionId ?? O.sessionId,
+          ye = M?.cwd ?? O.cwd,
+          Ne = zv(s0(se)),
+          Ce = await Lhe(ce, ye, M?.linkScanPath, void 0, Ne),
+          Le = Ce.hasMessages;
+        if (!Le) await UAt(Ce.path, Ne);
+        if (h.get(g.short) !== o || e.destroyed)
+          return k(e, {
+            ok: !1,
+            error: "supervisor restarting",
+            code: "ERESPAWNING",
+          });
+        if (!o.isKilling) {
+          if ((a("tengu_bg_attach_legacy_autorespawn", {}), _e))
+            fIt("legacy_attach", _e);
+          (o.kill("SIGTERM"),
+            v({
+              ...O,
+              cwd: ye,
+              source: "respawn",
+              reattachEnv: void 0,
+              firstStart: void 0,
+              launch: Le
+                ? {
+                    mode: "resume",
+                    sessionId: ce,
+                    transcriptPath: Ce.path,
+                    fork: !1,
+                    flagArgs:
+                      M?.tempo === "active"
+                        ? Phr(M?.respawnFlags ?? O.respawnFlags)
+                        : u$t(M?.respawnFlags ?? O.respawnFlags),
+                  }
+                : ce !== O.sessionId
+                  ? {
+                      mode: "prompt",
+                      args: [
+                        "--session-id",
+                        ce,
+                        ...(M?.respawnFlags ?? O.respawnFlags),
+                      ],
+                    }
+                  : O.launch,
+            }).catch((Zt) => i(Zt)));
+        }
+        return k(e, {
+          ok: !1,
+          error: `${Gpr} job respawning with worker-owned PTY; retry attach`,
+          code: "ERESPAWNING",
+        });
+      }
+      if (o.isUpgrading)
+        return k(e, {
+          ok: !1,
+          error: `job is restarting on the ${BDn}; retry attach`,
+          code: "ERESPAWNING",
+        });
+      if (await o.failIfHostExited("attach"))
+        return k(e, {
+          ok: !1,
+          error: o.dispatch.launch.mode === "exec" ? o1t : r1t,
+          code: "EHOSTDEAD",
+        });
+      if (e.destroyed) return;
+      if (F.has(g.short) && (h.get(g.short) !== o || !Oe(o)))
+        return k(e, {
+          ok: !1,
+          error: `worker ${n1t} \u2014 restarting it; retry attach`,
+          code: "ERESPAWNING",
+        });
+      if (
+        h.get(g.short) !== o ||
+        o.isKilling ||
+        (o.record.outcome && o.dispatch.launch.mode !== "exec")
+      )
+        return k(e, {
+          ok: !1,
+          error: "session not found \u2014 it may have already ended",
+          code: "ENOJOB",
+        });
+      let P =
+          o.liveTranscriptPath !== void 0
+            ? o.liveTranscriptPath
+            : o.dispatch.launch.mode === "resume"
+              ? o.dispatch.launch.transcriptPath
+              : void 0,
+        T =
+          g.holdingFrame !== !0 && o.isBooting && P != null
+            ? at(P, g.cols, g.rows, {
+                colorLevel: g.caps?.colorLevel,
+                theme: g.caps?.systemTheme,
+              })
+            : null;
+      W(e, null);
+      let G = o.marksCapable ? Fr(16).toString("hex") : void 0;
+      if (
+        (e.write(
+          _({
+            ok: !0,
+            op: "attach",
+            imarkNonce: G,
+            decModes: o.decModeSnapshot(),
+            via: o.via,
+            booting: o.bootingForAttachMetrics,
+            tempo: o.record.tempo,
+            state: o.record.state,
+            cached: T !== null,
+            stale: Boolean(
+              o.record.cliVersion &&
+              o.record.cliVersion !==
+                {
+                  ISSUES_EXPLAINER:
+                    "report the issue at https://github.com/anthropics/claude-code/issues",
+                  PACKAGE_URL: "@anthropic-ai/claude-code",
+                  README_URL: "https://code.claude.com/docs/en/overview",
+                  VERSION: "2.1.330",
+                  FEEDBACK_CHANNEL:
+                    "https://github.com/anthropics/claude-code/issues",
+                  BUILD_TIME: "2026-11-20T17:34:37Z",
+                  GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+                  HOOKS_WORKER_URL:
+                    "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+                  DD_SOURCEMAP_GROUP: "darwin",
+                }.VERSION,
+            ),
+            workerCliVersion: o.record.cliVersion,
+            programStatus: o.dispatch.launch.mode !== "exec",
+          }) +
+            `
+`,
+        ),
+        a("tengu_bg_attach", {
+          tempo: f(o.record.tempo),
+          state: Qse(o.record.state),
+          via: f(o.via),
+          attachers: o.attachers.size,
+          stale: Boolean(
+            o.record.cliVersion &&
+            o.record.cliVersion !==
+              {
+                ISSUES_EXPLAINER:
+                  "report the issue at https://github.com/anthropics/claude-code/issues",
+                PACKAGE_URL: "@anthropic-ai/claude-code",
+                README_URL: "https://code.claude.com/docs/en/overview",
+                VERSION: "2.1.330",
+                FEEDBACK_CHANNEL:
+                  "https://github.com/anthropics/claude-code/issues",
+                BUILD_TIME: "2026-11-20T17:34:37Z",
+                GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+                HOOKS_WORKER_URL:
+                  "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+                DD_SOURCEMAP_GROUP: "darwin",
+              }.VERSION,
+          ),
+        }),
+        T !== null)
+      )
+        e.write(YN + Xx + T);
+      let Z = Xx + rFe,
+        X = 6,
+        re = [],
+        we = 0,
+        be = "",
+        ue = () => {},
+        ne,
+        ve = 0,
+        ke = !1,
+        De = Yr(),
+        Ae = De === 0 ? 0 : Math.max(1, Math.ceil((De - Nt) / st)),
+        L = (O) =>
+          $nn(
+            YN +
+              Xx +
+              `
+  \x1B[2m${O}\x1B[0m
+`,
+          ),
+        z,
+        he = !1,
+        Ye = () => {
+          if (!he) return;
+          if (((he = !1), typeof o.replayInteractiveMarksTo === "function"))
+            o.replayInteractiveMarksTo(g.attachId ?? e);
+        },
+        Pe = (O) => {
+          if (re === null) return;
+          z?.();
+          let M = re;
+          if (((re = null), clearTimeout(Xe), O && !e.destroyed))
+            for (let _e of M) e.write(_e);
+          if (((he = !0), O && M.length > 0)) Ye();
+          if (!e.destroyed) o.sendProgramStatusViewers();
+        },
+        Xe = setTimeout(() => {
+          let O = re !== null && we === 0,
+            M = O && (g.holdingFrame === !0 || T !== null);
+          if (!M) Pe(!0);
+          if (O && !e.destroyed) {
+            if (!M) {
+              let ce = o.record.state,
+                ye =
+                  ce === "starting" ||
+                  ce === "resuming" ||
+                  ce === "adopted" ||
+                  ce === "crashed"
+                    ? "Session is starting \xB7 Ctrl+Z to detach"
+                    : "Waiting for session to redraw\u2026 Ctrl+Z to detach";
+              e.write(L(ye));
+            }
+            let _e = Date.now();
+            ((ne = setInterval(() => {
+              let ce = Date.now(),
+                ye = ce - _e;
+              if (((_e = ce), ye > st * 3)) ve = 0;
+              if (
+                (ve++,
+                Ae > 0 &&
+                  ve >= Ae &&
+                  !o.isKilling &&
+                  !o.isRetiring &&
+                  !o.isBooting &&
+                  !o.heldOnSignIn &&
+                  o.dispatch.launch.mode !== "exec")
+              ) {
+                (clearInterval(ne), (ne = void 0), ue());
+                let Ce = o.dispatch.attachStallRespawns ?? 0,
+                  Le = {
+                    state: Qse(o.record.state),
+                    via: f(o.via),
+                    attempt: Ce,
+                  };
+                if (Ce >= 2) {
+                  if (
+                    (a("tengu_bg_attach_stall_gave_up", Le),
+                    e.write(
+                      L("Session keeps stalling at startup.") +
+                        dDe(
+                          Tao(
+                            "ESTALLED",
+                            g.caps?.sessionTabs,
+                            `Session ${g.short} keeps stalling at startup \u2014 check ${Bs(g.short)} for logs.`,
+                          ),
+                        ),
+                    ),
+                    !o.isKilling)
+                  )
+                    o.kill(
+                      "SIGKILL",
+                      "failed",
+                      "session keeps stalling at startup",
+                    );
+                  return;
+                }
+                if (
+                  (a("tengu_bg_attach_stall_respawn", Le),
+                  e.write(
+                    L("Session not responding \u2014 restarting it\u2026"),
+                  ),
+                  Xr(o, e, v, () => ke, F, se),
+                  !e.destroyed)
+                )
+                  e.write(
+                    dDe(
+                      Tao(
+                        Bnn,
+                        g.caps?.sessionTabs,
+                        `worker ${n1t}, restarting`,
+                      ),
+                    ),
+                  );
+                return;
+              }
+              let Ne = o.attachers.get(Ee);
+              (ue(),
+                (ue = o.resizeForRepaint(
+                  Ne?.cols ?? g.cols,
+                  Ne?.rows ?? g.rows,
+                )));
+            }, st)),
+              ne.unref());
+          }
+        }, Nt),
+        ct = () => {
+          if (ne) (clearInterval(ne), (ne = void 0));
+        },
+        qe = o.onStream.subscribe((O) => {
+          if (e.destroyed) return;
+          if (((ke = !0), re !== null)) {
+            let M = be + O;
+            if (M.includes(YN) || M.includes(Z)) {
+              ct();
+              let _e = O.includes(YN) || O.includes(Z) ? O : M;
+              if ((ue(), Pe(!1), e.writableLength <= He))
+                (e.write(o.decModeSnapshot().map(l7).join("") + _e), Ye());
+              else e.destroy();
+              return;
+            }
+            if ((re.push(O), (we += O.length), (be = M.slice(-X)), we > 65536))
+              Pe(!0);
+            return;
+          }
+          if ((ct(), e.writableLength > He)) {
+            e.destroy();
+            return;
+          }
+          (e.write(O), Ye());
+        }),
+        Je = o.onRepaintDone.subscribe(() => {
+          (ue(), Pe(!0));
+        });
+      if (x() === "windows") for (let O of o.attachers.values()) O.kick();
+      let Ee = g.attachId ?? e;
+      if (
+        (o.attachers.set(Ee, {
+          cols: g.cols,
+          rows: g.rows,
+          caps: g.caps,
+          imarkNonce: G,
+          deliver: (O) => {
+            if (!e.destroyed) e.write(O);
+          },
+          kick: () => {
+            if ((a("tengu_bg_attach_kick", {}), ne))
+              (clearInterval(ne), (ne = void 0));
+            if (
+              (clearTimeout(Xe),
+              ue(),
+              qe(),
+              Je(),
+              e.removeAllListeners("data"),
+              !e.destroyed)
+            )
+              (e.write(dDe(Tao("EKICKED", g.caps?.sessionTabs, _ki))), e.end());
+            o.attachers.delete(Ee);
+          },
+        }),
+        T !== null && P != null)
+      ) {
+        let O = o.attachers.get(Ee);
+        if (O)
+          ((O.repaint = () => {
+            if (e.destroyed) return;
+            o.resize(O.cols, O.rows);
+            let M = at(P, O.cols, O.rows, {
+              colorLevel: g.caps?.colorLevel,
+              theme: g.caps?.systemTheme,
+            });
+            e.write(YN + Xx + (M ?? ""));
+          }),
+            (z = () => {
+              ((O.repaint = void 0), (z = void 0));
+            }));
+      }
+      (o.noteActivity(),
+        o.seedFocus(!0),
+        o.sendAttachedClientCapabilities(g.caps ?? null));
+      let We;
+      if (o.dispatch.launch.mode === "exec") {
+        let O = $nn(YN + Xx);
+        e.write(O);
+        for (let M of o.ringSnapshot()) e.write(M);
+        if (
+          (Pe(!1),
+          (We = () => {
+            let M = o.attachers.get(Ee);
+            if (e.destroyed || !M) return;
+            let _e =
+                o.record.outcome === "done"
+                  ? "done"
+                  : o.record.outcome === "killed"
+                    ? "stopped"
+                    : "failed",
+              ce = $nn(`\r
+\x1B[2m\u2014 ${_e} \xB7 Ctrl+Z to return \u2014\x1B[0m\r
+`);
+            (e.write(ce),
+              (M.repaint = () => {
+                if (e.destroyed) return;
+                e.write(O);
+                for (let ye of o.ringSnapshot()) e.write(ye);
+                e.write(ce);
+              }));
+          }),
+          o.record.outcome)
+        ) {
+          (We(),
+            e.once("close", () => {
+              (clearTimeout(Xe), qe(), Je(), o.attachers.delete(Ee));
+            }));
+          return;
+        }
+      }
+      ue = o.resizeForRepaint(g.cols, g.rows);
+      let Jt = o.onSettle.subscribe(() => {
+          if (We && o.record.outcome !== "killed") return We();
+          e.end();
+        }),
+        ut = new Vr("utf8"),
+        Qt = g.caps?.sessionTabs !== void 0,
+        ft = (O) => {
+          let M = ut.write(O);
+          if (M.length > 0 && (!Rt(M) || (Qt && xt(M))))
+            o.lastInputAttacher = Ee;
+          o.write(M);
+        };
+      if (E.length) ft(E);
+      (e.on("data", ft),
+        e.once("close", () => {
+          if (ne) clearInterval(ne);
+          if ((ue(), Pe(!1), qe(), Jt(), Je(), !o.attachers.delete(Ee))) return;
+          let O = ut.end();
+          if (O) o.write(O);
+          if (o.attachers.size > 0) {
+            let M = [...o.attachers.values()].at(-1);
+            (o.resizeForRepaint(M.cols, M.rows),
+              o.sendAttachedClientCapabilities(
+                M.caps ? { ...M.caps, systemTheme: void 0 } : null,
+              ));
+          } else (o.seedFocus(!1), o.sendAttachedClientCapabilities(null));
+          o.sendProgramStatusViewers();
+        }));
+      return;
+    }
+    case "ensure-spare":
+      return (Bt(ie, "ensure_spare"), k(e, { ok: !0, op: "ensure-spare" }));
+    case "permission-response":
+      if (!Zj(g.auth, Y))
+        return k(e, {
+          ok: !1,
+          error:
+            "permission-response rejected: this client didn't present the daemon control key",
+          code: "EAUTH",
+        });
+      return k(e, { ok: !0, op: "permission-response" });
+    case "subscribe": {
+      let o = h.get(g.short);
+      if (!o)
+        return k(e, {
+          ok: !1,
+          error: "session not found \u2014 it may have already ended",
+          code: "ENOJOB",
+        });
+      if (
+        (W(e, null),
+        $e(e, {
+          type: "snapshot",
+          record: o.record,
+          streamTail: o.tail(g.tail ?? 200),
+        }),
+        o.record.outcome)
+      ) {
+        ($e(e, { type: "settled", outcome: o.record.outcome }), e.end());
+        return;
+      }
+      let P = [
+        o.onStream.subscribe((T) => $e(e, { type: "stream", line: T })),
+        o.onState.subscribe((T) => $e(e, { type: "state", patch: T })),
+        o.onSettle.subscribe((T) => {
+          ($e(e, { type: "settled", outcome: T }), e.end());
+        }),
+      ];
+      e.on("close", () => {
+        for (let T of P) T();
+      });
+      return;
+    }
+    default:
+      return k(e, { ok: !1, error: `unknown op: ${g.op}`, code: "EUNKNOWN" });
+  }
+}
+function Qr(r) {
+  if (r === void 0) return;
+  return fe(Cao.find((e) => e === r)) ?? S("other");
+}
+var Lse = 45000;
+async function Swn(r) {
+  let e = Date.now() + r;
+  while (Date.now() < e) {
+    if ((await Ay({ proto: ap, op: "ping" })).ok) return !0;
+    await Fe(100);
+  }
+  return !1;
+}
+async function hUo(r, e) {
+  let c = Date.now() + r,
+    E = 0;
+  while (!0) {
+    let h = c - Date.now();
+    if (h <= 0) return null;
+    if (await Swn(Math.min(h, 1000))) {
+      let v = Date.now();
+      if (v >= E) {
+        E = v + 1000;
+        let y = await AO(1, e).catch(() => null);
+        if (y?.origin === "service") return y;
+        if (y?.origin === "foreground") return null;
+      }
+      await Fe(100);
+    }
+  }
+}
+async function rn(r, e) {
+  let c = Date.now(),
+    E = !1,
+    h,
+    v = "restarting",
+    y;
+  while (Date.now() < c + (E ? 30000 : 1e4)) {
+    let R = await Ay({ proto: ap, op: "nudge" });
+    if (R.ok && R.op === "nudge") {
+      if (((E = !0), (h = R.version), !R.restarting)) {
+        if (
+          await an(R.version, r, R.processWrapper, R.upgradePending === !0, e)
+        )
+          return "retired";
+        let A = kg();
+        if (A && !R.processWrapper) return { refuse: A };
+        if (!R.processWrapper && IZ() !== "" && !(await OV()))
+          return { refuse: dt() };
+        Gt(R.processWrapper);
+        let D =
+          R.version !==
+          {
+            ISSUES_EXPLAINER:
+              "report the issue at https://github.com/anthropics/claude-code/issues",
+            PACKAGE_URL: "@anthropic-ai/claude-code",
+            README_URL: "https://code.claude.com/docs/en/overview",
+            VERSION: "2.1.330",
+            FEEDBACK_CHANNEL:
+              "https://github.com/anthropics/claude-code/issues",
+            BUILD_TIME: "2026-11-20T17:34:37Z",
+            GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+            HOOKS_WORKER_URL:
+              "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+            DD_SOURCEMAP_GROUP: "darwin",
+          }.VERSION;
+        if (Date.now() - c > 200 || D)
+          a("tengu_bg_skew_nudge", {
+            converged: !0,
+            duration_ms: Date.now() - c,
+            daemon_version: Ad(R.version),
+            skewed: D,
+          });
+        return "up";
+      }
+      ((v = "restarting"), await Fe(100));
+      continue;
+    }
+    if (!R.ok && R.code === "ETIMEOUT") {
+      ((E = !0), (v = "etimeout"), await Fe(100));
+      continue;
+    }
+    if (!R.ok && R.code === "ENOCONN") {
+      if (!E) {
+        let A = await AO(1, e).catch(() => null);
+        if (A?.bgDisabled) return "down";
+        if (A) E = !0;
+      }
+      if (((y = Cy(R.errno)), !E)) return "down";
+      ((v = "enoconn"), await Fe(100));
+      continue;
+    }
+    {
+      let A = kg();
+      if (A) return { refuse: A };
+      if (IZ() !== "" && !(await OV())) return { refuse: dt() };
+    }
+    return "up";
+  }
+  return (
+    a("tengu_bg_skew_nudge", {
+      converged: !1,
+      restarting: v === "restarting",
+      etimeout: v === "etimeout",
+      enoconn: v === "enoconn",
+      daemon_version: Ad(h),
+      ...(y && { connect_errno: y }),
+    }),
+    "down"
+  );
+}
+async function PJ(r = {}, e) {
+  if (x() !== "windows" && cps())
+    return (
+      m("daemon_ensure_running", "uid_collapse"),
+      { ok: !1, reason: CPi, causeCode: "uid_collapse" }
+    );
+  return Ut(r, e, !1);
+}
+async function Ut(r, e, c) {
+  let E = Date.now(),
+    h = await rn(r.forceTransient ?? !1, e);
+  if (h === "up") return (Ke(c), { ok: !0 });
+  if (typeof h === "object") {
+    if (r.spawnIntent)
+      return (
+        m("daemon_ensure_running", "daemon_ensure_client_wrapper_refused"),
+        m("agent_launcher", "raw_daemon_client_misconfigured"),
+        { ok: !1, reason: h.refuse, causeCode: "wrapper" }
+      );
+    return (Ke(c), { ok: !0 });
+  }
+  let v = Date.now(),
+    y = v - E > 40000,
+    R = r.standsDownAtExit && h !== "retired",
+    A = await Vt(),
+    D = A ? await mUo() : { execPathStale: !1, launcherPrefixDead: !1 },
+    I = A && (D.execPathStale || D.launcherPrefixDead);
+  if (I)
+    (a("tengu_bg_daemon_service_stale_exec", {
+      launcher_dead: D.launcherPrefixDead,
+    }),
+      t(
+        D.execPathStale
+          ? "daemon service exec path is stale (binary deleted) \u2014 falling back to transient spawn. Run 'claude daemon install' to repair."
+          : "daemon service unit starts through a launcher that was deleted or is no longer executable \u2014 falling back to transient spawn. Run 'claude daemon install' to repair.",
+        { level: "warn" },
+      ));
+  let H = !1;
+  if (A && !I) {
+    if (((H = !0), R && nn())) return Ft(!0, E);
+    r.onStarting?.();
+    let L = await Wt(e);
+    if (L)
+      return (
+        m("daemon_ensure_running", L.code),
+        { ok: !1, reason: L.reason, causeCode: L.causeCode }
+      );
+    let z = await pUo(),
+      he = await Swn(5000);
+    if (
+      (a("tengu_bg_daemon_install", {
+        outcome_ok: he,
+        via_service: !0,
+        fresh_install: !1,
+        clock_jump: y,
+        duration_ms: Date.now() - E,
+        platform_darwin: x() === "macos",
+        platform_linux: x() === "linux",
+        platform_windows: x() === "windows",
+      }),
+      he)
+    )
+      return (Ke(c), { ok: !0 });
+    (a("tengu_bg_daemon_service_poll_fallthrough", { sr_ok: z.ok }),
+      t(
+        `daemon service ${w3t} 5s${z.ok ? "" : ` (${z.error})`} \u2014 falling back to transient spawn. Run 'claude daemon install' to repair.`,
+        { level: "warn" },
+      ));
+  }
+  if (
+    !A &&
+    !r.forceTransient &&
+    Jss() === "ask" &&
+    (await Kt()) &&
+    !ge().daemonInstallPromptDismissed
+  )
+    return (
+      a("tengu_bg_daemon_cold_start_ask", {}),
+      {
+        ok: !1,
+        askInstall: !0,
+        causeCode: "ask",
+        reason:
+          "The background service isn't running. Run 'claude daemon install' to keep it running.",
+      }
+    );
+  if (!H) {
+    let L = kg();
+    if (!(await OV()) && (await AO(1, e).catch(() => null)))
+      return (
+        m("daemon_ensure_running", "daemon_ensure_client_wrapper_refused"),
+        m("agent_launcher", "zombie_kill_client_misconfigured"),
+        { ok: !1, reason: L ?? dt(), causeCode: "wrapper" }
+      );
+    if (R && nn()) return Ft(!1, E);
+    r.onStarting?.();
+    let z = await Wt(e);
+    if (z)
+      return (
+        m("daemon_ensure_running", z.code),
+        { ok: !1, reason: z.reason, causeCode: z.causeCode }
+      );
+  }
+  let W = G3(),
+    q =
+      W.lastTransientSpawnAt === null
+        ? null
+        : Date.now() - W.lastTransientSpawnAt;
+  W.lastTransientSpawnAt = Date.now();
+  let F = _({ label: dn(), cwd: pe(), ...r.spawnedBy, pid: process.pid }),
+    U = Date.now(),
+    Y = ["daemon", "run", "--origin", "transient", "--spawned-by", F],
+    ae = () => NXn(Y, void 0, { withoutOAuthTokenEnv: r.withoutOAuthTokenEnv }),
+    se = await ae(),
+    {
+      err: ie,
+      child: Q,
+      recoveredAfterReinstallWait: le,
+      gaveUpOnNpmInstallInProgress: de,
+      reinstallWaitedMs: C = 0,
+    } = se,
+    g = se.stderrPath;
+  if (ie) {
+    if (g) je(Ge(g), { recursive: !0, force: !0 }).catch(() => {});
+    return (
+      a("tengu_bg_daemon_spawn_failed", {
+        errno_enoent: w(ie) === "ENOENT",
+        errno_eacces: w(ie) === "EACCES",
+        errno: Cr(ie) ?? S("unknown"),
+        launcher_configured: Wg().length > 0 || kg() !== null,
+      }),
+      m("daemon_ensure_running", "daemon_ensure_spawn_failed"),
+      {
+        ok: !1,
+        reason: de
+          ? `Claude Code is being updated by npm on this machine (still not runnable after ${Math.round(m2r / 60000)} min, ${Cr(ie) ?? "spawn failed"}) \u2014 try again when the update finishes`
+          : `spawn ${Mk()}: ${d(ie)}`,
+        causeCode: Cr(ie) ?? "spawn",
+      }
+    );
+  }
+  let o = nt({
+      spawnIssuedAt: U + C,
+      child: Q,
+      stderrPath: g,
+      wrapperConfigured: Wg().length > 0,
+      storageV5: e,
+    }),
+    P = await Me(o, Date.now() + 30000, !1),
+    T = Date.now() - v - C > 60000;
+  if (!P && T) P = await Me(o, Date.now() + 5000, !1);
+  if (!P && !T)
+    P = await Me(
+      o,
+      Math.max(Date.now() + (Lse - 30000), o.spawnIssuedAt + Lse),
+      !0,
+    );
+  let V = !1,
+    G = 0,
+    Z = !1;
+  if (!P && !T && (await St(o, ze()))) {
+    let L = await h2r(ze());
+    if (
+      ((G += L.waitedMs),
+      a("tengu_bg_daemon_spawn_reinstall_wait", {
+        waited_ms: L.waitedMs,
+        recovered: L.recovered,
+        extended: L.extended,
+        install_in_progress: L.installInProgressAtEnd,
+        after_child_exit: !0,
+      }),
+      (Z = !L.recovered && L.installInProgressAtEnd),
+      L.recovered)
+    ) {
+      let z = await ae();
+      if (z.err === null) {
+        if (((V = !0), (G = 0), g))
+          je(Ge(g), { recursive: !0, force: !0 }).catch(() => {});
+        ((g = z.stderrPath),
+          (o = nt({
+            spawnIssuedAt: Date.now(),
+            child: z.child,
+            stderrPath: g,
+            wrapperConfigured: Wg().length > 0,
+            storageV5: e,
+          })),
+          t(
+            `daemon: ${ze()} was being reinstalled when the first daemon was spawned (it exited at once); restarted it after ${L.waitedMs}ms`,
+          ),
+          (P = await Me(o, o.spawnIssuedAt + Lse, !0)));
+      } else if (
+        (t(
+          `daemon: respawn after the npm reinstall window failed: ${d(z.err)}`,
+          { level: "warn" },
+        ),
+        a("tengu_bg_daemon_spawn_failed", {
+          errno: Cr(z.err) ?? S("unknown"),
+          launcher_configured: Wg().length > 0 || kg() !== null,
+          after_reinstall_wait: !0,
+        }),
+        z.stderrPath)
+      )
+        je(Ge(z.stderrPath), { recursive: !0, force: !0 }).catch(() => {});
+    }
+  }
+  let X = o.budgetExtended ? rt : Lse,
+    re = !P && !T && Date.now() - o.spawnIssuedAt - G > X + 60000,
+    we = !P && (T || re) && !c && !(await ot(o)),
+    be = !1,
+    ue,
+    ne,
+    ve;
+  if (!P) {
+    let L = await Ve(o, !0);
+    if (((ve = Et(L)), L.length > 0)) {
+      ((be = !0),
+        t(
+          `daemon: transient spawn stderr:
+${L}`,
+          { level: "error" },
+        ),
+        (ue = [...L.matchAll(/\bE[A-Z]{2,14}\b/g)].find(
+          (he) => !"/\\".includes(L[he.index - 1] ?? "."),
+        )?.[0]));
+      let z = L.split(/\r?\n/)
+        .map((he) => Wr(Tl(he)))
+        .find((he) => he.length > 0);
+      ne = z && z.length > 200 ? `${ee(z, 200)}\u2026` : z;
+    }
+  }
+  if (g) je(Ge(g), { recursive: !0, force: !0 }).catch(() => {});
+  if (
+    (a("tengu_bg_daemon_install", {
+      outcome_ok: P,
+      via_service: !1,
+      fresh_install: !1,
+      clock_jump: T || y || re,
+      duration_ms: Date.now() - E,
+      platform_darwin: x() === "macos",
+      platform_linux: x() === "linux",
+      platform_windows: x() === "windows",
+      had_stderr: be,
+      child_exited: o.childExit !== null,
+      ...(o.childExit?.code !== void 0 &&
+        o.childExit.code !== null && { exit_code: o.childExit.code }),
+      ...(o.childExit?.signal && { exit_signal: fe(o.childExit.signal) }),
+      ...(o.childExitAt !== null && {
+        child_exit_ms: Math.max(0, o.childExitAt - o.spawnIssuedAt),
+      }),
+      ...(ve && { stderr_class: ve }),
+      reinstall_respawn: V,
+      budget_extended: o.budgetExtended,
+      ...(we && { clock_jump_retry: S("scheduled") }),
+      ...(c && { clock_jump_retry: S("retry") }),
+      ...(q !== null && { spawn_gap_ms: q }),
+      ...(r.spawnedBy !== void 0 && {
+        spawned_by: fe(Cao.find((L) => L === r.spawnedBy?.label)) ?? S("other"),
+      }),
+      ...(ue && { stderr_errno: Cy(ue) }),
+      ...(!P && (await bt(o))),
+    }),
+    P)
+  ) {
+    if ((cn(), le || V))
+      l("daemon_ensure_running", "daemon_ensure_spawn_waited_reinstall");
+    else Ke(c);
+    if (Wg().length > 0) {
+      let L = await Ay({ proto: ap, op: "nudge" }).catch(() => null);
+      Gt(L?.ok && L.op === "nudge" ? L.processWrapper : void 0);
+    }
+    return { ok: !0 };
+  }
+  if (we)
+    return (
+      t(
+        "daemon: the clock jumped during the cold start (machine slept?) and the daemon is still unreachable \u2014 retrying the whole start once",
+        { level: "warn" },
+      ),
+      Ut({ ...r, onStarting: void 0, standsDownAtExit: !1 }, e, !0)
+    );
+  m("daemon_ensure_running", "daemon_ensure_transient_unreachable");
+  let ke = Z
+      ? ` \u2014 Claude Code is being updated by npm on this machine (still not runnable after ${Math.round(m2r / 60000)} min); try again when the update finishes`
+      : "",
+    De = Wg()[0];
+  if (De)
+    return (
+      a("tengu_bg_daemon_spawn_failed", {
+        launcher_configured: !0,
+        failed_stage: S("unknown"),
+      }),
+      m("agent_launcher", "daemon_never_reachable"),
+      {
+        ok: !1,
+        causeCode: "timeout",
+        reason: `launcher \`${De}\` ran but Claude Code never started${ne ? ` \u2014 ${ne}` : ` (nothing on stderr within ${X / 1000}s)`}${ke}`,
+      }
+    );
+  let Ae = o.siblingHolderSeen ? null : o.childExit;
+  if (Ae) {
+    let L = Ae.signal ? `signal ${Ae.signal}` : `exit code ${Ae.code ?? "?"}`;
+    return {
+      ok: !1,
+      causeCode: "exited",
+      reason: ne
+        ? `${Mk()} ${k3t} (${L}): ${ne}${ke}`
+        : `${Mk()} ${k3t} (${L}, nothing on stderr) and no other ${Mk()} answered within ${Math.round(Math.min(Date.now() - o.spawnIssuedAt - G, X) / 1000)}s${ke}`,
+    };
+  }
+  return {
+    ok: !1,
+    causeCode: "timeout",
+    reason: `${Mk()} ${w3t} ${X / 1000}s${ke}`,
+  };
+}
+function Ft(r, e) {
+  return (
+    t("daemon: not started, because this process is exiting"),
+    a("tengu_bg_daemon_stood_down_at_exit", {
+      via_service: r,
+      duration_ms: Date.now() - e,
+    }),
+    l("daemon_ensure_running", "daemon_ensure_stood_down_at_exit"),
+    {
+      ok: !1,
+      stoodDown: !0,
+      viaService: r,
+      causeCode: "exiting",
+      reason: "this process is exiting",
+    }
+  );
+}
+function Ke(r) {
+  if (r) {
+    l("daemon_ensure_running", "daemon_ensure_clock_jump_retried");
+    return;
+  }
+  u("daemon_ensure_running");
+}
+function ze() {
+  return Vf().target;
+}
+function on(r) {
+  if (r.daemonOrigin !== "transient") return !1;
+  if (r.daemonVersion === r.clientVersion) return !1;
+  if (r.daemonTarget === r.clientTarget) return !1;
+  let e = n8t(r.daemonVersion),
+    c = n8t(r.clientVersion);
+  if (e !== null && c !== null) {
+    if (e8t(r.daemonVersion) !== e8t(r.clientVersion)) return !1;
+    return c > e;
+  }
+  if (gXn(r.daemonVersion) || gXn(r.clientVersion)) return !1;
+  return (
+    VR(r.clientVersion) !== null &&
+    VR(r.daemonVersion) !== null &&
+    gFe(r.clientVersion, r.daemonVersion)
+  );
+}
+async function an(r, e, c, E, h) {
+  if (kg() !== null) return !1;
+  if (!b("tengu_bg_binary_takeover", !0)) return !1;
+  let v =
+      r !==
+      {
+        ISSUES_EXPLAINER:
+          "report the issue at https://github.com/anthropics/claude-code/issues",
+        PACKAGE_URL: "@anthropic-ai/claude-code",
+        README_URL: "https://code.claude.com/docs/en/overview",
+        VERSION: "2.1.330",
+        FEEDBACK_CHANNEL: "https://github.com/anthropics/claude-code/issues",
+        BUILD_TIME: "2026-11-20T17:34:37Z",
+        GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+        HOOKS_WORKER_URL:
+          "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+        DD_SOURCEMAP_GROUP: "darwin",
+      }.VERSION,
+    y = v && !E,
+    R = ln(c, v);
+  if (!y && !R) return !1;
+  if (!(await OV())) return !1;
+  if (await Vt()) return !1;
+  if (
+    !e &&
+    Jss() === "ask" &&
+    (await Kt()) &&
+    !ge().daemonInstallPromptDismissed
+  )
+    return !1;
+  let A = await tn(ze()).catch(() => null);
+  if (!A) return !1;
+  let D = VDe().cmd;
+  if (!(await MKe(D))) {
+    let U = VDe({ pinToCurrentBinary: !0 }).cmd;
+    if (U === D || !(await MKe(U))) return !1;
+  }
+  let I = await AO(1, h).catch(() => null);
+  if (!I) return !1;
+  if (!jvn(I))
+    return (
+      t(
+        `bg: skipping stale-daemon retire \u2014 lock pid ${I.pid} has no procStart identity`,
+      ),
+      !1
+    );
+  let H = on({
+      daemonVersion: I.version,
+      daemonOrigin: I.origin,
+      daemonTarget: I.launchTarget,
+      clientVersion: {
+        ISSUES_EXPLAINER:
+          "report the issue at https://github.com/anthropics/claude-code/issues",
+        PACKAGE_URL: "@anthropic-ai/claude-code",
+        README_URL: "https://code.claude.com/docs/en/overview",
+        VERSION: "2.1.330",
+        FEEDBACK_CHANNEL: "https://github.com/anthropics/claude-code/issues",
+        BUILD_TIME: "2026-11-20T17:34:37Z",
+        GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+        HOOKS_WORKER_URL:
+          "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+        DD_SOURCEMAP_GROUP: "darwin",
+      }.VERSION,
+      clientTarget: A,
+    }),
+    W = y && H,
+    q =
+      R &&
+      I.origin === "transient" &&
+      !I.processWrapper &&
+      (I.version ===
+        {
+          ISSUES_EXPLAINER:
+            "report the issue at https://github.com/anthropics/claude-code/issues",
+          PACKAGE_URL: "@anthropic-ai/claude-code",
+          README_URL: "https://code.claude.com/docs/en/overview",
+          VERSION: "2.1.330",
+          FEEDBACK_CHANNEL: "https://github.com/anthropics/claude-code/issues",
+          BUILD_TIME: "2026-11-20T17:34:37Z",
+          GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+          HOOKS_WORKER_URL:
+            "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+          DD_SOURCEMAP_GROUP: "darwin",
+        }.VERSION ||
+        (E && H));
+  if (!W && !q) return !1;
+  let F = await dHt(I.pid);
+  if (F === "timed-out") {
+    try {
+      process.kill(I.pid, "SIGKILL");
+    } catch {}
+    F = await dHt(I.pid);
+  }
+  if (F !== "exited") return !1;
+  if (q) G3().prefixAxis = "took-over";
+  return (
+    t(
+      W
+        ? `bg: ${Mk()} pid ${I.pid} runs ${I.version}; this binary (${{ ISSUES_EXPLAINER: "report the issue at https://github.com/anthropics/claude-code/issues", PACKAGE_URL: "@anthropic-ai/claude-code", README_URL: "https://code.claude.com/docs/en/overview", VERSION: "2.1.330", FEEDBACK_CHANNEL: "https://github.com/anthropics/claude-code/issues", BUILD_TIME: "2026-11-20T17:34:37Z", GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829", HOOKS_WORKER_URL: "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js", DD_SOURCEMAP_GROUP: "darwin" }.VERSION}) is a newer build \u2014 retired the stale ${Mk()} so new sessions use the current binary`
+        : `bg: ${Mk()} pid ${I.pid} predates CLAUDE_CODE_PROCESS_WRAPPER and spawns sessions unwrapped \u2014 retired it so the replacement runs through the configured launcher`,
+      { level: "warn" },
+    ),
+    a("tengu_bg_daemon_binary_takeover", {
+      daemon_age_ms: Date.now() - I.startedAt,
+      via_prefix: q,
+      via_version: W,
+      daemon_version: Ad(I.version),
+    }),
+    !0
+  );
+}
+function ln(r, e) {
+  if (IZ() === "" || r) return !1;
+  let E = G3();
+  if (E.prefixAxis === "took-over") {
+    if (e) return !1;
+    if (!E.prefixContractViolationLogged)
+      ((E.prefixContractViolationLogged = !0),
+        t(
+          `bg: a raw ${Mk()} is running again after this session's launcher-driven restart. Two causes look identical from here: a claude session started BEFORE CLAUDE_CODE_PROCESS_WRAPPER was deployed cold-started it (restart those sessions), or the launcher does not pass that variable through in the environment it hands to \`exec\` (launcher contract #3). Sessions dispatched to it run unwrapped either way; \`claude daemon status\` shows the launcher it records.`,
+          { level: "warn" },
+        ),
+        a("tengu_bg_launcher_replacement_raw", {}));
+    return !1;
+  }
+  if (e) return !0;
+  if (E.prefixAxis === "attempted") return !1;
+  return ((E.prefixAxis = "attempted"), !0);
+}
+async function Wt(r) {
+  let e = await AO(1, r).catch(() => null);
+  if (!e) return null;
+  if (e.bgDisabled)
+    return (
+      a("tengu_bg_daemon_bg_disabled_skip", {
+        origin_service: e.origin === "service",
+      }),
+      {
+        reason:
+          "the background service on this machine is running without background sessions \u2014 its control socket failed to start. " +
+          "Check the cause with 'claude daemon status' (daemon.log), then restart the service (launchctl/systemctl, or reboot).",
+        code: "daemon_ensure_bg_disabled",
+        causeCode: "bg_disabled",
+      }
+    );
+  if (Date.now() - e.startedAt <= lt + 5000) return null;
+  let c = await Ay({ proto: ap, op: "ping" }, { timeoutMs: 1000 }),
+    E = {
+      started_ago_ms: Date.now() - e.startedAt,
+      origin_transient: e.origin === "transient",
+      origin_service: e.origin === "service",
+      version_skew:
+        e.version !==
+        {
+          ISSUES_EXPLAINER:
+            "report the issue at https://github.com/anthropics/claude-code/issues",
+          PACKAGE_URL: "@anthropic-ai/claude-code",
+          README_URL: "https://code.claude.com/docs/en/overview",
+          VERSION: "2.1.330",
+          FEEDBACK_CHANNEL: "https://github.com/anthropics/claude-code/issues",
+          BUILD_TIME: "2026-11-20T17:34:37Z",
+          GIT_SHA: "8c664bec500172ded713624f9ecac0eb7e714829",
+          HOOKS_WORKER_URL:
+            "/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js",
+          DD_SOURCEMAP_GROUP: "darwin",
+        }.VERSION,
+    };
+  if (c.ok || c.code === "ETIMEOUT")
+    return (
+      a("tengu_bg_daemon_zombie_false_positive", {
+        ...E,
+        recheck_etimeout: !c.ok,
+      }),
+      null
+    );
+  if (!jvn(e))
+    return (
+      t(
+        `bg: supervisor lock pid ${e.pid} alive but identity unverifiable (no procStart) \u2014 not signalled`,
+        { level: "warn" },
+      ),
+      {
+        reason: `${xht({ pid: e.pid, outcome: "unverified" })}. If no daemon is running, delete ${G2()}; if pid ${e.pid} is a live process you own, stop it yourself first.`,
+        code: "daemon_ensure_zombie_unverified",
+        causeCode: "zombie",
+      }
+    );
+  let h = !1;
+  try {
+    h = await Zr(CAe()).then(
+      () => !0,
+      () => !1,
+    );
+  } catch {}
+  if (
+    (t(
+      `bg: supervisor pid ${e.pid} alive but control socket unreachable \u2014 signalling restart`,
+      { level: "warn" },
+    ),
+    (await dHt(e.pid)) === "eperm")
+  )
+    return {
+      reason: `${Mk()} socket missing; could not restart supervisor (EPERM)`,
+      code: "daemon_ensure_zombie_kill_failed",
+      causeCode: "zombie",
+    };
+  return (
+    a("tengu_bg_daemon_zombie_restart", { pid: e.pid, ...E, sock_exists: h }),
+    null
+  );
+}
+async function Vt() {
+  if (jt() || !(await cIt())) return !1;
+  return ZVe().catch(() => !1);
+}
+function jt() {
+  return Boolean(process.env.CLAUDE_CONFIG_DIR);
+}
+async function O_a() {
+  return !jt() && mt();
+}
+function dn() {
+  let r = process.argv.slice(2);
+  if (r[0] === "agents") return "claude agents";
+  if (r.includes("--bg")) return "claude --bg";
+  return "claude";
+}
+async function cn() {
+  let r = x();
+  if (r !== "linux" && r !== "wsl") return;
+  let e = await en("/etc/systemd/logind.conf", "utf8").catch(() => "");
+  if (!/^\s*KillUserProcesses\s*=\s*yes\b/im.test(e)) return;
+  t(
+    "logind KillUserProcesses=yes \u2014 SSH disconnect will kill the transient daemon and its background jobs. Run `loginctl enable-linger $USER` or `claude daemon install` to keep it alive across logout.",
+    { level: "warn" },
+  );
+}
+function dt() {
+  return `${YP}: launcher \`${Wg()[0]}\` was deleted or is not executable \u2014 restore it (or fix the setting); background sessions are not started unwrapped`;
+}
+function Gt(r) {
+  let e = IZ();
+  if (e === "" || !r) return;
+  if (r === e) u("agent_launcher");
+  else l("agent_launcher", "served_by_skewed_wrapper");
+}
+async function Kt() {
+  return QSt() && (await cIt()) && !process.env.CLAUDE_CONFIG_DIR && JSt();
+}
+B();
+import {
+  access as un,
+  mkdir as fn,
+  readFile as pn,
+  unlink as mn,
+} from "fs/promises";
+var Yt = p(() =>
+    $t({
+      [Sg]: n().refine(S0e),
+      ANTHROPIC_PROFILE: n().refine(jX).optional(),
+    }).refine(
+      (r) => r.ANTHROPIC_PROFILE !== void 0 || !r[Sg].startsWith("profile:"),
+    ),
+  ),
+  zt =
+    "couldn't read which sign-in this session was on; to go on, run claude --resume as you started it",
+  gn =
+    "couldn't update which profile this session is on, so it stays where it is",
+  hn =
+    "this session was on another sign-in than the one it would be started with; to go on, run claude --resume as you started it",
+  _n =
+    "couldn't save which API key, token or workload identity this session is on; check that your Claude config folder is writable, then try again";
+async function I_a(r, e = !1) {
+  let c = r.env[Sg],
+    E =
+      !e &&
+      r.fromRoster !== !0 &&
+      (r.source === "slash" ||
+        (r.source === "shell" && r.launch.mode !== "resume")),
+    h;
+  try {
+    h = await qt(r.short);
+  } catch (y) {
+    return (i(y), { changed: !1, refusal: zt });
+  }
+  if (h !== void 0 && !E) {
+    if (c !== void 0 && (c === E8e ? "none" : Cje(c)) !== Cje(h[Sg] ?? ""))
+      return { changed: !1, refusal: hn };
+    let { ANTHROPIC_PROFILE: y, ...R } = r.env;
+    return ((r.env = { ...R, ...h }), { changed: !1 });
+  }
+  let v =
+    !E &&
+    (r.wakes === !0 ||
+      r.fromRoster === !0 ||
+      e ||
+      (r.source !== "shell" && r.launch.mode === "resume"));
+  if (v && c?.startsWith("profile:")) return { changed: !1, refusal: zt };
+  if (v || (h === void 0 && !gUo(r.env))) {
+    if (v) {
+      let { ANTHROPIC_PROFILE: y, ...R } = r.env;
+      r.env = R;
+    }
+    return { changed: !1 };
+  }
+  try {
+    await $js(r);
+  } catch (y) {
+    return (i(y), { changed: !1, refusal: c !== void 0 && rle(c) ? _n : gn });
+  }
+  return { changed: !0 };
+}
+function gUo(r) {
+  let e = r[Sg];
+  return (
+    e?.startsWith("profile:") === !0 ||
+    (e !== void 0 && rle(e)) ||
+    (e === "none" && r.ANTHROPIC_PROFILE !== void 0 && jX(r.ANTHROPIC_PROFILE))
+  );
+}
+async function $js(r) {
+  if (!gUo(r.env)) {
+    await Xt(r.short);
+    return;
+  }
+  await Ujs(r.short, r.env);
+}
+async function Ujs(r, e) {
+  let c = Yt().parse({
+    [Sg]: e[Sg],
+    ANTHROPIC_PROFILE: e.ANTHROPIC_PROFILE || void 0,
+  });
+  (await fn(RPi(), { recursive: !0, mode: 448 }), await yr(Cpo(r), _(c), 384));
+}
+async function M_a(r) {
+  try {
+    return (await un(Cpo(r)), !0);
+  } catch (e) {
+    return !J(e);
+  }
+}
+async function H_a(r) {
+  try {
+    return (await qt(r))?.[Sg]?.startsWith("profile:") === !0;
+  } catch {
+    return !0;
+  }
+}
+async function D_a(r) {
+  await Xt(r).catch(() => {});
+}
+async function Xt(r) {
+  try {
+    await mn(Cpo(r));
+  } catch (e) {
+    if (!J(e)) throw e;
+  }
+}
+async function qt(r) {
+  let e;
+  try {
+    e = await pn(Cpo(r), "utf8");
+  } catch (E) {
+    if (J(E)) return;
+    throw E;
+  }
+  let c = Yt().parse(te(e));
+  return {
+    [Sg]: c[Sg],
+    ...(c.ANTHROPIC_PROFILE && { ANTHROPIC_PROFILE: c.ANTHROPIC_PROFILE }),
+  };
+}
+export {
+  G3,
+  R_a,
+  cIt,
+  fUo,
+  ZBr,
+  PYn,
+  ywn,
+  pUo,
+  OYn,
+  x_a,
+  mUo,
+  ZVe,
+  P_a,
+  Lse,
+  Swn,
+  hUo,
+  PJ,
+  O_a,
+  I_a,
+  gUo,
+  $js,
+  Ujs,
+  M_a,
+  H_a,
+  D_a,
+};

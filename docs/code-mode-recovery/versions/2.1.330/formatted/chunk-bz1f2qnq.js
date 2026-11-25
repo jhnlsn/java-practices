@@ -1,0 +1,1128 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import { N, _te, EJ, st, aA } from "/$bunfs/root/chunk-f9x2f6cx.js";
+import { s } from "/$bunfs/root/chunk-c203g5kd.js";
+import { i } from "/$bunfs/root/chunk-k449cc64.js";
+import { OB, Rft, ph, w0o, Li, Nw } from "/$bunfs/root/chunk-3t7ve0wy.js";
+import { ue, QC } from "/$bunfs/root/chunk-r3kja8v6.js";
+import { Gl, Ur, yn } from "/$bunfs/root/chunk-qebpc5de.js";
+import { KRl, mCt, nXe, uz, ni, Lc, b } from "/$bunfs/root/chunk-865at33z.js";
+import { $n } from "/$bunfs/root/chunk-qdcbcsg7.js";
+import { OM, nP } from "/$bunfs/root/chunk-xcgcdx61.js";
+import { bd, KLl } from "/$bunfs/root/chunk-epy4sc29.js";
+import { EI } from "/$bunfs/root/chunk-pbteexar.js";
+import { ch, lr, ca, VJe } from "/$bunfs/root/chunk-px0hhsq7.js";
+import { KR, YJi } from "/$bunfs/root/chunk-2yx6c1y2.js";
+import { cf } from "/$bunfs/root/chunk-6mfepmbb.js";
+import { Jr } from "/$bunfs/root/chunk-xfj2cwfv.js";
+import { _r } from "/$bunfs/root/chunk-cbnm4p23.js";
+import { Ks, lt, Dt, yt } from "/$bunfs/root/chunk-rb36kwbn.js";
+import { bc, Svt, m2t, rWi, G_ } from "/$bunfs/root/chunk-k67pwqya.js";
+import {
+  yLe,
+  Pcn,
+  JWi,
+  QWi,
+  Fn,
+  S1,
+  b1,
+  vu,
+} from "/$bunfs/root/chunk-pmryp5f3.js";
+import { _t } from "/$bunfs/root/chunk-060xwhvh.js";
+import { vo } from "/$bunfs/root/chunk-h4t4qfaq.js";
+import { MC } from "/$bunfs/root/chunk-ddznn4yb.js";
+import { S2t } from "/$bunfs/root/chunk-trq47kfh.js";
+import { Um } from "/$bunfs/root/chunk-gbskgz33.js";
+import { OC } from "/$bunfs/root/chunk-3b9jqhjk.js";
+import { z_ } from "/$bunfs/root/chunk-fpcs74d2.js";
+import { Xo } from "/$bunfs/root/chunk-9xt9z453.js";
+import { Pe } from "/$bunfs/root/chunk-sghy0qej.js";
+import { De } from "/$bunfs/root/chunk-k883m4fq.js";
+import { ke } from "/$bunfs/root/chunk-hn3cwwzt.js";
+import { Zt } from "/$bunfs/root/chunk-z688m88d.js";
+import { Pn } from "/$bunfs/root/chunk-qwbhh2k3.js";
+import { xn, mT } from "/$bunfs/root/chunk-3f4m74y6.js";
+import { j } from "/$bunfs/root/chunk-2904xtvq.js";
+function yme(e, o) {
+  if (Zt(_te(), { deniedMcpServers: [] }) || EJ())
+    return cf(e, "policySettings", "flagSettings", "cliArg");
+  if (o === "asADirectCall" && Li() === "local-agent")
+    return cf(e, "policySettings");
+  if (o === void 0 || !Rft()) return cf(e, "policySettings");
+  return o === "asADirectCall"
+    ? { ...cf(e, "policySettings"), cliArg: e.cliArg?.filter(B) }
+    : cf(e, "policySettings", "cliArg");
+}
+function B(e) {
+  let { ruleContent: o = "" } = Ur(e);
+  return /^[\s*/]*$/.test(o);
+}
+function Tp(e) {
+  if (!s.CLAUDE_CODE_REMOTE) return "off";
+  if (b(e, !1)) return "on";
+  return pvt() ? "cold" : "off";
+}
+function nX(e) {
+  if (!s.CLAUDE_CODE_REMOTE) return "off";
+  if (Pe(e, { safe: !1 })) return "on";
+  return pvt() ? "cold" : "off";
+}
+function pvt() {
+  return Lc() && !ni();
+}
+class hwo {
+  mode;
+  autoClassifierActive;
+  constructor(e, o) {
+    ((this.mode = e), (this.autoClassifierActive = o));
+  }
+  toJSON() {
+    return;
+  }
+}
+function Ewl(e) {
+  return new hwo(e, Jr(e));
+}
+function HBi(e) {
+  return e instanceof hwo && !e.autoClassifierActive;
+}
+function E(e) {
+  if (!HBi(e)) return;
+  let o = e.mode;
+  switch (o) {
+    case "default":
+    case "acceptEdits":
+    case "dontAsk":
+    case "bubble":
+      return o;
+    case "plan":
+    case "bypassPermissions":
+      return "default";
+    case "auto":
+      return;
+    default: {
+      let t = o;
+      return;
+    }
+  }
+}
+var H = "tengu_greedy_shore";
+function Nat() {
+  return b(H, !1) === !0;
+}
+var W = "Claude Preview",
+  F = "Claude Browser",
+  G = xn(W),
+  V = xn(F),
+  K = new Set([G, V]);
+function Fat(e) {
+  return K.has(xn(e));
+}
+var s2t = ["file_upload"],
+  q = "save_download";
+function Dle(e) {
+  let [, o = "", ...t] = e.name.split("__"),
+    { serverName: l, toolName: r } = e.mcpInfo ?? {
+      serverName: o,
+      toolName: t.join("__"),
+    },
+    a = Fat(l);
+  if (!a && l !== $n) return !1;
+  let d = mT(r),
+    n =
+      /^(?:mcp_(?:.*_)?)?claude_(?:browser|preview)_(.+)$/.exec(d)?.[1] ??
+      (a ? d : "");
+  return (
+    n.startsWith(q) ||
+    (s2t.includes(n) && !(a && OB() && !s.CLAUDE_CODE_IS_COWORK))
+  );
+}
+var vwl = "anthropic/hostAsksPerUploadedFile",
+  Y = new Set(["description", "activeForm"]);
+function Twl(e, o, t, l) {
+  let r = `mcp__${xn(e)}__${o}`;
+  return {
+    async checkPermissions() {
+      return {
+        behavior: "ask",
+        message: `${e} requires permission.`,
+        suggestions: [
+          {
+            type: "addRules",
+            rules: [{ toolName: r, ruleContent: void 0 }],
+            behavior: "allow",
+            destination: "session",
+          },
+        ],
+        metadata: {
+          command: { name: r, chrome: { hostHandlesOriginConsent: !0 } },
+        },
+      };
+    },
+    ...(t !== void 0 &&
+      Object.hasOwn(t, "code") && {
+        toAutoClassifierInput(a) {
+          let d = Object.keys(a).filter((n) => !Y.has(n));
+          return l(Object.fromEntries(d.map((n) => [n, a[n]])), o);
+        },
+      }),
+  };
+}
+var z = new j(() => new Set());
+function Ybs(e, o) {
+  for (let t of o) C().add(lr(e, t));
+}
+function g(e) {
+  if (!e.startsWith("mcp__")) return !1;
+  for (let o of C()) if (e === o || VJe(e, { name: o })) return !0;
+  return !1;
+}
+function Cwl() {
+  return C().size > 0;
+}
+function C() {
+  return z.of(N().host);
+}
+var X = [],
+  gwo = [
+    ...X,
+    "python",
+    "python3",
+    "python2",
+    "node",
+    "deno",
+    "tsx",
+    "ruby",
+    "perl",
+    "php",
+    "lua",
+    "npx",
+    "bunx",
+    "pnpx",
+    "npm run",
+    "yarn run",
+    "pnpm run",
+    "bun run",
+    "npm exec",
+    "npm x",
+    "pnpm exec",
+    "pnpm dlx",
+    "yarn exec",
+    "yarn dlx",
+    "bun exec",
+    "bun x",
+    "bash",
+    "sh",
+    "ssh",
+  ],
+  _wo = [...gwo, "zsh", "fish", "eval", "exec", "env", "xargs", "sudo"],
+  HBn = new Set([
+    "sh",
+    "bash",
+    "zsh",
+    "fish",
+    "csh",
+    "tcsh",
+    "ksh",
+    "mksh",
+    "dash",
+    "ash",
+    "hush",
+    "rbash",
+    "rsh",
+    "busybox",
+    "toybox",
+    "wsl",
+    "cmd",
+    "powershell",
+    "pwsh",
+    "env",
+    "xargs",
+    "command",
+    "builtin",
+    "noglob",
+    "nice",
+    "stdbuf",
+    "nohup",
+    "timeout",
+    "time",
+    "watch",
+    "ionice",
+    "chrt",
+    "setsid",
+    "taskset",
+    "strace",
+    "ltrace",
+    "script",
+    "flock",
+    "unshare",
+    "nsenter",
+    "sandbox-exec",
+    "sudo",
+    "doas",
+    "pkexec",
+    "su",
+    "runuser",
+  ]),
+  Xbs = ["curl", "wget", "kubectl", "aws", "gcloud", "gsutil"],
+  Jbs = [],
+  h = new Set([...Xbs, ...Jbs]),
+  T = {
+    kubectl: new Set([
+      "exec",
+      "apply",
+      "create",
+      "delete",
+      "run",
+      "cp",
+      "port-forward",
+      "proxy",
+      "patch",
+      "edit",
+      "replace",
+      "attach",
+      "debug",
+      "scale",
+      "rollout",
+      "drain",
+      "cordon",
+      "taint",
+    ]),
+    ...!1,
+  },
+  x = [..._wo, ...[]];
+var J = /\s*((?:\\.|'[^']*'|"(?:\\.|[^"\\])*"|[^\s\\'"])+)(?=\s)/gsy,
+  P = /^(?:\w+\+?=|-|\/+\w$|\d[\d.]*[smhd]?$|[^a-z0-9]*$)|[^\w .+@%,:~/-]/i,
+  Q = /^(?:-\w*c|\/c)$/i,
+  ee = /^\.(?:\\[\w.+@-]*[\w+@-])+(?=[ \t]|:\*$)/;
+function y(e) {
+  return e
+    .replace(/^.*[\\/]/s, "")
+    .toLowerCase()
+    .replace(/^(.*?[^\d.])?[\d.]*(?:\.exe)?$/s, "$1");
+}
+function R(e) {
+  return e
+    .trim()
+    .toLowerCase()
+    .replace(/[ \t]+/g, " ")
+    .replace(/\*[ *]*\*/g, "*")
+    .replace(/^(?:"[^"*]*"|'[^'*]*'|[^ *='"])+?(?= |:\*$|$)/, (o) =>
+      y(o.replace(/['"]/g, "")),
+    )
+    .replace(/['"]/g, "");
+}
+function L(e, o) {
+  let t = e.replace(/:\*$/, " *"),
+    l = /^(?:\\[*\\]|[^*])*/.exec(t)?.[0] ?? "";
+  if (l === t) return !1;
+  let r = R(l).split(" "),
+    a = r.findLastIndex((p) => !/^(?:-|[^a-z0-9:]*$)/.test(p));
+  if (o.includes(r.slice(0, a + 1).join(" "))) return !0;
+  let d = [...HBn, ...o],
+    n = 0;
+  for (let [p, U = ""] of l.matchAll(J)) {
+    let c = U.replace(/['"]/g, "");
+    if (Q.test(c)) return !0;
+    if (!P.test(c) && !d.includes(y(c))) return !1;
+    n += p.length;
+  }
+  let u = l.slice(n).trim().replace(/['"]/g, ""),
+    f = y(u);
+  return (
+    P.test(u) ||
+    /^(?:[/~\\]|[a-z]:)|(?:^|[\\/])\.\.(?:[\\/]|$)/i.test(u) ||
+    (f !== "" && d.some((p) => !p.includes(" ") && p.startsWith(f)))
+  );
+}
+function DBn(e, o) {
+  if (e !== ke) return !1;
+  if (o === void 0 || o === "") return !0;
+  return L(o, _wo) || ywo(o, x);
+}
+function ywo(e, o) {
+  let t = R(e);
+  if (t === "*") return !0;
+  for (let l of o) {
+    let r = l.toLowerCase();
+    if (t === r) return !0;
+    if (t === `${r}:*` || t === `${r} *`) return !0;
+    if (t === `${r}*`) return !0;
+    if (t.startsWith(`${r} `) && t.endsWith("*")) {
+      let a = t.slice(r.length + 1);
+      if (h.has(r)) {
+        if (/[$`]/.test(a)) return !0;
+        let d = T[r];
+        if (d === "all") return !0;
+        let n = a
+            .replace(/[\s:*]+$/, "")
+            .split(/\s+/)
+            .filter(Boolean),
+          u = 0;
+        for (; u < n.length; u++) {
+          let p = n[u];
+          if (!p.startsWith("-")) break;
+          if (!p.includes("=") && u + 1 < n.length && !n[u + 1].startsWith("-"))
+            u++;
+        }
+        let f = n[u];
+        if (f === void 0) {
+          if (
+            (r === "curl" || r === "wget") &&
+            n.some((p) => p.includes("://"))
+          )
+            continue;
+          return !0;
+        }
+        if (d?.has(f)) return !0;
+        continue;
+      }
+      if (a.startsWith("-")) {
+        let d = a.slice(0, -1);
+        if (!(
+          /^python[\d.]*$/.test(r) && /^-m\s+\w+\.[\w.]+(\s*:|\s+)$/.test(d)
+        ))
+          return !0;
+      }
+    }
+  }
+  return !1;
+}
+function Qbs(e, o) {
+  if (e !== yt) return !1;
+  if (o === void 0 || o === "") return !0;
+  let t = R(o),
+    l = [
+      ...gwo,
+      "pwsh",
+      "powershell",
+      "cmd",
+      "wsl",
+      "iex",
+      "invoke-expression",
+      "icm",
+      "invoke-command",
+      "start-process",
+      "saps",
+      "start",
+      "start-job",
+      "sajb",
+      "start-threadjob",
+      "invoke-wmimethod",
+      "iwmi",
+      "invoke-cimmethod",
+      "icim",
+      "wmic",
+      "register-objectevent",
+      "register-engineevent",
+      "register-wmievent",
+      "register-scheduledjob",
+      "new-pssession",
+      "nsn",
+      "enter-pssession",
+      "etsn",
+      "add-type",
+      "new-object",
+    ],
+    r = o.replace(ee, (a) => a.replaceAll("\\", "/"));
+  if (L(r, l)) return !0;
+  for (let a of [...l, "get-module", "gmo", "module"]) {
+    if (t === a) return !0;
+    if (t === `${a}:*`) return !0;
+    if (t === `${a}*`) return !0;
+    if (t === `${a} *`) return !0;
+    if (t.startsWith(`${a} -`) && t.endsWith("*")) return !0;
+  }
+  return !1;
+}
+function _ql(e) {
+  return Gl(e) === _t;
+}
+function oe(e) {
+  return e === Xo;
+}
+class k {
+  verdicts = new Map();
+  lookup(e) {
+    return this.verdicts.get(e);
+  }
+  remember(e, o) {
+    this.verdicts.set(e, o);
+  }
+  reset() {
+    this.verdicts.clear();
+  }
+}
+var w = new k();
+function fwe() {
+  return ph() || aA() || YJi();
+}
+function LBn(e, o) {
+  let t = `${e}\x00${o ?? ""}`,
+    l = w.lookup(t);
+  if (l !== void 0) return l;
+  let r =
+    DBn(e, o) ||
+    Qbs(e, o) ||
+    _ql(e) ||
+    oe(e) ||
+    e ===
+      import.meta.require("/$bunfs/root/chunk-q36cvre2.js")
+        .APPIFACT_REPL_TOOL_NAME;
+  return (w.remember(t, r), r);
+}
+function kvr(e, o, t) {
+  return e === "command" && !_(o, t) && aA();
+}
+function _(e, o) {
+  return (e === De || e === lt) && /^(\.\/)?!/.test(o ?? "");
+}
+function i2t(e) {
+  let o = ca(e);
+  return (
+    aA() ||
+    g(o) ||
+    Dle(e) ||
+    (QC() && e.mcpInfo === void 0 && e.name === vo) ||
+    ((ph() || (st() && w0o())) &&
+      (o.startsWith(ch) ||
+        (e.name === Fn && z_()) ||
+        nXe(e.name) ||
+        ((e.name === vu || e.name === b1) && Nat()) ||
+        LBn(e.name, void 0)))
+  );
+}
+function Lle(e, o) {
+  if (QC() && e === vo) return !0;
+  if ((e === ke || e === yt) && fwe()) return !0;
+  if (g(e)) return !0;
+  return LBn(e, o);
+}
+function Swo(e) {
+  if (e === ke || e === yt) return fwe() ? void 0 : e;
+  if (MC(e) || Lle(e, void 0) || Evr(e)) return;
+  return e === Dt || e === Ks ? lt : e;
+}
+var te = new Set(Array.from(KLl, (e) => lr(bd, e)));
+function Evr(e) {
+  return te.has(e);
+}
+var ne = new Set();
+function DBi(e) {
+  return yn(Ur(e));
+}
+function Zbs(e) {
+  let o = e.remoteBrowserCardAnswers;
+  return o !== void 0 && o.list === e.alwaysAllowRules.session ? o.rules : ne;
+}
+function NBn(e, o) {
+  let t = o.alwaysAllowRules.session;
+  if (e.remoteBrowserCardAnswers === void 0 || t === e.alwaysAllowRules.session)
+    return o;
+  let l = Zbs(e),
+    r = new Set((t ?? []).map(DBi)),
+    a = new Set([...l].filter((d) => r.has(d)));
+  return {
+    ...o,
+    remoteBrowserCardAnswers:
+      t === void 0 || a.size === 0 ? void 0 : { rules: a, list: t },
+  };
+}
+var re = "tengu_tingly_grove";
+function ews() {
+  return Pe(re, { safe: !0 });
+}
+function Qdn(e) {
+  return e.filter((o) => {
+    let { toolName: t, ruleContent: l } = Um(o, "allow");
+    return _(t, l);
+  });
+}
+var S = {
+  allowed_tools: "allows",
+  avoid_prompts: "strip",
+  mod_own_call: "strip",
+  permission_mode: "strip",
+  permission_mode_cap: "keep",
+  working_directory: "strip",
+  disallowed_tools: "keep",
+  bash_command_clamp: "keep",
+  sandbox_auto_allow_suspended: "keep",
+  effort: "keep",
+  model: "keep",
+  max_thinking_tokens: "keep",
+  flag_settings: "keep",
+};
+function Lre(e) {
+  if (!e) return e;
+  return e.filter((o) => S[o.kind] === "keep");
+}
+function LBi(e, o) {
+  return [
+    ...(e ?? []).map((t) => (S[t.kind] === "keep" ? t : { ...t, holds: o })),
+    ...L2e(e),
+  ];
+}
+function L2e(e) {
+  let o = new Set();
+  for (let t of e ?? [])
+    if (t.kind === "permission_mode" || t.kind === "permission_mode_cap")
+      o.add(t.mode);
+  return [...o].map((t) => ({ kind: "permission_mode_cap", mode: t }));
+}
+function $at(e) {
+  return [
+    ...(e ?? []).filter(
+      (o) =>
+        o.kind === "disallowed_tools" ||
+        o.kind === "bash_command_clamp" ||
+        o.kind === "sandbox_auto_allow_suspended",
+    ),
+    ...L2e(e),
+  ];
+}
+function se(e, o) {
+  return (
+    e !== o && nP(e, o) !== void 0 && (e === "dontAsk" || nP(o, e) === void 0)
+  );
+}
+function bwo(e) {
+  return {
+    hookCaller: void 0,
+    agentCall: void 0,
+    ...(e.hookCaller !== void 0 && { pluginSteered: !0 }),
+  };
+}
+function mvt(e, o) {
+  let { getAppState: t } = e,
+    l;
+  return {
+    ...e,
+    getAppState: () => {
+      let r = t(),
+        a = r.toolPermissionContext;
+      if (a === void 0) return r;
+      if (l?.stored !== a) l = { stored: a, viewed: o(a) };
+      return l.viewed === a ? r : { ...r, toolPermissionContext: l.viewed };
+    },
+  };
+}
+function D(e, o) {
+  return ews() ? mvt(e, o) : e;
+}
+function WG(e) {
+  return D(e, yLe);
+}
+function v(e, o) {
+  return o === e
+    ? e
+    : { ...o, permissionLayers: Lre(e.permissionLayers), ...bwo(e) };
+}
+function NBi(e) {
+  return v(e, WG(e));
+}
+function FBi(e) {
+  return v(e, D(e, Pcn));
+}
+function Uat(e) {
+  return {
+    ...WG(e),
+    abortController: _r(),
+    toolUseId: void 0,
+    permissionPhase: void 0,
+    autoModeClassified: void 0,
+    ...(ue() && {
+      autoModeDenialLimitRun: void 0,
+      autoModeScriptCheckDeferred: void 0,
+    }),
+    permissionLayers: Lre(e.permissionLayers),
+    ...bwo(e),
+  };
+}
+function $Bi(e) {
+  return e.getAppState?.().mcp?.suppressedClaudeAiConnectors ?? [];
+}
+function OS(e) {
+  let o = Z(e);
+  return (
+    o.mode !== "bypassPermissions" &&
+    !OM(o.mode, o.isBypassPermissionsModeAvailable)
+  );
+}
+function VP(e) {
+  if (Z(e).mode !== "plan") return !1;
+  return k_(e);
+}
+function Zdn(e) {
+  return e.getAppState();
+}
+function k_(e) {
+  return !OS(e) || Z(e).shouldAvoidPermissionPrompts === !0;
+}
+function ie(e) {
+  return e === Fn || e.startsWith(`${Fn}(`) || e.startsWith(S1);
+}
+function ae(e) {
+  let o = ie,
+    t = !1,
+    l = {},
+    r = {};
+  for (let [a, d] of Object.entries(e.strippedDangerousRules ?? {}))
+    if (d !== void 0) r[a] = [...d];
+  for (let [a, d] of Object.entries(e.alwaysAllowRules)) {
+    if (d === void 0) continue;
+    let n = d.filter((u) => !o(u));
+    if (n.length !== d.length) {
+      t = !0;
+      for (let u of d)
+        if (o(u)) {
+          let f = (r[a] ??= []);
+          if (!f.includes(u)) f.push(u);
+        }
+    }
+    l[a] = n;
+  }
+  if (!t) return e;
+  return NBn(e, { ...e, alwaysAllowRules: l, strippedDangerousRules: r });
+}
+function S4(e) {
+  return e.getAppState().toolPermissionContext;
+}
+function tws(e) {
+  return {
+    ...e,
+    permissionLayers: e.permissionLayers?.filter(
+      (o) => o.kind !== "bash_command_clamp",
+    ),
+    getAppState: () => ({
+      ...e.getAppState(),
+      toolPermissionContext: { ...S4(e), bashCommandClamps: [] },
+    }),
+  };
+}
+function rX(e) {
+  try {
+    return (
+      e.session?.userPresence?.nobodyIsHere() === !0 &&
+      e.getAppState().toolPermissionContext.mode === "auto" &&
+      Tp(KRl) === "on"
+    );
+  } catch (o) {
+    return (i(o), !1);
+  }
+}
+function UBi(e) {
+  return {
+    ...e,
+    getAppState: () => ({
+      ...e.getAppState(),
+      toolPermissionContext: {
+        ...S4(e),
+        blockReadsOutsideWorkingDirectories: void 0,
+      },
+    }),
+  };
+}
+function Z(e, o = !1) {
+  let t = e.getAppState().toolPermissionContext;
+  if (!o && rX(e))
+    t = { ...t, shouldAvoidPermissionPrompts: !0, denyInsteadOfPrompting: !0 };
+  let l = t !== void 0 && t.pollEventDeliveryGuard === !0;
+  if (l) t = ae(t);
+  let r = (n) => n.holds?.() ?? !0,
+    a = e.permissionLayers?.filter((n) => n.kind === "allowed_tools" || r(n));
+  if (!a) return O(e, t);
+  let d = a.findLast((n) => n.kind === "working_directory");
+  for (let n of a)
+    switch (n.kind) {
+      case "allowed_tools":
+        t = JWi(t, !l && r(n) ? [...n.allowedTools] : Qdn(n.allowedTools));
+        break;
+      case "disallowed_tools":
+        t = QWi(t, [...n.disallowedTools]);
+        break;
+      case "bash_command_clamp":
+        t = {
+          ...t,
+          bashCommandClamps: [...(t.bashCommandClamps ?? []), n.rules],
+        };
+        break;
+      case "avoid_prompts":
+        if (!EI(t))
+          t = {
+            ...t,
+            shouldAvoidPermissionPrompts: !0,
+            avoidsPromptsByNature: !0,
+          };
+        break;
+      case "sandbox_auto_allow_suspended":
+        if (!t.sandboxAutoAllowSuspended)
+          t = { ...t, sandboxAutoAllowSuspended: !0 };
+        break;
+      case "permission_mode": {
+        if (
+          n.mode === "bypassPermissions" &&
+          (OC() || !t.isBypassPermissionsModeAvailable)
+        )
+          break;
+        t = { ...t, mode: n.mode, planEnteredBy: void 0 };
+        break;
+      }
+      case "working_directory":
+        if (n === d && !t.additionalWorkingDirectories.has(n.directory))
+          t = {
+            ...t,
+            additionalWorkingDirectories: new Map([
+              ...t.additionalWorkingDirectories,
+              [n.directory, { path: n.directory, source: "session" }],
+            ]),
+          };
+        break;
+      case "permission_mode_cap":
+        break;
+      case "mod_own_call":
+      case "effort":
+      case "model":
+      case "max_thinking_tokens":
+      case "flag_settings":
+        break;
+    }
+  for (let n of a)
+    if (n.kind === "permission_mode_cap")
+      t = {
+        ...t,
+        ...(se(n.mode, t.mode) && { mode: n.mode }),
+        ...(n.mode !== "bypassPermissions" && {
+          isBypassPermissionsModeAvailable: !1,
+        }),
+      };
+  return O(e, pwe(e) ? a2t(t) : t);
+}
+function pwe(e) {
+  return (
+    e.agentId === void 0 &&
+    e.forRemoteExecution !== !0 &&
+    e.forPromptShellCommand === void 0 &&
+    e.permissionLayers?.some((o) => o.kind === "mod_own_call") === !0
+  );
+}
+function TN(e) {
+  return (
+    pwe(e) ||
+    (e.allowGivenBy?.approver === "hook" &&
+      e.allowGivenBy.toolUseId === e.agentCall?.toolUseId)
+  );
+}
+var le = [
+    "userSettings",
+    "projectSettings",
+    "localSettings",
+    "flagSettings",
+    "policySettings",
+    "cliArg",
+    "session",
+    "mcpServerPolicy",
+  ],
+  M = new WeakMap();
+function a2t(e) {
+  let o = e.alwaysDenyRules,
+    t = M.get(o) ?? Pn(o, le);
+  return (M.set(o, t), { ...e, alwaysDenyRules: t });
+}
+function _y(e) {
+  return e.permissionLayers?.some((o) => o.kind === "mod_own_call") === !0
+    ? {
+        ...e,
+        permissionLayers: e.permissionLayers.filter(
+          (o) => o.kind !== "mod_own_call",
+        ),
+      }
+    : e;
+}
+var A = new WeakMap();
+function FBn(e, o) {
+  let t = Z(_y(e)),
+    l = typeof o === "object",
+    r = l ? o.typedUnder : t.alwaysDenyRules,
+    a = A.get(r) ?? [
+      yme(r, "asTheModelIsChecked"),
+      yme(r),
+      yme(r, "asADirectCall"),
+    ];
+  for (let f of [r, ...a]) A.set(f, a);
+  let d = a[o === "asADirectCall" ? 2 : 0],
+    n = { ...t, alwaysDenyRules: d, alwaysAskRules: {} },
+    u = (f) => ({
+      ...e,
+      rewriteProbe: void 0,
+      permissionLayers: e.permissionLayers?.filter((p) => p.kind === "model"),
+      getAppState: () => ({ ...e.getAppState(), toolPermissionContext: f }),
+    });
+  return {
+    asItStands: u(n),
+    withNoAllow: u({
+      ...$Bn("default", n),
+      alwaysDenyRules: a[l ? 0 : 1],
+      alwaysAllowRules: {},
+      sandboxAutoAllowSuspended: !0,
+    }),
+  };
+}
+function vvr(e) {
+  let o = Z(e).alwaysDenyRules;
+  return A.get(o)?.includes(o) === !0;
+}
+function BBi(e) {
+  return {
+    ...e,
+    permissionLayers: e.permissionLayers?.filter((o) => S[o.kind] !== "allows"),
+    getAppState: () => ({
+      ...e.getAppState(),
+      toolPermissionContext: {
+        ...S4(e),
+        alwaysAllowRules: {},
+        additionalWorkingDirectories: new Map(
+          Array.from(S4(e).additionalWorkingDirectories, ([o, t]) => [
+            o,
+            !Nw() || S2t(t.path) || S2t(t.path, KR())
+              ? t
+              : { ...t, source: "projectSettings" },
+          ]),
+        ),
+        sandboxAutoAllowSuspended: !0,
+      },
+    }),
+  };
+}
+function O(e, o) {
+  return pe(e, fe(e, de(e, o)));
+}
+function de(e, o) {
+  if (
+    o === void 0 ||
+    o.mode !== "auto" ||
+    e.forPromptShellCommand === !0 ||
+    e.forRemoteExecution === !0
+  )
+    return o;
+  let t = E(e.permissionModeAtRequest);
+  return t === void 0 ? o : $Bn(t, o);
+}
+function pe(e, o) {
+  if (e.forPromptShellCommand !== !0 || o === void 0) return o;
+  return o.mode === "auto" ? $Bn("default", o) : o;
+}
+function $Bn(e, o) {
+  return { ...o, mode: e, modeBeforeRewrite: o.modeBeforeRewrite ?? o.mode };
+}
+function fe(e, o) {
+  if (e.forRemoteExecution !== !0 || o === void 0) return o;
+  let {
+    blockReadsOutsideWorkingDirectories: t,
+    blockFileToolReadsOutsideWorkingDirectories: l,
+    blockWritesOutsideWorkingDirectories: r,
+    ...a
+  } = o;
+  return o.mode === "acceptEdits" || o.mode === "bypassPermissions"
+    ? $Bn("default", a)
+    : a;
+}
+function kh(e) {
+  let o;
+  if (!e) return o;
+  for (let t of e) if (t.kind === "effort") o = t.effort;
+  return o;
+}
+function l2t(e, o = me(e)) {
+  let t = e.loopModel;
+  return bc(m2t(e.getAppState?.() ?? {}, t, e.pickedEffortModel), t, {
+    withHold: o,
+  });
+}
+function e_(e) {
+  return kh(e.permissionLayers) ?? l2t(e);
+}
+function WBi(e) {
+  let { sessionEffort: o } = m2t(
+    e.getAppState(),
+    e.loopModel,
+    e.pickedEffortModel,
+  );
+  return kh(e.permissionLayers) ?? (o.kind === "level" ? o.value : void 0);
+}
+function mwe(e) {
+  return (
+    e.permissionLayers?.findLast((o) => o.kind === "model")?.mainLoopModel ??
+    e.loopModel
+  );
+}
+function d2t(e) {
+  return [e.modelFacts.model, mwe(e)];
+}
+function nws(e) {
+  return mCt({
+    permissionMode: Z(e).mode,
+    setting: e.options.getPlanModeSetting?.(),
+    mainLoopModel: e.loopModel,
+  }).model;
+}
+function oX(e) {
+  return e.pickedEffortModel ?? nws(e);
+}
+function Tvr(e, o, t) {
+  return Svt(o, t)
+    ? void 0
+    : G_(o, rWi(e.getAppState(), o), { carriedEffort: null });
+}
+function Cvr(e, o) {
+  return Svt(o, e.loopModel)
+    ? { effortValue: e_(e), turnEffort: kh(e.permissionLayers) }
+    : { effortValue: rWi(e.getAppState(), o), turnEffort: void 0 };
+}
+function me(e) {
+  return e.agentContext === void 0 || uz(e.agentContext);
+}
+function Avr(e) {
+  return e_(e) === void 0 ? l2t(e, !1) : void 0;
+}
+function URe(e) {
+  return e.getAppState().sessionEffort;
+}
+function jBi(e) {
+  return (
+    e.permissionLayers?.findLast((o) => o.kind === "model")?.mainLoopModel ??
+    e.options.mainLoopModel
+  );
+}
+function Bat(e) {
+  let o = e.options.thinkingConfig;
+  for (let t of e.permissionLayers ?? [])
+    if (t.kind === "max_thinking_tokens") o = I(t.maxThinkingTokens);
+  return o;
+}
+function I(e) {
+  return e === 0 ? { type: "disabled" } : { type: "enabled", budgetTokens: e };
+}
+function CYe(e) {
+  return e.getAppState().ultracode === !0;
+}
+function c2t(e, o) {
+  let t = e.modeWhereGuardDidNotStart?.(o);
+  return t ? Nre(e, [{ kind: "permission_mode_cap", mode: t }]) : e;
+}
+function Nre(e, o) {
+  if (o.length === 0) return e;
+  let t = e.permissionLayers ? [...e.permissionLayers, ...o] : [...o],
+    l;
+  for (let d = o.length - 1; d >= 0; d--) {
+    let n = o[d];
+    if (n.kind === "model") {
+      l = n.mainLoopModel;
+      break;
+    }
+  }
+  let r;
+  for (let d = o.length - 1; d >= 0; d--) {
+    let n = o[d];
+    if (n.kind === "max_thinking_tokens") {
+      r = I(n.maxThinkingTokens);
+      break;
+    }
+  }
+  return {
+    ...e,
+    permissionLayers: t,
+    ...((l !== void 0 || r !== void 0) && {
+      options: {
+        ...e.options,
+        ...(l !== void 0 && { mainLoopModel: l }),
+        ...(r !== void 0 && { thinkingConfig: r }),
+      },
+    }),
+  };
+}
+export {
+  Tp,
+  nX,
+  pvt,
+  yme,
+  hwo,
+  Ewl,
+  HBi,
+  Nat,
+  Fat,
+  s2t,
+  Dle,
+  vwl,
+  Twl,
+  Ybs,
+  Cwl,
+  gwo,
+  _wo,
+  HBn,
+  Xbs,
+  Jbs,
+  DBn,
+  ywo,
+  Qbs,
+  _ql,
+  fwe,
+  LBn,
+  kvr,
+  i2t,
+  Lle,
+  Swo,
+  Evr,
+  DBi,
+  Zbs,
+  NBn,
+  ews,
+  Qdn,
+  Lre,
+  LBi,
+  L2e,
+  $at,
+  bwo,
+  mvt,
+  WG,
+  NBi,
+  FBi,
+  Uat,
+  $Bi,
+  OS,
+  VP,
+  Zdn,
+  k_,
+  S4,
+  tws,
+  rX,
+  UBi,
+  Z,
+  pwe,
+  TN,
+  a2t,
+  _y,
+  FBn,
+  vvr,
+  BBi,
+  $Bn,
+  kh,
+  l2t,
+  e_,
+  WBi,
+  mwe,
+  d2t,
+  nws,
+  oX,
+  Tvr,
+  Cvr,
+  Avr,
+  URe,
+  jBi,
+  Bat,
+  CYe,
+  c2t,
+  Nre,
+};

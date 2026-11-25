@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.330
+import{T1l}from"/$bunfs/root/chunk-xcgcdx61.js";import{wt}from"/$bunfs/root/chunk-k449cc64.js";import{ve}from"/$bunfs/root/chunk-zhr7rpv7.js";var p={"remote-control":["allow_remote_control"],cloud:["allow_remote_sessions"],unknown:["allow_remote_control","allow_remote_sessions"]},l={featureLabel:"Remote Control and Cloud sessions",verb:"are"},a="No organization policy allows sends to this kind of session, so it can't be shown as permitted.";function E0t(n){if(ve()!=="firstParty"||wt())return{cause:"residency"};if(T1l())return null;let e=import.meta.require("/$bunfs/root/chunk-ts9zreqg.js"),r=p[n],o=[];for(let t of r){let{featureLabel:u,verb:y}=e.policyKeyLabel(t),i=e.policyDeniedReason(t,u,y);if(i===null)return null;o.push(i)}let[s]=r;if(s===void 0)return{cause:"policy",reason:a};let{logOrgPolicyDenied:c}=import.meta.require("/$bunfs/root/chunk-t4cr4yat.js");return c(s,"tool"),{cause:"policy",reason:(n==="unknown"&&o.length>1?e.policyDeniedReason(s,l.featureLabel,l.verb)??o[0]:o[0])??a}}
+export{E0t};

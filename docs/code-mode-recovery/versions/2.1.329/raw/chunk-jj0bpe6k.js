@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{St}from"/$bunfs/root/chunk-5ghdkswv.js";import{gt,jx}from"/$bunfs/root/chunk-bxxahqqj.js";import{fi}from"/$bunfs/root/chunk-w03c3634.js";import{Yo}from"/$bunfs/root/chunk-gsktpex7.js";import{Ox,UDt}from"/$bunfs/root/chunk-fewk3btv.js";import{sv}from"/$bunfs/root/chunk-a4cww0eh.js";import{va}from"/$bunfs/root/chunk-qypdkxad.js";import{JG,Sce}from"/$bunfs/root/chunk-hg1yqkjk.js";import{OA,Jd}from"/$bunfs/root/chunk-v16rzw0k.js";import{Ne}from"/$bunfs/root/chunk-jh9bnqg2.js";import{Ce}from"/$bunfs/root/chunk-05v7tzw3.js";function HFo(e){return gt(e,Ce)&&!Jd()||gt(e,St)&&!OA()}function f(e){return e.isMcp!==!0&&(gt(e,fi)||gt(e,sv))}function Gxt(e,t,s){let i=UDt(Ox(Sce().filter((o)=>!HFo(o)),t)),n=s===void 0?i:i.filter((o)=>s.has(o.name)),a=new Set(e.map((o)=>o.name)),r=e.filter((o)=>!gt(o,Yo)&&(o.isMcp===!0||!gt(o,va))&&!jx(o)&&!f(o));for(let o of n)if(!a.has(o.name))r.push(o);let m=t.toolAliases??{};if([Ce,Ne].some((o)=>Object.hasOwn(m,o)&&m[o]!==o)&&r.some((o)=>o.isMcp!==!0&&gt(o,Ce))){let o=JG();return r.filter((l)=>l.isMcp===!0||!o.has(l.name))}return r}
+export{HFo,Gxt};

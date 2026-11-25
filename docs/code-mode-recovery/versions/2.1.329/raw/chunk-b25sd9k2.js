@@ -1,0 +1,6 @@
+// @bun @bytecode
+// (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.
+
+// Version: 2.1.329
+import{ce,US}from"/$bunfs/root/chunk-aq3ms068.js";import{yc,Ou}from"/$bunfs/root/chunk-gcxkm24x.js";import{hLe}from"/$bunfs/root/chunk-t39fw2cy.js";import{LSe}from"/$bunfs/root/chunk-nzwv8b3s.js";import{Ndr}from"/$bunfs/root/chunk-a1s20fhx.js";import{g9e,_9e,aBt}from"/$bunfs/root/chunk-335dv51y.js";var H_=(o)=>o.name===hLe&&yc(o);var sk=(o)=>{let e=o.startsWith("classic.")||o==="tool.describe"||o==="tool.call"||o==="tool.run"||o==="tool.check";return ce().loadedModules.filter((t)=>!(e&&H_(t))&&!(o==="tool.check"&&t.name===Ndr&&yc(t)))};function VOn(o,e,t,s){let r=typeof t.tool==="string"?{...t,tool:US(t.tool)}:t,l=yc(o)?g9e:_9e;return[o.matcherFor(e)].flat(1/0).some((d)=>aBt(d,r,s,l))}function ya(o,e,t){let s=e&&LSe(o);return(t??ce().loadedModules).some((r)=>r.hooks(o)&&Ou(r)&&(e===void 0||VOn(r,o,e,s)))}var N8=(o,e=sk("tool.call"))=>ya("tool.call",{tool:o},e)||ya("tool.run",{tool:o},e);var i="toolu_01AAAAAAAAAAAAAAAAAAAAAA",y$e=(o,e,t=i)=>ya("tool.check",o,e)||ya("tool.judge",{...o,tool_use_id:t},e.flatMap((s)=>[s.matcherFor("tool.judge")].flat(1/0).map((r)=>({...s,matcherFor:()=>r}))));
+export{H_,sk,VOn,ya,N8,y$e};
