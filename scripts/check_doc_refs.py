@@ -3,9 +3,9 @@
 
 Scans every .md file in the repo for path-like references anchored at a
 known top-level directory (docs/, examples/, scripts/, .github/) and checks
-each referenced file exists. This is the drift guard for Phase 7's rule:
-docs link to canonical code, so a moved or renamed file must update the docs
-in the same commit.
+each referenced file exists. This is the drift guard for the repo's rule that
+docs link to canonical code: a moved or renamed file must update the docs in
+the same commit.
 """
 
 import re

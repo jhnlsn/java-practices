@@ -1,6 +1,6 @@
 # Mirrors the testing playbook §7 PR gate order:
 #   compile → unit/slice → integration
-# (mutation testing joins in Phase 5 as a reported trend, not a blocking step)
+# Mutation testing runs alongside as a reported trend, not a blocking step.
 name: CI
 
 on:
@@ -9,8 +9,8 @@ on:
   pull_request:
 
 jobs:
-  # Docs link to canonical code (Phase 7): a moved or renamed file must
-  # update the docs in the same commit, or this fails.
+  # Docs link to canonical code: a moved or renamed file must update the
+  # docs in the same commit, or this fails.
   docs-references:
     runs-on: ubuntu-latest
     steps:
@@ -43,7 +43,7 @@ jobs:
       - name: Integration tests
         run: ./gradlew integrationTest
 
-  # Adversarial review §7 — mutation score is a trend to watch, not a merge
+  # Testing playbook §7 — mutation score is a trend to watch, not a merge
   # gate. This job never blocks a PR; read the uploaded report for the score.
   mutation-report:
     runs-on: ubuntu-latest

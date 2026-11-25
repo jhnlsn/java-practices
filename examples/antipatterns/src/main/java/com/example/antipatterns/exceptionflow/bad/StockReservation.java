@@ -8,8 +8,9 @@ import java.util.Map;
  * instead of outcomes.
  *
  * Required fix: {@code exceptionflow.good} — the expected outcome becomes a
- * sealed value; exceptions are reserved for genuine aborts (see also
- * adversarial review §5 on {@code @Transactional} rollback semantics).
+ * sealed value; exceptions are reserved for genuine aborts (dev playbook
+ * §3.2: an exception rolls a {@code @Transactional} boundary back, a result
+ * value commits whatever already happened).
  */
 public class StockReservation {
 

@@ -1,6 +1,6 @@
 # Java Development Playbook (Spring Boot 3.x, Java 21+)
 
-> **Companion to `java-testing-playbook.md`.** That document defines how to test; this one defines how to write code so those tests are the natural, cheap way to work. Every rule here exists to make a rule there enforceable. Same format: directives and decision rules, executable by an engineer or an AI assistant without interpretation.
+> **Companion to the [testing playbook](java-testing-playbook.md).** That document defines how to test; this one defines how to write code so those tests are the natural, cheap way to work. Every rule here exists to make a rule there enforceable. Same format: directives and decision rules, executable by an engineer or an AI assistant without interpretation.
 
 **The one-line strategy:** Hexagonal architecture with a framework-free domain core, ports at every boundary you don't own, thin adapters, and use-case classes as the application's public API. Testability is not a property you add — it is the observable result of this structure.
 
@@ -10,12 +10,12 @@
 
 ## 0. Scope — read this first
 
-This playbook governs **logic-bearing code**: features with business rules worth protecting. Applied to code without that weight, its structure is ceremony (adversarial review §3). Calibrate before you build:
+This playbook governs **logic-bearing code**: features with business rules worth protecting. Applied to code without that weight, its structure is ceremony. Calibrate before you build:
 
 - **Features with real domain logic** get the full structure: three rings, ports, separate JPA types, sealed results.
 - **Plain CRUD may skip the rings — deliberately and locally.** A feature that only validates shape and moves rows may use `@Entity`-as-model with Spring Data and a thin controller, provided (a) it contains no business branching, (b) the shortcut stays confined to that feature's package, and (c) it keeps one integration smoke test of schema + serialization. The moment a business rule appears, apply §8 Phase 2 and carve out a domain.
-- **Split JPA entities from domain models where the domain has behavior** (adversarial review §4). A mapping layer between two structurally identical types is waste; entity-as-model is acceptable for behavior-free aggregates.
-- **Escape valve:** if following a rule produces obviously disproportionate ceremony for the code at hand, stop and surface the conflict to a human instead of silently complying — or silently deviating (adversarial review §10).
+- **Split JPA entities from domain models where the domain has behavior.** A mapping layer between two structurally identical types is waste; entity-as-model is acceptable for behavior-free aggregates.
+- **Escape valve:** if following a rule produces obviously disproportionate ceremony for the code at hand, stop and surface the conflict to a human instead of silently complying — or silently deviating.
 
 ---
 
@@ -116,7 +116,7 @@ public record Money(BigDecimal amount, Currency currency) {
 }
 ```
 
-The canonical-scale line and the pseudo-currency guard exist because `BigDecimal.equals` is scale-sensitive and `getDefaultFractionDigits()` returns −1 for XAU-style codes — two real bugs the markdown-only version of this template had. Compiling examples keep templates honest.
+The canonical-scale line and the pseudo-currency guard are the two parts of this template that get left out: `BigDecimal.equals` is scale-sensitive, so `2.5` and `2.50` are unequal without it, and `getDefaultFractionDigits()` returns −1 for XAU-style codes. Both are pinned by [`MoneyTest`](../examples/transfers/src/test/java/com/example/transfers/domain/MoneyTest.java).
 
 ### 3.2 Domain policy — pure, sealed result
 
@@ -146,7 +146,7 @@ public sealed interface TransferDecision {
 
 Return **decisions** as values; never throw exceptions for expected business outcomes. Sealed types + pattern matching make unhandled cases a compile error, not a missing test.
 
-**Aborts are exceptions** (adversarial review §5). Invariant violations and missing referents throw — [`Account.debit`](../examples/transfers/src/main/java/com/example/transfers/domain/Account.java)'s insufficient-funds guard (reaching it means orchestration skipped the policy: a bug, not an outcome) and [`AccountNotFound`](../examples/transfers/src/main/java/com/example/transfers/application/AccountNotFound.java) are the canonical pair. The dividing line is `@Transactional`: an exception rolls the transaction back, a result value silently commits whatever already happened, so anything that must abort uses the exception path.
+**Aborts are exceptions.** Invariant violations and missing referents throw — [`Account.debit`](../examples/transfers/src/main/java/com/example/transfers/domain/Account.java)'s insufficient-funds guard (reaching it means orchestration skipped the policy: a bug, not an outcome) and [`AccountNotFound`](../examples/transfers/src/main/java/com/example/transfers/application/AccountNotFound.java) are the canonical pair. The dividing line is `@Transactional`: an exception rolls the transaction back, a result value silently commits whatever already happened, so anything that must abort uses the exception path.
 
 ### 3.3 Port — domain-owned interface, domain vocabulary
 

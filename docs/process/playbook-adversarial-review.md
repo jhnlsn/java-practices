@@ -2,7 +2,7 @@
 
 > **Purpose:** An honest prosecution and defense of every major decision in `java-testing-playbook.md` and `java-development-playbook.md`. Each section argues both directions with concrete examples, then states the boundary conditions where the decision genuinely loses. Use this to decide *whether* to adopt each rule for a given project — the playbooks assume adoption; this document interrogates it.
 >
-> **Status (2026-08-25):** the §11 amendments are applied. In the playbooks: scoping preamble (dev §0), H2 waiver (testing §3.1), results-for-decisions/exceptions-for-aborts (dev §3.2), legacy characterization carve-out and the §9 companion rules (testing §6.3), human-decision flake deletion and PIT-as-trend (testing §7), and the escape valve (both §9s). In code: `MockUsageTest` replaces the Mockito exclusion, and PIT runs as a non-blocking CI trend job. This document remains the argument; the playbooks state the outcome.
+> **Status:** the §11 amendments are applied in the playbooks (dev §0 and §3.2; testing §3.1, §6.3, and §7; the escape valve in both §9s). This document remains the argument; the playbooks state the outcome.
 
 ---
 

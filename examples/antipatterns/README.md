@@ -40,4 +40,4 @@ and the javadoc explaining what the restructuring buys.
 | `@Disabled` without linked ticket | `testing/brittle/bad/BrittleProfileTests` |
 | Asserting entire JSON payloads for one field | `testing/brittle` |
 | Shared fixtures mutated across tests | `testing/brittle` |
-| Chasing line coverage on trivial code | No bad code needed — it's a metrics decision. The good pattern: PIT scoped to domain packages as a trend (`transfers/build.gradle.kts`), which caught three real test defects on its first run in this very repo. |
+| Chasing line coverage on trivial code | No bad code needed — it's a metrics decision. The good pattern: PIT scoped to domain packages as a trend (`transfers/build.gradle.kts`), which finds assertion gaps that line coverage cannot. |
